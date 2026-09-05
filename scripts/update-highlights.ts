@@ -20,6 +20,9 @@ const F1 = new URL("../data/f1.json", import.meta.url);
 const GOLF = new URL("../data/golf.json", import.meta.url);
 const UFC = new URL("../data/ufc.json", import.meta.url);
 
+/** TNT Sports: the broadcast rights holder, and the only channel searched. */
+const UFC_CHANNEL = "TNTFightSports";
+
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36";
 
@@ -29,10 +32,11 @@ const OFFICIAL: Map<string, string[]> = new Map([
   ["golf", ["PGA Tour"]],
   /*
    * The UFC posts clips and interviews to its own channel, not highlight
-   * packages — there is no "UFC 328 highlights" from the UFC. The broadcast
-   * rights holders do post one per bout, so these are the rights holders.
+   * packages — there is no "UFC 328 highlights" from the UFC. TNT Sports
+   * holds the broadcast rights and packages one per bout, so that channel is
+   * searched directly rather than searched for.
    */
-  ["ufc", ["TNT Fight Sports", "UFC on Paramount+", "UFC"]],
+  ["ufc", ["TNT Fight Sports"]],
 ]);
 
 /**
@@ -77,8 +81,16 @@ interface Found {
   title: string;
 }
 
-async function search(query: string): Promise<Found[]> {
-  const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+async function search(query: string, handle?: string): Promise<Found[]> {
+  /*
+   * Searching inside a channel rather than across YouTube. For the UFC this
+   * is the difference between a rights holder's package and whatever reupload
+   * happens to rank — there is nothing to out-rank, because nothing else is
+   * in the results.
+   */
+  const url = handle
+    ? `https://www.youtube.com/@${handle}/search?query=${encodeURIComponent(query)}`
+    : `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
   const res = await fetch(url, { headers: { "user-agent": UA } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
@@ -306,7 +318,7 @@ function surname(name: string) {
 const cards = (ufc?.events ?? [])
   .filter((e) => e.status === "Final" && e.fights.length > 0)
   .sort((a, b) => b.date.localeCompare(a.date))
-  .slice(0, 12);
+  .slice(0, 20);
 
 for (const event of cards) {
   const main = event.fights.filter((f) => f.segment === "main" && f.completed);
@@ -320,28 +332,35 @@ for (const event of cards) {
     let results: Found[];
     try {
       results = await search(
-        `${red} vs ${blue} ${event.name.split(":")[0]} highlights`
+        `${surname(red)} ${surname(blue)}`,
+        UFC_CHANNEL
       );
     } catch (error) {
       console.log(`  ! ${red} vs ${blue}: ${(error as Error).message}`);
       continue;
     }
 
-    const channels = OFFICIAL.get("ufc") ?? [];
     const both = [surname(red), surname(blue)].map((n) => normalise(n));
 
+    /*
+     * The channel covers a fight from every angle: the walkout, the octagon
+     * interview, the reaction the following week. Only one of them is the
+     * fight, and it is the one that says so.
+     */
+    const candidates = results.filter((r) => {
+      const title = normalise(r.title);
+      if (!both.every((n) => title.includes(n))) return false;
+      return !/interview|reacts?|reaction|exclusive|walkout|weigh|press conference|embedded|face ?off|preview|predict|talks|on his|on her/i.test(
+        r.title
+      );
+    });
+
     const hit =
-      results.find((r) => {
-        // A channel row can read "UFC and 2 more" when a video is co-uploaded.
-        if (!channels.some((c) => normalise(r.channel).startsWith(normalise(c))))
-          return false;
-        const title = normalise(r.title);
-        if (!both.every((n) => title.includes(n))) return false;
-        // Interviews, weigh-ins and cold opens are not the fight.
-        if (/interview|weigh|cold open|press conference|embedded|face ?off/i.test(r.title))
-          return false;
-        return /highlight|full fight|tko|ko\b|submission|finish/i.test(r.title);
-      }) ?? null;
+      candidates.find((r) => /highlight/i.test(r.title)) ??
+      candidates.find((r) =>
+        /\b(ko|tko|knockout|submission|beats|stoppage|finish)\b/i.test(r.title)
+      ) ??
+      null;
 
     record(key, "fight", hit);
     await new Promise((r) => setTimeout(r, 1100));

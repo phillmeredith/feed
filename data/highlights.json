@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-09-05T18:36:08.568Z",
+  "updated": "2026-09-05T18:50:53.970Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -395,13 +395,6 @@
       "channel": "TNT Fight Sports"
     },
     {
-      "key": "ufc:600059599:8",
-      "kind": "fight",
-      "videoId": "wrBTjuvGDUQ",
-      "title": "UNANIMOUS DEC 💪 | Tabatha Ricci vs. Fatima Kline | UFC Fight Night Mini Fight Highlights",
-      "channel": "UFC on Paramount+"
-    },
-    {
       "key": "ufc:600059599:10",
       "kind": "fight",
       "videoId": "lRoXiFL2E3k",
@@ -434,6 +427,167 @@
       "kind": "fight",
       "videoId": "ju_WhiYM2WE",
       "title": "INJURY RUINS COMEBACK! 🤕 | Max Holloway vs Conor McGregor 2 | #UFC329 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059254:11",
+      "kind": "fight",
+      "videoId": "XZq5Rg1bjok",
+      "title": "UNANIMOUS DECISION WIN! 💪 | Shara Magomedov vs Michel Pereira | #UFCBaku Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059254:12",
+      "kind": "fight",
+      "videoId": "0If9NQDjlNA",
+      "title": "VICIOUS SPINNING HEEL KICK! 💥 | Rafael Fiziev vs Manuel Torres | #UFCBaku Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059467:7",
+      "kind": "fight",
+      "videoId": "8TwWbDy-KSk",
+      "title": "BRUTAL ELBOWS! 🫣 | Vinicius Oliveira vs. Andre Fili | #UFCVegas Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059467:11",
+      "kind": "fight",
+      "videoId": "Otv64NkLtuA",
+      "title": "STATEMENT FINISH! 💥 | Manel Kape vs. Kyoji Horiguchi | #UFCVegas Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058854:2",
+      "kind": "fight",
+      "videoId": "jqJ5btc1EGE",
+      "title": "FIRST ROUND TKO! 🔥 | Mauricio Ruffy vs. Michael Chandler | #UFCFreedom250 Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058854:3",
+      "kind": "fight",
+      "videoId": "HqGVkglv-eQ",
+      "title": "SEARCH & DESTROY! 🤯 | Josh Hokit vs. Derrick Lewis | #UFCFreedom250 Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058854:4",
+      "kind": "fight",
+      "videoId": "lDAbV5AAu3s",
+      "title": "IN A DIFFERENT LEAGUE! 😮‍💨 | Sean O'Malley vs. Aiemann Zahabi | #UFCFreedom250 Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058854:5",
+      "kind": "fight",
+      "videoId": "9ZYN5seoFH0",
+      "title": "DEMOLISHED AT THE WHITE HOUSE! 🤯 | Alex Pereira vs. Ciryl Gane | #UFCFreedom250 Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058854:6",
+      "kind": "fight",
+      "videoId": "z8OYUrLBMfc",
+      "title": "WHITE HOUSE CLASSIC! 🏆 | Ilia Topuria vs. Justin Gaethje | #UFCFreedom250 Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058949:7",
+      "kind": "fight",
+      "videoId": "dMXIw5hUf_k",
+      "title": "QUICK KNOCKOUT! ⚡️| Iwo Baraniewski vs Junior Tafa | #UFCVegas Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058949:8",
+      "kind": "fight",
+      "videoId": "3MatvvFCZJo",
+      "title": "BUZZER BEATER SUBMISSION! 💪 | Bryce Mitchell vs Santiago Luna | #UFCVegas Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058949:10",
+      "kind": "fight",
+      "videoId": "CpoQUa69ffY",
+      "title": "BLOODY WAR! 🩸 | Brendan Allen vs Edmen Shahbazyan | #UFCVegas Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058949:11",
+      "kind": "fight",
+      "videoId": "mmIeYIYQtgI",
+      "title": "IMPRESSIVE VICTORY! 🙌 | Belal Muhammad vs Gabriel Bonfim | #UFCVegas Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058517:9",
+      "kind": "fight",
+      "videoId": "D1oBc55CZ1s",
+      "title": "BRUTAL KNOCKOUT! 🔥 | Kai Asakura vs Cameron Smotherman | #UFCMacau Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058517:10",
+      "kind": "fight",
+      "videoId": "XL2uTUuFgA4",
+      "title": "UNREAL BEATDOWN! 😳 | Sergei Pavlovich vs Tallison Teixeira | #UFCMacau Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058948:11",
+      "kind": "fight",
+      "videoId": "akSz7sVgtPQ",
+      "title": "INCREDIBLE BODY SHOT KO! 💥 | Choi Doo-ho vs. Daniel Santos | #UFCVegas Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058948:12",
+      "kind": "fight",
+      "videoId": "9iieDuteDXE",
+      "title": "SCRAPPY VICTORY! 😅 | Arnold Allen vs. Melquizael Costa | #UFCVegas Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058947:8",
+      "kind": "fight",
+      "videoId": "Pu2tR86EcYc",
+      "title": "REAR-NAKED CHOKE SUBMISSION 🫣 | King Green vs. Jeremy Stephens | #UFC328 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058947:11",
+      "kind": "fight",
+      "videoId": "5o4_EctjS2c",
+      "title": "FIGHT OF THE YEAR CONTENDER! 🍿 | Joshua Van vs. Tatsuro Taira | #UFC328 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058947:12",
+      "kind": "fight",
+      "videoId": "7tPsvHmII_c",
+      "title": "THRILLING TITLE SHOWDOWN! 🏆 | Khamzat Chimaev vs. Sean Strickland | #UFC328 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058807:9",
+      "kind": "fight",
+      "videoId": "g_X76ecqYVM",
+      "title": "FIRST ROUND BATTERING! 😬 | Marwan Rahiki vs Ollie Schmid | #UFCPerth Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058807:11",
+      "kind": "fight",
+      "videoId": "LKYydwruEHg",
+      "title": "STATEMENT VICTORY! 💪 | Beneil Dariush vs Quillan Salkilld | #UFCPerth Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600058807:12",
+      "kind": "fight",
+      "videoId": "H6hNlMxdm5s",
+      "title": "OUTSTANDING PERFORMANCE 🤩 | Jack Della Maddalena vs Carlos Prates | #UFCPerth Fight Night Highlights",
       "channel": "TNT Fight Sports"
     }
   ]
