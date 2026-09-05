@@ -1,0 +1,3092 @@
+{
+  "note": "Cameras and lenses. Imported from DPReview's product database (npm run gear:import) and extended by this desk's own coverage (npm run gear:update). Dates are DPReview's record date, which tracks announcement for anything catalogued since 2023.",
+  "updated": "2026-09-04T23:46:55.621Z",
+  "items": [
+    {
+      "name": "Sigma 85mm f/1.2",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-09-04T22:19:33.952Z",
+      "storyId": "sigma-85mm-f12-to-start-shipping-september-30-priced-1cykeyj",
+      "headline": "Sigma 85mm f/1.2 to Start Shipping September 30, Priced at €1,600"
+    },
+    {
+      "name": "Fujifilm Fujinon XF400mm f/4.5",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-09-04T05:00:00.000Z",
+      "storyId": "",
+      "headline": "Fujifilm launches FUJINON Lens XF400mmF4.5 R LM OIS WR"
+    },
+    {
+      "name": "Fujifilm XF 400mm F4.5 R LM OIS WR",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-09-04T00:00:00.000Z",
+      "focal": "400mm",
+      "mounts": [
+        "FujifilmX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Summicron-M 66 F2",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-09-03T00:00:00.000Z",
+      "focal": "66mm",
+      "mounts": [
+        "LeicaM"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "7Artisans AF 10mm F2.5 Max",
+      "brand": "7Artisans",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-08-26T00:00:00.000Z",
+      "focal": "10mm",
+      "mounts": [
+        "LeicaSL",
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 100-400mm F5.6-8 OSS",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-08-04T00:00:00.000Z",
+      "focal": "100-400mm",
+      "mounts": [
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 26mm F2.8 Evo",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-07-15T00:00:00.000Z",
+      "focal": "26mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony Cyber-Shot DSC-RX10 V",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2026-07-09T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica SL3-P",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2026-06-25T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica APO-Macro-Elmarit-SL 100mm F2.8",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-06-25T00:00:00.000Z",
+      "focal": "100mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Summilux-SL 50mm F1.4 ASPH 2026",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-06-25T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 75mm F1.8 Evo",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-06-08T00:00:00.000Z",
+      "focal": "75mm",
+      "mounts": [
+        "FujifilmX",
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 90mm F2.2 Evo",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-06-08T00:00:00.000Z",
+      "focal": "90mm",
+      "mounts": [
+        "FujifilmX",
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "7Artisans AF 135mm F1.8 Max",
+      "brand": "7Artisans",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-05-20T00:00:00.000Z",
+      "focal": "135mm",
+      "mounts": [
+        "LeicaSL",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony a7R VI",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2026-05-13T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 100-400mm F4.5 GM OSS",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-05-13T00:00:00.000Z",
+      "focal": "100-400mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon EOS R6 V",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2026-05-13T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 20-50mm F4 L IS USM PZ",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-05-13T00:00:00.000Z",
+      "focal": "20-50mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-L10",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2026-05-12T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Thypoch Voyager 24-50mm F2.8",
+      "brand": "Thypoch",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-04-28T00:00:00.000Z",
+      "focal": "24-50mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix S 40mm F2",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-04-21T00:00:00.000Z",
+      "focal": "40mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 35mm F1.8 II",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-04-20T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 55mm F1.8 Evo",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-04-20T00:00:00.000Z",
+      "focal": "55mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "LK Samyang AF 35mm F1.8 P",
+      "brand": "Samyang",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-03-25T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-ZS300",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2026-03-24T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 85mm F1.2 DG Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-02-25T00:00:00.000Z",
+      "focal": "85mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Zeiss Otus ML 35mm F1.4",
+      "brand": "Zeiss",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-02-24T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 15mm F1.4 DC Contemporary",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-02-24T00:00:00.000Z",
+      "focal": "15mm",
+      "mounts": [
+        "CanonRFS",
+        "FujifilmX",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 35mm F1.4 DG II Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-02-24T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Tamron 35-100mm F2.8 Di III VXD",
+      "brand": "Tamron",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2026-02-18T00:00:00.000Z",
+      "focal": "35-100mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 14mm F1.4 VCM L",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-02-04T00:00:00.000Z",
+      "focal": "14mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 7-14mm F2.8-3.5 L Fisheye STM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-02-04T00:00:00.000Z",
+      "focal": "7-14mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica M 35mm F1.2 Noctilux Asph.",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2026-01-29T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "LeicaM"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 28-70mm F3.5-5.6 OSS II",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-12-02T00:00:00.000Z",
+      "focal": "28-70mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony a7 V",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-12-02T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Laowa 35mm F2.8 Zero-D Tilt-Shift 0.5x Macro",
+      "brand": "Laowa",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-11-25T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "CanonRF",
+        "FujifilmG",
+        "LeicaSL",
+        "NikonZ",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Q3 Monochrom",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-11-20T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Meike 85mm F1.8 SE II",
+      "brand": "Meike",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-11-12T00:00:00.000Z",
+      "focal": "85mm",
+      "mounts": [
+        "LeicaSL",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon EOS R6 Mark III",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-11-06T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 45mm F1.2 STM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-11-06T00:00:00.000Z",
+      "focal": "45mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica M EV1",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-10-23T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm X-T30 III",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-10-23T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm XC 13-33mm F3.5-6.3 OIS",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-10-23T00:00:00.000Z",
+      "focal": "13-33mm",
+      "mounts": [
+        "FujifilmX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Tamron 25-200mm F2.8-5.6 Di III VXD G2",
+      "brand": "Tamron",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-10-21T00:00:00.000Z",
+      "focal": "25-200mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Ricoh GR IV HDF",
+      "brand": "Ricoh",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-10-20T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Ricoh GR IV Monochrome",
+      "brand": "Ricoh",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-10-20T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 85mm F2.0 Evo",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-10-20T00:00:00.000Z",
+      "mounts": [
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 50mm F1.4 Pro",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-10-16T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "NikonZ",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z DX 16-50mm F2.8 VR",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-10-16T00:00:00.000Z",
+      "focal": "16-50mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z DX Micro 35mm F1.7",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-10-16T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Laowa 200mm F2 AF FF",
+      "brand": "Laowa",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-10-15T00:00:00.000Z",
+      "focal": "200mm",
+      "mounts": [
+        "CanonEF",
+        "CanonEFS",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Camera Intelligence Caira",
+      "brand": "Other",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-10-11T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sirui Aurora 35mm F1.4",
+      "brand": "Sirui",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-10-10T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "FujifilmX",
+        "LeicaSL",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 100mm F2.8 Macro GM",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-09-30T00:00:00.000Z",
+      "focal": "100mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix S 100-500mm F5-7.1 OIS",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-09-24T00:00:00.000Z",
+      "focal": "100-500mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 14mm F4.0 Air",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-09-19T00:00:00.000Z",
+      "focal": "14mm",
+      "mounts": [
+        "NikonZ",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 9mm F2.8 Air",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-09-19T00:00:00.000Z",
+      "focal": "9mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Laowa 180mm F4.5 1.5X Ultra Macro APO",
+      "brand": "Laowa",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-09-16T00:00:00.000Z",
+      "focal": "180mm",
+      "mounts": [
+        "CanonEF",
+        "CanonEFS",
+        "CanonRF",
+        "CanonRFS",
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System M.Zuiko Digital ED 50-200mm F2.8 IS Pro",
+      "brand": "OM System",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-09-10T00:00:00.000Z",
+      "focal": "50-200mm",
+      "mounts": [
+        "MicroFourThirds"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon ZR",
+      "brand": "Nikon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-09-10T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon PowerShot ELPH 360 HS A",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-09-09T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 85mm F1.4 L VCM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-09-09T00:00:00.000Z",
+      "focal": "85mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 135mm F1.4 DG Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-09-09T00:00:00.000Z",
+      "focal": "135mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 20-200mm F3.5-6.3 DG Contemporary",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-09-09T00:00:00.000Z",
+      "focal": "20-200mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 35mm F1.2 DG II Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-09-09T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "7Artisans AF 35mm F1.8",
+      "brand": "7Artisans",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-09-05T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "LeicaSL",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 56mm F1.2 Pro",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-09-01T00:00:00.000Z",
+      "mounts": [
+        "FujifilmX",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Hasselblad X2D II 100C",
+      "brand": "Hasselblad",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-08-26T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Hasselblad XCD 35-100mm F2.8-4 E",
+      "brand": "Hasselblad",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-08-26T00:00:00.000Z",
+      "focal": "35-100mm",
+      "mounts": [
+        "HasselbladX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 24-70mm F2.8 S II",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-08-22T00:00:00.000Z",
+      "focal": "24-70mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 200mm F2 DG OS Sports",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-08-19T00:00:00.000Z",
+      "focal": "200mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 12mm F1.4 DC Contemporary",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-08-19T00:00:00.000Z",
+      "focal": "12mm",
+      "mounts": [
+        "CanonRFS",
+        "FujifilmX",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 15mm F1.7 Air",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-07-30T00:00:00.000Z",
+      "focal": "15mm",
+      "mounts": [
+        "FujifilmX",
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony DSC-RX1R III",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-07-15T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Tamron 16-30mm F2.8 Di III VXD G2",
+      "brand": "Tamron",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-07-01T00:00:00.000Z",
+      "focal": "16-30mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Venus Laowa 12mm F2.8 Lite Zero-D FF",
+      "brand": "Laowa",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-06-26T00:00:00.000Z",
+      "focal": "12mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS",
+        "LeicaSL",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System OM-5 II",
+      "brand": "OM System",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-06-17T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 17-40mm F1.8 DC | Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-06-17T00:00:00.000Z",
+      "focal": "17-40mm",
+      "mounts": [
+        "CanonRFS",
+        "FujifilmX",
+        "LeicaSL",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm X-E5",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-06-12T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm XF 23mm F2.8 R WR",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-06-12T00:00:00.000Z",
+      "focal": "23mm",
+      "mounts": [
+        "FujifilmX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FX2",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-05-28T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "7Artisans AF 24mm F1.8",
+      "brand": "7Artisans",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-05-27T00:00:00.000Z",
+      "focal": "24mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm X half",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-05-22T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Ricoh GR IV",
+      "brand": "Ricoh",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-05-21T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-S1II",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-05-13T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-S1IIE",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-05-13T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix S 24-60mm F2.8",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-05-13T00:00:00.000Z",
+      "focal": "24-60mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 75-300mm f/4.0-5.6",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-04-29T00:00:00.000Z",
+      "focal": "75-300mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "LK Samyang AF 14-24mm F2.8",
+      "brand": "Samyang",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-04-22T00:00:00.000Z",
+      "focal": "14-24mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 50-150mm F2 GM",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-04-22T00:00:00.000Z",
+      "focal": "50-150mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 35mm F1.2 Lab",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-04-16T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Z5II",
+      "brand": "Nikon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-04-03T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon EOS R50 V",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-03-26T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 20mm F1.4 L VCM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-03-26T00:00:00.000Z",
+      "focal": "20mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF-S 14-30mm F4-6.3 IS STM PZ",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-03-26T00:00:00.000Z",
+      "focal": "14-30mm",
+      "mounts": [
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm GFX100RF",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-03-20T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 50mm F2.0 Air",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-03-04T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 85mm F1.4 Pro",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-03-04T00:00:00.000Z",
+      "focal": "85mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 25mm F1.7 Air",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-02-28T00:00:00.000Z",
+      "focal": "25mm",
+      "mounts": [
+        "FujifilmX",
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 16mm F1.8 G",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-02-26T00:00:00.000Z",
+      "focal": "16mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 400-800mm F6.3-8 G",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-02-26T00:00:00.000Z",
+      "focal": "400-800mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-S1RII",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-02-25T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Zeiss Otus ML 50mm F1.4",
+      "brand": "Zeiss",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-02-25T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Zeiss Otus ML 85mm F1.4",
+      "brand": "Zeiss",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-02-25T00:00:00.000Z",
+      "focal": "85mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma BF",
+      "brand": "Sigma",
+      "kind": "body",
+      "independent": true,
+      "announcedAt": "2025-02-23T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 16-300mm F3.5-6.7 DC OS",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-02-23T00:00:00.000Z",
+      "focal": "16-300mm",
+      "mounts": [
+        "CanonRFS",
+        "FujifilmX",
+        "LeicaSL",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 300-600mm F4 DG OS Sports",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-02-23T00:00:00.000Z",
+      "focal": "300-600mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Summilux-M 50mm F1.4 ASPH II",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-02-20T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "LeicaM"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon PowerShot V1",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-02-19T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Voigtlander Color-Skopar 35mm F3.5 Aspherical VM",
+      "brand": "Voigtlander",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-02-14T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "LeicaM"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System OM-3",
+      "brand": "OM System",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-02-06T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System M.Zuiko Digital 17mm F1.8 II",
+      "brand": "OM System",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-02-06T00:00:00.000Z",
+      "focal": "17mm",
+      "mounts": [
+        "MicroFourThirds"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System M.Zuiko Digital 25mm F1.8 II",
+      "brand": "OM System",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-02-06T00:00:00.000Z",
+      "focal": "25mm",
+      "mounts": [
+        "MicroFourThirds"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System M.Zuiko Digital 100-400mm F5.0-6.3 IS II",
+      "brand": "OM System",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-02-06T00:00:00.000Z",
+      "focal": "100-400mm",
+      "mounts": [
+        "MicroFourThirds"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Coolpix P1100",
+      "brand": "Nikon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-02-04T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 35mm F1.2 S",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-02-04T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 16-28 F2.8 IS STM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2025-01-22T00:00:00.000Z",
+      "focal": "16-28mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica SL3-S",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2025-01-16T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Voigtlander Nokton 28mm F1.5 Aspherical",
+      "brand": "Voigtlander",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2025-01-15T00:00:00.000Z",
+      "focal": "28mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 35mm F1.7 Air",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-12-18T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "FujifilmX",
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Laowa 55mm F2.8 Tilt-Shift 1X Macro",
+      "brand": "Laowa",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-12-17T00:00:00.000Z",
+      "focal": "55mm",
+      "mounts": [
+        "CanonRF",
+        "FujifilmG",
+        "LeicaSL",
+        "NikonZ",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Laowa 100mm F2.8 Tilt-Shift 1X Macro",
+      "brand": "Laowa",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-12-17T00:00:00.000Z",
+      "focal": "100mm",
+      "mounts": [
+        "CanonRF",
+        "FujifilmG",
+        "LeicaSL",
+        "NikonZ",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-G97",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-12-16T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-ZS99",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-12-16T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "LK Samyang AF 35mm F1.4 P",
+      "brand": "Samyang",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-12-05T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony a1 II",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-11-19T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 28-70mm F2 GM",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-11-19T00:00:00.000Z",
+      "focal": "28-70mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Meike AF 85mm f1.8 Pro STM",
+      "brand": "Meike",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-11-15T00:00:00.000Z",
+      "focal": "85mm",
+      "mounts": [
+        "LeicaSL",
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Hasselblad XCD 75mm F3.4 P",
+      "brand": "Hasselblad",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-11-07T00:00:00.000Z",
+      "focal": "75mm",
+      "mounts": [
+        "HasselbladX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Z50II",
+      "brand": "Nikon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-11-06T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 135mm F1.8 Lab",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-11-04T00:00:00.000Z",
+      "focal": "135mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 28-135mm F4 PZ",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-10-30T00:00:00.000Z",
+      "focal": "28-135mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 70-200mm F2.8 L IS USM Z",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-10-30T00:00:00.000Z",
+      "focal": "70-200mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 24mm F1.4 L VCM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-10-30T00:00:00.000Z",
+      "focal": "24mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 50mm F1.4 L VCM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-10-30T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF-S 7.8mm F4 STM Dual",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-10-30T00:00:00.000Z",
+      "focal": "7.8mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sirui Aurora 85mm F1.4",
+      "brand": "Sirui",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-10-25T00:00:00.000Z",
+      "focal": "85mm",
+      "mounts": [
+        "FujifilmX",
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm X-M5",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-10-14T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm XF 16-55mm F2.8 R LM WR II",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-10-14T00:00:00.000Z",
+      "focal": "16-55mm",
+      "mounts": [
+        "FujifilmX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm XF 500mm F5.6 R LM OIS WR",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-10-14T00:00:00.000Z",
+      "focal": "500mm",
+      "mounts": [
+        "FujifilmX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic S 18-40mm F4.5-6.3",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-10-08T00:00:00.000Z",
+      "focal": "18-40mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 28mm F4.5 VCM",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-09-28T00:00:00.000Z",
+      "focal": "28mm",
+      "mounts": [
+        "FujifilmX",
+        "LeicaSL",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Q3 43",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-09-26T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Tamron 90mm F2.8 Di III Macro VXD",
+      "brand": "Tamron",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-09-26T00:00:00.000Z",
+      "focal": "90mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 28-70mm F2.8 IS STM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-09-12T00:00:00.000Z",
+      "focal": "28-70mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Hasselblad XCD 20-35mm F3.2-4.5 E",
+      "brand": "Hasselblad",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-09-10T00:00:00.000Z",
+      "focal": "20-35mm",
+      "mounts": [
+        "HasselbladX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 50mm F1.4",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-09-10T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon EOS C80",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-09-09T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Vario-Elmarit-SL 70–200 F2.8 ASPH",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-09-05T00:00:00.000Z",
+      "focal": "70-200mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 28-105mm F2.8 DG DN | Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-09-05T00:00:00.000Z",
+      "focal": "28-105mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 85mm F1.4 GM II",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-08-28T00:00:00.000Z",
+      "focal": "85mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Ricoh G900 II",
+      "brand": "Ricoh",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-08-07T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Ricoh G900SE II",
+      "brand": "Ricoh",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-08-07T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Tamron 28-300mm F4-7.1 Di III VC VXD",
+      "brand": "Tamron",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-07-31T00:00:00.000Z",
+      "focal": "28-300mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon EOS R1",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-07-17T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon EOS R5 Mark II",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-07-17T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony ZV-E10 II",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-07-10T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony E 16-50mm F3.5-5.6 PZ OSS II",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-07-10T00:00:00.000Z",
+      "focal": "16-50mm",
+      "mounts": [
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Pixii Max",
+      "brand": "Pixii",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-07-03T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-FZ80D",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-07-02T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica D-Lux 8",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-07-02T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 35mm F1.4",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-06-26T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Z6III",
+      "brand": "Nikon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-06-17T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF-S 3.9mm F3.5 STM Dual Fisheye",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-06-10T00:00:00.000Z",
+      "focal": "3.9mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Tamron 50-300mm F/4.5-6.3 Di III VC VXD",
+      "brand": "Tamron",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-06-06T00:00:00.000Z",
+      "focal": "50-300mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Pentax WG-8",
+      "brand": "Pentax",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-06-05T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-GH7",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-06-05T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 35mm F1.4 L VCM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-06-05T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 28-45mm F1.8 DG DN Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-06-03T00:00:00.000Z",
+      "focal": "28-45mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-S9",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-05-22T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix S 26mm F8",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-05-22T00:00:00.000Z",
+      "focal": "26mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 24-70mm F2.8 DG DN II | Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-05-16T00:00:00.000Z",
+      "focal": "24-70mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm X-T50",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-05-16T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm GFX 100S II",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-05-16T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm XF 16-50mm F2.8-4.8 R LM WR",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-05-16T00:00:00.000Z",
+      "focal": "16-50mm",
+      "mounts": [
+        "FujifilmX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm GF 500mm F5.6 R LM OIS WR",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-05-16T00:00:00.000Z",
+      "focal": "500mm",
+      "mounts": [
+        "FujifilmG"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Hasselblad XCD 25mm F2.5 V",
+      "brand": "Hasselblad",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-05-07T00:00:00.000Z",
+      "focal": "25mm",
+      "mounts": [
+        "HasselbladX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 16mm F1.8",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-05-07T00:00:00.000Z",
+      "focal": "16mm",
+      "mounts": [
+        "LeicaSL",
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 40mm F2.5",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-04-25T00:00:00.000Z",
+      "focal": "40mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 16-25mm F2.8 G",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-04-16T00:00:00.000Z",
+      "focal": "16-25mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 56mm F1.7",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-04-05T00:00:00.000Z",
+      "focal": "56mm",
+      "mounts": [
+        "FujifilmX",
+        "NikonZ",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Ricoh GR III HDF",
+      "brand": "Ricoh",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-03-27T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Ricoh GR IIIx HDF",
+      "brand": "Ricoh",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-03-27T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 28-400mm F4-8 VR",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-03-27T00:00:00.000Z",
+      "focal": "28-400mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 50mm F1.2 DG DN | Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-03-26T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "7Artisans AF 50mm F1.8",
+      "brand": "7Artisans",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-03-18T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica SL3",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-03-07T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix S 28-200mm F4-7.1 Macro OIS",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-02-22T00:00:00.000Z",
+      "focal": "28-200mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 24-50mm F2.8 G",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-02-21T00:00:00.000Z",
+      "focal": "24-50mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 15mm F1.4 DG DN Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-02-21T00:00:00.000Z",
+      "focal": "15mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 500mm F5.6 DG DN OS Sports",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2024-02-20T00:00:00.000Z",
+      "focal": "500mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm X100VI",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-02-20T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System OM-1 Mark II",
+      "brand": "OM System",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2024-01-30T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System 150-600mm F5.0-6.3",
+      "brand": "OM System",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-01-30T00:00:00.000Z",
+      "focal": "150-600mm",
+      "mounts": [
+        "MicroFourThirds"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System 9-18mm F4.0-5.6 II",
+      "brand": "OM System",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-01-30T00:00:00.000Z",
+      "focal": "9-18mm",
+      "mounts": [
+        "MicroFourThirds"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix S 100mm F2.8 Macro",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2024-01-08T00:00:00.000Z",
+      "focal": "100mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Pentax WG-90",
+      "brand": "Pentax",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-11-14T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony a9 III",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-11-07T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 300mm F2.8 GM OSS",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-11-07T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF-S 10-18mm F4.5-6.3 IS STM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-11-02T00:00:00.000Z",
+      "focal": "10-18mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 24-105mm F2.8 L IS USM Z",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-11-02T00:00:00.000Z",
+      "focal": "24-105mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 200-800mm F6.3-9 IS USM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-11-02T00:00:00.000Z",
+      "focal": "200-800mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 20mm F2.8",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-10-30T00:00:00.000Z",
+      "focal": "20mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica M11-P",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-10-26T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Summicron-M 28mm F2 ASPH",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-10-26T00:00:00.000Z",
+      "focal": "28mm",
+      "mounts": [
+        "LeicaM"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Super-APO-Summicron-SL 21mm F2 ASPH",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-10-19T00:00:00.000Z",
+      "focal": "21mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Super-Vario-Elmarit-SL 14-24mm F2.8 ASPH",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-10-19T00:00:00.000Z",
+      "focal": "14-24mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 600mm F6.3 VR S",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-10-11T00:00:00.000Z",
+      "focal": "600mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 10-20mm F4 L IS STM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-10-11T00:00:00.000Z",
+      "focal": "10-20mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 10-18mm F2.8 DC DN",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-10-05T00:00:00.000Z",
+      "focal": "10-18mm",
+      "mounts": [
+        "CanonRF",
+        "FujifilmX",
+        "LeicaSL",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 70-200mm F2.8 DG DN OS | Sports",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-10-05T00:00:00.000Z",
+      "focal": "70-200mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 135mm F1.8 S Plena",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-09-27T00:00:00.000Z",
+      "focal": "135mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 28mm F1.8",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-09-25T00:00:00.000Z",
+      "focal": "28mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Zf",
+      "brand": "Nikon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-09-20T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Leica DG Vario-Elmar 100-400mm F4.0-6.3 II ASPH Power OIS",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-09-13T00:00:00.000Z",
+      "focal": "100-400mm",
+      "mounts": [
+        "MicroFourThirds"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System Tough TG-7",
+      "brand": "OM System",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-09-13T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-G9 II",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-09-12T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Leica DG Vario-Elmarit 35-100mm F2.8 Power OIS",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-09-12T00:00:00.000Z",
+      "focal": "35-100mm",
+      "mounts": [
+        "MicroFourThirds"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm GFX 100 II",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-09-12T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm GF 55mm F1.7R WR",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-09-12T00:00:00.000Z",
+      "focal": "55mm",
+      "mounts": [
+        "FujifilmG"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm GF 30mm F5.6 T/S",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-09-12T00:00:00.000Z",
+      "focal": "30mm",
+      "mounts": [
+        "FujifilmG"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm GF 110mm F5.6 T/S Macro",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-09-12T00:00:00.000Z",
+      "focal": "110mm",
+      "mounts": [
+        "FujifilmG"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony a7CR",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-08-29T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony a7C II",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-08-29T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 16-35mm F2.8 GM II",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-08-29T00:00:00.000Z",
+      "focal": "16-35mm",
+      "mounts": [
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Hasselblad XCD 28mm F4 P",
+      "brand": "Hasselblad",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-08-23T00:00:00.000Z",
+      "focal": "28mm",
+      "mounts": [
+        "HasselbladX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Tamron 17-50mm F4 Di III VXD",
+      "brand": "Tamron",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-08-23T00:00:00.000Z",
+      "focal": "17-55mm",
+      "mounts": [
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Viltrox AF 27mm F1.2 Pro",
+      "brand": "Viltrox",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-08-09T00:00:00.000Z",
+      "focal": "27mm",
+      "mounts": [
+        "FujifilmX",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Tamron 70-180mm F2.8 Di III VC VXD G2",
+      "brand": "Tamron",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-08-08T00:00:00.000Z",
+      "focal": "70-180mm",
+      "mounts": [
+        "NikonZ",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony a6700",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-07-12T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 70-200mm F4 G OSS II",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-07-12T00:00:00.000Z",
+      "focal": "70-200mm",
+      "mounts": [
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 70-180mm F2.8",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-06-21T00:00:00.000Z",
+      "focal": "70-180mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 180-600mm F5.6-6.3 VR",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-06-21T00:00:00.000Z",
+      "focal": "180-600mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 14mm F1.4 DG DN",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-06-08T00:00:00.000Z",
+      "focal": "14mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z DX 24mm F1.7",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-05-31T00:00:00.000Z",
+      "focal": "24mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Q3",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-05-25T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm X-S20",
+      "brand": "Fujifilm",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-05-24T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Fujifilm XF 8mm F3.5 R WR",
+      "brand": "Fujifilm",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-05-24T00:00:00.000Z",
+      "focal": "8mm",
+      "mounts": [
+        "FujifilmX"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon EOS R100",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-05-24T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 28mm F2.8 STM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-05-24T00:00:00.000Z",
+      "focal": "28mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony ZV-1 Mark II",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-05-23T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "HD Pentax-FA 50mm F1.4",
+      "brand": "Pentax",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-05-16T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "PentaxKAF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "smc Pentax-FA 50mm F1.4 Classic",
+      "brand": "Pentax",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-05-16T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "PentaxKAF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon PowerShot V10",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-05-11T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Z8",
+      "brand": "Nikon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-05-10T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 100-300mm F2.8L IS USM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-04-20T00:00:00.000Z",
+      "focal": "100-300mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z DX 12-28mm F3.5-5.6 PZ VR",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-04-18T00:00:00.000Z",
+      "focal": "12-28mm",
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica M11 Monochrom",
+      "brand": "Leica",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-04-13T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Summilux-M 50mm F1.4 ASPH (2023)",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-04-13T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "LeicaM"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Pentax K-3 Mark III Monochrome",
+      "brand": "Pentax",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-04-12T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 23mm F1.4 DC DN | C",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-04-03T00:00:00.000Z",
+      "focal": "23mm",
+      "mounts": [
+        "CanonRF",
+        "FujifilmX",
+        "LeicaSL",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 17mm F4 DG DN | C",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-04-03T00:00:00.000Z",
+      "focal": "17mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 50mm F2 DG DN | C",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-04-03T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony ZV-E1",
+      "brand": "Sony",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-03-29T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Vario-Elmar-SL 100-400 f/5-6.3",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-03-09T00:00:00.000Z",
+      "focal": "100-400mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 50mm F1.4 GM",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-02-21T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Leica Summicron-SL 35mm F2 ASPH",
+      "brand": "Leica",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-02-08T00:00:00.000Z",
+      "focal": "35mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "OM System M.Zuiko Digital ED 90mm F3.5 Macro IS Pro",
+      "brand": "OM System",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-02-08T00:00:00.000Z",
+      "focal": "90mm",
+      "mounts": [
+        "MicroFourThirds"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon EOS R8",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-02-07T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon EOS R50",
+      "brand": "Canon",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-02-07T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF 24-50mm F4.5-6.3 IS STM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-02-07T00:00:00.000Z",
+      "focal": "24-50mm",
+      "mounts": [
+        "CanonRF"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Canon RF-S 55-210mm F5.0-7.1 IS STM",
+      "brand": "Canon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-02-07T00:00:00.000Z",
+      "focal": "55-210mm",
+      "mounts": [
+        "CanonRF",
+        "CanonRFS"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 50mm F1.4 DG DN Art",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-02-07T00:00:00.000Z",
+      "focal": "50mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sony FE 20-70mm F4 G",
+      "brand": "Sony",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-01-17T00:00:00.000Z",
+      "focal": "20-70mm",
+      "mounts": [
+        "SonyE",
+        "SonyFE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Sigma 60-600mm F4.5-6.3 DG DN OS",
+      "brand": "Sigma",
+      "kind": "lens",
+      "independent": true,
+      "announcedAt": "2023-01-12T00:00:00.000Z",
+      "focal": "60-600mm",
+      "mounts": [
+        "LeicaSL",
+        "SonyE"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 85mm F1.2 S",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-01-04T00:00:00.000Z",
+      "focal": "85mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Nikon Nikkor Z 26mm F2.8",
+      "brand": "Nikon",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-01-04T00:00:00.000Z",
+      "focal": "26mm",
+      "mounts": [
+        "NikonZ"
+      ],
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-S5II",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-01-04T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic Lumix DC-S5IIX",
+      "brand": "Panasonic",
+      "kind": "body",
+      "independent": false,
+      "announcedAt": "2023-01-04T00:00:00.000Z",
+      "source": "dpreview"
+    },
+    {
+      "name": "Panasonic LUMIX S 14-28mm F4-5.6 Macro",
+      "brand": "Panasonic",
+      "kind": "lens",
+      "independent": false,
+      "announcedAt": "2023-01-04T00:00:00.000Z",
+      "focal": "14-28mm",
+      "mounts": [
+        "LeicaSL"
+      ],
+      "source": "dpreview"
+    }
+  ]
+}

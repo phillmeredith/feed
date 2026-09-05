@@ -1,26 +1,281 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Warm dark ground with beige text — far easier on the eyes than black. */
+  --void: #17120d;
+  --surface: #201a13;
+  --surface-2: #2a221a;
+  --paper: #ece0cc;
+  --muted: #a99880;
+  --faint: #7a6a56;
+  --rule: #352b21;
+  /* Gold rather than the old spring green, which fought the brown. */
+  --accent: #d9a441;
+  --accent-dim: #a87c2c;
+  --accent-ink: #17120d;
+  --negative: #d1705c;
+
+  --font-display: var(--font-bricolage);
+  --font-serif: var(--font-instrument);
+  --font-body: var(--font-source-serif);
+  --font-meta: var(--font-archivo);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-void: var(--void);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-paper: var(--paper);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-accent-ink: var(--accent-ink);
+  --color-negative: var(--negative);
+  --font-display: var(--font-display);
+  --font-serif: var(--font-serif);
+  --font-body: var(--font-body);
+  --font-meta: var(--font-meta);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--rule);
+}
+
+html {
+  background: var(--void);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--void);
+  color: var(--paper);
+  font-family: var(--font-body);
+}
+
+/* Nameplates and short labels only — caps are punchy but tiring to read. */
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+/* Article headlines: sentence case, generous apertures, easy to scan. */
+.headline {
+  font-family: var(--font-display);
+  line-height: 1.02;
+  letter-spacing: -0.021em;
+  font-weight: 700;
+}
+
+.kicker {
+  font-family: var(--font-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+}
+
+/* Photographs run untreated and unframed, as they would on the page. */
+.media {
+  position: relative;
+  overflow: hidden;
+  /* Transparent, so a letterboxed image sits on the page rather than in a box. */
+  background: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Syndicated article text. */
+.article-body {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--paper);
+}
+
+.article-body > * + * {
+  margin-top: 1.5rem;
+}
+
+.article-body h2,
+.article-body h3,
+.article-body h4 {
+  font-family: var(--font-serif);
+  color: var(--accent);
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-top: 2.75rem;
+}
+
+.article-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article-body a:hover {
+  color: var(--paper);
+}
+
+.article-body ul,
+.article-body ol {
+  padding-left: 1.5rem;
+}
+
+.article-body ul {
+  list-style: disc;
+}
+
+.article-body ol {
+  list-style: decimal;
+}
+
+.article-body li + li {
+  margin-top: 0.6rem;
+}
+
+.article-body blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.35;
+  color: var(--paper);
+}
+
+/*
+ * `max-width` rather than `width`: publishers inline tiny glyphs (trademark
+ * marks, icons) that a fixed width would blow up to full bleed.
+ */
+.article-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+.article-body p > img,
+.article-body figure img {
+  display: block;
+}
+
+.article-body figcaption {
+  font-family: var(--font-meta);
+  font-size: 0.75rem;
+  color: var(--faint);
+  margin-top: 0.75rem;
+}
+
+/* Spec tables turn up constantly in camera and hardware pieces. */
+.article-body .table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+
+.article-body table {
+  width: 100%;
+  /* Below this the columns crush words to one per line; scroll instead. */
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-family: var(--font-meta);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.article-body thead {
+  background: var(--surface-2);
+}
+
+.article-body th {
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.688rem;
+  color: var(--accent);
+  padding: 0.85rem 1.15rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.article-body td {
+  padding: 0.8rem 1.15rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--paper);
+  vertical-align: top;
+}
+
+/* First column reads as the row label. */
+.article-body td:first-child {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.article-body tr:last-child td {
+  border-bottom: 0;
+}
+
+.article-body tbody tr:nth-child(even) {
+  background: rgba(236, 224, 204, 0.025);
+}
+
+.article-body pre {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.article-body hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* Opening paragraph of a story page. */
+.dropcap > p:first-of-type::first-letter,
+.dropcap::first-letter {
+  font-family: var(--font-display);
+  color: var(--accent);
+  float: left;
+  font-size: 5.2rem;
+  line-height: 0.78;
+  margin: 0.35rem 0.75rem 0 0;
+}
+
+/* Collapsible Today section — hide the native disclosure triangle. */
+.today > summary::-webkit-details-marker,
+.today > summary::marker {
+  display: none;
+  content: "";
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Marquee ticker in the masthead. */
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  animation: ticker 150s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
 }

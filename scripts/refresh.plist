@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Ten-minute cache warm, run from this Mac.
+
+  Install:
+    cp scripts/refresh.plist ~/Library/LaunchAgents/com.dispatch.refresh.plist
+    launchctl load ~/Library/LaunchAgents/com.dispatch.refresh.plist
+
+  Remove:
+    launchctl unload ~/Library/LaunchAgents/com.dispatch.refresh.plist
+    rm ~/Library/LaunchAgents/com.dispatch.refresh.plist
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.dispatch.refresh</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>-c</string>
+    <string>for p in "" ai hardware cameras vehicles sports science robotics weather screen wire; do curl -s -o /dev/null --max-time 60 "https://feed-theta-ten.vercel.app/$p"; done</string>
+  </array>
+  <key>StartInterval</key>
+  <integer>600</integer>
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>

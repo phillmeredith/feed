@@ -1,0 +1,9 @@
+{
+  "note": "URLs that cannot be shown in full (live blogs, video posts, pages that defeat extraction). Filtered out of every listing so the site never links to a dead end. Appended by `npm run audit`.",
+  "urls": [
+    "https://www.fujirumors.com/fujinon-xf400mm-f-4-5-announced-reviews-and-preorders-live-blog/",
+    "https://electrek.co/2026/09/04/all-press-is-good-press-right-cybercab-event-leaves-more-questions-than-answers/",
+    "https://electrek.co/2026/09/04/glencore-reaches-new-depth-milestone-at-its-all-electric-nickel-mine/",
+    "https://electrek.co/2026/09/04/university-at-buffalo-adds-electric-buses-to-stampede-fleet/"
+  ]
+}

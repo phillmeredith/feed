@@ -1,0 +1,56 @@
+{
+  "note": "Closed-model releases recorded from this desk's coverage. Publishers' feeds only carry a rolling window, so releases are kept here once seen. 'releasedAt' is the date this desk first reported the release. Grown by `npm run models:update`.",
+  "updated": "2026-09-04T23:23:07.530Z",
+  "items": [
+    {
+      "id": "coverage:gpt-6 astra",
+      "name": "GPT-6 Astra",
+      "lab": "OpenAI",
+      "releasedAt": "2026-09-04T00:00:00.000Z",
+      "likes": 0,
+      "downloads": 0,
+      "url": "",
+      "weights": "closed"
+    },
+    {
+      "id": "coverage:gemini 3.8 flash",
+      "name": "Gemini 3.8 Flash",
+      "lab": "Google DeepMind",
+      "releasedAt": "2026-09-02T00:00:00.000Z",
+      "likes": 0,
+      "downloads": 0,
+      "url": "",
+      "weights": "closed"
+    },
+    {
+      "id": "coverage:gemini 3.8 flash cyber",
+      "name": "Gemini 3.8 Flash Cyber",
+      "lab": "Google DeepMind",
+      "releasedAt": "2026-09-02T00:00:00.000Z",
+      "likes": 0,
+      "downloads": 0,
+      "url": "",
+      "weights": "closed"
+    },
+    {
+      "id": "coverage:claude fable 5.1",
+      "name": "Claude Fable 5.1",
+      "lab": "Anthropic",
+      "releasedAt": "2026-09-01T00:00:00.000Z",
+      "likes": 0,
+      "downloads": 0,
+      "url": "",
+      "weights": "closed"
+    },
+    {
+      "id": "coverage:claude mythos 5.1",
+      "name": "Claude Mythos 5.1",
+      "lab": "Anthropic",
+      "releasedAt": "2026-09-01T00:00:00.000Z",
+      "likes": 0,
+      "downloads": 0,
+      "url": "",
+      "weights": "closed"
+    }
+  ]
+}

@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Dispatch
 
-## Getting Started
+An editorial-style front page for new releases across AI models, consumer hardware,
+cameras and lenses, electric vehicles, sport (F1 and golf) and science — plus a
+measured news wire and local weather. One page instead of thirty tabs.
 
-First, run the development server:
+## How it works
+
+There is no database and no cron job. The page is a server component that fetches
+every RSS feed in parallel on request, and Next.js caches the result:
+
+```
+lib/sources.ts   feed list, per-desk, with editorial weights and per-feed caps
+lib/feed.ts      fetch → normalise → filter → de-duplicate → rank
+lib/weather.ts   Open-Meteo current conditions and five-day forecast (no API key)
+app/page.tsx     assembles the front page, revalidates every 30 minutes
+```
+
+Each item passes through a few editorial filters before it can appear:
+
+- **Sensationalism** — tabloid verbs ("slams", "bombshell", "fury") are dropped.
+- **Deals** — affiliate and discount roundups are dropped; they are not releases.
+- **Re-desking** — broad outlets get their stories routed to the right section, so
+  a 9to5Mac piece about GPT-6 files under AI Models rather than Hardware.
+- **De-duplication** — the same story from several outlets collapses to one, with
+  a shared product code ("xf400mm") treated as strong evidence of a match. The
+  highest-weighted source wins.
+- **Ranking** — recency dominates, with a boost for genuine launch language
+  ("announces", "unveils", "now available").
+- **Diversity** — no outlet may take more than three slots in a section, or two in
+  the news wire.
+
+## Running it
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Maintaining the feeds
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Feeds break, move and start returning 403s. This checks all of them at once:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run check-feeds
+```
 
-## Learn More
+Anything marked `BROKEN` needs a new URL in `lib/sources.ts` or should be removed.
+For outlets with no usable RSS (Anthropic, Mistral), the list uses a Google News
+search feed as a stand-in — a pattern worth reusing for any new source that lacks
+a feed of its own.
 
-To learn more about Next.js, take a look at the following resources:
+## Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Weather defaults to Newcastle upon Tyne. Override with environment variables:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+WEATHER_LOCATION="Newcastle upon Tyne"
+WEATHER_LAT=54.9783
+WEATHER_LON=-1.6178
+```
 
-## Deploy on Vercel
+## Deploying
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+vercel        # preview deployment
+vercel --prod # production
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No environment variables are required for a default deploy — every data source is
+public and keyless.

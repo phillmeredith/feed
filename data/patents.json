@@ -1,0 +1,110 @@
+{
+  "note": "Patent filings by the manufacturers each desk covers, from Google Patents (keyless). Fetched on a schedule by `npm run patents:update` rather than per request, because Google rate-limits bursts. Never removes.",
+  "updated": "2026-09-05T07:48:09.782Z",
+  "items": [
+    {
+      "id": "US20260143308A1",
+      "title": "Information processing apparatus and alert notification method",
+      "assignee": "Panasonic Holdings",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260143308A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143491A1",
+      "title": "Base station, communication device, and communication method",
+      "assignee": "Panasonic Intellectual Property Corporation Of America",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260143491A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143858A1",
+      "title": "Power generation module",
+      "assignee": "Panasonic Intellectual Property Management Co.",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260143858A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143828A1",
+      "title": "Power generation module and method for manufacturing power generation module",
+      "assignee": "Panasonic Intellectual Property Management Co.",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260143828A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143827A1",
+      "title": "Power generation module and method for manufacturing power generation module",
+      "assignee": "Panasonic Intellectual Property Management Co.",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260143827A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143097A1",
+      "title": "Projection control method and projection control device",
+      "assignee": "Panasonic Projector & Display",
+      "filedAt": "2026-01-14",
+      "publicationNumber": "US20260143097A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260138274A1",
+      "title": "Generating references for robot-carried objects and related technology",
+      "assignee": "Agility Robotics",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260138274A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260143467A1",
+      "title": "User equipment and base station involved in paging",
+      "assignee": "Panasonic Intellectual Property Corporation Of America",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260143467A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260141568A1",
+      "title": "Three-dimensional data encoding method, three-dimensional data decoding method, &hellip;",
+      "assignee": "Panasonic Intellectual Property Corporation Of America",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260141568A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260142861A1",
+      "title": "Communication apparatus and communication method for ppdu format identification",
+      "assignee": "Panasonic Intellectual Property Corporation Of America",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260142861A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260131870A1",
+      "title": "Motor unit with improved heat dissipation capability for use in electric &hellip;",
+      "assignee": "Panasonic Intellectual Property Management Co.",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260131870A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260042213A1",
+      "title": "Filtering object detection based on agreement with environment and related &hellip;",
+      "assignee": "Agility Robotics",
+      "filedAt": "2025-10-16",
+      "publicationNumber": "US20260042213A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260099149A1",
+      "title": "Control of dynamically stable robot based on fault-state fall property and &hellip;",
+      "assignee": "Agility Robotics",
+      "filedAt": "2025-10-07",
+      "publicationNumber": "US20260099149A1",
+      "desk": "robotics"
+    }
+  ]
+}
