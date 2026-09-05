@@ -1,7 +1,17 @@
 {
   "note": "Every story the site has published, kept as publishers rotate them out of their feeds. Bodies are not stored — story pages re-read them on demand. Grown by `npm run archive:update`, never pruned.",
-  "updated": "2026-09-05T08:01:43.256Z",
+  "updated": "2026-09-05T08:31:59.785Z",
   "items": [
+    {
+      "id": "formula-3-2026-italian-grand-prix-sprint-race-results-jr1ig3",
+      "category": "sports",
+      "headline": "Formula 3 2026 Italian Grand Prix – Sprint Race Results",
+      "dek": "Taito Kato secured his maiden Formula 3 victory for ART Grand Prix during an intense final few laps at the Italian Grand Prix.",
+      "source": "Motorsport Week",
+      "url": "https://www.motorsportweek.com/2026/09/05/formula-3-2026-italian-grand-prix-sprint-race-results/",
+      "image": "https://www.motorsportweek.com/wp-content/uploads/2026/09/XPB_1433030_HiRes-1.webp",
+      "publishedAt": "2026-09-05T08:19:10.000Z"
+    },
     {
       "id": "broken-skeleton-could-be-the-first-evidence-of-medieval-hkqk41",
       "category": "science",
@@ -61,6 +71,16 @@
       "url": "https://www.indiewire.com/criticism/movies/the-idiots-review-johnny-flynn-aimee-lou-wood-1235215061/",
       "image": "",
       "publishedAt": "2026-09-05T04:34:28.000Z"
+    },
+    {
+      "id": "big-price-drop-on-blackmagic-design-cinema-cameras-including-zyrfqe",
+      "category": "cameras",
+      "headline": "Big Price Drop on Blackmagic Design Cinema Cameras Including The PXYIS 6K",
+      "dek": "A massive price drop across its line of cinema cameras allows Blackmagic Design to, once again, offer excellent value to filmmakers on a budget. [Read More]",
+      "source": "Fstoppers",
+      "url": "https://fstoppers.com/gear/big-price-drop-blackmagic-design-cinema-cameras-including-pxyis-6k-904467?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+      "image": "https://cdn.fstoppers.com/styles/16_9_max_650/s3/lead/2026/09/pyxis-6k.jpg.webp?itok=Zp8E_OJp",
+      "publishedAt": "2026-09-05T04:00:12.000Z"
     },
     {
       "id": "this-september-remember-me-the-2010-robert-pattinson-film-pu8luu",
@@ -313,6 +333,26 @@
       "publishedAt": "2026-09-04T21:05:36.000Z"
     },
     {
+      "id": "how-long-exposures-erase-people-the-math-of-making-xxa71y",
+      "category": "technique",
+      "headline": "How Long Exposures Erase People: The Math of Making Crowds Vanish",
+      "dek": "Put a 35mm lens on a full frame camera, stand about 20 m back from a plaza, and each pixel in the file covers roughly 3.4 mm of the ground at that distance. A person walking…",
+      "source": "Fstoppers",
+      "url": "https://fstoppers.com/education/how-long-exposures-erase-people-math-making-crowds-vanish-903818?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+      "image": "https://cdn.fstoppers.com/styles/16_9_max_650/s3/lead/2026/08/landscapes-29_0.jpg.webp?itok=iisruA4q",
+      "publishedAt": "2026-09-04T21:03:01.000Z"
+    },
+    {
+      "id": "want-to-sell-your-prints-apply-for-the-5-pcxspk",
+      "category": "cameras",
+      "headline": "Want to Sell Your Prints? Apply for the 5 Boro Foto Fest Today",
+      "dek": "The 5 Boro Foto Fest is open for vendor applications, and it's built specifically for photographers who want to sell their printed art in person, not just post it online. We…",
+      "source": "The Phoblographer",
+      "url": "https://www.thephoblographer.com/2026/09/04/want-to-sell-your-prints-apply-for-the-5-boro-foto-fest-today/",
+      "image": "",
+      "publishedAt": "2026-09-04T21:00:00.000Z"
+    },
+    {
       "id": "byds-most-affordable-ev-is-about-to-get-a-1yddz1a",
       "category": "vehicles",
       "headline": "BYD’s most affordable EV is about to get a ‘big’ sibling",
@@ -431,6 +471,16 @@
       "url": "https://www.sciencealert.com/not-money-or-pleasure-scientists-say-theyve-found-the-true-key-to-happiness",
       "image": "https://www.sciencealert.com/images/2026/09/CoupleOnBoatSmilingInSun.jpg",
       "publishedAt": "2026-09-04T20:00:00.000Z"
+    },
+    {
+      "id": "the-jeep-wagoneer-and-ram-1500-extended-range-evs-face-179sp70",
+      "category": "vehicles",
+      "headline": "The Jeep Wagoneer and Ram 1500 extended-range EVs face another delay",
+      "dek": "The Jeep Grand Wagoneer and Ram 1500 extended-range electric vehicles (EREVs) may not arrive as soon as expected after yet another delay.",
+      "source": "Electrek",
+      "url": "https://electrek.co/2026/09/04/jeep-wagoneer-rams-extended-range-ev-face-another-delay/",
+      "image": "https://electrek.co/wp-content/uploads/sites/3/2025/10/Jeep-first-range-extended-EV.jpeg?quality=82&strip=all&resize=1200,628",
+      "publishedAt": "2026-09-04T19:51:31.000Z"
     },
     {
       "id": "alogic-expands-display-lineup-with-new-5k-and-6k-q18iqh",
@@ -593,6 +643,26 @@
       "publishedAt": "2026-09-04T17:09:58.000Z"
     },
     {
+      "id": "a-street-photography-master-talks-about-light-and-portraiture-7pqska",
+      "category": "cameras",
+      "headline": "A Street Photography Master Talks About Light and Portraiture",
+      "dek": "Eventually, every street photographer tends to want to experiment in portraiture. It's just a natural evolution for so many. Certain photographers may start out with candids…",
+      "source": "The Phoblographer",
+      "url": "https://www.thephoblographer.com/2026/09/04/greg-turners-candid-street-portraits-light-master/",
+      "image": "",
+      "publishedAt": "2026-09-04T17:00:00.000Z"
+    },
+    {
+      "id": "manfrotto-adds-a-dedicated-video-tripod-to-its-one-1jvze9f",
+      "category": "cameras",
+      "headline": "Manfrotto Adds a Dedicated Video Tripod to Its ONE System",
+      "dek": "Manfrotto has announced the ONE Video, rounding out its ONE System tripods with a dedicated professional video option. [Read More]",
+      "source": "PetaPixel",
+      "url": "https://petapixel.com/2026/09/04/manfrotto-adds-a-dedicated-video-tripod-to-its-one-system/",
+      "image": "https://petapixel.com/assets/uploads/2026/09/Manfrotto-Adds-a-Dedicated-Video-Tripod-to-Its-ONE-System.jpg",
+      "publishedAt": "2026-09-04T16:54:05.000Z"
+    },
+    {
       "id": "the-tesla-cybercab-is-already-being-investigated-for-not-1mmd05m",
       "category": "vehicles",
       "headline": "The Tesla Cybercab Is Already Being Investigated For Not Having A Steering Wheel",
@@ -641,6 +711,16 @@
       "url": "https://electrek.co/2026/09/04/byd-launches-biggest-sales-event-uk-phevs-evs/",
       "image": "https://electrek.co/wp-content/uploads/sites/3/2026/09/BYD-biggest-sales-event-UK.jpeg?quality=82&strip=all&resize=1200,628",
       "publishedAt": "2026-09-04T16:12:56.000Z"
+    },
+    {
+      "id": "bluetti-elite-400-portable-power-that-works-for-demanding-1eljodj",
+      "category": "cameras",
+      "headline": "BLUETTI Elite 400: Portable Power That Works for Demanding Location Photography",
+      "dek": "For photographers working on location, reliable power is no longer a luxury; it's an essential part of the process. Between strobe or LED lighting, tethered laptops, battery…",
+      "source": "Fstoppers",
+      "url": "https://fstoppers.com/gear/bluetti-elite-400-portable-power-works-demanding-location-photography-904217?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+      "image": "https://cdn.fstoppers.com/styles/16_9_max_650/s3/lead/2026/08/bluetti169.jpg.webp?itok=4ItJuj8a",
+      "publishedAt": "2026-09-04T16:03:01.000Z"
     },
     {
       "id": "tesla-cybercab-launch-catches-nhtsas-attention-who-wants-to-1716l66",
@@ -701,6 +781,16 @@
       "url": "https://amateurphotographer.com/latest/photo-news/stardust-hundred-heroines-celebrity-photography-exhibition/",
       "image": "https://amateurphotographer.com/wp-content/uploads/sites/7/2026/08/Jillian-Edelstein-Kate-Moss-©-Jillian-Edelstein.-Courtesy-Hundred-Heroines.jpg",
       "publishedAt": "2026-09-04T15:06:00.000Z"
+    },
+    {
+      "id": "five-edits-that-take-a-landscape-photo-from-okay-1xldbgh",
+      "category": "cameras",
+      "headline": "Five Edits That Take a Landscape Photo From Okay to Finished",
+      "dek": "Every landscape image is different, yet the same handful of moves show up in almost every edit that actually works. Learn those moves and you stop guessing your way through…",
+      "source": "Fstoppers",
+      "url": "https://fstoppers.com/landscapes/five-edits-take-landscape-photo-okay-finished-904461?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+      "image": "",
+      "publishedAt": "2026-09-04T15:03:01.000Z"
     },
     {
       "id": "a-mosquito-that-can-transmit-zika-has-bred-in-19bx2kv",
@@ -813,6 +903,16 @@
       "publishedAt": "2026-09-04T13:00:00.000Z"
     },
     {
+      "id": "lightfall-photo-wants-to-be-the-photography-community-instagram-1j2lgcm",
+      "category": "cameras",
+      "headline": "Lightfall Photo Wants to Be the Photography Community Instagram Left Behind",
+      "dek": "Lightfall Photo is a new photography-sharing platform and app that promises the lack of AI use, no manipulative algorithms, or the use of big tech. Users can upload their work…",
+      "source": "The Phoblographer",
+      "url": "https://www.thephoblographer.com/2026/09/04/lightfall-photo-wants-to-be-the-photography-community-instagram-left-behind/",
+      "image": "",
+      "publishedAt": "2026-09-04T13:00:00.000Z"
+    },
+    {
       "id": "leaked-sony-will-announced-the-worlds-lightest-400mm-and-vxoike",
       "category": "cameras",
       "headline": "LEAKED: Sony will announced the world’s lightest 400mm and 600m tele prime lenses!",
@@ -841,6 +941,16 @@
       "url": "https://www.bbc.co.uk/sport/golf/articles/cde0261k9xro?at_medium=RSS&at_campaign=rss",
       "image": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/e14b/live/5b5ffd60-a855-11f1-ae45-e9984fc27c77.jpg",
       "publishedAt": "2026-09-04T12:16:31.000Z"
+    },
+    {
+      "id": "i-came-back-with-over-20000-images-from-my-o28990",
+      "category": "technique",
+      "headline": "I came back with over 20,000 images from my ‘relaxing’ city break – here’s how I organised and edited them so quickly!",
+      "dek": "Will Cheung recently came back from a holiday to Hong Kong with a LOT of pictures. Here's how he managed them the easy way with Excire Foto 2027",
+      "source": "Amateur Photographer",
+      "url": "https://amateurphotographer.com/latest/photo-news/i-came-back-with-over-20000-images-from-my-relaxing-city-break-heres-how-i-organised-and-edited-them-so-quickly/",
+      "image": "https://amateurphotographer.com/wp-content/uploads/sites/7/2026/09/01-Excire-interface.jpg",
+      "publishedAt": "2026-09-04T12:12:29.000Z"
     },
     {
       "id": "unfair-trade-automakers-push-congress-to-ban-chinese-cars-17ifa2d",
@@ -903,6 +1013,16 @@
       "publishedAt": "2026-09-04T11:00:00.000Z"
     },
     {
+      "id": "how-this-photo-showing-ice-officers-separating-a-family-fe5xn8",
+      "category": "cameras",
+      "headline": "How this photo showing ICE officers separating a family came to define the world’s best photojournalism contest",
+      "dek": "The World Press Photo winner by Carol Guzy shows us all the human cost behind political decisions",
+      "source": "Amateur Photographer",
+      "url": "https://amateurphotographer.com/latest/photo-news/how-this-photo-showing-ice-officers-separating-a-family-came-to-define-the-worlds-best-photojournalism-contest/",
+      "image": "https://amateurphotographer.com/wp-content/uploads/sites/7/2026/08/001-World-Press-Photo-of-the-Year-Carol-Guzy-ZUMA-Press-iWitness-for-Miami-Herald.jpg",
+      "publishedAt": "2026-09-04T11:00:00.000Z"
+    },
+    {
       "id": "hot-weather-linked-to-workplace-injuries-even-indoors-dr2mq7",
       "category": "weather",
       "headline": "Hot weather linked to workplace injuries, even indoors",
@@ -953,6 +1073,16 @@
       "publishedAt": "2026-09-04T10:00:00.000Z"
     },
     {
+      "id": "i-took-the-kodak-ec35-on-a-summer-trip-15z9mwp",
+      "category": "lenses",
+      "headline": "I took the Kodak EC35 on a summer trip – here’s why I do (and don’t) think it’s a brilliant 35mm travel camera",
+      "dek": "Kodak licensee RETO has produced a sleek-looking point-and-shoot in the style of an Olympus Mju – here’s how I found it fared for travel photography.",
+      "source": "Amateur Photographer",
+      "url": "https://amateurphotographer.com/technique/film-photography/i-took-the-kodak-ec35-on-a-summer-trip-heres-why-i-do-and-dont-think-its-a-brilliant-35mm-travel-camera/",
+      "image": "https://amateurphotographer.com/wp-content/uploads/sites/7/2026/09/DSCF2086.jpg",
+      "publishedAt": "2026-09-04T09:30:00.000Z"
+    },
+    {
       "id": "adult-film-producer-unmasks-prolific-john-doe-torrent-pirate-8mpnt0",
       "category": "screen",
       "headline": "Adult Film Producer Unmasks Prolific ‘John Doe’ Torrent Pirate as Meta Executive",
@@ -980,6 +1110,16 @@
       "source": "ProPublica",
       "url": "https://www.propublica.org/article/colorado-marijuana-enforcement-division-sima-sciences-midnight-drops",
       "image": "https://www.propublica.org/wp-content/uploads/2026/08/04xx26-dg-news-Chatting-5-1_preview_maxWidth_3000_maxHeight_3000_ppi_72_embedColorProfile_true_quality_95.jpg?w=1149",
+      "publishedAt": "2026-09-04T09:00:00.000Z"
+    },
+    {
+      "id": "bird-photography-tips-how-to-get-the-best-shots-1kq84gi",
+      "category": "technique",
+      "headline": "Bird Photography Tips: How to Get the Best Shots During Fall Migration",
+      "dek": "Bird photography can open up your world in myriad ways. Each season brings fantastic moments, some that warm your heart and others that result in fantastic photographic…",
+      "source": "The Phoblographer",
+      "url": "https://www.thephoblographer.com/2026/09/04/bird-photography-tips-how-to-get-the-best-shots-during-fall-migration/",
+      "image": "",
       "publishedAt": "2026-09-04T09:00:00.000Z"
     },
     {
@@ -1033,6 +1173,16 @@
       "publishedAt": "2026-09-04T06:13:05.000Z"
     },
     {
+      "id": "fujifilm-rounds-out-its-sports-and-wildlife-trio-with-1eph5ul",
+      "category": "lenses",
+      "headline": "Fujifilm rounds out its sports and wildlife trio with a 400mm F4.5",
+      "dek": "The XF 400mm F4.5 shares nearly the same optical design as the XF 500mm F5.6, but Fujifilm claims it will offer better sharpness.",
+      "source": "DPReview",
+      "url": "https://www.dpreview.com/news/fujifilm-rounds-out-its-sports-and-wildlife-trio-with-a-400mm-f4-5/",
+      "image": "https://www.dpreview.com/wp-content/uploads/2026/09/M-PI-fujifilm-xf-400mm-f4p5-lens-02.jpg",
+      "publishedAt": "2026-09-04T05:00:00.000Z"
+    },
+    {
       "id": "a-trio-of-tropical-cyclones-in-the-pacific-1ibj3hw",
       "category": "weather",
       "headline": "A Trio of Tropical Cyclones in the Pacific",
@@ -1071,6 +1221,16 @@
       "url": "https://www.teslarati.com/tesla-cybertruck-tailgate-utility-track-bed-gear-box/",
       "image": "https://www.teslarati.com/wp-content/uploads/2026/09/tesla-cybertruck-bed-gear-box.webp",
       "publishedAt": "2026-09-04T02:45:00.000Z"
+    },
+    {
+      "id": "lensbaby-twist-28-review-tiny-lens-with-a-big-1uabf4g",
+      "category": "lenses",
+      "headline": "Lensbaby Twist 28 review – tiny lens with a big creative twist",
+      "dek": "Lensbaby’s latest creative lens combines a wide-angle view with the swirling background effect of a classic Petzval lens. Angela Nicholson takes the Lensbaby Twist 28 for a spin.",
+      "source": "Amateur Photographer",
+      "url": "https://amateurphotographer.com/review/lensbaby-twist-28-review/",
+      "image": "https://amateurphotographer.com/wp-content/uploads/sites/7/2026/09/lensbaby-twist-28-anicholson-dsc03029.jpg",
+      "publishedAt": "2026-09-04T02:27:00.000Z"
     },
     {
       "id": "cameroons-indomitable-lionesses-football-team-finally-shatter-wafcon-glass-ab8d92",
@@ -1183,6 +1343,16 @@
       "publishedAt": "2026-09-03T13:00:00.000Z"
     },
     {
+      "id": "leicas-new-summicron-66mm-f2-is-a-tribute-to-dqir25",
+      "category": "lenses",
+      "headline": "Leica’s new Summicron 66mm F2 is a tribute to a military lens M shooters have never been able to buy",
+      "dek": "There will only be 660 of them made, which still makes it far less rare than the original.",
+      "source": "DPReview",
+      "url": "https://www.dpreview.com/news/leicas-new-summicron-66mm-f2-is-a-tribute-to-a-military-lens-m-shooters-have-never-been-able-to-buy/",
+      "image": "https://www.dpreview.com/wp-content/uploads/2026/09/Leica-Summicron-M-66-f2-HiRes-Celebrate-001-16x9-Lead-1.jpg",
+      "publishedAt": "2026-09-03T13:00:00.000Z"
+    },
+    {
       "id": "protecting-dynamic-industrial-robot-cable-carriers-k12aqv",
       "category": "robotics",
       "headline": "Protecting Dynamic Industrial Robot Cable Carriers",
@@ -1211,6 +1381,16 @@
       "url": "https://restofworld.org/2026/ai-training-jobs-expert-replacement/?utm_source=rss&utm_medium=rss&utm_campaign=feeds",
       "image": "https://restofworld.org/wp-content/uploads/2026/08/illo_AI_training_sketch_final.jpg",
       "publishedAt": "2026-09-03T10:00:00.000Z"
+    },
+    {
+      "id": "sony-fx5-shipment-date-keeps-being-postponed-14k605y",
+      "category": "cameras",
+      "headline": "Sony FX5 shipment date keeps being postponed",
+      "dek": "While Adorama still says shipping will begin on September 15, I think dates like these are purely speculative. SAR readers keep messaging me whenever their estimated preorder…",
+      "source": "Sony Alpha Rumors",
+      "url": "https://www.sonyalpharumors.com/sony-fx5-shipment-date-keeps-being-postponed/",
+      "image": "",
+      "publishedAt": "2026-09-03T09:30:33.000Z"
     },
     {
       "id": "these-judges-take-months-to-decide-if-immigrants-have-f29zau",
@@ -1323,6 +1503,16 @@
       "publishedAt": "2026-09-02T16:24:24.000Z"
     },
     {
+      "id": "thinnest-powerbank-with-semi-solid-state-batteries-on-kickstarter-1ikmiei",
+      "category": "cameras",
+      "headline": "Thinnest PowerBank with Semi Solid State batteries on Kickstarter",
+      "dek": "this 0.2 inch (5.8mm) thin and 2.8 oz (78g) light power bank is now available for preorder on Kickstarter (click here). It has a new kind of semi-solid-state battery and IPX7…",
+      "source": "Sony Alpha Rumors",
+      "url": "https://www.sonyalpharumors.com/thinnest-powerbank-with-semi-solid-state-batteries-on-kickstarter/",
+      "image": "",
+      "publishedAt": "2026-09-02T16:20:09.000Z"
+    },
+    {
       "id": "genome-duplication-is-a-radical-evolutionary-gamble-17hq6vk",
       "category": "science",
       "headline": "Genome Duplication Is a Radical Evolutionary Gamble",
@@ -1341,6 +1531,16 @@
       "url": "https://torrentfreak.com/rcn-urges-judge-to-toss-the-major-labels-last-piracy-liability-lawsuit/",
       "image": "https://torrentfreak.com/images/cassete-pirate.jpg",
       "publishedAt": "2026-09-02T13:54:46.000Z"
+    },
+    {
+      "id": "surprise-nisi-presented-a-new-26mm-f07-full-frame-1jty2ly",
+      "category": "lenses",
+      "headline": "Surprise: Nisi presented a new 26mm f/0.7 Full Frame lens!",
+      "dek": "NiSi has shown a prototype of a new 26mm f/0.7 full-frame Z-mount lens. This manual-focus lens matches the record-holding Carl Zeiss Planar 50mm f/0.7 as one of the fastest…",
+      "source": "Sony Alpha Rumors",
+      "url": "https://www.sonyalpharumors.com/surprise-nisi-presented-a-new-26mm-f-0-7-full-frame-lens/",
+      "image": "",
+      "publishedAt": "2026-09-02T13:43:34.000Z"
     },
     {
       "id": "defense-tech-has-unleashed-a-new-weapons-boom-in-zh1q4t",
@@ -1523,6 +1723,26 @@
       "publishedAt": "2026-08-25T08:52:50.000Z"
     },
     {
+      "id": "hitch-your-wagons-photography-wagon-from-westcott-p4gcqg",
+      "category": "cameras",
+      "headline": "Hitch your Wagons! Photography Wagon from Westcott!",
+      "dek": "",
+      "source": "Digital Photography School",
+      "url": "https://digital-photography-school.com/hitch-your-wagons-photography-wagon-from-westcott/",
+      "image": "https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2026/08/Westcott-Photography-Wagon-1591-Lauren-Ashley-Grenda-BTS-scaled.jpg?resize=2560%2C1706&#038;ssl=1",
+      "publishedAt": "2026-08-25T04:42:47.000Z"
+    },
+    {
+      "id": "westcott-expands-fj-wireless-lighting-system-opb6wq",
+      "category": "cameras",
+      "headline": "Westcott Expands FJ Wireless Lighting System",
+      "dek": "",
+      "source": "Digital Photography School",
+      "url": "https://digital-photography-school.com/westcott-expands-fj-wireless-lighting-system/",
+      "image": "https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2026/08/Westcott-FJ100-Strobe-and-FJ100-Speedlight-Black-scaled.jpg?resize=2560%2C1706&#038;ssl=1",
+      "publishedAt": "2026-08-04T04:00:00.000Z"
+    },
+    {
       "id": "welcome-to-dubai-kinahan-cartels-visas-revealed-2hux0t",
       "category": "wire",
       "headline": "Welcome to Dubai: Kinahan Cartel’s Visas Revealed",
@@ -1541,6 +1761,16 @@
       "url": "https://themarkup.org/privacy/2026/07/28/brazil-gives-parents-social-media-controls-for-their-kids-should-the-u-s",
       "image": "https://mrkp-static-production.themarkup.org/uploads/2026/07/083024_Santa-Monica-Construction_-ZS-32_MU.jpg",
       "publishedAt": "2026-07-28T12:00:00.000Z"
+    },
+    {
+      "id": "peak-design-rethinks-the-traditional-l-bracket-with-new-field-zj5m4z",
+      "category": "cameras",
+      "headline": "Peak Design Rethinks the Traditional L-Bracket with New Field Bracket System",
+      "dek": "",
+      "source": "Digital Photography School",
+      "url": "https://digital-photography-school.com/peak-design-rethinks-the-traditional-l-bracket-with-new-field-bracket-system/",
+      "image": "",
+      "publishedAt": "2026-07-26T02:23:47.000Z"
     }
   ]
 }

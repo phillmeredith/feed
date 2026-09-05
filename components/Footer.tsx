@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categories } from "@/lib/categories";
+import { navItems } from "@/lib/categories";
 
 export function Footer() {
   return (
@@ -17,9 +17,9 @@ export function Footer() {
         </div>
 
         <nav className="flex flex-wrap gap-x-8 gap-y-2 kicker text-[10px] text-muted">
-          {categories.map((c) => (
-            <Link key={c.slug} href={`/${c.slug}`} className="hover:text-accent">
-              {c.label}
+          {navItems().map((item) => (
+            <Link key={item.slug} href={`/${item.slug}`} className="hover:text-accent">
+              {item.label}
             </Link>
           ))}
         </nav>

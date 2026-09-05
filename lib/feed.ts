@@ -220,12 +220,32 @@ const ROUTES: [RegExp, CategorySlug][] = [
   [/\b(electric (car|vehicle|suv|truck)|\bev\b|charging network|rivian|polestar)\b/i, "vehicles"],
 ];
 
+/** A focal length or aperture in the headline means it's glass, not a body. */
+const LENS_HEADLINE = /\b\d{1,3}(-\d{1,3})?\s?mm\b|\bf\/\d(\.\d)?\b|\blens(es)?\b/i;
+
+/** Craft pieces rather than kit news. */
+const TECHNIQUE_HEADLINE =
+  /\bhow (to|i|long)\b|\btips?\b|\bguide\b|\btutorial\b|\bworkflow\b|\bcomposition\b|\bpost-?process\w*\b|\btechnique\b|\bexplains?\b|\bbehind the\b|\bthe math of\b|\blessons?\b|\bmasterclass\b|\bshoot(ing)? (with|in|at)\b/i;
+
 function routeCategory(headline: string, source: Source): CategorySlug {
-  if (!source.generalist) return source.category;
-  for (const [pattern, category] of ROUTES) {
-    if (pattern.test(headline)) return category;
+  const base = source.generalist
+    ? ROUTES.find(([pattern]) => pattern.test(headline))?.[1] ?? source.category
+    : source.category;
+
+  /*
+   * Photography splits three ways: bodies, glass, and how the work is made.
+   * A launch always belongs with the kit even when it mentions lighting or
+   * editing — "Westcott Expands FJ Wireless Lighting System" is a product,
+   * not a craft piece.
+   */
+  if (base === "cameras" || base === "technique") {
+    const isRelease = RELEASE_TERMS.test(headline);
+    if (!isRelease && TECHNIQUE_HEADLINE.test(headline)) return "technique";
+    if (LENS_HEADLINE.test(headline)) return "lenses";
+    return base === "technique" ? "cameras" : base;
   }
-  return source.category;
+
+  return base;
 }
 
 /** FNV-1a — short, stable, dependency-free. */

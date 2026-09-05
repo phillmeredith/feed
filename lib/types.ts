@@ -2,6 +2,8 @@ export type CategorySlug =
   | "ai"
   | "hardware"
   | "cameras"
+  | "lenses"
+  | "technique"
   | "vehicles"
   | "sports"
   | "science"
@@ -10,8 +12,19 @@ export type CategorySlug =
   | "screen"
   | "wire";
 
+/** Nav groups: a handful of sections, each holding related desks. */
+export interface Group {
+  slug: string;
+  label: string;
+  dek: string;
+  standfirst: string;
+  desks: CategorySlug[];
+}
+
 export interface Category {
   slug: CategorySlug;
+  /** The nav group this desk sits under, if any. */
+  group?: string;
   /** Full name, used as the desk nameplate. */
   label: string;
   /** Abbreviated name for navigation. */

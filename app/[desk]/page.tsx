@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
 import { LeadCard, FeatureCard, ListCard } from "@/components/cards";
-import { categories, categoryBySlug } from "@/lib/categories";
+import { categories, categoryBySlug, groupBySlug, groups } from "@/lib/categories";
+import { GroupPage } from "@/components/GroupPage";
 import { getFeed } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";
 import { gearDirectory } from "@/lib/gear";
@@ -28,13 +29,20 @@ export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 export function generateStaticParams() {
-  return categories.map((c) => ({ desk: c.slug }));
+  return [
+    ...groups.map((g) => ({ desk: g.slug })),
+    ...categories.map((c) => ({ desk: c.slug })),
+  ];
 }
 
 export async function generateMetadata({
   params,
 }: PageProps<"/[desk]">): Promise<Metadata> {
   const { desk } = await params;
+  const group = groupBySlug(desk);
+  if (group) {
+    return { title: `${group.label} — The Dispatch`, description: group.standfirst };
+  }
   const category = categoryBySlug(desk);
   if (!category) return {};
   return {
@@ -51,6 +59,11 @@ export default async function DeskPage({
 }: PageProps<"/[desk]">) {
   const { desk } = await params;
   const page = Math.max(1, Number((await searchParams)?.page ?? 1) || 1);
+
+  // A group slug renders an overview of the desks beneath it.
+  const group = groupBySlug(desk);
+  if (group) return <GroupPage group={group} />;
+
   const category = categoryBySlug(desk);
   if (!category) notFound();
 

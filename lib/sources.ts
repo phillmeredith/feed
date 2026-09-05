@@ -45,6 +45,12 @@ export const sources: Source[] = [
   { name: "Sony Alpha Rumors", url: "https://www.sonyalpharumors.com/feed/", category: "cameras", weight: 7 },
   { name: "Fuji Rumors", url: "https://www.fujirumors.com/feed/", category: "cameras", weight: 7 },
 
+  // Photography technique — craft rather than kit announcements.
+  { name: "Digital Photography School", url: "https://digital-photography-school.com/feed/", category: "technique", weight: 8, cap: 6 },
+  { name: "The Phoblographer", url: "https://www.thephoblographer.com/feed/", category: "technique", weight: 7, cap: 6 },
+  { name: "Fstoppers", url: "https://fstoppers.com/feed", category: "technique", weight: 7, cap: 6, generalist: true },
+  { name: "Shutterbug", url: "https://www.shutterbug.com/rss.xml", category: "technique", weight: 6, cap: 5 },
+
   // Electric vehicles
   { name: "Electrek", url: "https://electrek.co/feed/atom/", category: "vehicles", weight: 8, cap: 10 },
   { name: "InsideEVs", url: "https://insideevs.com/rss/articles/all/", category: "vehicles", weight: 8, cap: 10 },

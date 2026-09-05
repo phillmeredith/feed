@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categories } from "@/lib/categories";
+import { navItems } from "@/lib/categories";
 import { getFeed } from "@/lib/feed";
 import { getMarkets, formatPrice } from "@/lib/markets";
 import { getWeather } from "@/lib/weather";
@@ -59,13 +59,13 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
         <Wordmark small={compact} />
 
         <nav className="hidden md:flex items-center gap-6 kicker text-[11px] text-muted">
-          {categories.map((c) => (
+          {navItems().map((item) => (
             <Link
-              key={c.slug}
-              href={`/${c.slug}`}
+              key={item.slug}
+              href={`/${item.slug}`}
               className="hover:text-accent transition-colors"
             >
-              {c.short}
+              {item.label}
             </Link>
           ))}
         </nav>
@@ -128,9 +128,9 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
 
       <nav className="md:hidden border-t border-rule overflow-x-auto">
         <div className="flex items-center gap-5 px-5 py-3 kicker text-[11px] text-muted">
-          {categories.map((c) => (
-            <Link key={c.slug} href={`/${c.slug}`} className="whitespace-nowrap">
-              {c.short}
+          {navItems().map((item) => (
+            <Link key={item.slug} href={`/${item.slug}`} className="whitespace-nowrap">
+              {item.label}
             </Link>
           ))}
         </div>

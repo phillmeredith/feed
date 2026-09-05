@@ -1,8 +1,9 @@
-import type { Category, CategorySlug } from "./types";
+import type { Category, CategorySlug, Group } from "./types";
 
 export const categories: Category[] = [
   {
     slug: "ai",
+    group: "technology",
     label: "AI Models",
     short: "AI",
     dek: "New releases from the labs",
@@ -11,6 +12,7 @@ export const categories: Category[] = [
   },
   {
     slug: "hardware",
+    group: "technology",
     label: "Hardware",
     short: "Hardware",
     dek: "Apple, Samsung & the rest",
@@ -19,6 +21,7 @@ export const categories: Category[] = [
   },
   {
     slug: "cameras",
+    group: "photography",
     label: "Cameras & Lenses",
     short: "Cameras",
     dek: "Full-frame, medium format, glass",
@@ -27,11 +30,30 @@ export const categories: Category[] = [
   },
   {
     slug: "vehicles",
+    group: "technology",
     label: "Electric Vehicles",
     short: "EVs",
     dek: "New models, new ranges",
     standfirst:
       "New models, new platforms, new range figures — and the charging infrastructure catching up with them.",
+  },
+  {
+    slug: "lenses",
+    group: "photography",
+    label: "Lenses",
+    short: "Lenses",
+    dek: "Glass, mounts and optics",
+    standfirst:
+      "Lens announcements and reviews — first-party glass and the third-party makers building for everyone else's mounts.",
+  },
+  {
+    slug: "technique",
+    group: "photography",
+    label: "Technique",
+    short: "Technique",
+    dek: "Craft, process and the work itself",
+    standfirst:
+      "How pictures actually get made: light, process, post-production and the photographers explaining their own work.",
   },
   {
     slug: "sports",
@@ -50,6 +72,7 @@ export const categories: Category[] = [
   },
   {
     slug: "robotics",
+    group: "technology",
     label: "Robotics",
     short: "Robotics",
     dek: "Humanoids, autonomy & the factory floor",
@@ -81,6 +104,40 @@ export const categories: Category[] = [
       "Independent and nonprofit reporting — ProPublica, The Conversation, The Markup, Bellingcat — chosen for evidence over volume, and capped so no single outlet sets the agenda.",
   },
 ];
+
+export const groups: Group[] = [
+  {
+    slug: "technology",
+    label: "Technology",
+    dek: "Models, machines and what ships",
+    standfirst:
+      "The AI labs, the hardware makers, the robotics field and the cars — every desk where something new actually ships.",
+    desks: ["ai", "hardware", "robotics", "vehicles"],
+  },
+  {
+    slug: "photography",
+    label: "Photography",
+    dek: "Cameras, glass and craft",
+    standfirst:
+      "Bodies, lenses and the craft of using them — announcements, reviews and the directory of what has been released.",
+    desks: ["cameras", "lenses", "technique"],
+  },
+];
+
+export function groupBySlug(slug: string) {
+  return groups.find((g) => g.slug === slug);
+}
+
+/** Nav entries: groups first, then any desk that stands on its own. */
+export function navItems(): { slug: string; label: string }[] {
+  const grouped = new Set(groups.flatMap((g) => g.desks));
+  return [
+    ...groups.map((g) => ({ slug: g.slug, label: g.label })),
+    ...categories
+      .filter((c) => !grouped.has(c.slug))
+      .map((c) => ({ slug: c.slug, label: c.short })),
+  ];
+}
 
 /** Desks that get their own block on the front page. The wire sits in the rail. */
 export const desks = categories.filter((c) => c.slug !== "wire");
