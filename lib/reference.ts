@@ -26,6 +26,24 @@ export const references: ReferenceSection[] = [
     dek: "Every model, by what it costs",
     desk: "ai",
   },
+  {
+    slug: "gear",
+    label: "Gear directory",
+    dek: "Every body and lens on record",
+    desk: "cameras",
+  },
+  {
+    slug: "f1",
+    label: "The season",
+    dek: "Standings, calendar and results",
+    desk: "sports",
+  },
+  {
+    slug: "rumours",
+    label: "Rumour board",
+    dek: "Kit that hasn't been announced",
+    desk: "cameras",
+  },
 ];
 
 export function referencesForDesk(desk: CategorySlug): ReferenceSection[] {

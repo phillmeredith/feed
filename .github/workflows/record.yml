@@ -2,7 +2,7 @@
 #
 # The series exist to be long, not to be current, so this runs once a day and
 # is idempotent — a re-run after a failure records nothing twice.
-name: Record series
+name: Update stores
 
 on:
   schedule:
@@ -23,14 +23,19 @@ jobs:
       - run: npm ci
       - run: npm run series:record
 
+      # Reference stores are rebuilt on the same schedule, so entity pages
+      # never have to fetch anything during a request.
+      - run: npm run catalogue:update
+      - run: npm run f1:update
+
       - name: Commit the day's observations
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/series
+          git add data/series data/model-catalogue.json data/f1.json
           if git diff --staged --quiet; then
             echo "nothing new to record"
           else
-            git commit -m "Record series for $(date -u +%Y-%m-%d)"
+            git commit -m "Update stores for $(date -u +%Y-%m-%d)"
             git push
           fi
