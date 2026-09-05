@@ -17,6 +17,7 @@ import { ModelTable } from "@/components/ModelTable";
 import { VideoPanel } from "@/components/VideoPanel";
 import { referencesForDesk } from "@/lib/reference";
 import { recentVideos } from "@/lib/video";
+import { SubNav } from "./SubNav";
 
 /*
  * One desk, one page of it.
@@ -34,7 +35,16 @@ export function pageHref(slug: string, n: number) {
 
 const PER_PAGE = 24;
 
-export async function DeskView({ desk, page }: { desk: string; page: number }) {
+export async function DeskView({
+  desk,
+  page,
+  /** A desk's own standing material — a season, a leaderboard — above the news. */
+  above,
+}: {
+  desk: string;
+  page: number;
+  above?: React.ReactNode;
+}) {
   const category = categoryBySlug(desk);
   if (!category) notFound();
 
@@ -91,6 +101,10 @@ export async function DeskView({ desk, page }: { desk: string; page: number }) {
             {totalPages > 1 && ` · page ${current} of ${totalPages}`}
           </p>
 
+          {category.group && (
+            <SubNav group={category.group} current={category.slug} />
+          )}
+
           {deskReferences.length > 0 && (
             <div className="mt-6 flex flex-wrap gap-3">
               {deskReferences.map((ref) => (
@@ -110,6 +124,8 @@ export async function DeskView({ desk, page }: { desk: string; page: number }) {
             </div>
           )}
         </div>
+
+        {above}
 
         {forecast && (
           <div className="mt-10">

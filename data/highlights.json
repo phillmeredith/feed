@@ -1,0 +1,293 @@
+{
+  "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
+  "updated": "2026-09-05T18:00:55.506Z",
+  "items": [
+    {
+      "key": "f1:2026:1",
+      "kind": "race",
+      "videoId": "lL_d84cN1UY",
+      "title": "Race Highlights | 2026 Australian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:1",
+      "kind": "qualifying",
+      "videoId": "QztBs3IZBHk",
+      "title": "Qualifying Highlights | 2026 Australian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:2",
+      "kind": "race",
+      "videoId": "t8HpVlineX4",
+      "title": "Race Highlights | 2026 Chinese Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:2",
+      "kind": "qualifying",
+      "videoId": "75-_kMm0mb8",
+      "title": "Qualifying Highlights | 2026 Chinese Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:2",
+      "kind": "sprint",
+      "videoId": "ynRZQ9EBfRI",
+      "title": "Sprint Highlights | 2026 Chinese Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:2",
+      "kind": "sprint-qualifying",
+      "videoId": "-LnHUI4DxRs",
+      "title": "Sprint Qualifying Highlights | 2026 Chinese Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:3",
+      "kind": "race",
+      "videoId": "oAtYfF0_4-I",
+      "title": "Race Highlights | 2026 Japanese Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:3",
+      "kind": "qualifying",
+      "videoId": "oZH_7pYJPTE",
+      "title": "Qualifying Highlights | 2026 Japanese Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:4",
+      "kind": "race",
+      "videoId": "5gYys4GL7S0",
+      "title": "Race Highlights | 2026 Miami Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:4",
+      "kind": "qualifying",
+      "videoId": "83GJM1S0FnE",
+      "title": "Qualifying Highlights | 2026 Miami Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:4",
+      "kind": "sprint",
+      "videoId": "0XlphgCNbwQ",
+      "title": "Sprint Highlights | 2026 Miami Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:4",
+      "kind": "sprint-qualifying",
+      "videoId": "zV_UPEsZl-s",
+      "title": "Sprint Qualifying Highlights | 2026 Miami Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:5",
+      "kind": "race",
+      "videoId": "QrRh2vOJQbw",
+      "title": "Race Highlights | 2026 Canadian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:6",
+      "kind": "race",
+      "videoId": "ipOT9ruRobc",
+      "title": "Race Highlights | 2026 Monaco Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:6",
+      "kind": "qualifying",
+      "videoId": "xmk0j-HdgwY",
+      "title": "Qualifying Highlights | 2026 Monaco Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:7",
+      "kind": "race",
+      "videoId": "Ey8j_BlLvFM",
+      "title": "Race Highlights | 2026 Barcelona-Catalunya Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:7",
+      "kind": "qualifying",
+      "videoId": "Q2fMM4H9bWY",
+      "title": "Qualifying Highlights | 2026 Barcelona-Catalunya Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:8",
+      "kind": "race",
+      "videoId": "usP9O0zFVaA",
+      "title": "Race Highlights | 2026 Austrian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:8",
+      "kind": "qualifying",
+      "videoId": "sZb7_vNeA9o",
+      "title": "Qualifying Highlights | 2026 Austrian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:9",
+      "kind": "race",
+      "videoId": "rnjmSOUYVp8",
+      "title": "Race Highlights | 2026 British Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:9",
+      "kind": "qualifying",
+      "videoId": "rx41vYOBLFE",
+      "title": "Qualifying Highlights | 2026 British Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:9",
+      "kind": "sprint",
+      "videoId": "v52utVGuAxQ",
+      "title": "Sprint Highlights | 2026 British Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:9",
+      "kind": "sprint-qualifying",
+      "videoId": "WN6mB8Acs2Y",
+      "title": "Sprint Qualifying Highlights | 2026 British Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:10",
+      "kind": "race",
+      "videoId": "I6RfOY_7leA",
+      "title": "Race Highlights | 2026 Belgian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:10",
+      "kind": "qualifying",
+      "videoId": "CmzXqYzymzg",
+      "title": "Qualifying Highlights | 2026 Belgian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:11",
+      "kind": "race",
+      "videoId": "_JeaXt_3Mhc",
+      "title": "Race Highlights | 2026 Hungarian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:11",
+      "kind": "qualifying",
+      "videoId": "rqTTczYv93A",
+      "title": "Qualifying Highlights | 2026 Hungarian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:12",
+      "kind": "race",
+      "videoId": "3OMLs3yI-KE",
+      "title": "Race Highlights | 2026 Dutch Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:12",
+      "kind": "qualifying",
+      "videoId": "l5ORxUVrhVQ",
+      "title": "Qualifying Highlights | 2026 Dutch Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:12",
+      "kind": "sprint",
+      "videoId": "1_utIsvJzBY",
+      "title": "Sprint Highlights | 2026 Dutch Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:12",
+      "kind": "sprint-qualifying",
+      "videoId": "wBiZ8HJHAIA",
+      "title": "Sprint Qualifying Highlights | 2026 Dutch Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:5",
+      "kind": "qualifying",
+      "videoId": "rjLDgDc0td4",
+      "title": "Qualifying Highlights | 2026 Canadian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:5",
+      "kind": "sprint",
+      "videoId": "l3aB-W19bnc",
+      "title": "Sprint Highlights | 2026 Canadian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:5",
+      "kind": "sprint-qualifying",
+      "videoId": "d2urQDKqZhU",
+      "title": "Sprint Qualifying Highlights | 2026 Canadian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "golf:401811964",
+      "kind": "final-round",
+      "videoId": "k4iwUgiEQPQ",
+      "title": "PGA TOUR Highlights | Round 4 | TOUR Championship | 2026",
+      "channel": "PGA Tour"
+    },
+    {
+      "key": "golf:401811963",
+      "kind": "final-round",
+      "videoId": "PsJvcITOVRc",
+      "title": "PGA TOUR Highlights | Round 4 | BMW Championship | 2026",
+      "channel": "PGA Tour"
+    },
+    {
+      "key": "golf:401811961",
+      "kind": "final-round",
+      "videoId": "Xf-SdaSobbY",
+      "title": "PGA TOUR Highlights | Final Round | Wyndham Championship | 2026",
+      "channel": "PGA Tour"
+    },
+    {
+      "key": "golf:401811957",
+      "kind": "final-round",
+      "videoId": "GDJRsRC6MJk",
+      "title": "Ryan Fox WINS THE 154TH OPEN | Final Round Highlights",
+      "channel": "The R&A"
+    },
+    {
+      "key": "golf:401811952",
+      "kind": "final-round",
+      "videoId": "JjnF2ThFBp0",
+      "title": "2026 U.S. Open Highlights: Final Round, Condensed",
+      "channel": "United States Golf Association (USGA)"
+    },
+    {
+      "key": "golf:401811947",
+      "kind": "final-round",
+      "videoId": "mBAXgYf8zoQ",
+      "title": "Round 4 Highlights | 2026 PGA Championship",
+      "channel": "PGA Championships"
+    },
+    {
+      "key": "golf:401811941",
+      "kind": "final-round",
+      "videoId": "sGh0Cjio85E",
+      "title": "Rory McIlroy’s Final Round | Every Single Shot | The 2026 Masters",
+      "channel": "The Masters"
+    }
+  ]
+}

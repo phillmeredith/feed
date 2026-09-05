@@ -20,7 +20,26 @@ export interface ArchivedArticle {
   publishedAt: string;
 }
 
-const ITEMS = archive.items as ArchivedArticle[];
+/**
+ * Sport used to be one desk. It is three now — Formula One, golf and combat —
+ * and the archive is full of stories filed under the old slug. Which outlet
+ * filed a story is enough to say which of the three it belongs to, so the
+ * archive is re-desked on load rather than rewritten.
+ */
+const SPORT_DESKS: Record<string, CategorySlug> = {
+  "Motorsport Week": "f1",
+  Autosport: "f1",
+  "BBC Sport": "golf",
+  "Golf.com": "golf",
+  "MMA Fighting": "combat",
+  "MMA Mania": "combat",
+};
+
+const ITEMS = (archive.items as ArchivedArticle[]).map((item) =>
+  (item.category as string) === "sports"
+    ? { ...item, category: SPORT_DESKS[item.source] ?? "f1" }
+    : item
+);
 
 const byId = new Map(ITEMS.map((a) => [a.id, a]));
 

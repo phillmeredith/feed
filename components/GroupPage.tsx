@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Group } from "@/lib/types";
 import { categoryBySlug } from "@/lib/categories";
 import { referencesForGroup } from "@/lib/reference";
+import { SubNav } from "./SubNav";
 import { getFeed } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";
 import { Masthead } from "./Masthead";
@@ -47,10 +48,13 @@ export async function GroupPage({ group }: { group: Group }) {
           </p>
 
           {/*
-           * The reference sections sit here rather than at the foot of the
-           * page. This overview is where the nav lands, so a directory that
-           * only appeared on the desk beneath it was, in practice, unfindable.
+           * The way into the desks, and into the reference sections that
+           * belong to them. This overview is where the nav lands, so a
+           * directory reachable only from a desk below it was, in practice,
+           * unfindable.
            */}
+          <SubNav group={group.slug} current={group.slug} />
+
           {refs.length > 0 && (
             <div className="mt-6 flex flex-wrap gap-3">
               {refs.map((ref) => (

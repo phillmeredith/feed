@@ -56,12 +56,31 @@ export const categories: Category[] = [
       "How pictures actually get made: light, process, post-production and the photographers explaining their own work.",
   },
   {
-    slug: "sports",
-    label: "Sport",
-    short: "Sport",
-    dek: "Formula 1, golf & the UFC",
+    slug: "f1",
+    group: "sport",
+    label: "Formula One",
+    short: "F1",
+    dek: "The season, race by race",
     standfirst:
-      "Formula 1, golf and the UFC: results, technical developments and the season as it turns.",
+      "Every round of the season with its result and its highlights, the championship as it stands, and the reporting that runs between races.",
+  },
+  {
+    slug: "golf",
+    group: "sport",
+    label: "Golf",
+    short: "Golf",
+    dek: "The majors and the tour",
+    standfirst:
+      "The majors first, then the tour week by week — leaderboards, winners and the highlights, alongside the writing worth reading.",
+  },
+  {
+    slug: "combat",
+    group: "sport",
+    label: "Combat Sports",
+    short: "Combat",
+    dek: "The UFC and the fight game",
+    standfirst:
+      "The UFC and mixed martial arts: cards, results and the reporting around them.",
   },
   {
     slug: "science",
@@ -122,6 +141,14 @@ export const groups: Group[] = [
     standfirst:
       "Bodies, lenses and the craft of using them — announcements, reviews and the directory of what has been released.",
     desks: ["cameras", "lenses", "technique"],
+  },
+  {
+    slug: "sport",
+    label: "Sport",
+    dek: "The season, as it turns",
+    standfirst:
+      "Formula One, golf and the fight game — each with its own results and its own reporting, rather than three sports sharing one page.",
+    desks: ["f1", "golf", "combat"],
   },
 ];
 

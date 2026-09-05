@@ -32,12 +32,7 @@ export const references: ReferenceSection[] = [
     dek: "Every body and lens on record",
     desk: "cameras",
   },
-  {
-    slug: "f1",
-    label: "The season",
-    dek: "Standings, calendar and results",
-    desk: "sports",
-  },
+
   {
     slug: "rumours",
     label: "Rumour board",

@@ -88,7 +88,7 @@ check("previews", "Homepage is section previews, not full sections",
   (plain(home.html).match(/All \d+ stories/g) ?? []).length >= 4,
   `${(plain(home.html).match(/All \d+ stories/g) ?? []).length} desk previews`);
 
-const deskSlugs = ["ai", "hardware", "cameras", "vehicles", "sports", "science", "wire"];
+const deskSlugs = ["ai", "hardware", "cameras", "vehicles", "f1", "golf", "science", "wire"];
 const deskStatuses = await Promise.all(deskSlugs.map((d) => get(`/${d}`)));
 check("desks", "Every desk has its own page",
   deskStatuses.every((r) => r.status === 200),
