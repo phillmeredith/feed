@@ -1,0 +1,22 @@
+# Keeps the site's caches warm so pages load fast.
+#
+# Vercel's Hobby plan allows one cron a day, so the ten-minute schedule runs
+# here instead. GitHub Actions cron is free on public and private repos.
+name: Refresh
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Warm every desk
+        run: |
+          BASE="${{ vars.SITE_URL || 'https://feed-theta-ten.vercel.app' }}"
+          for path in "" ai hardware cameras vehicles sports science robotics weather screen wire; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 "$BASE/$path")
+            echo "$code  /$path"
+          done
