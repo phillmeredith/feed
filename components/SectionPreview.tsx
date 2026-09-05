@@ -38,7 +38,7 @@ export function SectionPreview({
         </Link>
       </div>
 
-      <div className="mt-8 grid gap-10 md:grid-cols-[1.2fr_1fr]">
+      <div className="mt-8 grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
         <FeatureCard article={lead} />
         <div className="flex flex-col gap-4">
           {rest.slice(0, 4).map((a) => (

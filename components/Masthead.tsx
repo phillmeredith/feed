@@ -3,7 +3,7 @@ import { navItems } from "@/lib/categories";
 import { getFeed } from "@/lib/feed";
 import { getMarkets, formatPrice } from "@/lib/markets";
 import { getWeather } from "@/lib/weather";
-import { SITE_TIME_ZONE } from "@/lib/format";
+import { Dateline } from "./Dateline";
 
 function Wordmark({ small = false }: { small?: boolean }) {
   return (
@@ -46,15 +46,6 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
     getWeather(),
   ]);
 
-  const stamp = new Date(lastUpdated).toLocaleString("en-GB", {
-    weekday: "short",
-    day: "numeric",
-    month: "short",
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: SITE_TIME_ZONE,
-  });
-
   return (
     <header className="border-b border-rule">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-10 py-8 sm:py-10 flex items-center justify-between gap-6">
@@ -80,7 +71,7 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
               {weather.tempC}°
             </span>
           )}
-          <span className="kicker text-[10px] text-faint">{stamp}</span>
+          <Dateline since={lastUpdated} />
         </p>
       </div>
 

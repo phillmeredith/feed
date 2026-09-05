@@ -59,8 +59,9 @@ export const categories: Category[] = [
     slug: "sports",
     label: "Sport",
     short: "Sport",
-    dek: "Formula 1 & golf",
-    standfirst: "Formula 1 and golf: results, technical developments and the season as it turns.",
+    dek: "Formula 1, golf & the UFC",
+    standfirst:
+      "Formula 1, golf and the UFC: results, technical developments and the season as it turns.",
   },
   {
     slug: "science",

@@ -13,6 +13,7 @@ import { fetchOgImage, isTrackingPixel, looksLowResolution } from "./content";
 import { stripPromotionalNodes, vetArticleHtml } from "./vet";
 import { sources, type Source } from "./sources";
 import { archivedStory } from "./archive";
+import { desks } from "./categories";
 import unreadable from "../data/unreadable.json" with { type: "json" };
 
 /** Stories known to defeat extraction; never published, never linked. */
@@ -195,7 +196,9 @@ const FRESHNESS_HALF_LIFE_HOURS = 12;
 const RELEASE_BONUS = 4;
 
 function score(headline: string, weight: number, date: Date) {
-  const hours = ageInDays(date) * 24;
+  // A feed that dates items in the future would otherwise score above a
+  // brand-new story and stay there; treat anything ahead of now as now.
+  const hours = Math.max(0, ageInDays(date) * 24);
   const freshness =
     FRESHNESS_POINTS * 2 ** (-hours / FRESHNESS_HALF_LIFE_HOURS);
   return freshness + weight + (RELEASE_TERMS.test(headline) ? RELEASE_BONUS : 0);
@@ -459,6 +462,39 @@ async function verifyReadable(articles: Article[]): Promise<Article[]> {
   return [...keep, ...tail];
 }
 
+/*
+ * The front page's hero rotates through the desks instead of sitting with
+ * whichever story ranked highest, which parked one desk in the slot for hours
+ * at a time. Each desk takes a turn on the same ten-minute cadence the feeds
+ * refresh on, leading with its newest story that has artwork.
+ *
+ * A desk whose newest story is already stale is skipped rather than handed the
+ * slot: one that publishes twice a week has no business putting a three-day-old
+ * headline at the top of the page. If the gate leaves nothing, it is dropped
+ * rather than showing no hero at all.
+ */
+const HERO_ROTATION_MS = 10 * 60 * 1000;
+const HERO_MAX_AGE_HOURS = 48;
+
+export function pickHero(articles: Article[]): Article | undefined {
+  const newestPerDesk = desks
+    .map(
+      (desk) =>
+        articles
+          .filter((a) => a.category === desk.slug && a.image)
+          .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))[0]
+    )
+    .filter((a): a is Article => Boolean(a));
+
+  const fresh = newestPerDesk.filter(
+    (a) => ageInDays(new Date(a.publishedAt)) * 24 <= HERO_MAX_AGE_HOURS
+  );
+  const rota = fresh.length > 0 ? fresh : newestPerDesk;
+  if (rota.length === 0) return articles[0];
+
+  return rota[Math.floor(Date.now() / HERO_ROTATION_MS) % rota.length];
+}
+
 export interface FeedData {
   articles: Article[];
   /** The wire desk's stories, surfaced in the front-page rail. */
@@ -505,13 +541,6 @@ export const getFeed = cache(async function getFeed(): Promise<FeedData> {
   // dropped rather than published as a dead end. The extracted body is kept, so
   // opening one of them costs nothing.
   const verified = await verifyReadable(articles);
-
-  // Feature the strongest story in each of the four release-led categories.
-  const featureOrder: CategorySlug[] = ["ai", "hardware", "cameras", "vehicles"];
-  for (const category of featureOrder) {
-    const top = verified.find((a) => a.category === category);
-    if (top) top.featured = true;
-  }
 
   // The wire is a desk like any other, so its items are full stories with
   // pages of their own — nothing in the rail leaves the site.

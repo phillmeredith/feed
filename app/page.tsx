@@ -5,7 +5,7 @@ import { SectionPreview } from "@/components/SectionPreview";
 import { BriefsColumn } from "@/components/BriefsColumn";
 import { TodayLive } from "@/components/TodayLive";
 import { desks } from "@/lib/categories";
-import { getFeed, RELEASE_TERMS } from "@/lib/feed";
+import { getFeed, pickHero, RELEASE_TERMS } from "@/lib/feed";
 import type { Article } from "@/lib/types";
 
 /*
@@ -43,8 +43,7 @@ export default async function Home() {
   const releaseIds = new Set(releases.map((a) => a.id));
   const breaking = recent.filter((a) => !releaseIds.has(a.id)).slice(0, 6);
 
-  const featured = articles.filter((a) => a.featured);
-  const lead = featured.find((a) => a.image) ?? articles[0];
+  const lead = pickHero(articles);
 
   /*
    * The four cards at the top of the page are the whole first impression, so
@@ -92,7 +91,7 @@ export default async function Home() {
 
         <div className="mt-16">{lead && <LeadCard article={lead} />}</div>
 
-        <div className="mt-20 grid gap-16 lg:grid-cols-[1fr_320px]">
+        <div className="mt-20 grid gap-16 lg:grid-cols-[minmax(0,1fr)_320px]">
           <div>
             <div className="grid gap-10 sm:grid-cols-3">
               {secondary.map((a) => (

@@ -52,7 +52,6 @@ export interface Article {
   url: string;
   image: string;
   publishedAt: string;
-  featured?: boolean;
 }
 
 export interface WeatherDay {

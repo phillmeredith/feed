@@ -32,7 +32,7 @@ export function withArchive(live: Article[], category?: CategorySlug): Article[]
     if (category && item.category !== category) continue;
     merged.set(item.id, item as Article);
   }
-  // Live wins: it carries artwork, body and featured status.
+  // Live wins: it carries artwork and body.
   for (const item of live) {
     if (category && item.category !== category) continue;
     merged.set(item.id, item);

@@ -60,12 +60,14 @@ export const sources: Source[] = [
   { name: "Autosport", url: "https://www.autosport.com/rss/f1/news/", category: "sports", weight: 8, cap: 8 },
   { name: "BBC Sport", url: "https://feeds.bbci.co.uk/sport/golf/rss.xml", category: "sports", weight: 8, cap: 8 },
   { name: "Golf.com", url: "https://golf.com/feed/", category: "sports", weight: 6, cap: 6 },
+  { name: "MMA Fighting", url: "https://www.mmafighting.com/rss/index.xml", category: "sports", weight: 8, cap: 8 },
+  { name: "MMA Mania", url: "https://www.mmamania.com/rss/index.xml", category: "sports", weight: 7, cap: 6 },
 
   // Science
   { name: "Quanta Magazine", url: "https://api.quantamagazine.org/feed/", category: "science", weight: 10, cap: 6 },
   { name: "Ars Technica Science", url: "https://feeds.arstechnica.com/arstechnica/science", category: "science", weight: 9, cap: 8 },
   { name: "ScienceAlert", url: "https://www.sciencealert.com/feed", category: "science", weight: 7, cap: 8 },
-  { name: "New Atlas", url: "https://newatlas.com/index.rss", category: "science", weight: 7, cap: 8, generalist: true },
+  { name: "New Atlas", url: "https://newatlas.com/science/index.rss", category: "science", weight: 7, cap: 8, generalist: true },
   { name: "Phys.org", url: "https://phys.org/rss-feed/breaking/", category: "science", weight: 6, cap: 6, generalist: true, thumbnailsOnly: true },
   { name: "Medical Xpress", url: "https://medicalxpress.com/rss-feed/", category: "science", weight: 5, cap: 6, generalist: true, thumbnailsOnly: true },
 
