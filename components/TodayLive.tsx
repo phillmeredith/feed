@@ -1,13 +1,9 @@
 import Link from "next/link";
 import type { Article } from "@/lib/types";
 import { categoryBySlug } from "@/lib/categories";
+import { clockTime, SITE_TIME_ZONE } from "@/lib/format";
 
-function time(iso: string) {
-  return new Date(iso).toLocaleTimeString("en-GB", {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-}
+
 
 function Row({ article }: { article: Article }) {
   const desk = categoryBySlug(article.category);
@@ -15,7 +11,7 @@ function Row({ article }: { article: Article }) {
     <li>
       <Link href={`/story/${article.id}`} className="group flex gap-4 py-3">
         <span className="kicker text-[9px] text-faint pt-1 w-10 shrink-0 tabular-nums">
-          {time(article.publishedAt)}
+          {clockTime(article.publishedAt)}
         </span>
         <span className="min-w-0 truncate">
           <span className="kicker text-[9px] text-accent mr-2">
@@ -66,6 +62,7 @@ export function TodayLive({
     weekday: "long",
     day: "numeric",
     month: "long",
+    timeZone: SITE_TIME_ZONE,
   });
 
   const count = releases.length + breaking.length;

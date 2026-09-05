@@ -3,6 +3,7 @@ import { navItems } from "@/lib/categories";
 import { getFeed } from "@/lib/feed";
 import { getMarkets, formatPrice } from "@/lib/markets";
 import { getWeather } from "@/lib/weather";
+import { SITE_TIME_ZONE } from "@/lib/format";
 
 function Wordmark({ small = false }: { small?: boolean }) {
   return (
@@ -51,6 +52,7 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
     month: "short",
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: SITE_TIME_ZONE,
   });
 
   return (
