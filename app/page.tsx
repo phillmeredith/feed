@@ -6,6 +6,7 @@ import { BriefsColumn } from "@/components/BriefsColumn";
 import { TodayLive } from "@/components/TodayLive";
 import { desks } from "@/lib/categories";
 import { getFeed, RELEASE_TERMS } from "@/lib/feed";
+import type { Article } from "@/lib/types";
 
 /*
  * Rendered per request rather than served from a cached copy. Next's default
@@ -44,9 +45,32 @@ export default async function Home() {
 
   const featured = articles.filter((a) => a.featured);
   const lead = featured.find((a) => a.image) ?? articles[0];
-  const secondary = articles
-    .filter((a) => a.id !== lead?.id && a.image)
-    .slice(0, 3);
+
+  /*
+   * The four cards at the top of the page are the whole first impression, so
+   * they have to come from four different places. Ranking on recency alone
+   * would otherwise hand all four to whichever outlet happened to file a burst
+   * of stories in the last hour — three tripod reviews from one photography
+   * title, and nothing else above the fold. Preference goes to a fresh story
+   * from an unrepresented desk; if there aren't three of those with artwork,
+   * the remaining slots relax to merely a different outlet.
+   */
+  const secondary: Article[] = [];
+  const usedSources = new Set([lead?.source]);
+  const usedDesks = new Set([lead?.category]);
+
+  for (const requireNewDesk of [true, false]) {
+    for (const a of articles) {
+      if (secondary.length === 3) break;
+      if (a.id === lead?.id || !a.image) continue;
+      if (secondary.some((s) => s.id === a.id)) continue;
+      if (usedSources.has(a.source)) continue;
+      if (requireNewDesk && usedDesks.has(a.category)) continue;
+      secondary.push(a);
+      usedSources.add(a.source);
+      usedDesks.add(a.category);
+    }
+  }
   const featuredIds = new Set([lead?.id, ...secondary.map((a) => a.id)]);
   const latest = [...articles]
     .filter((a) => !featuredIds.has(a.id))

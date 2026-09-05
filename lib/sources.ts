@@ -49,7 +49,6 @@ export const sources: Source[] = [
   { name: "Digital Photography School", url: "https://digital-photography-school.com/feed/", category: "technique", weight: 8, cap: 6 },
   { name: "The Phoblographer", url: "https://www.thephoblographer.com/feed/", category: "technique", weight: 7, cap: 6 },
   { name: "Fstoppers", url: "https://fstoppers.com/feed", category: "technique", weight: 7, cap: 6, generalist: true },
-  { name: "Shutterbug", url: "https://www.shutterbug.com/rss.xml", category: "technique", weight: 6, cap: 5 },
 
   // Electric vehicles
   { name: "Electrek", url: "https://electrek.co/feed/atom/", category: "vehicles", weight: 8, cap: 10 },
@@ -58,7 +57,6 @@ export const sources: Source[] = [
 
   // Sport — F1 & golf
   { name: "Motorsport Week", url: "https://www.motorsportweek.com/feed/", category: "sports", weight: 9, cap: 8 },
-  { name: "RaceFans", url: "https://www.racefans.net/feed/", category: "sports", weight: 8, cap: 8 },
   { name: "Autosport", url: "https://www.autosport.com/rss/f1/news/", category: "sports", weight: 8, cap: 8 },
   { name: "BBC Sport", url: "https://feeds.bbci.co.uk/sport/golf/rss.xml", category: "sports", weight: 8, cap: 8 },
   { name: "Golf.com", url: "https://golf.com/feed/", category: "sports", weight: 6, cap: 6 },

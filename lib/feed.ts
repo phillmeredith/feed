@@ -174,14 +174,31 @@ function ageInDays(date: Date) {
   return (Date.now() - date.getTime()) / 86_400_000;
 }
 
-/**
+/*
  * Recency dominates — this is a "what's new" page, so a fresh story from a
- * lesser outlet should outrank a fortnight-old one from a first-party source.
+ * lesser outlet should outrank a day-old one from a first-party source.
+ *
+ * That means the freshness term has to decay on the timescale a reader
+ * notices, which is hours. A linear ramp across a fortnight did not: it shed
+ * 2.5 points a day against a weight spread of 5 and a multiplicative release
+ * boost worth about 10, so a four-day-old "Introducing…" post from a
+ * high-weight blog outranked a story filed ten minutes ago, and the front page
+ * led on yesterday while the morning's stories sat in the list underneath.
+ *
+ * Halving every twelve hours puts the entire weight range inside the first two
+ * hours of age, which makes weight the tiebreaker between stories of the same
+ * vintage rather than a way to outlive them. The release bonus is added rather
+ * than multiplied for the same reason.
  */
+const FRESHNESS_POINTS = 48;
+const FRESHNESS_HALF_LIFE_HOURS = 12;
+const RELEASE_BONUS = 4;
+
 function score(headline: string, weight: number, date: Date) {
-  const freshness = Math.max(0, 1 - ageInDays(date) / 14) ** 1.5;
-  const releaseBoost = RELEASE_TERMS.test(headline) ? 1.35 : 1;
-  return (freshness * 24 + weight) * releaseBoost;
+  const hours = ageInDays(date) * 24;
+  const freshness =
+    FRESHNESS_POINTS * 2 ** (-hours / FRESHNESS_HALF_LIFE_HOURS);
+  return freshness + weight + (RELEASE_TERMS.test(headline) ? RELEASE_BONUS : 0);
 }
 
 const STOP_WORDS = new Set([
