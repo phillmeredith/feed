@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-09-05T18:00:55.506Z",
+  "updated": "2026-09-05T18:36:08.568Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -288,6 +288,153 @@
       "videoId": "sGh0Cjio85E",
       "title": "Rory McIlroy’s Final Round | Every Single Shot | The 2026 Masters",
       "channel": "The Masters"
+    },
+    {
+      "key": "ufc:600060620:8",
+      "kind": "fight",
+      "videoId": "VSSkmfnvCvg",
+      "title": "FACE-PLANT KNOCKOUT! 💥 | Liu Ce vs Levi Rodrigues Jr. | #UFCShanghai Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600060620:12",
+      "kind": "fight",
+      "videoId": "2joMs7riMzY",
+      "title": "STUNNING KNOCKOUT! 🔥 | Umar Nurmagomedov vs Song Yadong | #UFCShanghai Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600060493:9",
+      "kind": "fight",
+      "videoId": "jP7bIXTAifg",
+      "title": "LETHAL BLOWS! 💥 | MarQuel Mederos vs Mason Jones | #UFCSacremento Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600060493:12",
+      "kind": "fight",
+      "videoId": "jvlUU84BVRc",
+      "title": "BRUTAL FIVE ROUNDS! 🔥 | Anthony Hernandez vs Gregory Rodrigues | #UFCSacremento Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059185:9",
+      "kind": "fight",
+      "videoId": "6pC5hbI8Xv4",
+      "title": "DESTROYED IN 39 SECONDS! 😮‍💨 | Jalin Turner vs Kaue Fernandes | #UFC330 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059185:10",
+      "kind": "fight",
+      "videoId": "zUQaJOkSIUE",
+      "title": "DERN DOMINATES 👊 | Mackenzie Dern vs Gillian Robertson | #UFC330 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059185:11",
+      "kind": "fight",
+      "videoId": "kJOl0zqct4w",
+      "title": "TITLE DEFENDED! 😤 | Islam Makhachev vs Ian Machado Garry | #UFC330 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600060621:7",
+      "kind": "fight",
+      "videoId": "xId_zcM1tJc",
+      "title": "BRUTAL STOPPAGE! 🔥 | Billy Ray Goff vs Ty Miller | #UFCVegas120 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600060621:9",
+      "kind": "fight",
+      "videoId": "_LzilAxN0o0",
+      "title": "FINAL FIGHT KNOCKOUT 😳  | Darren Elkins vs Yadier del Valle | #UFCVegas120 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600060621:11",
+      "kind": "fight",
+      "videoId": "nsJ7DIQ5gbo",
+      "title": "STUNNING SUBMISSION! 🤕 | Mateusz Gamrot vs Quillan Salkilld | #UFCVegas120 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059339:13",
+      "kind": "fight",
+      "videoId": "BNWzw0OhDm0",
+      "title": "LIGHTNING FAST! ⚡ | Uroš Medić vs. Daniel Rodriguez | #UFCBelgrade Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059667:9",
+      "kind": "fight",
+      "videoId": "D52-INPQqi8",
+      "title": "BLOODY VICTORY! 🩸 | Magomed Zaynukov vs. Damian Rzepecki | #UFCAbuDhabi Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059667:10",
+      "kind": "fight",
+      "videoId": "e4-MOaECxCk",
+      "title": "A FORCE OF NATURE! 😮‍💨 | Steve Erceg vs. Ramazonbek Temirov | #UFCAbuDhabi Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059667:11",
+      "kind": "fight",
+      "videoId": "ocFHS2X4T-M",
+      "title": "PURE DOMINATION! 😮‍💨 | Magomed Ankalaev vs. Bogdan Guskov | #UFCAbuDhabi Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059599:7",
+      "kind": "fight",
+      "videoId": "KFH3GpOU2bE",
+      "title": "252 STRIKES IN STOPPAGE WIN 😳 | Tommy McMillen vs Alberto Montes | #UFCOklahomaCity Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059599:8",
+      "kind": "fight",
+      "videoId": "wrBTjuvGDUQ",
+      "title": "UNANIMOUS DEC 💪 | Tabatha Ricci vs. Fatima Kline | UFC Fight Night Mini Fight Highlights",
+      "channel": "UFC on Paramount+"
+    },
+    {
+      "key": "ufc:600059599:10",
+      "kind": "fight",
+      "videoId": "lRoXiFL2E3k",
+      "title": "GREAT BATTLE! ⚔️ | Jared Cannonier vs Christian Leroy Duncan | #UFCOklahomaCity Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059599:11",
+      "kind": "fight",
+      "videoId": "zSc74btJrhA",
+      "title": "DOMINANT WIN! 💪 | Dricus Du Plessis vs Kamaru Usman | #UFCOklahomaCity Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059148:10",
+      "kind": "fight",
+      "videoId": "sX6NTWd2hfM",
+      "title": "CHOKED UNCONSCIOUS! 🤯 | Brandon Royval vs Lone’er Kavanagh | #UFC329 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059148:12",
+      "kind": "fight",
+      "videoId": "wB5KS6QtDgQ",
+      "title": "INCREDIBLE PERFORMANCE! 🤩 | Benoit Saint-Denis vs Paddy Pimblett | #UFC329 Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059148:13",
+      "kind": "fight",
+      "videoId": "ju_WhiYM2WE",
+      "title": "INJURY RUINS COMEBACK! 🤕 | Max Holloway vs Conor McGregor 2 | #UFC329 Fight Highlights",
+      "channel": "TNT Fight Sports"
     }
   ]
 }

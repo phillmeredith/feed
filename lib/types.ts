@@ -7,7 +7,7 @@ export type CategorySlug =
   | "vehicles"
   | "f1"
   | "golf"
-  | "combat"
+  | "ufc"
   | "science"
   | "robotics"
   | "weather"

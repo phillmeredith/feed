@@ -60,8 +60,8 @@ export const sources: Source[] = [
   { name: "Autosport", url: "https://www.autosport.com/rss/f1/news/", category: "f1", weight: 8, cap: 8 },
   { name: "BBC Sport", url: "https://feeds.bbci.co.uk/sport/golf/rss.xml", category: "golf", weight: 8, cap: 8 },
   { name: "Golf.com", url: "https://golf.com/feed/", category: "golf", weight: 6, cap: 6 },
-  { name: "MMA Fighting", url: "https://www.mmafighting.com/rss/index.xml", category: "combat", weight: 8, cap: 8 },
-  { name: "MMA Mania", url: "https://www.mmamania.com/rss/index.xml", category: "combat", weight: 7, cap: 6 },
+  { name: "MMA Fighting", url: "https://www.mmafighting.com/rss/index.xml", category: "ufc", weight: 8, cap: 8 },
+  { name: "MMA Mania", url: "https://www.mmamania.com/rss/index.xml", category: "ufc", weight: 7, cap: 6 },
 
   // Science
   { name: "Quanta Magazine", url: "https://api.quantamagazine.org/feed/", category: "science", weight: 10, cap: 6 },

@@ -18,6 +18,7 @@ import type { Highlight, HighlightKind } from "../lib/highlights.ts";
 const STORE = new URL("../data/highlights.json", import.meta.url);
 const F1 = new URL("../data/f1.json", import.meta.url);
 const GOLF = new URL("../data/golf.json", import.meta.url);
+const UFC = new URL("../data/ufc.json", import.meta.url);
 
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36";
@@ -26,6 +27,12 @@ const UA =
 const OFFICIAL: Map<string, string[]> = new Map([
   ["f1", ["FORMULA 1"]],
   ["golf", ["PGA Tour"]],
+  /*
+   * The UFC posts clips and interviews to its own channel, not highlight
+   * packages — there is no "UFC 328 highlights" from the UFC. The broadcast
+   * rights holders do post one per bout, so these are the rights holders.
+   */
+  ["ufc", ["TNT Fight Sports", "UFC on Paramount+", "UFC"]],
 ]);
 
 /**
@@ -265,6 +272,80 @@ for (const event of new Set(wantedGolf)) {
       : pick(results, "golf", event.name, /highlights/i, golf?.season ?? "")
   );
   await new Promise((r) => setTimeout(r, 1200));
+}
+
+
+// --- The UFC ---------------------------------------------------------------
+let ufc: {
+  events: {
+    id: string;
+    name: string;
+    date: string;
+    status: string;
+    fights: { segment: string; fighters: string[]; completed: boolean }[];
+  }[];
+} | null = null;
+try {
+  ufc = JSON.parse(readFileSync(UFC, "utf8"));
+} catch {
+  console.log("  (no UFC store yet)");
+}
+
+/** Surnames, which is what a highlight title uses. */
+function surname(name: string) {
+  const parts = name.trim().split(/\s+/);
+  return parts[parts.length - 1] ?? name;
+}
+
+/*
+ * Only the main card. The prelims are on the page with their results, but
+ * they are not packaged as highlights and searching for them would either
+ * find nothing or find a reupload — and a reupload is exactly the sort of
+ * thing this site exists not to show.
+ */
+const cards = (ufc?.events ?? [])
+  .filter((e) => e.status === "Final" && e.fights.length > 0)
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 12);
+
+for (const event of cards) {
+  const main = event.fights.filter((f) => f.segment === "main" && f.completed);
+
+  for (const fight of main) {
+    const bout = event.fights.indexOf(fight);
+    const key = `ufc:${event.id}:${bout}`;
+    if (have.has(`${key}|fight`) || fight.fighters.length < 2) continue;
+
+    const [red, blue] = fight.fighters;
+    let results: Found[];
+    try {
+      results = await search(
+        `${red} vs ${blue} ${event.name.split(":")[0]} highlights`
+      );
+    } catch (error) {
+      console.log(`  ! ${red} vs ${blue}: ${(error as Error).message}`);
+      continue;
+    }
+
+    const channels = OFFICIAL.get("ufc") ?? [];
+    const both = [surname(red), surname(blue)].map((n) => normalise(n));
+
+    const hit =
+      results.find((r) => {
+        // A channel row can read "UFC and 2 more" when a video is co-uploaded.
+        if (!channels.some((c) => normalise(r.channel).startsWith(normalise(c))))
+          return false;
+        const title = normalise(r.title);
+        if (!both.every((n) => title.includes(n))) return false;
+        // Interviews, weigh-ins and cold opens are not the fight.
+        if (/interview|weigh|cold open|press conference|embedded|face ?off/i.test(r.title))
+          return false;
+        return /highlight|full fight|tko|ko\b|submission|finish/i.test(r.title);
+      }) ?? null;
+
+    record(key, "fight", hit);
+    await new Promise((r) => setTimeout(r, 1100));
+  }
 }
 
 writeFileSync(

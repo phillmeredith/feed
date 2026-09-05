@@ -9,7 +9,10 @@ const nextConfig: NextConfig = {
    * land on the section rather than a 404.
    */
   async redirects() {
-    return [{ source: "/sports", destination: "/sport", permanent: true }];
+    return [
+      { source: "/sports", destination: "/sport", permanent: true },
+      { source: "/combat", destination: "/ufc", permanent: true },
+    ];
   },
 };
 

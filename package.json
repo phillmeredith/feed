@@ -25,7 +25,8 @@
     "f1:update": "node scripts/update-f1.ts",
     "videos:update": "node scripts/update-videos.ts",
     "highlights:update": "node scripts/update-highlights.ts",
-    "golf:update": "node scripts/update-golf.ts"
+    "golf:update": "node scripts/update-golf.ts",
+    "ufc:update": "node scripts/update-ufc.ts"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",

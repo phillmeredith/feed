@@ -14,7 +14,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 const BASE = process.env.BASE_URL ?? "http://localhost:3000";
 const RECORD = process.argv.includes("--record");
 const STORE = new URL("../data/unreadable.json", import.meta.url);
-const DESKS = ["ai", "hardware", "cameras", "vehicles", "f1", "golf", "combat", "science", "robotics", "screen", "wire"];
+const DESKS = ["ai", "hardware", "cameras", "vehicles", "f1", "golf", "ufc", "science", "robotics", "screen", "wire"];
 const PER_DESK = Number(process.env.AUDIT_PER_DESK ?? 4);
 
 const CHECKS: [string, RegExp][] = [

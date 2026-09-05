@@ -18,6 +18,7 @@ export type HighlightKind =
   | "sprint"
   | "sprint-qualifying"
   | "final-round"
+  | "fight"
   | "event";
 
 export interface Highlight {
@@ -42,6 +43,7 @@ for (const item of ITEMS) {
 const ORDER: HighlightKind[] = [
   "race",
   "final-round",
+  "fight",
   "event",
   "sprint",
   "qualifying",
@@ -62,12 +64,18 @@ export function golfKey(eventId: string) {
   return `golf:${eventId}`;
 }
 
+/** One bout, not one card: the UFC's highlights are posted fight by fight. */
+export function ufcKey(eventId: string, bout: number) {
+  return `ufc:${eventId}:${bout}`;
+}
+
 export const KIND_LABELS: Record<HighlightKind, string> = {
   race: "Race highlights",
   qualifying: "Qualifying highlights",
   sprint: "Sprint highlights",
   "sprint-qualifying": "Sprint qualifying",
   "final-round": "Final round highlights",
+  fight: "Fight highlights",
   event: "Highlights",
 };
 

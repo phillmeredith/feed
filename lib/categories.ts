@@ -74,13 +74,13 @@ export const categories: Category[] = [
       "The majors first, then the tour week by week — leaderboards, winners and the highlights, alongside the writing worth reading.",
   },
   {
-    slug: "combat",
+    slug: "ufc",
     group: "sport",
-    label: "Combat Sports",
-    short: "Combat",
-    dek: "The UFC and the fight game",
+    label: "The UFC",
+    short: "UFC",
+    dek: "Every card, every result",
     standfirst:
-      "The UFC and mixed martial arts: cards, results and the reporting around them.",
+      "The next card and then the season backwards: every bout on every event, main card and prelims, with the main card's highlights playing here.",
   },
   {
     slug: "science",
@@ -147,8 +147,8 @@ export const groups: Group[] = [
     label: "Sport",
     dek: "The season, as it turns",
     standfirst:
-      "Formula One, golf and the fight game — each with its own results and its own reporting, rather than three sports sharing one page.",
-    desks: ["f1", "golf", "combat"],
+      "Formula One, golf and the UFC — each with its own results and its own reporting, rather than three sports sharing one page.",
+    desks: ["f1", "golf", "ufc"],
   },
 ];
 

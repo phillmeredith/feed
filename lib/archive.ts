@@ -21,7 +21,7 @@ export interface ArchivedArticle {
 }
 
 /**
- * Sport used to be one desk. It is three now — Formula One, golf and combat —
+ * Sport used to be one desk. It is three now — Formula One, golf and the UFC —
  * and the archive is full of stories filed under the old slug. Which outlet
  * filed a story is enough to say which of the three it belongs to, so the
  * archive is re-desked on load rather than rewritten.
@@ -31,8 +31,8 @@ const SPORT_DESKS: Record<string, CategorySlug> = {
   Autosport: "f1",
   "BBC Sport": "golf",
   "Golf.com": "golf",
-  "MMA Fighting": "combat",
-  "MMA Mania": "combat",
+  "MMA Fighting": "ufc",
+  "MMA Mania": "ufc",
 };
 
 const ITEMS = (archive.items as ArchivedArticle[]).map((item) =>

@@ -40,6 +40,25 @@ export function F1Season() {
   const second = drivers[1];
   const gap = leader && second ? leader.points - second.points : 0;
 
+  /*
+   * Season order, as a reader wants it rather than as the calendar prints it.
+   *
+   * Straight reverse order buried the season under eleven rounds that hadn't
+   * happened yet — you scrolled past most of a year of blanks to reach the
+   * last result. So: what just happened, then what's next, then back through
+   * the season, with the rounds still to come at the foot where they belong.
+   */
+  const ordered = latest
+    ? [
+        latest,
+        ...(next ? [next] : []),
+        ...run.filter((r) => r.round !== latest.round).reverse(),
+        ...calendar.filter(
+          (r) => !r.results?.length && r.round !== next?.round
+        ),
+      ]
+    : calendar;
+
   return (
     <div className="mt-12 flex flex-col gap-20">
       {latest && (
@@ -103,7 +122,7 @@ export function F1Season() {
         </div>
 
         <div className="mt-2 divide-y divide-[var(--rule)]">
-          {[...calendar].reverse().map((race) => {
+          {ordered.map((race) => {
             const done = Boolean(race.results?.length);
             const isNext = next?.round === race.round;
             const reels = highlightsFor(f1Key(s.season, race.round));
