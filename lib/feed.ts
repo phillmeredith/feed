@@ -14,6 +14,7 @@ import { stripPromotionalNodes, vetArticleHtml } from "./vet";
 import { sources, type Source } from "./sources";
 import { archivedStory } from "./archive";
 import { desks } from "./categories";
+import { startOfSiteDay } from "./format";
 import unreadable from "../data/unreadable.json" with { type: "json" };
 
 /** Stories known to defeat extraction; never published, never linked. */
@@ -493,6 +494,39 @@ export function pickHero(articles: Article[]): Article | undefined {
   if (rota.length === 0) return articles[0];
 
   return rota[Math.floor(Date.now() / HERO_ROTATION_MS) % rota.length];
+}
+
+export interface TodayWindow {
+  releases: Article[];
+  breaking: Article[];
+  label: string;
+}
+
+/**
+ * Everything filed since midnight in the site's own zone, or the last 24 hours
+ * if today is still thin — split into launches and everything else.
+ */
+export function todaysWindow(articles: Article[]): TodayWindow {
+  const midnight = startOfSiteDay();
+  const sinceMidnight = articles.filter(
+    (a) => new Date(a.publishedAt) >= midnight
+  );
+  const useDay = sinceMidnight.length >= 6;
+  const now = Date.now();
+  const recent = (
+    useDay
+      ? sinceMidnight
+      : articles.filter((a) => now - new Date(a.publishedAt).getTime() < 86_400_000)
+  ).sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+
+  const releases = recent.filter((a) => RELEASE_TERMS.test(a.headline)).slice(0, 6);
+  const releaseIds = new Set(releases.map((a) => a.id));
+
+  return {
+    releases,
+    breaking: recent.filter((a) => !releaseIds.has(a.id)).slice(0, 6),
+    label: useDay ? "since midnight" : "last 24 hours",
+  };
 }
 
 export interface FeedData {

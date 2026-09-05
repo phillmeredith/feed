@@ -48,6 +48,11 @@ export function archivedStory(id: string): Article | null {
   return (byId.get(id) as Article | undefined) ?? null;
 }
 
+/** Everything the archive holds, for entity pages that must not fetch. */
+export function allArchived(): Article[] {
+  return ITEMS as Article[];
+}
+
 export function archiveSize() {
   return ITEMS.length;
 }

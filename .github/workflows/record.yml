@@ -1,0 +1,36 @@
+# Appends a day's observations to the series store and commits them.
+#
+# The series exist to be long, not to be current, so this runs once a day and
+# is idempotent — a re-run after a failure records nothing twice.
+name: Record series
+
+on:
+  schedule:
+    - cron: "20 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run series:record
+
+      - name: Commit the day's observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/series
+          if git diff --staged --quiet; then
+            echo "nothing new to record"
+          else
+            git commit -m "Record series for $(date -u +%Y-%m-%d)"
+            git push
+          fi

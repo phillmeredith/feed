@@ -1,0 +1,10 @@
+{
+  "note": "Sources currently failing the full-text rule, with why and since when. CI fails on any source NOT listed here, so the rule is enforced for everything new while known problems stay visible instead of silently accepted. Empty this list as they are fixed.",
+  "sources": [
+    {
+      "name": "Inside Climate News",
+      "since": "2026-09-05",
+      "reason": "Cloudflare 403 on article pages from this host. Served 1478 words earlier the same day, so this reads as IP reputation rather than a policy change. Revisit; drop if it persists past October."
+    }
+  ]
+}

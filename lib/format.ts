@@ -17,10 +17,45 @@ export function clockTime(iso: string) {
   });
 }
 
-/** Shared formatting, kept server-safe so both boundaries can use it. */
-export function relativeDate(iso: string) {
+/** Minutes east of UTC in the site's zone at a given instant. */
+function zoneOffsetMinutes(at: Date) {
+  const name = new Intl.DateTimeFormat("en-GB", {
+    timeZone: SITE_TIME_ZONE,
+    timeZoneName: "longOffset",
+  })
+    .formatToParts(at)
+    .find((p) => p.type === "timeZoneName")?.value;
+  const match = name?.match(/GMT([+-])(\d{2}):(\d{2})/);
+  if (!match) return 0;
+  return (match[1] === "-" ? -1 : 1) * (Number(match[2]) * 60 + Number(match[3]));
+}
+
+/**
+ * Midnight tonight-just-gone, in the site's zone rather than the server's.
+ *
+ * Vercel runs in UTC, so `setHours(0,0,0,0)` there lands on 01:00 in British
+ * summer time and quietly drops anything filed in the first hour of the day
+ * from the "since midnight" panel.
+ */
+export function startOfSiteDay(now = new Date()): Date {
+  const ymd = new Intl.DateTimeFormat("en-CA", {
+    timeZone: SITE_TIME_ZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(now);
+  const utcMidnight = new Date(`${ymd}T00:00:00Z`);
+  return new Date(utcMidnight.getTime() - zoneOffsetMinutes(utcMidnight) * 60_000);
+}
+
+/**
+ * Shared formatting, kept server-safe so both boundaries can use it. `now` is
+ * injectable so a ticking client can re-render without each card reading its
+ * own clock and disagreeing with its neighbours.
+ */
+export function relativeDate(iso: string, now: number = Date.now()) {
   const then = new Date(iso);
-  const hours = (Date.now() - then.getTime()) / 3_600_000;
+  const hours = (now - then.getTime()) / 3_600_000;
   if (hours < 1) return "Just now";
   if (hours < 24) return `${Math.round(hours)}h ago`;
   const days = Math.round(hours / 24);

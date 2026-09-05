@@ -173,7 +173,16 @@ export default async function DeskPage({
         )}
 
         {gear.length > 0 && <GearDirectory items={gear} />}
-        {models.length > 0 && <ModelTable models={models} />}
+        {models.length > 0 && (
+          <>
+            <ModelTable models={models} />
+            <p className="mt-6 kicker text-[10px]">
+              <Link href="/model" className="text-accent hover:underline">
+                Every model, by what it costs →
+              </Link>
+            </p>
+          </>
+        )}
         {patents.length > 0 && <PatentsPanel filings={patents} />}
       </main>
 

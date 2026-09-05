@@ -47,14 +47,29 @@ const STUB_LINK = /^\s*(read more|see also|related|more like this|watch)\s*:/i;
  * markup is sanitised away. Also drops banner images, which are always a link
  * wrapping an image and never part of the reporting.
  */
+/**
+ * A promotional unit is a small part of a page, never most of it.
+ *
+ * Readability wraps its output in a container div, and this pass matched that
+ * container — testing the whole article's text against the promo patterns, so
+ * a single marketing phrase anywhere in a piece silently deleted the piece.
+ * Electrek lost every article this way, and it cost the other feeds theirs
+ * intermittently, depending on whether a stray phrase happened to appear.
+ */
+const WRAPPER_SHARE = 0.6;
+
 export function stripPromotionalNodes(html: string): string {
   if (!html) return html;
+
+  const whole = textOf(html).length;
 
   let out = html.replace(
     /<(div|section|aside|p|figure|ul)\b([^>]*)>([\s\S]*?)<\/\1>/gi,
     (match, _tag: string, attrs: string, inner: string) => {
-      if (PROMO_ATTR.test(`${attrs}`)) return "";
       const text = inner.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+      // Anything holding most of the text is structure, not an advert.
+      if (whole > 0 && text.length / whole > WRAPPER_SHARE) return match;
+      if (PROMO_ATTR.test(`${attrs}`)) return "";
       if (PROMO_COPY.test(text)) return "";
       if (STUB_LINK.test(text)) return "";
       return match;

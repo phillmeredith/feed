@@ -17,11 +17,14 @@ const results = await Promise.all(
     try {
       const feed = await parser.parseURL(source.url);
       const newest = feed.items?.[0];
+      const count = feed.items?.length ?? 0;
       return {
-        ok: true,
+        // A feed that parses but carries nothing is dead in the only sense
+        // that matters — it contributes no stories and says nothing about it.
+        ok: count > 0,
         desk: source.desk,
         name: source.name,
-        count: feed.items?.length ?? 0,
+        count,
         newest: newest?.title?.replace(/\s+/g, " ").slice(0, 50) ?? "",
       };
     } catch (error) {
@@ -39,7 +42,7 @@ for (const r of results) {
   console.log(
     r.ok
       ? `OK    ${r.desk.padEnd(9)} ${r.name.padEnd(20)} ${String(r.count).padStart(3)}  ${r.newest}`
-      : `BROKEN ${r.desk.padEnd(9)} ${r.name.padEnd(20)} ${r.error}`
+      : `BROKEN ${r.desk.padEnd(9)} ${r.name.padEnd(20)} ${r.error ?? "feed parsed but carried no items"}`
   );
 }
 

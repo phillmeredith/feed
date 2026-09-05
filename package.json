@@ -19,7 +19,9 @@
     "patents:check": "node scripts/check-patents.ts",
     "patents:update": "node scripts/update-patents.ts",
     "patents:retry": "bash scripts/patents-retry.sh",
-    "archive:update": "node scripts/update-archive.ts"
+    "archive:update": "node scripts/update-archive.ts",
+    "series:record": "node scripts/record-series.ts",
+    "catalogue:update": "node scripts/update-catalogue.ts"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",

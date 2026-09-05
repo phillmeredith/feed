@@ -1,0 +1,47 @@
+# Enforces the site's hard rule: every story is readable in full on The Dispatch.
+#
+# Runs weekly as a health report, and on any change to the source list — adding
+# a feed should mean proving it can be read. Known failures are tracked in
+# data/known-unreadable.json, so this fails on a regression rather than on the
+# problems already being watched.
+name: Validate sources
+
+on:
+  schedule:
+    - cron: "40 6 * * 1"
+  pull_request:
+    paths:
+      - "lib/sources.ts"
+      - "lib/extract.ts"
+      - "lib/vet.ts"
+      - "lib/content.ts"
+      - "data/known-unreadable.json"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    # Reading four articles from fifty sources at reading pace is not quick.
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Every source readable in full
+        run: npm run validate
+
+  feeds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      # A feed that dies returns an empty array and says nothing — RaceFans did
+      # exactly that, for an unknown length of time, and was found by accident.
+      - name: No feed is silently empty
+        run: npm run check-feeds

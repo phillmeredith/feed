@@ -30,7 +30,6 @@ export const WATCHED: Partial<Record<CategorySlug, string[]>> = {
 const ENDPOINT = "https://patents.google.com/xhr/query";
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36";
-const LOOKBACK_DAYS = 400;
 
 interface GooglePatent {
   title?: string;

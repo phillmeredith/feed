@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { navItems } from "@/lib/categories";
-import { getFeed } from "@/lib/feed";
 import { getMarkets, formatPrice } from "@/lib/markets";
 import { getWeather } from "@/lib/weather";
 import { Dateline } from "./Dateline";
@@ -40,11 +39,15 @@ function Change({ pct }: { pct: number }) {
 }
 
 export async function Masthead({ compact = false }: { compact?: boolean }) {
-  const [{ lastUpdated }, markets, weather] = await Promise.all([
-    getFeed(),
-    getMarkets(),
-    getWeather(),
-  ]);
+  /*
+   * The dateline used to be seeded from the feed's build time, which meant
+   * every page that carries a masthead — including a static entity page — had
+   * to run the whole fifty-feed pipeline first. Since the dateline now follows
+   * the reader's own clock after mount, render time is a perfectly good seed,
+   * and entity pages cost a render instead of a crawl.
+   */
+  const [markets, weather] = await Promise.all([getMarkets(), getWeather()]);
+  const lastUpdated = new Date().toISOString();
 
   return (
     <header className="border-b border-rule">

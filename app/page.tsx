@@ -5,7 +5,7 @@ import { SectionPreview } from "@/components/SectionPreview";
 import { BriefsColumn } from "@/components/BriefsColumn";
 import { TodayLive } from "@/components/TodayLive";
 import { desks } from "@/lib/categories";
-import { getFeed, pickHero, RELEASE_TERMS } from "@/lib/feed";
+import { getFeed, pickHero, todaysWindow } from "@/lib/feed";
 import type { Article } from "@/lib/types";
 
 /*
@@ -22,26 +22,7 @@ export const maxDuration = 60;
 export default async function Home() {
   const { articles, briefs } = await getFeed();
 
-  // Everything filed since midnight, or the last 24 hours if today is still
-  // thin — split into launches and everything else of consequence.
-  const startOfDay = new Date();
-  startOfDay.setHours(0, 0, 0, 0);
-
-  const sinceMidnight = articles.filter(
-    (a) => new Date(a.publishedAt) >= startOfDay
-  );
-  const useDay = sinceMidnight.length >= 6;
-  const recent = (
-    useDay
-      ? sinceMidnight
-      : articles.filter(
-          (a) => Date.now() - new Date(a.publishedAt).getTime() < 86_400_000
-        )
-  ).sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
-
-  const releases = recent.filter((a) => RELEASE_TERMS.test(a.headline)).slice(0, 6);
-  const releaseIds = new Set(releases.map((a) => a.id));
-  const breaking = recent.filter((a) => !releaseIds.has(a.id)).slice(0, 6);
+  const { releases, breaking, label: windowLabel } = todaysWindow(articles);
 
   const lead = pickHero(articles);
 
@@ -86,7 +67,7 @@ export default async function Home() {
         <TodayLive
           releases={releases}
           breaking={breaking}
-          windowLabel={useDay ? "since midnight" : "last 24 hours"}
+          windowLabel={windowLabel}
         />
 
         <div className="mt-16">{lead && <LeadCard article={lead} />}</div>

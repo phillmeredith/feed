@@ -8,6 +8,7 @@ import { relativeDate } from "@/lib/format";
 
 export { relativeDate };
 import { Media } from "./Media";
+import { RelativeTime } from "./RelativeTime";
 
 export function Meta({
   article,
@@ -27,7 +28,7 @@ export function Meta({
       )}
       {article.source}
       <span className="mx-2 text-rule">/</span>
-      {relativeDate(article.publishedAt)}
+      <RelativeTime iso={article.publishedAt} />
     </p>
   );
 }
