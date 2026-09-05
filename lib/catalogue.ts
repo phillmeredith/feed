@@ -64,6 +64,28 @@ export function formatModality(m: CatalogueModel): string {
     .join(" · ");
 }
 
+/** Names differ in punctuation and spacing between sources; compare on letters. */
+function normalise(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+const BY_NAME = new Map<string, CatalogueModel>();
+for (const m of ITEMS) {
+  // First wins: the catalogue is release-ordered, so the base model beats its
+  // own batch and preview variants for the plain name.
+  const key = normalise(m.name);
+  if (!BY_NAME.has(key)) BY_NAME.set(key, m);
+}
+
+/**
+ * The catalogue entry for a release named elsewhere — the Hub's id, or a name
+ * recovered from a headline. Returns null rather than guessing: a wrong link
+ * is worse than no link.
+ */
+export function matchByName(name: string): CatalogueModel | null {
+  return BY_NAME.get(normalise(name)) ?? null;
+}
+
 /**
  * Stories about this model, from the desk's own coverage.
  *

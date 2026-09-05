@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navItems } from "@/lib/categories";
+import { references } from "@/lib/reference";
 
 export function Footer() {
   return (
@@ -16,13 +17,25 @@ export function Footer() {
           </p>
         </div>
 
-        <nav className="flex flex-wrap gap-x-8 gap-y-2 kicker text-[10px] text-muted">
-          {navItems().map((item) => (
-            <Link key={item.slug} href={`/${item.slug}`} className="hover:text-accent">
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="flex flex-wrap gap-x-14 gap-y-8">
+          <nav className="flex flex-col gap-2 kicker text-[10px] text-muted">
+            <span className="text-faint">Desks</span>
+            {navItems().map((item) => (
+              <Link key={item.slug} href={`/${item.slug}`} className="hover:text-accent">
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <nav className="flex flex-col gap-2 kicker text-[10px] text-muted">
+            <span className="text-faint">Reference</span>
+            {references.map((ref) => (
+              <Link key={ref.slug} href={`/${ref.slug}`} className="hover:text-accent">
+                {ref.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </footer>
   );

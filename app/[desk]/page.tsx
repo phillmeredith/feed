@@ -16,6 +16,7 @@ import { ForecastPanel } from "@/components/ForecastPanel";
 import { getDetailedWeather } from "@/lib/weather";
 import { GearDirectory } from "@/components/GearDirectory";
 import { ModelTable } from "@/components/ModelTable";
+import { referencesForDesk } from "@/lib/reference";
 
 /*
  * Rendered per request rather than served from a cached copy. Next's default
@@ -84,6 +85,7 @@ export default async function DeskPage({
   const patents = await getPatents(category.slug);
   const forecast =
     category.slug === "weather" ? await getDetailedWeather() : null;
+  const deskReferences = referencesForDesk(category.slug);
   const [lead, ...rest] = pageArticles;
   const withArt = rest.filter((a) => a.image).slice(0, 6);
   const remainder = rest.filter((a) => !withArt.includes(a));
@@ -104,6 +106,25 @@ export default async function DeskPage({
             {deskArticles.length} stories · refreshed every 10 minutes
             {totalPages > 1 && ` · page ${current} of ${totalPages}`}
           </p>
+
+          {deskReferences.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-3">
+              {deskReferences.map((ref) => (
+                <Link
+                  key={ref.slug}
+                  href={`/${ref.slug}`}
+                  className="group border border-rule bg-surface px-4 py-3 hover:border-accent-dim transition-colors"
+                >
+                  <span className="kicker text-[9px] text-faint block">
+                    {ref.label}
+                  </span>
+                  <span className="font-body font-semibold text-[15px] text-paper group-hover:text-accent transition-colors">
+                    {ref.dek} →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {forecast && (
@@ -173,16 +194,7 @@ export default async function DeskPage({
         )}
 
         {gear.length > 0 && <GearDirectory items={gear} />}
-        {models.length > 0 && (
-          <>
-            <ModelTable models={models} />
-            <p className="mt-6 kicker text-[10px]">
-              <Link href="/model" className="text-accent hover:underline">
-                Every model, by what it costs →
-              </Link>
-            </p>
-          </>
-        )}
+        {models.length > 0 && <ModelTable models={models} />}
         {patents.length > 0 && <PatentsPanel filings={patents} />}
       </main>
 
