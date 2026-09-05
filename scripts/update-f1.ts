@@ -74,6 +74,7 @@ interface RawRaceResult {
     Driver: { givenName: string; familyName: string };
     Constructor: { name: string };
     Time?: { time: string };
+    status?: string;
   }[];
 }
 
@@ -98,10 +99,10 @@ for (const race of raceResults) {
       position: Number(r.position),
       driver: `${r.Driver.givenName} ${r.Driver.familyName}`,
       constructor: r.Constructor.name,
-      time: r.Time?.time,
+      // Whoever didn't finish has no time, so the page shows why instead.
+      time: r.Time?.time ?? r.status,
     }))]
       .sort((a, b) => a.position - b.position)
-      .slice(0, 10)
   );
 }
 

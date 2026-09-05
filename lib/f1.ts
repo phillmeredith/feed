@@ -39,7 +39,7 @@ export interface Race {
   circuitName: string;
   locality: string;
   country: string;
-  /** Podium, once the race has run. */
+  /** The full classification, once the race has run. */
   results?: { position: number; driver: string; constructor: string; time?: string }[];
   winner?: string;
 }

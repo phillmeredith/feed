@@ -1,7 +1,7 @@
 {
   "season": "2026",
-  "round": 12,
-  "updated": "2026-09-05T11:35:13.124Z",
+  "round": 13,
+  "updated": "2026-09-05T18:09:29.954Z",
   "drivers": [
     {
       "position": 1,
@@ -440,6 +440,78 @@
           "driver": "Pierre Gasly",
           "constructor": "Alpine F1 Team",
           "time": "+29.027"
+        },
+        {
+          "position": 11,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+29.850"
+        },
+        {
+          "position": 12,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "+56.075"
+        },
+        {
+          "position": 13,
+          "driver": "Liam Lawson",
+          "constructor": "RB F1 Team",
+          "time": "+57.173"
+        },
+        {
+          "position": 14,
+          "driver": "Franco Colapinto",
+          "constructor": "Alpine F1 Team",
+          "time": "+8.487"
+        },
+        {
+          "position": 15,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "+36.886"
+        },
+        {
+          "position": 16,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+7.850"
+        },
+        {
+          "position": 17,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Lapped"
+        },
+        {
+          "position": 18,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 19,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 20,
+          "driver": "Isack Hadjar",
+          "constructor": "Red Bull",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Oscar Piastri",
+          "constructor": "McLaren",
+          "time": "Did not start"
+        },
+        {
+          "position": 22,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "Did not start"
         }
       ],
       "winner": "George Russell"
@@ -513,6 +585,78 @@
           "driver": "Franco Colapinto",
           "constructor": "Alpine F1 Team",
           "time": "+12.403"
+        },
+        {
+          "position": 11,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "+21.109"
+        },
+        {
+          "position": 12,
+          "driver": "Arvid Lindblad",
+          "constructor": "RB F1 Team",
+          "time": "+22.828"
+        },
+        {
+          "position": 13,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "+56.158"
+        },
+        {
+          "position": 14,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+1:06.256"
+        },
+        {
+          "position": 15,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+1:14.641"
+        },
+        {
+          "position": 16,
+          "driver": "Max Verstappen",
+          "constructor": "Red Bull",
+          "time": "Retired"
+        },
+        {
+          "position": 17,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 18,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 19,
+          "driver": "Oscar Piastri",
+          "constructor": "McLaren",
+          "time": "Did not start"
+        },
+        {
+          "position": 20,
+          "driver": "Lando Norris",
+          "constructor": "McLaren",
+          "time": "Did not start"
+        },
+        {
+          "position": 21,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "Did not start"
+        },
+        {
+          "position": 22,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "Did not start"
         }
       ],
       "winner": "Andrea Kimi Antonelli"
@@ -586,6 +730,78 @@
           "driver": "Esteban Ocon",
           "constructor": "Haas F1 Team",
           "time": "+51.216"
+        },
+        {
+          "position": 11,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "+52.280"
+        },
+        {
+          "position": 12,
+          "driver": "Isack Hadjar",
+          "constructor": "Red Bull",
+          "time": "+56.154"
+        },
+        {
+          "position": 13,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+59.078"
+        },
+        {
+          "position": 14,
+          "driver": "Arvid Lindblad",
+          "constructor": "RB F1 Team",
+          "time": "+59.848"
+        },
+        {
+          "position": 15,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "+1:05.008"
+        },
+        {
+          "position": 16,
+          "driver": "Franco Colapinto",
+          "constructor": "Alpine F1 Team",
+          "time": "+1:05.773"
+        },
+        {
+          "position": 17,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+1:32.453"
+        },
+        {
+          "position": 18,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "+26.548"
+        },
+        {
+          "position": 19,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "+42.621"
+        },
+        {
+          "position": 20,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "+5.067"
+        },
+        {
+          "position": 21,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "Retired"
         }
       ],
       "winner": "Andrea Kimi Antonelli"
@@ -659,6 +875,78 @@
           "driver": "Alexander Albon",
           "constructor": "Williams",
           "time": "+1:30.972"
+        },
+        {
+          "position": 11,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "+6.400"
+        },
+        {
+          "position": 12,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+9.353"
+        },
+        {
+          "position": 13,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+13.873"
+        },
+        {
+          "position": 14,
+          "driver": "Arvid Lindblad",
+          "constructor": "RB F1 Team",
+          "time": "+44.781"
+        },
+        {
+          "position": 15,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "+1:14.964"
+        },
+        {
+          "position": 16,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+1:17.513"
+        },
+        {
+          "position": 17,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "+1:22.631"
+        },
+        {
+          "position": 18,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "+1:08.255"
+        },
+        {
+          "position": 19,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "Retired"
+        },
+        {
+          "position": 20,
+          "driver": "Liam Lawson",
+          "constructor": "RB F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Pierre Gasly",
+          "constructor": "Alpine F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Isack Hadjar",
+          "constructor": "Red Bull",
+          "time": "Retired"
         }
       ],
       "winner": "Andrea Kimi Antonelli"
@@ -732,6 +1020,78 @@
           "driver": "Oliver Bearman",
           "constructor": "Haas F1 Team",
           "time": "+59.049"
+        },
+        {
+          "position": 11,
+          "driver": "Oscar Piastri",
+          "constructor": "McLaren",
+          "time": "+12.699"
+        },
+        {
+          "position": 12,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "+14.182"
+        },
+        {
+          "position": 13,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+21.156"
+        },
+        {
+          "position": 14,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+1:08.635"
+        },
+        {
+          "position": 15,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "+18.397"
+        },
+        {
+          "position": 16,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "+53.390"
+        },
+        {
+          "position": 17,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 18,
+          "driver": "Lando Norris",
+          "constructor": "McLaren",
+          "time": "Retired"
+        },
+        {
+          "position": 19,
+          "driver": "George Russell",
+          "constructor": "Mercedes",
+          "time": "Retired"
+        },
+        {
+          "position": 20,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Arvid Lindblad",
+          "constructor": "RB F1 Team",
+          "time": "Did not start"
         }
       ],
       "winner": "Andrea Kimi Antonelli"
@@ -805,6 +1165,78 @@
           "driver": "Fernando Alonso",
           "constructor": "Aston Martin",
           "time": "+41.899"
+        },
+        {
+          "position": 11,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+42.748"
+        },
+        {
+          "position": 12,
+          "driver": "George Russell",
+          "constructor": "Mercedes",
+          "time": "+43.353"
+        },
+        {
+          "position": 13,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "+44.102"
+        },
+        {
+          "position": 14,
+          "driver": "Franco Colapinto",
+          "constructor": "Alpine F1 Team",
+          "time": "+48.964"
+        },
+        {
+          "position": 15,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+49.153"
+        },
+        {
+          "position": 16,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": ""
+        },
+        {
+          "position": 17,
+          "driver": "Charles Leclerc",
+          "constructor": "Ferrari",
+          "time": "Retired"
+        },
+        {
+          "position": 18,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 19,
+          "driver": "Lando Norris",
+          "constructor": "McLaren",
+          "time": "Retired"
+        },
+        {
+          "position": 20,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Max Verstappen",
+          "constructor": "Red Bull",
+          "time": "Retired"
         }
       ],
       "winner": "Andrea Kimi Antonelli"
@@ -878,6 +1310,78 @@
           "driver": "Franco Colapinto",
           "constructor": "Alpine F1 Team",
           "time": "+1:19.867"
+        },
+        {
+          "position": 11,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+26.687"
+        },
+        {
+          "position": 12,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "+27.866"
+        },
+        {
+          "position": 13,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+59.149"
+        },
+        {
+          "position": 14,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+7.769"
+        },
+        {
+          "position": 15,
+          "driver": "Charles Leclerc",
+          "constructor": "Ferrari",
+          "time": ""
+        },
+        {
+          "position": 16,
+          "driver": "Andrea Kimi Antonelli",
+          "constructor": "Mercedes",
+          "time": ""
+        },
+        {
+          "position": 17,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": ""
+        },
+        {
+          "position": 18,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "Lapped"
+        },
+        {
+          "position": 19,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 20,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Retired"
         }
       ],
       "winner": "Lewis Hamilton"
@@ -951,6 +1455,78 @@
           "driver": "Arvid Lindblad",
           "constructor": "RB F1 Team",
           "time": "+19.030"
+        },
+        {
+          "position": 11,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+30.315"
+        },
+        {
+          "position": 12,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "+38.484"
+        },
+        {
+          "position": 13,
+          "driver": "Pierre Gasly",
+          "constructor": "Alpine F1 Team",
+          "time": "+39.251"
+        },
+        {
+          "position": 14,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "+1:02.677"
+        },
+        {
+          "position": 15,
+          "driver": "Franco Colapinto",
+          "constructor": "Alpine F1 Team",
+          "time": "+1:05.647"
+        },
+        {
+          "position": 16,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+25.932"
+        },
+        {
+          "position": 17,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "+28.082"
+        },
+        {
+          "position": 18,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "+4.833"
+        },
+        {
+          "position": 19,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 20,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
         }
       ],
       "winner": "George Russell"
@@ -1024,6 +1600,78 @@
           "driver": "Pierre Gasly",
           "constructor": "Alpine F1 Team",
           "time": "+3.445"
+        },
+        {
+          "position": 11,
+          "driver": "Oscar Piastri",
+          "constructor": "McLaren",
+          "time": "+4.014"
+        },
+        {
+          "position": 12,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "+5.245"
+        },
+        {
+          "position": 13,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+5.512"
+        },
+        {
+          "position": 14,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+7.403"
+        },
+        {
+          "position": 15,
+          "driver": "Andrea Kimi Antonelli",
+          "constructor": "Mercedes",
+          "time": "+8.005"
+        },
+        {
+          "position": 16,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "+8.162"
+        },
+        {
+          "position": 17,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "+4.391"
+        },
+        {
+          "position": 18,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "+4.980"
+        },
+        {
+          "position": 19,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "+6.750"
+        },
+        {
+          "position": 20,
+          "driver": "Max Verstappen",
+          "constructor": "Red Bull",
+          "time": ""
+        },
+        {
+          "position": 21,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "Retired"
         }
       ],
       "winner": "Charles Leclerc"
@@ -1097,6 +1745,78 @@
           "driver": "Franco Colapinto",
           "constructor": "Alpine F1 Team",
           "time": "+1:16.037"
+        },
+        {
+          "position": 11,
+          "driver": "Pierre Gasly",
+          "constructor": "Alpine F1 Team",
+          "time": "+1:16.991"
+        },
+        {
+          "position": 12,
+          "driver": "Liam Lawson",
+          "constructor": "RB F1 Team",
+          "time": "+1:17.523"
+        },
+        {
+          "position": 13,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "+1:18.348"
+        },
+        {
+          "position": 14,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "+1:34.465"
+        },
+        {
+          "position": 15,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "+1:44.684"
+        },
+        {
+          "position": 16,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "+1:45.856"
+        },
+        {
+          "position": 17,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+1:50.925"
+        },
+        {
+          "position": 18,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "+1:00.979"
+        },
+        {
+          "position": 19,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "+20.848"
+        },
+        {
+          "position": 20,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "George Russell",
+          "constructor": "Mercedes",
+          "time": "Retired"
         }
       ],
       "winner": "Andrea Kimi Antonelli"
@@ -1170,6 +1890,78 @@
           "driver": "Arvid Lindblad",
           "constructor": "RB F1 Team",
           "time": "+51.050"
+        },
+        {
+          "position": 11,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+52.028"
+        },
+        {
+          "position": 12,
+          "driver": "Pierre Gasly",
+          "constructor": "Alpine F1 Team",
+          "time": "+53.429"
+        },
+        {
+          "position": 13,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "+1:03.828"
+        },
+        {
+          "position": 14,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "+1:06.052"
+        },
+        {
+          "position": 15,
+          "driver": "Franco Colapinto",
+          "constructor": "Alpine F1 Team",
+          "time": "+3.876"
+        },
+        {
+          "position": 16,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+12.859"
+        },
+        {
+          "position": 17,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "+52.729"
+        },
+        {
+          "position": 18,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "+52.973"
+        },
+        {
+          "position": 19,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "+57.198"
+        },
+        {
+          "position": 20,
+          "driver": "Oscar Piastri",
+          "constructor": "McLaren",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
         }
       ],
       "winner": "Lando Norris"
@@ -1243,6 +2035,78 @@
           "driver": "Pierre Gasly",
           "constructor": "Alpine F1 Team",
           "time": "+49.640"
+        },
+        {
+          "position": 11,
+          "driver": "Yuki Tsunoda",
+          "constructor": "RB F1 Team",
+          "time": "+54.322"
+        },
+        {
+          "position": 12,
+          "driver": "Arvid Lindblad",
+          "constructor": "RB F1 Team",
+          "time": "+1:05.680"
+        },
+        {
+          "position": 13,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+1:06.235"
+        },
+        {
+          "position": 14,
+          "driver": "Franco Colapinto",
+          "constructor": "Alpine F1 Team",
+          "time": "+20.534"
+        },
+        {
+          "position": 15,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+58.582"
+        },
+        {
+          "position": 16,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "+1:10.271"
+        },
+        {
+          "position": 17,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": ""
+        },
+        {
+          "position": 18,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 19,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 20,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Max Verstappen",
+          "constructor": "Red Bull",
+          "time": "Retired"
         }
       ],
       "winner": "Lando Norris"
