@@ -5,6 +5,7 @@ import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
 import { Timeline } from "@/components/Timeline";
 import { PriceHistory } from "@/components/PriceHistory";
+import { VideoPanel } from "@/components/VideoPanel";
 import {
   allGear,
   gearBySlug,
@@ -15,6 +16,7 @@ import {
 } from "@/lib/gearspec";
 import { allArchived } from "@/lib/archive";
 import { history } from "@/lib/series";
+import { videosFor } from "@/lib/video";
 
 export const revalidate = 3600;
 
@@ -50,6 +52,7 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
   const coverage = coverageFor(item, allArchived());
   const related = relatedGear(item);
   const priceHistory = history("gear-pricing", slug, "price.new");
+  const videos = videosFor(item);
 
   const announced = new Date(item.announcedAt).toLocaleDateString("en-GB", {
     day: "numeric",
@@ -105,6 +108,15 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
         />
 
         <Timeline articles={coverage} announcedAt={item.announcedAt} />
+
+        {videos.length > 0 && (
+          <div className="mt-16">
+            <VideoPanel
+              videos={videos}
+              standfirst={`Reviews of the ${item.name} from the channels this desk trusts, playable here.`}
+            />
+          </div>
+        )}
 
         {related.length > 0 && (
           <section className="mt-16 border-t border-rule pt-8">

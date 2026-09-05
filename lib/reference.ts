@@ -49,3 +49,8 @@ export const references: ReferenceSection[] = [
 export function referencesForDesk(desk: CategorySlug): ReferenceSection[] {
   return references.filter((r) => r.desk === desk);
 }
+
+/** Everything reference-shaped under a group, for the section overview. */
+export function referencesForGroup(desks: CategorySlug[]): ReferenceSection[] {
+  return references.filter((r) => desks.includes(r.desk));
+}

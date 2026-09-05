@@ -8,9 +8,10 @@ import { rumoursFrom, tally, type Confidence } from "@/lib/rumours";
 
 /*
  * This one is a feed view rather than an entity page: it reads today's wire
- * merged over the archive, so it needs the pipeline and stays dynamic.
+ * merged over the archive, so it needs the pipeline. Like the desks, it is
+ * cached and rebuilt on the refresh cycle rather than on every visit.
  */
-export const dynamic = "force-dynamic";
+export const revalidate = 600;
 export const maxDuration = 60;
 
 export const metadata: Metadata = {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Group } from "@/lib/types";
 import { categoryBySlug } from "@/lib/categories";
+import { referencesForGroup } from "@/lib/reference";
 import { getFeed } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";
 import { Masthead } from "./Masthead";
@@ -22,6 +23,8 @@ export async function GroupPage({ group }: { group: Group }) {
     }))
     .filter((d) => d.category && d.articles.length > 0);
 
+  const refs = referencesForGroup(group.desks);
+
   const everything = desks
     .flatMap((d) => d.articles)
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
@@ -42,6 +45,30 @@ export async function GroupPage({ group }: { group: Group }) {
           <p className="kicker text-[10px] text-faint mt-5">
             {desks.length} desks · {everything.length} stories
           </p>
+
+          {/*
+           * The reference sections sit here rather than at the foot of the
+           * page. This overview is where the nav lands, so a directory that
+           * only appeared on the desk beneath it was, in practice, unfindable.
+           */}
+          {refs.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-3">
+              {refs.map((ref) => (
+                <Link
+                  key={ref.slug}
+                  href={`/${ref.slug}`}
+                  className="group border border-rule bg-surface px-4 py-3 hover:border-accent-dim transition-colors"
+                >
+                  <span className="kicker text-[9px] text-faint block">
+                    {ref.label}
+                  </span>
+                  <span className="font-body font-semibold text-[15px] text-paper group-hover:text-accent transition-colors">
+                    {ref.dek} →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {lead && (

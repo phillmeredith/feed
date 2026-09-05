@@ -22,7 +22,8 @@
     "archive:update": "node scripts/update-archive.ts",
     "series:record": "node scripts/record-series.ts",
     "catalogue:update": "node scripts/update-catalogue.ts",
-    "f1:update": "node scripts/update-f1.ts"
+    "f1:update": "node scripts/update-f1.ts",
+    "videos:update": "node scripts/update-videos.ts"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",

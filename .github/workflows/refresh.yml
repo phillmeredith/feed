@@ -16,7 +16,7 @@ jobs:
       - name: Warm every desk
         run: |
           BASE="${{ vars.SITE_URL || 'https://feed-theta-ten.vercel.app' }}"
-          for path in "" technology photography ai hardware robotics vehicles cameras lenses technique sports science weather screen wire; do
+          for path in "" technology photography ai hardware robotics vehicles cameras lenses technique sports science weather screen wire gear model f1 rumours; do
             code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 "$BASE/$path")
             echo "$code  /$path"
           done
