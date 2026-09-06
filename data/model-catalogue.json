@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-05T11:16:09.370Z",
+  "updated": "2026-09-06T09:27:49.891Z",
   "items": [
     {
       "id": "openai/gpt-6-astra",
@@ -399,8 +399,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 1.15,
-      "outputPrice": 3.5,
+      "inputPrice": 1.17,
+      "outputPrice": 3.9600000000000004,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -732,8 +732,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.049980000000000004,
-      "outputPrice": 0.09996000000000001,
+      "inputPrice": 0.045,
+      "outputPrice": 0.09,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -746,8 +746,8 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.065,
-      "outputPrice": 0.18,
+      "inputPrice": 0.049980000000000004,
+      "outputPrice": 0.09996000000000001,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -2273,8 +2273,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.890358,
-      "outputPrice": 1.780716,
+      "inputPrice": 0.7078319999999999,
+      "outputPrice": 1.4156639999999998,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2287,8 +2287,8 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.08526,
-      "outputPrice": 0.17052,
+      "inputPrice": 0.08106,
+      "outputPrice": 0.16212,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2981,8 +2981,8 @@
       "id": "qwen/qwen3.5-35b-a3b",
       "name": "Qwen3.5-35B-A3B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.08,
-      "outputPrice": 0.75,
+      "inputPrice": 0.3125,
+      "outputPrice": 1.25,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
