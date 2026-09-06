@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-05T18:32:00.850Z",
+  "updated": "2026-09-06T18:09:05.372Z",
   "events": [
     {
       "id": "600057024",
@@ -5308,11 +5308,196 @@
       ]
     },
     {
-      "id": "scheduled:2026-09-05T19:00Z",
+      "id": "600059993",
       "name": "UFC Fight Night: Hooker vs. Parnasse",
-      "date": "2026-09-05T19:00Z",
-      "status": "Scheduled",
-      "fights": []
+      "date": "2026-09-05T16:00Z",
+      "status": "Final",
+      "venue": "Accor Arena",
+      "location": "Paris, France",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "W Strawweight",
+          "fighters": [
+            "Sofia Montenegro",
+            "Delphine Benouaich"
+          ],
+          "winner": "Delphine Benouaich",
+          "method": "Submission",
+          "rounds": 2,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Luis Felipe Dias",
+            "Matthieu Letho Duclos"
+          ],
+          "winner": "Matthieu Letho Duclos",
+          "method": "KO/TKO",
+          "rounds": 1,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "W Bantamweight",
+          "fighters": [
+            "Nora Cornolle",
+            "Klaudia Syguła"
+          ],
+          "winner": "Nora Cornolle",
+          "method": "Decision",
+          "rounds": 3,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Michael Aljarouj",
+            "Fabia Sintes"
+          ],
+          "winner": "Fabia Sintes",
+          "method": "Decision",
+          "rounds": 3,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Nathaniel Wood",
+            "Pavel Andrusca"
+          ],
+          "winner": "Pavel Andrusca",
+          "method": "Decision",
+          "rounds": 3,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Modestas Bukauskas",
+            "Oumar Sy"
+          ],
+          "winner": "Modestas Bukauskas",
+          "method": "KO/TKO",
+          "rounds": 2,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Ryan Spann",
+            "Mario Pinto"
+          ],
+          "winner": "Mario Pinto",
+          "method": "KO/TKO",
+          "rounds": 2,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Morgan Charrière",
+            "Felipe Lima"
+          ],
+          "winner": "Felipe Lima",
+          "method": "Decision",
+          "rounds": 3,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Muhammad Naimov",
+            "Losene Keita"
+          ],
+          "winner": "Losene Keita",
+          "method": "KO/TKO",
+          "rounds": 1,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Trevor Peek",
+            "Kurtis Campbell"
+          ],
+          "winner": "Kurtis Campbell",
+          "method": "Submission",
+          "rounds": 3,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Punahele Soriano",
+            "Daniil Donchenko"
+          ],
+          "winner": "Daniil Donchenko",
+          "method": "Decision",
+          "rounds": 3,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Michael Page",
+            "Nursulton Ruziboev"
+          ],
+          "winner": "Michael Page",
+          "method": "Decision",
+          "rounds": 3,
+          "headline": false,
+          "completed": true
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Farés Ziam",
+            "Axel Sola"
+          ],
+          "winner": "Axel Sola",
+          "method": "KO/TKO",
+          "rounds": 1,
+          "headline": true,
+          "completed": true
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Dan Hooker",
+            "Salahdine Parnasse"
+          ],
+          "winner": "Salahdine Parnasse",
+          "method": "KO/TKO",
+          "rounds": 1,
+          "headline": true,
+          "completed": true
+        }
+      ]
     },
     {
       "id": "scheduled:2026-09-09T02:00Z",

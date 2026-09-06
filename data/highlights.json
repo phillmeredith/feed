@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-09-05T18:50:53.970Z",
+  "updated": "2026-09-06T18:10:56.808Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -588,6 +588,27 @@
       "kind": "fight",
       "videoId": "H6hNlMxdm5s",
       "title": "OUTSTANDING PERFORMANCE 🤩 | Jack Della Maddalena vs Carlos Prates | #UFCPerth Fight Night Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059993:11",
+      "kind": "fight",
+      "videoId": "0biiBYI8r9U",
+      "title": "UNANIMOUS DECISION VICTORY 👏 | Michael Page vs Nursulton Ruziboev | #UFCParis Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059993:12",
+      "kind": "fight",
+      "videoId": "CXi8qJsgPr0",
+      "title": "OVER IN A FLASH! 🤯 | Fares Ziam vs Axel Sola | #UFCParis Fight Highlights",
+      "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "ufc:600059993:13",
+      "kind": "fight",
+      "videoId": "XiUim6M46O4",
+      "title": "STATEMENT DEBUT PERFORMANCE! 🤩 | Dan Hooker vs Salahdine Parnasse | #UFCParis Fight Highlights",
       "channel": "TNT Fight Sports"
     }
   ]
