@@ -110,6 +110,49 @@ export function FeatureCard({ article }: { article: Article }) {
   );
 }
 
+/**
+ * Section-front opener: artwork above, headline beneath.
+ *
+ * LeadCard splits itself in two and needs the width of the page to do it. In
+ * a section front it sits in a column beside a rail, and splitting a column
+ * gave a 54px headline six characters of line to work with. Stacking keeps
+ * the scale and gives the words somewhere to go.
+ */
+export function StackedLead({ article }: { article: Article }) {
+  const desk = categoryBySlug(article.category);
+  const [broken, setBroken] = useState(false);
+  if (broken) return null;
+
+  return (
+    <article className="group">
+      <Link href={`/story/${article.id}`} className="block">
+        {article.image && (
+          <Media
+            src={article.image}
+            ratio="wide"
+            /* Lead artwork is often a title plate or a logo card; `cover`
+               slices through those at this size. */
+            fit="contain"
+            onFail={() => setBroken(true)}
+          />
+        )}
+        <p className="kicker text-[11px] text-accent mt-6">{desk?.label}</p>
+        <h2 className="headline mt-3 text-[clamp(1.9rem,3.2vw,2.9rem)] group-hover:text-accent transition-colors">
+          {article.headline}
+        </h2>
+        {article.dek && (
+          <p className="mt-4 text-[17px] leading-relaxed text-muted max-w-2xl">
+            {article.dek}
+          </p>
+        )}
+        <div className="mt-4">
+          <Meta article={article} />
+        </div>
+      </Link>
+    </article>
+  );
+}
+
 /** Text-only row for dense lists. */
 export function ListCard({
   article,

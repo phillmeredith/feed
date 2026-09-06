@@ -477,8 +477,16 @@ async function verifyReadable(articles: Article[]): Promise<Article[]> {
 const HERO_ROTATION_MS = 10 * 60 * 1000;
 const HERO_MAX_AGE_HOURS = 48;
 
-export function pickHero(articles: Article[]): Article | undefined {
-  const newestPerDesk = desks
+export function pickHero(
+  articles: Article[],
+  /** Restrict the rota to one section's desks; omitted, it spans them all. */
+  within?: CategorySlug[]
+): Article | undefined {
+  const rotaDesks = within
+    ? desks.filter((d) => within.includes(d.slug))
+    : desks;
+
+  const newestPerDesk = rotaDesks
     .map(
       (desk) =>
         articles
