@@ -61,10 +61,29 @@ WEATHER_LON=-1.6178
 
 ## Deploying
 
+Production is shipped by `.github/workflows/deploy.yml`, not by Vercel's Git
+integration — that integration stopped producing builds, and commits sat on
+`main` undeployed without anything saying so. The workflow runs on a push to
+`main`, from the Actions tab by hand, and after the daily store update, which a
+push trigger cannot catch: a commit made with `GITHUB_TOKEN` never starts
+another workflow, and the model, gear and F1 pages are prerendered from those
+stores.
+
+It needs three repository secrets, under Settings › Secrets and variables ›
+Actions:
+
+```
+VERCEL_TOKEN       vercel.com/account/tokens
+VERCEL_ORG_ID      project settings, or .vercel/project.json after `vercel link`
+VERCEL_PROJECT_ID  the same two places
+```
+
+From a terminal it is still just:
+
 ```bash
 vercel        # preview deployment
 vercel --prod # production
 ```
 
-No environment variables are required for a default deploy — every data source is
-public and keyless.
+No application environment variables are required — every data source is public
+and keyless.
