@@ -3,6 +3,7 @@ import { navItems } from "@/lib/categories";
 import { getMarkets, formatPrice } from "@/lib/markets";
 import { getWeather } from "@/lib/weather";
 import { Dateline } from "./Dateline";
+import { MobileNav } from "./MobileNav";
 
 function Wordmark({ small = false }: { small?: boolean }) {
   return (
@@ -54,7 +55,10 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
       <div className="mx-auto max-w-[1400px] px-5 sm:px-10 py-8 sm:py-10 flex items-center justify-between gap-6">
         <Wordmark small={compact} />
 
-        <nav className="hidden md:flex items-center gap-6 kicker text-[11px] text-muted">
+        {/* The full desk list plus the wordmark and dateline needs a little
+            over 1000px to sit on one line, so it waits for `lg`. Below that —
+            a phone in landscape, a tablet in portrait — the burger takes it. */}
+        <nav className="hidden lg:flex items-center gap-6 kicker text-[11px] text-muted">
           {navItems().map((item) => (
             <Link
               key={item.slug}
@@ -76,6 +80,8 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
           )}
           <Dateline since={lastUpdated} />
         </p>
+
+        <MobileNav items={navItems()} />
       </div>
 
       {/* The day's numbers: holdings, then the week's weather. */}
@@ -121,16 +127,6 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
           </div>
         </div>
       </div>
-
-      <nav className="md:hidden border-t border-rule overflow-x-auto">
-        <div className="flex items-center gap-5 px-5 py-3 kicker text-[11px] text-muted">
-          {navItems().map((item) => (
-            <Link key={item.slug} href={`/${item.slug}`} className="whitespace-nowrap">
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
     </header>
   );
 }

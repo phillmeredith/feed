@@ -27,12 +27,24 @@ jobs:
       # never have to fetch anything during a request.
       - run: npm run catalogue:update
       - run: npm run f1:update
+      - run: npm run golf:update
+      - run: npm run ufc:update
+
+      # Video last: it reads the three stores above to know what to look for,
+      # so a race or a card recorded this morning gets its highlights in the
+      # same run rather than tomorrow's. It searches YouTube one session at a
+      # time and a failure there shouldn't lose the results already gathered.
+      - run: npm run highlights:update
+        continue-on-error: true
+      - run: npm run videos:update
+        continue-on-error: true
 
       - name: Commit the day's observations
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/series data/model-catalogue.json data/f1.json
+          git add data/series data/model-catalogue.json data/f1.json \
+            data/golf.json data/ufc.json data/highlights.json data/videos.json
           if git diff --staged --quiet; then
             echo "nothing new to record"
           else

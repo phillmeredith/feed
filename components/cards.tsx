@@ -121,7 +121,16 @@ export function ListCard({
   return (
     <article className="group border-t border-rule pt-4">
       <Link href={`/story/${article.id}`} className="block">
-        <h3 className="font-body font-semibold text-[17px] leading-snug truncate group-hover:text-accent transition-colors">
+        {/*
+          * `truncate` sets `white-space: nowrap`, which makes the headline's
+          * min-content width the width of the whole headline. In a one-column
+          * grid — every one of these grids on a phone — the track cannot go
+          * below that, so the desk pages were laying out 1200px wide inside a
+          * 390px screen. Wrapping to two lines costs nothing and reads better
+          * on a narrow column; the single-line rule returns at `sm`, where the
+          * grids switch to `minmax(0, 1fr)` tracks and can clip safely.
+          */}
+        <h3 className="font-body font-semibold text-[17px] leading-snug break-words line-clamp-2 sm:line-clamp-none sm:truncate group-hover:text-accent transition-colors">
           {article.headline}
         </h3>
         <div className="mt-2">

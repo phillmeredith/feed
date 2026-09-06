@@ -1,0 +1,85 @@
+# Ships main to production.
+#
+# Vercel's own Git integration is not building this repo — two consecutive
+# commits to main produced no deployment — and the sessions that write this
+# repo cannot reach vercel.com at all, so `vercel --prod` is not available to
+# them either. A runner can reach it, so the deploy is triggered from here:
+# on a push to main, by hand from the Actions tab, and after the daily store
+# update, which is the case the push trigger cannot cover on its own.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+  # A push made with GITHUB_TOKEN never triggers another workflow, so the
+  # daily "Update stores" commit would otherwise sit on main undeployed —
+  # and those stores are what the model, gear and F1 pages are prerendered
+  # from, so they only reach readers on a rebuild.
+  workflow_run:
+    workflows: ["Update stores"]
+    types: [completed]
+
+  workflow_dispatch:
+
+# One deploy at a time, and never cancel one in flight: a half-finished
+# production deploy is worse than a queued one.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    # A store run that recorded nothing, or failed, has nothing to ship.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
+
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Said plainly here rather than left to a CLI error four steps later,
+      # which reports a missing project rather than a missing secret.
+      - name: Check the deploy credentials are set
+        run: |
+          missing=""
+          [ -n "$VERCEL_TOKEN" ] || missing="$missing VERCEL_TOKEN"
+          [ -n "$VERCEL_ORG_ID" ] || missing="$missing VERCEL_ORG_ID"
+          [ -n "$VERCEL_PROJECT_ID" ] || missing="$missing VERCEL_PROJECT_ID"
+          if [ -n "$missing" ]; then
+            echo "::error::Missing repository secret(s):$missing — add them under"\
+                 "Settings › Secrets and variables › Actions. VERCEL_TOKEN comes from"\
+                 "vercel.com/account/tokens; the two IDs from the project's settings."
+            exit 1
+          fi
+
+      - name: Install the Vercel CLI
+        # Pinned: a deploy that changes tooling on its own is a deploy that
+        # breaks on a day nobody touched the repo.
+        run: npm install --global vercel@59.11.7
+
+      - name: Pull the project's production settings
+        run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+
+      # Built on the runner rather than by Vercel, so a build failure shows up
+      # in this log next to the commit that caused it.
+      - name: Build
+        run: vercel build --prod --token="$VERCEL_TOKEN"
+
+      - name: Deploy
+        run: |
+          url=$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN")
+          echo "$url"
+          echo "Deployed $GITHUB_SHA to $url" >> "$GITHUB_STEP_SUMMARY"

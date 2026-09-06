@@ -186,7 +186,10 @@ export function F1Season() {
       </section>
 
       <div className="grid gap-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
-        <section>
+        {/* `min-w-0`: the table below sets a min-width and scrolls inside its
+            own wrapper, but a grid item defaults to a min-content floor, so
+            without this the 420px table widened the page instead. */}
+        <section className="min-w-0">
           <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
             Drivers
           </h2>
@@ -231,7 +234,7 @@ export function F1Season() {
           </div>
         </section>
 
-        <section>
+        <section className="min-w-0">
           <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
             Constructors
           </h2>
