@@ -31,18 +31,60 @@ export interface PlaceForecast {
   peakChance: number;
   gustKph: number;
   cloud: number;
+  /** The next twelve hours, so the chart can be redrawn for this place. */
+  hours: PlaceHour[];
+}
+
+/**
+ * The slice of an hour a chart needs, and nothing else.
+ *
+ * Six places' full hourly forecast is a lot of numbers to put on a page for
+ * an interaction most visits won't use, so this carries only the four series
+ * the meteogram actually draws.
+ */
+export interface PlaceHour {
+  at: string;
+  time: string;
+  tempC: number;
+  feelsLike: number;
+  precipChance: number;
+  precipMm: number;
+  windKph: number;
+  gustKph: number;
+  cloud: number;
+  day: boolean;
 }
 
 interface PointResponse {
   hourly: {
+    time: string[];
+    temperature_2m: number[];
+    apparent_temperature: number[];
     precipitation: number[];
     precipitation_probability: number[];
+    wind_speed_10m: number[];
     wind_gusts_10m: number[];
     cloud_cover: number[];
+    is_day: number[];
   };
 }
 
+/** The window the table compares over, and the claim it makes in words. */
 const WINDOW = 12;
+
+/*
+ * The chart draws further than the table compares. Twelve hours is the right
+ * span for "where should we go this afternoon"; the meteogram already runs
+ * two days for home, and switching place should not silently shorten it.
+ */
+const CHART_HOURS = 48;
+
+/** The forecast starts at midnight; the comparison should start now. */
+function startIndexFor(times: string[]): number {
+  const now = Date.now();
+  const i = times.findIndex((t) => new Date(t).getTime() >= now - 3_600_000);
+  return Math.max(0, i);
+}
 
 /** All six in one request, ranked driest first. */
 export async function getPlaceForecasts(): Promise<PlaceForecast[]> {
@@ -50,8 +92,8 @@ export async function getPlaceForecasts(): Promise<PlaceForecast[]> {
     `https://api.open-meteo.com/v1/forecast` +
     `?latitude=${PLACES.map((p) => p.latitude).join(",")}` +
     `&longitude=${PLACES.map((p) => p.longitude).join(",")}` +
-    `&hourly=precipitation,precipitation_probability,wind_gusts_10m,cloud_cover` +
-    `&forecast_days=2&timezone=auto`;
+    `&hourly=temperature_2m,apparent_temperature,precipitation,precipitation_probability,wind_speed_10m,wind_gusts_10m,cloud_cover,is_day` +
+    `&forecast_days=3&timezone=auto`;
 
   try {
     const res = await fetch(url, { next: { revalidate: 1800 } });
@@ -62,10 +104,35 @@ export async function getPlaceForecasts(): Promise<PlaceForecast[]> {
     return data
       .map((point, i) => {
         const hourly = point.hourly;
-        const rain = (hourly.precipitation ?? []).slice(0, WINDOW);
-        const chance = (hourly.precipitation_probability ?? []).slice(0, WINDOW);
-        const gusts = (hourly.wind_gusts_10m ?? []).slice(0, WINDOW);
-        const cloud = (hourly.cloud_cover ?? []).slice(0, WINDOW);
+        const from = startIndexFor(hourly.time ?? []);
+        const rain = (hourly.precipitation ?? []).slice(from, from + WINDOW);
+        const chance = (hourly.precipitation_probability ?? []).slice(from, from + WINDOW);
+        const gusts = (hourly.wind_gusts_10m ?? []).slice(from, from + WINDOW);
+        const cloud = (hourly.cloud_cover ?? []).slice(from, from + WINDOW);
+
+        const start = startIndexFor(hourly.time ?? []);
+        const hours: PlaceHour[] = (hourly.time ?? [])
+          .slice(start, start + CHART_HOURS)
+          .map((at, h) => {
+            const j = start + h;
+            return {
+              at,
+              time: new Date(at).toLocaleTimeString("en-GB", {
+                hour: "2-digit",
+                minute: "2-digit",
+              }),
+              tempC: Math.round(hourly.temperature_2m?.[j] ?? 0),
+              feelsLike: Math.round(
+                hourly.apparent_temperature?.[j] ?? hourly.temperature_2m?.[j] ?? 0
+              ),
+              precipChance: hourly.precipitation_probability?.[j] ?? 0,
+              precipMm: hourly.precipitation?.[j] ?? 0,
+              windKph: Math.round(hourly.wind_speed_10m?.[j] ?? 0),
+              gustKph: Math.round(hourly.wind_gusts_10m?.[j] ?? 0),
+              cloud: Math.round(hourly.cloud_cover?.[j] ?? 0),
+              day: (hourly.is_day?.[j] ?? 1) === 1,
+            };
+          });
 
         return {
           name: PLACES[i].name,
@@ -76,6 +143,7 @@ export async function getPlaceForecasts(): Promise<PlaceForecast[]> {
           cloud: cloud.length
             ? Math.round(cloud.reduce((a, b) => a + b, 0) / cloud.length)
             : 0,
+          hours,
         };
       })
       .sort((a, b) => a.rainMm - b.rainMm || a.gustKph - b.gustKph);

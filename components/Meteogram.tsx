@@ -1,7 +1,24 @@
 "use client";
 
 import { useId, useState } from "react";
-import type { HourPoint } from "@/lib/weather";
+/**
+ * The minimum an hour needs to be drawn.
+ *
+ * Both the home forecast and the six comparison places satisfy this without
+ * either having to know about the other — the chart asks for what it plots
+ * and nothing more.
+ */
+export interface ChartHour {
+  at: string;
+  time: string;
+  tempC: number;
+  feelsLike: number;
+  precipChance: number;
+  precipMm: number;
+  windKph: number;
+  gustKph: number;
+  day: boolean;
+}
 
 /**
  * The next day and a half, drawn properly.
@@ -28,13 +45,39 @@ const PLOT = {
 /** Rain occupies the bottom band; temperature has the rest. */
 const RAIN_BAND = 0.42;
 
-export function Meteogram({ hours }: { hours: HourPoint[] }) {
+export interface Series {
+  name: string;
+  note?: string;
+  hours: ChartHour[];
+}
+
+/**
+ * When more than one series is passed, the chart gains a row of places and
+ * redraws for whichever is chosen.
+ *
+ * This is the one interaction on the page that a static version genuinely
+ * cannot do: the coast and the Tyne valley are half an hour apart and can
+ * have different afternoons, and switching between them in place — same axes,
+ * same scale, same hour under the cursor — shows the difference in a way six
+ * separate charts never would.
+ */
+export function Meteogram({
+  hours,
+  series,
+}: {
+  hours: ChartHour[];
+  series?: Series[];
+}) {
   const gradientId = useId();
   const [active, setActive] = useState<number | null>(null);
+  const [place, setPlace] = useState(0);
 
-  if (hours.length < 2) return null;
+  const options = series && series.length > 1 ? series : null;
+  const drawn = options ? options[place].hours : hours;
 
-  const temps = hours.flatMap((h) => [h.tempC, h.feelsLike]);
+  if (drawn.length < 2) return null;
+
+  const temps = drawn.flatMap((h) => [h.tempC, h.feelsLike]);
   const min = Math.min(...temps);
   const max = Math.max(...temps);
   // A flat day still deserves a readable line rather than a straight edge.
@@ -42,22 +85,22 @@ export function Meteogram({ hours }: { hours: HourPoint[] }) {
   const hi = Math.ceil(max + 1);
   const span = Math.max(1, hi - lo);
 
-  const x = (i: number) => PAD.left + (i / (hours.length - 1)) * PLOT.w;
+  const x = (i: number) => PAD.left + (i / (drawn.length - 1)) * PLOT.w;
   const tempY = (t: number) =>
     PAD.top + (1 - (t - lo) / span) * (PLOT.h * (1 - RAIN_BAND));
   const rainY = (p: number) =>
     PAD.top + PLOT.h - (p / 100) * (PLOT.h * RAIN_BAND);
 
-  const line = (get: (h: HourPoint) => number) =>
-    hours.map((h, i) => `${i === 0 ? "M" : "L"}${x(i)} ${tempY(get(h))}`).join(" ");
+  const line = (get: (h: ChartHour) => number) =>
+    drawn.map((h, i) => `${i === 0 ? "M" : "L"}${x(i)} ${tempY(get(h))}`).join(" ");
 
   const rainArea =
-    hours.map((h, i) => `${i === 0 ? "M" : "L"}${x(i)} ${rainY(h.precipChance)}`).join(" ") +
-    ` L${x(hours.length - 1)} ${PAD.top + PLOT.h} L${x(0)} ${PAD.top + PLOT.h} Z`;
+    drawn.map((h, i) => `${i === 0 ? "M" : "L"}${x(i)} ${rainY(h.precipChance)}`).join(" ") +
+    ` L${x(drawn.length - 1)} ${PAD.top + PLOT.h} L${x(0)} ${PAD.top + PLOT.h} Z`;
 
   // Night runs as bands behind everything, so the shape of the day is legible.
   const nights: { from: number; to: number }[] = [];
-  hours.forEach((h, i) => {
+  drawn.forEach((h, i) => {
     if (h.day) return;
     const last = nights[nights.length - 1];
     if (last && last.to === i - 1) last.to = i;
@@ -65,10 +108,36 @@ export function Meteogram({ hours }: { hours: HourPoint[] }) {
   });
 
   const shown = active ?? 0;
-  const point = hours[shown];
+  const point = drawn[shown];
 
   return (
     <figure className="mt-6">
+      {options && (
+        <div
+          role="group"
+          aria-label="Choose a place"
+          className="mb-5 flex flex-wrap gap-x-6 gap-y-2"
+        >
+          {options.map((option, i) => (
+            <button
+              key={option.name}
+              type="button"
+              onClick={() => setPlace(i)}
+              aria-pressed={i === place}
+              className={`kicker text-[10px] pb-1 border-b transition-colors ${
+                i === place
+                  ? "text-accent border-accent"
+                  : "text-muted border-transparent hover:text-accent"
+              }`}
+            >
+              {option.name}
+              {/* The state is a colour and a rule, so it is also a word. */}
+              <span className="sr-only">{i === place ? " (showing)" : ""}</span>
+            </button>
+          ))}
+        </div>
+      )}
+
       {/*
         * A slider, not an image.
         *
@@ -82,9 +151,9 @@ export function Meteogram({ hours }: { hours: HourPoint[] }) {
         className="w-full h-auto touch-none rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
         tabIndex={0}
         role="slider"
-        aria-label={`Hourly forecast, next ${hours.length} hours`}
+        aria-label={`Hourly forecast for ${options ? options[place].name : "here"}, next ${drawn.length} hours`}
         aria-valuemin={0}
-        aria-valuemax={hours.length - 1}
+        aria-valuemax={drawn.length - 1}
         aria-valuenow={shown}
         aria-valuetext={`${point.time}: ${point.tempC} degrees, feels like ${point.feelsLike}, ${point.precipChance} percent chance of rain, wind ${point.windKph} gusting ${point.gustKph} kilometres per hour`}
         onKeyDown={(event) => {
@@ -101,8 +170,8 @@ export function Meteogram({ hours }: { hours: HourPoint[] }) {
              every repeat move from the same starting point. */
           setActive((current) =>
             event.key === "Home" ? 0
-            : event.key === "End" ? hours.length - 1
-            : Math.min(hours.length - 1, Math.max(0, (current ?? 0) + step))
+            : event.key === "End" ? drawn.length - 1
+            : Math.min(drawn.length - 1, Math.max(0, (current ?? 0) + step))
           );
         }}
         onBlur={() => setActive(null)}
@@ -160,7 +229,7 @@ export function Meteogram({ hours }: { hours: HourPoint[] }) {
 
         <path d={rainArea} fill={`url(#${gradientId})`} />
         <path
-          d={hours.map((h, i) => `${i === 0 ? "M" : "L"}${x(i)} ${rainY(h.precipChance)}`).join(" ")}
+          d={drawn.map((h, i) => `${i === 0 ? "M" : "L"}${x(i)} ${rainY(h.precipChance)}`).join(" ")}
           stroke="var(--accent)"
           strokeOpacity={0.5}
           strokeWidth={1.5}
@@ -204,7 +273,7 @@ export function Meteogram({ hours }: { hours: HourPoint[] }) {
         </text>
 
         {/* Hour axis, every three hours so it stays readable on a phone. */}
-        {hours.map((h, i) =>
+        {drawn.map((h, i) =>
           i % 3 === 0 ? (
             <text
               key={h.at}

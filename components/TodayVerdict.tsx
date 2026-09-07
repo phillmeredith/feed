@@ -1,5 +1,6 @@
 import type { DetailedWeather } from "@/lib/weather";
 import { readVerdict } from "@/lib/verdict";
+import { CONFIDENCE_LABEL, type DayConfidence } from "@/lib/ensemble";
 
 /**
  * The answers, first, in words.
@@ -10,8 +11,15 @@ import { readVerdict } from "@/lib/verdict";
  * the wind is a problem, and whether tonight is worth looking up at, so the
  * rest of the page becomes the working rather than the answer.
  */
-export function TodayVerdict({ weather }: { weather: DetailedWeather }) {
+export function TodayVerdict({
+  weather,
+  confidence = [],
+}: {
+  weather: DetailedWeather;
+  confidence?: DayConfidence[];
+}) {
   const verdict = readVerdict(weather);
+  const today = confidence[0];
 
   return (
     <section aria-labelledby="today-verdict">
@@ -56,10 +64,10 @@ export function TodayVerdict({ weather }: { weather: DetailedWeather }) {
         />
         <Answer
           term="Wind"
-          value={verdict.wind.band.label}
+          value={verdict.wind.verdict.label}
           detail={`Gusting ${verdict.wind.peakGust} km/h${
             verdict.wind.peakAt ? ` around ${verdict.wind.peakAt}` : ""
-          } — ${verdict.wind.band.note}`}
+          } — ${verdict.wind.verdict.note}`}
         />
         <Answer
           term="Stars tonight"
@@ -76,6 +84,13 @@ export function TodayVerdict({ weather }: { weather: DetailedWeather }) {
 
       <p className="kicker text-[9px] text-faint mt-8">
         Take: {verdict.carry}
+        {today && (
+          <>
+            <span className="mx-2 text-rule">/</span>
+            {CONFIDENCE_LABEL[today.level]} — the model runs agree to within{" "}
+            {today.spreadC}°
+          </>
+        )}
       </p>
     </section>
   );

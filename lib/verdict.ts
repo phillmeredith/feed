@@ -1,4 +1,5 @@
 import type { DetailedWeather, HourPoint } from "./weather";
+import { HOUSEHOLD, windVerdict } from "./household";
 
 /**
  * The answers, rather than the instruments.
@@ -44,6 +45,8 @@ export interface Verdict {
   wind: {
     peakGust: number;
     band: (typeof GUST_BANDS)[number];
+    /** The same gust, judged against this household's threshold. */
+    verdict: ReturnType<typeof windVerdict>;
     /** When the wind is at its worst, if that's a distinct part of the day. */
     peakAt: string | null;
   };
@@ -141,14 +144,14 @@ export function readVerdict(weather: DetailedWeather): Verdict {
 
   const stars = {
     verdict:
-      nightCloud <= 25 ? ("good" as const)
-      : nightCloud <= 55 ? ("fair" as const)
+      nightCloud <= HOUSEHOLD.stars.good ? ("good" as const)
+      : nightCloud <= HOUSEHOLD.stars.fair ? ("fair" as const)
       : ("poor" as const),
     cloud: nightCloud,
     detail:
-      nightCloud <= 25
+      nightCloud <= HOUSEHOLD.stars.good
         ? `Mostly clear overnight — ${nightCloud}% cloud`
-        : nightCloud <= 55
+        : nightCloud <= HOUSEHOLD.stars.fair
           ? clearest
             ? `Breaking cloud; clearest around ${hourLabel(clearest)} at ${clearest.cloud}%`
             : `Broken cloud overnight`
@@ -157,13 +160,13 @@ export function readVerdict(weather: DetailedWeather): Verdict {
 
   const wettest = Math.max(...todayHours.map((h) => h.precipChance));
   const carry =
-    wettest >= 60 && peakGust >= 39
+    wettest >= 60 && peakGust >= HOUSEHOLD.wind.noticeable
       ? "Coat, not an umbrella — it'll be turned inside out"
       : wettest >= 60
         ? "Umbrella"
         : wettest >= 30
           ? "Something waterproof, just in case"
-          : peakGust >= 39
+          : peakGust >= HOUSEHOLD.wind.noticeable
             ? "Something windproof"
             : "Nothing much";
 
@@ -174,6 +177,7 @@ export function readVerdict(weather: DetailedWeather): Verdict {
     wind: {
       peakGust,
       band: gustBand(peakGust),
+      verdict: windVerdict(peakGust),
       peakAt: peakHour ? hourLabel(peakHour) : null,
     },
     stars,
@@ -201,6 +205,7 @@ function headlineFor(
   const parts: string[] = [weather.condition.toLowerCase()];
   if (wettest >= 60) parts.push("rain likely");
   else if (wettest >= 30) parts.push("showers possible");
-  if (peakGust >= 39) parts.push(`${band.label.toLowerCase()}, gusting ${peakGust}`);
+  if (peakGust >= HOUSEHOLD.wind.noticeable)
+    parts.push(`${band.label.toLowerCase()}, gusting ${peakGust}`);
   return parts.join(", ");
 }

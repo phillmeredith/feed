@@ -15,7 +15,8 @@ import { ForecastPanel } from "@/components/ForecastPanel";
 import { ClimatePanel } from "@/components/ClimatePanel";
 import { TodayVerdict } from "@/components/TodayVerdict";
 import { WhereToGo } from "@/components/WhereToGo";
-import { getPlaceForecasts } from "@/lib/places";
+import { getPlaceForecasts, PLACES } from "@/lib/places";
+import { getConfidence } from "@/lib/ensemble";
 import { getDetailedWeather } from "@/lib/weather";
 import { GearDirectory } from "@/components/GearDirectory";
 import { ModelTable } from "@/components/ModelTable";
@@ -71,6 +72,24 @@ export async function DeskView({
   const forecast =
     category.slug === "weather" ? await getDetailedWeather() : null;
   const places = category.slug === "weather" ? await getPlaceForecasts() : [];
+  const confidence =
+    category.slug === "weather"
+      ? await getConfidence(PLACES[0].latitude, PLACES[0].longitude)
+      : [];
+
+  /*
+   * Home first, then the places that differ most from it, so switching the
+   * chart is a comparison rather than a list.
+   */
+  const series =
+    places.length > 1
+      ? [...places]
+          .sort((a, b) =>
+            a.name === "Newcastle" ? -1 : b.name === "Newcastle" ? 1 : 0
+          )
+          .filter((p) => p.hours.length > 1)
+          .map((p) => ({ name: p.name, note: p.note, hours: p.hours }))
+      : undefined;
   const deskReferences = referencesForDesk(category.slug);
 
   /*
@@ -145,14 +164,30 @@ export async function DeskView({
             <>
               {/* The answers first; everything under them is the working. */}
               <div className="mt-12">
-                <TodayVerdict weather={forecast} />
+                <TodayVerdict weather={forecast} confidence={confidence} />
               </div>
               <div className="mt-20">
-                <ForecastPanel weather={forecast} />
+                <ForecastPanel
+                  weather={forecast}
+                  series={series}
+                  confidence={confidence}
+                />
               </div>
               {places.length > 0 && (
                 <div className="mt-20">
-                  <WhereToGo places={places} />
+                  {/* The table needs the summary, not the hours — those go to
+                      the chart, and sending them twice doubled the payload
+                      for the six places to no purpose. */}
+                  <WhereToGo
+                    places={places.map((place) => ({
+                      name: place.name,
+                      note: place.note,
+                      rainMm: place.rainMm,
+                      peakChance: place.peakChance,
+                      gustKph: place.gustKph,
+                      cloud: place.cloud,
+                    }))}
+                  />
                 </div>
               )}
               {/* The measurements the desk's reporting is a commentary on. */}

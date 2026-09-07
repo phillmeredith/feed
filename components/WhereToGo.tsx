@@ -1,6 +1,9 @@
 import { gustBand } from "@/lib/verdict";
 import type { PlaceForecast } from "@/lib/places";
 
+/** The table's view of a place: everything except the hourly series. */
+type PlaceSummary = Omit<PlaceForecast, "hours">;
+
 /**
  * Where to go, if the point is to stay dry.
  *
@@ -10,7 +13,7 @@ import type { PlaceForecast } from "@/lib/places";
  * rain over the next twelve hours, then by gusts, because a dry hilltop in a
  * gale is not the answer either.
  */
-export function WhereToGo({ places }: { places: PlaceForecast[] }) {
+export function WhereToGo({ places }: { places: PlaceSummary[] }) {
   if (places.length === 0) return null;
 
   const best = places[0];
@@ -101,7 +104,7 @@ export function WhereToGo({ places }: { places: PlaceForecast[] }) {
   );
 }
 
-function windiest(places: PlaceForecast[]) {
+function windiest(places: PlaceSummary[]) {
   return places.reduce((a, b) => (b.gustKph > a.gustKph ? b : a)).name;
 }
 

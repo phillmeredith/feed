@@ -1,6 +1,7 @@
 import type { DetailedWeather } from "@/lib/weather";
 import { WeatherGlyph } from "./WeatherGlyph";
-import { Meteogram } from "./Meteogram";
+import { Meteogram, type Series } from "./Meteogram";
+import { CONFIDENCE_LABEL, type DayConfidence } from "@/lib/ensemble";
 import { DaylightArc } from "./DaylightArc";
 
 function Stat({
@@ -43,7 +44,15 @@ function uvNote(uv: number) {
  * Today in full, then the week. The masthead carries a one-line summary; this
  * is the version worth reading before deciding what to do with the day.
  */
-export function ForecastPanel({ weather }: { weather: DetailedWeather }) {
+export function ForecastPanel({
+  weather,
+  series,
+  confidence = [],
+}: {
+  weather: DetailedWeather;
+  series?: Series[];
+  confidence?: DayConfidence[];
+}) {
   const today = weather.days[0];
   const gusting = weather.gustKph > weather.windKph + 5;
 
@@ -95,9 +104,9 @@ export function ForecastPanel({ weather }: { weather: DetailedWeather }) {
       <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_240px] lg:items-start">
         <div>
           <h2 className="kicker text-[10px] text-muted border-b border-rule pb-2">
-            The next day and a half
+            The next two days
           </h2>
-          <Meteogram hours={weather.hours} />
+          <Meteogram hours={weather.hours} series={series} />
         </div>
 
         <DaylightArc
@@ -109,9 +118,16 @@ export function ForecastPanel({ weather }: { weather: DetailedWeather }) {
       </div>
 
       <div className="mt-14">
-        <h2 className="kicker text-[10px] text-muted border-b border-rule pb-2">
-          The week ahead
-        </h2>
+        <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-2">
+          <h2 className="kicker text-[10px] text-muted">
+            The next {weather.days.length} days
+          </h2>
+          {confidence.length > 0 && (
+            <p className="kicker text-[9px] text-faint">
+              Confidence from {confidence.length} days of ensemble spread
+            </p>
+          )}
+        </div>
         <ul className="mt-2 divide-y divide-[var(--rule)]">
           {weather.days.map((day, i) => {
             const range = weekRange(weather.days);
@@ -162,6 +178,28 @@ export function ForecastPanel({ weather }: { weather: DetailedWeather }) {
                 <span className="kicker text-[9px] text-faint shrink-0 w-20 text-right tabular-nums hidden md:block">
                   {day.gustKph} km/h gust
                 </span>
+
+                {/*
+                 * Sixteen days shown as sixteen equally confident numbers is a
+                 * lie of omission. Where the ensemble members disagree, say so
+                 * in words — never by fading the row, which would carry the
+                 * meaning in colour alone.
+                 */}
+                <span className="kicker text-[9px] shrink-0 w-24 text-right hidden lg:block">
+                  {confidenceFor(confidence, day.date) ? (
+                    <span
+                      className={
+                        confidenceFor(confidence, day.date)!.level === "high"
+                          ? "text-muted"
+                          : "text-faint"
+                      }
+                    >
+                      {CONFIDENCE_LABEL[confidenceFor(confidence, day.date)!.level]}
+                    </span>
+                  ) : (
+                    <span className="text-faint">Beyond the model</span>
+                  )}
+                </span>
               </li>
             );
           })}
@@ -176,6 +214,10 @@ export function ForecastPanel({ weather }: { weather: DetailedWeather }) {
       </div>
     </section>
   );
+}
+
+function confidenceFor(confidence: DayConfidence[], date: string) {
+  return confidence.find((c) => c.date === date) ?? null;
 }
 
 /** One scale for the whole week, or the bars mean nothing across rows. */
