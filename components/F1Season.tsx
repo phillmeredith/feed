@@ -6,6 +6,7 @@ import {
   races,
   nextRace,
   driverName,
+  type Race,
 } from "@/lib/f1";
 import { highlightsFor, f1Key } from "@/lib/highlights";
 import { HighlightReel } from "./HighlightReel";
@@ -190,79 +191,29 @@ export function F1Season() {
         </div>
 
         {/*
-          * Twenty-three rounds down a single 1336px column left every row
-          * mostly empty and the section three thousand pixels tall. Two
-          * columns halve the height and give each row a width its content
-          * can actually fill.
+          * A season reads as a grid of rounds, not a column of paragraphs.
+          *
+          * Each round used to carry four separate grey affordances — show the
+          * winner, show the podium, the full result, the highlights — stacked
+          * under a line of running text. Thirteen finished rounds made fifty
+          * near-identical links and a section three thousand pixels tall, and
+          * none of it was scannable.
+          *
+          * The round number does the work now: large, in the display face, so
+          * the eye moves down the season by numeral rather than by reading. A
+          * round has one way in, and everything that was behind four
+          * disclosures is behind that one.
           */}
-        <div className="mt-2 grid gap-x-16 lg:grid-cols-2">
-          {ordered.map((race) => {
-            const done = Boolean(race.results?.length);
-            const isNext = next?.round === race.round;
-            const reels = highlightsFor(f1Key(s.season, race.round));
-
-            return (
-              <div key={race.round} className="border-t border-rule py-5">
-                <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
-                  <span className="kicker text-[9px] text-faint w-14 shrink-0 tabular-nums">
-                    R{race.round}
-                  </span>
-                  <span
-                    className={`font-body font-semibold text-[16px] ${done ? "" : "text-muted"}`}
-                  >
-                    {race.name}
-                  </span>
-                  <span className="kicker text-[9px] text-faint">
-                    {raceDate(race.date)}
-                    {isNext && <span className="ml-3 text-accent">next up</span>}
-                  </span>
-                  {race.winner && (
-                    <span className="ml-auto">
-                      <SpoilerGuard label="Winner">
-                        <span className="text-[14px] text-accent">
-                          {race.winner}
-                        </span>
-                      </SpoilerGuard>
-                    </span>
-                  )}
-                </div>
-
-                {done ? (
-                  <div className="mt-3 pl-0 sm:pl-[4.75rem]">
-                    <SpoilerGuard label="Podium">
-                      <p className="text-[14px] text-muted">
-                        {(race.results ?? [])
-                          .slice(0, 3)
-                          .map((r, i) => `${i + 1}. ${r.driver}`)
-                          .join("   ")}
-                      </p>
-                    </SpoilerGuard>
-                    <RaceResults race={race} />
-                    {reels.length > 0 && (
-                      <details className="group mt-3">
-                        <summary className="kicker text-[9px] text-muted hover:text-accent cursor-pointer list-none">
-                          <span className="group-open:hidden">
-                            Watch the highlights →
-                          </span>
-                          <span className="hidden group-open:inline">
-                            Hide highlights ↑
-                          </span>
-                        </summary>
-                        <div className="mt-5">
-                          <HighlightReel highlights={reels} />
-                        </div>
-                      </details>
-                    )}
-                  </div>
-                ) : (
-                  <p className="mt-2 pl-0 sm:pl-[4.75rem] text-[13px] text-faint">
-                    {race.locality}, {race.country}
-                  </p>
-                )}
-              </div>
-            );
-          })}
-        </div>
+        <ol className="mt-6 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {ordered.map((race) => (
+            <RoundCard
+              key={race.round}
+              race={race}
+              season={s.season}
+              isNext={next?.round === race.round}
+            />
+          ))}
+        </ol>
       </section>
 
       {/* A points table after the flag says who won as surely as the podium does. */}
@@ -350,6 +301,89 @@ export function F1Season() {
   );
 }
 
+/**
+ * One round of the season.
+ *
+ * Everything a finished round has to say sits behind a single disclosure —
+ * podium, full classification and highlights together — because three
+ * separate ones said three times "there is something here" and never what.
+ */
+function RoundCard({
+  race,
+  season,
+  isNext,
+}: {
+  race: Race;
+  season: string;
+  isNext: boolean;
+}) {
+  const done = Boolean(race.results?.length);
+  const reels = highlightsFor(f1Key(season, race.round));
+  const podium = (race.results ?? []).slice(0, 3);
+
+  return (
+    <li className="border-t border-rule pt-4">
+      <div className="flex items-baseline justify-between gap-3">
+        <span
+          className={`display text-[2.6rem] leading-none tabular-nums ${
+            done ? "text-paper" : "text-faint"
+          }`}
+        >
+          {race.round}
+        </span>
+        {/* State in a word, and never by colour alone. */}
+        <span className="kicker text-[9px]">
+          {isNext ? (
+            <span className="text-accent">Next up</span>
+          ) : done ? (
+            <span className="text-faint">Run</span>
+          ) : (
+            <span className="text-faint">To come</span>
+          )}
+        </span>
+      </div>
+
+      <p
+        className={`font-body font-semibold text-[16px] leading-snug mt-3 ${
+          done ? "" : "text-muted"
+        }`}
+      >
+        {race.name}
+      </p>
+      <p className="kicker text-[9px] text-faint mt-2">
+        {raceDate(race.date)}
+        <span className="mx-2 text-rule">/</span>
+        {race.locality}
+      </p>
+
+      {done && (
+        <div className="mt-4">
+          <SpoilerGuard label="Result">
+            <ol className="text-[14px]">
+              {podium.map((r, i) => (
+                <li key={r.position} className="flex items-baseline gap-3 py-1">
+                  <span className="kicker text-[9px] text-accent w-6 shrink-0">
+                    {PODIUM[i]}
+                  </span>
+                  <span className="min-w-0 truncate">{r.driver}</span>
+                </li>
+              ))}
+            </ol>
+
+            <RaceResults race={race} />
+
+            {reels.length > 0 && (
+              <div className="mt-5">
+                <HighlightReel highlights={reels.slice(0, 1)} />
+              </div>
+            )}
+          </SpoilerGuard>
+        </div>
+      )}
+    </li>
+  );
+}
+
 /** The full classification, folded away until asked for. */
 function RaceResults({
   race,
@@ -361,11 +395,11 @@ function RaceResults({
 
   return (
     <details className="group mt-3">
-      <summary className="kicker text-[9px] text-muted hover:text-accent cursor-pointer list-none">
+      <summary className="kicker text-[9px] text-faint hover:text-accent cursor-pointer list-none">
         <span className="group-open:hidden">
-          Full result, {results.length} classified →
+          All {results.length} classified →
         </span>
-        <span className="hidden group-open:inline">Hide full result ↑</span>
+        <span className="hidden group-open:inline">Close ↑</span>
       </summary>
       <table className="mt-4 w-full text-[14px]">
         <tbody>
