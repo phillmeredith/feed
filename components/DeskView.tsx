@@ -20,7 +20,6 @@ import { getDetailedWeather } from "@/lib/weather";
 import { GearDirectory } from "@/components/GearDirectory";
 import { ModelTable } from "@/components/ModelTable";
 import { VideoPanel } from "@/components/VideoPanel";
-import { referencesForDesk } from "@/lib/reference";
 import { recentVideos } from "@/lib/video";
 import { SubNav } from "./SubNav";
 import { DeskTabs } from "./DeskTabs";
@@ -113,7 +112,6 @@ export async function DeskView({
           .filter((p) => p.hours.length > 1)
           .map((p) => ({ name: p.name, note: p.note, hours: p.hours }))
       : undefined;
-  const deskReferences = referencesForDesk(category.slug);
   const group = category.group ? groupBySlug(category.group) : undefined;
 
   /*
@@ -179,24 +177,6 @@ export async function DeskView({
 
           <DeskTabs desk={category.slug} current={tab} />
 
-          {deskReferences.length > 0 && (
-            <div className="mt-6 flex flex-wrap gap-3">
-              {deskReferences.map((ref) => (
-                <Link
-                  key={ref.slug}
-                  href={`/${ref.slug}`}
-                  className="group border border-rule bg-surface px-4 py-3 hover:border-accent-dim transition-colors"
-                >
-                  <span className="kicker text-micro text-faint block">
-                    {ref.label}
-                  </span>
-                  <span className="font-body font-semibold text-small text-paper group-hover:text-accent transition-colors">
-                    {ref.dek} →
-                  </span>
-                </Link>
-              ))}
-            </div>
-          )}
         </div>
 
         {above}

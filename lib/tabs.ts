@@ -16,6 +16,15 @@ export interface Tab {
   /** Appended to the desk path; the empty string is the desk's own page. */
   slug: string;
   label: string;
+  /**
+   * An address outside the desk's own path.
+   *
+   * The gear directory, the rumour board and the model catalogue existed as
+   * reference pages before the desks had tabs, and they are the good versions
+   * — linked, complete, and built for the job. Rebuilding them as tabs
+   * produced second copies; pointing at them instead does not.
+   */
+  href?: string;
 }
 
 export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
@@ -53,12 +62,20 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
    */
   ai: [
     { slug: "", label: "Articles" },
-    { slug: "models", label: "Models" },
+    /* Fifteen recent releases, which is a different question from the four
+       hundred in the catalogue and was confusingly called the same thing. */
+    { slug: "models", label: "Releases" },
+    { slug: "catalogue", label: "Catalogue", href: "/model" },
   ],
   cameras: [
     { slug: "", label: "Articles" },
-    { slug: "directory", label: "Directory" },
+    { slug: "directory", label: "Directory", href: "/gear" },
+    { slug: "rumours", label: "Rumours", href: "/rumours" },
     { slug: "patents", label: "Patents" },
+  ],
+  lenses: [
+    { slug: "", label: "Articles" },
+    { slug: "directory", label: "Directory", href: "/gear" },
   ],
   robotics: [
     { slug: "", label: "Articles" },
@@ -81,5 +98,6 @@ export function tabsFor(desk: CategorySlug): Tab[] {
 }
 
 export function tabHref(desk: CategorySlug, tab: Tab) {
+  if (tab.href) return tab.href;
   return tab.slug ? `/${desk}/${tab.slug}` : `/${desk}`;
 }

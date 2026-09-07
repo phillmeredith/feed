@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
+import { SubNav } from "@/components/SubNav";
+import { DeskTabs } from "@/components/DeskTabs";
 import { Footer } from "@/components/Footer";
 import { getFeed } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";
@@ -53,10 +55,14 @@ export default async function RumourBoard() {
       <Masthead compact />
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
-        <div className="border-b border-rule pb-8">
-          <p className="kicker text-micro text-accent">
-            <Link href="/photography" className="hover:underline">Photography</Link>
+        <div className="pb-2">
+          <p className="display text-subhead text-muted">
+            <Link href="/photography" className="hover:text-accent transition-colors">
+              Photography
+            </Link>
           </p>
+
+          <SubNav group="photography" current="cameras" />
           <h1 className="display text-title mt-4">
             The rumour board
           </h1>
@@ -68,6 +74,8 @@ export default async function RumourBoard() {
           <p className="kicker text-micro text-faint mt-5">
             {counts.outstanding} outstanding · {counts.resolved} since announced
           </p>
+
+          <DeskTabs desk="cameras" current="rumours" />
         </div>
 
         {outstanding.length > 0 && (

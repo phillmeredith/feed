@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
+import { SubNav } from "@/components/SubNav";
+import { DeskTabs } from "@/components/DeskTabs";
 import { Footer } from "@/components/Footer";
 import { allGear, gearSlug, mounts } from "@/lib/gearspec";
 
@@ -36,10 +38,14 @@ export default function GearIndex() {
       <Masthead compact />
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
-        <div className="border-b border-rule pb-8">
-          <p className="kicker text-micro text-accent">
-            <Link href="/photography" className="hover:underline">Photography</Link>
+        <div className="pb-2">
+          <p className="display text-subhead text-muted">
+            <Link href="/photography" className="hover:text-accent transition-colors">
+              Photography
+            </Link>
           </p>
+
+          <SubNav group="photography" current="cameras" />
           <h1 className="display text-title mt-4">
             Gear directory
           </h1>
@@ -48,6 +54,8 @@ export default function GearIndex() {
             {bodies.length} bodies, {independent.length} of the glass from
             makers building for other people&apos;s mounts.
           </p>
+
+          <DeskTabs desk="cameras" current="directory" />
         </div>
 
         <section className="mt-10">

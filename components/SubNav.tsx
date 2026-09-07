@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { categoryBySlug, groupBySlug, groups } from "@/lib/categories";
-import { referencesForGroup } from "@/lib/reference";
 
 /**
  * The second tier: the desks inside a section.
@@ -28,7 +27,6 @@ export function SubNav({
   const desks = group.desks
     .map((slug) => categoryBySlug(slug))
     .filter((c) => c !== undefined);
-  const refs = referencesForGroup(group.desks);
 
   return (
     <nav
@@ -75,33 +73,6 @@ export function SubNav({
           );
         })}
 
-        {refs.length > 0 && (
-          <>
-            {refs.map((ref) => {
-              const active = current === ref.slug;
-              return (
-                <li key={ref.slug}>
-                  <Link
-                    href={`/${ref.slug}`}
-                    aria-current={active ? "page" : undefined}
-                    className={navItemClass(active)}
-                  >
-                    <span
-                      className={labelClass(
-                        active,
-                        "kicker text-micro",
-                        "text-faint"
-                      )}
-                    >
-                      {ref.label}
-                      {active && <span className="sr-only"> (current)</span>}
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
-          </>
-        )}
       </ul>
     </nav>
   );

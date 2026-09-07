@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
+import { SubNav } from "@/components/SubNav";
+import { DeskTabs } from "@/components/DeskTabs";
 import { Footer } from "@/components/Footer";
 import {
   allModels,
@@ -42,10 +44,17 @@ export default function ModelIndex() {
       <Masthead compact />
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
-        <div className="border-b border-rule pb-8">
-          <p className="kicker text-micro text-accent">
-            <Link href="/ai" className="hover:underline">AI Models</Link>
+        <div className="pb-2">
+          <p className="display text-subhead text-muted">
+            <Link
+              href="/technology"
+              className="hover:text-accent transition-colors"
+            >
+              Technology
+            </Link>
           </p>
+
+          <SubNav group="technology" current="ai" />
           <h1 className="display text-title mt-4">
             Every model, by what it costs
           </h1>
@@ -58,6 +67,8 @@ export default function ModelIndex() {
             Updated {updated} · {free.length} free at point of use · widest
             context {formatContext(widest?.contextTokens ?? 0)}
           </p>
+
+          <DeskTabs desk="ai" current="catalogue" />
         </div>
 
         <div className="mt-10 overflow-x-auto">
