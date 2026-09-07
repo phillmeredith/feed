@@ -27,6 +27,14 @@ const METHODS: [RegExp, string][] = [
 /** The main card is the last five bouts of the night. */
 const MAIN_CARD_SIZE = 5;
 
+/**
+ * How far ahead a card is worth fetching in full.
+ *
+ * Bills firm up in the weeks before an event; beyond that the scoreboard has
+ * a date and a name and so does the calendar, and fetching adds nothing.
+ */
+const ANNOUNCED_WITHIN_DAYS = 45;
+
 const store = JSON.parse(readFileSync(STORE, "utf8")) as {
   season: string;
   updated: string | null;
@@ -52,8 +60,16 @@ function day(date: Date) {
 
 for (const entry of calendar) {
   const start = new Date(entry.startDate);
-  if (start > now) {
-    // Nothing to fetch for a card that hasn't happened; the calendar is enough.
+
+  /*
+   * A future card used to be stored as a name and a date and nothing else,
+   * on the assumption that the scoreboard only knows about the present. It
+   * doesn't: asking for a date weeks out returns the announced bill in full.
+   * The one thing worth not fetching is a card so far ahead that nothing has
+   * been announced yet, which the calendar alone can carry.
+   */
+  const daysAway = (start.getTime() - now.getTime()) / 86_400_000;
+  if (daysAway > ANNOUNCED_WITHIN_DAYS) {
     const id = `scheduled:${entry.startDate}`;
     if (!known.has(id)) {
       known.set(id, {
@@ -93,7 +109,7 @@ for (const entry of calendar) {
   const status =
     ((found.status as Record<string, unknown>)?.type as Record<string, unknown>)
       ?.description as string;
-  // A finished card never changes.
+  // A finished card never changes; an upcoming one gains fighters as it fills.
   if (existing?.status === "Final" && status === "Final") continue;
 
   const bouts = (found.competitions ?? []) as Record<string, unknown>[];

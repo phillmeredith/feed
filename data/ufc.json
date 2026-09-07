@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-07T10:21:06.104Z",
+  "updated": "2026-09-07T11:05:05.523Z",
   "events": [
     {
       "id": "600057024",
@@ -5500,88 +5500,804 @@
       ]
     },
     {
-      "id": "scheduled:2026-09-09T02:00Z",
+      "id": "600060736",
       "name": "Dana White's Contender Series: Season 10, Week 5",
-      "date": "2026-09-09T02:00Z",
+      "date": "2026-09-08T23:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Colton Loud",
+            "Christian Natividad"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Kwon Won Il",
+            "Apollo Gomes"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Christian Echols",
+            "Martin Kozák"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Isaac Moreno",
+            "Reginaldo Junior"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Quentin Pasley",
+            "Arlind Berisha"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-09-12T21:00Z",
+      "id": "600060772",
       "name": "Noche UFC: Silva vs. Delgado",
-      "date": "2026-09-12T21:00Z",
+      "date": "2026-09-12T18:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Desert Diamond Arena",
+      "location": "Glendale, USA",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "JJ Aldrich",
+            "Regina Tarin"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Jessie Rosas",
+            "Sean King"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Rafa Garcia",
+            "Rongzhu"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Drakkar Klose",
+            "Tommy Gantt"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Yousri Belgaroui",
+            "Djorden Santos"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Muslim Salikhov",
+            "Ignacio Bahamondes"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Tim Elliott",
+            "Édgar Cháirez"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Dan Ige",
+            "David Martinez"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Curtis Blaydes",
+            "Waldo Cortes Acosta"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Alexa Grasso",
+            "Manon Fiorot"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Tommy McMillen",
+            "Marwan Rahiki"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Brandon Moreno",
+            "Joseph Morales"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Jean Silva",
+            "Jose Miguel Delgado"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-09-16T02:00Z",
+      "id": "600060737",
       "name": "Dana White's Contender Series: Season 10, Week 6",
-      "date": "2026-09-16T02:00Z",
+      "date": "2026-09-15T23:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "main",
+          "weightClass": "",
+          "fighters": [
+            "TBA",
+            "Opponent TBA"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-09-20T00:00Z",
+      "id": "600060963",
       "name": "UFC 331: Van vs. Pantoja 2",
-      "date": "2026-09-20T00:00Z",
+      "date": "2026-09-19T21:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "crypto.com Arena",
+      "location": "Los Angeles, USA",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Giga Chikadze",
+            "Joanderson Brito"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Casey O'Neill",
+            "Eduarda Moura"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Edmen Shahbazyan",
+            "Brunno Ferreira"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Ozzy Diaz",
+            "Ryan Gandra"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Michael Aswell",
+            "JooSang Yoo"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Tai Tuivasa",
+            "Robelis Despaigne"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Marlon Vera",
+            "Charles Jourdain"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Gable Steveson",
+            "Sean Sharaf"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Alonzo Menifield",
+            "Iwo Baraniewski"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Renato Moicano",
+            "Brian Ortega"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Patricio Pitbull",
+            "Dooho Choi"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Arman Tsarukyan",
+            "Mauricio Ruffy"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Alexandre Pantoja",
+            "Joshua Van"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-09-23T02:00Z",
+      "id": "600060738",
       "name": "Dana White's Contender Series: Season 10, Week 7",
-      "date": "2026-09-23T02:00Z",
+      "date": "2026-09-22T23:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "main",
+          "weightClass": "",
+          "fighters": [
+            "TBA",
+            "Opponent TBA"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-09-26T22:00Z",
+      "id": "600061266",
       "name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-      "date": "2026-09-26T22:00Z",
+      "date": "2026-09-26T19:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "W Strawweight",
+          "fighters": [
+            "Vanessa Demopoulos",
+            "Yazmin Jauregui"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "W Bantamweight",
+          "fighters": [
+            "Norma Dumont",
+            "Ailin Perez"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Elves Brener",
+            "Josiah Harrell"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Alatengheili",
+            "John Castaneda"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Brady Hiestand",
+            "Rinya Nakamura"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Christian Edwards",
+            "Rodolfo Bellato"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Ricky Simon",
+            "Montel Jackson"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Ilimbek Akylbek Uulu",
+            "Mehemmedeli Osmanli"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Strawweight",
+          "fighters": [
+            "Valesca Machado",
+            "Melissa Amaya"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Robert Bryczek",
+            "Rodolfo Vieira"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Raoni Barcelos",
+            "Raul Rosas Jr."
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-09-30T02:00Z",
+      "id": "600060739",
       "name": "Dana White's Contender Series: Season 10, Week 8",
-      "date": "2026-09-30T02:00Z",
+      "date": "2026-09-29T23:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "main",
+          "weightClass": "",
+          "fighters": [
+            "TBA",
+            "Opponent TBA"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-10-04T00:00Z",
-      "name": "UFC 332",
-      "date": "2026-10-04T00:00Z",
+      "id": "600061182",
+      "name": "UFC 332: Silva vs. Wang",
+      "date": "2026-10-03T21:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Delta Center",
+      "location": "Salt Lake City, USA",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Court McGee",
+            "Eric Nolan"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Marvin Vettori",
+            "Ismail Naurdiev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Johnny Walker",
+            "Mick Parkin"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Andrey Pulyaev",
+            "Damian Pinas"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Alden Coria",
+            "Imanol Rodriguez"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Roman Kopylov",
+            "Ateba Gautier"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Deiveson Figueiredo",
+            "Payton Talbott"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Natalia Silva",
+            "Wang Cong"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-10-07T02:00Z",
+      "id": "600060740",
       "name": "Dana White's Contender Series: Season 10, Week 9",
-      "date": "2026-10-07T02:00Z",
+      "date": "2026-10-06T23:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "main",
+          "weightClass": "",
+          "fighters": [
+            "TBA",
+            "Opponent TBA"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-10-11T00:00Z",
+      "id": "600061541",
       "name": "UFC Fight Night: Allen vs. Duncan",
-      "date": "2026-10-11T00:00Z",
+      "date": "2026-10-10T21:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "main",
+          "weightClass": "",
+          "fighters": [
+            "TBA",
+            "Opponent TBA"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Brendan Allen",
+            "Christian Leroy Duncan"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-10-14T02:00Z",
+      "id": "600060741",
       "name": "Dana White's Contender Series: Season 10, Week 10",
-      "date": "2026-10-14T02:00Z",
+      "date": "2026-10-13T23:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "main",
+          "weightClass": "",
+          "fighters": [
+            "TBA",
+            "Opponent TBA"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
-      "id": "scheduled:2026-10-18T00:00Z",
+      "id": "600060773",
       "name": "UFC Fight Night: Buckley vs. Malott",
-      "date": "2026-10-18T00:00Z",
+      "date": "2026-10-17T21:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Rogers Place",
+      "location": "Edmonton, Canada",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Louie Sutherland",
+            "Javad Mahjoub"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Chad Anheliger",
+            "Steven Koslow"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Gilbert Urbina",
+            "Julien LeBlanc"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Louis Jourdain",
+            "Timmy Cuamba"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "W Bantamweight",
+          "fighters": [
+            "Chelsea Chandler",
+            "Melissa Croden"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Tanner Boser",
+            "Jhonata Diniz"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Katlyn Cerminara",
+            "Jamey-Lyn Horth"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Kyle Daukaus",
+            "Marc-Andre Barriault"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Erin Blanchfield",
+            "Jasmine Jasudavicius"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Nate Landwehr",
+            "Mandel Nallo"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Mike Malott",
+            "Joaquin Buckley"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
       "id": "scheduled:2026-10-24T17:00Z",

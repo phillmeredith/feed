@@ -9,12 +9,13 @@ import {
 } from "@/lib/f1";
 import { highlightsFor, f1Key } from "@/lib/highlights";
 import { HighlightReel } from "./HighlightReel";
+import { SpoilerGuard, SpoilerToggle } from "./SpoilerGuard";
+import { LastUpdated } from "./EventStatus";
+import { sportDate, sportTime } from "@/lib/format";
 
 function raceDate(date: string) {
-  return new Date(date).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "short",
-  });
+  // Rendered in London time, not the server's — see lib/format.
+  return sportDate(date, { day: "numeric", month: "short" });
 }
 
 const PODIUM = ["1st", "2nd", "3rd"];
@@ -61,18 +62,71 @@ export function F1Season() {
 
   return (
     <div className="mt-12 flex flex-col gap-20">
+      {next && (
+        <section>
+          <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
+            <h2 className="kicker text-[11px] text-accent">
+              Next · round {next.round} · {next.name}
+            </h2>
+            <p className="kicker text-[9px] text-faint">
+              {next.locality}, {next.country}
+            </p>
+          </div>
+
+          {next.sessions && next.sessions.length > 0 ? (
+            /*
+             * The whole weekend, not just Sunday. Every session already came
+             * back from the API with a UTC instant attached and none of it
+             * was being kept, so the page could not answer "when is qualifying".
+             */
+            <ol className="mt-6 divide-y divide-[var(--rule)]">
+              {next.sessions.map((session) => (
+                <li
+                  key={session.name}
+                  className="flex flex-wrap items-baseline gap-x-5 gap-y-1 py-3"
+                >
+                  <span className="font-body font-semibold text-[15px] w-36 shrink-0">
+                    {session.name}
+                  </span>
+                  <span className="kicker text-[9px] text-faint">
+                    {sportDate(session.at, {
+                      weekday: "long",
+                      day: "numeric",
+                      month: "short",
+                    })}
+                  </span>
+                  <span className="font-body text-[15px] tabular-nums ml-auto">
+                    {sportTime(session.at)}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p className="font-serif italic text-muted mt-5">
+              Session times for this round haven&apos;t been published yet.
+            </p>
+          )}
+        </section>
+      )}
+
       {latest && (
         <section>
-          <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
-            Round {latest.round} · {latest.name}
-          </h2>
+          <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
+            <h2 className="kicker text-[11px] text-accent">
+              Last · round {latest.round} · {latest.name}
+            </h2>
+            <SpoilerToggle />
+          </div>
 
-          <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.9fr)]">
+          <p className="kicker text-[9px] text-faint mt-5">
+            {raceDate(latest.date)} · {latest.locality}, {latest.country}
+          </p>
+
+          <div className="mt-6">
+            <SpoilerGuard label="Result and highlights">
+              <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.9fr)]">
             <div>
-              <p className="kicker text-[9px] text-faint">
-                {raceDate(latest.date)} · {latest.locality}, {latest.country}
-              </p>
-              <ol className="mt-5">
+              <ol>
                 {(latest.results ?? []).slice(0, 3).map((r, i) => (
                   <li
                     key={r.position}
@@ -100,7 +154,17 @@ export function F1Season() {
               <RaceResults race={latest} />
             </div>
 
-            <HighlightReel highlights={highlightsFor(f1Key(s.season, latest.round))} />
+            {highlightsFor(f1Key(s.season, latest.round)).length > 0 ? (
+              <HighlightReel
+                highlights={highlightsFor(f1Key(s.season, latest.round))}
+              />
+            ) : (
+              <p className="font-serif italic text-muted">
+                Formula 1 hasn&apos;t posted highlights for this round yet.
+              </p>
+            )}
+              </div>
+            </SpoilerGuard>
           </div>
         </section>
       )}
@@ -143,20 +207,26 @@ export function F1Season() {
                     {isNext && <span className="ml-3 text-accent">next up</span>}
                   </span>
                   {race.winner && (
-                    <span className="text-[14px] text-accent ml-auto">
-                      {race.winner}
+                    <span className="ml-auto">
+                      <SpoilerGuard label="Winner">
+                        <span className="text-[14px] text-accent">
+                          {race.winner}
+                        </span>
+                      </SpoilerGuard>
                     </span>
                   )}
                 </div>
 
                 {done ? (
                   <div className="mt-3 pl-0 sm:pl-[4.75rem]">
-                    <p className="text-[14px] text-muted">
-                      {(race.results ?? [])
-                        .slice(0, 3)
-                        .map((r, i) => `${i + 1}. ${r.driver}`)
-                        .join("   ")}
-                    </p>
+                    <SpoilerGuard label="Podium">
+                      <p className="text-[14px] text-muted">
+                        {(race.results ?? [])
+                          .slice(0, 3)
+                          .map((r, i) => `${i + 1}. ${r.driver}`)
+                          .join("   ")}
+                      </p>
+                    </SpoilerGuard>
                     <RaceResults race={race} />
                     {reels.length > 0 && (
                       <details className="group mt-3">
@@ -185,6 +255,8 @@ export function F1Season() {
         </div>
       </section>
 
+      {/* A points table after the flag says who won as surely as the podium does. */}
+      <SpoilerGuard label="Championship standings">
       <div className="grid gap-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
         {/* `min-w-0`: the table below sets a min-width and scrolls inside its
             own wrapper, but a grid item defaults to a min-content floor, so
@@ -258,10 +330,12 @@ export function F1Season() {
         </section>
       </div>
 
-      <p className="text-[13px] text-faint">
-        Standings, calendar and results from the Jolpica F1 API. Highlights are
-        Formula 1&apos;s own.
-      </p>
+      </SpoilerGuard>
+
+      <LastUpdated
+        at={s.updated ?? null}
+        source="Standings, calendar and results from the Jolpica F1 API; highlights are Formula 1's own"
+      />
     </div>
   );
 }

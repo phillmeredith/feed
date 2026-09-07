@@ -67,3 +67,53 @@ export function relativeDate(iso: string, now: number = Date.now()) {
     timeZone: SITE_TIME_ZONE,
   });
 }
+
+/**
+ * Dates and times for the sport desks, in the reader's zone rather than the
+ * server's.
+ *
+ * The three sport components each called toLocaleDateString with no timeZone,
+ * which renders in whatever zone the process happens to be in — UTC on
+ * Vercel. For a Saturday afternoon Grand Prix that is invisible; for a UFC
+ * card at 02:00Z it is the wrong day, and for six months of the year every
+ * British time label was an hour out, because the UK is on BST from late
+ * March to late October and UTC is not.
+ */
+export function sportDate(iso: string, options: Intl.DateTimeFormatOptions = {}) {
+  return new Date(iso).toLocaleDateString("en-GB", {
+    timeZone: SITE_TIME_ZONE,
+    ...options,
+  });
+}
+
+/** A start time with the zone named, because "19:00" alone invites the doubt. */
+export function sportTime(iso: string) {
+  const at = new Date(iso);
+  const time = at.toLocaleTimeString("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: SITE_TIME_ZONE,
+  });
+  return `${time} ${zoneLabel(at)}`;
+}
+
+/** BST or GMT, decided by the date rather than assumed. */
+export function zoneLabel(at: Date) {
+  const name = new Intl.DateTimeFormat("en-GB", {
+    timeZone: SITE_TIME_ZONE,
+    timeZoneName: "short",
+  })
+    .formatToParts(at)
+    .find((part) => part.type === "timeZoneName")?.value;
+  return name ?? "";
+}
+
+/** Whether an instant has passed, for deciding scheduled against finished. */
+export function hasPassed(iso: string, now: number = Date.now()) {
+  return new Date(iso).getTime() < now;
+}
+
+/** Whether a fetch timestamp is old enough to be worth warning about. */
+export function isStale(iso: string, maxAgeHours = 24, now: number = Date.now()) {
+  return now - new Date(iso).getTime() > maxAgeHours * 3_600_000;
+}

@@ -2,12 +2,20 @@ import { latestEvent, majors, playedEvents, golfSeason } from "@/lib/golf";
 import type { GolfEvent } from "@/lib/golf";
 import { highlightsFor, golfKey } from "@/lib/highlights";
 import { HighlightReel } from "./HighlightReel";
+import { SpoilerGuard, SpoilerToggle } from "./SpoilerGuard";
+import { LastUpdated } from "./EventStatus";
+import { sportDate } from "@/lib/format";
 
 function eventDates(event: GolfEvent) {
-  const start = new Date(event.startDate);
-  const end = new Date(event.endDate);
-  const sameMonth = start.getMonth() === end.getMonth();
-  return `${start.toLocaleDateString("en-GB", { day: "numeric", ...(sameMonth ? {} : { month: "short" }) })}–${end.toLocaleDateString("en-GB", { day: "numeric", month: "short" })}`;
+  // London time, not the server's; a major spans four days and the boundaries matter.
+  const sameMonth =
+    new Date(event.startDate).getMonth() === new Date(event.endDate).getMonth();
+  const from = sportDate(event.startDate, {
+    day: "numeric",
+    ...(sameMonth ? {} : { month: "short" }),
+  });
+  const to = sportDate(event.endDate, { day: "numeric", month: "short" });
+  return `${from}–${to}`;
 }
 
 /** Golf writes a score relative to par, and "E" rather than zero. */
@@ -43,9 +51,12 @@ export function GolfSeason() {
   return (
     <div className="mt-12 flex flex-col gap-20">
       <section>
-        <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
-          {lead.major ? "The last major" : "Last played"} · {lead.name}
-        </h2>
+        <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
+          <h2 className="kicker text-[11px] text-accent">
+            {lead.major ? "The last major" : "Last played"} · {lead.name}
+          </h2>
+          <SpoilerToggle />
+        </div>
 
         <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.9fr)]">
           <div>
@@ -59,6 +70,7 @@ export function GolfSeason() {
               )}
             </p>
 
+            <SpoilerGuard label="Result and highlights">
             {lead.winner && (
               <p className="font-serif text-lg text-muted mt-5">
                 <span className="text-paper">{lead.winner}</span> won at{" "}
@@ -87,9 +99,16 @@ export function GolfSeason() {
             </ol>
 
             <Leaderboard event={lead} />
+            </SpoilerGuard>
           </div>
 
-          <HighlightReel highlights={highlightsFor(golfKey(lead.id))} />
+          {highlightsFor(golfKey(lead.id)).length > 0 ? (
+            <HighlightReel highlights={highlightsFor(golfKey(lead.id))} />
+          ) : (
+            <p className="font-serif italic text-muted">
+              No highlights package has been posted for this one yet.
+            </p>
+          )}
         </div>
       </section>
 
@@ -107,9 +126,13 @@ export function GolfSeason() {
                 <p className="font-body font-semibold text-[16px] mt-2">
                   {event.name}
                 </p>
-                <p className="display text-lg text-accent mt-2">
-                  {event.winner ?? "—"}
-                </p>
+                <div className="mt-2">
+                  <SpoilerGuard label="Winner">
+                    <p className="display text-lg text-accent">
+                      {event.winner ?? "—"}
+                    </p>
+                  </SpoilerGuard>
+                </div>
                 {event.venue && (
                   <p className="text-[13px] text-muted mt-1">{event.venue}</p>
                 )}
@@ -139,8 +162,12 @@ export function GolfSeason() {
                   {event.major && <span className="ml-2 text-accent">★</span>}
                 </span>
                 {event.winner && (
-                  <span className="text-[14px] text-accent ml-auto">
-                    {event.winner}
+                  <span className="ml-auto">
+                    <SpoilerGuard label="Winner">
+                      <span className="text-[14px] text-accent">
+                        {event.winner}
+                      </span>
+                    </SpoilerGuard>
                   </span>
                 )}
               </div>
@@ -153,11 +180,10 @@ export function GolfSeason() {
         </div>
       </section>
 
-      <p className="text-[13px] text-faint">
-        Leaderboards from ESPN&apos;s public scoreboard. Highlights are the
-        rights holders&apos; own — the PGA Tour&apos;s, the R&amp;A&apos;s, the
-        USGA&apos;s and each major&apos;s.
-      </p>
+      <LastUpdated
+        at={store.updated}
+        source="Leaderboards from ESPN's public scoreboard; highlights from the rights holders — the PGA Tour, the R&A, the USGA and each major"
+      />
     </div>
   );
 }

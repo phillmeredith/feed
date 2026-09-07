@@ -9,14 +9,18 @@ import {
   type UfcEvent,
 } from "@/lib/ufc";
 import { highlightsFor, ufcKey } from "@/lib/highlights";
+import { sportDate } from "@/lib/format";
 import { HighlightReel } from "./HighlightReel";
+import { SpoilerGuard, SpoilerToggle } from "./SpoilerGuard";
+import { LastUpdated, WhenLine, stateFor } from "./EventStatus";
 
+/*
+ * A card at 02:00Z is the previous evening in the United States and the small
+ * hours here, so the day it lands on depends entirely on the zone you render
+ * it in. This one renders in London's, explicitly.
+ */
 function eventDate(date: string) {
-  return new Date(date).toLocaleDateString("en-GB", {
-    weekday: "short",
-    day: "numeric",
-    month: "short",
-  });
+  return sportDate(date, { weekday: "short", day: "numeric", month: "short" });
 }
 
 /**
@@ -25,7 +29,12 @@ function eventDate(date: string) {
  * Both corners, the winner marked, and how it ended. A bout that hasn't
  * happened shows the matchup and nothing more — there is no result to imply.
  */
-function Bout({ fight }: { fight: Fight }) {
+/**
+ * `reveal` governs the whole line, not just the result string: the winner is
+ * marked by weight as well as by words, so hiding one and not the other tells
+ * you who won just as plainly.
+ */
+function Bout({ fight, reveal }: { fight: Fight; reveal: boolean }) {
   const [red, blue] = fight.fighters;
   const result = resultLine(fight);
 
@@ -37,7 +46,9 @@ function Bout({ fight }: { fight: Fight }) {
       <span className="font-body text-[15px] min-w-0">
         <span
           className={
-            fight.winner === red ? "font-semibold text-paper" : "text-muted"
+            reveal && fight.winner === red
+              ? "font-semibold text-paper"
+              : "text-muted"
           }
         >
           {red}
@@ -45,13 +56,15 @@ function Bout({ fight }: { fight: Fight }) {
         <span className="mx-2 text-faint text-[13px]">v</span>
         <span
           className={
-            fight.winner === blue ? "font-semibold text-paper" : "text-muted"
+            reveal && fight.winner === blue
+              ? "font-semibold text-paper"
+              : "text-muted"
           }
         >
           {blue}
         </span>
       </span>
-      {result && (
+      {reveal && result && (
         <span className="kicker text-[9px] text-accent ml-auto">{result}</span>
       )}
     </li>
@@ -65,7 +78,7 @@ function Bout({ fight }: { fight: Fight }) {
  * because the broadcaster's titles are all capitals and shouting emoji and
  * this is not that kind of page.
  */
-function MainCard({ event }: { event: UfcEvent }) {
+function MainCard({ event, reveal }: { event: UfcEvent; reveal: boolean }) {
   const card = mainCard(event);
   if (card.length === 0) return null;
 
@@ -81,11 +94,11 @@ function MainCard({ event }: { event: UfcEvent }) {
       <h3 className="kicker text-[10px] text-muted mt-8">Main card</h3>
       <ul className="mt-2">
         {[...card].reverse().map((fight, i) => (
-          <Bout key={`${fight.fighters.join()}-${i}`} fight={fight} />
+          <Bout key={`${fight.fighters.join()}-${i}`} fight={fight} reveal={reveal} />
         ))}
       </ul>
 
-      {reels.length > 0 && (
+      {reveal && reels.length > 0 && (
         <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {[...reels].reverse().map(({ fight, videos }) => (
             <div key={fight.fighters.join()}>
@@ -102,7 +115,7 @@ function MainCard({ event }: { event: UfcEvent }) {
 }
 
 /** The prelims: results, and no video — nobody packages highlights for these. */
-function Prelims({ event }: { event: UfcEvent }) {
+function Prelims({ event, reveal }: { event: UfcEvent; reveal: boolean }) {
   const card = prelims(event);
   if (card.length === 0) return null;
 
@@ -116,7 +129,7 @@ function Prelims({ event }: { event: UfcEvent }) {
       </summary>
       <ul className="mt-2">
         {[...card].reverse().map((fight, i) => (
-          <Bout key={`${fight.fighters.join()}-${i}`} fight={fight} />
+          <Bout key={`${fight.fighters.join()}-${i}`} fight={fight} reveal={reveal} />
         ))}
       </ul>
     </details>
@@ -151,19 +164,27 @@ export function UfcEvents() {
             Next card
           </h2>
           <p className="display text-2xl sm:text-3xl mt-6">{next.name}</p>
-          <p className="kicker text-[9px] text-faint mt-3">
-            {eventDate(next.date)}
-            {next.location && (
-              <>
-                <span className="mx-2 text-rule">/</span>
-                {next.location}
-              </>
-            )}
-          </p>
+          <div className="mt-3">
+            {/* The first bell in London time, with the zone named — these
+                start at two in the morning here as often as not. */}
+            <WhenLine
+              at={next.date}
+              state={stateFor({
+                startsAt: next.date,
+                finished: false,
+                hasCard: next.fights.length > 0,
+              })}
+              place={next.location}
+            />
+          </div>
           {next.fights.length > 0 ? (
             <ul className="mt-6">
               {[...next.fights].reverse().map((fight, i) => (
-                <Bout key={`${fight.fighters.join()}-${i}`} fight={fight} />
+                <Bout
+                  key={`${fight.fighters.join()}-${i}`}
+                  fight={fight}
+                  reveal
+                />
               ))}
             </ul>
           ) : (
@@ -176,9 +197,12 @@ export function UfcEvents() {
 
       {latest && (
         <section>
-          <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
-            Last card · {latest.name}
-          </h2>
+          <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
+            <h2 className="kicker text-[11px] text-accent">
+              Last card · {latest.name}
+            </h2>
+            <SpoilerToggle />
+          </div>
           <p className="kicker text-[9px] text-faint mt-5">
             {eventDate(latest.date)}
             {latest.location && (
@@ -188,8 +212,17 @@ export function UfcEvents() {
               </>
             )}
           </p>
-          <MainCard event={latest} />
-          <Prelims event={latest} />
+          {/* One disclosure for the whole bill; thirteen would be unusable. */}
+          <SpoilerGuard label="Card and results">
+            <MainCard event={latest} reveal />
+            <Prelims event={latest} reveal />
+          </SpoilerGuard>
+
+          {/* The bill itself is not a spoiler, so it stays readable. */}
+          <div className="mt-8">
+            <p className="kicker text-[10px] text-muted">Who fought</p>
+            <MainCard event={latest} reveal={false} />
+          </div>
         </section>
       )}
 
@@ -217,14 +250,20 @@ export function UfcEvents() {
                       {event.name}
                     </span>
                     {headline?.winner && (
-                      <span className="text-[14px] text-accent ml-auto">
-                        {headline.winner}
+                      <span className="ml-auto">
+                        <SpoilerGuard label="Main event">
+                          <span className="text-[14px] text-accent">
+                            {headline.winner}
+                          </span>
+                        </SpoilerGuard>
                       </span>
                     )}
                   </summary>
                   <div className="mt-1 pl-0 sm:pl-[7.25rem]">
-                    <MainCard event={event} />
-                    <Prelims event={event} />
+                    <SpoilerGuard label="Results">
+                      <MainCard event={event} reveal />
+                      <Prelims event={event} reveal />
+                    </SpoilerGuard>
                   </div>
                 </details>
               );
@@ -233,11 +272,10 @@ export function UfcEvents() {
         </section>
       )}
 
-      <p className="text-[13px] text-faint">
-        Cards and results from ESPN&apos;s public scoreboard. Highlights are the
-        broadcast rights holders&apos; own — the UFC posts clips rather than
-        packages, so the prelims have results here but no video.
-      </p>
+      <LastUpdated
+        at={store.updated}
+        source="Cards and results from ESPN's public scoreboard; highlights from the broadcast rights holders — the UFC posts clips rather than packages, so prelims have results but no video"
+      />
     </div>
   );
 }

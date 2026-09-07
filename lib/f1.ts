@@ -30,11 +30,20 @@ export interface ConstructorStanding {
   nationality: string;
 }
 
+/** One session of a Grand Prix weekend, in UTC as the API supplies it. */
+export interface Session {
+  name: string;
+  /** ISO instant, so it can be rendered in the reader's zone rather than the server's. */
+  at: string;
+}
+
 export interface Race {
   round: number;
   name: string;
   date: string;
   time?: string;
+  /** Practice, qualifying, sprint — the rest of the weekend, in order. */
+  sessions?: Session[];
   circuitId: string;
   circuitName: string;
   locality: string;

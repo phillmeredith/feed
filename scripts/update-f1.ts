@@ -106,6 +106,37 @@ for (const race of raceResults) {
   );
 }
 
+/*
+ * A Grand Prix is a three-day weekend, and the API has said so all along:
+ * practice, qualifying and sprint sessions each arrive with a UTC date and
+ * time. Only the race itself was being kept, which left the page unable to
+ * answer the most basic question anyone asks before a race weekend.
+ */
+const SESSION_KEYS: [string, string][] = [
+  ["FirstPractice", "Practice 1"],
+  ["SecondPractice", "Practice 2"],
+  ["ThirdPractice", "Practice 3"],
+  ["SprintQualifying", "Sprint qualifying"],
+  ["SprintShootout", "Sprint shootout"],
+  ["Sprint", "Sprint"],
+  ["Qualifying", "Qualifying"],
+];
+
+function sessionsFor(race: Record<string, unknown>) {
+  const sessions = SESSION_KEYS.flatMap(([key, name]) => {
+    const entry = race[key] as { date?: string; time?: string } | undefined;
+    if (!entry?.date) return [];
+    return [{ name, at: `${entry.date}T${entry.time ?? "00:00:00Z"}` }];
+  });
+  if (race.date) {
+    sessions.push({
+      name: "Race",
+      at: `${race.date}T${(race.time as string) ?? "00:00:00Z"}`,
+    });
+  }
+  return sessions.sort((a, b) => a.at.localeCompare(b.at));
+}
+
 const races = (calendar.MRData.RaceTable.Races ?? []).map((race: {
   round: string; raceName: string; date: string; time?: string;
   Circuit: { circuitId: string; circuitName: string; Location: { locality: string; country: string } };
@@ -120,6 +151,7 @@ const races = (calendar.MRData.RaceTable.Races ?? []).map((race: {
     circuitName: race.Circuit.circuitName,
     locality: race.Circuit.Location.locality,
     country: race.Circuit.Location.country,
+    sessions: sessionsFor(race as unknown as Record<string, unknown>),
     results,
     winner: results?.find((r) => r.position === 1)?.driver,
   };
