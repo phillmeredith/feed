@@ -1,5 +1,6 @@
 import type { DetailedWeather } from "@/lib/weather";
 import { readVerdict } from "@/lib/verdict";
+import { HOUSEHOLD } from "@/lib/household";
 import { CONFIDENCE_LABEL, type DayConfidence } from "@/lib/ensemble";
 
 /**
@@ -78,7 +79,11 @@ export function TodayVerdict({
                 ? "Maybe"
                 : "Not tonight"
           }
-          detail={verdict.stars.detail}
+          detail={
+            verdict.stars.verdict === "good"
+              ? verdict.stars.detail
+              : `${verdict.stars.detail}. ${nextClearNight(weather)}`
+          }
         />
       </dl>
 
@@ -118,6 +123,21 @@ function Answer({
       </dd>
     </div>
   );
+}
+
+/**
+ * When the sky next clears, so a poor night is an answer rather than a dead
+ * end. Only looks as far as the model is worth trusting.
+ */
+function nextClearNight(weather: DetailedWeather): string {
+  const clear = weather.days
+    .slice(1, 8)
+    .find((d) => d.nightCloud >= 0 && d.nightCloud <= HOUSEHOLD.stars.good);
+  if (!clear) return "Nothing clear in the next week either";
+  const when = new Date(clear.date).toLocaleDateString("en-GB", {
+    weekday: "long",
+  });
+  return `${when} looks the next clear one, at ${clear.nightCloud}% cloud`;
 }
 
 function capitalise(text: string) {

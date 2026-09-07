@@ -113,6 +113,11 @@ export interface DetailedDay {
   gustKph: number;
   uvMax: number;
   cloudMean: number;
+  /**
+   * Mean cloud across that night's dark hours, which is the only cloud figure
+   * that says anything about stargazing — a daily mean is mostly daytime.
+   */
+  nightCloud: number;
   /** Hours of the day with measurable rain, which reads better than a mean. */
   precipHours: number;
   sunrise: string;
@@ -259,6 +264,24 @@ export async function getDetailedWeather(): Promise<DetailedWeather | null> {
      * traditionally read — and still the most useful single number about what
      * the next few hours will do.
      */
+    /*
+     * Cloud through each night, keyed by the date the evening belongs to, so
+     * the outlook can say which nights are worth going outside for. Hours
+     * after midnight are credited to the evening before, which is how anyone
+     * planning a night actually thinks about it.
+     */
+    const nightCloud = new Map<string, number[]>();
+    data.hourly.time.forEach((time, i) => {
+      if ((data.hourly.is_day?.[i] ?? 1) === 1) return;
+      const at = new Date(time);
+      const evening = new Date(at);
+      if (at.getHours() < 12) evening.setDate(evening.getDate() - 1);
+      const key = evening.toISOString().slice(0, 10);
+      const list = nightCloud.get(key) ?? [];
+      list.push(data.hourly.cloud_cover?.[i] ?? 100);
+      nightCloud.set(key, list);
+    });
+
     const pressureNow = data.hourly.surface_pressure?.[startIndex];
     const pressureThen = data.hourly.surface_pressure?.[Math.max(0, startIndex - 3)];
     const pressureTrend =
@@ -300,6 +323,11 @@ export async function getDetailedWeather(): Promise<DetailedWeather | null> {
         gustKph: Math.round(data.daily.wind_gusts_10m_max?.[i] ?? 0),
         uvMax: Math.round(data.daily.uv_index_max?.[i] ?? 0),
         cloudMean: Math.round(data.daily.cloud_cover_mean?.[i] ?? 0),
+        nightCloud: (() => {
+          const list = nightCloud.get(date);
+          if (!list || list.length === 0) return -1;
+          return Math.round(list.reduce((a, b) => a + b, 0) / list.length);
+        })(),
         precipHours: Math.round(data.daily.precipitation_hours?.[i] ?? 0),
         sunrise: clockTime(data.daily.sunrise[i]),
         sunset: clockTime(data.daily.sunset[i]),

@@ -2,6 +2,7 @@ import type { DetailedWeather } from "@/lib/weather";
 import { WeatherGlyph } from "./WeatherGlyph";
 import { Meteogram, type Series } from "./Meteogram";
 import { CONFIDENCE_LABEL, type DayConfidence } from "@/lib/ensemble";
+import { HOUSEHOLD } from "@/lib/household";
 import { DaylightArc } from "./DaylightArc";
 
 function Stat({
@@ -177,6 +178,29 @@ export function ForecastPanel({
                 </span>
                 <span className="kicker text-[9px] text-faint shrink-0 w-20 text-right tabular-nums hidden md:block">
                   {day.gustKph} km/h gust
+                </span>
+
+                {/*
+                 * Which nights are worth going outside for. Marked with a word
+                 * as well as a glyph, so it doesn't depend on spotting a
+                 * symbol, and only where the model still knows anything.
+                 */}
+                <span className="kicker text-[9px] shrink-0 w-20 text-right hidden lg:block">
+                  {day.nightCloud >= 0 && day.nightCloud <= HOUSEHOLD.stars.fair ? (
+                    <span
+                      className={
+                        day.nightCloud <= HOUSEHOLD.stars.good
+                          ? "text-accent"
+                          : "text-muted"
+                      }
+                    >
+                      {day.nightCloud <= HOUSEHOLD.stars.good
+                        ? "Clear night"
+                        : "Part clear"}
+                    </span>
+                  ) : (
+                    <span className="sr-only">Cloudy night</span>
+                  )}
                 </span>
 
                 {/*
