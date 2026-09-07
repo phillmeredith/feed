@@ -24,6 +24,7 @@ export function SectionBlock({
   total,
   articles,
   shape,
+  showDesk,
 }: {
   title: string;
   dek?: string;
@@ -31,6 +32,7 @@ export function SectionBlock({
   total?: number;
   articles: Article[];
   shape: Shape;
+  showDesk?: boolean;
 }) {
   if (articles.length === 0) return null;
 
@@ -55,9 +57,9 @@ export function SectionBlock({
         </Link>
       </div>
 
-      {shape === "gallery" && <Gallery articles={articles} />}
+      {shape === "gallery" && <Gallery articles={articles} showDesk={showDesk} />}
       {shape === "split" && <Split articles={articles} />}
-      {shape === "index" && <Index articles={articles} />}
+      {shape === "index" && <Index articles={articles} showDesk={showDesk} />}
     </section>
   );
 }
@@ -84,9 +86,15 @@ export function DeskBlock({
 }
 
 /** Pictures, three across. The desk with the strongest artwork leads. */
-export function Gallery({ articles }: { articles: Article[] }) {
+export function Gallery({
+  articles,
+  showDesk = false,
+}: {
+  articles: Article[];
+  showDesk?: boolean;
+}) {
   const withArt = articles.filter((a) => a.image).slice(0, 3);
-  const rest = articles.filter((a) => !withArt.includes(a)).slice(0, 4);
+  const rest = articles.filter((a) => !withArt.includes(a)).slice(0, 9);
 
   return (
     <>
@@ -96,9 +104,9 @@ export function Gallery({ articles }: { articles: Article[] }) {
         ))}
       </div>
       {rest.length > 0 && (
-        <div className="mt-10 grid gap-x-12 gap-y-4 sm:grid-cols-2">
+        <div className="mt-10 grid gap-x-12 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((a) => (
-            <ListCard key={a.id} article={a} />
+            <ListCard key={a.id} article={a} showDesk={showDesk} />
           ))}
         </div>
       )}
@@ -133,14 +141,17 @@ export function Split({ articles }: { articles: Article[] }) {
 export function Index({
   articles,
   limit = 9,
+  showDesk = false,
 }: {
   articles: Article[];
   limit?: number;
+  /** On a section front, an item is only placeable if it names its desk. */
+  showDesk?: boolean;
 }) {
   return (
     <div className="mt-10 grid gap-x-12 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
       {articles.slice(0, limit).map((a) => (
-        <ListCard key={a.id} article={a} />
+        <ListCard key={a.id} article={a} showDesk={showDesk} />
       ))}
     </div>
   );

@@ -9,11 +9,12 @@ import { Masthead } from "./Masthead";
 import { Footer } from "./Footer";
 import { SubNav } from "./SubNav";
 import { GroupStanding } from "./GroupStanding";
+import { SportBoard } from "./SportBoard";
 import { VideoPanel } from "./VideoPanel";
 import { StackedLead } from "./cards";
 import { SpoilerHeadline } from "./SpoilerHeadline";
 import { SpoilerToggle } from "./SpoilerGuard";
-import { SHAPES, DeskBlock } from "./shapes";
+import { SHAPES, DeskBlock, SectionBlock } from "./shapes";
 
 /**
  * A section front.
@@ -83,12 +84,33 @@ export async function GroupPage({ group }: { group: Group }) {
         </header>
 
         {/*
+         * Sport opens on fixtures, not on a story.
+         *
+         * A section front whose first screen is a lead story works for
+         * Technology and Photography, where the news is the subject. It does
+         * not work for sport, where the subject is what is on and what just
+         * happened — this page used to lead on a golf wedge review and put
+         * the results two and a half thousand pixels down.
+         */}
+        {group.slug === "sport" && (
+          <div className="mt-14">
+            <SportBoard />
+          </div>
+        )}
+
+        {/*
          * The opener: one story at full size, and beside it what else has
          * happened across the section since. The rail is deliberately text —
          * a second column of pictures competes with the lead instead of
          * supporting it.
          */}
-        {lead && (
+        {/*
+         * Sport has no separate lead block. The board is the anchor of the
+         * page, and putting a full-width opener under it gave one article —
+         * a driver-ratings listicle, as it happened — seven hundred and fifty
+         * pixels while the twelve stories below it shared three hundred.
+         */}
+        {group.slug !== "sport" && lead && (
           <div className="mt-14 grid gap-x-16 gap-y-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
             <StackedLead article={lead} />
 
@@ -123,25 +145,46 @@ export async function GroupPage({ group }: { group: Group }) {
           </div>
         )}
 
-        <div className="mt-24">
-          <GroupStanding group={group.slug} />
-        </div>
+        {group.slug !== "sport" && (
+          <div className="mt-24">
+            <GroupStanding group={group.slug} />
+          </div>
+        )}
 
         {/*
          * Each desk gets a different treatment, cycled by position: pictures,
          * then a picture with a list beside it, then headlines only. The
          * material doesn't vary enough to earn three identical grids.
+         *
+         * Sport is the exception: its board already says what is on in each
+         * of the three, so repeating the desks below as three more blocks
+         * says it a second time at length. The reading there is one column,
+         * ranked across all three, with the desk marked on each item.
          */}
-        <div className="mt-24 flex flex-col gap-24">
-          {desks.map((desk, index) => (
-            <DeskBlock
-              key={desk.category.slug}
-              category={desk.category}
-              articles={desk.articles.filter((a) => a.id !== lead?.id)}
-              shape={SHAPES[index % SHAPES.length]}
+        {group.slug === "sport" ? (
+          <div className="mt-24">
+            <SectionBlock
+              title="The reading"
+              dek="Across all three desks"
+              href="/sport"
+              total={everything.length}
+              articles={everything.slice(0, 13)}
+              shape="gallery"
+              showDesk
             />
-          ))}
-        </div>
+          </div>
+        ) : (
+          <div className="mt-24 flex flex-col gap-24">
+            {desks.map((desk, index) => (
+              <DeskBlock
+                key={desk.category.slug}
+                category={desk.category}
+                articles={desk.articles.filter((a) => a.id !== lead?.id)}
+                shape={SHAPES[index % SHAPES.length]}
+              />
+            ))}
+          </div>
+        )}
 
         {videos.length > 0 && (
           <div className="mt-24">

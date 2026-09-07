@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-07T10:21:02.178Z",
+  "updated": "2026-09-07T15:30:17.796Z",
   "events": [
     {
       "id": "401811927",
@@ -25561,6 +25561,105 @@
           "country": "USA"
         }
       ]
+    },
+    {
+      "id": "401850914",
+      "name": "Biltmore Championship Asheville",
+      "major": false,
+      "startDate": "2026-09-17",
+      "endDate": "2026-09-20",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401824815",
+      "name": "Presidents Cup",
+      "major": false,
+      "startDate": "2026-09-24",
+      "endDate": "2026-09-27",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401850915",
+      "name": "Bank of Utah Championship",
+      "major": false,
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-04",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401850916",
+      "name": "Baycurrent Classic",
+      "major": false,
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-11",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401850917",
+      "name": "Butterfield Bermuda Championship",
+      "major": false,
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-25",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401850978",
+      "name": "VidantaWorld Mexico Open",
+      "major": false,
+      "startDate": "2026-10-29",
+      "endDate": "2026-11-01",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401850979",
+      "name": "World Wide Technology Championship",
+      "major": false,
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-08",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401850980",
+      "name": "Austin Championship",
+      "major": false,
+      "startDate": "2026-11-12",
+      "endDate": "2026-11-15",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401850981",
+      "name": "The RSM Classic",
+      "major": false,
+      "startDate": "2026-11-19",
+      "endDate": "2026-11-22",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401850982",
+      "name": "Hero World Challenge",
+      "major": false,
+      "startDate": "2026-12-03",
+      "endDate": "2026-12-06",
+      "status": "Scheduled",
+      "leaderboard": []
+    },
+    {
+      "id": "401909147",
+      "name": "PGA TOUR Q-School presented by Korn Ferry",
+      "major": false,
+      "startDate": "2026-12-10",
+      "endDate": "2026-12-13",
+      "status": "Scheduled",
+      "leaderboard": []
     }
   ]
 }

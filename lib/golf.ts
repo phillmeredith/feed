@@ -67,6 +67,16 @@ export function latestEvent(): GolfEvent | null {
   return majors()[0] ?? playedEvents()[0] ?? null;
 }
 
+/** The next tournament, if the calendar knows of one. */
+export function nextEvent(now = new Date()): GolfEvent | null {
+  const today = now.toISOString().slice(0, 10);
+  return (
+    SEASON.events
+      .filter((e) => e.status !== "Final" && e.endDate >= today)
+      .sort((a, b) => a.startDate.localeCompare(b.startDate))[0] ?? null
+  );
+}
+
 export function golfEventById(id: string): GolfEvent | null {
   return SEASON.events.find((e) => e.id === id) ?? null;
 }

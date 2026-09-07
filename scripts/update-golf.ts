@@ -40,7 +40,29 @@ let updated = 0;
 for (const entry of calendar) {
   const start = entry.startDate.slice(0, 10);
   const end = entry.endDate.slice(0, 10);
-  if (start > today) continue;
+
+  /*
+   * A tournament that hasn't started has no leaderboard, but it does have a
+   * name, a date and a place — which is the whole of what a section front
+   * needs to say what is on this week. Skipping them entirely, as this did,
+   * left the page unable to answer that at all.
+   */
+  if (start > today) {
+    const existing = known.get(entry.id);
+    if (!existing) {
+      known.set(entry.id, {
+        id: entry.id,
+        name: entry.label,
+        major: MAJORS.some((m) => entry.label.includes(m)),
+        startDate: start,
+        endDate: end,
+        status: "Scheduled",
+        leaderboard: [],
+      });
+      added += 1;
+    }
+    continue;
+  }
 
   const existing = known.get(entry.id);
   // A finished event is finished; there is nothing to re-fetch.

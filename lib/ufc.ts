@@ -51,11 +51,23 @@ export function completedEvents(): UfcEvent[] {
     .sort((a, b) => b.date.localeCompare(a.date));
 }
 
+/**
+ * Dana White's Contender Series is developmental — prospects fighting for a
+ * contract, not a UFC card. It belongs in the season list and does not belong
+ * as the answer to "what's on next".
+ */
+const DEVELOPMENTAL = /contender series|road to ufc|ultimate fighter/i;
+
+export function isDevelopmental(event: UfcEvent) {
+  return DEVELOPMENTAL.test(event.name);
+}
+
 /** The next card, if one is booked. */
-export function nextEvent(now = new Date()): UfcEvent | null {
+export function nextEvent(now = new Date(), includeDevelopmental = true): UfcEvent | null {
   return (
     SEASON.events
       .filter((e) => e.status !== "Final" && new Date(e.date) >= now)
+      .filter((e) => includeDevelopmental || !isDevelopmental(e))
       .sort((a, b) => a.date.localeCompare(b.date))[0] ?? null
   );
 }
