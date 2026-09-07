@@ -159,17 +159,28 @@ export function F1Season() {
               <RaceResults race={latest} />
             </div>
 
+              </div>
+            </SpoilerGuard>
+
             {highlightsFor(f1Key(s.season, latest.round)).length > 0 ? (
-              <HighlightReel
-                highlights={highlightsFor(f1Key(s.season, latest.round))}
-              />
+              <details className="group mt-8">
+                <summary className="kicker text-[10px] text-muted hover:text-accent cursor-pointer list-none">
+                  <span className="group-open:hidden">
+                    Watch the highlights →
+                  </span>
+                  <span className="hidden group-open:inline">Close ↑</span>
+                </summary>
+                <div className="mt-6">
+                  <HighlightReel
+                    highlights={highlightsFor(f1Key(s.season, latest.round))}
+                  />
+                </div>
+              </details>
             ) : (
-              <p className="font-serif italic text-muted">
+              <p className="font-serif italic text-muted mt-6">
                 Formula 1 hasn&apos;t posted highlights for this round yet.
               </p>
             )}
-              </div>
-            </SpoilerGuard>
           </div>
         </section>
       )}
@@ -371,13 +382,25 @@ function RoundCard({
             </ol>
 
             <RaceResults race={race} />
+          </SpoilerGuard>
 
-            {reels.length > 0 && (
-              <div className="mt-5">
+          {/*
+            * Video stays behind a disclosure rather than being blurred. A
+            * blurred thumbnail is a poor guard — the still usually shows the
+            * winner celebrating — and rendering thirteen of them fetched
+            * fifteen third-party images nobody had asked to see.
+            */}
+          {reels.length > 0 && (
+            <details className="group mt-3">
+              <summary className="kicker text-[9px] text-faint hover:text-accent cursor-pointer list-none">
+                <span className="group-open:hidden">Highlights →</span>
+                <span className="hidden group-open:inline">Close ↑</span>
+              </summary>
+              <div className="mt-4">
                 <HighlightReel highlights={reels.slice(0, 1)} />
               </div>
-            )}
-          </SpoilerGuard>
+            </details>
+          )}
         </div>
       )}
     </li>

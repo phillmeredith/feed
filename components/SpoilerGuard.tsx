@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore, useState, useCallback } from "react";
+import { useSyncExternalStore, useCallback } from "react";
 
 /**
  * Results, kept out of sight until asked for.
@@ -73,11 +73,20 @@ export function SpoilerToggle() {
 }
 
 /**
- * One result, behind a disclosure.
+ * One result, blurred rather than folded away.
  *
- * `label` says what is being withheld without giving it away — "Result" and
- * not "Norris wins" — because a spoiler guard that names the winner in its
- * own summary has done nothing at all.
+ * This was a disclosure per result, which is safe but tiring: every round of
+ * the season grew its own "Show result →", and a page of those is a page of
+ * near-identical grey links that says nothing about what is behind any of
+ * them. Blurring keeps the shape of the page — you can see there is a podium
+ * and how long the classification runs — while the names stay unreadable, and
+ * the one switch at the top brings the lot back at once.
+ *
+ * `label` is what the mask is standing in for, said to assistive technology in
+ * place of the text: a blurred name still read aloud is not hidden at all.
+ *
+ * The honest limit, as before: this stops the result being seen. It does not
+ * stop it being found by someone reading the page source.
  */
 export function SpoilerGuard({
   label = "Result",
@@ -87,22 +96,23 @@ export function SpoilerGuard({
   children: React.ReactNode;
 }) {
   const [show] = useSpoilers();
-  const [openedHere, setOpenedHere] = useState(false);
-  const open = show || openedHere;
+
+  if (show) return <>{children}</>;
 
   return (
-    <details
-      className="group"
-      open={open}
-      onToggle={(event) => setOpenedHere(event.currentTarget.open)}
-    >
-      <summary className="kicker text-[9px] text-muted hover:text-accent cursor-pointer list-none inline-block">
-        <span className="group-open:hidden">Show {label.toLowerCase()} →</span>
-        <span className="hidden group-open:inline">
-          Hide {label.toLowerCase()} ↑
-        </span>
-      </summary>
-      <div className="mt-4">{children}</div>
-    </details>
+    <span className="relative inline-block align-top max-w-full">
+      <span
+        aria-hidden="true"
+        className="block blur-[5px] select-none opacity-70 pointer-events-none"
+        /* Blur alone leaves short words guessable by their shape, so the
+           tracking is opened up as well. */
+        style={{ letterSpacing: "0.06em" }}
+      >
+        {children}
+      </span>
+      <span className="sr-only">
+        {label} hidden. Turn results on to read it.
+      </span>
+    </span>
   );
 }
