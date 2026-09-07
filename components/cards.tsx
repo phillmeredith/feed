@@ -9,6 +9,7 @@ import { relativeDate } from "@/lib/format";
 export { relativeDate };
 import { Media } from "./Media";
 import { RelativeTime } from "./RelativeTime";
+import { SpoilerHeadline } from "./SpoilerHeadline";
 
 export function Meta({
   article,
@@ -52,7 +53,7 @@ export function LeadCard({ article }: { article: Article }) {
           <div className="order-2 lg:order-1">
             <p className="kicker text-[11px] text-accent">{desk?.label}</p>
             <h2 className="headline mt-4 text-[clamp(2rem,4.2vw,3.5rem)] group-hover:text-accent transition-colors">
-              {article.headline}
+              <SpoilerHeadline article={article} />
             </h2>
             {article.dek && (
               <p className="mt-5 text-[17px] leading-relaxed text-muted max-w-xl">
@@ -95,7 +96,7 @@ export function FeatureCard({ article }: { article: Article }) {
             article.image ? "mt-4" : ""
           }`}
         >
-          {article.headline}
+          <SpoilerHeadline article={article} />
         </h3>
         {article.dek && (
           <p className="mt-3 text-[15px] leading-relaxed text-muted line-clamp-3">
@@ -138,7 +139,7 @@ export function StackedLead({ article }: { article: Article }) {
         )}
         <p className="kicker text-[11px] text-accent mt-6">{desk?.label}</p>
         <h2 className="headline mt-3 text-[clamp(1.9rem,3.2vw,2.9rem)] group-hover:text-accent transition-colors">
-          {article.headline}
+          <SpoilerHeadline article={article} />
         </h2>
         {article.dek && (
           <p className="mt-4 text-[17px] leading-relaxed text-muted max-w-2xl">
@@ -174,7 +175,7 @@ export function ListCard({
           * grids switch to `minmax(0, 1fr)` tracks and can clip safely.
           */}
         <h3 className="font-body font-semibold text-[17px] leading-snug break-words line-clamp-2 sm:line-clamp-none sm:truncate group-hover:text-accent transition-colors">
-          {article.headline}
+          <SpoilerHeadline article={article} />
         </h3>
         <div className="mt-2">
           <Meta article={article} showDesk={showDesk} />
@@ -202,7 +203,7 @@ export function ThumbCard({ article }: { article: Article }) {
         )}
         <div className="min-w-0">
           <h3 className="font-body font-semibold text-[15px] leading-snug line-clamp-2 group-hover:text-accent transition-colors">
-            {article.headline}
+            <SpoilerHeadline article={article} />
           </h3>
           <div className="mt-2">
             <Meta article={article} />

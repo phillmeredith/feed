@@ -150,9 +150,11 @@ export function GolfSeason() {
           <p className="kicker text-[9px] text-faint">{played.length} played</p>
         </div>
 
-        <div className="mt-2 divide-y divide-[var(--rule)]">
+        {/* Two columns, for the same reason the F1 calendar has them: a
+            season down one narrow column is mostly empty row. */}
+        <div className="mt-2 grid gap-x-16 lg:grid-cols-2">
           {rest.map((event) => (
-            <div key={event.id} className="py-5">
+            <div key={event.id} className="border-t border-rule py-5">
               <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
                 <span className="kicker text-[9px] text-faint w-20 shrink-0">
                   {eventDates(event)}

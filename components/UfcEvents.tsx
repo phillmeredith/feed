@@ -237,11 +237,11 @@ export function UfcEvents() {
             </p>
           </div>
 
-          <div className="mt-2 divide-y divide-[var(--rule)]">
+          <div className="mt-2 grid gap-x-16 lg:grid-cols-2">
             {earlier.map((event) => {
               const headline = event.fights[event.fights.length - 1];
               return (
-                <details key={event.id} className="group py-5">
+                <details key={event.id} className="group border-t border-rule py-5">
                   <summary className="cursor-pointer list-none flex flex-wrap items-baseline gap-x-5 gap-y-1">
                     <span className="kicker text-[9px] text-faint w-24 shrink-0">
                       {eventDate(event.date)}

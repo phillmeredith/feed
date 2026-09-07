@@ -79,25 +79,29 @@ export function F1Season() {
              * back from the API with a UTC instant attached and none of it
              * was being kept, so the page could not answer "when is qualifying".
              */
-            <ol className="mt-6 divide-y divide-[var(--rule)]">
+            /*
+             * A weekend reads across, not down. As a full-width list each
+             * session put its name at the left margin and its time a thousand
+             * pixels away at the right, with nothing in between — the two
+             * things you need to read together were the furthest apart on the
+             * page. Five columns puts the time under its own session and uses
+             * the width for content instead of air.
+             */
+            <ol className="mt-8 grid gap-x-8 gap-y-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
               {next.sessions.map((session) => (
-                <li
-                  key={session.name}
-                  className="flex flex-wrap items-baseline gap-x-5 gap-y-1 py-3"
-                >
-                  <span className="font-body font-semibold text-[15px] w-36 shrink-0">
+                <li key={session.name} className="border-t border-rule pt-4">
+                  <p className="kicker text-[9px] text-faint">
+                    {sportDate(session.at, { weekday: "long" })}
+                  </p>
+                  <p className="font-body font-semibold text-[16px] mt-2">
                     {session.name}
-                  </span>
-                  <span className="kicker text-[9px] text-faint">
-                    {sportDate(session.at, {
-                      weekday: "long",
-                      day: "numeric",
-                      month: "short",
-                    })}
-                  </span>
-                  <span className="font-body text-[15px] tabular-nums ml-auto">
+                  </p>
+                  <p className="display text-2xl mt-2 tabular-nums">
                     {sportTime(session.at)}
-                  </span>
+                  </p>
+                  <p className="kicker text-[9px] text-faint mt-1">
+                    {sportDate(session.at, { day: "numeric", month: "short" })}
+                  </p>
                 </li>
               ))}
             </ol>
@@ -185,14 +189,20 @@ export function F1Season() {
           </p>
         </div>
 
-        <div className="mt-2 divide-y divide-[var(--rule)]">
+        {/*
+          * Twenty-three rounds down a single 1336px column left every row
+          * mostly empty and the section three thousand pixels tall. Two
+          * columns halve the height and give each row a width its content
+          * can actually fill.
+          */}
+        <div className="mt-2 grid gap-x-16 lg:grid-cols-2">
           {ordered.map((race) => {
             const done = Boolean(race.results?.length);
             const isNext = next?.round === race.round;
             const reels = highlightsFor(f1Key(s.season, race.round));
 
             return (
-              <div key={race.round} className="py-5">
+              <div key={race.round} className="border-t border-rule py-5">
                 <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
                   <span className="kicker text-[9px] text-faint w-14 shrink-0 tabular-nums">
                     R{race.round}
