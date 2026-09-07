@@ -247,13 +247,6 @@ a {
   margin: 0.35rem 0.75rem 0 0;
 }
 
-/* Collapsible Today section — hide the native disclosure triangle. */
-.today > summary::-webkit-details-marker,
-.today > summary::marker {
-  display: none;
-  content: "";
-}
-
 ::selection {
   background: var(--accent);
   color: var(--accent-ink);

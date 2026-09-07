@@ -3,9 +3,8 @@ import { Footer } from "@/components/Footer";
 import { LeadCard, FeatureCard, ListCard } from "@/components/cards";
 import { SectionPreview } from "@/components/SectionPreview";
 import { BriefsColumn } from "@/components/BriefsColumn";
-import { TodayLive } from "@/components/TodayLive";
 import { desks } from "@/lib/categories";
-import { getFeed, pickHero, todaysWindow } from "@/lib/feed";
+import { getFeed, pickHero } from "@/lib/feed";
 import type { Article } from "@/lib/types";
 
 /*
@@ -27,8 +26,6 @@ export const maxDuration = 60;
 
 export default async function Home() {
   const { articles, briefs } = await getFeed();
-
-  const { releases, breaking, label: windowLabel } = todaysWindow(articles);
 
   const lead = pickHero(articles);
 
@@ -69,14 +66,7 @@ export default async function Home() {
       <Masthead />
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-10 py-12 flex-1 w-full">
-
-        <TodayLive
-          releases={releases}
-          breaking={breaking}
-          windowLabel={windowLabel}
-        />
-
-        <div className="mt-16">{lead && <LeadCard article={lead} />}</div>
+        {lead && <LeadCard article={lead} />}
 
         <div className="mt-20 grid gap-16 lg:grid-cols-[minmax(0,1fr)_320px]">
           <div>
