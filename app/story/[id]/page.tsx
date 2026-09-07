@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
 import { Media } from "@/components/Media";
-import { ThumbCard } from "@/components/cards";
+import { FeatureCard } from "@/components/cards";
 import { relativeDate } from "@/lib/format";
 import { categoryBySlug } from "@/lib/categories";
 import { getStory } from "@/lib/feed";
@@ -90,16 +90,6 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
                 {relativeDate(story.publishedAt)}
               </p>
 
-              {related.length > 0 && (
-                <div className="mt-12">
-                  <h2 className="display text-xl">Don&apos;t miss a thing</h2>
-                  <div className="mt-5 flex flex-col gap-4">
-                    {related.map((a) => (
-                      <ThumbCard key={a.id} article={a} />
-                    ))}
-                  </div>
-                </div>
-              )}
             </aside>
 
             {/* Body — the publisher's own syndicated text where they provide it. */}
@@ -115,33 +105,49 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
                 </p>
               )}
 
-              <div className="mt-12 border-t border-rule pt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
-                <a
-                  href={story.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="kicker text-[11px] inline-block bg-accent text-accent-ink px-6 py-4 hover:bg-paper transition-colors"
-                >
-                  Open at {story.source} →
-                </a>
+              {/*
+                * The whole story is on this page, so leaving is a credit
+                * rather than a call to action. This was an accent-filled
+                * button — the loudest thing at the end of the article was an
+                * invitation to go and read it somewhere else.
+                */}
+              <div className="mt-12 border-t border-rule pt-8 flex flex-wrap items-baseline gap-x-6 gap-y-3">
                 <p className="kicker text-[9px] text-faint">
                   Reporting by {story.source}
                   {story.words ? ` · ${story.words} words` : ""}
                 </p>
-              </div>
-
-              {desk && (
-                <div className="mt-14 border-t border-rule pt-8">
+                <a
+                  href={story.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="kicker text-[9px] text-faint hover:text-accent transition-colors"
+                >
+                  Original ↗
+                </a>
+                {desk && (
                   <Link
                     href={`/${desk.slug}`}
-                    className="kicker text-[10px] text-muted hover:text-accent transition-colors"
+                    className="kicker text-[9px] text-muted hover:text-accent transition-colors ml-auto"
                   >
                     ← Back to {desk.label}
                   </Link>
-                </div>
-              )}
+                )}
+              </div>
             </article>
           </div>
+
+          {related.length > 0 && (
+            <section className="mt-24 border-t border-rule pt-10">
+              <h2 className="display text-2xl sm:text-3xl">
+                {desk ? `More from ${desk.label}` : "More from the desks"}
+              </h2>
+              <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                {related.slice(0, 3).map((a) => (
+                  <FeatureCard key={a.id} article={a} />
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </main>
 

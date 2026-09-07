@@ -145,7 +145,7 @@ export function GolfSeason() {
                 )}
               </div>
               <div className="mt-2 pl-0 sm:pl-[6.25rem]">
-                <Leaderboard event={event} />
+                <Leaderboard event={event} limit={12} />
                 <HighlightsToggle event={event} />
               </div>
             </div>
@@ -171,20 +171,36 @@ function marginOf(event: GolfEvent) {
   return `${shots} ${shots === 1 ? "shot" : "shots"}`;
 }
 
-function Leaderboard({ event }: { event: GolfEvent }) {
+/**
+ * The leaderboard, folded away — but only as much of it as is worth shipping.
+ *
+ * A <details> hides its contents; it does not avoid sending them. Rendering
+ * every player of every event of the season put 2.8MB of HTML on this page,
+ * almost all of it inside collapsed elements nobody opens. The event the page
+ * leads on gets its full field; the season list gets the part of a
+ * leaderboard anyone reads.
+ */
+function Leaderboard({
+  event,
+  limit,
+}: {
+  event: GolfEvent;
+  limit?: number;
+}) {
   if (event.leaderboard.length <= 3) return null;
+  const rows = limit ? event.leaderboard.slice(0, limit) : event.leaderboard;
   return (
     <details className="group mt-3">
       <summary className="kicker text-[9px] text-muted hover:text-accent cursor-pointer list-none">
         <span className="group-open:hidden">
-          Leaderboard, {event.leaderboard.length} players →
+          Leaderboard{limit ? `, top ${rows.length}` : `, ${rows.length} players`} →
         </span>
         <span className="hidden group-open:inline">Hide leaderboard ↑</span>
       </summary>
       <div className="mt-4 max-h-[30rem] overflow-y-auto">
         <table className="w-full text-[14px]">
           <tbody>
-            {event.leaderboard.map((p) => (
+            {rows.map((p) => (
               <tr key={`${p.position}-${p.name}`} className="border-b border-rule">
                 <td className="py-2 pr-4 text-faint tabular-nums w-10">
                   {p.position}

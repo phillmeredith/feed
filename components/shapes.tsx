@@ -84,7 +84,7 @@ export function DeskBlock({
 }
 
 /** Pictures, three across. The desk with the strongest artwork leads. */
-function Gallery({ articles }: { articles: Article[] }) {
+export function Gallery({ articles }: { articles: Article[] }) {
   const withArt = articles.filter((a) => a.image).slice(0, 3);
   const rest = articles.filter((a) => !withArt.includes(a)).slice(0, 4);
 
@@ -107,7 +107,7 @@ function Gallery({ articles }: { articles: Article[] }) {
 }
 
 /** One picture, and the desk's other reporting stacked beside it. */
-function Split({ articles }: { articles: Article[] }) {
+export function Split({ articles }: { articles: Article[] }) {
   const feature = articles.find((a) => a.image) ?? articles[0];
   const rest = articles.filter((a) => a.id !== feature?.id).slice(0, 4);
 
@@ -123,11 +123,23 @@ function Split({ articles }: { articles: Article[] }) {
   );
 }
 
-/** Headlines only, in columns — a desk read as a list rather than browsed. */
-function Index({ articles }: { articles: Article[] }) {
+/**
+ * Headlines only, in columns — a desk read as a list rather than browsed.
+ *
+ * On a section front this is a teaser and stops at nine. On a desk page it is
+ * the rest of the page, and cutting it would drop stories that paging says
+ * are there, so the caller raises the limit.
+ */
+export function Index({
+  articles,
+  limit = 9,
+}: {
+  articles: Article[];
+  limit?: number;
+}) {
   return (
     <div className="mt-10 grid gap-x-12 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-      {articles.slice(0, 9).map((a) => (
+      {articles.slice(0, limit).map((a) => (
         <ListCard key={a.id} article={a} />
       ))}
     </div>

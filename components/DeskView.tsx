@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
-import { LeadCard, FeatureCard, ListCard } from "@/components/cards";
+import { LeadCard } from "@/components/cards";
+import { Gallery, Split, Index } from "@/components/shapes";
 import { categoryBySlug } from "@/lib/categories";
 import { getFeed } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";
@@ -80,9 +81,16 @@ export async function DeskView({
         ? ("hardware" as const)
         : null;
   const videos = beat ? recentVideos(beat, 6) : [];
+  /*
+   * A desk was a lead and then six identical cards and then a list. The same
+   * shapes the fronts use give it somewhere to go instead: three across, then
+   * one picture with the reporting beside it, then the rest as headlines.
+   */
   const [lead, ...rest] = pageArticles;
-  const withArt = rest.filter((a) => a.image).slice(0, 6);
-  const remainder = rest.filter((a) => !withArt.includes(a));
+  const gallery = rest.filter((a) => a.image).slice(0, 3);
+  const afterGallery = rest.filter((a) => !gallery.includes(a));
+  const split = afterGallery.slice(0, 5);
+  const remainder = afterGallery.slice(5);
 
   return (
     <>
@@ -139,23 +147,25 @@ export async function DeskView({
               <LeadCard article={lead} />
             </div>
 
-            {withArt.length > 0 && (
-              <div className="mt-14 border-t border-rule pt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-                {withArt.map((a) => (
-                  <FeatureCard key={a.id} article={a} />
-                ))}
+            {gallery.length > 0 && (
+              <div className="mt-16 border-t border-rule pt-10">
+                <Gallery articles={gallery} />
+              </div>
+            )}
+
+            {split.length > 0 && (
+              <div className="mt-16">
+                <Split articles={split} />
               </div>
             )}
 
             {remainder.length > 0 && (
-              <div className="mt-14">
+              <div className="mt-20">
                 <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
                   Also on this desk
                 </h2>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 [&>*:first-child]:border-t-0 sm:[&>*:nth-child(-n+2)]:border-t-0 lg:[&>*:nth-child(-n+3)]:border-t-0">
-                  {remainder.map((a) => (
-                    <ListCard key={a.id} article={a} />
-                  ))}
+                <div className="mt-8">
+                  <Index articles={remainder} limit={remainder.length} />
                 </div>
               </div>
             )}
