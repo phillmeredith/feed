@@ -105,7 +105,7 @@ export const categories: Category[] = [
     short: "Weather",
     dek: "The forecast, and the planet behind it",
     standfirst:
-      "Today's forecast in full, then the science underneath it — the climate system, El Niño and the ocean, and what the record is actually showing.",
+      "The forecast in full, the measurements underneath it — carbon, the temperature record and the state of the Pacific — and the reporting on what the weather is doing to the world.",
   },
   {
     slug: "screen",

@@ -92,10 +92,11 @@ export async function DeskView({
   const models = category.slug === "ai" ? await getAllModelReleases(articles) : [];
   const patents = await getPatents(category.slug);
   const forecast =
-    category.slug === "weather" ? await getDetailedWeather() : null;
-  const places = category.slug === "weather" ? await getPlaceForecasts() : [];
+    panels && category.slug === "weather" ? await getDetailedWeather() : null;
+  const places =
+    panels && category.slug === "weather" ? await getPlaceForecasts() : [];
   const confidence =
-    category.slug === "weather"
+    panels && category.slug === "weather"
       ? await getConfidence(PLACES[0].latitude, PLACES[0].longitude)
       : [];
 
@@ -181,7 +182,11 @@ export async function DeskView({
 
         {above}
 
-        {category.slug === "weather" &&
+        {/* The forecast belongs to the Forecast tab. Gated on the desk alone,
+            it rendered on the climate tab and the articles tab as well, so
+            every weather page opened on the same sixteen-day outlook. */}
+        {panels &&
+          category.slug === "weather" &&
           (forecast ? (
             <>
               {/* The answers first; everything under them is the working. */}
