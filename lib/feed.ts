@@ -505,6 +505,20 @@ const LAUNCH_TERMS =
 const PRICE_MOVE =
   /\b(increas\w+|rais\w+|ris\w+|hik\w+|cut\w*|reduc\w+|slash\w+|drop\w*|lower\w*)\b[^.]{0,24}\bprices?\b|\bprices?\b[^.]{0,24}\b(increas\w+|ris\w+|hik\w+|cut\b|drop\w*)\b/i;
 
+/**
+ * A clip, not a story.
+ *
+ * "Video: Muay Thai legend Sitthichai launched into the ropes" led the Sport
+ * section, because "launched" is a launch verb when you only have a regex.
+ * These prefixes are how publishers mark a page that is a player with a
+ * caption, and a section front should not lead on one.
+ */
+const CLIP_PREFIX = /^\s*(video|watch|photos?|gallery|pics?|listen|podcast|live|recap)\s*[:|—–-]/i;
+
+/** Talking about the thing, rather than the thing. */
+const SECOND_HAND =
+  /\b(discuss\w+|talks? (about|to)|interview\w*|q ?& ?a|explains? why|opinion|column|reacts?|responds?|weighs in|slams?)\b/i;
+
 const CORPORATE_VERB =
   /\b(enhanc\w+|expand\w+|strengthen\w+|reinforc\w+|reaffirm\w+|commit(s|ment|ted)?|celebrat\w+|empower\w+|showcas\w+|collaborat\w+|partners? with|drives? (growth|innovation)|continue[sd]? to|long-term value|solutions?\b)\b/i;
 
@@ -522,7 +536,12 @@ const CORPORATE_VERB =
  */
 export function frontPageScore(article: Article): number {
   const source = sources.find((s) => s.name === article.source);
-  const launches = LAUNCH_TERMS.test(article.headline) && !PRICE_MOVE.test(article.headline);
+
+  // A clip is never the lead, whatever else is true about it.
+  if (CLIP_PREFIX.test(article.headline)) return 0;
+
+  const launches =
+    LAUNCH_TERMS.test(article.headline) && !PRICE_MOVE.test(article.headline);
 
   if (source?.firstParty) {
     // A newsroom earns the front page by announcing something, and only that.
@@ -537,6 +556,7 @@ export function frontPageScore(article: Article): number {
   else if ((article.words ?? 0) >= 150) score += 1;
   if (article.dek) score += 1;
   if (CORPORATE_VERB.test(article.headline)) score -= 2;
+  if (SECOND_HAND.test(article.headline)) score -= 2;
 
   return Math.max(score, 0);
 }
