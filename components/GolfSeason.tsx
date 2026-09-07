@@ -1,4 +1,10 @@
-import { latestEvent, majors, playedEvents, golfSeason } from "@/lib/golf";
+import {
+  latestEvent,
+  nextEvent,
+  majors,
+  playedEvents,
+  golfSeason,
+} from "@/lib/golf";
 import type { GolfEvent } from "@/lib/golf";
 import { highlightsFor, golfKey } from "@/lib/highlights";
 import { HighlightReel } from "./HighlightReel";
@@ -35,9 +41,10 @@ const PLACE = ["1st", "2nd", "3rd"];
  */
 export function GolfThisWeek() {
   const store = golfSeason();
+  const upcoming = nextEvent();
   const lead = latestEvent();
 
-  if (!lead) {
+  if (!lead && !upcoming) {
     return (
       <p className="mt-12 font-serif italic text-xl text-muted">
         No results recorded for this season yet.
@@ -47,6 +54,30 @@ export function GolfThisWeek() {
 
   return (
     <div className="mt-12 flex flex-col gap-20">
+      {upcoming && (
+        /*
+         * A tab called This week that opened on the last major — played in
+         * July — was answering a question nobody asked. What is on now goes
+         * first, at the size of the page's subject.
+         */
+        <section>
+          <p className="kicker text-micro text-faint">
+            {upcoming.major ? "This week · a major" : "This week"}
+          </p>
+          <h2 className="display text-title mt-3">{upcoming.name}</h2>
+          <p className="font-serif text-lede text-muted mt-3">
+            {eventDates(upcoming)}
+            {upcoming.venue && ` · ${upcoming.venue}`}
+          </p>
+          <p className="kicker text-micro text-faint mt-step">
+            {upcoming.leaderboard.length > 0
+              ? `${upcoming.leaderboard.length} in the field`
+              : "The field hasn't been published. Scores appear here once play begins."}
+          </p>
+        </section>
+      )}
+
+      {lead && (
       <section>
         <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
           <h2 className="kicker text-label text-accent">
@@ -105,6 +136,7 @@ export function GolfThisWeek() {
           )}
         </div>
       </section>
+      )}
 
       <LastUpdated
         at={store.updated}

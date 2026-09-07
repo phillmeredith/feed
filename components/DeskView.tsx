@@ -12,7 +12,6 @@ import { getAllModelReleases } from "@/lib/models";
 import { getPatents } from "@/lib/patents";
 import { PatentsPanel } from "@/components/PatentsPanel";
 import { ForecastPanel } from "@/components/ForecastPanel";
-import { ClimatePanel } from "@/components/ClimatePanel";
 import { TodayVerdict } from "@/components/TodayVerdict";
 import { WhereToGo } from "@/components/WhereToGo";
 import { getPlaceForecasts, PLACES } from "@/lib/places";
@@ -60,12 +59,20 @@ export async function DeskView({
    * nearly half the page to do it.
    */
   feed = "full",
+  /**
+   * Whether the desk's standing panels — the gear directory, the model
+   * table, the patents — render underneath the feed. They have their own
+   * tabs now; stacking them under the articles as well is the same
+   * duplication the sport desks had.
+   */
+  panels = true,
 }: {
   desk: string;
   page: number;
   above?: React.ReactNode;
   tab?: string;
   feed?: "full" | "brief" | "none";
+  panels?: boolean;
 }) {
   const category = categoryBySlug(desk);
   if (!category) notFound();
@@ -225,10 +232,7 @@ export async function DeskView({
                   />
                 </div>
               )}
-              {/* The measurements the desk's reporting is a commentary on. */}
-              <div className="mt-20">
-                <ClimatePanel />
-              </div>
+
             </>
           ) : (
             /* Losing the forecast used to remove half the page with no
@@ -315,7 +319,7 @@ export async function DeskView({
           </nav>
         )}
 
-        {videos.length > 0 && (
+        {panels && videos.length > 0 && (
           <div className="mt-20">
             <VideoPanel
               videos={videos}
@@ -325,9 +329,9 @@ export async function DeskView({
           </div>
         )}
 
-        {gear.length > 0 && <GearDirectory items={gear} />}
-        {models.length > 0 && <ModelTable models={models} />}
-        {patents.length > 0 && <PatentsPanel filings={patents} />}
+        {panels && gear.length > 0 && <GearDirectory items={gear} />}
+        {panels && models.length > 0 && <ModelTable models={models} />}
+        {panels && patents.length > 0 && <PatentsPanel filings={patents} />}
       </main>
 
       <Footer />

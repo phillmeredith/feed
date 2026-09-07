@@ -44,6 +44,36 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
     { slug: "next", label: "Next card" },
     { slug: "cards", label: "Every card" },
   ],
+
+  /*
+   * Outside sport, a desk earns tabs only where it has standing material.
+   * Science, Screen, Wire and Technique are feeds and nothing else, so they
+   * get none — DeskTabs renders nothing rather than a single tab labelled
+   * Articles, which would be a tab bar that does not navigate.
+   */
+  ai: [
+    { slug: "", label: "Articles" },
+    { slug: "models", label: "Models" },
+  ],
+  cameras: [
+    { slug: "", label: "Articles" },
+    { slug: "directory", label: "Directory" },
+    { slug: "patents", label: "Patents" },
+  ],
+  robotics: [
+    { slug: "", label: "Articles" },
+    { slug: "patents", label: "Patents" },
+  ],
+  /*
+   * Weather is the exception to Articles-first. Nobody opens a weather page
+   * to read about weather; they open it to find out what it is doing. The
+   * forecast is the desk and the reporting is the tab.
+   */
+  weather: [
+    { slug: "", label: "Forecast" },
+    { slug: "climate", label: "The planet" },
+    { slug: "articles", label: "Articles" },
+  ],
 };
 
 export function tabsFor(desk: CategorySlug): Tab[] {
