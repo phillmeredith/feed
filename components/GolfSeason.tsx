@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   latestEvent,
   nextEvent,
@@ -231,7 +232,12 @@ export function GolfAllEvents() {
                   {eventDates(event)}
                 </span>
                 <span className="font-body font-semibold text-body">
-                  {event.name}
+                  <Link
+                    href={`/golf/event/${event.id}`}
+                    className="hover:text-accent transition-colors"
+                  >
+                    {event.name}
+                  </Link>
                   {event.major && <span className="ml-2 text-accent">★</span>}
                 </span>
                 {event.winner && (

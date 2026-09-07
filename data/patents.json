@@ -1,7 +1,95 @@
 {
   "note": "Patent filings by the manufacturers each desk covers, from Google Patents (keyless). Fetched on a schedule by `npm run patents:update` rather than per request, because Google rate-limits bursts. Never removes.",
-  "updated": "2026-09-05T07:48:09.782Z",
+  "updated": "2026-09-07T16:30:15.189Z",
   "items": [
+    {
+      "id": "US20260134153A1",
+      "title": "Configuring Context-Based Restrictions For A Computing Device",
+      "assignee": "Apple",
+      "filedAt": "2026-02-02",
+      "publicationNumber": "US20260134153A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260139211A1",
+      "title": "Culture device",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-20",
+      "publicationNumber": "US20260139211A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260141487A1",
+      "title": "Image processing apparatus, method, and program",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-20",
+      "publicationNumber": "US20260141487A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260139215A1",
+      "title": "Culture device and method for controlling culture device",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-20",
+      "publicationNumber": "US20260139215A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143964A1",
+      "title": "Semiconductor film, photodetector, and image sensor",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-20",
+      "publicationNumber": "US20260143964A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143394A1",
+      "title": "Joint operation of conditional handover and conditional pscell addition or &hellip;",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-19",
+      "publicationNumber": "US20260143394A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260139672A1",
+      "title": "Scroll compressor",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-19",
+      "publicationNumber": "US20260139672A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142362A1",
+      "title": "Antenna structure and electronic device comprising same",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-19",
+      "publicationNumber": "US20260142362A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260141518A1",
+      "title": "Image display apparatus, method, and program",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-19",
+      "publicationNumber": "US20260141518A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260141531A1",
+      "title": "Processing apparatus, method, and medium for high-frequency specific subject &hellip;",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-18",
+      "publicationNumber": "US20260141531A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260144052A1",
+      "title": "Semiconductor device and method for fabricating the same",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-17",
+      "publicationNumber": "US20260144052A1",
+      "desk": "hardware"
+    },
     {
       "id": "US20260143308A1",
       "title": "Information processing apparatus and alert notification method",
@@ -16,6 +104,150 @@
       "assignee": "Panasonic Intellectual Property Corporation Of America",
       "filedAt": "2026-01-16",
       "publicationNumber": "US20260143491A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260142950A1",
+      "title": "Electronic device and method for sharing file",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260142950A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140586A1",
+      "title": "Electronic device and method for displaying visual object indicating execution &hellip;",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260140586A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260143051A1",
+      "title": "Electronic device comprising acoustic conduit",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260143051A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142365A1",
+      "title": "Electronic device comprising antenna",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260142365A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142682A1",
+      "title": "Electronic device and method for digital predistortion in wireless &hellip;",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260142682A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142363A1",
+      "title": "Antenna structure and electronic device including the same",
+      "assignee": "Samsung Electronics Co.",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260142363A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140695A1",
+      "title": "Artificial Intelligence System for Controlling Computing Devices",
+      "assignee": "Google",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260140695A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260141626A1",
+      "title": "Robustifying NeRF Model Novel View Synthesis to Sparse Data",
+      "assignee": "Google",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260141626A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260141699A1",
+      "title": "Systems and Methods for Progressive Learning for Machine-Learned Models to &hellip;",
+      "assignee": "Google",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260141699A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142688A1",
+      "title": "Low-density parity-check (ldpc) codeword selection for ultra-wideband (uwb)",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260142688A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260143758A1",
+      "title": "Fin trim plug structures with metal for imparting channel stress",
+      "assignee": "Intel",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260143758A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260143089A1",
+      "title": "Information processing apparatus and method for controlling the same",
+      "assignee": "Canon",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260143089A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260140673A1",
+      "title": "Method of controlling information processing apparatus, editing intermediate &hellip;",
+      "assignee": "Canon",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260140673A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260139213A1",
+      "title": "Cell detachment method and cell detachment device",
+      "assignee": "Canon",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260139213A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260140455A1",
+      "title": "Stage apparatus, exposure apparatus, method of manufacturing flat panel display &hellip;",
+      "assignee": "Nikon",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260140455A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143528A1",
+      "title": "Block acknowledgement agreement for latency sensitive traffic stream",
+      "assignee": "Sony Group",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260143528A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260139364A1",
+      "title": "Composition for treating semiconductor device, manufacturing method of modified &hellip;",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260139364A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260140447A1",
+      "title": "Composition, resist film, pattern forming method, and method for producing &hellip;",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-16",
+      "publicationNumber": "US20260140447A1",
       "desk": "cameras"
     },
     {
@@ -43,11 +275,219 @@
       "desk": "cameras"
     },
     {
+      "id": "US20260140614A1",
+      "title": "Devices, methods, and graphical user interfaces for adjusting device settings",
+      "assignee": "Apple",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260140614A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260137291A1",
+      "title": "Physiological sampling during predetermined activities",
+      "assignee": "Apple",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260137291A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260141653A1",
+      "title": "Augmentation based on physical environment context",
+      "assignee": "Apple",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260141653A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140995A1",
+      "title": "Query response using media consumption history",
+      "assignee": "Google",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260140995A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260141621A1",
+      "title": "Geometry-Free Neural Scene Representations Through Novel-View Synthesis",
+      "assignee": "Google",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260141621A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260143544A1",
+      "title": "Multi-path user equipment uplink communication techniques with user equipment &hellip;",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260143544A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142759A1",
+      "title": "Resource signal reception capability for multiple component carriers",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260142759A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260143172A1",
+      "title": "Neural network-based in loop filter architectures with separable convolution &hellip;",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260143172A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260144085A1",
+      "title": "Embedded semiconductive chips in reconstituted wafers, and systems containing &hellip;",
+      "assignee": "Intel",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260144085A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260143122A1",
+      "title": "Method, apparatus and system for encoding and decoding a tensor",
+      "assignee": "Canon",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260143122A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143241A1",
+      "title": "Apparatus, control method, and storage medium",
+      "assignee": "Canon",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260143241A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260139212A1",
+      "title": "Cell detachment method and cell detachment device",
+      "assignee": "Canon",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260139212A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260142854A1",
+      "title": "Communication device, communication method, and computer-readable storage &hellip;",
+      "assignee": "Canon",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260142854A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260142876A1",
+      "title": "Information processing apparatus, control method, and non-transitory computer- &hellip;",
+      "assignee": "Canon",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260142876A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143067A1",
+      "title": "Diagnostic system and method",
+      "assignee": "Canon",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260143067A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143844A1",
+      "title": "Photoelectric conversion apparatus, equipment, and method of manufacturing &hellip;",
+      "assignee": "Canon",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260143844A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260140476A1",
+      "title": "Imaging system and imaging device",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260140476A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260140362A1",
+      "title": "Movable device",
+      "assignee": "Fujifilm",
+      "filedAt": "2026-01-15",
+      "publicationNumber": "US20260140362A1",
+      "desk": "cameras"
+    },
+    {
       "id": "US20260143097A1",
       "title": "Projection control method and projection control device",
       "assignee": "Panasonic Projector & Display",
       "filedAt": "2026-01-14",
       "publicationNumber": "US20260143097A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260142069A1",
+      "title": "Printed circuit board of planar transformer and manufacturing method thereof",
+      "assignee": "Apple",
+      "filedAt": "2026-01-14",
+      "publicationNumber": "US20260142069A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260143020A1",
+      "title": "User interfaces for managing shared-content sessions",
+      "assignee": "Apple",
+      "filedAt": "2026-01-14",
+      "publicationNumber": "US20260143020A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140932A1",
+      "title": "Single-writer b-tree architecture on disaggregated memory",
+      "assignee": "Google",
+      "filedAt": "2026-01-14",
+      "publicationNumber": "US20260140932A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142758A1",
+      "title": "Capability-based modulation of communications between wireless communication &hellip;",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-14",
+      "publicationNumber": "US20260142758A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142799A1",
+      "title": "Protecting augmented reality call content",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-14",
+      "publicationNumber": "US20260142799A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142376A1",
+      "title": "Microelectronic devices designed with mold patterning to create package-level &hellip;",
+      "assignee": "Intel",
+      "filedAt": "2026-01-14",
+      "publicationNumber": "US20260142376A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140501A1",
+      "title": "Magic Wand Interface And Other User Interaction Paradigms For A Flying Digital &hellip;",
+      "assignee": "Skydio",
+      "filedAt": "2026-01-14",
+      "publicationNumber": "US20260140501A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260140394A1",
+      "title": "Ophthalmic optical system, ophthalmic device, and ophthalmic system",
+      "assignee": "Nikon",
+      "filedAt": "2026-01-14",
+      "publicationNumber": "US20260140394A1",
       "desk": "cameras"
     },
     {
@@ -75,6 +515,78 @@
       "desk": "cameras"
     },
     {
+      "id": "US20260143464A1",
+      "title": "Ranking wireless streaming devices based on proximity",
+      "assignee": "Apple",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260143464A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260141799A1",
+      "title": "User interfaces for location tracking",
+      "assignee": "Apple",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260141799A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260143125A1",
+      "title": "Selective update of multi-hypothesis probability estimation for entropy coding",
+      "assignee": "Google",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260143125A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140838A1",
+      "title": "Machine Learning Model Training With Hardware Error Simulation",
+      "assignee": "Google",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260140838A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140220A1",
+      "title": "User equipment (ue)-based radio frequency fingerprint (rffp) positioning with &hellip;",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260140220A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260142791A1",
+      "title": "Flow control feedback for full-duplex communications",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260142791A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260144158A1",
+      "title": "Package comprising optical integrated device",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260144158A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140255A1",
+      "title": "Controlling device and processing settings based on radio frequency sensing",
+      "assignee": "Qualcomm Incorporated",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260140255A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260143748A1",
+      "title": "Integrated circuit structures with deep via structure",
+      "assignee": "Intel",
+      "filedAt": "2026-01-13",
+      "publicationNumber": "US20260143748A1",
+      "desk": "hardware"
+    },
+    {
       "id": "US20260142861A1",
       "title": "Communication apparatus and communication method for ppdu format identification",
       "assignee": "Panasonic Intellectual Property Corporation Of America",
@@ -91,6 +603,446 @@
       "desk": "cameras"
     },
     {
+      "id": "US20260141501A1",
+      "title": "Techniques for generating gain maps based on acquired images",
+      "assignee": "Apple",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260141501A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140601A1",
+      "title": "Systems and methods for presenting a notification with an electronic device",
+      "assignee": "Apple",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260140601A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260141600A1",
+      "title": "Generative artificial intelligence visual effect generator",
+      "assignee": "Google",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260141600A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260140651A1",
+      "title": "Data transfers among processors",
+      "assignee": "Intel",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260140651A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260144027A1",
+      "title": "Continuous gate and fin spacer for advanced integrated circuit structure &hellip;",
+      "assignee": "Intel",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260144027A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260138640A1",
+      "title": "Vision-based system training with simulated content",
+      "assignee": "Tesla",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260138640A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260136697A1",
+      "title": "Image capturing device and image capturing apparatus",
+      "assignee": "Nikon",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260136697A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260143358A1",
+      "title": "Information processing device, base station device, communication method, and &hellip;",
+      "assignee": "Sony Group",
+      "filedAt": "2026-01-12",
+      "publicationNumber": "US20260143358A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260136604A1",
+      "title": "Fabrication of gate-all-around integrated circuit structures having common &hellip;",
+      "assignee": "Intel",
+      "filedAt": "2026-01-09",
+      "publicationNumber": "US20260136604A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260131614A1",
+      "title": "Vehicle suspension control system",
+      "assignee": "Tesla, Inc,",
+      "filedAt": "2026-01-09",
+      "publicationNumber": "US20260131614A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260133396A1",
+      "title": "Lens barrel and imaging device",
+      "assignee": "Nikon",
+      "filedAt": "2026-01-09",
+      "publicationNumber": "US20260133396A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260134591A1",
+      "title": "Image colorization using machine learning",
+      "assignee": "Google",
+      "filedAt": "2026-01-08",
+      "publicationNumber": "US20260134591A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260133288A1",
+      "title": "Electrical and photonic integrated circuits architecture",
+      "assignee": "Intel",
+      "filedAt": "2026-01-08",
+      "publicationNumber": "US20260133288A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260144092A1",
+      "title": "Assembly of 2xd module using high density interconnect bridges",
+      "assignee": "Intel",
+      "filedAt": "2026-01-08",
+      "publicationNumber": "US20260144092A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260136630A1",
+      "title": "Selective backside recessing of source and drain regions",
+      "assignee": "Intel",
+      "filedAt": "2026-01-08",
+      "publicationNumber": "US20260136630A1",
+      "desk": "hardware"
+    },
+    {
+      "id": "US20260139776A1",
+      "title": "Hydraulic coupling device",
+      "assignee": "Tesla",
+      "filedAt": "2026-01-08",
+      "publicationNumber": "US20260139776A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260136031A1",
+      "title": "Information processing device and method",
+      "assignee": "Sony Group",
+      "filedAt": "2026-01-08",
+      "publicationNumber": "US20260136031A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260131807A1",
+      "title": "Automated adjustment of vehicle direction based on environment analysis",
+      "assignee": "Tesla",
+      "filedAt": "2026-01-07",
+      "publicationNumber": "US20260131807A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260127812A1",
+      "title": "Rendering back plates",
+      "assignee": "Sony Group",
+      "filedAt": "2026-01-05",
+      "publicationNumber": "US20260127812A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260141646A1",
+      "title": "Information processing apparatus and method thereof",
+      "assignee": "Sony Group",
+      "filedAt": "2025-12-31",
+      "publicationNumber": "US20260141646A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260125503A1",
+      "title": "Composition and eyeglass lens",
+      "assignee": "Nikon-Essilor Co.",
+      "filedAt": "2025-12-30",
+      "publicationNumber": "US20260125503A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260129309A1",
+      "title": "Image sensor and imaging device",
+      "assignee": "Nikon",
+      "filedAt": "2025-12-30",
+      "publicationNumber": "US20260129309A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260126567A1",
+      "title": "Laminate and spectacle lens",
+      "assignee": "Nikon-Essilor Co.",
+      "filedAt": "2025-12-30",
+      "publicationNumber": "US20260126567A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260126566A1",
+      "title": "Multilayer body and spectacle lens",
+      "assignee": "Nikon-Essilor Co.",
+      "filedAt": "2025-12-29",
+      "publicationNumber": "US20260126566A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260129127A1",
+      "title": "Information processing apparatus, information processing method, and program",
+      "assignee": "Sony Group",
+      "filedAt": "2025-12-29",
+      "publicationNumber": "US20260129127A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260118558A1",
+      "title": "Method for producing lens",
+      "assignee": "Nikon-Essilor Co.",
+      "filedAt": "2025-12-26",
+      "publicationNumber": "US20260118558A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260121060A1",
+      "title": "Compositions and methods for dry electrode films including microparticulate non &hellip;",
+      "assignee": "Tesla",
+      "filedAt": "2025-12-23",
+      "publicationNumber": "US20260121060A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260110879A1",
+      "title": "Zoom lens, optical apparatus and method for manufacturing the zoom lens",
+      "assignee": "Nikon",
+      "filedAt": "2025-12-22",
+      "publicationNumber": "US20260110879A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260136342A1",
+      "title": "Apparatus and method in wireless communication system, and computer-readable &hellip;",
+      "assignee": "Sony Group",
+      "filedAt": "2025-12-22",
+      "publicationNumber": "US20260136342A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260109030A1",
+      "title": "Supervised autonomous grasping",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-12-18",
+      "publicationNumber": "US20260109030A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260118249A1",
+      "title": "Information processing apparatus, flow cytometer system, sorting system, and &hellip;",
+      "assignee": "Sony Group",
+      "filedAt": "2025-12-17",
+      "publicationNumber": "US20260118249A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260104343A1",
+      "title": "Information processing device, information processing method, program, and &hellip;",
+      "assignee": "Sony Group",
+      "filedAt": "2025-12-16",
+      "publicationNumber": "US20260104343A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260104341A1",
+      "title": "Particle analyzer and particle analysis method",
+      "assignee": "Sony Group",
+      "filedAt": "2025-12-16",
+      "publicationNumber": "US20260104341A1",
+      "desk": "cameras"
+    },
+    {
+      "id": "US20260110052A1",
+      "title": "Selective extraction of lithium from clay minerals",
+      "assignee": "Tesla",
+      "filedAt": "2025-12-10",
+      "publicationNumber": "US20260110052A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260111032A1",
+      "title": "Action model for robot",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-12-10",
+      "publicationNumber": "US20260111032A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260094835A1",
+      "title": "Compositions and methods for dry electrode films including elastic polymer &hellip;",
+      "assignee": "Tesla",
+      "filedAt": "2025-12-05",
+      "publicationNumber": "US20260094835A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260097500A1",
+      "title": "Construction constrained motion primitives from robot maps",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-12-02",
+      "publicationNumber": "US20260097500A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260125149A1",
+      "title": "Ultra-Wide-Chord Propeller Including Varying Blade Angle",
+      "assignee": "Skydio",
+      "filedAt": "2025-11-25",
+      "publicationNumber": "US20260125149A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260134782A1",
+      "title": "Unmanned Aerial Vehicle Area Surveying",
+      "assignee": "Skydio",
+      "filedAt": "2025-11-17",
+      "publicationNumber": "US20260134782A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260142366A1",
+      "title": "Integrated Antenna In An Aerial Vehicle",
+      "assignee": "Skydio",
+      "filedAt": "2025-11-17",
+      "publicationNumber": "US20260142366A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260075321A1",
+      "title": "Aerial vehicle composite imaging using fixed cameras and range information",
+      "assignee": "Skydio",
+      "filedAt": "2025-11-14",
+      "publicationNumber": "US20260075321A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260074293A1",
+      "title": "Non-aqueous solvent electrolyte formulations for energy storage devices",
+      "assignee": "Tesla",
+      "filedAt": "2025-11-13",
+      "publicationNumber": "US20260074293A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260073549A1",
+      "title": "Artificial intelligence modeling techniques for vision-based occupancy &hellip;",
+      "assignee": "Tesla",
+      "filedAt": "2025-11-10",
+      "publicationNumber": "US20260073549A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260066263A1",
+      "title": "System and methods for manufacturing a dry electrode",
+      "assignee": "Tesla",
+      "filedAt": "2025-11-10",
+      "publicationNumber": "US20260066263A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260131464A1",
+      "title": "Method for controlling one or more actuators of a humanoid robot",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-11-10",
+      "publicationNumber": "US20260131464A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260061625A1",
+      "title": "Exterior covering system for a humanoid robot",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-11-06",
+      "publicationNumber": "US20260061625A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260124746A1",
+      "title": "Training and use of a bipedal action model for humanoid robot",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-11-03",
+      "publicationNumber": "US20260124746A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260061611A1",
+      "title": "Management of multiple modes for humanoid robot",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-11-03",
+      "publicationNumber": "US20260061611A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260124750A1",
+      "title": "Bipedal action model for humanoid robot",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-11-03",
+      "publicationNumber": "US20260124750A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260054369A1",
+      "title": "Humanoid robot with advanced wiring assembly",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-10-29",
+      "publicationNumber": "US20260054369A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260051656A1",
+      "title": "Rotational Wireless Communication System",
+      "assignee": "Skydio",
+      "filedAt": "2025-10-27",
+      "publicationNumber": "US20260051656A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260050091A1",
+      "title": "Motion-Based Calibration Of An Aerial Device",
+      "assignee": "Skydio",
+      "filedAt": "2025-10-24",
+      "publicationNumber": "US20260050091A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260126804A1",
+      "title": "Bipedal action model for humanoid robot",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-10-20",
+      "publicationNumber": "US20260126804A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260126805A1",
+      "title": "Bipedal action model for humanoid robot",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-10-20",
+      "publicationNumber": "US20260126805A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260126796A1",
+      "title": "Bipedal action model for humanoid robot",
+      "assignee": "Figure Ai",
+      "filedAt": "2025-10-20",
+      "publicationNumber": "US20260126796A1",
+      "desk": "robotics"
+    },
+    {
       "id": "US20260042213A1",
       "title": "Filtering object detection based on agreement with environment and related &hellip;",
       "assignee": "Agility Robotics",
@@ -99,11 +1051,99 @@
       "desk": "robotics"
     },
     {
+      "id": "US20260042220A1",
+      "title": "Autonomous and teleoperated sensor pointing on a mobile robot",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-10-15",
+      "publicationNumber": "US20260042220A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260035043A1",
+      "title": "Detecting and Responding to A Difference Between Parameters of a Legged Robot",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-10-13",
+      "publicationNumber": "US20260035043A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260036989A1",
+      "title": "Detecting and responding to obstacles",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-10-13",
+      "publicationNumber": "US20260036989A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260036985A1",
+      "title": "Topology Processing for Waypoint-based Navigation Maps",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-10-13",
+      "publicationNumber": "US20260036985A1",
+      "desk": "robotics"
+    },
+    {
       "id": "US20260099149A1",
       "title": "Control of dynamically stable robot based on fault-state fall property and &hellip;",
       "assignee": "Agility Robotics",
       "filedAt": "2025-10-07",
       "publicationNumber": "US20260099149A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260091869A1",
+      "title": "Unmanned Aerial Vehicle Inspection System",
+      "assignee": "Skydio",
+      "filedAt": "2025-09-29",
+      "publicationNumber": "US20260091869A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260087605A1",
+      "title": "Rolling Shutter Artifact Correction And Metadata Integration For Geospatially &hellip;",
+      "assignee": "Skydio",
+      "filedAt": "2025-09-25",
+      "publicationNumber": "US20260087605A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260109049A1",
+      "title": "Robotic gripper with seal detection",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-09-19",
+      "publicationNumber": "US20260109049A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260109038A1",
+      "title": "Methods and apparatus for controlling a gripper of a robotic device",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-09-19",
+      "publicationNumber": "US20260109038A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260077887A1",
+      "title": "Modular UAV Camera System And Related Methods",
+      "assignee": "Skydio",
+      "filedAt": "2025-09-19",
+      "publicationNumber": "US20260077887A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260010166A1",
+      "title": "Ground clutter avoidance for a mobile robot",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-09-15",
+      "publicationNumber": "US20260010166A1",
+      "desk": "robotics"
+    },
+    {
+      "id": "US20260009647A1",
+      "title": "Intermediate waypoint generator",
+      "assignee": "Boston Dynamics",
+      "filedAt": "2025-09-11",
+      "publicationNumber": "US20260009647A1",
       "desk": "robotics"
     }
   ]

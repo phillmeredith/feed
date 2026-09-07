@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   ufcSeason,
   completedEvents,
@@ -260,8 +261,16 @@ export function UfcAllCards() {
             {earlier.map((event) => {
               const headline = event.fights[event.fights.length - 1];
               return (
-                <details key={event.id} className="group py-4">
-                  <summary className="cursor-pointer list-none flex flex-wrap items-baseline gap-x-5 gap-y-1">
+                /*
+                 * A row links to the card rather than expanding into one.
+                 * It used to unfold the whole bill in place, which is the
+                 * card page's job and was the same markup twice.
+                 */
+                <div key={event.id} className="py-4">
+                  <Link
+                    href={`/ufc/card/${event.id}`}
+                    className="group flex flex-wrap items-baseline gap-x-5 gap-y-1"
+                  >
                     <span className="kicker text-micro text-faint w-24 shrink-0">
                       {eventDate(event.date)}
                     </span>
@@ -269,18 +278,12 @@ export function UfcAllCards() {
                       {event.name}
                     </span>
                     {headline?.winner && (
-                      <span className="ml-auto">
-                        <span className="text-small text-accent">
-                          {headline.winner}
-                        </span>
+                      <span className="text-small text-accent ml-auto">
+                        {headline.winner}
                       </span>
                     )}
-                  </summary>
-                  <div className="mt-1 pl-0 sm:pl-[7.25rem]">
-                    <MainCard event={event} reveal />
-                    <Prelims event={event} reveal />
-                  </div>
-                </details>
+                  </Link>
+                </div>
               );
             })}
           </div>

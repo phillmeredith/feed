@@ -77,6 +77,10 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
     { slug: "", label: "Articles" },
     { slug: "directory", label: "Directory", href: "/gear" },
   ],
+  hardware: [
+    { slug: "", label: "Articles" },
+    { slug: "patents", label: "Patents" },
+  ],
   robotics: [
     { slug: "", label: "Articles" },
     { slug: "patents", label: "Patents" },

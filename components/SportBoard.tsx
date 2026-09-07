@@ -74,10 +74,15 @@ function fixtures(): Fixture[] {
           name: golfNext.name,
           at: `${golfNext.startDate}T07:00:00Z`,
           detail: golfNext.major ? "Major" : golfNext.venue,
+          href: `/golf/event/${golfNext.id}`,
         }
       : null,
     last: golfLast?.winner
-      ? { name: golfLast.name, result: `${golfLast.winner} won` }
+      ? {
+          name: golfLast.name,
+          result: `${golfLast.winner} won`,
+          href: `/golf/event/${golfLast.id}`,
+        }
       : null,
   });
 
@@ -98,10 +103,15 @@ function fixtures(): Fixture[] {
             ufcNext.fights.length > 0
               ? `${ufcNext.fights.length} bouts`
               : "Card not announced",
+          href: `/ufc/card/${ufcNext.id}`,
         }
       : null,
     last: headline?.winner
-      ? { name: ufcLast.name, result: `${headline.winner} won` }
+      ? {
+          name: ufcLast.name,
+          result: `${headline.winner} won`,
+          href: `/ufc/card/${ufcLast.id}`,
+        }
       : null,
   });
 

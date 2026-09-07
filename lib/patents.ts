@@ -19,6 +19,7 @@ export const WATCHED: Partial<Record<CategorySlug, string[]>> = {
   hardware: ["Apple Inc", "Samsung Electronics", "Google LLC", "Qualcomm", "Intel"],
   robotics: ["Tesla", "Boston Dynamics", "Figure AI", "Agility Robotics", "Skydio"],
   cameras: ["Canon", "Nikon", "Sony Group", "Fujifilm", "Panasonic"],
+  vehicles: ["Tesla", "Rivian", "Lucid Motors", "BYD", "Volkswagen"],
 };
 
 /*
