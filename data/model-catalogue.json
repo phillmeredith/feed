@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-06T09:27:49.891Z",
+  "updated": "2026-09-07T10:20:56.203Z",
   "items": [
     {
       "id": "openai/gpt-6-astra",
@@ -274,8 +274,8 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.075,
-      "outputPrice": 0.25,
+      "inputPrice": 0.07125000000000001,
+      "outputPrice": 0.2375,
       "contextTokens": 1310720,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -399,8 +399,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 1.17,
-      "outputPrice": 3.9600000000000004,
+      "inputPrice": 1.12,
+      "outputPrice": 3.52,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -568,8 +568,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 1.12068,
-      "outputPrice": 3.36204,
+      "inputPrice": 1.0494,
+      "outputPrice": 3.1482,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -732,8 +732,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.045,
-      "outputPrice": 0.09,
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.16,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -746,8 +746,8 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.049980000000000004,
-      "outputPrice": 0.09996000000000001,
+      "inputPrice": 0.14,
+      "outputPrice": 0.28,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1536,20 +1536,6 @@
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
     },
     {
-      "id": "z-ai/glm-5.2:free",
-      "name": "GLM 5.2 (free)",
-      "lab": "Zhipu AI",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 256000,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-06-16T17:45:30.000Z",
-      "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
-    },
-    {
       "id": "moonshotai/kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "lab": "Moonshot AI",
@@ -2273,8 +2259,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.7078319999999999,
-      "outputPrice": 1.4156639999999998,
+      "inputPrice": 0.9552599999999999,
+      "outputPrice": 1.9105199999999998,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2287,8 +2273,8 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.08106,
-      "outputPrice": 0.16212,
+      "inputPrice": 0.088606,
+      "outputPrice": 0.177212,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -3177,8 +3163,8 @@
       "id": "qwen/qwen3.5-397b-a17b",
       "name": "Qwen3.5 397B A17B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.55,
-      "outputPrice": 3.5,
+      "inputPrice": 0.39,
+      "outputPrice": 2.34,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -4165,8 +4151,8 @@
       "id": "z-ai/glm-4.6",
       "name": "GLM 4.6",
       "lab": "Zhipu AI",
-      "inputPrice": 0.55,
-      "outputPrice": 2.2,
+      "inputPrice": 0.43,
+      "outputPrice": 1.75,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [

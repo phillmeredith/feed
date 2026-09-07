@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-09-06T18:10:56.808Z",
+  "updated": "2026-09-07T10:22:41.028Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -610,6 +610,20 @@
       "videoId": "XiUim6M46O4",
       "title": "STATEMENT DEBUT PERFORMANCE! 🤩 | Dan Hooker vs Salahdine Parnasse | #UFCParis Fight Highlights",
       "channel": "TNT Fight Sports"
+    },
+    {
+      "key": "f1:2026:13",
+      "kind": "race",
+      "videoId": "uptj3to1l7o",
+      "title": "Race Highlights | 2026 Italian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:13",
+      "kind": "qualifying",
+      "videoId": "aTqIIB2HrNg",
+      "title": "Qualifying Highlights | 2026 Italian Grand Prix",
+      "channel": "FORMULA 1"
     }
   ]
 }

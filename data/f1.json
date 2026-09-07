@@ -1,12 +1,12 @@
 {
   "season": "2026",
   "round": 13,
-  "updated": "2026-09-06T18:08:52.257Z",
+  "updated": "2026-09-07T10:21:01.442Z",
   "drivers": [
     {
       "position": 1,
-      "points": 242,
-      "wins": 6,
+      "points": 267,
+      "wins": 7,
       "driverId": "antonelli",
       "code": "ANT",
       "givenName": "Andrea Kimi",
@@ -17,7 +17,7 @@
     },
     {
       "position": 2,
-      "points": 183,
+      "points": 201,
       "wins": 2,
       "driverId": "russell",
       "code": "RUS",
@@ -29,7 +29,7 @@
     },
     {
       "position": 3,
-      "points": 183,
+      "points": 191,
       "wins": 1,
       "driverId": "hamilton",
       "code": "HAM",
@@ -41,7 +41,7 @@
     },
     {
       "position": 4,
-      "points": 159,
+      "points": 171,
       "wins": 2,
       "driverId": "norris",
       "code": "NOR",
@@ -65,7 +65,7 @@
     },
     {
       "position": 6,
-      "points": 112,
+      "points": 127,
       "wins": 0,
       "driverId": "max_verstappen",
       "code": "VER",
@@ -77,7 +77,7 @@
     },
     {
       "position": 7,
-      "points": 104,
+      "points": 116,
       "wins": 0,
       "driverId": "piastri",
       "code": "PIA",
@@ -89,7 +89,7 @@
     },
     {
       "position": 8,
-      "points": 68,
+      "points": 71,
       "wins": 0,
       "driverId": "hadjar",
       "code": "HAD",
@@ -101,7 +101,7 @@
     },
     {
       "position": 9,
-      "points": 49,
+      "points": 51,
       "wins": 0,
       "driverId": "lawson",
       "code": "LAW",
@@ -113,7 +113,7 @@
     },
     {
       "position": 10,
-      "points": 44,
+      "points": 41,
       "wins": 0,
       "driverId": "gasly",
       "code": "GAS",
@@ -125,7 +125,7 @@
     },
     {
       "position": 11,
-      "points": 23,
+      "points": 29,
       "wins": 0,
       "driverId": "arvid_lindblad",
       "code": "LIN",
@@ -137,7 +137,7 @@
     },
     {
       "position": 12,
-      "points": 19,
+      "points": 21,
       "wins": 0,
       "driverId": "colapinto",
       "code": "COL",
@@ -233,7 +233,7 @@
     },
     {
       "position": 20,
-      "points": 0,
+      "points": 1,
       "wins": 0,
       "driverId": "tsunoda",
       "code": "TSU",
@@ -283,15 +283,15 @@
   "constructors": [
     {
       "position": 1,
-      "points": 425,
-      "wins": 8,
+      "points": 468,
+      "wins": 9,
       "constructorId": "mercedes",
       "name": "Mercedes",
       "nationality": "German"
     },
     {
       "position": 2,
-      "points": 338,
+      "points": 346,
       "wins": 2,
       "constructorId": "ferrari",
       "name": "Ferrari",
@@ -299,7 +299,7 @@
     },
     {
       "position": 3,
-      "points": 263,
+      "points": 287,
       "wins": 2,
       "constructorId": "mclaren",
       "name": "McLaren",
@@ -307,7 +307,7 @@
     },
     {
       "position": 4,
-      "points": 186,
+      "points": 204,
       "wins": 0,
       "constructorId": "red_bull",
       "name": "Red Bull",
@@ -315,7 +315,7 @@
     },
     {
       "position": 5,
-      "points": 66,
+      "points": 75,
       "wins": 0,
       "constructorId": "rb",
       "name": "RB F1 Team",
@@ -323,7 +323,7 @@
     },
     {
       "position": 6,
-      "points": 63,
+      "points": 62,
       "wins": 0,
       "constructorId": "alpine",
       "name": "Alpine F1 Team",
@@ -1120,33 +1120,33 @@
         },
         {
           "position": 3,
-          "driver": "Pierre Gasly",
-          "constructor": "Alpine F1 Team",
-          "time": "+20.369"
-        },
-        {
-          "position": 4,
           "driver": "Isack Hadjar",
           "constructor": "Red Bull",
           "time": "+23.394"
         },
         {
-          "position": 5,
+          "position": 4,
           "driver": "Oscar Piastri",
           "constructor": "McLaren",
           "time": "+24.261"
         },
         {
-          "position": 6,
+          "position": 5,
           "driver": "Liam Lawson",
           "constructor": "RB F1 Team",
           "time": "+26.553"
         },
         {
-          "position": 7,
+          "position": 6,
           "driver": "Arvid Lindblad",
           "constructor": "RB F1 Team",
           "time": "+29.010"
+        },
+        {
+          "position": 7,
+          "driver": "Pierre Gasly",
+          "constructor": "Alpine F1 Team",
+          "time": "+30.369"
         },
         {
           "position": 8,
@@ -2119,7 +2119,142 @@
       "circuitId": "monza",
       "circuitName": "Autodromo Nazionale di Monza",
       "locality": "Monza",
-      "country": "Italy"
+      "country": "Italy",
+      "results": [
+        {
+          "position": 1,
+          "driver": "Andrea Kimi Antonelli",
+          "constructor": "Mercedes",
+          "time": "1:51:15.281"
+        },
+        {
+          "position": 2,
+          "driver": "George Russell",
+          "constructor": "Mercedes",
+          "time": "+3.857"
+        },
+        {
+          "position": 3,
+          "driver": "Max Verstappen",
+          "constructor": "Red Bull",
+          "time": "+14.718"
+        },
+        {
+          "position": 4,
+          "driver": "Lando Norris",
+          "constructor": "McLaren",
+          "time": "+19.056"
+        },
+        {
+          "position": 5,
+          "driver": "Oscar Piastri",
+          "constructor": "McLaren",
+          "time": "+19.253"
+        },
+        {
+          "position": 6,
+          "driver": "Lewis Hamilton",
+          "constructor": "Ferrari",
+          "time": "+24.655"
+        },
+        {
+          "position": 7,
+          "driver": "Pierre Gasly",
+          "constructor": "Alpine F1 Team",
+          "time": "+27.351"
+        },
+        {
+          "position": 8,
+          "driver": "Arvid Lindblad",
+          "constructor": "RB F1 Team",
+          "time": "+45.136"
+        },
+        {
+          "position": 9,
+          "driver": "Franco Colapinto",
+          "constructor": "Alpine F1 Team",
+          "time": "+47.353"
+        },
+        {
+          "position": 10,
+          "driver": "Yuki Tsunoda",
+          "constructor": "RB F1 Team",
+          "time": "+58.187"
+        },
+        {
+          "position": 11,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+1:05.187"
+        },
+        {
+          "position": 12,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "+1:06.187"
+        },
+        {
+          "position": 13,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "+1:14.117"
+        },
+        {
+          "position": 14,
+          "driver": "Liam Lawson",
+          "constructor": "Red Bull",
+          "time": "+1:15.609"
+        },
+        {
+          "position": 15,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "+1:18.958"
+        },
+        {
+          "position": 16,
+          "driver": "Esteban Ocon",
+          "constructor": "Haas F1 Team",
+          "time": "+6.591"
+        },
+        {
+          "position": 17,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "+20.268"
+        },
+        {
+          "position": 18,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+1:13.372"
+        },
+        {
+          "position": 19,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "+12.880"
+        },
+        {
+          "position": 20,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 21,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Charles Leclerc",
+          "constructor": "Ferrari",
+          "time": "Retired"
+        }
+      ],
+      "winner": "Andrea Kimi Antonelli"
     },
     {
       "round": 14,
