@@ -19,6 +19,78 @@
   --font-serif: var(--font-instrument);
   --font-body: var(--font-source-serif);
   --font-meta: var(--font-archivo);
+  /*
+   * Numbers are their own kind of content now.
+   *
+   * The site renders a 156-player leaderboard, a 22-car classification, a
+   * 23-round calendar, two championship tables, a markets ticker and a chart
+   * axis — and every figure in them was set in a text serif, which is drawn
+   * for prose and has neither the width nor the clarity for a column of
+   * digits. Archivo was already loaded for small labels; it is the data face
+   * as well, with tabular figures switched on so columns align.
+   */
+  --font-data: var(--font-archivo);
+
+  /*
+   * A type scale, because there wasn't one.
+   *
+   * The site had fourteen arbitrary pixel sizes across 268 uses and twelve
+   * bespoke clamp() expressions, two of which differed by a single pixel at
+   * the top end — typed twice rather than chosen. These are the sizes; a
+   * value not on this list is a decision somebody has to justify.
+   *
+   * Editorial sizes are fluid, because a headline should fill the space it is
+   * given. Data sizes are fixed, because a table that resizes with the
+   * viewport is a table whose columns stop lining up.
+   */
+  --text-nameplate: clamp(2.6rem, 7vw, 5rem);
+  --text-title: clamp(2rem, 4.5vw, 3.4rem);
+  --text-headline: clamp(1.5rem, 2.8vw, 2.2rem);
+  --text-subhead: clamp(1.15rem, 1.8vw, 1.5rem);
+  --text-lede: 1.0625rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-fine: 0.8125rem;
+  --text-label: 0.6875rem;
+
+  /*
+   * Spacing, on a rhythm. Fourteen different top margins were in use, from
+   * mt-1 to mt-24, chosen per instance. These are the intervals: within a
+   * component, between components, between sections, between movements.
+   */
+  --space-tight: 0.5rem;
+  --space-snug: 0.75rem;
+  --space-near: 1rem;
+  --space-step: 1.5rem;
+  --space-block: 2.5rem;
+  --space-section: 5rem;
+  --space-movement: 7.5rem;
+
+  /*
+   * State, which the site had no way to say.
+   *
+   * Everything that mattered was --accent: the current nav item, a live
+   * event, a link, a race winner, a chart line, the UV index, a market gain
+   * and a section kicker. A colour that means nine things means none of them,
+   * and the sport desks in particular now need to distinguish scheduled from
+   * under way from finished.
+   */
+  --live: #d9633f;
+  --scheduled: #8fa6b8;
+  --settled: #7a6a56;
+  --positive: #7fa96b;
+  --negative: #d1705c;
+  --caution: #d9a441;
+
+  /*
+   * A series ramp for charts. Two lines could be told apart with --accent and
+   * --muted; four cannot, and the meteogram, the sparklines and the price
+   * histories are all heading that way.
+   */
+  --series-1: #d9a441;
+  --series-2: #8fa6b8;
+  --series-3: #a97fb8;
+  --series-4: #7fa96b;
 }
 
 @theme inline {
@@ -33,6 +105,32 @@
   --color-accent-dim: var(--accent-dim);
   --color-accent-ink: var(--accent-ink);
   --color-negative: var(--negative);
+  --color-live: var(--live);
+  --color-scheduled: var(--scheduled);
+  --color-settled: var(--settled);
+  --color-positive: var(--positive);
+  --color-caution: var(--caution);
+  --color-series-1: var(--series-1);
+  --color-series-2: var(--series-2);
+  --color-series-3: var(--series-3);
+  --color-series-4: var(--series-4);
+  --font-data: var(--font-data);
+  --text-nameplate: var(--text-nameplate);
+  --text-title: var(--text-title);
+  --text-headline: var(--text-headline);
+  --text-subhead: var(--text-subhead);
+  --text-lede: var(--text-lede);
+  --text-body: var(--text-body);
+  --text-small: var(--text-small);
+  --text-fine: var(--text-fine);
+  --text-label: var(--text-label);
+  --spacing-tight: var(--space-tight);
+  --spacing-snug: var(--space-snug);
+  --spacing-near: var(--space-near);
+  --spacing-step: var(--space-step);
+  --spacing-block: var(--space-block);
+  --spacing-section: var(--space-section);
+  --spacing-movement: var(--space-movement);
   --font-display: var(--font-display);
   --font-serif: var(--font-serif);
   --font-body: var(--font-body);
@@ -293,4 +391,51 @@ a {
   .media img {
     transform: none !important;
   }
+}
+
+/*
+ * Numerals.
+ *
+ * Applied wherever figures have to line up in a column. `tnum` gives every
+ * digit the same width; `lnum` keeps them on the baseline rather than letting
+ * a text face drop the 3s and 9s below it, which looks handsome in a sentence
+ * and ragged in a table.
+ */
+.figures {
+  font-family: var(--font-data);
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/*
+ * Three densities, because the site is three kinds of page.
+ *
+ * Editorial wants air: a story, a section front, a standfirst. Reference wants
+ * to fit a season on a screen. Instrument sits between them — a forecast panel
+ * is dense but has to stay glanceable. The row height and the label size come
+ * from the mode rather than from whoever wrote the component.
+ */
+[data-density="editorial"] {
+  --row-y: 0.875rem;
+  --row-gap: var(--space-step);
+}
+
+[data-density="reference"] {
+  --row-y: 0.5rem;
+  --row-gap: var(--space-near);
+}
+
+[data-density="instrument"] {
+  --row-y: 0.625rem;
+  --row-gap: var(--space-snug);
+}
+
+/*
+ * The rule a table row sits on, and nothing else. Six components had each
+ * written their own version of `border-b border-rule py-2.5`.
+ */
+.data-row {
+  border-bottom: 1px solid var(--rule);
+  padding-top: var(--row-y, 0.5rem);
+  padding-bottom: var(--row-y, 0.5rem);
 }

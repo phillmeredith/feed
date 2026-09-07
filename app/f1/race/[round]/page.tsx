@@ -8,6 +8,7 @@ import { SpoilerGuard, SpoilerToggle } from "@/components/SpoilerGuard";
 import { HighlightReel } from "@/components/HighlightReel";
 import { ListCard } from "@/components/cards";
 import { LastUpdated } from "@/components/EventStatus";
+import { DataTable } from "@/components/ui/DataTable";
 import { season, races, driverStandings } from "@/lib/f1";
 import { highlightsFor, f1Key } from "@/lib/highlights";
 import { withArchive } from "@/lib/archive";
@@ -151,46 +152,53 @@ export default async function RacePage({
                       ))}
                     </ol>
 
-                    <table className="mt-10 w-full text-[14px]">
-                      <caption className="sr-only">
-                        Full classification, {(race.results ?? []).length}{" "}
-                        drivers
-                      </caption>
-                      <thead>
-                        <tr className="border-b border-rule">
-                          <th scope="col" className="kicker text-[9px] text-faint text-left pb-3 w-10">
-                            #
-                          </th>
-                          <th scope="col" className="kicker text-[9px] text-faint text-left pb-3">
-                            Driver
-                          </th>
-                          <th scope="col" className="kicker text-[9px] text-faint text-left pb-3">
-                            Team
-                          </th>
-                          <th scope="col" className="kicker text-[9px] text-faint text-right pb-3">
-                            Time / status
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {(race.results ?? []).map((r) => (
-                          <tr key={r.position} className="border-b border-rule">
-                            <td className="py-2.5 text-faint tabular-nums">
-                              {r.position}
-                            </td>
-                            <td className="py-2.5 pr-4 font-body font-semibold">
-                              {r.driver}
-                            </td>
-                            <td className="py-2.5 pr-4 text-muted text-[13px]">
-                              {r.constructor}
-                            </td>
-                            <td className="py-2.5 text-right tabular-nums text-muted text-[13px]">
-                              {r.time ?? "—"}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                    <div className="mt-10" data-density="reference">
+                      <DataTable
+                        caption={`Full classification, ${(race.results ?? []).length} drivers`}
+                        rows={race.results ?? []}
+                        rowKey={(r) => String(r.position)}
+                        columns={[
+                          {
+                            key: "pos",
+                            header: "#",
+                            numeric: true,
+                            width: "3rem",
+                            cell: (r) => (
+                              <span className="text-faint">{r.position}</span>
+                            ),
+                          },
+                          {
+                            key: "driver",
+                            header: "Driver",
+                            cell: (r) => (
+                              <span className="font-body font-semibold">
+                                {r.driver}
+                              </span>
+                            ),
+                          },
+                          {
+                            key: "team",
+                            header: "Team",
+                            cell: (r) => (
+                              <span className="text-muted text-fine">
+                                {r.constructor}
+                              </span>
+                            ),
+                          },
+                          {
+                            key: "time",
+                            header: "Time / status",
+                            align: "right",
+                            numeric: true,
+                            cell: (r) => (
+                              <span className="text-muted text-fine">
+                                {r.time ?? "—"}
+                              </span>
+                            ),
+                          },
+                        ]}
+                      />
+                    </div>
                   </SpoilerGuard>
                 </div>
               ) : (

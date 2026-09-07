@@ -1,4 +1,5 @@
 import { gustBand } from "@/lib/verdict";
+import { DataTable } from "./ui/DataTable";
 import type { PlaceForecast } from "@/lib/places";
 
 /** The table's view of a place: everything except the hourly series. */
@@ -46,55 +47,62 @@ export function WhereToGo({ places }: { places: PlaceSummary[] }) {
         )}
       </p>
 
-      <table className="mt-8 w-full text-[15px]">
-        <caption className="sr-only">
-          Rain and wind over the next twelve hours, driest first
-        </caption>
-        <thead>
-          <tr className="border-b border-rule">
-            <th scope="col" className="kicker text-[9px] text-faint text-left pb-3">
-              Place
-            </th>
-            <th scope="col" className="kicker text-[9px] text-faint text-right pb-3">
-              Rain
-            </th>
-            <th scope="col" className="kicker text-[9px] text-faint text-right pb-3 hidden sm:table-cell">
-              Wettest hour
-            </th>
-            <th scope="col" className="kicker text-[9px] text-faint text-right pb-3">
-              Gusts
-            </th>
-            <th scope="col" className="kicker text-[9px] text-faint text-right pb-3 hidden md:table-cell">
-              Cloud
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {places.map((place) => (
-            <tr key={place.name} className="border-b border-rule">
-              <td className="py-3 pr-4">
-                <span className="font-body font-semibold">{place.name}</span>
-                <span className="kicker text-[9px] text-faint ml-3">
-                  {place.note}
-                </span>
-              </td>
-              <td className="py-3 text-right tabular-nums">
-                {formatRain(place.rainMm)}
-              </td>
-              <td className="py-3 text-right tabular-nums text-muted hidden sm:table-cell">
-                {place.peakChance}%
-              </td>
-              <td className="py-3 text-right tabular-nums text-muted">
-                {place.gustKph}
-                <span className="text-faint"> km/h</span>
-              </td>
-              <td className="py-3 text-right tabular-nums text-muted hidden md:table-cell">
-                {place.cloud}%
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="mt-8" data-density="reference">
+        <DataTable
+          caption="Rain and wind over the next twelve hours, driest first"
+          rows={places}
+          rowKey={(place) => place.name}
+          columns={[
+            {
+              key: "place",
+              header: "Place",
+              cell: (place) => (
+                <>
+                  <span className="font-body font-semibold">{place.name}</span>
+                  <span className="kicker text-label text-faint ml-3">
+                    {place.note}
+                  </span>
+                </>
+              ),
+            },
+            {
+              key: "rain",
+              header: "Rain",
+              align: "right",
+              numeric: true,
+              cell: (place) => formatRain(place.rainMm),
+            },
+            {
+              key: "peak",
+              header: "Wettest hour",
+              align: "right",
+              numeric: true,
+              hideBelow: "sm",
+              cell: (place) => `${place.peakChance}%`,
+            },
+            {
+              key: "gust",
+              header: "Gusts",
+              align: "right",
+              numeric: true,
+              cell: (place) => (
+                <>
+                  {place.gustKph}
+                  <span className="text-faint"> km/h</span>
+                </>
+              ),
+            },
+            {
+              key: "cloud",
+              header: "Cloud",
+              align: "right",
+              numeric: true,
+              hideBelow: "md",
+              cell: (place) => `${place.cloud}%`,
+            },
+          ]}
+        />
+      </div>
 
       <p className="kicker text-[9px] text-faint mt-4">
         Windiest is {worst.name === best.name ? places[0].name : windiest(places)} —{" "}
