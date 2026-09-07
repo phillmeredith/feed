@@ -51,10 +51,6 @@ export function SubNav({
           </Link>
         </li>
 
-        <li aria-hidden="true" className="self-center px-1 text-rule">
-          |
-        </li>
-
         {desks.map((desk) => {
           const active = current === desk.slug;
           return (
@@ -81,9 +77,6 @@ export function SubNav({
 
         {refs.length > 0 && (
           <>
-            <li aria-hidden="true" className="self-center px-1 text-rule">
-              |
-            </li>
             {refs.map((ref) => {
               const active = current === ref.slug;
               return (
