@@ -19,7 +19,7 @@ export function Timeline({
   if (articles.length === 0) {
     return (
       <section className="mt-12 border-t border-rule pt-6">
-        <h2 className="kicker text-[11px] text-accent">Coverage</h2>
+        <h2 className="kicker text-label text-accent">Coverage</h2>
         <p className="font-serif italic text-lg text-muted mt-3 max-w-2xl">
           Nothing filed here about this one yet. The directory records it;
           the reporting arrives when it does.
@@ -32,7 +32,7 @@ export function Timeline({
 
   return (
     <section className="mt-12 border-t border-rule pt-6">
-      <h2 className="kicker text-[11px] text-accent">
+      <h2 className="kicker text-label text-accent">
         Coverage · {articles.length}{" "}
         {articles.length === 1 ? "story" : "stories"}
       </h2>
@@ -50,7 +50,7 @@ export function Timeline({
                 }}
                 aria-hidden="true"
               />
-              <p className="kicker text-[9px] text-faint">
+              <p className="kicker text-micro text-faint">
                 {at.toLocaleDateString("en-GB", {
                   day: "numeric",
                   month: "short",
@@ -65,7 +65,7 @@ export function Timeline({
                   </>
                 )}
               </p>
-              <h3 className="font-body font-semibold text-[17px] leading-snug mt-1.5">
+              <h3 className="font-body font-semibold text-lede leading-snug mt-1.5">
                 <Link
                   href={`/story/${article.id}`}
                   className="hover:text-accent transition-colors"

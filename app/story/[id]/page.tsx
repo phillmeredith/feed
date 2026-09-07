@@ -51,8 +51,8 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
               <h1
                 className={
                   story.image
-                    ? "headline text-[clamp(2rem,4.2vw,3.6rem)]"
-                    : "headline text-[clamp(1.9rem,3.6vw,3.1rem)]"
+                    ? "headline text-title"
+                    : "headline text-title"
                 }
               >
                 {story.headline}
@@ -68,7 +68,7 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
               {desk && (
                 <Link
                   href={`/${desk.slug}`}
-                  className="kicker text-[11px] text-accent mt-6 inline-block hover:underline"
+                  className="kicker text-label text-accent mt-6 inline-block hover:underline"
                 >
                   {desk.label}
                 </Link>
@@ -83,7 +83,7 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
           <div className="grid gap-14 lg:grid-cols-[240px_minmax(0,1fr)] xl:gap-20">
             {/* Sidebar */}
             <aside className="order-2 lg:order-1">
-              <div className="kicker text-[10px] text-faint border-b border-rule pb-3">
+              <div className="kicker text-micro text-faint border-b border-rule pb-3">
                 From {story.source}
               </div>
               <p className="font-serif italic text-lg text-accent mt-3">
@@ -112,7 +112,7 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
                 * invitation to go and read it somewhere else.
                 */}
               <div className="mt-12 border-t border-rule pt-8 flex flex-wrap items-baseline gap-x-6 gap-y-3">
-                <p className="kicker text-[9px] text-faint">
+                <p className="kicker text-micro text-faint">
                   Reporting by {story.source}
                   {story.words ? ` · ${story.words} words` : ""}
                 </p>
@@ -120,14 +120,14 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
                   href={story.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="kicker text-[9px] text-faint hover:text-accent transition-colors"
+                  className="kicker text-micro text-faint hover:text-accent transition-colors"
                 >
                   Original ↗
                 </a>
                 {desk && (
                   <Link
                     href={`/${desk.slug}`}
-                    className="kicker text-[9px] text-muted hover:text-accent transition-colors ml-auto"
+                    className="kicker text-micro text-muted hover:text-accent transition-colors ml-auto"
                   >
                     ← Back to {desk.label}
                   </Link>

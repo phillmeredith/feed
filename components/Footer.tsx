@@ -29,7 +29,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-wrap gap-x-14 gap-y-8">
-          <nav className="flex flex-col gap-2 kicker text-[10px] text-muted">
+          <nav className="flex flex-col gap-2 kicker text-micro text-muted">
             <span className="text-faint">Desks</span>
             {navItems().map((item) => (
               <Link key={item.slug} href={`/${item.slug}`} className="hover:text-accent">
@@ -38,7 +38,7 @@ export function Footer() {
             ))}
           </nav>
 
-          <nav className="flex flex-col gap-2 kicker text-[10px] text-muted">
+          <nav className="flex flex-col gap-2 kicker text-micro text-muted">
             <span className="text-faint">Reference</span>
             {references.map((ref) => (
               <Link key={ref.slug} href={`/${ref.slug}`} className="hover:text-accent">

@@ -60,7 +60,7 @@ export function DaylightArc({
 
   return (
     <figure className="lg:border-l lg:border-rule lg:pl-10">
-      <h2 className="kicker text-[10px] text-muted border-b border-rule pb-2">
+      <h2 className="panel-subtitle">
         Daylight
       </h2>
 
@@ -124,7 +124,7 @@ export function DaylightArc({
               ? "After sunset"
               : `${hoursAndMinutes(remaining)} of light left`}
         </p>
-        <p className="kicker text-[9px] text-faint mt-2">
+        <p className="kicker text-micro text-faint mt-2">
           {hoursAndMinutes(daylightMinutes)} between sunrise and sunset
         </p>
       </figcaption>

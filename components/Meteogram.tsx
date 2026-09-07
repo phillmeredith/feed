@@ -124,7 +124,7 @@ export function Meteogram({
               type="button"
               onClick={() => setPlace(i)}
               aria-pressed={i === place}
-              className={`kicker text-[10px] pb-1 border-b transition-colors ${
+              className={`kicker text-micro pb-1 border-b transition-colors ${
                 i === place
                   ? "text-accent border-accent"
                   : "text-muted border-transparent hover:text-accent"
@@ -313,7 +313,7 @@ export function Meteogram({
        * the figure says something useful before anyone interacts with it.
        */}
       {/* Named, so nothing here depends on telling two colours apart. */}
-      <ul className="mt-3 flex flex-wrap gap-x-7 gap-y-2 kicker text-[9px] text-faint">
+      <ul className="mt-3 flex flex-wrap gap-x-7 gap-y-2 kicker text-micro text-faint">
         <li className="flex items-center gap-2">
           <svg width="22" height="8" aria-hidden="true">
             <line x1="0" y1="4" x2="22" y2="4" stroke="var(--accent)" strokeWidth="2.5" />
@@ -341,7 +341,7 @@ export function Meteogram({
       </ul>
 
       <figcaption className="mt-3 flex flex-wrap items-baseline gap-x-8 gap-y-2 border-t border-rule pt-3">
-        <span className="kicker text-[10px] text-accent w-14">
+        <span className="kicker text-micro text-accent w-14">
           {active === null ? "Now" : point.time}
         </span>
         <Reading label="Temp" value={`${point.tempC}°`} />
@@ -354,7 +354,7 @@ export function Meteogram({
         {point.gustKph > point.windKph + 5 && (
           <Reading label="Gusting" value={`${point.gustKph} km/h`} />
         )}
-        <span className="kicker text-[9px] text-faint ml-auto hidden sm:inline">
+        <span className="kicker text-micro text-faint ml-auto hidden sm:inline">
           Drag across, or focus and use ← →
         </span>
       </figcaption>
@@ -365,8 +365,8 @@ export function Meteogram({
 function Reading({ label, value }: { label: string; value: string }) {
   return (
     <span className="flex items-baseline gap-2">
-      <span className="kicker text-[9px] text-faint">{label}</span>
-      <span className="font-body text-[15px] tabular-nums">{value}</span>
+      <span className="kicker text-micro text-faint">{label}</span>
+      <span className="font-body text-small figures">{value}</span>
     </span>
   );
 }

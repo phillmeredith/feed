@@ -46,7 +46,7 @@ function Reel({ highlight }: { highlight: Highlight }) {
           </button>
         )}
       </div>
-      <figcaption className="kicker text-[9px] text-faint mt-3">
+      <figcaption className="kicker text-micro text-faint mt-3">
         {KIND_LABELS[highlight.kind]}
         <span className="mx-2 text-rule">/</span>
         {highlight.channel}

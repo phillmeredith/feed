@@ -64,7 +64,7 @@ export async function GroupPage({ group }: { group: Group }) {
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-10 py-10 flex-1 w-full">
         <header className="border-b border-rule pb-8">
-          <h1 className="display text-[clamp(2.4rem,6vw,4.4rem)] text-accent">
+          <h1 className="display text-nameplate text-accent">
             {group.label}
           </h1>
           <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
@@ -94,7 +94,7 @@ export async function GroupPage({ group }: { group: Group }) {
 
             {latest.length > 0 && (
               <aside className="lg:border-l lg:border-rule lg:pl-12">
-                <h2 className="kicker text-[10px] text-faint">
+                <h2 className="kicker text-micro text-faint">
                   Also across {group.label.toLowerCase()}
                 </h2>
                 <ol className="mt-2">
@@ -104,10 +104,10 @@ export async function GroupPage({ group }: { group: Group }) {
                         href={`/story/${article.id}`}
                         className="group block py-4"
                       >
-                        <h3 className="font-body text-[15px] leading-snug line-clamp-2 group-hover:text-accent transition-colors">
+                        <h3 className="font-body text-small leading-snug line-clamp-2 group-hover:text-accent transition-colors">
                           <SpoilerHeadline article={article} />
                         </h3>
-                        <p className="kicker text-[9px] text-faint mt-2">
+                        <p className="kicker text-micro text-faint mt-2">
                           <span className="text-accent">
                             {categoryBySlug(article.category)?.short}
                           </span>

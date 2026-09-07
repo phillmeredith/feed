@@ -37,10 +37,10 @@ export default function GearIndex() {
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
         <div className="border-b border-rule pb-8">
-          <p className="kicker text-[10px] text-accent">
+          <p className="kicker text-micro text-accent">
             <Link href="/photography" className="hover:underline">Photography</Link>
           </p>
-          <h1 className="display text-[clamp(2.2rem,5.5vw,4rem)] mt-4">
+          <h1 className="display text-title mt-4">
             Gear directory
           </h1>
           <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
@@ -51,15 +51,15 @@ export default function GearIndex() {
         </div>
 
         <section className="mt-10">
-          <h2 className="kicker text-[10px] text-faint">By mount</h2>
+          <h2 className="kicker text-micro text-faint">By mount</h2>
           <div className="mt-4 flex flex-wrap gap-2">
             {byMount.map((m) => (
               <span
                 key={m.code}
-                className="kicker text-[10px] text-muted bg-surface border border-rule px-3 py-2"
+                className="kicker text-micro text-muted bg-surface border border-rule px-3 py-2"
               >
                 {m.name}
-                <span className="ml-2 text-accent tabular-nums">{m.count}</span>
+                <span className="ml-2 text-accent figures">{m.count}</span>
               </span>
             ))}
           </div>
@@ -68,9 +68,9 @@ export default function GearIndex() {
         <div className="mt-14 flex flex-col gap-12">
           {[...groups.entries()].map(([month, group]) => (
             <section key={month}>
-              <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+              <h2 className="panel-title">
                 {month}
-                <span className="ml-3 text-faint tabular-nums">
+                <span className="ml-3 text-faint figures">
                   {group.length}
                 </span>
               </h2>
@@ -81,10 +81,10 @@ export default function GearIndex() {
                     href={`/gear/${gearSlug(item.name)}`}
                     className="group border-t border-rule pt-3"
                   >
-                    <p className="font-body font-semibold text-[16px] leading-snug group-hover:text-accent transition-colors">
+                    <p className="font-body font-semibold text-body leading-snug group-hover:text-accent transition-colors">
                       {item.name}
                     </p>
-                    <p className="kicker text-[9px] text-faint mt-1.5">
+                    <p className="kicker text-micro text-faint mt-1.5">
                       {item.kind === "lens" ? "Lens" : "Body"}
                       {item.focal && (
                         <>

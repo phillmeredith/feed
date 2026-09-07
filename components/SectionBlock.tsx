@@ -14,7 +14,7 @@ export function SectionBlock({
   return (
     <section id={category.slug} className="scroll-mt-8">
       <div className="flex items-end justify-between gap-6 border-b-2 border-ink pb-2">
-        <h2 className="kicker text-[13px] text-accent">{category.label}</h2>
+        <h2 className="kicker text-fine text-accent">{category.label}</h2>
         <p className="font-display italic text-sm text-ink-faint">
           {category.dek}
         </p>

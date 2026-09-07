@@ -22,22 +22,22 @@ function Row({ item }: { item: GearItem }) {
 
   return (
     <li className="flex items-baseline gap-3 py-1.5">
-      <span className="kicker text-[9px] text-faint w-16 shrink-0">
+      <span className="kicker text-micro text-faint w-16 shrink-0">
         {when(item.announcedAt)}
       </span>
       <span className="min-w-0">
         {item.storyId ? (
           <Link
             href={`/story/${item.storyId}`}
-            className="font-body text-[15px] hover:text-accent transition-colors"
+            className="font-body text-small hover:text-accent transition-colors"
           >
             {item.name}
           </Link>
         ) : (
-          <span className="font-body text-[15px]">{item.name}</span>
+          <span className="font-body text-small">{item.name}</span>
         )}
         {detail && (
-          <span className="font-body text-[13px] text-faint"> — {detail}</span>
+          <span className="font-body text-fine text-faint"> — {detail}</span>
         )}
       </span>
     </li>
@@ -83,9 +83,9 @@ function Group({
       <summary className="flex flex-wrap items-baseline justify-between gap-4 cursor-pointer list-none">
         <span className="flex items-baseline gap-3">
           <h3 className="display text-xl">{title}</h3>
-          <span className="kicker text-[10px] text-accent">{count}</span>
+          <span className="kicker text-micro text-accent">{count}</span>
         </span>
-        <span className="kicker text-[10px] text-muted">
+        <span className="kicker text-micro text-muted">
           <span className="group-open:hidden">Show →</span>
           <span className="hidden group-open:inline">Hide ↑</span>
         </span>

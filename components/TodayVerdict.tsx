@@ -26,12 +26,12 @@ export function TodayVerdict({
     <section aria-labelledby="today-verdict">
       <h2
         id="today-verdict"
-        className="kicker text-[11px] text-accent border-b border-rule pb-3"
+        className="panel-title"
       >
         In short
       </h2>
 
-      <p className="font-serif text-[clamp(1.4rem,2.6vw,2rem)] leading-snug mt-6 max-w-3xl">
+      <p className="font-serif text-subhead leading-snug mt-6 max-w-3xl">
         {capitalise(verdict.headline)}.{" "}
         {verdict.outdoors ? (
           <>
@@ -87,7 +87,7 @@ export function TodayVerdict({
         />
       </dl>
 
-      <p className="kicker text-[9px] text-faint mt-8">
+      <p className="kicker text-micro text-faint mt-8">
         Take: {verdict.carry}
         {today && (
           <>
@@ -112,12 +112,12 @@ function Answer({
 }) {
   return (
     <div>
-      <dt className="kicker text-[9px] text-faint">{term}</dt>
+      <dt className="kicker text-micro text-faint">{term}</dt>
       <dd>
-        <p className="display text-[clamp(1.5rem,2.4vw,2rem)] leading-none mt-3 tabular-nums">
+        <p className="display text-subhead leading-none mt-3 figures">
           {value}
         </p>
-        <p className="font-serif text-[15px] leading-relaxed text-muted mt-3">
+        <p className="font-serif text-small leading-relaxed text-muted mt-3">
           {detail}
         </p>
       </dd>

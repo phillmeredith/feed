@@ -10,6 +10,7 @@ import {
 } from "@/lib/f1";
 import { highlightsFor, f1Key } from "@/lib/highlights";
 import { HighlightReel } from "./HighlightReel";
+import { DataTable } from "./ui/DataTable";
 import { SpoilerGuard, SpoilerToggle } from "./SpoilerGuard";
 import { LastUpdated } from "./EventStatus";
 import { sportDate, sportTime } from "@/lib/format";
@@ -41,10 +42,10 @@ export function F1Weekend() {
       {next && (
         <section>
           <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-            <h2 className="kicker text-[11px] text-accent">
+            <h2 className="kicker text-label text-accent">
               Next · round {next.round} · {next.name}
             </h2>
-            <p className="kicker text-[9px] text-faint">
+            <p className="kicker text-micro text-faint">
               {next.locality}, {next.country}
             </p>
           </div>
@@ -66,16 +67,16 @@ export function F1Weekend() {
             <ol className="mt-8 grid gap-x-8 gap-y-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
               {next.sessions.map((session) => (
                 <li key={session.name} className="border-t border-rule pt-4">
-                  <p className="kicker text-[9px] text-faint">
+                  <p className="kicker text-micro text-faint">
                     {sportDate(session.at, { weekday: "long" })}
                   </p>
-                  <p className="font-body font-semibold text-[16px] mt-2">
+                  <p className="font-body font-semibold text-body mt-2">
                     {session.name}
                   </p>
-                  <p className="display text-2xl mt-2 tabular-nums">
+                  <p className="display text-2xl mt-2 figures">
                     {sportTime(session.at)}
                   </p>
-                  <p className="kicker text-[9px] text-faint mt-1">
+                  <p className="kicker text-micro text-faint mt-1">
                     {sportDate(session.at, { day: "numeric", month: "short" })}
                   </p>
                 </li>
@@ -92,13 +93,13 @@ export function F1Weekend() {
       {latest && (
         <section>
           <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-            <h2 className="kicker text-[11px] text-accent">
+            <h2 className="kicker text-label text-accent">
               Last · round {latest.round} · {latest.name}
             </h2>
             <SpoilerToggle />
           </div>
 
-          <p className="kicker text-[9px] text-faint mt-5">
+          <p className="kicker text-micro text-faint mt-5">
             {raceDate(latest.date)} · {latest.locality}, {latest.country}
           </p>
 
@@ -112,17 +113,17 @@ export function F1Weekend() {
                     key={r.position}
                     className="border-t border-rule py-4 flex items-baseline gap-4"
                   >
-                    <span className="kicker text-[10px] text-accent w-8 shrink-0">
+                    <span className="kicker text-micro text-accent w-8 shrink-0">
                       {PODIUM[i]}
                     </span>
                     <span className="min-w-0">
                       <span className="display text-xl block">{r.driver}</span>
-                      <span className="text-[13px] text-muted">
+                      <span className="text-fine text-muted">
                         {r.constructor}
                         {r.time && (
                           <>
                             <span className="mx-2 text-rule">/</span>
-                            <span className="tabular-nums">{r.time}</span>
+                            <span className="figures">{r.time}</span>
                           </>
                         )}
                       </span>
@@ -181,10 +182,10 @@ export function F1Calendar() {
     <div className="mt-12 flex flex-col gap-20">
       <section>
         <div className="flex items-end justify-between gap-6 flex-wrap border-b border-rule pb-3">
-          <h2 className="kicker text-[11px] text-accent">
+          <h2 className="kicker text-label text-accent">
             Every round of {s.season}
           </h2>
-          <p className="kicker text-[9px] text-faint">
+          <p className="kicker text-micro text-faint">
             {run.length} of {calendar.length} run
             {leader && (
               <>
@@ -244,71 +245,53 @@ export function F1Standings() {
             own wrapper, but a grid item defaults to a min-content floor, so
             without this the 420px table widened the page instead. */}
         <section className="min-w-0">
-          <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+          <h2 className="panel-title">
             Drivers
           </h2>
-          <div className="mt-4 overflow-x-auto">
-            <table className="w-full min-w-[420px] text-[14px]">
-              <thead>
-                <tr className="border-b border-rule">
-                  <th className="kicker text-[9px] text-faint text-left pb-3 pr-3">#</th>
-                  <th className="kicker text-[9px] text-faint text-left pb-3 pr-4">Driver</th>
-                  <th className="kicker text-[9px] text-faint text-left pb-3 pr-4">Team</th>
-                  <th className="kicker text-[9px] text-faint text-right pb-3 pr-4">Wins</th>
-                  <th className="kicker text-[9px] text-faint text-right pb-3">Points</th>
-                </tr>
-              </thead>
-              <tbody>
-                {drivers.map((d) => (
-                  <tr key={d.driverId} className="border-b border-rule group">
-                    <td className="py-2.5 pr-3 text-faint tabular-nums">
-                      {d.position}
-                    </td>
-                    <td className="py-2.5 pr-4">
-                      <Link
-                        href={`/f1/driver/${d.driverId}`}
-                        className="font-body font-semibold group-hover:text-accent transition-colors"
-                      >
-                        {driverName(d)}
-                      </Link>
-                    </td>
-                    <td className="py-2.5 pr-4 text-muted text-[13px]">
-                      {d.constructor}
-                    </td>
-                    <td className="py-2.5 pr-4 text-right tabular-nums text-muted">
-                      {d.wins || "—"}
-                    </td>
-                    <td className="py-2.5 text-right tabular-nums text-accent font-semibold">
-                      {d.points}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="mt-4" data-density="reference">
+            <DataTable
+              caption="Drivers' championship"
+              rows={drivers}
+              rowKey={(d) => d.driverId}
+              columns={[
+                { key: "pos", header: "#", numeric: true, width: "3rem",
+                  cell: (d) => <span className="text-faint">{d.position}</span> },
+                { key: "driver", header: "Driver",
+                  cell: (d) => (
+                    <Link href={`/f1/driver/${d.driverId}`} className="hover:text-accent transition-colors">
+                      <span className="font-body font-semibold">{driverName(d)}</span>
+                    </Link>
+                  ) },
+                { key: "team", header: "Team",
+                  cell: (d) => <span className="text-muted text-fine">{d.constructor}</span> },
+                { key: "wins", header: "Wins", align: "right", numeric: true,
+                  cell: (d) => <span className="text-muted">{d.wins || "—"}</span> },
+                { key: "points", header: "Points", align: "right", numeric: true,
+                  cell: (d) => <span className="text-accent font-semibold">{d.points}</span> },
+              ]}
+            />
           </div>
         </section>
 
         <section className="min-w-0">
-          <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+          <h2 className="panel-title">
             Constructors
           </h2>
-          <table className="mt-4 w-full text-[14px]">
-            <tbody>
-              {teams.map((t) => (
-                <tr key={t.constructorId} className="border-b border-rule">
-                  <td className="py-2.5 pr-3 text-faint tabular-nums w-6">
-                    {t.position}
-                  </td>
-                  <td className="py-2.5 pr-4 font-body font-semibold">
-                    {t.name}
-                  </td>
-                  <td className="py-2.5 text-right tabular-nums text-accent font-semibold">
-                    {t.points}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="mt-4" data-density="reference">
+            <DataTable
+              caption="Constructors' championship"
+              rows={teams}
+              rowKey={(t) => t.constructorId}
+              columns={[
+                { key: "pos", header: "#", numeric: true, width: "3rem",
+                  cell: (t) => <span className="text-faint">{t.position}</span> },
+                { key: "team", header: "Constructor",
+                  cell: (t) => <span className="font-body font-semibold">{t.name}</span> },
+                { key: "points", header: "Points", align: "right", numeric: true,
+                  cell: (t) => <span className="text-accent font-semibold">{t.points}</span> },
+              ]}
+            />
+          </div>
         </section>
       </div>
 
@@ -346,26 +329,26 @@ function RoundCard({
     <li className="border-t border-rule pt-4">
       <div className="flex items-baseline justify-between gap-3">
         <span
-          className={`display text-[2.6rem] leading-none tabular-nums ${
+          className={`display text-title leading-none figures ${
             done ? "text-paper" : "text-faint"
           }`}
         >
           {race.round}
         </span>
         {/* State in a word, and never by colour alone. */}
-        <span className="kicker text-[9px]">
+        <span className="kicker text-micro">
           {isNext ? (
-            <span className="text-accent">Next up</span>
+            <span className="text-scheduled">Next up</span>
           ) : done ? (
-            <span className="text-faint">Run</span>
+            <span className="text-settled">Run</span>
           ) : (
-            <span className="text-faint">To come</span>
+            <span className="text-scheduled">To come</span>
           )}
         </span>
       </div>
 
       <h3
-        className={`font-body font-semibold text-[16px] leading-snug mt-3 ${
+        className={`font-body font-semibold text-body leading-snug mt-3 ${
           done ? "" : "text-muted"
         }`}
       >
@@ -376,7 +359,7 @@ function RoundCard({
           {race.name}
         </Link>
       </h3>
-      <p className="kicker text-[9px] text-faint mt-2">
+      <p className="kicker text-micro text-faint mt-2">
         {raceDate(race.date)}
         <span className="mx-2 text-rule">/</span>
         {race.locality}
@@ -385,7 +368,7 @@ function RoundCard({
       <p className="mt-3">
         <Link
           href={`/f1/race/${race.round}`}
-          className="kicker text-[9px] text-muted hover:text-accent transition-colors"
+          className="kicker text-micro text-muted hover:text-accent transition-colors"
         >
           {done ? "View race" : "Race details"} →
         </Link>
@@ -394,10 +377,10 @@ function RoundCard({
       {done && (
         <div className="mt-4">
           <SpoilerGuard label="Result">
-            <ol className="text-[14px]">
+            <ol className="text-small">
               {podium.map((r, i) => (
                 <li key={r.position} className="flex items-baseline gap-3 py-1">
-                  <span className="kicker text-[9px] text-accent w-6 shrink-0">
+                  <span className="kicker text-micro text-accent w-6 shrink-0">
                     {PODIUM[i]}
                   </span>
                   <span className="min-w-0 truncate">{r.driver}</span>
@@ -432,30 +415,29 @@ function RaceResults({
 
   return (
     <details className="group mt-3">
-      <summary className="kicker text-[9px] text-faint hover:text-accent cursor-pointer list-none">
+      <summary className="kicker text-micro text-faint hover:text-accent cursor-pointer list-none">
         <span className="group-open:hidden">
           All {results.length} classified →
         </span>
         <span className="hidden group-open:inline">Close ↑</span>
       </summary>
-      <table className="mt-4 w-full text-[14px]">
-        <tbody>
-          {results.map((r) => (
-            <tr key={r.position} className="border-b border-rule">
-              <td className="py-2 pr-4 text-faint tabular-nums w-8">
-                {r.position}
-              </td>
-              <td className="py-2 pr-4 font-body font-semibold">{r.driver}</td>
-              <td className="py-2 pr-4 text-muted text-[13px]">
-                {r.constructor}
-              </td>
-              <td className="py-2 text-right tabular-nums text-muted text-[13px]">
-                {r.time ?? "—"}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="mt-4" data-density="reference">
+        <DataTable
+          caption="Full classification"
+          rows={results}
+          rowKey={(r) => String(r.position)}
+          columns={[
+            { key: "pos", header: "#", numeric: true, width: "2.5rem",
+              cell: (r) => <span className="text-faint">{r.position}</span> },
+            { key: "driver", header: "Driver",
+              cell: (r) => <span className="font-body font-semibold">{r.driver}</span> },
+            { key: "team", header: "Team", hideBelow: "sm",
+              cell: (r) => <span className="text-muted text-fine">{r.constructor}</span> },
+            { key: "time", header: "Time", align: "right", numeric: true,
+              cell: (r) => <span className="text-muted text-fine">{r.time ?? "—"}</span> },
+          ]}
+        />
+      </div>
     </details>
   );
 }

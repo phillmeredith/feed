@@ -24,7 +24,7 @@ export function WhereToGo({ places }: { places: PlaceSummary[] }) {
   return (
     <section aria-labelledby="where-to-go">
       <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-        <h2 id="where-to-go" className="kicker text-[11px] text-accent">
+        <h2 id="where-to-go" className="kicker text-label text-accent">
           Where to go
         </h2>
         <p className="font-serif italic text-xs text-faint">
@@ -104,7 +104,7 @@ export function WhereToGo({ places }: { places: PlaceSummary[] }) {
         />
       </div>
 
-      <p className="kicker text-[9px] text-faint mt-4">
+      <p className="kicker text-micro text-faint mt-4">
         Windiest is {worst.name === best.name ? places[0].name : windiest(places)} —{" "}
         {gustBand(Math.max(...places.map((p) => p.gustKph))).note}
       </p>

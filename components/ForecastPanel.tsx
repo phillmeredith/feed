@@ -16,9 +16,9 @@ function Stat({
 }) {
   return (
     <div>
-      <p className="kicker text-[9px] text-faint">{label}</p>
-      <p className="font-body text-[15px] mt-1 tabular-nums">{value}</p>
-      {note && <p className="kicker text-[9px] text-faint mt-0.5">{note}</p>}
+      <p className="kicker text-micro text-faint">{label}</p>
+      <p className="font-body text-small mt-1 figures">{value}</p>
+      {note && <p className="kicker text-micro text-faint mt-0.5">{note}</p>}
     </div>
   );
 }
@@ -68,14 +68,14 @@ export function ForecastPanel({
             className="w-20 h-20 sm:w-24 sm:h-24 text-accent shrink-0"
           />
           <div className="flex items-baseline gap-5">
-            <span className="display text-[clamp(3.5rem,9vw,6rem)] leading-none">
+            <span className="display text-nameplate leading-none">
               {weather.tempC}°
             </span>
             <div>
               <p className="font-serif text-2xl text-accent">
                 {weather.condition}
               </p>
-              <p className="kicker text-[10px] text-faint mt-2">
+              <p className="kicker text-micro text-faint mt-2">
                 Feels like {weather.feelsLike}° · {weather.location}
               </p>
             </div>
@@ -104,7 +104,7 @@ export function ForecastPanel({
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_240px] lg:items-start">
         <div>
-          <h2 className="kicker text-[10px] text-muted border-b border-rule pb-2">
+          <h2 className="panel-subtitle">
             The next two days
           </h2>
           <Meteogram hours={weather.hours} series={series} />
@@ -120,11 +120,11 @@ export function ForecastPanel({
 
       <div className="mt-14">
         <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-2">
-          <h2 className="kicker text-[10px] text-muted">
+          <h2 className="kicker text-micro text-muted">
             The next {weather.days.length} days
           </h2>
           {confidence.length > 0 && (
-            <p className="kicker text-[9px] text-faint">
+            <p className="kicker text-micro text-faint">
               Confidence from {confidence.length} days of ensemble spread
             </p>
           )}
@@ -135,9 +135,9 @@ export function ForecastPanel({
             return (
               <li
                 key={day.date}
-                className="flex items-center gap-4 sm:gap-6 py-3.5 text-[15px]"
+                className="flex items-center gap-4 sm:gap-6 py-3.5 text-small"
               >
-                <span className="kicker text-[10px] text-faint w-10 shrink-0">
+                <span className="kicker text-micro text-faint w-10 shrink-0">
                   {i === 0 ? "Today" : day.day}
                 </span>
                 <WeatherGlyph
@@ -152,7 +152,7 @@ export function ForecastPanel({
                  * warms up — instead of fourteen numbers to compare by eye.
                  */}
                 <span className="hidden sm:flex items-center gap-3 flex-1 min-w-0">
-                  <span className="tabular-nums text-faint w-8 text-right">
+                  <span className="figures text-faint w-8 text-right">
                     {day.low}°
                   </span>
                   <span className="relative h-1 flex-1 bg-[var(--rule)]">
@@ -164,19 +164,19 @@ export function ForecastPanel({
                       }}
                     />
                   </span>
-                  <span className="tabular-nums font-semibold w-8">
+                  <span className="figures font-semibold w-8">
                     {day.high}°
                   </span>
                 </span>
 
-                <span className="sm:hidden font-body font-semibold tabular-nums w-16 shrink-0">
+                <span className="sm:hidden font-body font-semibold figures w-16 shrink-0">
                   {day.high}° <span className="text-faint">{day.low}°</span>
                 </span>
 
-                <span className="kicker text-[9px] text-faint shrink-0 w-16 text-right tabular-nums">
+                <span className="kicker text-micro text-faint shrink-0 w-16 text-right figures">
                   {day.precipChance}% rain
                 </span>
-                <span className="kicker text-[9px] text-faint shrink-0 w-20 text-right tabular-nums hidden md:block">
+                <span className="kicker text-micro text-faint shrink-0 w-20 text-right figures hidden md:block">
                   {day.gustKph} km/h gust
                 </span>
 
@@ -185,7 +185,7 @@ export function ForecastPanel({
                  * as well as a glyph, so it doesn't depend on spotting a
                  * symbol, and only where the model still knows anything.
                  */}
-                <span className="kicker text-[9px] shrink-0 w-20 text-right hidden lg:block">
+                <span className="kicker text-micro shrink-0 w-20 text-right hidden lg:block">
                   {day.nightCloud >= 0 && day.nightCloud <= HOUSEHOLD.stars.fair ? (
                     <span
                       className={
@@ -209,7 +209,7 @@ export function ForecastPanel({
                  * in words — never by fading the row, which would carry the
                  * meaning in colour alone.
                  */}
-                <span className="kicker text-[9px] shrink-0 w-24 text-right hidden lg:block">
+                <span className="kicker text-micro shrink-0 w-24 text-right hidden lg:block">
                   {confidenceFor(confidence, day.date) ? (
                     <span
                       className={
@@ -229,7 +229,7 @@ export function ForecastPanel({
           })}
         </ul>
         {today && (
-          <p className="kicker text-[9px] text-faint mt-4">
+          <p className="kicker text-micro text-faint mt-4">
             Sunrise {today.sunrise} · sunset {today.sunset} · UV peaks at{" "}
             {today.uvMax} today ({uvNote(today.uvMax)}) · forecast from
             Open-Meteo, refreshed every half hour

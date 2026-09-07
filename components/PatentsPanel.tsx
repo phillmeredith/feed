@@ -27,14 +27,14 @@ export function PatentsPanel({ filings }: { filings: PatentFiling[] }) {
       <ul className="mt-8 divide-y divide-[var(--rule)]">
         {filings.map((filing) => (
           <li key={filing.id} className="flex gap-4 py-3">
-            <span className="kicker text-[9px] text-faint w-16 shrink-0 pt-1">
+            <span className="kicker text-micro text-faint w-16 shrink-0 pt-1">
               {when(filing.filedAt)}
             </span>
             <span className="min-w-0">
-              <span className="font-body text-[15px] leading-snug">
+              <span className="font-body text-small leading-snug">
                 {filing.title}
               </span>
-              <span className="kicker text-[9px] text-accent ml-2">
+              <span className="kicker text-micro text-accent ml-2">
                 {filing.assignee}
               </span>
             </span>

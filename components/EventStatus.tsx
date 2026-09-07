@@ -67,8 +67,8 @@ export function WhenLine({
   place?: string;
 }) {
   return (
-    <p className="kicker text-[9px] text-faint">
-      {state === "live" && <span className="text-accent">Under way · </span>}
+    <p className="kicker text-micro text-faint">
+      {state === "live" && <span className="text-live">Under way · </span>}
       {sportDate(at, { weekday: "short", day: "numeric", month: "short" })}
       <span className="mx-2 text-rule">/</span>
       {sportTime(at)}
@@ -92,7 +92,7 @@ export function LastUpdated({
 }) {
   if (!at) {
     return (
-      <p className="kicker text-[9px] text-faint">
+      <p className="kicker text-micro text-faint">
         {source} · never fetched
       </p>
     );
@@ -102,7 +102,7 @@ export function LastUpdated({
   const stale = isStale(at);
 
   return (
-    <p className="kicker text-[9px] text-faint">
+    <p className="kicker text-micro text-faint">
       {source} · updated{" "}
       {sportDate(at, { day: "numeric", month: "short" })} {sportTime(at)}
       {/* Said in words, not by colour, so it survives a greyscale screen. */}

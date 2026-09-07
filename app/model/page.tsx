@@ -43,10 +43,10 @@ export default function ModelIndex() {
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
         <div className="border-b border-rule pb-8">
-          <p className="kicker text-[10px] text-accent">
+          <p className="kicker text-micro text-accent">
             <Link href="/ai" className="hover:underline">AI Models</Link>
           </p>
-          <h1 className="display text-[clamp(2.2rem,5.5vw,4rem)] mt-4">
+          <h1 className="display text-title mt-4">
             Every model, by what it costs
           </h1>
           <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
@@ -54,23 +54,23 @@ export default function ModelIndex() {
             context and modality for {models.length} models across{" "}
             {labs().length} labs.
           </p>
-          <p className="kicker text-[10px] text-faint mt-5">
+          <p className="kicker text-micro text-faint mt-5">
             Updated {updated} · {free.length} free at point of use · widest
             context {formatContext(widest?.contextTokens ?? 0)}
           </p>
         </div>
 
         <div className="mt-10 overflow-x-auto">
-          <table className="w-full min-w-[720px] text-[14px]">
+          <table className="w-full min-w-[720px] text-small">
             <thead>
               <tr className="border-b border-rule">
-                <th className="kicker text-[9px] text-faint text-left pb-3 pr-4">Model</th>
-                <th className="kicker text-[9px] text-faint text-left pb-3 pr-4">Lab</th>
-                <th className="kicker text-[9px] text-faint text-right pb-3 pr-4">In</th>
-                <th className="kicker text-[9px] text-faint text-right pb-3 pr-4">Out</th>
-                <th className="kicker text-[9px] text-faint text-right pb-3 pr-4">Blended</th>
-                <th className="kicker text-[9px] text-faint text-right pb-3 pr-4">Context</th>
-                <th className="kicker text-[9px] text-faint text-left pb-3">Accepts</th>
+                <th className="kicker text-micro text-faint text-left pb-3 pr-4">Model</th>
+                <th className="kicker text-micro text-faint text-left pb-3 pr-4">Lab</th>
+                <th className="kicker text-micro text-faint text-right pb-3 pr-4">In</th>
+                <th className="kicker text-micro text-faint text-right pb-3 pr-4">Out</th>
+                <th className="kicker text-micro text-faint text-right pb-3 pr-4">Blended</th>
+                <th className="kicker text-micro text-faint text-right pb-3 pr-4">Context</th>
+                <th className="kicker text-micro text-faint text-left pb-3">Accepts</th>
               </tr>
             </thead>
             <tbody>
@@ -84,20 +84,20 @@ export default function ModelIndex() {
                       {m.name}
                     </Link>
                   </td>
-                  <td className="py-3 pr-4 text-muted text-[13px]">{m.lab}</td>
-                  <td className="py-3 pr-4 text-right tabular-nums text-muted">
+                  <td className="py-3 pr-4 text-muted text-fine">{m.lab}</td>
+                  <td className="py-3 pr-4 text-right figures text-muted">
                     {formatPrice(m.inputPrice)}
                   </td>
-                  <td className="py-3 pr-4 text-right tabular-nums text-muted">
+                  <td className="py-3 pr-4 text-right figures text-muted">
                     {formatPrice(m.outputPrice)}
                   </td>
-                  <td className="py-3 pr-4 text-right tabular-nums text-accent">
+                  <td className="py-3 pr-4 text-right figures text-accent">
                     {formatPrice(blendedPrice(m))}
                   </td>
-                  <td className="py-3 pr-4 text-right tabular-nums text-muted">
+                  <td className="py-3 pr-4 text-right figures text-muted">
                     {formatContext(m.contextTokens)}
                   </td>
-                  <td className="py-3 text-faint text-[12px]">
+                  <td className="py-3 text-faint text-fine">
                     {formatModality(m)}
                   </td>
                 </tr>
@@ -106,7 +106,7 @@ export default function ModelIndex() {
           </table>
         </div>
 
-        <p className="mt-8 text-[13px] text-faint max-w-2xl">
+        <p className="mt-8 text-fine text-faint max-w-2xl">
           Blended is three parts input to one part output — a read-heavy ratio.
           Ranking on input price alone flatters models that charge five times as
           much to answer, which is most of them. Prices are USD per million

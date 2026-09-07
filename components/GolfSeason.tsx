@@ -2,6 +2,7 @@ import { latestEvent, majors, playedEvents, golfSeason } from "@/lib/golf";
 import type { GolfEvent } from "@/lib/golf";
 import { highlightsFor, golfKey } from "@/lib/highlights";
 import { HighlightReel } from "./HighlightReel";
+import { DataTable } from "./ui/DataTable";
 import { SpoilerGuard, SpoilerToggle } from "./SpoilerGuard";
 import { LastUpdated } from "./EventStatus";
 import { sportDate } from "@/lib/format";
@@ -49,7 +50,7 @@ export function GolfThisWeek() {
     <div className="mt-12 flex flex-col gap-20">
       <section>
         <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-          <h2 className="kicker text-[11px] text-accent">
+          <h2 className="kicker text-label text-accent">
             {lead.major ? "The last major" : "Last played"} · {lead.name}
           </h2>
           <SpoilerToggle />
@@ -57,7 +58,7 @@ export function GolfThisWeek() {
 
         <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.9fr)]">
           <div>
-            <p className="kicker text-[9px] text-faint">
+            <p className="kicker text-micro text-faint">
               {eventDates(lead)}
               {lead.venue && (
                 <>
@@ -84,11 +85,11 @@ export function GolfThisWeek() {
                   key={`${p.position}-${p.name}`}
                   className="border-t border-rule py-4 flex items-baseline gap-4"
                 >
-                  <span className="kicker text-[10px] text-accent w-8 shrink-0">
+                  <span className="kicker text-micro text-accent w-8 shrink-0">
                     {PLACE[i]}
                   </span>
                   <span className="display text-xl">{p.name}</span>
-                  <span className="ml-auto tabular-nums text-muted">
+                  <span className="ml-auto figures text-muted">
                     {toPar(p.score)}
                   </span>
                 </li>
@@ -134,16 +135,16 @@ export function GolfMajors() {
     <div className="mt-12 flex flex-col gap-20">
       {bigFour.length > 0 && (
         <section>
-          <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+          <h2 className="panel-title">
             The majors
           </h2>
           <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {bigFour.map((event) => (
               <div key={event.id} className="border-t border-rule pt-4">
-                <p className="kicker text-[9px] text-faint">
+                <p className="kicker text-micro text-faint">
                   {eventDates(event)}
                 </p>
-                <p className="font-body font-semibold text-[16px] mt-2">
+                <p className="font-body font-semibold text-body mt-2">
                   {event.name}
                 </p>
                 <div className="mt-2">
@@ -154,7 +155,7 @@ export function GolfMajors() {
                   </SpoilerGuard>
                 </div>
                 {event.venue && (
-                  <p className="text-[13px] text-muted mt-1">{event.venue}</p>
+                  <p className="text-fine text-muted mt-1">{event.venue}</p>
                 )}
               </div>
             ))}
@@ -188,10 +189,10 @@ export function GolfAllEvents() {
     <div className="mt-12 flex flex-col gap-20">
       <section>
         <div className="flex items-end justify-between gap-6 flex-wrap border-b border-rule pb-3">
-          <h2 className="kicker text-[11px] text-accent">
+          <h2 className="kicker text-label text-accent">
             Every event of {store.season}
           </h2>
-          <p className="kicker text-[9px] text-faint">{played.length} played</p>
+          <p className="kicker text-micro text-faint">{played.length} played</p>
         </div>
 
         {/* Two columns, for the same reason the F1 calendar has them: a
@@ -200,17 +201,17 @@ export function GolfAllEvents() {
           {rest.map((event) => (
             <div key={event.id} className="border-t border-rule py-5">
               <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
-                <span className="kicker text-[9px] text-faint w-20 shrink-0">
+                <span className="kicker text-micro text-faint w-20 shrink-0">
                   {eventDates(event)}
                 </span>
-                <span className="font-body font-semibold text-[16px]">
+                <span className="font-body font-semibold text-body">
                   {event.name}
                   {event.major && <span className="ml-2 text-accent">★</span>}
                 </span>
                 {event.winner && (
                   <span className="ml-auto">
                     <SpoilerGuard label="Winner">
-                      <span className="text-[14px] text-accent">
+                      <span className="text-small text-accent">
                         {event.winner}
                       </span>
                     </SpoilerGuard>
@@ -263,28 +264,26 @@ function Leaderboard({
   const rows = limit ? event.leaderboard.slice(0, limit) : event.leaderboard;
   return (
     <details className="group mt-3">
-      <summary className="kicker text-[9px] text-muted hover:text-accent cursor-pointer list-none">
+      <summary className="kicker text-micro text-muted hover:text-accent cursor-pointer list-none">
         <span className="group-open:hidden">
           Leaderboard{limit ? `, top ${rows.length}` : `, ${rows.length} players`} →
         </span>
         <span className="hidden group-open:inline">Hide leaderboard ↑</span>
       </summary>
-      <div className="mt-4 max-h-[30rem] overflow-y-auto">
-        <table className="w-full text-[14px]">
-          <tbody>
-            {rows.map((p) => (
-              <tr key={`${p.position}-${p.name}`} className="border-b border-rule">
-                <td className="py-2 pr-4 text-faint tabular-nums w-10">
-                  {p.position}
-                </td>
-                <td className="py-2 pr-4 font-body font-semibold">{p.name}</td>
-                <td className="py-2 text-right tabular-nums text-muted">
-                  {toPar(p.score)}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="mt-4 max-h-[30rem] overflow-y-auto" data-density="reference">
+        <DataTable
+          caption={`${event.name} leaderboard`}
+          rows={rows}
+          rowKey={(p) => `${p.position}-${p.name}`}
+          columns={[
+            { key: "pos", header: "#", numeric: true, width: "3.5rem",
+              cell: (p) => <span className="text-faint">{p.position}</span> },
+            { key: "player", header: "Player",
+              cell: (p) => <span className="font-body font-semibold">{p.name}</span> },
+            { key: "score", header: "To par", align: "right", numeric: true,
+              cell: (p) => <span className="text-muted">{toPar(p.score)}</span> },
+          ]}
+        />
       </div>
     </details>
   );
@@ -295,7 +294,7 @@ function HighlightsToggle({ event }: { event: GolfEvent }) {
   if (reels.length === 0) return null;
   return (
     <details className="group mt-3">
-      <summary className="kicker text-[9px] text-muted hover:text-accent cursor-pointer list-none">
+      <summary className="kicker text-micro text-muted hover:text-accent cursor-pointer list-none">
         <span className="group-open:hidden">Watch the highlights →</span>
         <span className="hidden group-open:inline">Hide highlights ↑</span>
       </summary>

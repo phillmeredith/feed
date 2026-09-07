@@ -33,5 +33,5 @@ export function Dateline({ since }: { since: string }) {
     return () => clearInterval(id);
   }, []);
 
-  return <span className="kicker text-[10px] text-faint">{stamp}</span>;
+  return <span className="kicker text-micro text-faint">{stamp}</span>;
 }

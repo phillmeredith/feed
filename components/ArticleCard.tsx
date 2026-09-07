@@ -18,7 +18,7 @@ function categoryLabel(slug: Article["category"]) {
 
 function Meta({ article }: { article: Article }) {
   return (
-    <p className="kicker text-[10px] text-ink-faint">
+    <p className="kicker text-micro text-ink-faint">
       {article.source} <span className="text-rule">·</span>{" "}
       {relativeDate(article.publishedAt)}
     </p>
@@ -53,7 +53,7 @@ export function LeadCard({ article }: { article: Article }) {
     <article className="group">
       <a href={article.url} target="_blank" rel="noreferrer" className="block">
         <Thumb article={article} ratio="wide" />
-        <p className="kicker text-[11px] text-accent mt-5">
+        <p className="kicker text-label text-accent mt-5">
           {categoryLabel(article.category)}
         </p>
         <h2 className="mt-2 font-display font-semibold text-4xl sm:text-5xl leading-[1.05] tracking-tight group-hover:text-accent transition-colors">
@@ -86,7 +86,7 @@ export function StandardCard({ article }: { article: Article }) {
           {article.headline}
         </h3>
         {article.dek && (
-          <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
+          <p className="mt-2 text-small leading-relaxed text-ink-soft">
             {article.dek}
           </p>
         )}

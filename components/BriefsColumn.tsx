@@ -10,7 +10,7 @@ export function BriefsColumn({ items }: { items: Article[] }) {
   return (
     <section>
       <div className="flex items-baseline justify-between border-b border-rule pb-3">
-        <h2 className="kicker text-[10px] text-accent">The Wire</h2>
+        <h2 className="kicker text-micro text-accent">The Wire</h2>
         <p className="font-serif italic text-xs text-faint">No noise</p>
       </div>
 
@@ -18,10 +18,10 @@ export function BriefsColumn({ items }: { items: Article[] }) {
         {items.map((item) => (
           <li key={item.id}>
             <Link href={`/story/${item.id}`} className="group block py-5">
-              <h3 className="font-body text-[15px] leading-snug line-clamp-2 group-hover:text-accent transition-colors">
+              <h3 className="font-body text-small leading-snug line-clamp-2 group-hover:text-accent transition-colors">
                 {item.headline}
               </h3>
-              <p className="kicker text-[9px] text-faint mt-2">
+              <p className="kicker text-micro text-faint mt-2">
                 {item.source}
                 <span className="mx-2 text-rule">/</span>
                 {relativeDate(item.publishedAt)}
@@ -33,7 +33,7 @@ export function BriefsColumn({ items }: { items: Article[] }) {
 
       <Link
         href="/wire"
-        className="kicker text-[10px] text-muted hover:text-accent transition-colors mt-4 inline-block"
+        className="kicker text-micro text-muted hover:text-accent transition-colors mt-4 inline-block"
       >
         More from the wire →
       </Link>

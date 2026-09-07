@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 /**
  * A titled block of the page.
  *
- * The string `kicker text-[11px] text-accent border-b border-rule pb-3` was
+ * The string `kicker text-label text-accent border-b border-rule pb-3` was
  * written out in seven different components, which is how a heading ends up
  * 11px in one place and 10px in another for no reason anybody could name.
  * This is that heading, once.
@@ -27,8 +27,8 @@ export function Panel({
 }) {
   return (
     <section>
-      <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-        <Heading className="kicker text-label text-accent">{title}</Heading>
+      <div className="flex items-baseline justify-between gap-6 flex-wrap panel-title">
+        <Heading>{title}</Heading>
         {note && (
           <p className="font-serif italic text-fine text-faint">{note}</p>
         )}

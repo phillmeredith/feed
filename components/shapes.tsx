@@ -49,7 +49,7 @@ export function SectionBlock({
         </div>
         <Link
           href={href}
-          className="kicker text-[10px] text-muted hover:text-accent transition-colors"
+          className="kicker text-micro text-muted hover:text-accent transition-colors"
         >
           All {total ?? articles.length} stories →
         </Link>

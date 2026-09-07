@@ -97,7 +97,7 @@ export function MobileNav({
           className="fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-void"
         >
           <nav className="flex min-h-full flex-col px-5 pt-24 pb-16">
-            <Link href="/" className="kicker border-b border-rule pb-4 text-[10px]">
+            <Link href="/" className="kicker border-b border-rule pb-4 text-micro">
               {/* Anchors take `color: inherit` site-wide, so the colour has to
                   go on something inside the link rather than on the link. */}
               <span className="text-faint">Front page</span>
@@ -110,7 +110,7 @@ export function MobileNav({
                   key={item.slug}
                   href={`/${item.slug}`}
                   aria-current={here ? "page" : undefined}
-                  className="display border-b border-rule py-4 text-[clamp(1.75rem,7.5vw,2.25rem)]"
+                  className="display border-b border-rule py-4 text-headline"
                 >
                   <span className={here ? "text-accent" : "text-paper"}>
                     {item.label}

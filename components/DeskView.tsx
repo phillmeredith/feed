@@ -150,13 +150,13 @@ export async function DeskView({
             <SubNav group={category.group} current={category.slug} />
           )}
 
-          <h1 className="display text-[clamp(2.4rem,6vw,4.4rem)] text-accent mt-10">
+          <h1 className="display text-nameplate text-accent mt-10">
             {category.label}
           </h1>
           <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
             {category.standfirst}
           </p>
-          <p className="kicker text-[10px] text-faint mt-5">
+          <p className="kicker text-micro text-faint mt-5">
             {deskArticles.length} stories · refreshed every 10 minutes
             {totalPages > 1 && ` · page ${current} of ${totalPages}`}
           </p>
@@ -171,10 +171,10 @@ export async function DeskView({
                   href={`/${ref.slug}`}
                   className="group border border-rule bg-surface px-4 py-3 hover:border-accent-dim transition-colors"
                 >
-                  <span className="kicker text-[9px] text-faint block">
+                  <span className="kicker text-micro text-faint block">
                     {ref.label}
                   </span>
-                  <span className="font-body font-semibold text-[15px] text-paper group-hover:text-accent transition-colors">
+                  <span className="font-body font-semibold text-small text-paper group-hover:text-accent transition-colors">
                     {ref.dek} →
                   </span>
                 </Link>
@@ -251,7 +251,7 @@ export async function DeskView({
 
             {remainder.length > 0 && (
               <div className="mt-20">
-                <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+                <h2 className="panel-title">
                   Also on this desk
                 </h2>
                 <div className="mt-8">
@@ -266,7 +266,7 @@ export async function DeskView({
           </p>
         ))}
         {totalPages > 1 && (
-          <nav className="mt-16 border-t border-rule pt-6 flex items-center justify-between kicker text-[10px]">
+          <nav className="mt-16 border-t border-rule pt-6 flex items-center justify-between kicker text-micro">
             {current > 1 ? (
               <Link
                 href={pageHref(category.slug, current - 1)}

@@ -66,12 +66,12 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
         <div className="border-b border-rule pb-8">
-          <p className="kicker text-[10px] text-accent">
+          <p className="kicker text-micro text-accent">
             <Link href="/gear" className="hover:underline">Gear directory</Link>
             <span className="mx-2 text-rule">/</span>
             {item.brand}
           </p>
-          <h1 className="display text-[clamp(2rem,5vw,3.6rem)] mt-4">
+          <h1 className="display text-title mt-4">
             {item.name}
           </h1>
           <p className="font-serif italic text-lg text-muted mt-3">
@@ -80,20 +80,20 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
         </div>
 
         <section className="mt-10">
-          <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+          <h2 className="panel-title">
             Specification
           </h2>
           <dl className="mt-6 grid gap-x-10 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
             {specs.map((spec) => (
               <div key={spec.label} className="border-t border-rule pt-3">
-                <dt className="kicker text-[9px] text-faint">{spec.label}</dt>
-                <dd className="font-body font-semibold text-[17px] mt-1.5">
+                <dt className="kicker text-micro text-faint">{spec.label}</dt>
+                <dd className="font-body font-semibold text-lede mt-1.5">
                   {spec.value}
                 </dd>
               </div>
             ))}
           </dl>
-          <p className="text-[13px] text-faint mt-6 max-w-2xl">
+          <p className="text-fine text-faint mt-6 max-w-2xl">
             Derived from the manufacturer&apos;s own designation and the
             directory record. A lens name states its focal length, maximum
             aperture, motor, stabilisation and sealing — nothing here is
@@ -120,7 +120,7 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
 
         {related.length > 0 && (
           <section className="mt-16 border-t border-rule pt-8">
-            <h2 className="kicker text-[11px] text-accent">
+            <h2 className="kicker text-label text-accent">
               {item.kind === "lens" && item.mounts?.length
                 ? "Other glass for this mount"
                 : `More from ${item.brand}`}
@@ -130,7 +130,7 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
                 <Link
                   key={g.name}
                   href={`/gear/${gearSlug(g.name)}`}
-                  className="kicker text-[10px] text-muted bg-surface border border-rule px-3 py-2 hover:text-accent hover:border-accent-dim transition-colors"
+                  className="kicker text-micro text-muted bg-surface border border-rule px-3 py-2 hover:text-accent hover:border-accent-dim transition-colors"
                 >
                   {g.name}
                 </Link>

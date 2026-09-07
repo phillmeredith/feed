@@ -52,6 +52,11 @@
   --text-small: 0.875rem;
   --text-fine: 0.8125rem;
   --text-label: 0.6875rem;
+  /*
+   * The smallest step. The site used 9px 103 times, which is below what
+   * anyone should be asked to read; this is 10px, and nothing goes under it.
+   */
+  --text-micro: 0.625rem;
 
   /*
    * Spacing, on a rhythm. Fourteen different top margins were in use, from
@@ -124,6 +129,7 @@
   --text-small: var(--text-small);
   --text-fine: var(--text-fine);
   --text-label: var(--text-label);
+  --text-micro: var(--text-micro);
   --spacing-tight: var(--space-tight);
   --spacing-snug: var(--space-snug);
   --spacing-near: var(--space-near);
@@ -438,4 +444,35 @@ a {
   border-bottom: 1px solid var(--rule);
   padding-top: var(--row-y, 0.5rem);
   padding-bottom: var(--row-y, 0.5rem);
+}
+
+/*
+ * Section headings.
+ *
+ * Two shapes were written out by hand thirty-two times: the accent heading
+ * that opens a block, and the muted one that opens a column beside it. Being
+ * strings rather than a definition, they drifted — the same heading was 11px
+ * in one component and 10px in another, with a different rule beneath it.
+ *
+ * The Panel component renders the first of these, so a heading is the same
+ * thing whether it arrives as a component or a class.
+ */
+.panel-title,
+.panel-subtitle {
+  font-family: var(--font-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  border-bottom: 1px solid var(--rule);
+}
+
+.panel-title {
+  font-size: var(--text-label);
+  color: var(--accent);
+  padding-bottom: var(--space-snug);
+}
+
+.panel-subtitle {
+  font-size: var(--text-micro);
+  color: var(--muted);
+  padding-bottom: var(--space-tight);
 }

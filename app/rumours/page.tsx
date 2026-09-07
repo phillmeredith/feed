@@ -34,7 +34,7 @@ function ConfidenceChip({ level }: { level: Confidence }) {
         ? "text-faint border-rule"
         : "text-muted border-rule";
   return (
-    <span className={`kicker text-[9px] border px-2 py-1 ${colour}`}>
+    <span className={`kicker text-micro border px-2 py-1 ${colour}`}>
       {CONFIDENCE_LABEL[level]}
     </span>
   );
@@ -54,10 +54,10 @@ export default async function RumourBoard() {
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
         <div className="border-b border-rule pb-8">
-          <p className="kicker text-[10px] text-accent">
+          <p className="kicker text-micro text-accent">
             <Link href="/photography" className="hover:underline">Photography</Link>
           </p>
-          <h1 className="display text-[clamp(2.2rem,5.5vw,4rem)] mt-4">
+          <h1 className="display text-title mt-4">
             The rumour board
           </h1>
           <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
@@ -65,14 +65,14 @@ export default async function RumourBoard() {
             being reported — and marked when it turns out to be true. Rumour
             sites delete this the moment it becomes checkable.
           </p>
-          <p className="kicker text-[10px] text-faint mt-5">
+          <p className="kicker text-micro text-faint mt-5">
             {counts.outstanding} outstanding · {counts.resolved} since announced
           </p>
         </div>
 
         {outstanding.length > 0 && (
           <section className="mt-12">
-            <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+            <h2 className="panel-title">
               Still to come
             </h2>
             <div className="mt-6 flex flex-col">
@@ -82,7 +82,7 @@ export default async function RumourBoard() {
                   className="group border-b border-rule py-5 flex flex-wrap items-baseline gap-x-5 gap-y-2"
                 >
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-body font-semibold text-[17px] leading-snug">
+                    <h3 className="font-body font-semibold text-lede leading-snug">
                       <Link
                         href={`/story/${r.storyId}`}
                         className="group-hover:text-accent transition-colors"
@@ -90,7 +90,7 @@ export default async function RumourBoard() {
                         {r.headline}
                       </Link>
                     </h3>
-                    <p className="kicker text-[9px] text-faint mt-2">
+                    <p className="kicker text-micro text-faint mt-2">
                       {r.source}
                       <span className="mx-2 text-rule">/</span>
                       first heard{" "}
@@ -109,7 +109,7 @@ export default async function RumourBoard() {
 
         {resolved.length > 0 && (
           <section className="mt-16">
-            <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+            <h2 className="panel-title">
               Since announced
             </h2>
             <div className="mt-6 flex flex-col">
@@ -119,10 +119,10 @@ export default async function RumourBoard() {
                   className="group border-b border-rule py-5 flex flex-wrap items-baseline gap-x-5 gap-y-2"
                 >
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-body text-[16px] leading-snug text-muted">
+                    <h3 className="font-body text-body leading-snug text-muted">
                       {r.headline}
                     </h3>
-                    <p className="kicker text-[9px] text-faint mt-2">
+                    <p className="kicker text-micro text-faint mt-2">
                       {r.source}
                       <span className="mx-2 text-rule">/</span>
                       {(() => {
@@ -142,7 +142,7 @@ export default async function RumourBoard() {
                   </div>
                   <Link
                     href={`/gear/${r.resolved!.slug}`}
-                    className="kicker text-[9px] text-accent border border-accent-dim px-2 py-1 hover:bg-surface transition-colors"
+                    className="kicker text-micro text-accent border border-accent-dim px-2 py-1 hover:bg-surface transition-colors"
                   >
                     {r.resolved!.name} →
                   </Link>

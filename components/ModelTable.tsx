@@ -58,19 +58,19 @@ export function ModelTable({ models }: { models: ModelRelease[] }) {
         <table className="w-full min-w-[34rem] border-collapse font-meta text-sm">
           <thead>
             <tr className="border-b border-rule">
-              <th className="kicker text-[9px] text-muted text-left pb-3 pr-4">
+              <th className="kicker text-micro text-muted text-left pb-3 pr-4">
                 Model
               </th>
-              <th className="kicker text-[9px] text-muted text-left pb-3 pr-4">
+              <th className="kicker text-micro text-muted text-left pb-3 pr-4">
                 Lab
               </th>
-              <th className="kicker text-[9px] text-muted text-left pb-3 pr-4">
+              <th className="kicker text-micro text-muted text-left pb-3 pr-4">
                 Released
               </th>
-              <th className="kicker text-[9px] text-muted text-left pb-3 pr-4">
+              <th className="kicker text-micro text-muted text-left pb-3 pr-4">
                 Weights
               </th>
-              <th className="kicker text-[9px] text-muted text-right pb-3">
+              <th className="kicker text-micro text-muted text-right pb-3">
                 Hub likes
               </th>
             </tr>
@@ -88,7 +88,7 @@ export function ModelTable({ models }: { models: ModelRelease[] }) {
                 <td className="py-3 pr-4 text-muted">
                   {model.weights === "open" ? "Open" : "Closed"}
                 </td>
-                <td className="py-3 text-right text-muted tabular-nums">
+                <td className="py-3 text-right text-muted figures">
                   {model.weights === "open" ? compact(model.likes) : "—"}
                 </td>
               </tr>

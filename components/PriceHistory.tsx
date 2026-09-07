@@ -26,7 +26,7 @@ function Sparkline({ points, label }: { points: Observation[]; label: string }) 
 
   return (
     <div>
-      <p className="kicker text-[9px] text-faint">{label}</p>
+      <p className="kicker text-micro text-faint">{label}</p>
       <svg
         viewBox={`0 0 ${width} ${height}`}
         className="w-full h-16 mt-2"
@@ -69,7 +69,7 @@ export function PriceHistory({
   if (!enough) {
     return (
       <section className="mt-12 border-t border-rule pt-6">
-        <h2 className="kicker text-[11px] text-accent">Price history</h2>
+        <h2 className="kicker text-label text-accent">Price history</h2>
         <p className="font-serif italic text-lg text-muted mt-3 max-w-2xl">
           {started
             ? `Recording since ${started}. Nobody sells price history back to you, so this chart fills in from here — one reading a day.`
@@ -84,8 +84,8 @@ export function PriceHistory({
 
   return (
     <section className="mt-12 border-t border-rule pt-6">
-      <h2 className="kicker text-[11px] text-accent">Price history</h2>
-      <p className="text-[13px] text-muted mt-2">
+      <h2 className="kicker text-label text-accent">Price history</h2>
+      <p className="text-fine text-muted mt-2">
         {input.length} readings{started && ` since ${started}`}
         {inMove && inMove.changePct !== 0 && (
           <>

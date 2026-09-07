@@ -49,7 +49,7 @@ export function DeskTabs({
                 }}
               >
                 <span
-                  className={`kicker text-[11px] transition-colors ${
+                  className={`kicker text-label transition-colors ${
                     active
                       ? "text-accent font-semibold"
                       : "text-muted group-hover:text-paper"

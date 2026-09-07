@@ -143,7 +143,7 @@ export default async function Home() {
             </div>
 
             <div className="mt-16">
-              <h2 className="kicker text-[10px] text-accent border-b border-rule pb-3">
+              <h2 className="kicker text-micro text-accent border-b border-rule pb-3">
                 Latest across the desks
               </h2>
               {/* The heading's rule already divides the section, so the first

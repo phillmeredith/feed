@@ -42,7 +42,7 @@ export function SubNav({
             aria-current={current === group.slug ? "page" : undefined}
             className={navItemClass(current === group.slug)}
           >
-            <span className={labelClass(current === group.slug, "kicker text-[10px]")}>
+            <span className={labelClass(current === group.slug, "kicker text-micro")}>
               All {group.label}
               {current === group.slug && (
                 <span className="sr-only"> (current)</span>
@@ -96,7 +96,7 @@ export function SubNav({
                     <span
                       className={labelClass(
                         active,
-                        "kicker text-[10px]",
+                        "kicker text-micro",
                         "text-faint"
                       )}
                     >

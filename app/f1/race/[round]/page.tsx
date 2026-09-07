@@ -69,7 +69,7 @@ export default async function RacePage({
 
           <SubNav group="sport" current="f1" />
 
-          <p className="kicker text-[10px] text-accent mt-10">
+          <p className="kicker text-micro text-accent mt-10">
             <Link href="/f1" className="hover:underline">
               Formula One
             </Link>
@@ -77,7 +77,7 @@ export default async function RacePage({
             Round {race.round} of {races().length}
           </p>
 
-          <h1 className="display text-[clamp(2.2rem,5.5vw,4rem)] mt-4">
+          <h1 className="display text-title mt-4">
             {race.name}
           </h1>
           <p className="font-serif text-lg sm:text-xl text-muted mt-4">
@@ -89,7 +89,7 @@ export default async function RacePage({
           <div>
             <section>
               <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-                <h2 className="kicker text-[11px] text-accent">
+                <h2 className="kicker text-label text-accent">
                   {done ? "How it finished" : "When it runs"}
                 </h2>
                 {done && <SpoilerToggle />}
@@ -102,16 +102,16 @@ export default async function RacePage({
                       key={sessionEntry.name}
                       className="border-t border-rule pt-4"
                     >
-                      <p className="kicker text-[9px] text-faint">
+                      <p className="kicker text-micro text-faint">
                         {sportDate(sessionEntry.at, { weekday: "long" })}
                       </p>
-                      <p className="font-body font-semibold text-[16px] mt-2">
+                      <p className="font-body font-semibold text-body mt-2">
                         {sessionEntry.name}
                       </p>
-                      <p className="display text-2xl mt-2 tabular-nums">
+                      <p className="display text-2xl mt-2 figures">
                         {sportTime(sessionEntry.at)}
                       </p>
-                      <p className="kicker text-[9px] text-faint mt-1">
+                      <p className="kicker text-micro text-faint mt-1">
                         {sportDate(sessionEntry.at, {
                           day: "numeric",
                           month: "short",
@@ -131,19 +131,19 @@ export default async function RacePage({
                           key={r.position}
                           className="border-t border-rule py-4 flex items-baseline gap-4"
                         >
-                          <span className="kicker text-[10px] text-accent w-8 shrink-0">
+                          <span className="kicker text-micro text-accent w-8 shrink-0">
                             {PODIUM[i]}
                           </span>
                           <span className="min-w-0">
                             <span className="display text-2xl block">
                               {r.driver}
                             </span>
-                            <span className="text-[13px] text-muted">
+                            <span className="text-fine text-muted">
                               {r.constructor}
                               {r.time && (
                                 <>
                                   <span className="mx-2 text-rule">/</span>
-                                  <span className="tabular-nums">{r.time}</span>
+                                  <span className="figures">{r.time}</span>
                                 </>
                               )}
                             </span>
@@ -211,7 +211,7 @@ export default async function RacePage({
 
             {reels.length > 0 && (
               <section className="mt-20">
-                <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+                <h2 className="panel-title">
                   Every session on video
                 </h2>
                 <div className="mt-6">
@@ -224,7 +224,7 @@ export default async function RacePage({
 
             {coverage.length > 0 && (
               <section className="mt-20">
-                <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+                <h2 className="panel-title">
                   Written about this round
                 </h2>
                 <div className="mt-8 grid gap-x-12 gap-y-4 sm:grid-cols-2">
@@ -237,17 +237,17 @@ export default async function RacePage({
           </div>
 
           <aside className="lg:border-l lg:border-rule lg:pl-12">
-            <h2 className="kicker text-[10px] text-muted border-b border-rule pb-2">
+            <h2 className="panel-subtitle">
               {done ? "How the weekend ran" : "The circuit"}
             </h2>
             {done && race.sessions && race.sessions.length > 0 ? (
               <ol className="mt-2 divide-y divide-[var(--rule)]">
                 {race.sessions.map((sessionEntry) => (
                   <li key={sessionEntry.name} className="py-3">
-                    <p className="font-body font-semibold text-[15px]">
+                    <p className="font-body font-semibold text-small">
                       {sessionEntry.name}
                     </p>
-                    <p className="kicker text-[9px] text-faint mt-1">
+                    <p className="kicker text-micro text-faint mt-1">
                       {sportDate(sessionEntry.at, {
                         weekday: "long",
                         day: "numeric",
@@ -261,8 +261,8 @@ export default async function RacePage({
               </ol>
             ) : (
               <div className="mt-4">
-                <p className="font-body text-[15px]">{race.circuitName}</p>
-                <p className="kicker text-[9px] text-faint mt-2">
+                <p className="font-body text-small">{race.circuitName}</p>
+                <p className="kicker text-micro text-faint mt-2">
                   {race.locality}, {race.country}
                 </p>
               </div>
@@ -270,7 +270,7 @@ export default async function RacePage({
 
             {leader && (
               <div className="mt-12">
-                <h2 className="kicker text-[10px] text-muted border-b border-rule pb-2">
+                <h2 className="panel-subtitle">
                   Championship
                 </h2>
                 <div className="mt-4">
@@ -287,7 +287,7 @@ export default async function RacePage({
               </div>
             )}
 
-            <nav className="mt-12 border-t border-rule pt-6 flex items-center justify-between kicker text-[10px]">
+            <nav className="mt-12 border-t border-rule pt-6 flex items-center justify-between kicker text-micro">
               {previous ? (
                 <Link
                   href={`/f1/race/${previous.round}`}

@@ -60,10 +60,10 @@ function LatestModels() {
           const entry = matchByName(model.name);
           const body = (
             <>
-              <span className="font-body text-[15px] group-hover:text-accent transition-colors">
+              <span className="font-body text-small group-hover:text-accent transition-colors">
                 {model.name}
               </span>
-              <span className="text-[13px] text-faint">
+              <span className="text-fine text-faint">
                 {" "}
                 — {model.lab}
                 {model.weights === "open" ? ", open weights" : ""}
@@ -74,7 +74,7 @@ function LatestModels() {
           return (
             <li key={model.name} className="break-inside-avoid py-2.5">
               <span className="group flex items-baseline gap-4">
-                <span className="kicker text-[9px] text-faint w-20 shrink-0">
+                <span className="kicker text-micro text-faint w-20 shrink-0">
                   {month(model.releasedAt)}
                 </span>
                 <span className="min-w-0">
@@ -112,14 +112,14 @@ function RecentlyReleased() {
               href={`/gear/${gearSlug(item.name)}`}
               className="group flex items-baseline gap-4"
             >
-              <span className="kicker text-[9px] text-faint w-20 shrink-0">
+              <span className="kicker text-micro text-faint w-20 shrink-0">
                 {month(item.announcedAt)}
               </span>
               <span className="min-w-0">
-                <span className="font-body text-[15px] group-hover:text-accent transition-colors">
+                <span className="font-body text-small group-hover:text-accent transition-colors">
                   {item.name}
                 </span>
-                <span className="text-[13px] text-faint">
+                <span className="text-fine text-faint">
                   {" "}
                   — {item.kind === "lens" ? "lens" : "camera"}
                   {item.independent ? ", third party" : ""}
@@ -177,11 +177,11 @@ function WhereThingsStand() {
       <div className="mt-6 grid gap-10 sm:grid-cols-3">
         {lines.map((line) => (
           <Link key={line.href} href={line.href} className="group block">
-            <p className="kicker text-[9px] text-faint">{line.desk}</p>
+            <p className="kicker text-micro text-faint">{line.desk}</p>
             <p className="display text-2xl mt-2 group-hover:text-accent transition-colors">
               {line.lead}
             </p>
-            <p className="font-serif text-[15px] text-muted mt-1">
+            <p className="font-serif text-small text-muted mt-1">
               {line.detail}
             </p>
           </Link>
@@ -207,14 +207,14 @@ function Panel({
   return (
     <section>
       <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-        <h2 className="kicker text-[11px] text-accent">{title}</h2>
+        <h2 className="kicker text-label text-accent">{title}</h2>
         <p className="font-serif italic text-xs text-faint">{note}</p>
       </div>
       {children}
       {href && cta && (
         <Link
           href={href}
-          className="kicker text-[10px] text-muted hover:text-accent transition-colors mt-6 inline-block"
+          className="kicker text-micro text-muted hover:text-accent transition-colors mt-6 inline-block"
         >
           {cta} →
         </Link>

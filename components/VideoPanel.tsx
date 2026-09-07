@@ -62,10 +62,10 @@ function Item({ video }: { video: Video }) {
       </div>
 
       <figcaption className="mt-3">
-        <p className="font-body font-semibold text-[15px] leading-snug line-clamp-2">
+        <p className="font-body font-semibold text-small leading-snug line-clamp-2">
           {video.title}
         </p>
-        <p className="kicker text-[9px] text-faint mt-2">
+        <p className="kicker text-micro text-faint mt-2">
           {video.channel}
           <span className="mx-2 text-rule">/</span>
           {when}
@@ -90,7 +90,7 @@ export function VideoPanel({
 
   return (
     <section>
-      <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+      <h2 className="panel-title">
         {title}
       </h2>
       {standfirst && (

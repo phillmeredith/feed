@@ -30,8 +30,8 @@ function Change({ pct }: { pct: number }) {
   const flat = Math.abs(pct) < 0.005;
   return (
     <span
-      className={`kicker text-[9px] ${
-        flat ? "text-faint" : pct > 0 ? "text-accent" : "text-negative"
+      className={`kicker text-micro ${
+        flat ? "text-faint" : pct > 0 ? "text-positive" : "text-negative"
       }`}
     >
       {flat ? "—" : `${pct > 0 ? "▲" : "▼"}${Math.abs(pct).toFixed(2)}%`}
@@ -58,7 +58,7 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
         {/* The full desk list plus the wordmark and dateline needs a little
             over 1000px to sit on one line, so it waits for `lg`. Below that —
             a phone in landscape, a tablet in portrait — the burger takes it. */}
-        <nav className="hidden lg:flex items-center gap-6 kicker text-[11px] text-muted">
+        <nav className="hidden lg:flex items-center gap-6 kicker text-label text-muted">
           {navItems().map((item) => (
             <Link
               key={item.slug}
@@ -95,10 +95,10 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
                     key={`${pass}-${quote.symbol}`}
                     className="flex items-baseline gap-2 pr-10 py-3"
                   >
-                    <span className="kicker text-[9px] text-faint">
+                    <span className="kicker text-micro text-faint">
                       {quote.label}
                     </span>
-                    <span className="font-body font-semibold text-[13px]">
+                    <span className="font-body font-semibold text-fine">
                       {formatPrice(quote)}
                     </span>
                     <Change pct={quote.changePct} />
@@ -110,14 +110,14 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
                     key={`${pass}-${day.day}`}
                     className="flex items-baseline gap-2 pr-10 py-3"
                   >
-                    <span className="kicker text-[9px] text-faint">{day.day}</span>
-                    <span className="font-body font-semibold text-[13px]">
+                    <span className="kicker text-micro text-faint">{day.day}</span>
+                    <span className="font-body font-semibold text-fine">
                       {day.high}°
                     </span>
-                    <span className="font-body text-[13px] text-faint">
+                    <span className="font-body text-fine text-faint">
                       {day.low}°
                     </span>
-                    <span className="kicker text-[9px] text-faint">
+                    <span className="kicker text-micro text-faint">
                       {day.condition}
                     </span>
                   </span>

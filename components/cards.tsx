@@ -20,7 +20,7 @@ export function Meta({
 }) {
   const desk = categoryBySlug(article.category);
   return (
-    <p className="kicker text-[9px] text-faint">
+    <p className="kicker text-micro text-faint">
       {showDesk && desk && (
         <>
           <span className="text-accent">{desk.short}</span>
@@ -51,12 +51,12 @@ export function LeadCard({ article }: { article: Article }) {
           }
         >
           <div className="order-2 lg:order-1">
-            <p className="kicker text-[11px] text-accent">{desk?.label}</p>
-            <h2 className="headline mt-4 text-[clamp(2rem,4.2vw,3.5rem)] group-hover:text-accent transition-colors">
+            <p className="kicker text-label text-accent">{desk?.label}</p>
+            <h2 className="headline mt-4 text-title group-hover:text-accent transition-colors">
               <SpoilerHeadline article={article} />
             </h2>
             {article.dek && (
-              <p className="mt-5 text-[17px] leading-relaxed text-muted max-w-xl">
+              <p className="mt-5 text-lede leading-relaxed text-muted max-w-xl">
                 {article.dek}
               </p>
             )}
@@ -92,14 +92,14 @@ export function FeatureCard({ article }: { article: Article }) {
           <Media src={article.image} ratio="wide" onFail={() => setBroken(true)} />
         )}
         <h3
-          className={`headline text-[21px] line-clamp-2 group-hover:text-accent transition-colors ${
+          className={`headline text-subhead line-clamp-2 group-hover:text-accent transition-colors ${
             article.image ? "mt-4" : ""
           }`}
         >
           <SpoilerHeadline article={article} />
         </h3>
         {article.dek && (
-          <p className="mt-3 text-[15px] leading-relaxed text-muted line-clamp-3">
+          <p className="mt-3 text-small leading-relaxed text-muted line-clamp-3">
             {article.dek}
           </p>
         )}
@@ -137,12 +137,12 @@ export function StackedLead({ article }: { article: Article }) {
             onFail={() => setBroken(true)}
           />
         )}
-        <p className="kicker text-[11px] text-accent mt-6">{desk?.label}</p>
-        <h2 className="headline mt-3 text-[clamp(1.9rem,3.2vw,2.9rem)] group-hover:text-accent transition-colors">
+        <p className="kicker text-label text-accent mt-6">{desk?.label}</p>
+        <h2 className="headline mt-3 text-headline group-hover:text-accent transition-colors">
           <SpoilerHeadline article={article} />
         </h2>
         {article.dek && (
-          <p className="mt-4 text-[17px] leading-relaxed text-muted max-w-2xl">
+          <p className="mt-4 text-lede leading-relaxed text-muted max-w-2xl">
             {article.dek}
           </p>
         )}
@@ -174,7 +174,7 @@ export function ListCard({
           * on a narrow column; the single-line rule returns at `sm`, where the
           * grids switch to `minmax(0, 1fr)` tracks and can clip safely.
           */}
-        <h3 className="font-body font-semibold text-[17px] leading-snug break-words line-clamp-2 sm:line-clamp-none sm:truncate group-hover:text-accent transition-colors">
+        <h3 className="font-body font-semibold text-lede leading-snug break-words line-clamp-2 sm:line-clamp-none sm:truncate group-hover:text-accent transition-colors">
           <SpoilerHeadline article={article} />
         </h3>
         <div className="mt-2">
@@ -202,7 +202,7 @@ export function ThumbCard({ article }: { article: Article }) {
           />
         )}
         <div className="min-w-0">
-          <h3 className="font-body font-semibold text-[15px] leading-snug line-clamp-2 group-hover:text-accent transition-colors">
+          <h3 className="font-body font-semibold text-small leading-snug line-clamp-2 group-hover:text-accent transition-colors">
             <SpoilerHeadline article={article} />
           </h3>
           <div className="mt-2">

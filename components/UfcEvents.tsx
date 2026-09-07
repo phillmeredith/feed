@@ -40,10 +40,10 @@ function Bout({ fight, reveal }: { fight: Fight; reveal: boolean }) {
 
   return (
     <li className="border-t border-rule py-3 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-      <span className="kicker text-[9px] text-faint w-28 shrink-0">
+      <span className="kicker text-micro text-faint w-28 shrink-0">
         {fight.weightClass}
       </span>
-      <span className="font-body text-[15px] min-w-0">
+      <span className="font-body text-small min-w-0">
         <span
           className={
             reveal && fight.winner === red
@@ -53,7 +53,7 @@ function Bout({ fight, reveal }: { fight: Fight; reveal: boolean }) {
         >
           {red}
         </span>
-        <span className="mx-2 text-faint text-[13px]">v</span>
+        <span className="mx-2 text-faint text-fine">v</span>
         <span
           className={
             reveal && fight.winner === blue
@@ -65,7 +65,7 @@ function Bout({ fight, reveal }: { fight: Fight; reveal: boolean }) {
         </span>
       </span>
       {reveal && result && (
-        <span className="kicker text-[9px] text-accent ml-auto">{result}</span>
+        <span className="kicker text-micro text-accent ml-auto">{result}</span>
       )}
     </li>
   );
@@ -91,7 +91,7 @@ function MainCard({ event, reveal }: { event: UfcEvent; reveal: boolean }) {
 
   return (
     <>
-      <h3 className="kicker text-[10px] text-muted mt-8">Main card</h3>
+      <h3 className="kicker text-micro text-muted mt-8">Main card</h3>
       <ul className="mt-2">
         {[...card].reverse().map((fight, i) => (
           <Bout key={`${fight.fighters.join()}-${i}`} fight={fight} reveal={reveal} />
@@ -103,7 +103,7 @@ function MainCard({ event, reveal }: { event: UfcEvent; reveal: boolean }) {
           {[...reels].reverse().map(({ fight, videos }) => (
             <div key={fight.fighters.join()}>
               <HighlightReel highlights={videos.slice(0, 1)} />
-              <p className="font-body font-semibold text-[14px] leading-snug mt-1">
+              <p className="font-body font-semibold text-small leading-snug mt-1">
                 {fight.fighters.join(" v ")}
               </p>
             </div>
@@ -121,7 +121,7 @@ function Prelims({ event, reveal }: { event: UfcEvent; reveal: boolean }) {
 
   return (
     <details className="group mt-8">
-      <summary className="kicker text-[10px] text-muted hover:text-accent cursor-pointer list-none">
+      <summary className="kicker text-micro text-muted hover:text-accent cursor-pointer list-none">
         <span className="group-open:hidden">
           Prelims, {card.length} bouts →
         </span>
@@ -160,7 +160,7 @@ export function UfcNextCard() {
     <div className="mt-12 flex flex-col gap-20">
       {next && (
         <section>
-          <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+          <h2 className="panel-title">
             Next card
           </h2>
           <p className="display text-2xl sm:text-3xl mt-6">{next.name}</p>
@@ -198,12 +198,12 @@ export function UfcNextCard() {
       {latest && (
         <section>
           <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-            <h2 className="kicker text-[11px] text-accent">
+            <h2 className="kicker text-label text-accent">
               Last card · {latest.name}
             </h2>
             <SpoilerToggle />
           </div>
-          <p className="kicker text-[9px] text-faint mt-5">
+          <p className="kicker text-micro text-faint mt-5">
             {eventDate(latest.date)}
             {latest.location && (
               <>
@@ -220,7 +220,7 @@ export function UfcNextCard() {
 
           {/* The bill itself is not a spoiler, so it stays readable. */}
           <div className="mt-8">
-            <p className="kicker text-[10px] text-muted">Who fought</p>
+            <p className="kicker text-micro text-muted">Who fought</p>
             <MainCard event={latest} reveal={false} />
           </div>
         </section>
@@ -253,10 +253,10 @@ export function UfcAllCards() {
       {earlier.length > 0 && (
         <section>
           <div className="flex items-end justify-between gap-6 flex-wrap border-b border-rule pb-3">
-            <h2 className="kicker text-[11px] text-accent">
+            <h2 className="kicker text-label text-accent">
               Every card of {store.season}
             </h2>
-            <p className="kicker text-[9px] text-faint">
+            <p className="kicker text-micro text-faint">
               {done.length} fought
             </p>
           </div>
@@ -267,16 +267,16 @@ export function UfcAllCards() {
               return (
                 <details key={event.id} className="group border-t border-rule py-5">
                   <summary className="cursor-pointer list-none flex flex-wrap items-baseline gap-x-5 gap-y-1">
-                    <span className="kicker text-[9px] text-faint w-24 shrink-0">
+                    <span className="kicker text-micro text-faint w-24 shrink-0">
                       {eventDate(event.date)}
                     </span>
-                    <span className="font-body font-semibold text-[16px] group-hover:text-accent transition-colors">
+                    <span className="font-body font-semibold text-body group-hover:text-accent transition-colors">
                       {event.name}
                     </span>
                     {headline?.winner && (
                       <span className="ml-auto">
                         <SpoilerGuard label="Main event">
-                          <span className="text-[14px] text-accent">
+                          <span className="text-small text-accent">
                             {headline.winner}
                           </span>
                         </SpoilerGuard>

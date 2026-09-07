@@ -64,7 +64,7 @@ export function SpoilerToggle() {
       type="button"
       onClick={() => set(!show)}
       aria-pressed={show}
-      className="kicker text-[10px] text-muted hover:text-accent transition-colors border-b border-rule pb-1"
+      className="kicker text-micro text-muted hover:text-accent transition-colors border-b border-rule pb-1"
     >
       Results {show ? "showing" : "hidden"}
       <span className="text-faint"> · {show ? "hide" : "show"} them</span>

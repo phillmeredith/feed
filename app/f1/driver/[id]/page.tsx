@@ -34,8 +34,8 @@ export async function generateMetadata({
 function Stat({ label, value }: { label: string; value: string | number }) {
   return (
     <div className="border-t-2 border-accent-dim pt-3">
-      <dt className="kicker text-[9px] text-faint">{label}</dt>
-      <dd className="display text-[30px] mt-1.5 tabular-nums">{value}</dd>
+      <dt className="kicker text-micro text-faint">{label}</dt>
+      <dd className="display text-headline mt-1.5 figures">{value}</dd>
     </div>
   );
 }
@@ -66,12 +66,12 @@ export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]"
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
         <div className="border-b border-rule pb-8">
-          <p className="kicker text-[10px] text-accent">
+          <p className="kicker text-micro text-accent">
             <Link href="/f1" className="hover:underline">The season</Link>
             <span className="mx-2 text-rule">/</span>
             {d.constructor}
           </p>
-          <h1 className="display text-[clamp(2.2rem,5.5vw,4rem)] mt-4">
+          <h1 className="display text-title mt-4">
             {name}
           </h1>
           <p className="font-serif italic text-lg text-muted mt-3">
@@ -89,7 +89,7 @@ export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]"
 
         {results.length > 0 && (
           <section className="mt-14">
-            <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+            <h2 className="panel-title">
               This season · best finish P{best}
             </h2>
             <div className="mt-5 flex flex-wrap gap-2">
@@ -99,15 +99,15 @@ export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]"
                   className="border border-rule bg-surface px-3 py-2 min-w-[92px]"
                   title={r.race}
                 >
-                  <p className="kicker text-[9px] text-faint">R{r.round}</p>
+                  <p className="kicker text-micro text-faint">R{r.round}</p>
                   <p
-                    className={`display text-[19px] mt-1 tabular-nums ${
+                    className={`display text-subhead mt-1 figures ${
                       r.position <= 3 ? "text-accent" : ""
                     }`}
                   >
                     P{r.position}
                   </p>
-                  <p className="text-[11px] text-muted mt-0.5 truncate">
+                  <p className="text-label text-muted mt-0.5 truncate">
                     {r.country}
                   </p>
                 </div>
@@ -118,7 +118,7 @@ export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]"
 
         {teammates.length > 0 && (
           <section className="mt-14 border-t border-rule pt-6">
-            <h2 className="kicker text-[11px] text-accent">
+            <h2 className="kicker text-label text-accent">
               Against the other side of the garage
             </h2>
             <div className="mt-4 flex flex-wrap gap-3">
@@ -128,10 +128,10 @@ export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]"
                   href={`/f1/driver/${t.driverId}`}
                   className="group border border-rule bg-surface px-4 py-3 hover:border-accent-dim transition-colors"
                 >
-                  <span className="font-body font-semibold text-[15px] group-hover:text-accent transition-colors">
+                  <span className="font-body font-semibold text-small group-hover:text-accent transition-colors">
                     {driverName(t)}
                   </span>
-                  <span className="kicker text-[9px] text-faint block mt-1">
+                  <span className="kicker text-micro text-faint block mt-1">
                     P{t.position} · {t.points} points
                   </span>
                 </Link>
@@ -142,7 +142,7 @@ export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]"
 
         {stories.length > 0 && (
           <section className="mt-14">
-            <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
+            <h2 className="panel-title">
               On this desk
             </h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

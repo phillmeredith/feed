@@ -19,7 +19,7 @@ export function ClimatePanel() {
   return (
     <section>
       <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-        <h2 className="kicker text-[11px] text-accent">The state of the system</h2>
+        <h2 className="kicker text-label text-accent">The state of the system</h2>
         <p className="font-serif italic text-xs text-faint">
           Measured, not modelled
         </p>
@@ -44,9 +44,9 @@ function Dial({ indicator }: { indicator: Indicator }) {
 
   return (
     <figure>
-      <p className="kicker text-[9px] text-faint">{indicator.label}</p>
+      <p className="kicker text-micro text-faint">{indicator.label}</p>
 
-      <p className="display text-[clamp(2rem,3.4vw,2.8rem)] leading-none mt-3">
+      <p className="display text-headline leading-none mt-3">
         {headline}
         {indicator.key === "co2" && (
           <span className="font-serif italic text-lg text-muted ml-2">ppm</span>
@@ -54,13 +54,13 @@ function Dial({ indicator }: { indicator: Indicator }) {
       </p>
 
       {indicator.key === "enso" && (
-        <p className="font-body text-[15px] text-muted mt-2 tabular-nums">
+        <p className="font-body text-small text-muted mt-2 figures">
           ONI {indicator.value > 0 ? "+" : ""}
           {indicator.value.toFixed(2)} · {indicator.updated}
         </p>
       )}
       {indicator.yearChange !== undefined && (
-        <p className="font-body text-[15px] text-muted mt-2 tabular-nums">
+        <p className="font-body text-small text-muted mt-2 figures">
           {indicator.yearChange >= 0 ? "+" : ""}
           {indicator.yearChange} {indicator.unit} on a year ago
         </p>
@@ -69,10 +69,10 @@ function Dial({ indicator }: { indicator: Indicator }) {
       <Spark indicator={indicator} />
 
       <figcaption className="mt-4">
-        <p className="font-serif text-[15px] leading-relaxed text-muted">
+        <p className="font-serif text-small leading-relaxed text-muted">
           {indicator.note}
         </p>
-        <p className="kicker text-[9px] text-faint mt-3">
+        <p className="kicker text-micro text-faint mt-3">
           {indicator.source} · {indicator.updated}
         </p>
       </figcaption>
