@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 /**
  * Where the sun is, and how much of the day is left.
@@ -24,13 +24,18 @@ export function DaylightArc({
   sunriseLabel: string;
   sunsetLabel: string;
 }) {
-  // Rendered from the server's clock first, then corrected to the reader's.
-  const [now, setNow] = useState(() => Date.parse(sunrise));
-  useEffect(() => {
-    setNow(Date.now());
-    const timer = setInterval(() => setNow(Date.now()), 60_000);
-    return () => clearInterval(timer);
-  }, []);
+  /*
+   * The clock is an external system, so it is subscribed to rather than
+   * copied into state by an effect — which is both what the API is for and
+   * the only way to render the server's snapshot without a cascading render
+   * on mount. The snapshot is rounded to the minute so it stays referentially
+   * stable between ticks.
+   */
+  const now = useSyncExternalStore(
+    subscribeToTheMinute,
+    () => Math.floor(Date.now() / 60_000) * 60_000,
+    () => Date.parse(sunrise)
+  );
 
   const rise = Date.parse(sunrise);
   const set = Date.parse(sunset);
@@ -125,6 +130,11 @@ export function DaylightArc({
       </figcaption>
     </figure>
   );
+}
+
+function subscribeToTheMinute(onChange: () => void) {
+  const timer = setInterval(onChange, 60_000);
+  return () => clearInterval(timer);
 }
 
 function hoursAndMinutes(minutes: number) {
