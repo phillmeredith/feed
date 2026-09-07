@@ -4,7 +4,7 @@ export const categories: Category[] = [
   {
     slug: "ai",
     group: "technology",
-    label: "AI Models",
+    label: "AI",
     short: "AI",
     dek: "New releases from the labs",
     standfirst:

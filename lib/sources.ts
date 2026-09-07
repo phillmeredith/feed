@@ -27,9 +27,11 @@ export interface Source {
 export const sources: Source[] = [
   // AI models
   { name: "Google DeepMind", url: "https://deepmind.google/blog/rss.xml", category: "ai", weight: 10, firstParty: true, thumbnailsOnly: true },
-  { name: "The Register", url: "https://www.theregister.com/software/ai_ml/headlines.atom", category: "ai", weight: 8, cap: 8 },
-  { name: "Ars Technica", url: "https://feeds.arstechnica.com/arstechnica/technology-lab", category: "ai", weight: 8, cap: 8, generalist: true },
-  { name: "Hugging Face", url: "https://huggingface.co/blog/feed.xml", category: "ai", weight: 7 },
+  { name: "The Register", url: "https://www.theregister.com/headlines.atom", category: "hardware", weight: 8, cap: 8, generalist: true },
+  { name: "Ars Technica", url: "https://feeds.arstechnica.com/arstechnica/index", category: "hardware", weight: 8, cap: 8, generalist: true },
+  { name: "TechCrunch", url: "https://techcrunch.com/category/artificial-intelligence/feed/", category: "ai", weight: 7, cap: 8 },
+  { name: "The Verge", url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", category: "ai", weight: 7, cap: 6 },
+  { name: "Hugging Face", url: "https://huggingface.co/blog/feed.xml", category: "ai", weight: 6 },
   { name: "Google Research", url: "https://research.google/blog/rss/", category: "ai", weight: 6 },
 
   // Hardware

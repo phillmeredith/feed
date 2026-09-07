@@ -235,7 +235,15 @@ function similarity(a: Set<string>, b: Set<string>) {
 
 /** Re-desks stories that broad-remit outlets file under the wrong section. */
 const ROUTES: [RegExp, CategorySlug][] = [
-  [/\b(gpt|chatgpt|claude|gemini|llama|mistral|llm|openai|anthropic|deepmind|hugging face|copilot)\b/i, "ai"],
+  /*
+   * Broadened because two general tech outlets now feed this desk, and they
+   * write about the field in words the old list didn't have: model names
+   * alone missed anything about the labs, the chips or the training itself.
+   */
+  [
+    /\b(gpt|chatgpt|claude|gemini|llama|mistral|llm|openai|anthropic|deepmind|hugging face|copilot|a\.?i\.?|artificial intelligence|machine learning|neural net\w*|transformer model|language model|chatbot|inference|training run|nvidia|datacent\w+ ai)\b/i,
+    "ai",
+  ],
   [/\b(lens|mirrorless|medium format|\d+mm|f\/\d|camera sensor|photographer)\b/i, "cameras"],
   [/\b(electric (car|vehicle|suv|truck)|\bev\b|charging network|rivian|polestar)\b/i, "vehicles"],
 ];
