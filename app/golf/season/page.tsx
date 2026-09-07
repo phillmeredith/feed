@@ -20,7 +20,7 @@ export default function GolfSeasonPage() {
       page={1}
       tab="season"
       above={<GolfAllEvents />}
-      feed={false}
+      feed="none"
     />
   );
 }

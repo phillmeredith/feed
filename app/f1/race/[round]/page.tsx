@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
 import { SubNav } from "@/components/SubNav";
-import { SpoilerGuard, SpoilerToggle } from "@/components/SpoilerGuard";
 import { HighlightReel } from "@/components/HighlightReel";
 import { ListCard } from "@/components/cards";
 import { LastUpdated } from "@/components/EventStatus";
@@ -92,7 +91,6 @@ export default async function RacePage({
                 <h2 className="kicker text-label text-accent">
                   {done ? "How it finished" : "When it runs"}
                 </h2>
-                {done && <SpoilerToggle />}
               </div>
 
               {!done && race.sessions && race.sessions.length > 0 && (
@@ -100,7 +98,7 @@ export default async function RacePage({
                   {race.sessions.map((sessionEntry) => (
                     <li
                       key={sessionEntry.name}
-                      className="border-t border-rule pt-4"
+                      className=""
                     >
                       <p className="kicker text-micro text-faint">
                         {sportDate(sessionEntry.at, { weekday: "long" })}
@@ -124,82 +122,80 @@ export default async function RacePage({
 
               {done ? (
                 <div className="mt-6">
-                  <SpoilerGuard label="Classification">
-                    <ol>
-                      {(race.results ?? []).slice(0, 3).map((r, i) => (
-                        <li
-                          key={r.position}
-                          className="border-t border-rule py-4 flex items-baseline gap-4"
-                        >
-                          <span className="kicker text-micro text-accent w-8 shrink-0">
-                            {PODIUM[i]}
+                  <ol>
+                    {(race.results ?? []).slice(0, 3).map((r, i) => (
+                      <li
+                        key={r.position}
+                        className="py-3 flex items-baseline gap-4"
+                      >
+                        <span className="kicker text-micro text-accent w-8 shrink-0">
+                          {PODIUM[i]}
+                        </span>
+                        <span className="min-w-0">
+                          <span className="display text-2xl block">
+                            {r.driver}
                           </span>
-                          <span className="min-w-0">
-                            <span className="display text-2xl block">
+                          <span className="text-fine text-muted">
+                            {r.constructor}
+                            {r.time && (
+                              <>
+                                <span className="mx-2 text-rule">/</span>
+                                <span className="figures">{r.time}</span>
+                              </>
+                            )}
+                          </span>
+                        </span>
+                      </li>
+                    ))}
+                  </ol>
+
+                  <div className="mt-10" data-density="reference">
+                    <DataTable
+                      caption={`Full classification, ${(race.results ?? []).length} drivers`}
+                      rows={race.results ?? []}
+                      rowKey={(r) => String(r.position)}
+                      columns={[
+                        {
+                          key: "pos",
+                          header: "#",
+                          numeric: true,
+                          width: "3rem",
+                          cell: (r) => (
+                            <span className="text-faint">{r.position}</span>
+                          ),
+                        },
+                        {
+                          key: "driver",
+                          header: "Driver",
+                          cell: (r) => (
+                            <span className="font-body font-semibold">
                               {r.driver}
                             </span>
-                            <span className="text-fine text-muted">
+                          ),
+                        },
+                        {
+                          key: "team",
+                          header: "Team",
+                          cell: (r) => (
+                            <span className="text-muted text-fine">
                               {r.constructor}
-                              {r.time && (
-                                <>
-                                  <span className="mx-2 text-rule">/</span>
-                                  <span className="figures">{r.time}</span>
-                                </>
-                              )}
                             </span>
-                          </span>
-                        </li>
-                      ))}
-                    </ol>
-
-                    <div className="mt-10" data-density="reference">
-                      <DataTable
-                        caption={`Full classification, ${(race.results ?? []).length} drivers`}
-                        rows={race.results ?? []}
-                        rowKey={(r) => String(r.position)}
-                        columns={[
-                          {
-                            key: "pos",
-                            header: "#",
-                            numeric: true,
-                            width: "3rem",
-                            cell: (r) => (
-                              <span className="text-faint">{r.position}</span>
-                            ),
-                          },
-                          {
-                            key: "driver",
-                            header: "Driver",
-                            cell: (r) => (
-                              <span className="font-body font-semibold">
-                                {r.driver}
-                              </span>
-                            ),
-                          },
-                          {
-                            key: "team",
-                            header: "Team",
-                            cell: (r) => (
-                              <span className="text-muted text-fine">
-                                {r.constructor}
-                              </span>
-                            ),
-                          },
-                          {
-                            key: "time",
-                            header: "Time / status",
-                            align: "right",
-                            numeric: true,
-                            cell: (r) => (
-                              <span className="text-muted text-fine">
-                                {r.time ?? "—"}
-                              </span>
-                            ),
-                          },
-                        ]}
-                      />
-                    </div>
-                  </SpoilerGuard>
+                          ),
+                        },
+                        {
+                          key: "time",
+                          header: "Time / status",
+                          align: "right",
+                          numeric: true,
+                          cell: (r) => (
+                            <span className="text-muted text-fine">
+                              {r.time ?? "—"}
+                            </span>
+                          ),
+                        },
+                      ]}
+                    />
+                  </div>
                 </div>
               ) : (
                 <p className="font-serif text-lg text-muted mt-8">
@@ -215,9 +211,7 @@ export default async function RacePage({
                   Every session on video
                 </h2>
                 <div className="mt-6">
-                  <SpoilerGuard label="Highlights">
-                    <HighlightReel highlights={reels} />
-                  </SpoilerGuard>
+                  <HighlightReel highlights={reels} />
                 </div>
               </section>
             )}
@@ -274,15 +268,13 @@ export default async function RacePage({
                   Championship
                 </h2>
                 <div className="mt-4">
-                  <SpoilerGuard label="Championship leader">
-                    <p className="font-serif text-lg text-muted">
-                      <span className="text-paper">
-                        {leader.givenName} {leader.familyName}
-                      </span>{" "}
-                      leads on {leader.points} points after{" "}
-                      {races().filter((r) => r.results?.length).length} rounds.
-                    </p>
-                  </SpoilerGuard>
+                  <p className="font-serif text-lg text-muted">
+                    <span className="text-paper">
+                      {leader.givenName} {leader.familyName}
+                    </span>{" "}
+                    leads on {leader.points} points after{" "}
+                    {races().filter((r) => r.results?.length).length} rounds.
+                  </p>
                 </div>
               </div>
             )}

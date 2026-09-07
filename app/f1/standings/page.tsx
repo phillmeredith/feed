@@ -20,7 +20,7 @@ export default function F1StandingsPage() {
       page={1}
       tab="standings"
       above={<F1Standings />}
-      feed={false}
+      feed="none"
     />
   );
 }

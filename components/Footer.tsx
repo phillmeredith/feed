@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { navItems } from "@/lib/categories";
 import { references } from "@/lib/reference";
-import { SpoilerToggle } from "./SpoilerGuard";
 
 export function Footer() {
   return (
@@ -16,16 +15,6 @@ export function Footer() {
             Every new release worth knowing about, gathered from the outlets that
             announce them. Headlines link back to the original reporting.
           </p>
-
-          {/*
-            * Sport results are hidden until asked for, and a masked headline
-            * can surface on any page that carries sport — the front page
-            * included. The switch lives here so it is never more than a scroll
-            * away from whatever is hidden.
-            */}
-          <div className="mt-6">
-            <SpoilerToggle />
-          </div>
         </div>
 
         <div className="flex flex-wrap gap-x-14 gap-y-8">

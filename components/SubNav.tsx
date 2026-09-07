@@ -33,7 +33,7 @@ export function SubNav({
   return (
     <nav
       aria-label={`${group.label} desks`}
-      className="mt-8 border-y border-rule bg-surface/40"
+      className="mt-8 bg-surface/40"
     >
       <ul className="flex flex-wrap items-stretch">
         <li>

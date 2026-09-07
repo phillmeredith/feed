@@ -3,7 +3,6 @@ import type { GolfEvent } from "@/lib/golf";
 import { highlightsFor, golfKey } from "@/lib/highlights";
 import { HighlightReel } from "./HighlightReel";
 import { DataTable } from "./ui/DataTable";
-import { SpoilerGuard, SpoilerToggle } from "./SpoilerGuard";
 import { LastUpdated } from "./EventStatus";
 import { sportDate } from "@/lib/format";
 
@@ -53,7 +52,6 @@ export function GolfThisWeek() {
           <h2 className="kicker text-label text-accent">
             {lead.major ? "The last major" : "Last played"} · {lead.name}
           </h2>
-          <SpoilerToggle />
         </div>
 
         <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.9fr)]">
@@ -68,36 +66,34 @@ export function GolfThisWeek() {
               )}
             </p>
 
-            <SpoilerGuard label="Result and highlights">
-            {lead.winner && (
-              <p className="font-serif text-lg text-muted mt-5">
-                <span className="text-paper">{lead.winner}</span> won at{" "}
-                {toPar(lead.leaderboard[0]?.score ?? "")}
-                {lead.leaderboard[1] &&
-                  `, ${marginOf(lead)} clear of ${lead.leaderboard[1].name}`}
-                .
-              </p>
-            )}
+          {lead.winner && (
+            <p className="font-serif text-lg text-muted mt-5">
+              <span className="text-paper">{lead.winner}</span> won at{" "}
+              {toPar(lead.leaderboard[0]?.score ?? "")}
+              {lead.leaderboard[1] &&
+                `, ${marginOf(lead)} clear of ${lead.leaderboard[1].name}`}
+              .
+            </p>
+          )}
 
-            <ol className="mt-5">
-              {lead.leaderboard.slice(0, 3).map((p, i) => (
-                <li
-                  key={`${p.position}-${p.name}`}
-                  className="border-t border-rule py-4 flex items-baseline gap-4"
-                >
-                  <span className="kicker text-micro text-accent w-8 shrink-0">
-                    {PLACE[i]}
-                  </span>
-                  <span className="display text-xl">{p.name}</span>
-                  <span className="ml-auto figures text-muted">
-                    {toPar(p.score)}
-                  </span>
-                </li>
-              ))}
-            </ol>
+          <ol className="mt-5">
+            {lead.leaderboard.slice(0, 3).map((p, i) => (
+              <li
+                key={`${p.position}-${p.name}`}
+                className="py-3 flex items-baseline gap-4"
+              >
+                <span className="kicker text-micro text-accent w-8 shrink-0">
+                  {PLACE[i]}
+                </span>
+                <span className="display text-xl">{p.name}</span>
+                <span className="ml-auto figures text-muted">
+                  {toPar(p.score)}
+                </span>
+              </li>
+            ))}
+          </ol>
 
-            <Leaderboard event={lead} />
-            </SpoilerGuard>
+          <Leaderboard event={lead} />
           </div>
 
           {highlightsFor(golfKey(lead.id)).length > 0 ? (
@@ -140,7 +136,7 @@ export function GolfMajors() {
           </h2>
           <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {bigFour.map((event) => (
-              <div key={event.id} className="border-t border-rule pt-4">
+              <div key={event.id}>
                 <p className="kicker text-micro text-faint">
                   {eventDates(event)}
                 </p>
@@ -148,11 +144,9 @@ export function GolfMajors() {
                   {event.name}
                 </p>
                 <div className="mt-2">
-                  <SpoilerGuard label="Winner">
-                    <p className="display text-lg text-accent">
-                      {event.winner ?? "—"}
-                    </p>
-                  </SpoilerGuard>
+                  <p className="display text-lg text-accent">
+                    {event.winner ?? "—"}
+                  </p>
                 </div>
                 {event.venue && (
                   <p className="text-fine text-muted mt-1">{event.venue}</p>
@@ -199,7 +193,7 @@ export function GolfAllEvents() {
             season down one narrow column is mostly empty row. */}
         <div className="mt-2 grid gap-x-16 lg:grid-cols-2">
           {rest.map((event) => (
-            <div key={event.id} className="border-t border-rule py-5">
+            <div key={event.id} className="py-4">
               <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
                 <span className="kicker text-micro text-faint w-20 shrink-0">
                   {eventDates(event)}
@@ -210,11 +204,9 @@ export function GolfAllEvents() {
                 </span>
                 {event.winner && (
                   <span className="ml-auto">
-                    <SpoilerGuard label="Winner">
-                      <span className="text-small text-accent">
-                        {event.winner}
-                      </span>
-                    </SpoilerGuard>
+                    <span className="text-small text-accent">
+                      {event.winner}
+                    </span>
                   </span>
                 )}
               </div>

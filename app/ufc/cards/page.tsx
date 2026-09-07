@@ -15,6 +15,6 @@ export function generateMetadata(): Metadata {
 
 export default function UfcCardsPage() {
   return (
-    <DeskView desk="ufc" page={1} tab="cards" above={<UfcAllCards />} feed={false} />
+    <DeskView desk="ufc" page={1} tab="cards" above={<UfcAllCards />} feed="none" />
   );
 }

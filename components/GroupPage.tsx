@@ -12,8 +12,6 @@ import { GroupStanding } from "./GroupStanding";
 import { SportBoard } from "./SportBoard";
 import { VideoPanel } from "./VideoPanel";
 import { StackedLead } from "./cards";
-import { SpoilerHeadline } from "./SpoilerHeadline";
-import { SpoilerToggle } from "./SpoilerGuard";
 import { SHAPES, DeskBlock, SectionBlock } from "./shapes";
 
 /**
@@ -64,7 +62,7 @@ export async function GroupPage({ group }: { group: Group }) {
       <Masthead compact />
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-10 py-10 flex-1 w-full">
-        <header className="border-b border-rule pb-8">
+        <header className="pb-2">
           <h1 className="display text-nameplate text-accent">
             {group.label}
           </h1>
@@ -76,11 +74,6 @@ export async function GroupPage({ group }: { group: Group }) {
           {/* Headlines can be masked here, so the way to unmask them has to be
               here too — a hidden headline with no switch beside it is a dead
               end. */}
-          {group.slug === "sport" && (
-            <div className="mt-6">
-              <SpoilerToggle />
-            </div>
-          )}
         </header>
 
         {/*
@@ -127,7 +120,7 @@ export async function GroupPage({ group }: { group: Group }) {
                         className="group block py-4"
                       >
                         <h3 className="font-body text-small leading-snug line-clamp-2 group-hover:text-accent transition-colors">
-                          <SpoilerHeadline article={article} />
+                          {article.headline}
                         </h3>
                         <p className="kicker text-micro text-faint mt-2">
                           <span className="text-accent">

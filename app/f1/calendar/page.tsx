@@ -15,6 +15,6 @@ export function generateMetadata(): Metadata {
 
 export default function F1CalendarPage() {
   return (
-    <DeskView desk="f1" page={1} tab="calendar" above={<F1Calendar />} feed={false} />
+    <DeskView desk="f1" page={1} tab="calendar" above={<F1Calendar />} feed="none" />
   );
 }

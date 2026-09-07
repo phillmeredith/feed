@@ -15,6 +15,6 @@ export function generateMetadata(): Metadata {
 
 export default function GolfMajorsPage() {
   return (
-    <DeskView desk="golf" page={1} tab="majors" above={<GolfMajors />} feed={false} />
+    <DeskView desk="golf" page={1} tab="majors" above={<GolfMajors />} feed="none" />
   );
 }

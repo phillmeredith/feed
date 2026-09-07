@@ -25,6 +25,7 @@ import { referencesForDesk } from "@/lib/reference";
 import { recentVideos } from "@/lib/video";
 import { SubNav } from "./SubNav";
 import { DeskTabs } from "./DeskTabs";
+import { SectionBlock } from "./shapes";
 
 /*
  * One desk, one page of it.
@@ -49,14 +50,22 @@ export async function DeskView({
   above,
   /** Which of the desk's tabs this is, so the tab bar can mark it. */
   tab = "",
-  /** Tabs that carry only standing material switch the article feed off. */
-  feed = true,
+  /**
+   * How much of the article feed a tab carries.
+   *
+   * "full" is a news desk. "none" is a calendar or a table. "brief" is for a
+   * desk whose own tab already holds the reporting — the sport desks each
+   * have an Articles tab, and their landing page was rendering the entire
+   * feed underneath the fixtures, duplicating the tab beside it and taking
+   * nearly half the page to do it.
+   */
+  feed = "full",
 }: {
   desk: string;
   page: number;
   above?: React.ReactNode;
   tab?: string;
-  feed?: boolean;
+  feed?: "full" | "brief" | "none";
 }) {
   const category = categoryBySlug(desk);
   if (!category) notFound();
@@ -129,7 +138,7 @@ export async function DeskView({
       <Masthead compact />
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
-        <div className="border-b border-rule pb-8">
+        <div className="pb-2">
           {/*
             * The three tiers, in the order they narrow: the section, the nav
             * that moves between its desks, then the desk itself and the tabs
@@ -230,8 +239,21 @@ export async function DeskView({
             </p>
           ))}
 
+        {feed === "brief" && rest.length > 0 && (
+          <div className="mt-block">
+            <SectionBlock
+              title="Latest"
+              dek="The reporting, in brief"
+              href={`/${category.slug}/articles`}
+              total={deskArticles.length}
+              articles={[lead, ...rest].filter(Boolean).slice(0, 6)}
+              shape="index"
+            />
+          </div>
+        )}
+
         {/* A tab showing only a calendar or a table has no feed to run. */}
-        {feed && (lead ? (
+        {feed === "full" && (lead ? (
           <>
             <div className="mt-10">
               <LeadCard article={lead} />

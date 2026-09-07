@@ -11,7 +11,6 @@ import {
 import { highlightsFor, ufcKey } from "@/lib/highlights";
 import { sportDate } from "@/lib/format";
 import { HighlightReel } from "./HighlightReel";
-import { SpoilerGuard, SpoilerToggle } from "./SpoilerGuard";
 import { LastUpdated, WhenLine, stateFor } from "./EventStatus";
 
 /*
@@ -39,7 +38,7 @@ function Bout({ fight, reveal }: { fight: Fight; reveal: boolean }) {
   const result = resultLine(fight);
 
   return (
-    <li className="border-t border-rule py-3 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+    <li className="py-2.5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
       <span className="kicker text-micro text-faint w-28 shrink-0">
         {fight.weightClass}
       </span>
@@ -201,7 +200,6 @@ export function UfcNextCard() {
             <h2 className="kicker text-label text-accent">
               Last card · {latest.name}
             </h2>
-            <SpoilerToggle />
           </div>
           <p className="kicker text-micro text-faint mt-5">
             {eventDate(latest.date)}
@@ -213,11 +211,8 @@ export function UfcNextCard() {
             )}
           </p>
           {/* One disclosure for the whole bill; thirteen would be unusable. */}
-          <SpoilerGuard label="Card and results">
-            <MainCard event={latest} reveal />
-            <Prelims event={latest} reveal />
-          </SpoilerGuard>
-
+          <MainCard event={latest} reveal />
+          <Prelims event={latest} reveal />
           {/* The bill itself is not a spoiler, so it stays readable. */}
           <div className="mt-8">
             <p className="kicker text-micro text-muted">Who fought</p>
@@ -265,7 +260,7 @@ export function UfcAllCards() {
             {earlier.map((event) => {
               const headline = event.fights[event.fights.length - 1];
               return (
-                <details key={event.id} className="group border-t border-rule py-5">
+                <details key={event.id} className="group py-4">
                   <summary className="cursor-pointer list-none flex flex-wrap items-baseline gap-x-5 gap-y-1">
                     <span className="kicker text-micro text-faint w-24 shrink-0">
                       {eventDate(event.date)}
@@ -275,19 +270,15 @@ export function UfcAllCards() {
                     </span>
                     {headline?.winner && (
                       <span className="ml-auto">
-                        <SpoilerGuard label="Main event">
-                          <span className="text-small text-accent">
-                            {headline.winner}
-                          </span>
-                        </SpoilerGuard>
+                        <span className="text-small text-accent">
+                          {headline.winner}
+                        </span>
                       </span>
                     )}
                   </summary>
                   <div className="mt-1 pl-0 sm:pl-[7.25rem]">
-                    <SpoilerGuard label="Results">
-                      <MainCard event={event} reveal />
-                      <Prelims event={event} reveal />
-                    </SpoilerGuard>
+                    <MainCard event={event} reveal />
+                    <Prelims event={event} reveal />
                   </div>
                 </details>
               );

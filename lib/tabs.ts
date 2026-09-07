@@ -19,22 +19,30 @@ export interface Tab {
 }
 
 export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
+  /*
+   * Articles first, and on the desk's own address.
+   *
+   * The reporting is what a desk is for most days of the week; the fixtures
+   * and the tables are what you go looking for when something is on. Landing
+   * on the weekend meant the desk showed a race three days away above a feed
+   * it was also duplicating.
+   */
   f1: [
-    { slug: "", label: "This weekend" },
+    { slug: "", label: "Articles" },
+    { slug: "weekend", label: "This weekend" },
     { slug: "calendar", label: "Calendar" },
     { slug: "standings", label: "Standings" },
-    { slug: "articles", label: "Articles" },
   ],
   golf: [
-    { slug: "", label: "This week" },
+    { slug: "", label: "Articles" },
+    { slug: "this-week", label: "This week" },
     { slug: "majors", label: "The majors" },
     { slug: "season", label: "Season" },
-    { slug: "articles", label: "Articles" },
   ],
   ufc: [
-    { slug: "", label: "Next card" },
+    { slug: "", label: "Articles" },
+    { slug: "next", label: "Next card" },
     { slug: "cards", label: "Every card" },
-    { slug: "articles", label: "Articles" },
   ],
 };
 

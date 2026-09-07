@@ -11,7 +11,6 @@ import {
 import { highlightsFor, f1Key } from "@/lib/highlights";
 import { HighlightReel } from "./HighlightReel";
 import { DataTable } from "./ui/DataTable";
-import { SpoilerGuard, SpoilerToggle } from "./SpoilerGuard";
 import { LastUpdated } from "./EventStatus";
 import { sportDate, sportTime } from "@/lib/format";
 
@@ -39,55 +38,89 @@ export function F1Weekend() {
 
   return (
     <div className="mt-12 flex flex-col gap-20">
-      {next && (
+      {next ? (
+        /*
+         * The weekend, at the size a weekend deserves.
+         *
+         * This was a strip of five small cards under a kicker, which is the
+         * treatment a footnote gets. It is the reason anyone opens this page
+         * on a Thursday: which sessions, when, and how long until the next
+         * one. The next session is marked, and the race is set larger than
+         * the practices because it is not the same kind of thing.
+         */
         <section>
-          <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-            <h2 className="kicker text-label text-accent">
-              Next · round {next.round} · {next.name}
-            </h2>
-            <p className="kicker text-micro text-faint">
-              {next.locality}, {next.country}
-            </p>
-          </div>
+          <p className="kicker text-micro text-faint">
+            Round {next.round} of {calendar.length}
+          </p>
+          <h2 className="display text-title mt-3">
+            <Link
+              href={`/f1/race/${next.round}`}
+              className="hover:text-accent transition-colors"
+            >
+              {next.name}
+            </Link>
+          </h2>
+          <p className="font-serif text-lede text-muted mt-3">
+            {next.circuitName} · {next.locality}, {next.country}
+          </p>
 
           {next.sessions && next.sessions.length > 0 ? (
-            /*
-             * The whole weekend, not just Sunday. Every session already came
-             * back from the API with a UTC instant attached and none of it
-             * was being kept, so the page could not answer "when is qualifying".
-             */
-            /*
-             * A weekend reads across, not down. As a full-width list each
-             * session put its name at the left margin and its time a thousand
-             * pixels away at the right, with nothing in between — the two
-             * things you need to read together were the furthest apart on the
-             * page. Five columns puts the time under its own session and uses
-             * the width for content instead of air.
-             */
-            <ol className="mt-8 grid gap-x-8 gap-y-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-              {next.sessions.map((session) => (
-                <li key={session.name} className="border-t border-rule pt-4">
-                  <p className="kicker text-micro text-faint">
-                    {sportDate(session.at, { weekday: "long" })}
-                  </p>
-                  <p className="font-body font-semibold text-body mt-2">
-                    {session.name}
-                  </p>
-                  <p className="display text-2xl mt-2 figures">
-                    {sportTime(session.at)}
-                  </p>
-                  <p className="kicker text-micro text-faint mt-1">
-                    {sportDate(session.at, { day: "numeric", month: "short" })}
-                  </p>
-                </li>
-              ))}
+            <ol className="mt-block grid gap-x-8 gap-y-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+              {next.sessions.map((session) => {
+                const isRace = session.name === "Race";
+                return (
+                  <li
+                    key={session.name}
+                    className={`border-t pt-4 ${
+                      isRace ? "border-accent" : "border-rule"
+                    }`}
+                  >
+                    <p className="kicker text-micro text-faint">
+                      {sportDate(session.at, { weekday: "long" })}
+                    </p>
+                    <p
+                      className={`font-body font-semibold mt-2 ${
+                        isRace ? "text-body text-accent" : "text-small"
+                      }`}
+                    >
+                      {session.name}
+                    </p>
+                    <p
+                      className={`display figures mt-2 ${
+                        isRace ? "text-headline" : "text-subhead"
+                      }`}
+                    >
+                      {sportTime(session.at)}
+                    </p>
+                    <p className="kicker text-micro text-faint mt-1">
+                      {sportDate(session.at, {
+                        day: "numeric",
+                        month: "short",
+                      })}
+                    </p>
+                  </li>
+                );
+              })}
             </ol>
           ) : (
-            <p className="font-serif italic text-muted mt-5">
+            <p className="font-serif italic text-muted mt-6">
               Session times for this round haven&apos;t been published yet.
             </p>
           )}
+
+          <p className="mt-step">
+            <Link
+              href={`/f1/race/${next.round}`}
+              className="kicker text-micro text-muted hover:text-accent transition-colors"
+            >
+              Everything about this round →
+            </Link>
+          </p>
         </section>
+      ) : (
+        <p className="font-serif italic text-subhead text-muted">
+          The season is over. The calendar has next year when it is published.
+        </p>
       )}
 
       {latest && (
@@ -96,56 +129,62 @@ export function F1Weekend() {
             <h2 className="kicker text-label text-accent">
               Last · round {latest.round} · {latest.name}
             </h2>
-            <SpoilerToggle />
           </div>
 
           <p className="kicker text-micro text-faint mt-5">
             {raceDate(latest.date)} · {latest.locality}, {latest.country}
           </p>
 
-          <div className="mt-6">
-            <SpoilerGuard label="Result and highlights">
-              <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.9fr)]">
-            <div>
-              <ol>
-                {(latest.results ?? []).slice(0, 3).map((r, i) => (
-                  <li
-                    key={r.position}
-                    className="border-t border-rule py-4 flex items-baseline gap-4"
-                  >
-                    <span className="kicker text-micro text-accent w-8 shrink-0">
-                      {PODIUM[i]}
+          <div className="mt-block">
+            <div className="grid gap-x-16 gap-y-block lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
+          <div>
+            {/* A column with a label reads as a column; without one it was a
+                list of names next to some videos, neither belonging to the
+                other. */}
+            <p className="panel-subtitle">The podium</p>
+            <ol className="mt-near">
+              {(latest.results ?? []).slice(0, 3).map((r, i) => (
+                <li
+                  key={r.position}
+                  className="py-3 flex items-baseline gap-4"
+                >
+                  <span className="kicker text-micro text-accent w-8 shrink-0">
+                    {PODIUM[i]}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="display text-xl block">{r.driver}</span>
+                    <span className="text-fine text-muted">
+                      {r.constructor}
+                      {r.time && (
+                        <>
+                          <span className="mx-2 text-rule">/</span>
+                          <span className="figures">{r.time}</span>
+                        </>
+                      )}
                     </span>
-                    <span className="min-w-0">
-                      <span className="display text-xl block">{r.driver}</span>
-                      <span className="text-fine text-muted">
-                        {r.constructor}
-                        {r.time && (
-                          <>
-                            <span className="mx-2 text-rule">/</span>
-                            <span className="figures">{r.time}</span>
-                          </>
-                        )}
-                      </span>
-                    </span>
-                  </li>
-                ))}
-              </ol>
+                  </span>
+                </li>
+              ))}
+            </ol>
 
-              <RaceResults race={latest} />
+            <RaceResults race={latest} />
+          </div>
+
+          <div>
+            <p className="panel-subtitle">Highlights</p>
+            <div className="mt-near">
+              {highlightsFor(f1Key(s.season, latest.round)).length > 0 ? (
+                <HighlightReel
+                  highlights={highlightsFor(f1Key(s.season, latest.round))}
+                />
+              ) : (
+                <p className="font-serif italic text-muted">
+                  Formula 1 hasn&apos;t posted highlights for this round yet.
+                </p>
+              )}
             </div>
-
-            {highlightsFor(f1Key(s.season, latest.round)).length > 0 ? (
-              <HighlightReel
-                highlights={highlightsFor(f1Key(s.season, latest.round))}
-              />
-            ) : (
-              <p className="font-serif italic text-muted">
-                Formula 1 hasn&apos;t posted highlights for this round yet.
-              </p>
-            )}
-              </div>
-            </SpoilerGuard>
+          </div>
+            </div>
           </div>
         </section>
       )}
@@ -239,64 +278,60 @@ export function F1Standings() {
   return (
     <div className="mt-12 flex flex-col gap-20">
       {/* A points table after the flag says who won as surely as the podium does. */}
-      <SpoilerGuard label="Championship standings">
-      <div className="grid gap-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
-        {/* `min-w-0`: the table below sets a min-width and scrolls inside its
-            own wrapper, but a grid item defaults to a min-content floor, so
-            without this the 420px table widened the page instead. */}
-        <section className="min-w-0">
-          <h2 className="panel-title">
-            Drivers
-          </h2>
-          <div className="mt-4" data-density="reference">
-            <DataTable
-              caption="Drivers' championship"
-              rows={drivers}
-              rowKey={(d) => d.driverId}
-              columns={[
-                { key: "pos", header: "#", numeric: true, width: "3rem",
-                  cell: (d) => <span className="text-faint">{d.position}</span> },
-                { key: "driver", header: "Driver",
-                  cell: (d) => (
-                    <Link href={`/f1/driver/${d.driverId}`} className="hover:text-accent transition-colors">
-                      <span className="font-body font-semibold">{driverName(d)}</span>
-                    </Link>
-                  ) },
-                { key: "team", header: "Team",
-                  cell: (d) => <span className="text-muted text-fine">{d.constructor}</span> },
-                { key: "wins", header: "Wins", align: "right", numeric: true,
-                  cell: (d) => <span className="text-muted">{d.wins || "—"}</span> },
-                { key: "points", header: "Points", align: "right", numeric: true,
-                  cell: (d) => <span className="text-accent font-semibold">{d.points}</span> },
-              ]}
-            />
-          </div>
-        </section>
+    <div className="grid gap-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+      {/* `min-w-0`: the table below sets a min-width and scrolls inside its
+          own wrapper, but a grid item defaults to a min-content floor, so
+          without this the 420px table widened the page instead. */}
+      <section className="min-w-0">
+        <h2 className="panel-title">
+          Drivers
+        </h2>
+        <div className="mt-4" data-density="reference">
+          <DataTable
+            caption="Drivers' championship"
+            rows={drivers}
+            rowKey={(d) => d.driverId}
+            columns={[
+              { key: "pos", header: "#", numeric: true, width: "3rem",
+                cell: (d) => <span className="text-faint">{d.position}</span> },
+              { key: "driver", header: "Driver",
+                cell: (d) => (
+                  <Link href={`/f1/driver/${d.driverId}`} className="hover:text-accent transition-colors">
+                    <span className="font-body font-semibold">{driverName(d)}</span>
+                  </Link>
+                ) },
+              { key: "team", header: "Team",
+                cell: (d) => <span className="text-muted text-fine">{d.constructor}</span> },
+              { key: "wins", header: "Wins", align: "right", numeric: true,
+                cell: (d) => <span className="text-muted">{d.wins || "—"}</span> },
+              { key: "points", header: "Points", align: "right", numeric: true,
+                cell: (d) => <span className="text-accent font-semibold">{d.points}</span> },
+            ]}
+          />
+        </div>
+      </section>
 
-        <section className="min-w-0">
-          <h2 className="panel-title">
-            Constructors
-          </h2>
-          <div className="mt-4" data-density="reference">
-            <DataTable
-              caption="Constructors' championship"
-              rows={teams}
-              rowKey={(t) => t.constructorId}
-              columns={[
-                { key: "pos", header: "#", numeric: true, width: "3rem",
-                  cell: (t) => <span className="text-faint">{t.position}</span> },
-                { key: "team", header: "Constructor",
-                  cell: (t) => <span className="font-body font-semibold">{t.name}</span> },
-                { key: "points", header: "Points", align: "right", numeric: true,
-                  cell: (t) => <span className="text-accent font-semibold">{t.points}</span> },
-              ]}
-            />
-          </div>
-        </section>
-      </div>
-
-      </SpoilerGuard>
-
+      <section className="min-w-0">
+        <h2 className="panel-title">
+          Constructors
+        </h2>
+        <div className="mt-4" data-density="reference">
+          <DataTable
+            caption="Constructors' championship"
+            rows={teams}
+            rowKey={(t) => t.constructorId}
+            columns={[
+              { key: "pos", header: "#", numeric: true, width: "3rem",
+                cell: (t) => <span className="text-faint">{t.position}</span> },
+              { key: "team", header: "Constructor",
+                cell: (t) => <span className="font-body font-semibold">{t.name}</span> },
+              { key: "points", header: "Points", align: "right", numeric: true,
+                cell: (t) => <span className="text-accent font-semibold">{t.points}</span> },
+            ]}
+          />
+        </div>
+      </section>
+    </div>
       <LastUpdated
         at={s.updated ?? null}
         source="Standings from the Jolpica F1 API"
@@ -326,7 +361,7 @@ function RoundCard({
   const podium = (race.results ?? []).slice(0, 3);
 
   return (
-    <li className="border-t border-rule pt-4">
+    <li>
       <div className="flex items-baseline justify-between gap-3">
         <span
           className={`display text-title leading-none figures ${
@@ -376,28 +411,26 @@ function RoundCard({
 
       {done && (
         <div className="mt-4">
-          <SpoilerGuard label="Result">
-            <ol className="text-small">
-              {podium.map((r, i) => (
-                <li key={r.position} className="flex items-baseline gap-3 py-1">
-                  <span className="kicker text-micro text-accent w-6 shrink-0">
-                    {PODIUM[i]}
-                  </span>
-                  <span className="min-w-0 truncate">{r.driver}</span>
-                </li>
-              ))}
-            </ol>
+          <ol className="text-small">
+            {podium.map((r, i) => (
+              <li key={r.position} className="flex items-baseline gap-3 py-1">
+                <span className="kicker text-micro text-accent w-6 shrink-0">
+                  {PODIUM[i]}
+                </span>
+                <span className="min-w-0 truncate">{r.driver}</span>
+              </li>
+            ))}
+          </ol>
 
-            <RaceResults race={race} />
+          <RaceResults race={race} />
 
-            {/* The thumbnail is part of the round, so it stays on the page and
-                takes the same blur as the names beside it. */}
-            {reels.length > 0 && (
-              <div className="mt-5">
-                <HighlightReel highlights={reels.slice(0, 1)} />
-              </div>
-            )}
-          </SpoilerGuard>
+          {/* The thumbnail is part of the round, so it stays on the page and
+              takes the same blur as the names beside it. */}
+          {reels.length > 0 && (
+            <div className="mt-5">
+              <HighlightReel highlights={reels.slice(0, 1)} />
+            </div>
+          )}
         </div>
       )}
     </li>

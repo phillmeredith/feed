@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SpoilerGuard } from "./SpoilerGuard";
 import { StateBadge } from "./ui/StateBadge";
 import { stateFor } from "./EventStatus";
 import { sportDate, sportTime } from "@/lib/format";
@@ -120,7 +119,7 @@ export function SportBoard() {
 
       <div className="grid gap-x-12 gap-y-14 md:grid-cols-3">
         {board.map((entry) => (
-          <div key={entry.sport} className="border-t border-rule pt-5">
+          <div key={entry.sport}>
             <h3 className="display text-subhead">
               <Link
                 href={entry.href}
@@ -175,7 +174,7 @@ export function SportBoard() {
             )}
 
             {entry.last && (
-              <div className="mt-8 border-t border-rule pt-4">
+              <div className="mt-6">
                 <p className="kicker text-micro text-faint">Last</p>
                 <p className="font-body text-small leading-snug mt-2 text-muted">
                   {entry.last.href ? (
@@ -190,22 +189,18 @@ export function SportBoard() {
                   )}
                 </p>
                 <div className="mt-2">
-                  <SpoilerGuard label="Result">
-                    <p className="font-body text-small text-paper">
-                      {entry.last.result}
-                    </p>
-                  </SpoilerGuard>
+                  <p className="font-body text-small text-paper">
+                    {entry.last.result}
+                  </p>
                 </div>
               </div>
             )}
 
             {entry.standing && (
               <div className="mt-4">
-                <SpoilerGuard label="Championship">
-                  <p className="kicker text-micro text-faint">
-                    {entry.standing}
-                  </p>
-                </SpoilerGuard>
+                <p className="kicker text-micro text-faint">
+                  {entry.standing}
+                </p>
               </div>
             )}
           </div>
