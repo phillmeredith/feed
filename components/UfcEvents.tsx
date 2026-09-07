@@ -142,11 +142,11 @@ function Prelims({ event, reveal }: { event: UfcEvent; reveal: boolean }) {
  * What's next, then what just happened, then back through the year. A card
  * that hasn't been fought carries its bookings and nothing else.
  */
-export function UfcEvents() {
+export function UfcNextCard() {
   const store = ufcSeason();
   const next = nextEvent();
   const done = completedEvents();
-  const [latest, ...earlier] = done;
+  const [latest] = done;
 
   if (!next && done.length === 0) {
     return (
@@ -226,6 +226,30 @@ export function UfcEvents() {
         </section>
       )}
 
+      <LastUpdated
+        at={store.updated}
+        source="Cards and results from ESPN's public scoreboard; highlights from the broadcast rights holders"
+      />
+    </div>
+  );
+}
+
+/** Every card of the year, oldest at the foot. */
+export function UfcAllCards() {
+  const store = ufcSeason();
+  const done = completedEvents();
+  const [, ...earlier] = done;
+
+  if (done.length === 0) {
+    return (
+      <p className="mt-12 font-serif italic text-xl text-muted">
+        No cards recorded for this season yet.
+      </p>
+    );
+  }
+
+  return (
+    <div className="mt-12 flex flex-col gap-20">
       {earlier.length > 0 && (
         <section>
           <div className="flex items-end justify-between gap-6 flex-wrap border-b border-rule pb-3">

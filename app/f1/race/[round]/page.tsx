@@ -60,7 +60,15 @@ export default async function RacePage({
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-10 py-10 flex-1 w-full">
         <header className="border-b border-rule pb-8">
-          <p className="kicker text-[10px] text-accent">
+          <p className="display text-2xl sm:text-3xl text-muted">
+            <Link href="/sport" className="hover:text-accent transition-colors">
+              Sport
+            </Link>
+          </p>
+
+          <SubNav group="sport" current="f1" />
+
+          <p className="kicker text-[10px] text-accent mt-10">
             <Link href="/f1" className="hover:underline">
               Formula One
             </Link>
@@ -74,8 +82,6 @@ export default async function RacePage({
           <p className="font-serif text-lg sm:text-xl text-muted mt-4">
             {race.circuitName} · {race.locality}, {race.country}
           </p>
-
-          <SubNav group="sport" current="f1" />
         </header>
 
         <div className="mt-12 grid gap-16 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DeskView } from "@/components/DeskView";
-import { UfcEvents } from "@/components/UfcEvents";
+import { UfcNextCard } from "@/components/UfcEvents";
 import { ufcSeason } from "@/lib/ufc";
 
 /*
@@ -18,5 +18,5 @@ export function generateMetadata(): Metadata {
 }
 
 export default function UfcDesk() {
-  return <DeskView desk="ufc" page={1} above={<UfcEvents />} />;
+  return <DeskView desk="ufc" page={1} above={<UfcNextCard />} />;
 }

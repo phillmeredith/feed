@@ -5,9 +5,11 @@ import { tabsFor, tabHref } from "@/lib/tabs";
 /**
  * Tabs within a desk — the third tier, under the section nav.
  *
- * Underlined rather than boxed, because the site has no other boxes, and the
- * current tab is marked by weight and a rule as well as by colour so it
- * survives a greyscale screen.
+ * Tabs, not links: they sit on a rule and the current one breaks it, which is
+ * the oldest way of saying "you are here" and needs no colour to read. Every
+ * state is defined rather than left to the browser — rest, hover, focus and
+ * current — because a nav that only styles two of the four is a nav that
+ * feels broken the moment you use a keyboard.
  */
 export function DeskTabs({
   desk,
@@ -22,25 +24,45 @@ export function DeskTabs({
   return (
     <nav
       aria-label="Sections of this desk"
-      className="mt-8 flex flex-wrap gap-x-8 gap-y-2 border-b border-rule"
+      className="mt-8 border-b border-rule"
     >
-      {tabs.map((tab) => {
-        const active = tab.slug === current;
-        return (
-          <Link
-            key={tab.slug || "index"}
-            href={tabHref(desk, tab)}
-            aria-current={active ? "page" : undefined}
-            className={`kicker text-[11px] pb-3 -mb-px border-b transition-colors ${
-              active
-                ? "text-accent border-accent font-semibold"
-                : "text-muted border-transparent hover:text-accent"
-            }`}
-          >
-            {tab.label}
-          </Link>
-        );
-      })}
+      <ul className="flex flex-wrap -mb-px">
+        {tabs.map((tab) => {
+          const active = tab.slug === current;
+          return (
+            <li key={tab.slug || "index"}>
+              <Link
+                href={tabHref(desk, tab)}
+                aria-current={active ? "page" : undefined}
+                /*
+                 * Colour goes on the span, not the link: globals.css sets
+                 * `a { color: inherit }` site-wide, which beats a utility
+                 * class on the anchor itself. The border is set with an
+                 * explicit variable for the same reason — the reset gives
+                 * every element a default border-color of --rule.
+                 */
+                className={`group block px-4 py-3 -mb-px border-b-2 transition-colors
+                  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--accent)]
+                  ${active ? "" : "hover:bg-surface"}`}
+                style={{
+                  borderBottomColor: active ? "var(--accent)" : "transparent",
+                }}
+              >
+                <span
+                  className={`kicker text-[11px] transition-colors ${
+                    active
+                      ? "text-accent font-semibold"
+                      : "text-muted group-hover:text-paper"
+                  }`}
+                >
+                  {tab.label}
+                  {active && <span className="sr-only"> (current)</span>}
+                </span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </nav>
   );
 }

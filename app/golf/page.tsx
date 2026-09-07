@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DeskView } from "@/components/DeskView";
-import { GolfSeason } from "@/components/GolfSeason";
+import { GolfThisWeek } from "@/components/GolfSeason";
 import { golfSeason } from "@/lib/golf";
 
 /*
@@ -18,5 +18,5 @@ export function generateMetadata(): Metadata {
 }
 
 export default function GolfDesk() {
-  return <DeskView desk="golf" page={1} above={<GolfSeason />} />;
+  return <DeskView desk="golf" page={1} above={<GolfThisWeek />} />;
 }

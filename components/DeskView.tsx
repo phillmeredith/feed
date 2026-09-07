@@ -4,7 +4,7 @@ import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
 import { LeadCard } from "@/components/cards";
 import { Gallery, Split, Index } from "@/components/shapes";
-import { categoryBySlug } from "@/lib/categories";
+import { categoryBySlug, groupBySlug } from "@/lib/categories";
 import { getFeed } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";
 import { gearDirectory } from "@/lib/gear";
@@ -98,6 +98,7 @@ export async function DeskView({
           .map((p) => ({ name: p.name, note: p.note, hours: p.hours }))
       : undefined;
   const deskReferences = referencesForDesk(category.slug);
+  const group = category.group ? groupBySlug(category.group) : undefined;
 
   /*
    * Video is where most camera and hardware reviewing actually happens, so a
@@ -129,7 +130,27 @@ export async function DeskView({
 
       <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
         <div className="border-b border-rule pb-8">
-          <h1 className="display text-[clamp(2.4rem,6vw,4.4rem)] text-accent">
+          {/*
+            * The three tiers, in the order they narrow: the section, the nav
+            * that moves between its desks, then the desk itself and the tabs
+            * within it. Reading down the page is reading down the hierarchy.
+            */}
+          {group && (
+            <p className="display text-2xl sm:text-3xl text-muted">
+              <Link
+                href={`/${group.slug}`}
+                className="hover:text-accent transition-colors"
+              >
+                {group.label}
+              </Link>
+            </p>
+          )}
+
+          {category.group && (
+            <SubNav group={category.group} current={category.slug} />
+          )}
+
+          <h1 className="display text-[clamp(2.4rem,6vw,4.4rem)] text-accent mt-10">
             {category.label}
           </h1>
           <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
@@ -139,10 +160,6 @@ export async function DeskView({
             {deskArticles.length} stories · refreshed every 10 minutes
             {totalPages > 1 && ` · page ${current} of ${totalPages}`}
           </p>
-
-          {category.group && (
-            <SubNav group={category.group} current={category.slug} />
-          )}
 
           <DeskTabs desk={category.slug} current={tab} />
 

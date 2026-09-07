@@ -25,6 +25,17 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
     { slug: "standings", label: "Standings" },
     { slug: "articles", label: "Articles" },
   ],
+  golf: [
+    { slug: "", label: "This week" },
+    { slug: "majors", label: "The majors" },
+    { slug: "season", label: "Season" },
+    { slug: "articles", label: "Articles" },
+  ],
+  ufc: [
+    { slug: "", label: "Next card" },
+    { slug: "cards", label: "Every card" },
+    { slug: "articles", label: "Articles" },
+  ],
 };
 
 export function tabsFor(desk: CategorySlug): Tab[] {

@@ -33,12 +33,9 @@ const PLACE = ["1st", "2nd", "3rd"];
  * most recent one rather than on whatever happened to be played last week.
  * Everything else is below it, in order, with its leaderboard folded away.
  */
-export function GolfSeason() {
+export function GolfThisWeek() {
   const store = golfSeason();
   const lead = latestEvent();
-  const bigFour = majors();
-  const played = playedEvents();
-  const rest = played.filter((e) => e.id !== lead?.id);
 
   if (!lead) {
     return (
@@ -112,6 +109,29 @@ export function GolfSeason() {
         </div>
       </section>
 
+      <LastUpdated
+        at={store.updated}
+        source="Leaderboards from ESPN's public scoreboard; highlights from the rights holders"
+      />
+    </div>
+  );
+}
+
+/** The four that decide a career, on their own page. */
+export function GolfMajors() {
+  const store = golfSeason();
+  const bigFour = majors();
+
+  if (bigFour.length === 0) {
+    return (
+      <p className="mt-12 font-serif italic text-xl text-muted">
+        No majors have been played this season yet.
+      </p>
+    );
+  }
+
+  return (
+    <div className="mt-12 flex flex-col gap-20">
       {bigFour.length > 0 && (
         <section>
           <h2 className="kicker text-[11px] text-accent border-b border-rule pb-3">
@@ -141,7 +161,31 @@ export function GolfSeason() {
           </div>
         </section>
       )}
+      <LastUpdated
+        at={store.updated}
+        source="Leaderboards from ESPN's public scoreboard"
+      />
+    </div>
+  );
+}
 
+/** Every event of the year. */
+export function GolfAllEvents() {
+  const store = golfSeason();
+  const lead = latestEvent();
+  const played = playedEvents();
+  const rest = played.filter((e) => e.id !== lead?.id);
+
+  if (played.length === 0) {
+    return (
+      <p className="mt-12 font-serif italic text-xl text-muted">
+        No results recorded for this season yet.
+      </p>
+    );
+  }
+
+  return (
+    <div className="mt-12 flex flex-col gap-20">
       <section>
         <div className="flex items-end justify-between gap-6 flex-wrap border-b border-rule pb-3">
           <h2 className="kicker text-[11px] text-accent">
