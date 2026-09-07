@@ -1,0 +1,110 @@
+import type { DetailedWeather } from "@/lib/weather";
+import { readVerdict } from "@/lib/verdict";
+
+/**
+ * The answers, first, in words.
+ *
+ * Everything below this on the page is instruments — a meteogram, a pressure
+ * trend, a UV index. Instruments are what you consult once you know which
+ * question you're asking. This is the part that says when to go out, whether
+ * the wind is a problem, and whether tonight is worth looking up at, so the
+ * rest of the page becomes the working rather than the answer.
+ */
+export function TodayVerdict({ weather }: { weather: DetailedWeather }) {
+  const verdict = readVerdict(weather);
+
+  return (
+    <section aria-labelledby="today-verdict">
+      <h2
+        id="today-verdict"
+        className="kicker text-[11px] text-accent border-b border-rule pb-3"
+      >
+        In short
+      </h2>
+
+      <p className="font-serif text-[clamp(1.4rem,2.6vw,2rem)] leading-snug mt-6 max-w-3xl">
+        {capitalise(verdict.headline)}.{" "}
+        {verdict.outdoors ? (
+          <>
+            Best of the day is{" "}
+            <strong className="text-accent font-normal">
+              {verdict.outdoors.from}–{verdict.outdoors.to}
+            </strong>
+            .
+          </>
+        ) : (
+          <>Nothing much to choose between the hours today.</>
+        )}
+      </p>
+
+      <dl className="mt-10 grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+        <Answer
+          term="Get outside"
+          value={
+            verdict.outdoors
+              ? `${verdict.outdoors.from}–${verdict.outdoors.to}`
+              : "No clear window"
+          }
+          detail={verdict.outdoors?.detail ?? "Conditions much the same all day"}
+        />
+        <Answer
+          term="Stay in"
+          value={
+            verdict.avoid ? `${verdict.avoid.from}–${verdict.avoid.to}` : "No need"
+          }
+          detail={verdict.avoid?.detail ?? "Nothing bad enough to plan around"}
+        />
+        <Answer
+          term="Wind"
+          value={verdict.wind.band.label}
+          detail={`Gusting ${verdict.wind.peakGust} km/h${
+            verdict.wind.peakAt ? ` around ${verdict.wind.peakAt}` : ""
+          } — ${verdict.wind.band.note}`}
+        />
+        <Answer
+          term="Stars tonight"
+          value={
+            verdict.stars.verdict === "good"
+              ? "Worth it"
+              : verdict.stars.verdict === "fair"
+                ? "Maybe"
+                : "Not tonight"
+          }
+          detail={verdict.stars.detail}
+        />
+      </dl>
+
+      <p className="kicker text-[9px] text-faint mt-8">
+        Take: {verdict.carry}
+      </p>
+    </section>
+  );
+}
+
+function Answer({
+  term,
+  value,
+  detail,
+}: {
+  term: string;
+  value: string;
+  detail: string;
+}) {
+  return (
+    <div>
+      <dt className="kicker text-[9px] text-faint">{term}</dt>
+      <dd>
+        <p className="display text-[clamp(1.5rem,2.4vw,2rem)] leading-none mt-3 tabular-nums">
+          {value}
+        </p>
+        <p className="font-serif text-[15px] leading-relaxed text-muted mt-3">
+          {detail}
+        </p>
+      </dd>
+    </div>
+  );
+}
+
+function capitalise(text: string) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}

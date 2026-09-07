@@ -267,8 +267,30 @@ a {
   will-change: transform;
 }
 
+/*
+ * Reduced motion, meant.
+ *
+ * This covered the ticker and nothing else, while every card image carried a
+ * 700ms hover scale and every link a colour transition. A reader who has
+ * asked their system for less movement has asked for all of it, not for the
+ * one piece that happened to be hand-written.
+ */
 @media (prefers-reduced-motion: reduce) {
   .ticker-track {
     animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* The zoom is the motion; without it the hover state still reads. */
+  .media img {
+    transform: none !important;
   }
 }

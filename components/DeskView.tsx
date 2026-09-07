@@ -13,6 +13,9 @@ import { getPatents } from "@/lib/patents";
 import { PatentsPanel } from "@/components/PatentsPanel";
 import { ForecastPanel } from "@/components/ForecastPanel";
 import { ClimatePanel } from "@/components/ClimatePanel";
+import { TodayVerdict } from "@/components/TodayVerdict";
+import { WhereToGo } from "@/components/WhereToGo";
+import { getPlaceForecasts } from "@/lib/places";
 import { getDetailedWeather } from "@/lib/weather";
 import { GearDirectory } from "@/components/GearDirectory";
 import { ModelTable } from "@/components/ModelTable";
@@ -67,6 +70,7 @@ export async function DeskView({
   const patents = await getPatents(category.slug);
   const forecast =
     category.slug === "weather" ? await getDetailedWeather() : null;
+  const places = category.slug === "weather" ? await getPlaceForecasts() : [];
   const deskReferences = referencesForDesk(category.slug);
 
   /*
@@ -136,17 +140,34 @@ export async function DeskView({
 
         {above}
 
-        {forecast && (
-          <>
-            <div className="mt-10">
-              <ForecastPanel weather={forecast} />
-            </div>
-            {/* The measurements the desk's reporting is a commentary on. */}
-            <div className="mt-20">
-              <ClimatePanel />
-            </div>
-          </>
-        )}
+        {category.slug === "weather" &&
+          (forecast ? (
+            <>
+              {/* The answers first; everything under them is the working. */}
+              <div className="mt-12">
+                <TodayVerdict weather={forecast} />
+              </div>
+              <div className="mt-20">
+                <ForecastPanel weather={forecast} />
+              </div>
+              {places.length > 0 && (
+                <div className="mt-20">
+                  <WhereToGo places={places} />
+                </div>
+              )}
+              {/* The measurements the desk's reporting is a commentary on. */}
+              <div className="mt-20">
+                <ClimatePanel />
+              </div>
+            </>
+          ) : (
+            /* Losing the forecast used to remove half the page with no
+               explanation; say so instead. */
+            <p className="mt-12 font-serif italic text-xl text-muted">
+              The forecast is unavailable right now — Open-Meteo didn&apos;t
+              answer. The reporting below is unaffected.
+            </p>
+          ))}
 
         {lead ? (
           <>

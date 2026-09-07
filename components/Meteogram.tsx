@@ -69,11 +69,43 @@ export function Meteogram({ hours }: { hours: HourPoint[] }) {
 
   return (
     <figure className="mt-6">
+      {/*
+        * A slider, not an image.
+        *
+        * This was role="img" with pointer handlers, which meant the one real
+        * interaction on the page was unreachable without a mouse. It is a
+        * one-dimensional value picker over the hours, which is what a slider
+        * is, and arrow keys move it.
+        */}
       <svg
         viewBox={`0 0 ${W} ${H}`}
-        className="w-full h-auto touch-none"
-        role="img"
-        aria-label={`Temperature and rain probability for the next ${hours.length} hours`}
+        className="w-full h-auto touch-none rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+        tabIndex={0}
+        role="slider"
+        aria-label={`Hourly forecast, next ${hours.length} hours`}
+        aria-valuemin={0}
+        aria-valuemax={hours.length - 1}
+        aria-valuenow={shown}
+        aria-valuetext={`${point.time}: ${point.tempC} degrees, feels like ${point.feelsLike}, ${point.precipChance} percent chance of rain, wind ${point.windKph} gusting ${point.gustKph} kilometres per hour`}
+        onKeyDown={(event) => {
+          const step =
+            event.key === "ArrowRight" ? 1
+            : event.key === "ArrowLeft" ? -1
+            : event.key === "PageUp" ? 6
+            : event.key === "PageDown" ? -6
+            : 0;
+          if (step === 0 && event.key !== "Home" && event.key !== "End") return;
+          event.preventDefault();
+          /* Functional update: a held arrow key fires faster than React
+             re-renders, and reading `active` from this closure would make
+             every repeat move from the same starting point. */
+          setActive((current) =>
+            event.key === "Home" ? 0
+            : event.key === "End" ? hours.length - 1
+            : Math.min(hours.length - 1, Math.max(0, (current ?? 0) + step))
+          );
+        }}
+        onBlur={() => setActive(null)}
         onMouseLeave={() => setActive(null)}
         onPointerMove={(event) => {
           const box = event.currentTarget.getBoundingClientRect();
@@ -211,6 +243,34 @@ export function Meteogram({ hours }: { hours: HourPoint[] }) {
        * The readout. It shows the first hour until the chart is touched, so
        * the figure says something useful before anyone interacts with it.
        */}
+      {/* Named, so nothing here depends on telling two colours apart. */}
+      <ul className="mt-3 flex flex-wrap gap-x-7 gap-y-2 kicker text-[9px] text-faint">
+        <li className="flex items-center gap-2">
+          <svg width="22" height="8" aria-hidden="true">
+            <line x1="0" y1="4" x2="22" y2="4" stroke="var(--accent)" strokeWidth="2.5" />
+          </svg>
+          Temperature
+        </li>
+        <li className="flex items-center gap-2">
+          <svg width="22" height="8" aria-hidden="true">
+            <line x1="0" y1="4" x2="22" y2="4" stroke="var(--muted)" strokeWidth="1.5" strokeDasharray="4 4" />
+          </svg>
+          Feels like
+        </li>
+        <li className="flex items-center gap-2">
+          <svg width="22" height="8" aria-hidden="true">
+            <rect x="0" y="1" width="22" height="6" fill="var(--accent)" fillOpacity="0.25" />
+          </svg>
+          Chance of rain
+        </li>
+        <li className="flex items-center gap-2">
+          <svg width="22" height="8" aria-hidden="true">
+            <rect x="0" y="0" width="22" height="8" fill="var(--paper)" fillOpacity="0.06" />
+          </svg>
+          Night
+        </li>
+      </ul>
+
       <figcaption className="mt-3 flex flex-wrap items-baseline gap-x-8 gap-y-2 border-t border-rule pt-3">
         <span className="kicker text-[10px] text-accent w-14">
           {active === null ? "Now" : point.time}
@@ -226,7 +286,7 @@ export function Meteogram({ hours }: { hours: HourPoint[] }) {
           <Reading label="Gusting" value={`${point.gustKph} km/h`} />
         )}
         <span className="kicker text-[9px] text-faint ml-auto hidden sm:inline">
-          Drag across to read any hour
+          Drag across, or focus and use ← →
         </span>
       </figcaption>
     </figure>

@@ -93,6 +93,11 @@ export interface HourPoint {
   gustKph: number;
   code: number;
   day: boolean;
+  /** Percent of sky covered — the variable stargazing lives or dies on. */
+  cloud: number;
+  /** Metres. Below ~5000 the hills disappear; below 1000 it's fog. */
+  visibility: number;
+  uv: number;
 }
 
 export interface DetailedDay {
@@ -107,6 +112,9 @@ export interface DetailedDay {
   windKph: number;
   gustKph: number;
   uvMax: number;
+  cloudMean: number;
+  /** Hours of the day with measurable rain, which reads better than a mean. */
+  precipHours: number;
   sunrise: string;
   sunset: string;
 }
@@ -177,6 +185,8 @@ interface DetailedResponse {
     surface_pressure: number[];
     uv_index: number[];
     is_day: number[];
+    cloud_cover: number[];
+    visibility: number[];
   };
   daily: {
     time: string[];
@@ -188,13 +198,15 @@ interface DetailedResponse {
     wind_speed_10m_max: number[];
     wind_gusts_10m_max: number[];
     uv_index_max: number[];
+    cloud_cover_mean: number[];
+    precipitation_hours: number[];
     sunrise: string[];
     sunset: string[];
   };
 }
 
 /** How many hours of the meteogram to draw. A day and a half reads well. */
-const HOURS_AHEAD = 36;
+const HOURS_AHEAD = 48;
 
 /** The fuller picture for the weather desk, rather than the masthead strip. */
 export async function getDetailedWeather(): Promise<DetailedWeather | null> {
@@ -202,9 +214,9 @@ export async function getDetailedWeather(): Promise<DetailedWeather | null> {
     `https://api.open-meteo.com/v1/forecast?latitude=${LOCATION.latitude}` +
     `&longitude=${LOCATION.longitude}` +
     `&current=temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,wind_speed_10m,wind_gusts_10m,wind_direction_10m,surface_pressure,is_day` +
-    `&hourly=temperature_2m,apparent_temperature,precipitation_probability,precipitation,wind_speed_10m,wind_gusts_10m,weather_code,surface_pressure,uv_index,is_day` +
-    `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max,precipitation_sum,wind_speed_10m_max,wind_gusts_10m_max,uv_index_max,sunrise,sunset` +
-    `&timezone=auto&forecast_days=7`;
+    `&hourly=temperature_2m,apparent_temperature,precipitation_probability,precipitation,wind_speed_10m,wind_gusts_10m,weather_code,surface_pressure,uv_index,is_day,cloud_cover,visibility` +
+    `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max,precipitation_sum,wind_speed_10m_max,wind_gusts_10m_max,uv_index_max,cloud_cover_mean,precipitation_hours,sunrise,sunset` +
+    `&timezone=auto&forecast_days=16`;
 
   try {
     const res = await fetch(url, { next: { revalidate: 1800 } });
@@ -236,6 +248,9 @@ export async function getDetailedWeather(): Promise<DetailedWeather | null> {
           gustKph: Math.round(data.hourly.wind_gusts_10m?.[i] ?? 0),
           code: data.hourly.weather_code?.[i] ?? 0,
           day: (data.hourly.is_day?.[i] ?? 1) === 1,
+          cloud: Math.round(data.hourly.cloud_cover?.[i] ?? 0),
+          visibility: Math.round(data.hourly.visibility?.[i] ?? 0),
+          uv: Math.round(data.hourly.uv_index?.[i] ?? 0),
         };
       });
 
@@ -284,6 +299,8 @@ export async function getDetailedWeather(): Promise<DetailedWeather | null> {
         windKph: Math.round(data.daily.wind_speed_10m_max?.[i] ?? 0),
         gustKph: Math.round(data.daily.wind_gusts_10m_max?.[i] ?? 0),
         uvMax: Math.round(data.daily.uv_index_max?.[i] ?? 0),
+        cloudMean: Math.round(data.daily.cloud_cover_mean?.[i] ?? 0),
+        precipHours: Math.round(data.daily.precipitation_hours?.[i] ?? 0),
         sunrise: clockTime(data.daily.sunrise[i]),
         sunset: clockTime(data.daily.sunset[i]),
       })),
