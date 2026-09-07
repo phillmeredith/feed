@@ -12,6 +12,7 @@ import { getAllModelReleases } from "@/lib/models";
 import { getPatents } from "@/lib/patents";
 import { PatentsPanel } from "@/components/PatentsPanel";
 import { ForecastPanel } from "@/components/ForecastPanel";
+import { ClimatePanel } from "@/components/ClimatePanel";
 import { getDetailedWeather } from "@/lib/weather";
 import { GearDirectory } from "@/components/GearDirectory";
 import { ModelTable } from "@/components/ModelTable";
@@ -136,9 +137,15 @@ export async function DeskView({
         {above}
 
         {forecast && (
-          <div className="mt-10">
-            <ForecastPanel weather={forecast} />
-          </div>
+          <>
+            <div className="mt-10">
+              <ForecastPanel weather={forecast} />
+            </div>
+            {/* The measurements the desk's reporting is a commentary on. */}
+            <div className="mt-20">
+              <ClimatePanel />
+            </div>
+          </>
         )}
 
         {lead ? (

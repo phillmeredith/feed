@@ -1,0 +1,243 @@
+"use client";
+
+import { useId, useState } from "react";
+import type { HourPoint } from "@/lib/weather";
+
+/**
+ * The next day and a half, drawn properly.
+ *
+ * What was here before was twelve one-pixel bars whose height came from
+ * `20 + ((t - floor) / span) * 44`. Because the baseline wasn't zero, a day
+ * running 16° to 19° drew bars from 20px to 64px — a threefold difference on
+ * the page for three degrees in the air. There was no line, so the shape of
+ * the day, which is the only reason to look at an hourly forecast, wasn't
+ * there to read at all.
+ *
+ * This is a meteogram: temperature as a line with apparent temperature
+ * shadowing it, rain probability as an area beneath, night shaded, and now
+ * marked. Scrubbing it reads out any hour.
+ */
+const W = 1000;
+const H = 260;
+const PAD = { top: 26, right: 16, bottom: 40, left: 34 };
+const PLOT = {
+  w: W - PAD.left - PAD.right,
+  h: H - PAD.top - PAD.bottom,
+};
+
+/** Rain occupies the bottom band; temperature has the rest. */
+const RAIN_BAND = 0.42;
+
+export function Meteogram({ hours }: { hours: HourPoint[] }) {
+  const gradientId = useId();
+  const [active, setActive] = useState<number | null>(null);
+
+  if (hours.length < 2) return null;
+
+  const temps = hours.flatMap((h) => [h.tempC, h.feelsLike]);
+  const min = Math.min(...temps);
+  const max = Math.max(...temps);
+  // A flat day still deserves a readable line rather than a straight edge.
+  const lo = Math.floor(min - 1);
+  const hi = Math.ceil(max + 1);
+  const span = Math.max(1, hi - lo);
+
+  const x = (i: number) => PAD.left + (i / (hours.length - 1)) * PLOT.w;
+  const tempY = (t: number) =>
+    PAD.top + (1 - (t - lo) / span) * (PLOT.h * (1 - RAIN_BAND));
+  const rainY = (p: number) =>
+    PAD.top + PLOT.h - (p / 100) * (PLOT.h * RAIN_BAND);
+
+  const line = (get: (h: HourPoint) => number) =>
+    hours.map((h, i) => `${i === 0 ? "M" : "L"}${x(i)} ${tempY(get(h))}`).join(" ");
+
+  const rainArea =
+    hours.map((h, i) => `${i === 0 ? "M" : "L"}${x(i)} ${rainY(h.precipChance)}`).join(" ") +
+    ` L${x(hours.length - 1)} ${PAD.top + PLOT.h} L${x(0)} ${PAD.top + PLOT.h} Z`;
+
+  // Night runs as bands behind everything, so the shape of the day is legible.
+  const nights: { from: number; to: number }[] = [];
+  hours.forEach((h, i) => {
+    if (h.day) return;
+    const last = nights[nights.length - 1];
+    if (last && last.to === i - 1) last.to = i;
+    else nights.push({ from: i, to: i });
+  });
+
+  const shown = active ?? 0;
+  const point = hours[shown];
+
+  return (
+    <figure className="mt-6">
+      <svg
+        viewBox={`0 0 ${W} ${H}`}
+        className="w-full h-auto touch-none"
+        role="img"
+        aria-label={`Temperature and rain probability for the next ${hours.length} hours`}
+        onMouseLeave={() => setActive(null)}
+        onPointerMove={(event) => {
+          const box = event.currentTarget.getBoundingClientRect();
+          const ratio = (event.clientX - box.left) / box.width;
+          const i = Math.round(
+            ((ratio * W - PAD.left) / PLOT.w) * (hours.length - 1)
+          );
+          setActive(Math.min(hours.length - 1, Math.max(0, i)));
+        }}
+      >
+        <defs>
+          <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.28" />
+            <stop offset="100%" stopColor="var(--accent)" stopOpacity="0.04" />
+          </linearGradient>
+        </defs>
+
+        {nights.map((band) => (
+          <rect
+            key={band.from}
+            x={x(band.from)}
+            y={PAD.top - 12}
+            width={Math.max(1, x(band.to) - x(band.from))}
+            height={PLOT.h + 12}
+            fill="var(--paper)"
+            opacity={0.035}
+          />
+        ))}
+
+        {/* Temperature gridlines, labelled in whole degrees. */}
+        {[lo, Math.round((lo + hi) / 2), hi].map((t) => (
+          <g key={t}>
+            <line
+              x1={PAD.left}
+              y1={tempY(t)}
+              x2={W - PAD.right}
+              y2={tempY(t)}
+              stroke="var(--rule)"
+              strokeWidth={1}
+            />
+            <text
+              x={PAD.left - 8}
+              y={tempY(t) + 4}
+              textAnchor="end"
+              className="fill-[var(--faint)]"
+              fontSize="13"
+            >
+              {t}°
+            </text>
+          </g>
+        ))}
+
+        <path d={rainArea} fill={`url(#${gradientId})`} />
+        <path
+          d={hours.map((h, i) => `${i === 0 ? "M" : "L"}${x(i)} ${rainY(h.precipChance)}`).join(" ")}
+          stroke="var(--accent)"
+          strokeOpacity={0.5}
+          strokeWidth={1.5}
+          fill="none"
+        />
+
+        {/* Apparent temperature shadows the real one; where they part, the
+            wind is doing something worth knowing about. */}
+        <path
+          d={line((h) => h.feelsLike)}
+          stroke="var(--muted)"
+          strokeWidth={1.5}
+          strokeDasharray="4 4"
+          fill="none"
+        />
+        <path
+          d={line((h) => h.tempC)}
+          stroke="var(--accent)"
+          strokeWidth={2.5}
+          fill="none"
+        />
+
+        {/* Now. */}
+        <line
+          x1={x(0)}
+          y1={PAD.top - 14}
+          x2={x(0)}
+          y2={PAD.top + PLOT.h}
+          stroke="var(--paper)"
+          strokeOpacity={0.35}
+          strokeWidth={1}
+        />
+        <text
+          x={x(0) + 6}
+          y={PAD.top - 16}
+          className="fill-[var(--faint)]"
+          fontSize="12"
+          letterSpacing="1.4"
+        >
+          NOW
+        </text>
+
+        {/* Hour axis, every three hours so it stays readable on a phone. */}
+        {hours.map((h, i) =>
+          i % 3 === 0 ? (
+            <text
+              key={h.at}
+              x={x(i)}
+              y={H - 18}
+              textAnchor="middle"
+              className="fill-[var(--faint)]"
+              fontSize="13"
+            >
+              {h.time.slice(0, 2)}
+            </text>
+          ) : null
+        )}
+
+        {active !== null && (
+          <g>
+            <line
+              x1={x(active)}
+              y1={PAD.top - 14}
+              x2={x(active)}
+              y2={PAD.top + PLOT.h}
+              stroke="var(--accent)"
+              strokeWidth={1}
+            />
+            <circle
+              cx={x(active)}
+              cy={tempY(point.tempC)}
+              r={4.5}
+              fill="var(--accent)"
+            />
+          </g>
+        )}
+      </svg>
+
+      {/*
+       * The readout. It shows the first hour until the chart is touched, so
+       * the figure says something useful before anyone interacts with it.
+       */}
+      <figcaption className="mt-3 flex flex-wrap items-baseline gap-x-8 gap-y-2 border-t border-rule pt-3">
+        <span className="kicker text-[10px] text-accent w-14">
+          {active === null ? "Now" : point.time}
+        </span>
+        <Reading label="Temp" value={`${point.tempC}°`} />
+        <Reading label="Feels" value={`${point.feelsLike}°`} />
+        <Reading label="Rain" value={`${point.precipChance}%`} />
+        {point.precipMm > 0 && (
+          <Reading label="Fall" value={`${point.precipMm.toFixed(1)} mm`} />
+        )}
+        <Reading label="Wind" value={`${point.windKph} km/h`} />
+        {point.gustKph > point.windKph + 5 && (
+          <Reading label="Gusting" value={`${point.gustKph} km/h`} />
+        )}
+        <span className="kicker text-[9px] text-faint ml-auto hidden sm:inline">
+          Drag across to read any hour
+        </span>
+      </figcaption>
+    </figure>
+  );
+}
+
+function Reading({ label, value }: { label: string; value: string }) {
+  return (
+    <span className="flex items-baseline gap-2">
+      <span className="kicker text-[9px] text-faint">{label}</span>
+      <span className="font-body text-[15px] tabular-nums">{value}</span>
+    </span>
+  );
+}
