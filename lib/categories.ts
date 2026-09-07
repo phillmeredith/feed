@@ -22,11 +22,11 @@ export const categories: Category[] = [
   {
     slug: "cameras",
     group: "photography",
-    label: "Cameras & Lenses",
+    label: "Cameras",
     short: "Cameras",
-    dek: "Full-frame, medium format, glass",
+    dek: "Bodies, sensors and formats",
     standfirst:
-      "Bodies, sensors and glass: full-frame, medium format and the rumour mill that runs ahead of both.",
+      "Bodies and sensors — full-frame, medium format, compacts — and the rumour mill that runs ahead of them. Glass has its own desk.",
   },
   {
     slug: "vehicles",
