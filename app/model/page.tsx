@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { SubNav } from "@/components/SubNav";
 import { DeskTabs } from "@/components/DeskTabs";
+import { DataTable } from "@/components/ui/DataTable";
 import { Footer } from "@/components/Footer";
 import {
   allModels,
@@ -71,50 +72,86 @@ export default function ModelIndex() {
           <DeskTabs desk="ai" current="catalogue" />
         </div>
 
-        <div className="mt-10 overflow-x-auto">
-          <table className="w-full min-w-[720px] text-small">
-            <thead>
-              <tr className="border-b border-rule">
-                <th className="kicker text-micro text-faint text-left pb-3 pr-4">Model</th>
-                <th className="kicker text-micro text-faint text-left pb-3 pr-4">Lab</th>
-                <th className="kicker text-micro text-faint text-right pb-3 pr-4">In</th>
-                <th className="kicker text-micro text-faint text-right pb-3 pr-4">Out</th>
-                <th className="kicker text-micro text-faint text-right pb-3 pr-4">Blended</th>
-                <th className="kicker text-micro text-faint text-right pb-3 pr-4">Context</th>
-                <th className="kicker text-micro text-faint text-left pb-3">Accepts</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ranked.map((m) => (
-                <tr key={m.id} className="border-b border-rule group">
-                  <td className="py-3 pr-4">
-                    <Link
-                      href={`/model/${modelSlug(m.id)}`}
-                      className="font-body font-semibold group-hover:text-accent transition-colors"
-                    >
-                      {m.name}
-                    </Link>
-                  </td>
-                  <td className="py-3 pr-4 text-muted text-fine">{m.lab}</td>
-                  <td className="py-3 pr-4 text-right figures text-muted">
-                    {formatPrice(m.inputPrice)}
-                  </td>
-                  <td className="py-3 pr-4 text-right figures text-muted">
+        <div className="mt-10" data-density="reference">
+          <DataTable
+            caption="Every model in the catalogue, cheapest blended price first"
+            rows={ranked}
+            rowKey={(m) => m.id}
+            columns={[
+              {
+                key: "model",
+                header: "Model",
+                cell: (m) => (
+                  <Link
+                    href={`/model/${modelSlug(m.id)}`}
+                    className="hover:text-accent transition-colors"
+                  >
+                    <span className="font-body font-semibold">{m.name}</span>
+                  </Link>
+                ),
+              },
+              {
+                key: "lab",
+                header: "Lab",
+                cell: (m) => (
+                  <span className="text-muted text-fine">{m.lab}</span>
+                ),
+              },
+              {
+                key: "in",
+                header: "In",
+                align: "right",
+                numeric: true,
+                cell: (m) => (
+                  <span className="text-muted">{formatPrice(m.inputPrice)}</span>
+                ),
+              },
+              {
+                key: "out",
+                header: "Out",
+                align: "right",
+                numeric: true,
+                cell: (m) => (
+                  <span className="text-muted">
                     {formatPrice(m.outputPrice)}
-                  </td>
-                  <td className="py-3 pr-4 text-right figures text-accent">
+                  </span>
+                ),
+              },
+              {
+                key: "blended",
+                header: "Blended",
+                align: "right",
+                numeric: true,
+                cell: (m) => (
+                  <span className="text-accent">
                     {formatPrice(blendedPrice(m))}
-                  </td>
-                  <td className="py-3 pr-4 text-right figures text-muted">
+                  </span>
+                ),
+              },
+              {
+                key: "context",
+                header: "Context",
+                align: "right",
+                numeric: true,
+                hideBelow: "sm",
+                cell: (m) => (
+                  <span className="text-muted">
                     {formatContext(m.contextTokens)}
-                  </td>
-                  <td className="py-3 text-faint text-fine">
+                  </span>
+                ),
+              },
+              {
+                key: "accepts",
+                header: "Accepts",
+                hideBelow: "md",
+                cell: (m) => (
+                  <span className="text-faint text-fine">
                     {formatModality(m)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                  </span>
+                ),
+              },
+            ]}
+          />
         </div>
 
         <p className="mt-8 text-fine text-faint max-w-2xl">

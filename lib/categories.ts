@@ -62,7 +62,7 @@ export const categories: Category[] = [
     short: "F1",
     dek: "The season, race by race",
     standfirst:
-      "Every round of the season with its result and its highlights, the championship as it stands, and the reporting that runs between races.",
+      "The reporting that runs between races, and beside it the weekend ahead, every round of the season and both championships.",
   },
   {
     slug: "golf",
@@ -71,7 +71,7 @@ export const categories: Category[] = [
     short: "Golf",
     dek: "The majors and the tour",
     standfirst:
-      "The majors first, then the tour week by week — leaderboards, winners and the highlights, alongside the writing worth reading.",
+      "The writing worth reading, and beside it what is on this week, the four majors, and every leaderboard of the season.",
   },
   {
     slug: "ufc",
@@ -80,7 +80,7 @@ export const categories: Category[] = [
     short: "UFC",
     dek: "Every card, every result",
     standfirst:
-      "The next card and then the season backwards: every bout on every event, main card and prelims, with the main card's highlights playing here.",
+      "The reporting around the fight game, and beside it the next card and every one of the season — main card and prelims, with the highlights.",
   },
   {
     slug: "science",

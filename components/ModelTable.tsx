@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ModelRelease } from "@/lib/models";
 import { matchByName } from "@/lib/catalogue";
 import { modelSlug } from "@/lib/openrouter";
+import { DataTable } from "./ui/DataTable";
 
 function date(iso: string) {
   return new Date(iso).toLocaleDateString("en-GB", {
@@ -54,47 +55,59 @@ export function ModelTable({ models }: { models: ModelRelease[] }) {
         </p>
       </div>
 
-      <div className="mt-8 overflow-x-auto">
-        <table className="w-full min-w-[34rem] border-collapse font-meta text-sm">
-          <thead>
-            <tr className="border-b border-rule">
-              <th className="kicker text-micro text-muted text-left pb-3 pr-4">
-                Model
-              </th>
-              <th className="kicker text-micro text-muted text-left pb-3 pr-4">
-                Lab
-              </th>
-              <th className="kicker text-micro text-muted text-left pb-3 pr-4">
-                Released
-              </th>
-              <th className="kicker text-micro text-muted text-left pb-3 pr-4">
-                Weights
-              </th>
-              <th className="kicker text-micro text-muted text-right pb-3">
-                Hub likes
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {models.map((model) => (
-              <tr key={model.id} className="border-b border-rule last:border-0">
-                <td className="py-3 pr-4 font-body font-semibold text-paper">
+      <div className="mt-8" data-density="reference">
+        <DataTable
+          caption="Recent model releases, newest first"
+          rows={models}
+          rowKey={(model) => model.id}
+          columns={[
+            {
+              key: "model",
+              header: "Model",
+              cell: (model) => (
+                <span className="font-body font-semibold text-paper">
                   <ModelName model={model} />
-                </td>
-                <td className="py-3 pr-4 text-muted">{model.lab}</td>
-                <td className="py-3 pr-4 text-muted whitespace-nowrap">
+                </span>
+              ),
+            },
+            {
+              key: "lab",
+              header: "Lab",
+              cell: (model) => <span className="text-muted">{model.lab}</span>,
+            },
+            {
+              key: "released",
+              header: "Released",
+              numeric: true,
+              cell: (model) => (
+                <span className="text-muted whitespace-nowrap">
                   {date(model.releasedAt)}
-                </td>
-                <td className="py-3 pr-4 text-muted">
+                </span>
+              ),
+            },
+            {
+              key: "weights",
+              header: "Weights",
+              hideBelow: "sm",
+              cell: (model) => (
+                <span className="text-muted">
                   {model.weights === "open" ? "Open" : "Closed"}
-                </td>
-                <td className="py-3 text-right text-muted figures">
+                </span>
+              ),
+            },
+            {
+              key: "likes",
+              header: "Hub likes",
+              align: "right",
+              numeric: true,
+              cell: (model) => (
+                <span className="text-muted">
                   {model.weights === "open" ? compact(model.likes) : "—"}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                </span>
+              ),
+            },
+          ]}
+        />
       </div>
     </section>
   );
