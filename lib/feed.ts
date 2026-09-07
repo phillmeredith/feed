@@ -476,6 +476,71 @@ async function verifyReadable(articles: Article[]): Promise<Article[]> {
 const HERO_ROTATION_MS = 10 * 60 * 1000;
 const HERO_MAX_AGE_HOURS = 48;
 
+/**
+ * Press-release verbs.
+ *
+ * A company newsroom announcing a product is news; the same newsroom
+ * "enhancing long-term value" or "expanding its commitment" is not, and it
+ * files both into the same feed at the same cadence. These are the words that
+ * separate them, and they are remarkably consistent across every company that
+ * has ever employed a communications department.
+ */
+/**
+ * An actual launch, which is narrower than RELEASE_TERMS.
+ *
+ * RELEASE_TERMS is deliberately loose because it also routes and ranks — it
+ * counts "specs", "hands-on" and "priced" as release-adjacent, which is right
+ * for a desk and wrong for a front page.
+ */
+const LAUNCH_TERMS =
+  /\b(announce\w*|launch\w*|unveil\w*|introduc\w*|releas\w*|debut\w*|reveal\w*|now available|goes on sale|available now|ships?\b|shipping)\b/i;
+
+/**
+ * A price going up is not a product coming out.
+ *
+ * "Priced" is in RELEASE_TERMS because a launch usually states one, which
+ * meant "Samsung increases Galaxy A57 prices in India" read as an
+ * announcement and led the front page.
+ */
+const PRICE_MOVE =
+  /\b(increas\w+|rais\w+|ris\w+|hik\w+|cut\w*|reduc\w+|slash\w+|drop\w*|lower\w*)\b[^.]{0,24}\bprices?\b|\bprices?\b[^.]{0,24}\b(increas\w+|ris\w+|hik\w+|cut\b|drop\w*)\b/i;
+
+const CORPORATE_VERB =
+  /\b(enhanc\w+|expand\w+|strengthen\w+|reinforc\w+|reaffirm\w+|commit(s|ment|ted)?|celebrat\w+|empower\w+|showcas\w+|collaborat\w+|partners? with|drives? (growth|innovation)|continue[sd]? to|long-term value|solutions?\b)\b/i;
+
+/**
+ * Whether a story has any business at the top of the front page.
+ *
+ * The front page had been ranking on recency inside a desk-diversity rule,
+ * which on a quiet morning is a machine for surfacing the least interesting
+ * thing each desk happened to file. It led with a refrigerator software
+ * update because the hardware desk had to be represented and that was newest.
+ *
+ * Above the fold, a company's own newsroom has to be announcing something,
+ * and nothing may be written in press-release. Everything still appears on
+ * its desk; this only decides what gets the front page's best seats.
+ */
+export function frontPageScore(article: Article): number {
+  const source = sources.find((s) => s.name === article.source);
+  const launches = LAUNCH_TERMS.test(article.headline) && !PRICE_MOVE.test(article.headline);
+
+  if (source?.firstParty) {
+    // A newsroom earns the front page by announcing something, and only that.
+    if (!launches) return 0;
+    if (CORPORATE_VERB.test(article.headline)) return 0;
+  }
+
+  let score = 1;
+  if (launches) score += 2;
+  // A story the site can show in full is worth more than a stub of one.
+  if ((article.words ?? 0) >= 400) score += 2;
+  else if ((article.words ?? 0) >= 150) score += 1;
+  if (article.dek) score += 1;
+  if (CORPORATE_VERB.test(article.headline)) score -= 2;
+
+  return Math.max(score, 0);
+}
+
 export function pickHero(
   articles: Article[],
   /** Restrict the rota to one section's desks; omitted, it spans them all. */
@@ -485,20 +550,61 @@ export function pickHero(
     ? desks.filter((d) => within.includes(d.slug))
     : desks;
 
-  const newestPerDesk = rotaDesks
-    .map(
-      (desk) =>
-        articles
-          .filter((a) => a.category === desk.slug && a.image)
-          .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))[0]
-    )
+  /*
+   * The best of each desk, not the newest.
+   *
+   * Newest-with-a-picture is how a site about new releases ends up leading on
+   * a politician attending a golf tournament: it was the most recent thing the
+   * golf desk had a photograph of. Ranking the desk's recent candidates by
+   * what the front page actually wants — an announcement, a full article, a
+   * standfirst — and only then taking the freshest, leads on the release.
+   */
+  const isFresh = (a: Article) =>
+    ageInDays(new Date(a.publishedAt)) * 24 <= HERO_MAX_AGE_HOURS;
+
+  const bestPerDesk = rotaDesks
+    .map((desk) => {
+      const pool = articles
+        .filter((a) => a.category === desk.slug && a.image)
+        .filter((a) => frontPageScore(a) > 0);
+
+      /*
+       * Freshness gates the field, quality decides inside it — in that order.
+       * Ranking on quality first let a strong piece from Tuesday represent its
+       * desk on Friday, and once every desk was doing that the whole rota was
+       * stale and the front page led three days late.
+       */
+      const candidates = pool.filter(isFresh).length > 0
+        ? pool.filter(isFresh)
+        : pool.slice(0, 8);
+
+      return [...candidates].sort(
+        (a, b) =>
+          frontPageScore(b) - frontPageScore(a) ||
+          b.publishedAt.localeCompare(a.publishedAt)
+      )[0];
+    })
     .filter((a): a is Article => Boolean(a));
 
-  const fresh = newestPerDesk.filter(
-    (a) => ageInDays(new Date(a.publishedAt)) * 24 <= HERO_MAX_AGE_HOURS
+  const fresh = bestPerDesk.filter(isFresh);
+  const pool = fresh.length > 0 ? fresh : bestPerDesk;
+  if (pool.length === 0) return articles[0];
+
+  /*
+   * Rotation, but only among the desks with something to say.
+   *
+   * Every desk used to take an equal turn at the top, which meant a quiet desk
+   * led the site with whatever it had — a politician attending a golf
+   * tournament — while a desk with an actual launch waited its turn. Ranking
+   * the desks and rotating through the better half keeps the page turning over
+   * during the day without handing it to the weakest thing on it.
+   */
+  const ranked = [...pool].sort(
+    (a, b) =>
+      frontPageScore(b) - frontPageScore(a) ||
+      b.publishedAt.localeCompare(a.publishedAt)
   );
-  const rota = fresh.length > 0 ? fresh : newestPerDesk;
-  if (rota.length === 0) return articles[0];
+  const rota = ranked.slice(0, Math.max(3, Math.ceil(ranked.length / 2)));
 
   return rota[Math.floor(Date.now() / HERO_ROTATION_MS) % rota.length];
 }
