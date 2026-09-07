@@ -31,35 +31,10 @@ const PODIUM = ["1st", "2nd", "3rd"];
  */
 export function F1Weekend() {
   const s = season();
-  const drivers = driverStandings();
-  const teams = constructorStandings();
   const calendar = races();
   const next = nextRace();
   const run = calendar.filter((r) => r.results?.length);
   const latest = run[run.length - 1];
-
-  const leader = drivers[0];
-  const second = drivers[1];
-  const gap = leader && second ? leader.points - second.points : 0;
-
-  /*
-   * Season order, as a reader wants it rather than as the calendar prints it.
-   *
-   * Straight reverse order buried the season under eleven rounds that hadn't
-   * happened yet — you scrolled past most of a year of blanks to reach the
-   * last result. So: what just happened, then what's next, then back through
-   * the season, with the rounds still to come at the foot where they belong.
-   */
-  const ordered = latest
-    ? [
-        latest,
-        ...(next ? [next] : []),
-        ...run.filter((r) => r.round !== latest.round).reverse(),
-        ...calendar.filter(
-          (r) => !r.results?.length && r.round !== next?.round
-        ),
-      ]
-    : calendar;
 
   return (
     <div className="mt-12 flex flex-col gap-20">
