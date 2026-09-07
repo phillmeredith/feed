@@ -24,6 +24,7 @@ import { VideoPanel } from "@/components/VideoPanel";
 import { referencesForDesk } from "@/lib/reference";
 import { recentVideos } from "@/lib/video";
 import { SubNav } from "./SubNav";
+import { DeskTabs } from "./DeskTabs";
 
 /*
  * One desk, one page of it.
@@ -46,10 +47,16 @@ export async function DeskView({
   page,
   /** A desk's own standing material — a season, a leaderboard — above the news. */
   above,
+  /** Which of the desk's tabs this is, so the tab bar can mark it. */
+  tab = "",
+  /** Tabs that carry only standing material switch the article feed off. */
+  feed = true,
 }: {
   desk: string;
   page: number;
   above?: React.ReactNode;
+  tab?: string;
+  feed?: boolean;
 }) {
   const category = categoryBySlug(desk);
   if (!category) notFound();
@@ -137,6 +144,8 @@ export async function DeskView({
             <SubNav group={category.group} current={category.slug} />
           )}
 
+          <DeskTabs desk={category.slug} current={tab} />
+
           {deskReferences.length > 0 && (
             <div className="mt-6 flex flex-wrap gap-3">
               {deskReferences.map((ref) => (
@@ -204,7 +213,8 @@ export async function DeskView({
             </p>
           ))}
 
-        {lead ? (
+        {/* A tab showing only a calendar or a table has no feed to run. */}
+        {feed && (lead ? (
           <>
             <div className="mt-10">
               <LeadCard article={lead} />
@@ -237,7 +247,7 @@ export async function DeskView({
           <p className="mt-16 font-serif italic text-xl text-muted">
             Nothing new on this desk right now. Check back after the next refresh.
           </p>
-        )}
+        ))}
         {totalPages > 1 && (
           <nav className="mt-16 border-t border-rule pt-6 flex items-center justify-between kicker text-[10px]">
             {current > 1 ? (

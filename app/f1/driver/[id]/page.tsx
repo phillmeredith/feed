@@ -16,13 +16,13 @@ import { allArchived } from "@/lib/archive";
 export const revalidate = 3600;
 
 export function generateStaticParams() {
-  return driverStandings().map((d) => ({ driver: d.driverId }));
+  return driverStandings().map((d) => ({ id: d.driverId }));
 }
 
 export async function generateMetadata({
   params,
-}: PageProps<"/f1/[driver]">): Promise<Metadata> {
-  const { driver } = await params;
+}: PageProps<"/f1/driver/[id]">): Promise<Metadata> {
+  const { id: driver } = await params;
   const d = driverById(driver);
   if (!d) return { title: "Driver not found — The Dispatch" };
   return {
@@ -40,8 +40,8 @@ function Stat({ label, value }: { label: string; value: string | number }) {
   );
 }
 
-export default async function DriverPage({ params }: PageProps<"/f1/[driver]">) {
-  const { driver } = await params;
+export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]">) {
+  const { id: driver } = await params;
   const d = driverById(driver);
   if (!d) notFound();
 
@@ -125,7 +125,7 @@ export default async function DriverPage({ params }: PageProps<"/f1/[driver]">) 
               {teammates.map((t) => (
                 <Link
                   key={t.driverId}
-                  href={`/f1/${t.driverId}`}
+                  href={`/f1/driver/${t.driverId}`}
                   className="group border border-rule bg-surface px-4 py-3 hover:border-accent-dim transition-colors"
                 >
                   <span className="font-body font-semibold text-[15px] group-hover:text-accent transition-colors">

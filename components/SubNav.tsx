@@ -26,29 +26,42 @@ export function SubNav({
   const refs = referencesForGroup(group.desks);
 
   return (
-    <nav className="mt-8 flex flex-wrap items-baseline gap-x-7 gap-y-3 kicker text-[10px]">
+    /*
+     * The second tier, made to look like navigation rather than a line of
+     * links. It was a row of small grey text mixed in with the reference
+     * sections, which read as a footnote under the headline; the desks now
+     * carry the weight and the reference material sits after a divider.
+     */
+    <nav
+      aria-label={`${group.label} desks`}
+      className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3"
+    >
       <Link
         href={`/${group.slug}`}
-        className={
+        aria-current={current === group.slug ? "page" : undefined}
+        className={`kicker text-[11px] ${
           current === group.slug
-            ? "text-accent"
+            ? "text-accent font-semibold"
             : "text-muted hover:text-accent transition-colors"
-        }
+        }`}
       >
         All {group.label}
       </Link>
 
-      <span className="text-rule">|</span>
+      <span className="text-rule" aria-hidden="true">
+        |
+      </span>
 
       {desks.map((desk) => (
         <Link
           key={desk.slug}
           href={`/${desk.slug}`}
-          className={
+          aria-current={current === desk.slug ? "page" : undefined}
+          className={`display text-lg sm:text-xl transition-colors ${
             current === desk.slug
               ? "text-accent"
-              : "text-muted hover:text-accent transition-colors"
-          }
+              : "text-paper hover:text-accent"
+          }`}
         >
           {desk.label}
         </Link>
@@ -56,16 +69,19 @@ export function SubNav({
 
       {refs.length > 0 && (
         <>
-          <span className="text-rule">|</span>
+          <span className="text-rule" aria-hidden="true">
+            |
+          </span>
           {refs.map((ref) => (
             <Link
               key={ref.slug}
               href={`/${ref.slug}`}
-              className={
+              aria-current={current === ref.slug ? "page" : undefined}
+              className={`kicker text-[10px] ${
                 current === ref.slug
                   ? "text-accent"
                   : "text-faint hover:text-accent transition-colors"
-              }
+              }`}
             >
               {ref.label}
             </Link>

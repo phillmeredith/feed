@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
     return [
       { source: "/sports", destination: "/sport", permanent: true },
       { source: "/combat", destination: "/ufc", permanent: true },
+      /*
+       * Drivers moved under /f1/driver so that /f1/<something> is free for
+       * the desk's own tabs. Anything linking to the old shape still lands.
+       */
+      { source: "/f1/:driver(hamilton|russell|norris|leclerc|piastri|antonelli|max_verstappen|alonso|stroll|gasly|ocon|albon|sainz|hulkenberg|tsunoda|lawson|bearman|colapinto|bortoleto|hadjar|doohan)", destination: "/f1/driver/:driver", permanent: true },
     ];
   },
 };

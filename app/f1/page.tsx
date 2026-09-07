@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DeskView } from "@/components/DeskView";
-import { F1Season } from "@/components/F1Season";
+import { F1Weekend } from "@/components/F1Season";
 import { season } from "@/lib/f1";
 
 /*
@@ -22,5 +22,5 @@ export function generateMetadata(): Metadata {
 }
 
 export default function F1Desk() {
-  return <DeskView desk="f1" page={1} above={<F1Season />} />;
+  return <DeskView desk="f1" page={1} above={<F1Weekend />} />;
 }

@@ -29,7 +29,7 @@ const PODIUM = ["1st", "2nd", "3rd"];
  * how much, and the highlights — with the table underneath it and every other
  * round available without leaving.
  */
-export function F1Season() {
+export function F1Weekend() {
   const s = season();
   const drivers = driverStandings();
   const teams = constructorStandings();
@@ -159,32 +159,51 @@ export function F1Season() {
               <RaceResults race={latest} />
             </div>
 
-              </div>
-            </SpoilerGuard>
-
             {highlightsFor(f1Key(s.season, latest.round)).length > 0 ? (
-              <details className="group mt-8">
-                <summary className="kicker text-[10px] text-muted hover:text-accent cursor-pointer list-none">
-                  <span className="group-open:hidden">
-                    Watch the highlights →
-                  </span>
-                  <span className="hidden group-open:inline">Close ↑</span>
-                </summary>
-                <div className="mt-6">
-                  <HighlightReel
-                    highlights={highlightsFor(f1Key(s.season, latest.round))}
-                  />
-                </div>
-              </details>
+              <HighlightReel
+                highlights={highlightsFor(f1Key(s.season, latest.round))}
+              />
             ) : (
-              <p className="font-serif italic text-muted mt-6">
+              <p className="font-serif italic text-muted">
                 Formula 1 hasn&apos;t posted highlights for this round yet.
               </p>
             )}
+              </div>
+            </SpoilerGuard>
           </div>
         </section>
       )}
 
+      <LastUpdated
+        at={s.updated ?? null}
+        source="Standings, calendar and results from the Jolpica F1 API; highlights are Formula 1's own"
+      />
+    </div>
+  );
+}
+
+/** The season, round by round. Its own tab, because it is its own thing. */
+export function F1Calendar() {
+  const s = season();
+  const calendar = races();
+  const next = nextRace();
+  const run = calendar.filter((r) => r.results?.length);
+  const latest = run[run.length - 1];
+  const leader = driverStandings()[0];
+  const second = driverStandings()[1];
+  const gap = leader && second ? leader.points - second.points : 0;
+
+  const ordered = latest
+    ? [
+        latest,
+        ...(next ? [next] : []),
+        ...run.filter((r) => r.round !== latest.round).reverse(),
+        ...calendar.filter((r) => !r.results?.length && r.round !== next?.round),
+      ]
+    : calendar;
+
+  return (
+    <div className="mt-12 flex flex-col gap-20">
       <section>
         <div className="flex items-end justify-between gap-6 flex-wrap border-b border-rule pb-3">
           <h2 className="kicker text-[11px] text-accent">
@@ -227,6 +246,22 @@ export function F1Season() {
         </ol>
       </section>
 
+      <LastUpdated
+        at={s.updated ?? null}
+        source="Calendar and results from the Jolpica F1 API"
+      />
+    </div>
+  );
+}
+
+/** Both championships. */
+export function F1Standings() {
+  const s = season();
+  const drivers = driverStandings();
+  const teams = constructorStandings();
+
+  return (
+    <div className="mt-12 flex flex-col gap-20">
       {/* A points table after the flag says who won as surely as the podium does. */}
       <SpoilerGuard label="Championship standings">
       <div className="grid gap-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
@@ -256,7 +291,7 @@ export function F1Season() {
                     </td>
                     <td className="py-2.5 pr-4">
                       <Link
-                        href={`/f1/${d.driverId}`}
+                        href={`/f1/driver/${d.driverId}`}
                         className="font-body font-semibold group-hover:text-accent transition-colors"
                       >
                         {driverName(d)}
@@ -306,7 +341,7 @@ export function F1Season() {
 
       <LastUpdated
         at={s.updated ?? null}
-        source="Standings, calendar and results from the Jolpica F1 API; highlights are Formula 1's own"
+        source="Standings from the Jolpica F1 API"
       />
     </div>
   );
@@ -354,17 +389,31 @@ function RoundCard({
         </span>
       </div>
 
-      <p
+      <h3
         className={`font-body font-semibold text-[16px] leading-snug mt-3 ${
           done ? "" : "text-muted"
         }`}
       >
-        {race.name}
-      </p>
+        <Link
+          href={`/f1/race/${race.round}`}
+          className="hover:text-accent transition-colors"
+        >
+          {race.name}
+        </Link>
+      </h3>
       <p className="kicker text-[9px] text-faint mt-2">
         {raceDate(race.date)}
         <span className="mx-2 text-rule">/</span>
         {race.locality}
+      </p>
+
+      <p className="mt-3">
+        <Link
+          href={`/f1/race/${race.round}`}
+          className="kicker text-[9px] text-muted hover:text-accent transition-colors"
+        >
+          {done ? "View race" : "Race details"} →
+        </Link>
       </p>
 
       {done && (
@@ -382,25 +431,15 @@ function RoundCard({
             </ol>
 
             <RaceResults race={race} />
-          </SpoilerGuard>
 
-          {/*
-            * Video stays behind a disclosure rather than being blurred. A
-            * blurred thumbnail is a poor guard — the still usually shows the
-            * winner celebrating — and rendering thirteen of them fetched
-            * fifteen third-party images nobody had asked to see.
-            */}
-          {reels.length > 0 && (
-            <details className="group mt-3">
-              <summary className="kicker text-[9px] text-faint hover:text-accent cursor-pointer list-none">
-                <span className="group-open:hidden">Highlights →</span>
-                <span className="hidden group-open:inline">Close ↑</span>
-              </summary>
-              <div className="mt-4">
+            {/* The thumbnail is part of the round, so it stays on the page and
+                takes the same blur as the names beside it. */}
+            {reels.length > 0 && (
+              <div className="mt-5">
                 <HighlightReel highlights={reels.slice(0, 1)} />
               </div>
-            </details>
-          )}
+            )}
+          </SpoilerGuard>
         </div>
       )}
     </li>
