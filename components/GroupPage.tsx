@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Article, Category, Group } from "@/lib/types";
+import type { Group } from "@/lib/types";
 import { categoryBySlug } from "@/lib/categories";
 import { getFeed, pickHero } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";

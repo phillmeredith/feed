@@ -4,7 +4,12 @@ import { LeadCard, FeatureCard, ListCard } from "@/components/cards";
 import { SectionBlock, SHAPES } from "@/components/shapes";
 import { BriefsColumn } from "@/components/BriefsColumn";
 import { categories, groups } from "@/lib/categories";
-import { getFeed, pickHero, frontPageScore } from "@/lib/feed";
+import {
+  getFeed,
+  pickHero,
+  frontPageScore,
+  isFrontPageFresh,
+} from "@/lib/feed";
 import type { Article } from "@/lib/types";
 
 /*
@@ -41,11 +46,6 @@ export default async function Home() {
    * a new desk is preferred rather than required.
    */
   const FRONT_PAGE_BAR = 3;
-  /* Three days. A front page carrying a five-week-old story is not a front
-     page, however good the story was in August. */
-  const FRESH_MS = 3 * 24 * 60 * 60 * 1000;
-  const now = Date.now();
-
   const byQuality = (a: Article, b: Article) =>
     frontPageScore(b) - frontPageScore(a) ||
     b.publishedAt.localeCompare(a.publishedAt);
@@ -53,9 +53,7 @@ export default async function Home() {
   const worthy = articles.filter(
     (a) => a.image && frontPageScore(a) >= FRONT_PAGE_BAR
   );
-  const recent = worthy.filter(
-    (a) => now - new Date(a.publishedAt).getTime() < FRESH_MS
-  );
+  const recent = worthy.filter(isFrontPageFresh);
   // Relax the window rather than run three cards short on a quiet week.
   const eligible = (recent.length >= 3 ? recent : worthy).sort(byQuality);
 

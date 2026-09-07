@@ -541,6 +541,16 @@ export function frontPageScore(article: Article): number {
   return Math.max(score, 0);
 }
 
+/** Three days. A front page carrying a five-week-old story is not one. */
+const FRONT_PAGE_FRESH_HOURS = 72;
+
+/** Recent enough for the top of the front page. */
+export function isFrontPageFresh(article: Article): boolean {
+  return (
+    ageInDays(new Date(article.publishedAt)) * 24 <= FRONT_PAGE_FRESH_HOURS
+  );
+}
+
 export function pickHero(
   articles: Article[],
   /** Restrict the rota to one section's desks; omitted, it spans them all. */
