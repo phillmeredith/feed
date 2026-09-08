@@ -476,3 +476,27 @@ a {
   color: var(--muted);
   padding-bottom: var(--space-tight);
 }
+
+/*
+ * The section band and the desk tabs scroll sideways rather than wrapping.
+ *
+ * Both mark the current item against a rule — a filled ground on the band, an
+ * underline on the tabs — and wrapping separates the mark from the rule it is
+ * measured against: on a phone the underline ended up on the first row while
+ * the rule sat under the second, and the filled block became a lopsided
+ * rectangle with the remaining desks stranded beneath it. One row that scrolls
+ * keeps the two together at every width.
+ *
+ * The bar is hidden because these navs only overflow on narrow screens, where
+ * the cut-off item is the affordance and a scrollbar would sit on top of the
+ * rule doing the marking. Keyboard focus still scrolls the row into view.
+ */
+.nav-scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.nav-scroll::-webkit-scrollbar {
+  display: none;
+}

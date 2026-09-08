@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { CategorySlug } from "@/lib/types";
 import { tabsFor, tabHref } from "@/lib/tabs";
+import { KeepCurrentInView } from "./KeepCurrentInView";
 
 /**
  * Tabs within a desk — the third tier, under the section nav.
@@ -24,9 +25,9 @@ export function DeskTabs({
   return (
     <nav
       aria-label="Sections of this desk"
-      className="mt-8 border-b border-rule"
+      className="mt-8 border-b border-rule nav-scroll"
     >
-      <ul className="flex flex-wrap -mb-px">
+      <ul className="flex flex-nowrap">
         {tabs.map((tab) => {
           const active = tab.slug === current;
           return (
@@ -41,7 +42,7 @@ export function DeskTabs({
                  * explicit variable for the same reason — the reset gives
                  * every element a default border-color of --rule.
                  */
-                className={`group block px-4 py-3 -mb-px border-b-2 transition-colors
+                className={`group block px-4 py-3 border-b-2 whitespace-nowrap transition-colors
                   focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--accent)]
                   ${active ? "" : "hover:bg-surface"}`}
                 style={{
@@ -63,6 +64,7 @@ export function DeskTabs({
           );
         })}
       </ul>
+      <KeepCurrentInView />
     </nav>
   );
 }

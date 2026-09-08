@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { categoryBySlug, groupBySlug, groups } from "@/lib/categories";
+import { KeepCurrentInView } from "./KeepCurrentInView";
 
 /**
  * The second tier: the desks inside a section.
@@ -31,9 +32,9 @@ export function SubNav({
   return (
     <nav
       aria-label={`${group.label} desks`}
-      className="mt-8 bg-surface/40"
+      className="mt-8 bg-surface/40 nav-scroll"
     >
-      <ul className="flex flex-wrap items-stretch">
+      <ul className="flex flex-nowrap items-stretch">
         <li>
           <Link
             href={`/${group.slug}`}
@@ -74,6 +75,7 @@ export function SubNav({
         })}
 
       </ul>
+      <KeepCurrentInView />
     </nav>
   );
 }
@@ -87,7 +89,7 @@ export function SubNav({
  */
 function navItemClass(active: boolean) {
   return [
-    "group block px-4 py-3 transition-colors",
+    "group block px-4 py-3 transition-colors whitespace-nowrap",
     "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--accent)]",
     active ? "bg-surface" : "hover:bg-surface",
   ].join(" ");
