@@ -654,13 +654,34 @@ export interface FeedData {
   lastUpdated: string;
 }
 
+/*
+ * A generalist needs a deeper read than a specialist, because its cap is spent
+ * before anything is routed.
+ *
+ * The Register files storage, security, hardware and AI into one feed. Taking
+ * its newest eight items handed the AI desk one story out of the eight it had
+ * actually published that day, and the desk looked frozen while the source was
+ * busy. A specialist feed doesn't have this problem: everything in it belongs
+ * to one desk, so the first eight are eight.
+ *
+ * Reading deeper is close to free — the feed is already fetched, and the
+ * per-outlet limit downstream still decides how much of it any one desk will
+ * take, so a firehose can't flood a section either.
+ */
+const GENERALIST_CAP = 30;
+
+function capFor(source: Source) {
+  const declared = source.cap ?? 12;
+  return source.generalist ? Math.max(declared, GENERALIST_CAP) : declared;
+}
+
 /** Memoised per request, so the masthead and page body share one build. */
 export const getFeed = cache(async function getFeed(): Promise<FeedData> {
   const articleBatches = await Promise.all(
     sources.map(async (source) => {
       const items = await fetchFeed(source.url);
       return items
-        .slice(0, source.cap ?? 12)
+        .slice(0, capFor(source))
         .map((item) => toArticle(item, source))
         .filter((a): a is Article => a !== null);
     })
