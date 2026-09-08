@@ -27,6 +27,7 @@ jobs:
       # never have to fetch anything during a request.
       - run: npm run catalogue:update
       - run: npm run f1:update
+      - run: npm run launches:update
       - run: npm run golf:update
       - run: npm run ufc:update
       - run: npm run climate:update
@@ -44,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/series data/model-catalogue.json data/f1.json \
+          git add data/series data/model-catalogue.json data/f1.json data/launches.json \
             data/golf.json data/ufc.json data/highlights.json data/videos.json \
             data/climate.json
           if git diff --staged --quiet; then

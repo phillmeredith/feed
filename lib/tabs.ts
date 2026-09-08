@@ -56,10 +56,14 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
 
   /*
    * Outside sport, a desk earns tabs only where it has standing material.
-   * Science, Screen, Wire and Technique are feeds and nothing else, so they
-   * get none — DeskTabs renders nothing rather than a single tab labelled
-   * Articles, which would be a tab bar that does not navigate.
+   * Screen, Wire and Technique are feeds and nothing else, so they get none —
+   * DeskTabs renders nothing rather than a single tab labelled Articles,
+   * which would be a tab bar that does not navigate.
    */
+  science: [
+    { slug: "", label: "Articles" },
+    { slug: "launches", label: "Launches" },
+  ],
   ai: [
     { slug: "", label: "Articles" },
     /* Fifteen recent releases, which is a different question from the four

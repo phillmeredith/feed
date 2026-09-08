@@ -22,6 +22,7 @@
     "archive:update": "node scripts/update-archive.ts",
     "series:record": "node scripts/record-series.ts",
     "catalogue:update": "node scripts/update-catalogue.ts",
+    "launches:update": "node scripts/update-launches.ts",
     "f1:update": "node scripts/update-f1.ts",
     "videos:update": "node scripts/update-videos.ts",
     "highlights:update": "node scripts/update-highlights.ts",
