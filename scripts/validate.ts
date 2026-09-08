@@ -42,8 +42,68 @@ const parser = new Parser({
   customFields: { item: [["content:encoded", "contentEncoded"]] },
 });
 
-const results = await Promise.all(
-  sources.map(async (source: Source) => {
+/*
+ * Two sources can share one backend. Phys.org and Medical Xpress are different
+ * hostnames on the same Science X infrastructure, and checking both at once —
+ * four articles each, in parallel, on top of every other source — earned a 429
+ * for both and reported it as though the publishers had changed their minds.
+ *
+ * Sources are grouped by host and each group is walked in series, with only a
+ * few groups in flight at a time. Checking fifty feeds politely takes longer
+ * than checking them rudely; it also produces an answer worth having.
+ */
+const HOST_GROUPS: Record<string, string> = {
+  "phys.org": "sciencex",
+  "medicalxpress.com": "sciencex",
+  "techxplore.com": "sciencex",
+};
+
+function groupOf(url: string) {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, "");
+    return HOST_GROUPS[host] ?? host;
+  } catch {
+    return url;
+  }
+}
+
+const CONCURRENT_GROUPS = 6;
+
+async function inGroups<T>(
+  items: Source[],
+  key: (s: Source) => string,
+  run: (s: Source) => Promise<T>
+): Promise<T[]> {
+  const groups = new Map<string, Source[]>();
+  for (const item of items) {
+    const k = key(item);
+    groups.set(k, [...(groups.get(k) ?? []), item]);
+  }
+
+  const queue = [...groups.values()];
+  const out: T[] = [];
+
+  async function worker() {
+    for (;;) {
+      const group = queue.shift();
+      if (!group) return;
+      for (const source of group) {
+        out.push(await run(source));
+        await sleep(PACE_MS);
+      }
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(CONCURRENT_GROUPS, queue.length) }, worker)
+  );
+  return out;
+}
+
+const results = await inGroups(
+  sources,
+  (s) => groupOf(s.url),
+  async (source: Source) => {
     let items: any[] = [];
     try {
       items = ((await parser.parseURL(source.url)) as any).items ?? [];
@@ -76,7 +136,7 @@ const results = await Promise.all(
       note: ok ? "" : `only ${readable}/${counts.length} items readable`,
       counts,
     };
-  })
+  }
 );
 
 console.log("SOURCE                 DESK        WORDS PER SAMPLE   STATUS");

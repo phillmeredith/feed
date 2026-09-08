@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { navItems } from "@/lib/categories";
-import { getMarkets, formatPrice } from "@/lib/markets";
+import { getMarkets, formatPrice, staleness } from "@/lib/markets";
 import { getWeather } from "@/lib/weather";
 import { Dateline } from "./Dateline";
 import { MobileNav } from "./MobileNav";
@@ -102,6 +102,12 @@ export async function Masthead({ compact = false }: { compact?: boolean }) {
                       {formatPrice(quote)}
                     </span>
                     <Change pct={quote.changePct} />
+                    {/* A fund that struck on Friday shouldn't read as today. */}
+                    {staleness(quote) && (
+                      <span className="kicker text-micro text-faint">
+                        {staleness(quote)}
+                      </span>
+                    )}
                   </span>
                 ))}
 

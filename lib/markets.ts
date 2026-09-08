@@ -6,6 +6,8 @@ export interface Quote {
   currency: string;
   /** UK OEICs are quoted in pence, everything else in its own currency. */
   unit: "p" | "currency";
+  /** When the price it carries was actually struck. */
+  asOf: number | null;
 }
 
 /*
@@ -54,6 +56,29 @@ interface ChartMeta {
   currency?: string;
 }
 
+interface ChartResult {
+  meta?: ChartMeta;
+  timestamp?: number[];
+  indicators?: { quote?: { close?: (number | null)[] }[] };
+}
+
+/**
+ * The daily bars, paired with their dates and stripped of the empty ones.
+ *
+ * A five-day window over a weekend comes back with nulls in it, and a UK fund
+ * that prices once a day leaves today empty until it strikes. Reading the last
+ * real bar is the only way to know both what the price is and when it was.
+ */
+function barsOf(result: ChartResult) {
+  const stamps = result.timestamp ?? [];
+  const closes = result.indicators?.quote?.[0]?.close ?? [];
+  return stamps
+    .map((t, i) => ({ at: t * 1000, close: closes[i] }))
+    .filter((bar): bar is { at: number; close: number } =>
+      typeof bar.close === "number"
+    );
+}
+
 async function fetchQuote(symbol: string, label: string): Promise<Quote | null> {
   try {
     const res = await fetch(
@@ -62,13 +87,24 @@ async function fetchQuote(symbol: string, label: string): Promise<Quote | null> 
     );
     if (!res.ok) return null;
 
-    const meta = (
-      (await res.json()) as { chart?: { result?: { meta?: ChartMeta }[] } }
-    ).chart?.result?.[0]?.meta;
+    const result = ((await res.json()) as { chart?: { result?: ChartResult[] } })
+      .chart?.result?.[0];
+    if (!result) return null;
 
-    const price = meta?.regularMarketPrice;
-    const previous = meta?.chartPreviousClose ?? meta?.previousClose;
+    const meta = result.meta;
+    const bars = barsOf(result);
+    const latest = bars.at(-1);
+
+    const price = latest?.close ?? meta?.regularMarketPrice;
     if (typeof price !== "number") return null;
+
+    /*
+     * The change is measured against the previous bar, not against
+     * `chartPreviousClose` — that field is the close before the whole
+     * requested window, so over a five-day range it made a week's drift read
+     * as today's move, and printed a rise on a day the price had fallen.
+     */
+    const previous = bars.at(-2)?.close;
 
     return {
       symbol,
@@ -80,6 +116,7 @@ async function fetchQuote(symbol: string, label: string): Promise<Quote | null> 
           ? ((price - previous) / previous) * 100
           : 0,
       currency: meta?.currency ?? "",
+      asOf: latest?.at ?? null,
     };
   } catch {
     return null;
@@ -106,6 +143,7 @@ async function fetchEthFallback(label: string): Promise<Quote | null> {
       changePct: row.gbp_24h_change ?? 0,
       currency: "GBP",
       unit: "currency",
+      asOf: Date.now(),
     };
   } catch {
     return null;
@@ -125,6 +163,25 @@ export async function getMarkets(): Promise<Quote[]> {
   }
 
   return quotes;
+}
+
+/**
+ * How old a price is, when that is worth saying.
+ *
+ * UK funds strike once a day and lag; across a weekend the newest real price
+ * can be four days old. Printing it beside a live crypto quote with no mark
+ * says the market moved today when it didn't — the ticker was showing Friday's
+ * close as Tuesday's price. Anything struck today or yesterday needs no note.
+ */
+export function staleness(quote: Quote): string | null {
+  if (quote.asOf === null) return null;
+  const days = Math.floor((Date.now() - quote.asOf) / 86_400_000);
+  if (days < 1) return null;
+  if (days === 1) return "yesterday";
+  return new Date(quote.asOf).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+  });
 }
 
 export function formatPrice(quote: Quote) {

@@ -5,6 +5,16 @@
       "name": "Inside Climate News",
       "since": "2026-09-05",
       "reason": "Cloudflare 403 on article pages from this host. Served 1478 words earlier the same day, so this reads as IP reputation rather than a policy change. Revisit; drop if it persists past October."
+    },
+    {
+      "name": "Phys.org",
+      "since": "2026-09-08",
+      "reason": "HTTP 429 from the Science X backend it shares with Medical Xpress. Self-inflicted: the validator checked both hosts concurrently before it grouped them. Expected to clear; re-check after the next scheduled run and remove."
+    },
+    {
+      "name": "Medical Xpress",
+      "since": "2026-09-08",
+      "reason": "Same Science X backend and the same 429 as Phys.org. Expected to clear; re-check after the next scheduled run and remove."
     }
   ]
 }

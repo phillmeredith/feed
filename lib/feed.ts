@@ -168,7 +168,17 @@ async function fetchFeed(url: string): Promise<RawItem[]> {
 function itemDate(item: RawItem) {
   const raw = item.isoDate || item.pubDate;
   const date = raw ? new Date(raw) : null;
-  return date && !Number.isNaN(date.getTime()) ? date : null;
+  if (!date || Number.isNaN(date.getTime())) return null;
+
+  /*
+   * Some newsrooms date a release ahead of its embargo — Samsung's runs about
+   * six hours into the future. A future timestamp sorts above everything real
+   * on a desk page and renders as "Just now" for as long as it stays ahead,
+   * so a story nobody has published yet leads the desk. We can't print a
+   * future time as fact, and the earliest defensible reading of "published"
+   * is now.
+   */
+  return date.getTime() > Date.now() ? new Date() : date;
 }
 
 function ageInDays(date: Date) {
