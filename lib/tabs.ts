@@ -69,6 +69,9 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
     /* Fifteen recent releases, which is a different question from the four
        hundred in the catalogue and was confusingly called the same thing. */
     { slug: "models", label: "Releases" },
+    /* The catalogue read as a history rather than a price list: what has been
+       released, when, and how much bigger it got. */
+    { slug: "map", label: "The map" },
     { slug: "catalogue", label: "Catalogue", href: "/model" },
   ],
   cameras: [

@@ -145,6 +145,10 @@
   --series-2: #335a39;
   --series-3: #3b4f61;
   --series-4: #553a62;
+  /* Six, because the model map draws a lab per ink and six labs account for
+     most of the catalogue. All of them clear 4.5:1 on the paper. */
+  --series-5: #6c4e15;
+  --series-6: #7a3b52;
 }
 
 @theme inline {
@@ -169,6 +173,8 @@
   --color-series-2: var(--series-2);
   --color-series-3: var(--series-3);
   --color-series-4: var(--series-4);
+  --color-series-5: var(--series-5);
+  --color-series-6: var(--series-6);
   --font-data: var(--font-data);
   --text-lead: var(--text-lead);
   --text-nameplate: var(--text-nameplate);
