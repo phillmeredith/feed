@@ -309,6 +309,7 @@ export default async function Home() {
                       src={dwell.image}
                       credit={dwell.source}
                       ratio="landscape"
+                      sizes="(max-width: 768px) 100vw, 320px"
                       className="w-full max-w-[20rem] md:w-[clamp(190px,17vw,320px)]"
                     />
                   )}

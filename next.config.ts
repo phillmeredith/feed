@@ -2,6 +2,33 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /*
+   * Artwork goes through the optimiser.
+   *
+   * Every picture on the site is the publisher's own file, linked straight
+   * from their CDN at whatever size they happened to upload — a single MMA
+   * Mania photograph in a 220px column measured 3.7MB, and one page of the
+   * front carried a dozen of them. Routed through Next the same picture is
+   * resized to the slot, converted to AVIF or WebP and cached at the edge,
+   * which is the difference between megabytes and tens of kilobytes.
+   *
+   * The hostname pattern is open because the source list is: fifty feeds
+   * today, and a new outlet is a line in `lib/sources.ts` rather than a
+   * deploy-blocking addition here. Only images are ever requested, only over
+   * https, and a URL that is not an image fails the same way it does now.
+   */
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "**" }],
+    // The widths the layout actually asks for, so the optimiser is not
+    // generating renditions nothing on the site will ever request.
+    deviceSizes: [360, 480, 640, 828, 1080, 1280, 1600, 2048],
+    imageSizes: [80, 128, 200, 256, 320, 420],
+    formats: ["image/avif", "image/webp"],
+    // A publisher's artwork does not change under its URL; when it does, the
+    // URL changes with it.
+    minimumCacheTTL: 604800,
+  },
+
+  /*
    * Old addresses that shouldn't die.
    *
    * Sport was one desk and is three now. Anything linking to the old slug —

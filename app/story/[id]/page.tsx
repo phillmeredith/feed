@@ -14,6 +14,25 @@ export const revalidate = 600;
 // Feed fetching and extraction need more than the default budget.
 export const maxDuration = 60;
 
+/*
+ * Every other dynamic route on the site declares this, and this one did not —
+ * which is the whole difference between a page Vercel caches and a page it
+ * renders from scratch for every reader. Without it the route builds as
+ * dynamic and never populates the route cache: `x-vercel-cache` was MISS on
+ * every request, and each one paid for the feed and, where the publisher only
+ * syndicates a teaser, a live fetch and parse of the article. Four seconds,
+ * every time, for a page whose content changes every ten minutes at most.
+ *
+ * The list is empty on purpose. Story ids come and go with the feed, so
+ * prerendering a slice of them at build time would bake in whatever was on
+ * the wire that minute; what the empty array buys is the caching behaviour —
+ * the first reader of a story renders it, everyone after that gets it from
+ * the cache until the window turns over.
+ */
+export function generateStaticParams(): { id: string }[] {
+  return [];
+}
+
 export async function generateMetadata({
   params,
 }: PageProps<"/story/[id]">): Promise<Metadata> {
@@ -112,12 +131,22 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
 
             {/* The right column: the picture, and the reporting under it. */}
             <div className="lg:rule-l">
+              {/*
+                * `cover`, not `contain`.
+                *
+                * Contained, a picture that is not 16:9 — which is most of
+                * them — sat in the middle of the column with paper down both
+                * sides of it, so the one picture on the page was the only
+                * thing on it not reaching the measure. It fills the column
+                * and takes the crop.
+                */}
               {story.image && (
                 <Plate
                   src={story.image}
                   credit={story.source}
                   ratio="hero"
-                  fit="contain"
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  priority
                   className="mb-10"
                   /* 16:9 across two thirds of a wide sheet is most of a
                      screen of photograph before a word has been read. */

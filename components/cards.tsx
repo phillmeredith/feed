@@ -100,6 +100,8 @@ export function LeadCard({ article }: { article: Article }) {
             src={article.image}
             credit={article.source}
             ratio="hero"
+            sizes="(max-width: 1280px) 100vw, 55vw"
+            priority
             className="mt-7"
             onFail={() => setImageFailed(true)}
           />
@@ -156,6 +158,7 @@ export function FeatureCard({
             src={article.image}
             credit={article.source}
             ratio={ratio}
+            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 30vw"
             className="mb-5"
             onFail={() => setBroken(true)}
           />
@@ -198,6 +201,8 @@ export function StackedLead({ article }: { article: Article }) {
             src={article.image}
             credit={article.source}
             ratio="landscape"
+            sizes="(max-width: 1024px) 100vw, 55vw"
+            priority
             className="mt-6"
             onFail={() => setBroken(true)}
           />
@@ -249,6 +254,7 @@ export function ThumbCard({
           <Media
             src={article.image}
             ratio="square"
+            sizes="80px"
             className="w-20 shrink-0"
             onFail={() => setBroken(true)}
           />
@@ -309,6 +315,7 @@ export function BriefCard({
           <Media
             src={article.image}
             ratio="landscape"
+            sizes="(max-width: 640px) 100vw, (max-width: 1536px) 33vw, 20vw"
             className="mb-3"
             onFail={() => setBroken(true)}
           />
@@ -356,6 +363,7 @@ export function RunItem({
           <Media
             src={article.image}
             ratio="landscape"
+            sizes="(max-width: 640px) 100vw, (max-width: 1536px) 33vw, 17vw"
             className="mb-4"
             onFail={() => setBroken(true)}
           />

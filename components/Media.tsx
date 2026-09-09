@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 /*
  * The frames a picture is allowed to be cut to. A broadsheet uses a handful
@@ -25,12 +26,22 @@ export function Media({
    * through. `contain` shows the whole frame and letterboxes instead.
    */
   fit = "cover",
+  /**
+   * Roughly how wide this picture is on the page, as a CSS `sizes` list. The
+   * optimiser serves the rendition that fits rather than the largest one; get
+   * this wrong and a thumbnail downloads a 2048px file.
+   */
+  sizes = "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw",
+  /** The one or two pictures above the fold; everything else waits. */
+  priority = false,
   className = "",
   onFail,
 }: {
   src: string;
   ratio?: keyof typeof RATIOS;
   fit?: "cover" | "contain";
+  sizes?: string;
+  priority?: boolean;
   className?: string;
   /** Lets a card remove itself when its artwork is dead. */
   onFail?: () => void;
@@ -38,20 +49,46 @@ export function Media({
   // Publishers delete and move images constantly; a broken one should leave no
   // trace rather than render the browser's placeholder icon.
   const [failed, setFailed] = useState(false);
+  /*
+   * One retry, unoptimised, before giving up.
+   *
+   * The optimiser will not fetch every URL a feed hands over — a redirect it
+   * declines to follow, a host that blocks it, a file that turns out not to
+   * be an image. Those used to be indistinguishable from a dead picture, so
+   * the card dropped artwork that a plain <img> would have shown. Now a
+   * failure through the optimiser falls back to the publisher's own URL, and
+   * only a failure of that counts as dead.
+   */
+  const [unoptimized, setUnoptimized] = useState(false);
   if (!src || failed) return null;
 
   return (
     <div className={`media ${RATIOS[ratio]} ${className}`}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      {/*
+        * `fill` rather than a width and a height: the box already has its
+        * aspect ratio from the class above, and the intrinsic size of a
+        * publisher's file is not known here and differs for every one of them.
+        */}
+      <Image
         src={src}
         alt=""
-        loading="lazy"
+        fill
+        sizes={sizes}
+        priority={priority}
+        loading={priority ? undefined : "lazy"}
+        // The optimiser refuses some publisher URLs — a redirect it will not
+        // follow, an SVG, a file that is not an image at all. Falling back to
+        // the URL itself keeps a working picture where one exists.
+        unoptimized={unoptimized}
         onError={() => {
+          if (!unoptimized) {
+            setUnoptimized(true);
+            return;
+          }
           setFailed(true);
           onFail?.();
         }}
-        className={`w-full h-full transition-transform duration-700 group-hover:scale-[1.02] ${
+        className={`transition-transform duration-700 group-hover:scale-[1.02] ${
           fit === "contain" ? "object-contain" : "object-cover"
         }`}
       />
@@ -72,6 +109,8 @@ export function Plate({
   credit,
   ratio = "standard",
   fit = "cover",
+  sizes,
+  priority = false,
   className = "",
   frame = "",
   onFail,
@@ -80,6 +119,8 @@ export function Plate({
   credit: string;
   ratio?: keyof typeof RATIOS;
   fit?: "cover" | "contain";
+  sizes?: string;
+  priority?: boolean;
   className?: string;
   /** Classes for the picture itself, where a ratio needs a ceiling put on it. */
   frame?: string;
@@ -94,6 +135,8 @@ export function Plate({
         src={src}
         ratio={ratio}
         fit={fit}
+        sizes={sizes}
+        priority={priority}
         className={frame}
         onFail={() => {
           setFailed(true);
