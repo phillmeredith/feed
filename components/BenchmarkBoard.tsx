@@ -7,6 +7,7 @@ import {
   type Benchmark,
 } from "@/lib/benchmarks";
 import { BenchmarkMap } from "./BenchmarkMap";
+import { BenchmarkSpark } from "./BenchmarkSpark";
 import { Leaderboard } from "./Leaderboard";
 import { BandHead } from "./Band";
 
@@ -38,7 +39,7 @@ function Standing({ benchmark }: { benchmark: Benchmark }) {
 
       <p className="standfirst mt-3 text-small">{benchmark.asks}</p>
 
-      <BenchmarkMap benchmark={benchmark} height={260} />
+      <BenchmarkSpark benchmark={benchmark} />
 
       <p className="source mt-2">
         <b>{top.model}</b> · {top.org} ·{" "}

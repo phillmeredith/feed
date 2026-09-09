@@ -29,15 +29,28 @@ function Bars({
         {rows.map((row) => (
           <li key={row.key} className="grid grid-cols-[3.4rem_1fr_3.6rem] items-center gap-3">
             <span className="source">{row.label}</span>
-            <span className="relative block h-[18px] bg-[rgba(43,39,33,0.06)]">
-              <span
-                className="absolute inset-y-0 left-0 bg-[var(--series-3)]"
-                style={{ width: `${(row.value / max) * 100}%` }}
-              />
-              {row.second !== undefined && (
+            {/*
+              * Two segments end to end, not one bar painted over another.
+              * Overlaid, the shorter bar read as a second measurement rather
+              * than as part of the first, and the eye had to work out which
+              * of two lengths it was being shown.
+              */}
+            <span className="relative flex h-[18px] bg-[rgba(43,39,33,0.06)]">
+              {row.second !== undefined ? (
+                <>
+                  <span
+                    className="bg-[var(--accent)]"
+                    style={{ width: `${(row.second / max) * 100}%` }}
+                  />
+                  <span
+                    className="bg-[var(--series-3)]"
+                    style={{ width: `${((row.value - row.second) / max) * 100}%` }}
+                  />
+                </>
+              ) : (
                 <span
-                  className="absolute inset-y-0 left-0 bg-[var(--accent)]"
-                  style={{ width: `${(row.second / max) * 100}%` }}
+                  className="bg-[var(--series-3)]"
+                  style={{ width: `${(row.value / max) * 100}%` }}
                 />
               )}
             </span>

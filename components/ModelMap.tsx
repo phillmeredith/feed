@@ -176,15 +176,20 @@ export function ModelMap({ history }: { history: ModelHistory }) {
           strokeWidth="2"
         />
 
-        {/* Every model. Drawn before the frontier so the line sits on top. */}
+        {/*
+          * Every model, drawn small and drawn before the frontier so the line
+          * sits on top. Four hundred marks at r=5 and 62% merged into a solid
+          * band across 2026 with no shape in it; at this size the density is
+          * itself readable — where the field bunches, and where it thins.
+          */}
         {points.map((p) => (
           <circle
             key={p.id}
             cx={scaleX(p.at)}
             cy={scaleY(p.context)}
-            r={p.multimodal ? 5 : 3.4}
+            r={p.multimodal ? 3.2 : 2.2}
             fill={ink(p.lab)}
-            fillOpacity={p.multimodal ? 0.62 : 0.42}
+            fillOpacity={p.multimodal ? 0.55 : 0.38}
           >
             <title>
               {`${p.name} · ${p.lab} · ${new Date(p.at).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} · ${Math.round(p.context / 1000)}K tokens`}

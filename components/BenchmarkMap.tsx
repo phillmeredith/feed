@@ -1,4 +1,4 @@
-import { frontier, type Benchmark } from "@/lib/benchmarks";
+import { frontier, modelName, type Benchmark } from "@/lib/benchmarks";
 
 /*
  * A benchmark over its whole life, on one sheet.
@@ -71,6 +71,26 @@ export function BenchmarkMap({
   const tail = top ? ` L${(W - PAD.right).toFixed(1)},${y(top.score).toFixed(1)}` : "";
 
   const grid = [0.25, 0.5, 0.75, 1].map((f) => f * benchmark.ceiling);
+
+  /*
+   * Which steps get a caption.
+   *
+   * "Did it move the record much" was not enough on its own: two records a
+   * fortnight apart both cleared the bar and printed their names on top of
+   * each other. A label also has to be far enough along the axis from the
+   * last one that took a label. The record holder always gets one.
+   */
+  const MIN_GAP = W * 0.11;
+  const labelled: { s: (typeof steps)[number]; worth: boolean }[] = [];
+  let lastLabel = -Infinity;
+  for (let i = 0; i < steps.length; i++) {
+    const s = steps[i];
+    const gain = i === 0 ? 1 : s.score - steps[i - 1].score;
+    const last = i === steps.length - 1;
+    const worth = last || (gain >= 0.05 && x(s.at) - lastLabel > MIN_GAP);
+    if (worth) lastLabel = x(s.at);
+    labelled.push({ s, worth });
+  }
 
   return (
     <div className="-mx-[var(--margin)] overflow-x-auto px-[var(--margin)] sm:mx-0 sm:px-0">
@@ -158,14 +178,20 @@ export function BenchmarkMap({
           strokeWidth="2"
         />
 
+        {/*
+          * Small and faint, because there are three hundred of them and they
+          * overlap. At r=4 and 38% they merged into one grey mass with no
+          * shape; this way the density itself becomes the information — you
+          * can see where the field bunches and where it thins.
+          */}
         {scores.map((s) => (
           <circle
             key={`${s.model}-${s.at}`}
             cx={x(s.at)}
             cy={y(s.score)}
-            r="4"
+            r="2.6"
             fill="var(--series-3)"
-            fillOpacity="0.38"
+            fillOpacity="0.5"
           >
             <title>{`${s.model} · ${s.org} · ${(s.score * 100).toFixed(1)}%`}</title>
           </circle>
@@ -173,23 +199,22 @@ export function BenchmarkMap({
 
         <path d={step + tail} fill="none" stroke="var(--ink)" strokeWidth="2" strokeLinejoin="round" />
 
-        {steps.map((s, i) => {
-          // Only label the steps that moved the record appreciably, or the
-          // line disappears under its own captions.
-          const gain = i === 0 ? 1 : s.score - steps[i - 1].score;
-          const worth = i === steps.length - 1 || gain >= 0.06;
+        {labelled.map(({ s, worth }) => {
           /* A label near the right edge is set to the left of its dot; the
              last step is always the record holder, so it is always the one
              that would otherwise run off the sheet. */
           const nearEdge = x(s.at) > W * 0.78;
           return (
             <g key={`step-${s.model}-${s.at}`}>
+              {/* A ringed marker is a lot of ink for a record that gained a
+                  point and a half; the ones without a caption get a plain
+                  dot so the late run of them stops crowding the line. */}
               <circle
                 cx={x(s.at)}
                 cy={y(s.score)}
-                r="5.5"
-                fill="var(--paper)"
-                stroke="var(--ink)"
+                r={worth ? 5.5 : 3}
+                fill={worth ? "var(--paper)" : "var(--ink)"}
+                stroke={worth ? "var(--ink)" : "none"}
                 strokeWidth="2"
               />
               {worth && (
@@ -201,7 +226,7 @@ export function BenchmarkMap({
                   fontSize="14"
                   fontWeight="600"
                 >
-                  {s.model}
+                  {modelName(s.model).name}
                 </text>
               )}
             </g>
