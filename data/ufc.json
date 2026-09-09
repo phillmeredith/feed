@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-08T09:43:32.520Z",
+  "updated": "2026-09-09T09:48:52.175Z",
   "events": [
     {
       "id": "600057024",
@@ -5503,7 +5503,7 @@
       "id": "600060736",
       "name": "Dana White's Contender Series: Season 10, Week 5",
       "date": "2026-09-08T23:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
@@ -5514,8 +5514,11 @@
             "Colton Loud",
             "Christian Natividad"
           ],
+          "winner": "Christian Natividad",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5524,8 +5527,11 @@
             "Kwon Won Il",
             "Apollo Gomes"
           ],
+          "winner": "Apollo Gomes",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5534,8 +5540,11 @@
             "Christian Echols",
             "Martin Kozák"
           ],
+          "winner": "Martin Kozák",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5544,8 +5553,11 @@
             "Isaac Moreno",
             "Reginaldo Junior"
           ],
+          "winner": "Isaac Moreno",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5554,8 +5566,11 @@
             "Quentin Pasley",
             "Arlind Berisha"
           ],
+          "winner": "Quentin Pasley",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -5709,10 +5724,50 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "",
+          "weightClass": "Featherweight",
           "fighters": [
-            "TBA",
-            "Opponent TBA"
+            "Antonio Monteiro",
+            "Tyshawn Williams"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Hugo Guillon",
+            "Luis Hernandez"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Ednilson Santos",
+            "Akbar Abdullaev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Oscar Ravello",
+            "Igor Cavalcanti"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Zevan Hunt",
+            "Mayton Perea"
           ],
           "headline": true,
           "completed": false
@@ -5909,16 +5964,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Lightweight",
-          "fighters": [
-            "Elves Brener",
-            "Josiah Harrell"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Bantamweight",
           "fighters": [
             "Alatengheili",
@@ -5931,8 +5976,8 @@
           "segment": "prelim",
           "weightClass": "Bantamweight",
           "fighters": [
-            "Brady Hiestand",
-            "Rinya Nakamura"
+            "Ricky Simon",
+            "Montel Jackson"
           ],
           "headline": false,
           "completed": false
@@ -5948,11 +5993,21 @@
           "completed": false
         },
         {
-          "segment": "main",
-          "weightClass": "Bantamweight",
+          "segment": "prelim",
+          "weightClass": "Lightweight",
           "fighters": [
-            "Ricky Simon",
-            "Montel Jackson"
+            "Elves Brener",
+            "Josiah Harrell"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Strawweight",
+          "fighters": [
+            "Valesca Machado",
+            "Melissa Amaya"
           ],
           "headline": false,
           "completed": false
@@ -5969,10 +6024,10 @@
         },
         {
           "segment": "main",
-          "weightClass": "W Strawweight",
+          "weightClass": "Bantamweight",
           "fighters": [
-            "Valesca Machado",
-            "Melissa Amaya"
+            "Brady Hiestand",
+            "Rinya Nakamura"
           ],
           "headline": false,
           "completed": false
@@ -6029,20 +6084,10 @@
       "fights": [
         {
           "segment": "prelim",
-          "weightClass": "Bantamweight",
+          "weightClass": "Welterweight",
           "fighters": [
-            "Marcus McGhee",
-            "Bernardo Sopaj"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Johnny Walker",
-            "Mick Parkin"
+            "Court McGee",
+            "Eric Nolan"
           ],
           "headline": false,
           "completed": false
@@ -6061,16 +6106,6 @@
           "segment": "prelim",
           "weightClass": "Lightweight",
           "fighters": [
-            "King Green",
-            "Esteban Ribovics"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Lightweight",
-          "fighters": [
             "Rafael Dos Anjos",
             "Alexander Hernandez"
           ],
@@ -6079,26 +6114,26 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Welterweight",
+          "weightClass": "Heavyweight",
           "fighters": [
-            "Court McGee",
-            "Eric Nolan"
+            "Johnny Walker",
+            "Mick Parkin"
           ],
           "headline": false,
           "completed": false
         },
         {
           "segment": "prelim",
-          "weightClass": "Welterweight",
+          "weightClass": "Bantamweight",
           "fighters": [
-            "Roberto Soldić",
-            "Khaos Williams"
+            "Marcus McGhee",
+            "Bernardo Sopaj"
           ],
           "headline": false,
           "completed": false
         },
         {
-          "segment": "main",
+          "segment": "prelim",
           "weightClass": "Middleweight",
           "fighters": [
             "Andrey Pulyaev",
@@ -6108,7 +6143,7 @@
           "completed": false
         },
         {
-          "segment": "main",
+          "segment": "prelim",
           "weightClass": "Flyweight",
           "fighters": [
             "Alden Coria",
@@ -6123,6 +6158,26 @@
           "fighters": [
             "Roman Kopylov",
             "Ateba Gautier"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Roberto Soldić",
+            "Khaos Williams"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "King Green",
+            "Esteban Ribovics"
           ],
           "headline": false,
           "completed": false
