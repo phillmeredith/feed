@@ -3,8 +3,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
-import { Media } from "@/components/Media";
+import { Plate } from "@/components/Media";
 import { FeatureCard } from "@/components/cards";
+import { BandHead, RailHead } from "@/components/Band";
 import { relativeDate } from "@/lib/format";
 import { categoryBySlug } from "@/lib/categories";
 import { getStory } from "@/lib/feed";
@@ -38,44 +39,47 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
       <Masthead />
 
       <main className="flex-1 w-full">
-        {/* Opener: headline set large against the artwork, as in a print spread. */}
-        <div className="sheet pt-12 pb-12">
-          <div
-            className={
-              story.image
-                ? "grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-start"
-                : "max-w-4xl"
-            }
-          >
-            <div>
-              <h1
-                className={
-                  story.image
-                    ? "headline text-title"
-                    : "headline text-title"
-                }
-              >
-                {story.headline}
-              </h1>
+        {/*
+          * The opener, on the same two-column head every interior page uses:
+          * the desk in oxide above, the headline across the measure it needs,
+          * and the picture on a rule beside it with its credit under it.
+          */}
+        <div className="sheet pt-8 pb-10">
+          {desk && (
+            <Link href={`/${desk.slug}`} className="story inline-block">
+              <h2 className="kicker text-micro tracking-[0.24em] text-accent">
+                {desk.label}
+              </h2>
+            </Link>
+          )}
 
-              {/* Without artwork the standfirst carries the opener instead. */}
+          <div
+            className={`band-rule mt-6 grid items-start gap-x-gutter gap-y-8 pt-8 ${
+              story.image ? "lg:grid-cols-[1.1fr_1fr]" : ""
+            }`}
+          >
+            <div className={story.image ? "" : "max-w-4xl"}>
+              <h1 className="headline text-title">{story.headline}</h1>
+
+              {/* With artwork the standfirst repeats the opening line of the
+                  story two centimetres above it; without artwork it is the
+                  only thing holding the head together. */}
               {!story.image && story.dek && (
-                <p className="font-serif text-xl sm:text-2xl leading-snug text-muted mt-6 max-w-2xl">
+                <p className="standfirst mt-6 max-w-2xl text-[1.3rem] leading-[1.5]">
                   {story.dek}
                 </p>
               )}
-
-              {desk && (
-                <Link
-                  href={`/${desk.slug}`}
-                  className="kicker text-label text-accent mt-6 inline-block hover:underline"
-                >
-                  {desk.label}
-                </Link>
-              )}
             </div>
 
-            {story.image && <Media src={story.image} ratio="hero" fit="contain" className="lg:mt-2" />}
+            {story.image && (
+              <Plate
+                src={story.image}
+                credit={story.source}
+                ratio="hero"
+                fit="contain"
+                className="lg:rule-l"
+              />
+            )}
           </div>
         </div>
 
@@ -83,13 +87,10 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
           <div className="grid gap-14 lg:grid-cols-[240px_minmax(0,1fr)] xl:gap-20">
             {/* Sidebar */}
             <aside className="order-2 lg:order-1">
-              <div className="kicker text-micro text-faint border-b border-rule pb-3">
-                From {story.source}
-              </div>
-              <p className="font-serif italic text-lg text-accent mt-3">
+              <RailHead>From {story.source}</RailHead>
+              <p className="font-serif text-lg italic text-muted">
                 {relativeDate(story.publishedAt)}
               </p>
-
             </aside>
 
             {/* Body — the publisher's own syndicated text where they provide it. */}
@@ -111,7 +112,7 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
                 * button — the loudest thing at the end of the article was an
                 * invitation to go and read it somewhere else.
                 */}
-              <div className="mt-12 border-t border-rule pt-8 flex flex-wrap items-baseline gap-x-6 gap-y-3">
+              <div className="band-rule mt-12 flex flex-wrap items-baseline gap-x-6 gap-y-3 pt-5">
                 <p className="kicker text-micro text-faint">
                   Reporting by {story.source}
                   {story.words ? ` · ${story.words} words` : ""}
@@ -137,13 +138,21 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
           </div>
 
           {related.length > 0 && (
-            <section className="mt-24 border-t border-rule pt-10">
-              <h2 className="display text-2xl sm:text-3xl">
-                {desk ? `More from ${desk.label}` : "More from the desks"}
-              </h2>
-              <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <section className="mt-20">
+              <BandHead
+                title={desk ? `More from ${desk.label}` : "More from the desks"}
+                note="Filed on the same desk."
+                href={desk ? `/${desk.slug}` : undefined}
+                more="The whole desk"
+              />
+              <div className="ruled mt-8 grid gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
                 {related.slice(0, 3).map((a) => (
-                  <FeatureCard key={a.id} article={a} />
+                  <FeatureCard
+                    key={a.id}
+                    article={a}
+                    ratio="landscape"
+                    headline="text-[1.5rem] leading-[1.07]"
+                  />
                 ))}
               </div>
             </section>

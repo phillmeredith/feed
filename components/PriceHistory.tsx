@@ -69,7 +69,7 @@ export function PriceHistory({
   if (!enough) {
     return (
       <section className="mt-12 border-t border-rule pt-6">
-        <h2 className="kicker text-label text-accent">Price history</h2>
+        <h2 className="kicker text-micro tracking-[0.26em] text-ink">Price history</h2>
         <p className="font-serif italic text-lg text-muted mt-3 max-w-2xl">
           {started
             ? `Recording since ${started}. Nobody sells price history back to you, so this chart fills in from here — one reading a day.`
@@ -84,7 +84,7 @@ export function PriceHistory({
 
   return (
     <section className="mt-12 border-t border-rule pt-6">
-      <h2 className="kicker text-label text-accent">Price history</h2>
+      <h2 className="kicker text-micro tracking-[0.26em] text-ink">Price history</h2>
       <p className="text-fine text-muted mt-2">
         {input.length} readings{started && ` since ${started}`}
         {inMove && inMove.changePct !== 0 && (

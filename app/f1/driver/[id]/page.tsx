@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
+import { EntityHead } from "@/components/PageHead";
 import { ListCard } from "@/components/cards";
 import {
   driverStandings,
@@ -64,21 +65,15 @@ export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]"
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <div className="border-b border-rule pb-8">
-          <p className="kicker text-micro text-accent">
-            <Link href="/f1" className="hover:underline">The season</Link>
-            <span className="mx-2 text-rule">/</span>
-            {d.constructor}
-          </p>
-          <h1 className="display text-title mt-4">
-            {name}
-          </h1>
-          <p className="font-serif italic text-lg text-muted mt-3">
-            {d.nationality}
-            {d.code && ` · ${d.code}`}
-          </p>
-        </div>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <EntityHead
+          trail={[
+            { label: "The season", href: "/f1" },
+            { label: d.constructor },
+          ]}
+          title={name}
+          note={`${d.nationality}${d.code ? ` · ${d.code}` : ""}`}
+        />
 
         <dl className="mt-10 grid gap-6 grid-cols-2 lg:grid-cols-4">
           <Stat label="Championship" value={`P${d.position}`} />
@@ -118,7 +113,7 @@ export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]"
 
         {teammates.length > 0 && (
           <section className="mt-14 border-t border-rule pt-6">
-            <h2 className="kicker text-label text-accent">
+            <h2 className="kicker text-micro tracking-[0.26em] text-ink">
               Against the other side of the garage
             </h2>
             <div className="mt-4 flex flex-wrap gap-3">

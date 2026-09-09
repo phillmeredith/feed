@@ -18,8 +18,8 @@ export function ClimatePanel() {
 
   return (
     <section>
-      <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-        <h2 className="kicker text-label text-accent">The state of the system</h2>
+      <div className="band-rule flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-rule-strong pt-4 pb-3.5">
+        <h2 className="kicker text-micro tracking-[0.26em] text-ink">The state of the system</h2>
         <p className="font-serif italic text-xs text-faint">
           Measured, not modelled
         </p>

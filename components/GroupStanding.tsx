@@ -7,6 +7,7 @@ import { completedEvents } from "@/lib/ufc";
 import { matchByName } from "@/lib/catalogue";
 import { modelSlug } from "@/lib/openrouter";
 import models from "@/data/models.json" with { type: "json" };
+import { BandHead } from "./Band";
 
 function month(iso: string) {
   return new Date(iso).toLocaleDateString("en-GB", {
@@ -191,6 +192,11 @@ function WhereThingsStand() {
   );
 }
 
+/**
+ * These opened on their own heading — an oxide label with an italic note
+ * pushed to the right of it on a hairline — which was a fourth way of opening
+ * a block on a page that already had three. It is a band like any other now.
+ */
 function Panel({
   title,
   note,
@@ -206,19 +212,8 @@ function Panel({
 }) {
   return (
     <section>
-      <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-        <h2 className="kicker text-label text-accent">{title}</h2>
-        <p className="font-serif italic text-xs text-faint">{note}</p>
-      </div>
+      <BandHead title={title} note={note} href={href} more={cta} />
       {children}
-      {href && cta && (
-        <Link
-          href={href}
-          className="kicker text-micro text-muted hover:text-accent transition-colors mt-6 inline-block"
-        >
-          {cta} →
-        </Link>
-      )}
     </section>
   );
 }

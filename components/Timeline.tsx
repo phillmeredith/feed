@@ -32,7 +32,7 @@ export function Timeline({
 
     return (
       <section className="mt-12 border-t border-rule pt-6">
-        <h2 className="kicker text-label text-accent">Coverage</h2>
+        <h2 className="kicker text-micro tracking-[0.26em] text-ink">Coverage</h2>
         <p className="font-serif italic text-lg text-muted mt-3 max-w-2xl">
           {predatesRecord
             ? `Announced before this site began keeping stories in ${new Date(recordingSince).toLocaleDateString("en-GB", { month: "long", year: "numeric" })}. The catalogue entry stands on its own; there is no archive to draw on.`
@@ -46,7 +46,7 @@ export function Timeline({
 
   return (
     <section className="mt-12 border-t border-rule pt-6">
-      <h2 className="kicker text-label text-accent">
+      <h2 className="kicker text-micro tracking-[0.26em] text-ink">
         Coverage · {articles.length}{" "}
         {articles.length === 1 ? "story" : "stories"}
       </h2>

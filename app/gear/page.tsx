@@ -1,9 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
-import { SubNav } from "@/components/SubNav";
-import { DeskTabs } from "@/components/DeskTabs";
 import { Footer } from "@/components/Footer";
+import { PageHead } from "@/components/PageHead";
 import { allGear, gearSlug, mounts } from "@/lib/gearspec";
 
 export const revalidate = 3600;
@@ -37,26 +36,20 @@ export default function GearIndex() {
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <div className="pb-2">
-          <p className="display text-subhead text-muted">
-            <Link href="/photography" className="hover:text-accent transition-colors">
-              Photography
-            </Link>
-          </p>
-
-          <SubNav group="photography" current="cameras" />
-          <h1 className="display text-title mt-4">
-            Gear directory
-          </h1>
-          <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
-            Every body and lens the desk has recorded — {lenses.length} lenses,{" "}
-            {bodies.length} bodies, {independent.length} of the glass from
-            makers building for other people&apos;s mounts.
-          </p>
-
-          <DeskTabs desk="cameras" current="directory" />
-        </div>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <PageHead
+          section={{ label: "Photography", href: "/photography" }}
+          subnav={{ group: "photography", current: "cameras" }}
+          title="Gear directory"
+          standfirst={
+            <>
+              Every body and lens the desk has recorded — {lenses.length} lenses,{" "}
+              {bodies.length} bodies, {independent.length} of the glass from
+              makers building for other people&apos;s mounts.
+            </>
+          }
+          tabs={{ desk: "cameras", current: "directory" }}
+        />
 
         <section className="mt-10">
           <h2 className="kicker text-micro text-faint">By mount</h2>

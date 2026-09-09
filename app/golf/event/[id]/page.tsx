@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
-import { SubNav } from "@/components/SubNav";
-import { DeskTabs } from "@/components/DeskTabs";
+import { EntityHead } from "@/components/PageHead";
 import { HighlightReel } from "@/components/HighlightReel";
 import { LastUpdated } from "@/components/EventStatus";
 import { DataTable } from "@/components/ui/DataTable";
@@ -59,25 +58,18 @@ export default async function GolfEventPage({
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <header className="pb-2">
-          <p className="display text-subhead text-muted">
-            <Link href="/sport" className="hover:text-accent transition-colors">
-              Sport
-            </Link>
-          </p>
-          <SubNav group="sport" current="golf" />
-          <p className="kicker text-micro text-accent mt-10">
-            {event.major ? "A major" : "Tour event"}
-            <span className="mx-2 text-rule">/</span>
-            {dates}
-          </p>
-          <h1 className="display text-title mt-4">{event.name}</h1>
-          {event.venue && (
-            <p className="font-serif text-lede text-muted mt-3">{event.venue}</p>
-          )}
-          <DeskTabs desk="golf" current="season" />
-        </header>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <EntityHead
+          subnav={{ group: "sport", current: "golf" }}
+          trail={[
+            { label: "Golf", href: "/golf" },
+            { label: event.major ? "A major" : "Tour event" },
+          ]}
+          title={event.name}
+          note={event.venue || undefined}
+          meta={dates}
+          tabs={{ desk: "golf", current: "season" }}
+        />
 
         <div className="mt-12 grid gap-16 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
           <div>

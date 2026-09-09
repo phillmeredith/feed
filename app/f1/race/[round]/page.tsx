@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
-import { SubNav } from "@/components/SubNav";
+import { EntityHead } from "@/components/PageHead";
 import { HighlightReel } from "@/components/HighlightReel";
 import { ListCard } from "@/components/cards";
 import { LastUpdated } from "@/components/EventStatus";
@@ -58,37 +58,22 @@ export default async function RacePage({
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <header className="border-b border-rule pb-8">
-          <p className="display text-2xl sm:text-3xl text-muted">
-            <Link href="/sport" className="hover:text-accent transition-colors">
-              Sport
-            </Link>
-          </p>
-
-          <SubNav group="sport" current="f1" />
-
-          <p className="kicker text-micro text-accent mt-10">
-            <Link href="/f1" className="hover:underline">
-              Formula One
-            </Link>
-            <span className="mx-2 text-rule">/</span>
-            Round {race.round} of {races().length}
-          </p>
-
-          <h1 className="display text-title mt-4">
-            {race.name}
-          </h1>
-          <p className="font-serif text-lg sm:text-xl text-muted mt-4">
-            {race.circuitName} · {race.locality}, {race.country}
-          </p>
-        </header>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <EntityHead
+          subnav={{ group: "sport", current: "f1" }}
+          trail={[
+            { label: "Formula One", href: "/f1" },
+            { label: `Round ${race.round} of ${races().length}` },
+          ]}
+          title={race.name}
+          note={`${race.circuitName} · ${race.locality}, ${race.country}`}
+        />
 
         <div className="mt-12 grid gap-16 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
           <div>
             <section>
-              <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-                <h2 className="kicker text-label text-accent">
+              <div className="band-rule flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-rule-strong pt-4 pb-3.5">
+                <h2 className="kicker text-micro tracking-[0.26em] text-ink">
                   {done ? "How it finished" : "When it runs"}
                 </h2>
               </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
+import { EntityHead } from "@/components/PageHead";
 import { Timeline } from "@/components/Timeline";
 import { PriceHistory } from "@/components/PriceHistory";
 import { VideoPanel } from "@/components/VideoPanel";
@@ -64,20 +65,15 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <div className="border-b border-rule pb-8">
-          <p className="kicker text-micro text-accent">
-            <Link href="/gear" className="hover:underline">Gear directory</Link>
-            <span className="mx-2 text-rule">/</span>
-            {item.brand}
-          </p>
-          <h1 className="display text-title mt-4">
-            {item.name}
-          </h1>
-          <p className="font-serif italic text-lg text-muted mt-3">
-            Announced {announced}
-          </p>
-        </div>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <EntityHead
+          trail={[
+            { label: "Gear directory", href: "/gear" },
+            { label: item.brand },
+          ]}
+          title={item.name}
+          note={`Announced ${announced}`}
+        />
 
         <section className="mt-10">
           <h2 className="panel-title">
@@ -124,7 +120,7 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
 
         {related.length > 0 && (
           <section className="mt-16 border-t border-rule pt-8">
-            <h2 className="kicker text-label text-accent">
+            <h2 className="kicker text-micro tracking-[0.26em] text-ink">
               {item.kind === "lens" && item.mounts?.length
                 ? "Other glass for this mount"
                 : `More from ${item.brand}`}

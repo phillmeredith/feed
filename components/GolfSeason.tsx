@@ -80,8 +80,8 @@ export function GolfThisWeek() {
 
       {lead && (
       <section>
-        <div className="flex items-baseline justify-between gap-6 flex-wrap border-b border-rule pb-3">
-          <h2 className="kicker text-label text-accent">
+        <div className="band-rule flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-rule-strong pt-4 pb-3.5">
+          <h2 className="kicker text-micro tracking-[0.26em] text-ink">
             {lead.major ? "The last major" : "Last played"} · {lead.name}
           </h2>
         </div>
@@ -215,8 +215,8 @@ export function GolfAllEvents() {
   return (
     <div className="mt-12 flex flex-col gap-20">
       <section>
-        <div className="flex items-end justify-between gap-6 flex-wrap border-b border-rule pb-3">
-          <h2 className="kicker text-label text-accent">
+        <div className="band-rule flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-rule-strong pt-4 pb-3.5">
+          <h2 className="kicker text-micro tracking-[0.26em] text-ink">
             Every event of {store.season}
           </h2>
           <p className="kicker text-micro text-faint">{played.length} played</p>

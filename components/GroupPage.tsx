@@ -4,14 +4,14 @@ import { categoryBySlug } from "@/lib/categories";
 import { getFeed, pickHero } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";
 import { recentVideos } from "@/lib/video";
-import { relativeDate } from "@/lib/format";
 import { Masthead } from "./Masthead";
 import { Footer } from "./Footer";
-import { SubNav } from "./SubNav";
+import { PageHead } from "./PageHead";
+import { RailHead } from "./Band";
 import { GroupStanding } from "./GroupStanding";
 import { SportBoard } from "./SportBoard";
 import { VideoPanel } from "./VideoPanel";
-import { StackedLead } from "./cards";
+import { StackedLead, Kicker, Meta } from "./cards";
 import { SHAPES, DeskBlock, SectionBlock } from "./shapes";
 
 /**
@@ -61,20 +61,13 @@ export async function GroupPage({ group }: { group: Group }) {
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <header className="pb-2">
-          <h1 className="display text-nameplate">
-            {group.label}
-          </h1>
-          <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
-            {group.standfirst}
-          </p>
-          <SubNav group={group.slug} current={group.slug} />
-
-          {/* Headlines can be masked here, so the way to unmask them has to be
-              here too — a hidden headline with no switch beside it is a dead
-              end. */}
-        </header>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <PageHead
+          title={group.label}
+          standfirst={group.standfirst}
+          meta={`${everything.length} stories across ${desks.length} desks`}
+          subnav={{ group: group.slug, current: group.slug }}
+        />
 
         {/*
          * Sport opens on fixtures, not on a story.
@@ -86,7 +79,7 @@ export async function GroupPage({ group }: { group: Group }) {
          * the results two and a half thousand pixels down.
          */}
         {group.slug === "sport" && (
-          <div className="mt-14">
+          <div className="mt-12">
             <SportBoard />
           </div>
         )}
@@ -104,31 +97,27 @@ export async function GroupPage({ group }: { group: Group }) {
          * pixels while the twelve stories below it shared three hundred.
          */}
         {group.slug !== "sport" && lead && (
-          <div className="mt-14 grid gap-x-16 gap-y-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+          <div className="mt-12 grid gap-x-gutter gap-y-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
             <StackedLead article={lead} />
 
             {latest.length > 0 && (
-              <aside className="lg:border-l lg:border-rule lg:pl-12">
-                <h2 className="kicker text-micro text-faint">
-                  Also across {group.label.toLowerCase()}
-                </h2>
-                <ol className="mt-2">
+              <aside className="border-t border-rule-strong pt-6 lg:border-t-0 lg:pt-0 lg:rule-l">
+                <RailHead>Also across {group.label.toLowerCase()}</RailHead>
+                <ol>
                   {latest.map((article) => (
-                    <li key={article.id}>
+                    <li
+                      key={article.id}
+                      className="group border-b border-rule py-4 last:border-b-0"
+                    >
                       <Link
                         href={`/story/${article.id}`}
-                        className="group block py-4"
+                        className="story block"
                       >
-                        <h3 className="font-body text-small leading-snug line-clamp-2 group-hover:text-accent transition-colors">
+                        <Kicker article={article} mute className="mb-1.5" />
+                        <h3 className="headline text-[1.2rem] font-medium leading-[1.18]">
                           {article.headline}
                         </h3>
-                        <p className="kicker text-micro text-faint mt-2">
-                          <span className="text-accent">
-                            {categoryBySlug(article.category)?.short}
-                          </span>
-                          <span className="mx-2 text-rule">/</span>
-                          {relativeDate(article.publishedAt)}
-                        </p>
+                        <Meta article={article} className="mt-2" />
                       </Link>
                     </li>
                   ))}
@@ -139,7 +128,7 @@ export async function GroupPage({ group }: { group: Group }) {
         )}
 
         {group.slug !== "sport" && (
-          <div className="mt-24">
+          <div className="mt-16">
             <GroupStanding group={group.slug} />
           </div>
         )}
@@ -155,7 +144,7 @@ export async function GroupPage({ group }: { group: Group }) {
          * ranked across all three, with the desk marked on each item.
          */}
         {group.slug === "sport" ? (
-          <div className="mt-24">
+          <div className="mt-16">
             <SectionBlock
               title="The reading"
               dek="Across all three desks"
@@ -167,7 +156,7 @@ export async function GroupPage({ group }: { group: Group }) {
             />
           </div>
         ) : (
-          <div className="mt-24 flex flex-col gap-24">
+          <div className="mt-16 flex flex-col gap-16">
             {desks.map((desk, index) => (
               <DeskBlock
                 key={desk.category.slug}
@@ -180,7 +169,7 @@ export async function GroupPage({ group }: { group: Group }) {
         )}
 
         {videos.length > 0 && (
-          <div className="mt-24">
+          <div className="mt-16">
             <VideoPanel
               videos={videos}
               title="On video"

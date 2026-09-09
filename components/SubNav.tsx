@@ -32,7 +32,10 @@ export function SubNav({
   return (
     <nav
       aria-label={`${group.label} desks`}
-      className="nav-scroll mt-8 border-b border-rule-strong"
+      /* Spacing belongs to the head that places this, not to the nav —
+         it sits directly under the masthead rule on a section front and
+         under a line of type on a desk page. */
+      className="nav-scroll border-b border-rule-strong"
     >
       <ul className="flex flex-nowrap items-stretch">
         <li>

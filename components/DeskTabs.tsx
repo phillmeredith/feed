@@ -25,7 +25,7 @@ export function DeskTabs({
   return (
     <nav
       aria-label="Sections of this desk"
-      className="mt-8 border-b border-rule nav-scroll"
+      className="nav-scroll mt-6 border-b border-rule-strong"
     >
       <ul className="flex flex-nowrap">
         {tabs.map((tab) => {
@@ -42,18 +42,21 @@ export function DeskTabs({
                  * explicit variable for the same reason — the reset gives
                  * every element a default border-color of --rule.
                  */
-                className={`group block px-4 py-3 border-b-2 whitespace-nowrap transition-colors
-                  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--accent)]
-                  ${active ? "" : "hover:bg-surface"}`}
+                className={`group block -mb-px whitespace-nowrap border-b-2 px-4 py-3 transition-colors
+                  focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--accent)]`}
+                /*
+                 * Ink, not oxide. The desk nav above this one marks its
+                 * current item by breaking the rule in ink, and two navs
+                 * stacked three centimetres apart marking the same idea two
+                 * different ways is two ideas as far as a reader is concerned.
+                 */
                 style={{
-                  borderBottomColor: active ? "var(--accent)" : "transparent",
+                  borderBottomColor: active ? "var(--ink)" : "transparent",
                 }}
               >
                 <span
-                  className={`kicker text-label transition-colors ${
-                    active
-                      ? "text-accent font-semibold"
-                      : "text-muted group-hover:text-ink"
+                  className={`kicker text-micro tracking-[0.2em] transition-colors ${
+                    active ? "text-ink" : "text-muted group-hover:text-ink"
                   }`}
                 >
                   {tab.label}

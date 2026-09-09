@@ -1,10 +1,9 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
-import { SubNav } from "@/components/SubNav";
-import { DeskTabs } from "@/components/DeskTabs";
 import { DataTable } from "@/components/ui/DataTable";
 import { Footer } from "@/components/Footer";
+import { PageHead } from "@/components/PageHead";
 import {
   allModels,
   labs,
@@ -44,33 +43,26 @@ export default function ModelIndex() {
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <div className="pb-2">
-          <p className="display text-subhead text-muted">
-            <Link
-              href="/technology"
-              className="hover:text-accent transition-colors"
-            >
-              Technology
-            </Link>
-          </p>
-
-          <SubNav group="technology" current="ai" />
-          <h1 className="display text-title mt-4">
-            Every model, by what it costs
-          </h1>
-          <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
-            The comparison no lab publishes about its rivals: token pricing,
-            context and modality for {models.length} models across{" "}
-            {labs().length} labs.
-          </p>
-          <p className="kicker text-micro text-faint mt-5">
-            Updated {updated} · {free.length} free at point of use · widest
-            context {formatContext(widest?.contextTokens ?? 0)}
-          </p>
-
-          <DeskTabs desk="ai" current="catalogue" />
-        </div>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <PageHead
+          section={{ label: "Technology", href: "/technology" }}
+          subnav={{ group: "technology", current: "ai" }}
+          title="Every model, by what it costs"
+          standfirst={
+            <>
+              The comparison no lab publishes about its rivals: token pricing,
+              context and modality for {models.length} models across{" "}
+              {labs().length} labs.
+            </>
+          }
+          meta={
+            <>
+              Updated {updated} · {free.length} free at point of use · widest
+              context {formatContext(widest?.contextTokens ?? 0)}
+            </>
+          }
+          tabs={{ desk: "ai", current: "catalogue" }}
+        />
 
         <div className="mt-10" data-density="reference">
           <DataTable

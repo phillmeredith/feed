@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
-import { LeadCard } from "@/components/cards";
+import { StackedLead } from "@/components/cards";
 import { Gallery, Split, Index } from "@/components/shapes";
 import { categoryBySlug, groupBySlug } from "@/lib/categories";
 import { getFeed } from "@/lib/feed";
@@ -19,8 +19,8 @@ import { GearDirectory } from "@/components/GearDirectory";
 import { ModelTable } from "@/components/ModelTable";
 import { VideoPanel } from "@/components/VideoPanel";
 import { recentVideos } from "@/lib/video";
-import { SubNav } from "./SubNav";
-import { DeskTabs } from "./DeskTabs";
+import { PageHead } from "./PageHead";
+import { BandHead } from "./Band";
 import { SectionBlock } from "./shapes";
 
 /*
@@ -140,42 +140,29 @@ export async function DeskView({
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <div className="pb-2">
-          {/*
-            * The three tiers, in the order they narrow: the section, the nav
-            * that moves between its desks, then the desk itself and the tabs
-            * within it. Reading down the page is reading down the hierarchy.
-            */}
-          {group && (
-            <p className="display text-2xl sm:text-3xl text-muted">
-              <Link
-                href={`/${group.slug}`}
-                className="hover:text-accent transition-colors"
-              >
-                {group.label}
-              </Link>
-            </p>
-          )}
-
-          {category.group && (
-            <SubNav group={category.group} current={category.slug} />
-          )}
-
-          <h1 className="display text-nameplate mt-10">
-            {category.label}
-          </h1>
-          <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
-            {category.standfirst}
-          </p>
-          <p className="kicker text-micro text-faint mt-5">
-            {deskArticles.length} stories · refreshed every 10 minutes
-            {totalPages > 1 && ` · page ${current} of ${totalPages}`}
-          </p>
-
-          <DeskTabs desk={category.slug} current={tab} />
-
-        </div>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        {/*
+          * The three tiers, in the order they narrow: the section, the nav
+          * that moves between its desks, then the desk itself and the tabs
+          * within it. Reading down the page is reading down the hierarchy.
+          */}
+        <PageHead
+          section={group ? { label: group.label, href: `/${group.slug}` } : undefined}
+          subnav={
+            category.group
+              ? { group: category.group, current: category.slug }
+              : undefined
+          }
+          title={category.label}
+          standfirst={category.standfirst}
+          meta={
+            <>
+              {deskArticles.length} stories · refreshed every 10 minutes
+              {totalPages > 1 && ` · page ${current} of ${totalPages}`}
+            </>
+          }
+          tabs={{ desk: category.slug, current: tab }}
+        />
 
         {above}
 
@@ -219,14 +206,14 @@ export async function DeskView({
           ) : (
             /* Losing the forecast used to remove half the page with no
                explanation; say so instead. */
-            <p className="mt-12 font-serif italic text-xl text-muted">
+            <p className="mt-12 standfirst font-serif text-xl italic">
               The forecast is unavailable right now — Open-Meteo didn&apos;t
               answer. The reporting below is unaffected.
             </p>
           ))}
 
         {feed === "brief" && rest.length > 0 && (
-          <div className="mt-band">
+          <div className="mt-12">
             <SectionBlock
               title="Latest"
               dek="The reporting, in brief"
@@ -241,40 +228,45 @@ export async function DeskView({
         {/* A tab showing only a calendar or a table has no feed to run. */}
         {feed === "full" && (lead ? (
           <>
-            <div className="mt-10">
-              <LeadCard article={lead} />
+            {/*
+              * A desk opener, not a front-page lead. `LeadCard` sets its
+              * headline at the one size nothing outside the front page is
+              * allowed to use — putting it on eleven desk pages as well is
+              * what stops the front page reading as the front page.
+              */}
+            <div className="mt-12">
+              <StackedLead article={lead} />
             </div>
 
             {gallery.length > 0 && (
-              <div className="mt-16 border-t border-rule pt-10">
+              <div className="mt-14 border-t border-rule-strong pt-10">
                 <Gallery articles={gallery} />
               </div>
             )}
 
             {split.length > 0 && (
-              <div className="mt-16">
+              <div className="mt-14 border-t border-rule-strong pt-10">
                 <Split articles={split} />
               </div>
             )}
 
             {remainder.length > 0 && (
-              <div className="mt-20">
-                <h2 className="panel-title">
-                  Also on this desk
-                </h2>
-                <div className="mt-8">
-                  <Index articles={remainder} limit={remainder.length} />
-                </div>
+              <div className="mt-14">
+                <BandHead
+                  title="Also on this desk"
+                  note={`Everything else ${category.label.toLowerCase()} has filed.`}
+                />
+                <Index articles={remainder} limit={remainder.length} />
               </div>
             )}
           </>
         ) : (
-          <p className="mt-16 font-serif italic text-xl text-muted">
+          <p className="mt-12 standfirst font-serif text-xl italic">
             Nothing new on this desk right now. Check back after the next refresh.
           </p>
         ))}
         {totalPages > 1 && (
-          <nav className="mt-16 border-t border-rule pt-6 flex items-center justify-between kicker text-micro">
+          <nav className="band-rule mt-14 flex items-center justify-between pt-4 kicker text-micro">
             {current > 1 ? (
               <Link
                 href={pageHref(category.slug, current - 1)}
@@ -302,7 +294,7 @@ export async function DeskView({
         )}
 
         {panels && videos.length > 0 && (
-          <div className="mt-20">
+          <div className="mt-14">
             <VideoPanel
               videos={videos}
               title="On video"

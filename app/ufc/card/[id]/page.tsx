@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
-import { SubNav } from "@/components/SubNav";
-import { DeskTabs } from "@/components/DeskTabs";
+import { EntityHead } from "@/components/PageHead";
 import { HighlightReel } from "@/components/HighlightReel";
 import { LastUpdated, WhenLine, stateFor } from "@/components/EventStatus";
 import {
@@ -106,28 +105,26 @@ export default async function UfcCardPage({
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <header className="pb-2">
-          <p className="display text-subhead text-muted">
-            <Link href="/sport" className="hover:text-accent transition-colors">
-              Sport
-            </Link>
-          </p>
-          <SubNav group="sport" current="ufc" />
-          <h1 className="display text-title mt-10">{event.name}</h1>
-          <div className="mt-3">
-            <WhenLine
-              at={event.date}
-              state={stateFor({
-                startsAt: event.date,
-                finished: event.status === "Final",
-                hasCard: event.fights.length > 0,
-              })}
-              place={event.location}
-            />
-          </div>
-          <DeskTabs desk="ufc" current="cards" />
-        </header>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <EntityHead
+          subnav={{ group: "sport", current: "ufc" }}
+          trail={[
+            { label: "The UFC", href: "/ufc" },
+            { label: "Cards", href: "/ufc/cards" },
+          ]}
+          title={event.name}
+          tabs={{ desk: "ufc", current: "cards" }}
+        >
+          <WhenLine
+            at={event.date}
+            state={stateFor({
+              startsAt: event.date,
+              finished: event.status === "Final",
+              hasCard: event.fights.length > 0,
+            })}
+            place={event.location}
+          />
+        </EntityHead>
 
         <div className="mt-12 grid gap-16 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
           <div>

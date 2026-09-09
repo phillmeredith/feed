@@ -1,18 +1,19 @@
-import Link from "next/link";
 import type { Article, Category } from "@/lib/types";
-import { FeatureCard, ListCard, ThumbCard } from "./cards";
+import { FeatureCard, ListCard, ThumbCard, RunItem } from "./cards";
+import { BandHead } from "./Band";
 
 /**
  * The three shapes a block of a section can take.
  *
- * Both the front page and the section fronts are lists of blocks, and both
- * were rendering every block identically — eleven the same on the front page,
- * three the same on each section front. A page of one repeated shape reads as
- * a table of contents however good the writing in it is.
+ * Both the section fronts and the desk pages are lists of blocks, and both
+ * were rendering every block identically — a page of one repeated shape reads
+ * as a table of contents however good the writing in it is.
  *
  * Cycling them gives a page a rhythm: pictures, then a picture with the
  * reporting stacked beside it, then headlines in columns. They live here
- * rather than in either page so the two stay in the same language.
+ * rather than in either page so the two stay in the same language — and the
+ * same language the front page speaks, which is ruled columns of equal width
+ * under a banded head.
  */
 export const SHAPES = ["gallery", "split", "index"] as const;
 export type Shape = (typeof SHAPES)[number];
@@ -38,24 +39,12 @@ export function SectionBlock({
 
   return (
     <section>
-      <div className="flex items-end justify-between gap-6 flex-wrap">
-        <div>
-          <h2 className="display text-2xl sm:text-3xl">
-            <Link href={href} className="hover:text-accent transition-colors">
-              {title}
-            </Link>
-          </h2>
-          {dek && (
-            <p className="font-serif italic text-accent text-sm mt-2">{dek}</p>
-          )}
-        </div>
-        <Link
-          href={href}
-          className="kicker text-micro text-muted hover:text-accent transition-colors"
-        >
-          All {total ?? articles.length} stories →
-        </Link>
-      </div>
+      <BandHead
+        title={title}
+        note={dek}
+        href={href}
+        more={`All ${total ?? articles.length} stories`}
+      />
 
       {shape === "gallery" && <Gallery articles={articles} showDesk={showDesk} />}
       {shape === "split" && <Split articles={articles} />}
@@ -85,7 +74,13 @@ export function DeskBlock({
   );
 }
 
-/** Pictures, three across. The desk with the strongest artwork leads. */
+/**
+ * Pictures, three across, and the rest of the desk as headlines beneath.
+ *
+ * Ruled rather than gapped, and every column padded identically, so the three
+ * pictures are the same width and their tops line up — the arrangement the
+ * front page's briefs band settled on for the same reason.
+ */
 export function Gallery({
   articles,
   showDesk = false,
@@ -98,13 +93,19 @@ export function Gallery({
 
   return (
     <>
-      <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="ruled mt-8 grid gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
         {withArt.map((a) => (
-          <FeatureCard key={a.id} article={a} />
+          <FeatureCard
+            key={a.id}
+            article={a}
+            ratio="landscape"
+            headline="text-[1.6rem] leading-[1.06]"
+          />
         ))}
       </div>
+
       {rest.length > 0 && (
-        <div className="mt-10 grid gap-x-12 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="ruled mt-10 grid gap-y-1 border-t border-rule-strong pt-6 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((a) => (
             <ListCard key={a.id} article={a} showDesk={showDesk} />
           ))}
@@ -114,15 +115,21 @@ export function Gallery({
   );
 }
 
-/** One picture, and the desk's other reporting stacked beside it. */
+/** One picture, and the desk's other reporting stacked beside it on a rule. */
 export function Split({ articles }: { articles: Article[] }) {
   const feature = articles.find((a) => a.image) ?? articles[0];
   const rest = articles.filter((a) => a.id !== feature?.id).slice(0, 4);
 
   return (
-    <div className="mt-10 grid gap-12 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
-      {feature && <FeatureCard article={feature} />}
-      <div className="flex flex-col gap-5">
+    <div className="mt-8 grid gap-x-gutter gap-y-8 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
+      {feature && (
+        <FeatureCard
+          article={feature}
+          ratio="hero"
+          headline="text-[1.85rem] leading-[1.05]"
+        />
+      )}
+      <div className="md:rule-l">
         {rest.map((a) => (
           <ThumbCard key={a.id} article={a} />
         ))}
@@ -132,7 +139,8 @@ export function Split({ articles }: { articles: Article[] }) {
 }
 
 /**
- * Headlines only, in columns — a desk read as a list rather than browsed.
+ * Headlines only, in ruled columns — a desk read as a list rather than
+ * browsed.
  *
  * On a section front this is a teaser and stops at nine. On a desk page it is
  * the rest of the page, and cutting it would drop stories that paging says
@@ -149,9 +157,44 @@ export function Index({
   showDesk?: boolean;
 }) {
   return (
-    <div className="mt-10 grid gap-x-12 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="ruled mt-8 grid gap-y-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
       {articles.slice(0, limit).map((a) => (
         <ListCard key={a.id} article={a} showDesk={showDesk} />
+      ))}
+    </div>
+  );
+}
+
+/**
+ * A desk's own run: columns of headlines with the first item in each carrying
+ * the picture — the front page's foot, reused where a page has a lot of one
+ * desk to show at once rather than a little of six.
+ *
+ * Dealt down the columns rather than across, so reading a column top to
+ * bottom is reading in order, which is what a column of a newspaper is for.
+ */
+export function Run({
+  articles,
+  columns = 4,
+}: {
+  articles: Article[];
+  columns?: number;
+}) {
+  if (articles.length === 0) return null;
+
+  const perColumn = Math.ceil(articles.length / columns);
+  const dealt = Array.from({ length: columns }, (_, i) =>
+    articles.slice(i * perColumn, (i + 1) * perColumn)
+  ).filter((column) => column.length > 0);
+
+  return (
+    <div className="ruled grid grid-cols-1 items-start pt-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+      {dealt.map((column) => (
+        <div key={column[0].id}>
+          {column.map((article, n) => (
+            <RunItem key={article.id} article={article} lead={n === 0} />
+          ))}
+        </div>
       ))}
     </div>
   );

@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
+import { EntityHead } from "@/components/PageHead";
 import { ListCard } from "@/components/cards";
 import { PriceHistory } from "@/components/PriceHistory";
 import {
@@ -76,22 +77,19 @@ export default async function ModelPage({ params }: PageProps<"/model/[slug]">) 
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <div className="border-b border-rule pb-8">
-          <p className="kicker text-micro text-accent">
-            <Link href="/ai" className="hover:underline">AI Models</Link>
-            <span className="mx-2 text-rule">/</span>
-            {model.lab}
-          </p>
-          <h1 className="display text-title mt-4">
-            {model.name}
-          </h1>
-          {model.description && (
-            <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-3xl">
-              {model.description.split(". ").slice(0, 2).join(". ")}
-            </p>
-          )}
-        </div>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <EntityHead
+          trail={[
+            { label: "AI Models", href: "/ai" },
+            { label: model.lab },
+          ]}
+          title={model.name}
+          note={
+            model.description
+              ? model.description.split(". ").slice(0, 2).join(". ")
+              : undefined
+          }
+        />
 
         <dl className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <Spec
@@ -137,7 +135,7 @@ export default async function ModelPage({ params }: PageProps<"/model/[slug]">) 
 
         {siblings.length > 0 && (
           <section className="mt-16 border-t border-rule pt-8">
-            <h2 className="kicker text-label text-accent">
+            <h2 className="kicker text-micro tracking-[0.26em] text-ink">
               Also from {model.lab}
             </h2>
             <div className="mt-5 flex flex-wrap gap-2">

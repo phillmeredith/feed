@@ -1,9 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Masthead } from "@/components/Masthead";
-import { SubNav } from "@/components/SubNav";
-import { DeskTabs } from "@/components/DeskTabs";
 import { Footer } from "@/components/Footer";
+import { PageHead } from "@/components/PageHead";
 import { getFeed } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";
 import { rumoursFrom, tally, type Confidence } from "@/lib/rumours";
@@ -54,29 +53,15 @@ export default async function RumourBoard() {
     <>
       <Masthead />
 
-      <main className="sheet py-10 flex-1 w-full">
-        <div className="pb-2">
-          <p className="display text-subhead text-muted">
-            <Link href="/photography" className="hover:text-accent transition-colors">
-              Photography
-            </Link>
-          </p>
-
-          <SubNav group="photography" current="cameras" />
-          <h1 className="display text-title mt-4">
-            The rumour board
-          </h1>
-          <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
-            Kit that hasn&apos;t been announced yet, graded by how firmly it is
-            being reported — and marked when it turns out to be true. Rumour
-            sites delete this the moment it becomes checkable.
-          </p>
-          <p className="kicker text-micro text-faint mt-5">
-            {counts.outstanding} outstanding · {counts.resolved} since announced
-          </p>
-
-          <DeskTabs desk="cameras" current="rumours" />
-        </div>
+      <main className="sheet flex-1 w-full pb-24 pt-7">
+        <PageHead
+          section={{ label: "Photography", href: "/photography" }}
+          subnav={{ group: "photography", current: "cameras" }}
+          title="The rumour board"
+          standfirst="Kit that hasn't been announced yet, graded by how firmly it is being reported — and marked when it turns out to be true. Rumour sites delete this the moment it becomes checkable."
+          meta={`${counts.outstanding} outstanding · ${counts.resolved} since announced`}
+          tabs={{ desk: "cameras", current: "rumours" }}
+        />
 
         {outstanding.length > 0 && (
           <section className="mt-12">
