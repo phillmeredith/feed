@@ -2,15 +2,18 @@ import type { Metadata } from "next";
 import { DeskView } from "@/components/DeskView";
 import { ModelMap } from "@/components/ModelMap";
 import { ModelMeasures } from "@/components/ModelMeasures";
+import { BenchmarkBoard } from "@/components/BenchmarkBoard";
+import { benchmarksUpdated } from "@/lib/benchmarks";
 import { modelHistory } from "@/lib/modelmap";
 import { catalogueUpdated } from "@/lib/catalogue";
+import { BandHead } from "@/components/Band";
 
 export const revalidate = 900;
 
 export const metadata: Metadata = {
   title: "The model map — The Dispatch",
   description:
-    "Every model in the catalogue by release date and context window, from 2023 to now — with what the same rows say about release cadence, how many labs are shipping and what a new model costs.",
+    "What the models can actually do, benchmark by benchmark, plotted against the day each was released — and beneath it the catalogue read as a history.",
 };
 
 export default function ModelMapPage() {
@@ -29,19 +32,27 @@ export default function ModelMapPage() {
       panels={false}
       above={
         <div className="mt-12">
-          <p className="standfirst max-w-[44em] text-[1.15rem]">
-            Every model the catalogue holds, placed by the day it was released
-            and by how much it can be given at once. Three years of them, and
-            room on the right for what has not shipped yet — the map redraws
-            itself each time the catalogue does.
-          </p>
-          <p className="source mt-4">
-            {history.points.length} models · {history.span.from.slice(0, 4)} to
-            today · catalogue updated {updated}
+          <p className="source mb-8">
+            Benchmarks updated{" "}
+            {new Date(benchmarksUpdated()).toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "long",
+            })}{" "}
+            · catalogue updated {updated} · {history.points.length} models
+            priced
           </p>
 
-          <ModelMap history={history} />
-          <ModelMeasures history={history} />
+          <BenchmarkBoard />
+
+          <div className="mt-20">
+            <BandHead
+              weight="major"
+              title="And what they cost to run"
+              note="The catalogue read as a history rather than a price list."
+            />
+            <ModelMap history={history} />
+            <ModelMeasures history={history} />
+          </div>
         </div>
       }
     />

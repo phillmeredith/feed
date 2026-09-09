@@ -200,7 +200,9 @@ export function ModelMap({ history }: { history: ModelHistory }) {
           strokeWidth="2"
           strokeLinejoin="round"
         />
-        {frontier.map((p) => (
+        {frontier.map((p) => {
+          const nearEdge = scaleX(p.at) > W * 0.78;
+          return (
           <g key={`step-${p.id}`}>
             <circle
               cx={scaleX(p.at)}
@@ -211,8 +213,9 @@ export function ModelMap({ history }: { history: ModelHistory }) {
               strokeWidth="2"
             />
             <text
-              x={scaleX(p.at) + 11}
+              x={scaleX(p.at) + (nearEdge ? -11 : 11)}
               y={scaleY(p.context) - 11}
+              textAnchor={nearEdge ? "end" : "start"}
               className="fill-[var(--ink)] font-meta"
               fontSize="14"
               fontWeight="600"
@@ -220,7 +223,8 @@ export function ModelMap({ history }: { history: ModelHistory }) {
               {p.name}
             </text>
           </g>
-        ))}
+          );
+        })}
       </svg>
       </div>
 

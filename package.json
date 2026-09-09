@@ -28,7 +28,8 @@
     "highlights:update": "node scripts/update-highlights.ts",
     "golf:update": "node scripts/update-golf.ts",
     "ufc:update": "node scripts/update-ufc.ts",
-    "climate:update": "node scripts/update-climate.ts"
+    "climate:update": "node scripts/update-climate.ts",
+    "benchmarks:update": "node scripts/update-benchmarks.ts"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",

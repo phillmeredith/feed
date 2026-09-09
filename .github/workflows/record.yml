@@ -32,6 +32,12 @@ jobs:
       - run: npm run ufc:update
       - run: npm run climate:update
 
+      # Epoch publish a fresh evaluation set most days. Tolerated on failure
+      # like the video steps: a day without new scores is a day the charts
+      # stand still, not a day the run fails and loses everything above it.
+      - run: npm run benchmarks:update
+        continue-on-error: true
+
       # Video last: it reads the three stores above to know what to look for,
       # so a race or a card recorded this morning gets its highlights in the
       # same run rather than tomorrow's. It searches YouTube one session at a
