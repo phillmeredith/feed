@@ -38,103 +38,117 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
     <>
       <Masthead />
 
-      <main className="flex-1 w-full">
+      <main className="sheet flex-1 w-full pb-20 pt-7">
         {/*
-          * The opener, on the same two-column head every interior page uses:
-          * the desk in oxide above, the headline across the measure it needs,
-          * and the picture on a rule beside it with its credit under it.
+          * One grid for the whole story, which took three attempts to get
+          * right.
+          *
+          * The opener and the body used to be separate blocks — the opener
+          * across the full sheet, the body a centred 1120px column — and the
+          * page had four different left edges as a result: the headline at
+          * 46px, the byline rail at 192, the prose at 512 and the picture at
+          * 768, none of them agreeing with any other. On a page whose whole
+          * subject is one article that is simply wrong.
+          *
+          * So: two columns, and everything belongs to one of them. The
+          * headline and the byline under it run down the left; the picture
+          * and the prose under it run down the right. The rule between them
+          * is the article's own margin, and it runs the length of the page.
           */}
-        <div className="sheet pt-8 pb-10">
-          {desk && (
-            <Link href={`/${desk.slug}`} className="story inline-block">
-              <h2 className="kicker text-micro tracking-[0.24em] text-accent">
-                {desk.label}
-              </h2>
-            </Link>
-          )}
+        {desk && (
+          <Link href={`/${desk.slug}`} className="story inline-block">
+            <h2 className="kicker text-micro tracking-[0.24em] text-accent">
+              {desk.label}
+            </h2>
+          </Link>
+        )}
 
-          <div
-            className={`band-rule mt-6 grid items-start gap-x-gutter gap-y-8 pt-8 ${
-              story.image ? "lg:grid-cols-[1.1fr_1fr]" : ""
-            }`}
-          >
-            <div className={story.image ? "" : "max-w-4xl"}>
+        <div className="band-rule mt-6 max-w-[1600px] pt-8">
+          <div className="grid items-start gap-x-gutter gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.32fr)]">
+            {/*
+              * The left column: the headline, and beneath it the standing
+              * credit — which is where a byline goes on a printed page, and
+              * why it now begins on the same line as the headline rather than
+              * a third of the way across the page from it.
+              */}
+            <div>
               <h1 className="headline text-title">{story.headline}</h1>
 
               {/* With artwork the standfirst repeats the opening line of the
                   story two centimetres above it; without artwork it is the
                   only thing holding the head together. */}
               {!story.image && story.dek && (
-                <p className="standfirst mt-6 max-w-2xl text-[1.3rem] leading-[1.5]">
+                <p className="standfirst mt-6 text-[1.3rem] leading-[1.5]">
                   {story.dek}
                 </p>
               )}
-            </div>
 
-            {story.image && (
-              <Plate
-                src={story.image}
-                credit={story.source}
-                ratio="hero"
-                fit="contain"
-                className="lg:rule-l"
-              />
-            )}
-          </div>
-        </div>
-
-        <div className="mx-auto max-w-[1120px] px-5 sm:px-8 pb-20">
-          <div className="grid gap-14 lg:grid-cols-[240px_minmax(0,1fr)] xl:gap-20">
-            {/* Sidebar */}
-            <aside className="order-2 lg:order-1">
-              <RailHead>From {story.source}</RailHead>
-              <p className="font-serif text-lg italic text-muted">
-                {relativeDate(story.publishedAt)}
-              </p>
-            </aside>
-
-            {/* Body — the publisher's own syndicated text where they provide it. */}
-            <article className="order-1 lg:order-2 max-w-[68ch]">
-              {story.body ? (
-                <div
-                  className="article-body dropcap"
-                  dangerouslySetInnerHTML={{ __html: story.body }}
-                />
-              ) : (
-                <p className="dropcap font-body text-lg leading-[1.75] text-ink">
-                  {story.excerpt || story.dek}
+              <div className="mt-9 max-w-[22rem]">
+                <RailHead>From {story.source}</RailHead>
+                <p className="font-serif text-lg italic text-muted">
+                  {relativeDate(story.publishedAt)}
                 </p>
-              )}
-
-              {/*
-                * The whole story is on this page, so leaving is a credit
-                * rather than a call to action. This was an accent-filled
-                * button — the loudest thing at the end of the article was an
-                * invitation to go and read it somewhere else.
-                */}
-              <div className="band-rule mt-12 flex flex-wrap items-baseline gap-x-6 gap-y-3 pt-5">
-                <p className="kicker text-micro text-faint">
-                  Reporting by {story.source}
-                  {story.words ? ` · ${story.words} words` : ""}
-                </p>
-                <a
-                  href={story.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="kicker text-micro text-faint hover:text-accent transition-colors"
-                >
-                  Original ↗
-                </a>
-                {desk && (
-                  <Link
-                    href={`/${desk.slug}`}
-                    className="kicker text-micro text-muted hover:text-accent transition-colors ml-auto"
-                  >
-                    ← Back to {desk.label}
-                  </Link>
+                {story.byline && (
+                  <p className="source mt-3">{story.byline}</p>
                 )}
               </div>
-            </article>
+            </div>
+
+            {/* The right column: the picture, and the reporting under it. */}
+            <div className="lg:rule-l">
+              {story.image && (
+                <Plate
+                  src={story.image}
+                  credit={story.source}
+                  ratio="hero"
+                  fit="contain"
+                  className="mb-10"
+                />
+              )}
+
+              {/* The publisher's own syndicated text where they provide it. */}
+              <article className="max-w-[68ch]">
+                {story.body ? (
+                  <div
+                    className="article-body dropcap"
+                    dangerouslySetInnerHTML={{ __html: story.body }}
+                  />
+                ) : (
+                  <p className="dropcap font-body text-lg leading-[1.75] text-ink">
+                    {story.excerpt || story.dek}
+                  </p>
+                )}
+
+                {/*
+                  * The whole story is on this page, so leaving is a credit
+                  * rather than a call to action. This was an accent-filled
+                  * button — the loudest thing at the end of the article was an
+                  * invitation to go and read it somewhere else.
+                  */}
+                <div className="band-rule mt-12 flex flex-wrap items-baseline gap-x-6 gap-y-3 pt-5">
+                  <p className="kicker text-micro text-faint">
+                    Reporting by {story.source}
+                    {story.words ? ` · ${story.words} words` : ""}
+                  </p>
+                  <a
+                    href={story.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="kicker text-micro text-faint transition-colors hover:text-accent"
+                  >
+                    Original ↗
+                  </a>
+                  {desk && (
+                    <Link
+                      href={`/${desk.slug}`}
+                      className="kicker text-micro text-muted transition-colors hover:text-accent ml-auto"
+                    >
+                      ← Back to {desk.label}
+                    </Link>
+                  )}
+                </div>
+              </article>
+            </div>
           </div>
 
           {related.length > 0 && (
