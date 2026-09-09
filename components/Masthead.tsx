@@ -82,7 +82,7 @@ export async function Masthead({
         * on the page and carries the most volatile things on it, which is the
         * arrangement every front page has settled on independently.
         */}
-      <div className="sheet border-b border-rule">
+      <div className="sheet sheet-top border-b border-rule">
         <div className="flex items-baseline gap-8 py-2.5 kicker text-micro font-medium tracking-[0.08em] text-faint">
           {weather && (
             <span className="shrink-0 whitespace-nowrap">

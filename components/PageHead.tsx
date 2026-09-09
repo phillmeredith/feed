@@ -4,6 +4,18 @@ import { SubNav } from "./SubNav";
 import { DeskTabs } from "./DeskTabs";
 import type { CategorySlug } from "@/lib/types";
 
+/*
+ * Two thirds and a third, and every other two-column block on these pages
+ * uses the same split.
+ *
+ * They did not, and it showed: the head was 1.35:1 and the opener beneath it
+ * 2:1, so the page drew two vertical rules a few centimetres apart and a few
+ * centimetres out of line with each other. A rule down a page is a claim that
+ * the columns either side of it are the columns of the page; two of them
+ * disagreeing says neither is.
+ */
+const PAGE_COLUMNS = "lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]";
+
 /**
  * The head of an interior page.
  *
@@ -51,7 +63,7 @@ export function PageHead({
 
       {subnav && <SubNav group={subnav.group} current={subnav.current} />}
 
-      <div className="band-rule mt-8 grid items-start gap-x-gutter gap-y-5 pt-7 lg:grid-cols-[1.35fr_1fr]">
+      <div className={`band-rule mt-7 grid items-start gap-x-gutter gap-y-5 pt-7 ${PAGE_COLUMNS}`}>
         <h1 className="display text-nameplate">{title}</h1>
 
         {(standfirst || meta) && (
@@ -120,7 +132,7 @@ export function EntityHead({
         ))}
       </p>
 
-      <div className="band-rule mt-6 grid items-start gap-x-gutter gap-y-5 pt-7 lg:grid-cols-[1.35fr_1fr]">
+      <div className={`band-rule mt-6 grid items-start gap-x-gutter gap-y-5 pt-7 ${PAGE_COLUMNS}`}>
         <h1 className="display text-title">{title}</h1>
 
         {(note || meta || children) && (

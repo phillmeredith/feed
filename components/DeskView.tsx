@@ -20,7 +20,8 @@ import { ModelTable } from "@/components/ModelTable";
 import { VideoPanel } from "@/components/VideoPanel";
 import { recentVideos } from "@/lib/video";
 import { PageHead } from "./PageHead";
-import { BandHead } from "./Band";
+import { BandHead, RailHead } from "./Band";
+import { RelativeTime } from "./RelativeTime";
 import { SectionBlock } from "./shapes";
 
 /*
@@ -127,14 +128,21 @@ export async function DeskView({
   const videos = beat ? recentVideos(beat, 6) : [];
   /*
    * A desk was a lead and then six identical cards and then a list. The same
-   * shapes the fronts use give it somewhere to go instead: three across, then
-   * one picture with the reporting beside it, then the rest as headlines.
+   * shapes the fronts use give it somewhere to go instead: a lead with a rail
+   * beside it, three across, one picture with the reporting beside it, then
+   * the rest as headlines.
+   *
+   * The rail matters for more than variety. Without it the lead's picture ran
+   * the width of the sheet — 16:9 across 1350px is seven hundred and fifty
+   * pixels of photograph before a headline — and the page opened on a wall.
    */
   const [lead, ...rest] = pageArticles;
-  const gallery = rest.filter((a) => a.image).slice(0, 3);
-  const afterGallery = rest.filter((a) => !gallery.includes(a));
-  const split = afterGallery.slice(0, 5);
-  const remainder = afterGallery.slice(5);
+  const rail = rest.slice(0, 5);
+  const afterRail = rest.slice(5);
+  const gallery = afterRail.filter((a) => a.image).slice(0, 3);
+  const afterGallery = afterRail.filter((a) => !gallery.includes(a));
+  const split = afterGallery.slice(0, 4);
+  const remainder = afterGallery.slice(4);
 
   return (
     <>
@@ -234,8 +242,35 @@ export async function DeskView({
               * allowed to use — putting it on eleven desk pages as well is
               * what stops the front page reading as the front page.
               */}
-            <div className="mt-12">
+            <div className="mt-12 grid gap-x-gutter gap-y-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
               <StackedLead article={lead} />
+
+              {rail.length > 0 && (
+                <aside className="border-t border-rule-strong pt-6 lg:border-t-0 lg:pt-0 lg:rule-l">
+                  <RailHead>Also on this desk</RailHead>
+                  <ol>
+                    {rail.map((article) => (
+                      <li
+                        key={article.id}
+                        className="group border-b border-rule py-4 last:border-b-0"
+                      >
+                        <Link
+                          href={`/story/${article.id}`}
+                          className="story block"
+                        >
+                          <h3 className="headline text-[1.2rem] font-medium leading-[1.18]">
+                            {article.headline}
+                          </h3>
+                          <p className="source mt-2">
+                            {article.source} ·{" "}
+                            <RelativeTime iso={article.publishedAt} />
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ol>
+                </aside>
+              )}
             </div>
 
             {gallery.length > 0 && (
@@ -253,7 +288,8 @@ export async function DeskView({
             {remainder.length > 0 && (
               <div className="mt-14">
                 <BandHead
-                  title="Also on this desk"
+                  weight="major"
+                  title="The rest of the desk"
                   note={`Everything else ${category.label.toLowerCase()} has filed.`}
                 />
                 <Index articles={remainder} limit={remainder.length} />

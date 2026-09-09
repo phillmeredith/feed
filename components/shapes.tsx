@@ -33,6 +33,11 @@ export function SectionBlock({
   total?: number;
   articles: Article[];
   shape: Shape;
+  /**
+   * Whether an item has to name its own desk. A block drawn from one desk
+   * does not — the heading above it already did — and a block drawn from
+   * several does, or a reader cannot place anything in it.
+   */
   showDesk?: boolean;
 }) {
   if (articles.length === 0) return null;
@@ -47,7 +52,7 @@ export function SectionBlock({
       />
 
       {shape === "gallery" && <Gallery articles={articles} showDesk={showDesk} />}
-      {shape === "split" && <Split articles={articles} />}
+      {shape === "split" && <Split articles={articles} showDesk={showDesk} />}
       {shape === "index" && <Index articles={articles} showDesk={showDesk} />}
     </section>
   );
@@ -75,11 +80,15 @@ export function DeskBlock({
 }
 
 /**
- * Pictures, three across, and the rest of the desk as headlines beneath.
+ * Pictures, three across, and a short index of the rest beneath.
  *
  * Ruled rather than gapped, and every column padded identically, so the three
  * pictures are the same width and their tops line up — the arrangement the
  * front page's briefs band settled on for the same reason.
+ *
+ * Only the first card carries a standfirst. Three of them side by side is
+ * three paragraphs of grey competing with the three headlines above them,
+ * and the block stops being a row of pictures and becomes a wall of text.
  */
 export function Gallery({
   articles,
@@ -89,17 +98,19 @@ export function Gallery({
   showDesk?: boolean;
 }) {
   const withArt = articles.filter((a) => a.image).slice(0, 3);
-  const rest = articles.filter((a) => !withArt.includes(a)).slice(0, 9);
+  const rest = articles.filter((a) => !withArt.includes(a)).slice(0, GALLERY_TAIL);
 
   return (
     <>
       <div className="ruled mt-8 grid gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-        {withArt.map((a) => (
+        {withArt.map((a, i) => (
           <FeatureCard
             key={a.id}
             article={a}
             ratio="landscape"
             headline="text-[1.6rem] leading-[1.06]"
+            showDek={i === 0}
+            showKicker={showDesk}
           />
         ))}
       </div>
@@ -116,22 +127,29 @@ export function Gallery({
 }
 
 /** One picture, and the desk's other reporting stacked beside it on a rule. */
-export function Split({ articles }: { articles: Article[] }) {
+export function Split({
+  articles,
+  showDesk = false,
+}: {
+  articles: Article[];
+  showDesk?: boolean;
+}) {
   const feature = articles.find((a) => a.image) ?? articles[0];
-  const rest = articles.filter((a) => a.id !== feature?.id).slice(0, 4);
+  const rest = articles.filter((a) => a.id !== feature?.id).slice(0, 3);
 
   return (
-    <div className="mt-8 grid gap-x-gutter gap-y-8 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
+    <div className="mt-8 grid gap-x-gutter gap-y-8 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
       {feature && (
         <FeatureCard
           article={feature}
           ratio="hero"
           headline="text-[1.85rem] leading-[1.05]"
+          showKicker={showDesk}
         />
       )}
       <div className="md:rule-l">
         {rest.map((a) => (
-          <ThumbCard key={a.id} article={a} />
+          <ThumbCard key={a.id} article={a} showDesk={showDesk} />
         ))}
       </div>
     </div>
@@ -139,16 +157,30 @@ export function Split({ articles }: { articles: Article[] }) {
 }
 
 /**
+ * How many headlines a block will show before it starts being a list of
+ * everything. Six is two rows of three, which is a block; nine was three
+ * rows, which on a page carrying four of these blocks is most of the page.
+ */
+const INDEX_LIMIT = 6;
+
+/**
+ * What a gallery lists under its pictures. One row, so the block reads as
+ * three pictures with a footnote rather than three pictures on top of a list
+ * as long as they are tall.
+ */
+const GALLERY_TAIL = 3;
+
+/**
  * Headlines only, in ruled columns — a desk read as a list rather than
  * browsed.
  *
- * On a section front this is a teaser and stops at nine. On a desk page it is
+ * On a section front this is a teaser and stops at six. On a desk page it is
  * the rest of the page, and cutting it would drop stories that paging says
  * are there, so the caller raises the limit.
  */
 export function Index({
   articles,
-  limit = 9,
+  limit = INDEX_LIMIT,
   showDesk = false,
 }: {
   articles: Article[];

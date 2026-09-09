@@ -132,12 +132,19 @@ export function FeatureCard({
   ratio = "landscape",
   headline = "text-subhead",
   showDek = true,
+  showKicker = true,
 }: {
   article: Article;
   ratio?: "hero" | "wide" | "landscape" | "standard";
   /** The column decides how loud its own feature is. */
   headline?: string;
   showDek?: boolean;
+  /**
+   * Off inside a block that already names the desk. A row of three cards
+   * under a heading reading HARDWARE, each labelled HARDWARE, is three labels
+   * that tell a reader nothing they were not just told.
+   */
+  showKicker?: boolean;
 }) {
   const [broken, setBroken] = useState(false);
 
@@ -153,7 +160,7 @@ export function FeatureCard({
             onFail={() => setBroken(true)}
           />
         )}
-        <Kicker article={article} mute className="mb-2" />
+        {showKicker && <Kicker article={article} mute className="mb-2" />}
         <h3 className={`headline ${headline}`}>{article.headline}</h3>
         {showDek && article.dek && (
           <p className="standfirst mt-3 text-small line-clamp-3">{article.dek}</p>
@@ -165,12 +172,17 @@ export function FeatureCard({
 }
 
 /**
- * Section-front opener: artwork above, headline beneath.
+ * The opener on a section front or a desk page.
  *
- * LeadCard fills the width of the sheet. In a section front it sits in a
- * column beside a rail, and the lead size would give the headline six
- * characters of line to work with. Stacking keeps the scale and gives the
- * words somewhere to go.
+ * The same order as the front page's lead, which is the order that works: the
+ * desk, the headline, then the picture, then the reporting. It used to stack
+ * the artwork on top — and a 16:9 picture at the head of a column is five
+ * hundred pixels of photograph before a word, with the headline arriving
+ * underneath it at a third of the size looking like a caption. A picture
+ * supports a headline; it does not introduce one.
+ *
+ * Smaller than the front page's lead in every dimension, because it is the
+ * lead of a section rather than of the paper.
  */
 export function StackedLead({ article }: { article: Article }) {
   const [broken, setBroken] = useState(false);
@@ -178,22 +190,21 @@ export function StackedLead({ article }: { article: Article }) {
   return (
     <article className="group">
       <Link href={`/story/${article.id}`} className="story block">
+        <Kicker article={article} className="mb-2" />
+        <h2 className="headline text-headline">{article.headline}</h2>
+
         {article.image && !broken && (
           <Plate
             src={article.image}
             credit={article.source}
-            ratio="hero"
-            /* Lead artwork is often a title plate or a logo card; `cover`
-               slices through those at this size. */
-            fit="contain"
-            className="mb-6"
+            ratio="landscape"
+            className="mt-6"
             onFail={() => setBroken(true)}
           />
         )}
-        <Kicker article={article} className="mb-2" />
-        <h2 className="headline text-headline">{article.headline}</h2>
+
         {article.dek && (
-          <p className="standfirst mt-4 text-lede max-w-2xl">{article.dek}</p>
+          <p className="standfirst mt-5 max-w-[38em] text-lede">{article.dek}</p>
         )}
         <Meta article={article} className="mt-4" />
       </Link>
@@ -222,7 +233,13 @@ export function ListCard({
 }
 
 /** Thumbnail row, used in sidebars. */
-export function ThumbCard({ article }: { article: Article }) {
+export function ThumbCard({
+  article,
+  showDesk = false,
+}: {
+  article: Article;
+  showDesk?: boolean;
+}) {
   const [broken, setBroken] = useState(false);
 
   return (
@@ -240,7 +257,7 @@ export function ThumbCard({ article }: { article: Article }) {
           <h3 className="headline text-lede font-medium leading-snug line-clamp-3">
             {article.headline}
           </h3>
-          <Meta article={article} className="mt-2" />
+          <Meta article={article} showDesk={showDesk} className="mt-2" />
         </div>
       </Link>
     </article>

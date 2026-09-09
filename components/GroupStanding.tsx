@@ -8,13 +8,7 @@ import { matchByName } from "@/lib/catalogue";
 import { modelSlug } from "@/lib/openrouter";
 import models from "@/data/models.json" with { type: "json" };
 import { BandHead } from "./Band";
-
-function month(iso: string) {
-  return new Date(iso).toLocaleDateString("en-GB", {
-    month: "short",
-    year: "numeric",
-  });
-}
+import { ReleaseTimeline } from "./ReleaseTimeline";
 
 /**
  * What a section is actually about, above the reporting about it.
@@ -34,7 +28,7 @@ export function GroupStanding({ group }: { group: string }) {
   return null;
 }
 
-/** What the labs have shipped, newest first. */
+/** What the labs have shipped, on an axis. */
 function LatestModels() {
   const items = (
     models.items as {
@@ -46,7 +40,12 @@ function LatestModels() {
   )
     .slice()
     .sort((a, b) => b.releasedAt.localeCompare(a.releasedAt))
-    .slice(0, 8);
+    /*
+     * Enough to fill the axis rather than a fixed eight. A list had to be
+     * capped because it grew downwards; the axis grows sideways into columns
+     * that are already there, and the months do the trimming.
+     */
+    .slice(0, 40);
   if (items.length === 0) return null;
 
   return (
@@ -56,47 +55,24 @@ function LatestModels() {
       href="/model"
       cta="The model catalogue"
     >
-      <ul className="mt-6 columns-1 sm:columns-2 gap-x-12">
-        {items.map((model) => {
+      <ReleaseTimeline
+        releases={items.map((model) => {
           const entry = matchByName(model.name);
-          const body = (
-            <>
-              <span className="font-body text-small group-hover:text-accent transition-colors">
-                {model.name}
-              </span>
-              <span className="text-fine text-faint">
-                {" "}
-                — {model.lab}
-                {model.weights === "open" ? ", open weights" : ""}
-              </span>
-            </>
-          );
-
-          return (
-            <li key={model.name} className="break-inside-avoid py-2.5">
-              <span className="group flex items-baseline gap-4">
-                <span className="kicker text-micro text-faint w-20 shrink-0">
-                  {month(model.releasedAt)}
-                </span>
-                <span className="min-w-0">
-                  {entry ? (
-                    <Link href={`/model/${modelSlug(entry.id)}`}>{body}</Link>
-                  ) : (
-                    body
-                  )}
-                </span>
-              </span>
-            </li>
-          );
+          return {
+            name: model.name,
+            note: `${model.lab}${model.weights === "open" ? " · open weights" : ""}`,
+            at: model.releasedAt,
+            href: entry ? `/model/${modelSlug(entry.id)}` : undefined,
+          };
         })}
-      </ul>
+      />
     </Panel>
   );
 }
 
 /** The last of the glass and bodies, straight off the directory. */
 function RecentlyReleased() {
-  const items = allGear().slice(0, 10);
+  const items = allGear().slice(0, 40);
   if (items.length === 0) return null;
 
   return (
@@ -106,30 +82,14 @@ function RecentlyReleased() {
       href="/gear"
       cta="The full directory"
     >
-      <ul className="mt-6 columns-1 sm:columns-2 gap-x-12">
-        {items.map((item) => (
-          <li key={item.name} className="break-inside-avoid py-2.5">
-            <Link
-              href={`/gear/${gearSlug(item.name)}`}
-              className="group flex items-baseline gap-4"
-            >
-              <span className="kicker text-micro text-faint w-20 shrink-0">
-                {month(item.announcedAt)}
-              </span>
-              <span className="min-w-0">
-                <span className="font-body text-small group-hover:text-accent transition-colors">
-                  {item.name}
-                </span>
-                <span className="text-fine text-faint">
-                  {" "}
-                  — {item.kind === "lens" ? "lens" : "camera"}
-                  {item.independent ? ", third party" : ""}
-                </span>
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <ReleaseTimeline
+        releases={items.map((item) => ({
+          name: item.name,
+          note: `${item.kind === "lens" ? "Lens" : "Camera"}${item.independent ? " · third party" : ""}`,
+          at: item.announcedAt,
+          href: `/gear/${gearSlug(item.name)}`,
+        }))}
+      />
     </Panel>
   );
 }

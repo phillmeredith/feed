@@ -80,7 +80,7 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
           * different place from it is not.
           */}
         <div className="band-rule mt-6 pt-8">
-          <div className="grid items-start gap-x-gutter gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.9fr)]">
+          <div className="grid items-start gap-x-gutter gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
             {/*
               * The left column: the headline, and beneath it the standing
               * credit — which is where a byline goes on a printed page, and
@@ -173,6 +173,7 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
           {related.length > 0 && (
             <section className="mt-20">
               <BandHead
+                weight="major"
                 title={desk ? `More from ${desk.label}` : "More from the desks"}
                 note="Filed on the same desk."
                 href={desk ? `/${desk.slug}` : undefined}

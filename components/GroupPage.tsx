@@ -11,7 +11,8 @@ import { RailHead } from "./Band";
 import { GroupStanding } from "./GroupStanding";
 import { SportBoard } from "./SportBoard";
 import { VideoPanel } from "./VideoPanel";
-import { StackedLead, Kicker, Meta } from "./cards";
+import { StackedLead } from "./cards";
+import { RelativeTime } from "./RelativeTime";
 import { SHAPES, DeskBlock, SectionBlock } from "./shapes";
 
 /**
@@ -47,7 +48,13 @@ export async function GroupPage({ group }: { group: Group }) {
    * pinning whichever desk filed most recently.
    */
   const lead = pickHero(everything, group.desks) ?? everything[0];
-  const latest = everything.filter((a) => a.id !== lead?.id).slice(0, 6);
+  /*
+   * Five, not six. The rail runs beside the lead's picture and every item in
+   * it costs three lines — a desk, a headline and a credit — so it was a
+   * column of small grey type as tall as the photograph next to it and just
+   * as loud.
+   */
+  const latest = everything.filter((a) => a.id !== lead?.id).slice(0, 5);
 
   const beat =
     group.slug === "photography"
@@ -113,11 +120,18 @@ export async function GroupPage({ group }: { group: Group }) {
                         href={`/story/${article.id}`}
                         className="story block"
                       >
-                        <Kicker article={article} mute className="mb-1.5" />
                         <h3 className="headline text-[1.2rem] font-medium leading-[1.18]">
                           {article.headline}
                         </h3>
-                        <Meta article={article} className="mt-2" />
+                        {/* The desk and the hour, and no outlet. The rail's
+                            job is to say what else has happened across the
+                            section — which desk it happened on is the useful
+                            half, and printing the credit as well made every
+                            item a three-line entry. */}
+                        <p className="source mt-2">
+                          {categoryBySlug(article.category)?.short} ·{" "}
+                          <RelativeTime iso={article.publishedAt} />
+                        </p>
                       </Link>
                     </li>
                   ))}

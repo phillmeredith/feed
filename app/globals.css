@@ -111,8 +111,15 @@
   --space-section: 5rem;
   --space-movement: 7.5rem;
 
-  /* The gutter between columns of the sheet, and the width of the sheet. */
+  /* The gutter between columns of the sheet. */
   --gutter: clamp(1.5rem, 2.4vw, 2.125rem);
+
+  /*
+   * The margin of the sheet — the same on all four sides, as it is on a
+   * printed page. The top used to be a tenth of the sides, which made the
+   * first line of the paper look as though it had been trimmed off.
+   */
+  --margin: clamp(20px, 3.2vw, 64px);
 
   /*
    * State, which the site had no way to say.
@@ -382,7 +389,12 @@ body::before {
   width: 100%;
   max-width: 2140px;
   margin-inline: auto;
-  padding-inline: clamp(20px, 3.2vw, 64px);
+  padding-inline: var(--margin);
+}
+
+/* The head of the page, held off the top edge by the same margin. */
+@utility sheet-top {
+  padding-top: var(--margin);
 }
 
 /*

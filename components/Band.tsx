@@ -18,6 +18,7 @@ export function BandHead({
   note,
   href,
   more,
+  weight = "minor",
 }: {
   title: string;
   /** The italic line: what this band is, in a few words. */
@@ -26,13 +27,29 @@ export function BandHead({
   href?: string;
   /** What the link says — "All 42 stories", "The full table". */
   more?: string;
+  /**
+   * How loudly this band opens.
+   *
+   * `major` is the thick rule — a division of the paper, of which a page
+   * should have one or two. A section front had seven of them: four desks, a
+   * standing panel, a video panel and the page's own head, all shouting at
+   * the same volume, which is the same as none of them shouting. `minor` is
+   * a heading on a rule, and is what a block inside a page gets.
+   */
+  weight?: "major" | "minor";
 }) {
   const heading = (
     <h2 className="kicker text-micro tracking-[0.26em] text-ink">{title}</h2>
   );
 
   return (
-    <div className="band-rule flex flex-wrap items-baseline gap-x-5 gap-y-2 border-b border-rule-strong pt-4 pb-3.5">
+    <div
+      className={`flex flex-wrap items-baseline gap-x-5 gap-y-2 ${
+        weight === "major"
+          ? "band-rule border-b border-rule-strong pt-4 pb-3.5"
+          : "border-b-2 border-ink pb-2.5"
+      }`}
+    >
       {href ? (
         <Link href={href} className="story">
           {heading}
