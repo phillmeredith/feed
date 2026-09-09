@@ -7,6 +7,7 @@ import {
   type Benchmark,
 } from "@/lib/benchmarks";
 import { BenchmarkMap } from "./BenchmarkMap";
+import { Leaderboard } from "./Leaderboard";
 import { BandHead } from "./Band";
 
 /** The one drawn large. The longest-running benchmark still worth running. */
@@ -67,9 +68,36 @@ export function BenchmarkBoard() {
   const beaten = rest.filter((b) => b.retired);
   const { top } = standing(headline);
 
+  /* The three a reader is most likely to be choosing on: general reasoning,
+     real software work, and running a machine unaided. */
+  const highlights = ["gpqa", "swe-bench", "terminal-bench"]
+    .map((k) => benchmarks.find((b) => b.key === k))
+    .filter((b): b is Benchmark => Boolean(b));
+
   return (
     <>
+      {/*
+        * Who leads, before how it got that way.
+        *
+        * The charts below answer the historical question and answer it well,
+        * and a reader arriving at this page is usually asking a much shorter
+        * one — which of these should I use. That question deserves the top of
+        * the page and a number they can read without tracing a line.
+        */}
       <section>
+        <BandHead
+          weight="major"
+          title="Where it stands today"
+          note="The leaders on the three boards worth choosing on."
+        />
+        <div className="ruled mt-8 grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 2xl:grid-cols-3">
+          {highlights.map((b) => (
+            <Leaderboard key={b.key} benchmark={b} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-16">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
           <h2 className="headline text-headline">{headline.name}</h2>
           <p className="source">

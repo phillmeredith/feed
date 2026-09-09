@@ -82,6 +82,48 @@ export function frontier(b: Benchmark): Score[] {
   return steps;
 }
 
+/*
+ * Evaluation harnesses name a model by its version string and then bolt the
+ * reasoning effort on the end: `gpt-6-astra_max`, `claude-opus-4-8_unknown`.
+ * The effort matters — the same weights score differently at different
+ * settings, which is why the rows are separate — but it is not part of the
+ * name, and printed as one it makes every leaderboard look like a config file.
+ */
+const EFFORT = new Set(["max", "high", "medium", "low", "minimal", "xhigh", "unknown"]);
+
+export function modelName(version: string) {
+  const cut = version.lastIndexOf("_");
+  if (cut < 0) return { name: version, effort: null };
+  const tail = version.slice(cut + 1).toLowerCase();
+  if (!EFFORT.has(tail)) return { name: version, effort: null };
+  return {
+    name: version.slice(0, cut),
+    effort: tail === "unknown" ? null : tail,
+  };
+}
+
+/**
+ * The leaderboard: who is top, right now.
+ *
+ * The charts on this page answer how the field got here. This answers the
+ * question a reader actually arrives with, which is which of these to use —
+ * and it is a different list, because the model that broke a record two years
+ * ago is nowhere near the top of it.
+ *
+ * One row per model rather than per version string: a lab that submits the
+ * same weights at four reasoning efforts would otherwise take the whole
+ * table, and the best of the four is the honest entry.
+ */
+export function leaderboard(b: Benchmark, count = 8): Score[] {
+  const best = new Map<string, Score>();
+  for (const s of b.scores) {
+    const { name } = modelName(s.model);
+    const seen = best.get(name);
+    if (!seen || s.score > seen.score) best.set(name, s);
+  }
+  return [...best.values()].sort((x, y) => y.score - x.score).slice(0, count);
+}
+
 /** Where a benchmark stands: the best anyone has managed, and when. */
 export function standing(b: Benchmark) {
   const steps = frontier(b);
