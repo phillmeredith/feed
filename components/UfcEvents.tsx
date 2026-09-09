@@ -47,7 +47,7 @@ function Bout({ fight, reveal }: { fight: Fight; reveal: boolean }) {
         <span
           className={
             reveal && fight.winner === red
-              ? "font-semibold text-paper"
+              ? "font-semibold text-ink"
               : "text-muted"
           }
         >
@@ -57,7 +57,7 @@ function Bout({ fight, reveal }: { fight: Fight; reveal: boolean }) {
         <span
           className={
             reveal && fight.winner === blue
-              ? "font-semibold text-paper"
+              ? "font-semibold text-ink"
               : "text-muted"
           }
         >

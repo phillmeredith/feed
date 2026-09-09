@@ -56,9 +56,9 @@ export default async function RacePage({
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
-      <main className="mx-auto max-w-[1400px] px-5 sm:px-10 py-10 flex-1 w-full">
+      <main className="sheet py-10 flex-1 w-full">
         <header className="border-b border-rule pb-8">
           <p className="display text-2xl sm:text-3xl text-muted">
             <Link href="/sport" className="hover:text-accent transition-colors">
@@ -269,7 +269,7 @@ export default async function RacePage({
                 </h2>
                 <div className="mt-4">
                   <p className="font-serif text-lg text-muted">
-                    <span className="text-paper">
+                    <span className="text-ink">
                       {leader.givenName} {leader.familyName}
                     </span>{" "}
                     leads on {leader.points} points after{" "}

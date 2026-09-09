@@ -1,23 +1,51 @@
 @import "tailwindcss";
 
+/*
+ * The Dispatch, printed.
+ *
+ * The site spent its first months as a warm dark page, which reads well on a
+ * phone at night and reads like every other feed reader the rest of the time.
+ * A publication that calls itself a broadsheet should look like one: ink on
+ * stock, ruled columns, one oxide accent used sparingly, and no glow.
+ *
+ * The token names changed with it. `--void` and `--paper` meant ground and
+ * text on a dark page; on this one they would be lying, so the ground is
+ * `--paper` and the text is `--ink`.
+ */
 :root {
-  /* Warm dark ground with beige text — far easier on the eyes than black. */
-  --void: #17120d;
-  --surface: #201a13;
-  --surface-2: #2a221a;
-  --paper: #ece0cc;
-  --muted: #a99880;
-  --faint: #7a6a56;
-  --rule: #352b21;
-  /* Gold rather than the old spring green, which fought the brown. */
-  --accent: #d9a441;
-  --accent-dim: #a87c2c;
-  --accent-ink: #17120d;
-  --negative: #d1705c;
+  /* Newsprint stock, and the two tints a panel can be lifted or sunk by. */
+  --paper: #d3cbb6;
+  --surface: #cdc4ab;
+  --surface-2: #c6bda2;
 
-  --font-display: var(--font-bricolage);
-  --font-serif: var(--font-instrument);
-  --font-body: var(--font-source-serif);
+  --ink: #2b2721;
+  --muted: #4e4839;
+  /*
+   * Every one of these is set against the paper above and clears 4.5:1, which
+   * is not where they started. The site's small type is 10 and 11px Archivo in
+   * caps — kickers, bylines, figures, state labels — and small type is exactly
+   * what a merely "quiet" colour fails at. A tone that has to be leaned into
+   * is not quiet, it is missing.
+   */
+  --faint: #575040;
+
+  /*
+   * Two rules, because a broadsheet has two. The hairline separates items
+   * inside a column and is what `border-rule` gets by default; the strong one
+   * divides columns from each other and sections from sections.
+   */
+  --rule: #bfb499;
+  --rule-strong: #a89b7e;
+
+  /* Oxide — the colour of a second ink well, not of a link. */
+  --accent: #873322;
+  --accent-dim: #6a2718;
+  --accent-ink: #f2ece0;
+  --negative: #873322;
+
+  --font-display: var(--font-bodoni);
+  --font-serif: var(--font-newsreader);
+  --font-body: var(--font-newsreader);
   --font-meta: var(--font-archivo);
   /*
    * Numbers are their own kind of content now.
@@ -43,6 +71,10 @@
    * given. Data sizes are fixed, because a table that resizes with the
    * viewport is a table whose columns stop lining up.
    */
+  /* The front page's own size. Nothing else on the site is allowed to be
+     this big, which is what makes the front page read as the front page. */
+  --text-lead: clamp(2.1rem, 3.9vw, 4.4rem);
+
   --text-nameplate: clamp(2.6rem, 7vw, 5rem);
   --text-title: clamp(2rem, 4.5vw, 3.4rem);
   --text-headline: clamp(1.5rem, 2.8vw, 2.2rem);
@@ -62,14 +94,25 @@
    * Spacing, on a rhythm. Fourteen different top margins were in use, from
    * mt-1 to mt-24, chosen per instance. These are the intervals: within a
    * component, between components, between sections, between movements.
+   *
+   * The between-components step is `band` and not `block`, which is what it
+   * was called for months. Tailwind generates a logical-size utility from
+   * every key on this scale, so `--spacing-block` quietly minted an
+   * `inline-block` that set `inline-size: 2.5rem` — and, being a real
+   * utility, it won the cascade over the display one of the same name. Every
+   * `inline-block` on the site was a 40px-wide box with its text hanging out
+   * of it. A name on this scale must not collide with a display keyword.
    */
   --space-tight: 0.5rem;
   --space-snug: 0.75rem;
   --space-near: 1rem;
   --space-step: 1.5rem;
-  --space-block: 2.5rem;
+  --space-band: 2.5rem;
   --space-section: 5rem;
   --space-movement: 7.5rem;
+
+  /* The gutter between columns of the sheet, and the width of the sheet. */
+  --gutter: clamp(1.5rem, 2.4vw, 2.125rem);
 
   /*
    * State, which the site had no way to say.
@@ -80,32 +123,32 @@
    * and the sport desks in particular now need to distinguish scheduled from
    * under way from finished.
    */
-  --live: #d9633f;
-  --scheduled: #8fa6b8;
-  --settled: #7a6a56;
-  --positive: #7fa96b;
-  --negative: #d1705c;
-  --caution: #d9a441;
+  --live: #9b3018;
+  --scheduled: #3b4f61;
+  --settled: #5c5544;
+  --positive: #335a39;
+  --caution: #6c4e15;
 
   /*
    * A series ramp for charts. Two lines could be told apart with --accent and
    * --muted; four cannot, and the meteogram, the sparklines and the price
    * histories are all heading that way.
    */
-  --series-1: #d9a441;
-  --series-2: #8fa6b8;
-  --series-3: #a97fb8;
-  --series-4: #7fa96b;
+  --series-1: #873322;
+  --series-2: #335a39;
+  --series-3: #3b4f61;
+  --series-4: #553a62;
 }
 
 @theme inline {
-  --color-void: var(--void);
+  --color-paper: var(--paper);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
-  --color-paper: var(--paper);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-faint: var(--faint);
   --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
   --color-accent: var(--accent);
   --color-accent-dim: var(--accent-dim);
   --color-accent-ink: var(--accent-ink);
@@ -120,6 +163,7 @@
   --color-series-3: var(--series-3);
   --color-series-4: var(--series-4);
   --font-data: var(--font-data);
+  --text-lead: var(--text-lead);
   --text-nameplate: var(--text-nameplate);
   --text-title: var(--text-title);
   --text-headline: var(--text-headline);
@@ -134,9 +178,10 @@
   --spacing-snug: var(--space-snug);
   --spacing-near: var(--space-near);
   --spacing-step: var(--space-step);
-  --spacing-block: var(--space-block);
+  --spacing-band: var(--space-band);
   --spacing-section: var(--space-section);
   --spacing-movement: var(--space-movement);
+  --spacing-gutter: var(--gutter);
   --font-display: var(--font-display);
   --font-serif: var(--font-serif);
   --font-body: var(--font-body);
@@ -148,45 +193,249 @@
 }
 
 html {
-  background: var(--void);
+  background: var(--paper);
 }
 
 body {
-  background: var(--void);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-body);
+  font-size: 1.1875rem;
+  line-height: 1.4;
 }
 
-/* Nameplates and short labels only — caps are punchy but tiring to read. */
+/*
+ * The stock itself.
+ *
+ * Fixed rather than absolute, so the grain belongs to the sheet the reader is
+ * looking through rather than scrolling past behind the words, and multiplied
+ * so it darkens the paper without touching the ink. It is decoration and
+ * catches no clicks.
+ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+}
+
+/*
+ * The nameplate and the section titles.
+ *
+ * Bodoni is a display face and behaves like one: it wants size, tight
+ * tracking and nothing smaller than a heading. Optical sizing does the rest.
+ */
 .display {
   font-family: var(--font-display);
-  text-transform: uppercase;
-  line-height: 0.92;
-  letter-spacing: -0.025em;
-  font-weight: 800;
+  font-weight: 700;
+  line-height: 0.86;
+  letter-spacing: -0.028em;
+  font-optical-sizing: auto;
 }
 
-/* Article headlines: sentence case, generous apertures, easy to scan. */
-.headline {
+/*
+ * The nameplate proper, which is the one thing on the site that is not
+ * competing for attention — it is the only masthead there is, and nobody
+ * arrives at a newspaper unsure of which newspaper it is.
+ *
+ * So it is set in Bodoni's book weight rather than its black. At this size
+ * the hairline serifs survive and the modern's thick-thin contrast does the
+ * work that a heavier weight was doing by force: the name reads as engraved
+ * rather than shouted, and the lead headline beneath it is allowed to be the
+ * loudest thing on the page, which is the correct order.
+ */
+.nameplate {
   font-family: var(--font-display);
-  line-height: 1.02;
-  letter-spacing: -0.021em;
-  font-weight: 700;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  letter-spacing: -0.012em;
+  line-height: 0.86;
+}
+
+/*
+ * Article headlines. Newsreader at 600 — a text face cut for headlines, set
+ * sentence case with the leading pulled in until the lines lock together.
+ */
+.headline {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.03;
+  letter-spacing: -0.018em;
 }
 
 .kicker {
   font-family: var(--font-meta);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-weight: 600;
+  letter-spacing: 0.17em;
+  font-weight: 700;
 }
 
-/* Photographs run untreated and unframed, as they would on the page. */
+/*
+ * The line under a headline that says who filed it and when. It is the same
+ * line everywhere, so it is a class rather than four utilities repeated.
+ */
+.source {
+  font-family: var(--font-meta);
+  font-size: var(--text-label);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.source b,
+.source strong {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* The standfirst under a headline: lighter than the body, and never black. */
+.standfirst {
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/*
+ * Hover, in print terms.
+ *
+ * Every headline on the site used to turn oxide on hover, which on paper
+ * reads as a second colour of ink rather than as a state. A rule drawn under
+ * the words says the same thing in the language of the page — and because it
+ * is a background image rather than a border it sweeps in rather than
+ * appearing, and never shifts the line it belongs to.
+ */
+.story h1,
+.story h2,
+.story h3,
+.story h4 {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+  padding-bottom: 3px;
+}
+
+.story:hover h1,
+.story:hover h2,
+.story:hover h3,
+.story:hover h4,
+.story:focus-visible h1,
+.story:focus-visible h2,
+.story:focus-visible h3,
+.story:focus-visible h4 {
+  background-size: 100% 1px;
+}
+
+/*
+ * The heavy divides. A band opens on a thick rule with a hairline under it —
+ * the oldest way of saying "a new part of the paper starts here".
+ */
+.double-rule {
+  border-top: 4px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  height: 6px;
+}
+
+.band-rule {
+  border-top: 4px solid var(--ink);
+}
+
+/*
+ * Column rules. The gutter is shared, so the rule sits down the middle of it.
+ *
+ * Declared with `@utility` rather than as plain classes because the page
+ * needs them at one breakpoint and not another — a rule between columns is
+ * wrong the moment those columns stack — and only a utility takes a variant.
+ */
+@utility rule-r {
+  border-right: 1px solid var(--rule-strong);
+  padding-right: var(--gutter);
+}
+
+@utility rule-l {
+  border-left: 1px solid var(--rule-strong);
+  padding-left: var(--gutter);
+}
+
+/*
+ * The sheet.
+ *
+ * One measure for the whole paper: the masthead, every page's content and the
+ * folio all sit inside it, so the rules at the top and bottom of the page line
+ * up with the columns between them. It is deliberately very wide — a
+ * broadsheet's whole argument is that six columns of headlines can be taken in
+ * at once — with the margins growing on the same curve as the viewport so the
+ * page never looks like a narrow column stranded on a big screen.
+ */
+@utility sheet {
+  width: 100%;
+  max-width: 2140px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 3.2vw, 64px);
+}
+
+/*
+ * A ruled grid: equal columns with a hairline down every gutter.
+ *
+ * The obvious way to do this is a rule on the left of every column but the
+ * first, and it is wrong twice. The first column ends up a whole gutter wider
+ * than its neighbours, because only the others carry the padding that keeps
+ * their text off the rule — which is visible the moment two columns each hold
+ * a picture, and was the first thing anyone noticed about the briefs band.
+ * And when the grid rewraps to fewer columns, the item that begins the second
+ * row still draws a rule, hanging off the left edge of the sheet.
+ *
+ * So: every column is padded identically, the grid is pulled out by half a
+ * gutter at each end so the outer columns still align with the sheet, and the
+ * rule is a shadow rather than a border. A shadow sits outside the box, so
+ * the rule belonging to any column that starts a row falls outside the grid
+ * and is clipped away — at every breakpoint, without the stylesheet having to
+ * know how many columns there are.
+ */
+@utility ruled {
+  overflow: hidden;
+  margin-inline: calc(var(--gutter) / -2);
+
+  & > * {
+    padding-inline: calc(var(--gutter) / 2);
+    box-shadow: -1px 0 0 var(--rule-strong);
+  }
+}
+
+/*
+ * Photographs.
+ *
+ * The pictures are real photographs off the publishers' own pages, so they
+ * are left as photographs — no dot screen, no duotone. What they do get is a
+ * touch of warmth and contrast, which is enough to stop a cold blue-grey
+ * screenshot from floating off the stock it is printed on.
+ */
 .media {
   position: relative;
   overflow: hidden;
-  /* Transparent, so a letterboxed image sits on the page rather than in a box. */
   background: transparent;
+}
+
+.media img {
+  filter: sepia(0.1) contrast(1.03) saturate(0.92);
+}
+
+/* A caption sits under its picture on a hairline, in the meta face. */
+figcaption {
+  font-family: var(--font-meta);
+  font-size: var(--text-label);
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--faint);
+  padding-top: var(--space-tight);
+  margin-top: var(--space-tight);
+  border-top: 1px solid var(--rule);
 }
 
 a {
@@ -194,12 +443,11 @@ a {
   text-decoration: none;
 }
 
-/* Syndicated article text. */
 .article-body {
   font-family: var(--font-body);
   font-size: 1.125rem;
   line-height: 1.75;
-  color: var(--paper);
+  color: var(--ink);
 }
 
 .article-body > * + * {
@@ -223,7 +471,7 @@ a {
 }
 
 .article-body a:hover {
-  color: var(--paper);
+  color: var(--ink);
 }
 
 .article-body ul,
@@ -249,7 +497,7 @@ a {
   font-family: var(--font-serif);
   font-size: 1.5rem;
   line-height: 1.35;
-  color: var(--paper);
+  color: var(--ink);
 }
 
 /*
@@ -300,7 +548,10 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-size: 0.688rem;
-  color: var(--accent);
+  /* Ink rather than oxide: at 11px on the tinted header band, oxide comes in
+     at 4.4:1, and a column heading is the one row of a table nobody can
+     afford to squint at. */
+  color: var(--ink);
   padding: 0.85rem 1.15rem;
   border-bottom: 1px solid var(--rule);
 }
@@ -308,7 +559,7 @@ a {
 .article-body td {
   padding: 0.8rem 1.15rem;
   border-bottom: 1px solid var(--rule);
-  color: var(--paper);
+  color: var(--ink);
   vertical-align: top;
 }
 
@@ -323,7 +574,8 @@ a {
 }
 
 .article-body tbody tr:nth-child(even) {
-  background: rgba(236, 224, 204, 0.025);
+  /* A tint of ink, not of light — the page is paper now. */
+  background: rgba(43, 39, 33, 0.035);
 }
 
 .article-body pre {
@@ -340,15 +592,20 @@ a {
   margin: 2.5rem 0;
 }
 
-/* Opening paragraph of a story page. */
+/*
+ * Opening paragraph of a story page. Bodoni set in ink rather than oxide: a
+ * drop cap is the first letter of the sentence at scale, not a decoration
+ * standing beside it, and a coloured one reads as the latter.
+ */
 .dropcap > p:first-of-type::first-letter,
 .dropcap::first-letter {
   font-family: var(--font-display);
-  color: var(--accent);
+  font-weight: 700;
+  color: var(--ink);
   float: left;
   font-size: 5.2rem;
-  line-height: 0.78;
-  margin: 0.35rem 0.75rem 0 0;
+  line-height: 0.76;
+  margin: 0.4rem 0.8rem 0 0;
 }
 
 ::selection {

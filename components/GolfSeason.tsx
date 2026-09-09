@@ -100,7 +100,7 @@ export function GolfThisWeek() {
 
           {lead.winner && (
             <p className="font-serif text-lg text-muted mt-5">
-              <span className="text-paper">{lead.winner}</span> won at{" "}
+              <span className="text-ink">{lead.winner}</span> won at{" "}
               {toPar(lead.leaderboard[0]?.score ?? "")}
               {lead.leaderboard[1] &&
                 `, ${marginOf(lead)} clear of ${lead.leaderboard[1].name}`}

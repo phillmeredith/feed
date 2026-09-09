@@ -9,7 +9,12 @@ import {
   wordCount,
 } from "./content";
 import { extractArticle } from "./extract";
-import { fetchOgImage, isTrackingPixel, looksLowResolution } from "./content";
+import {
+  fetchOgImage,
+  isPlayableMedia,
+  isTrackingPixel,
+  looksLowResolution,
+} from "./content";
 import { stripPromotionalNodes, vetArticleHtml } from "./vet";
 import { sources, type Source } from "./sources";
 import { archivedStory } from "./archive";
@@ -128,8 +133,9 @@ function extractImage(item: RawItem): string | null {
   const media = item.mediaContent?.$;
   const html = item.contentEncoded || item.content || "";
 
-  // In feed order of preference, skipping analytics beacons — several
-  // publishers put a counter pixel ahead of the real artwork.
+  // In feed order of preference, skipping analytics beacons and anything that
+  // is a file rather than a picture — several publishers put a counter pixel
+  // ahead of the real artwork, and a video post's enclosure is the video.
   const candidates = [
     media?.medium === "audio" ? null : media?.url,
     item.mediaThumbnail?.$?.url,
@@ -137,7 +143,12 @@ function extractImage(item: RawItem): string | null {
     ...[...html.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)].map((m) => m[1]),
   ];
 
-  return candidates.find((url): url is string => Boolean(url) && !isTrackingPixel(url!)) ?? null;
+  return (
+    candidates.find(
+      (url): url is string =>
+        Boolean(url) && !isTrackingPixel(url!) && !isPlayableMedia(url!)
+    ) ?? null
+  );
 }
 
 function publisherOf(item: RawItem, fallback: string) {
@@ -427,7 +438,8 @@ async function enrichArtwork(articles: Article[]) {
     const batch = needing.slice(i, i + ARTWORK_BATCH);
     const found = await Promise.all(batch.map((a) => fetchOgImage(a.url)));
     batch.forEach((article, j) => {
-      if (found[j]) article.image = found[j];
+      // An og:image tag can name a video poster route just as a feed can.
+      if (found[j] && !isPlayableMedia(found[j])) article.image = found[j];
     });
   }
 }

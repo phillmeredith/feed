@@ -3,11 +3,16 @@
 import { useEffect, useState } from "react";
 import { SITE_TIME_ZONE } from "@/lib/format";
 
+/*
+ * The time and nothing else.
+ *
+ * This used to carry the weekday and the date as well, which put the day on
+ * the page twice — once here and once in the masthead line below, three
+ * centimetres apart and in two different formats. The masthead says which
+ * day's paper this is; this says how long ago it was set.
+ */
 function stampFor(date: Date) {
   return date.toLocaleString("en-GB", {
-    weekday: "short",
-    day: "numeric",
-    month: "short",
     hour: "2-digit",
     minute: "2-digit",
     timeZone: SITE_TIME_ZONE,
@@ -33,5 +38,5 @@ export function Dateline({ since }: { since: string }) {
     return () => clearInterval(id);
   }, []);
 
-  return <span className="kicker text-micro text-faint">{stamp}</span>;
+  return <span className="kicker text-micro text-faint">Updated {stamp}</span>;
 }

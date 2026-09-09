@@ -40,7 +40,7 @@ export function WhereToGo({ places }: { places: PlaceSummary[] }) {
           </>
         ) : (
           <>
-            <span className="text-paper">{best.name}</span> is the driest of
+            <span className="text-ink">{best.name}</span> is the driest of
             them, {formatRain(best.rainMm)} against{" "}
             {formatRain(worst.rainMm)} at {worst.name}.
           </>

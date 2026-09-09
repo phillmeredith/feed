@@ -7,34 +7,75 @@ import { categoryBySlug } from "@/lib/categories";
 import { relativeDate } from "@/lib/format";
 
 export { relativeDate };
-import { Media } from "./Media";
+import { Media, Plate } from "./Media";
 import { RelativeTime } from "./RelativeTime";
 
+/*
+ * A dead image drops the picture, not the story.
+ *
+ * Every card below used to unmount itself when its artwork failed, which is
+ * defensible in a free-flowing grid of image-led cards and indefensible in
+ * this one: the page is ruled columns now, and a card that removes itself
+ * leaves a hole with a rule down both sides of it. Publishers move JPEGs
+ * constantly — one of them should not be able to blank a column of the paper.
+ * The headline is the content; the artwork is decoration, and every card here
+ * already has a layout for arriving without one.
+ */
+
+/**
+ * The line above a headline. Oxide by default — it is the only colour on the
+ * page and this is what it is for — or muted where a run of them would turn a
+ * column red.
+ */
+export function Kicker({
+  article,
+  mute = false,
+  className = "",
+}: {
+  article: Article;
+  mute?: boolean;
+  className?: string;
+}) {
+  const desk = categoryBySlug(article.category);
+  if (!desk) return null;
+
+  return (
+    <span
+      className={`kicker block text-micro ${
+        mute ? "text-faint" : "text-accent"
+      } ${className}`}
+    >
+      {desk.label}
+    </span>
+  );
+}
+
+/**
+ * The line below one: who filed it, and when. Set in the meta face with the
+ * outlet in the heavier weight, because the outlet is the part a reader is
+ * actually deciding on.
+ */
 export function Meta({
   article,
   showDesk = false,
+  className = "",
 }: {
   article: Article;
   showDesk?: boolean;
+  className?: string;
 }) {
   const desk = categoryBySlug(article.category);
   return (
-    <p className="kicker text-micro text-faint">
-      {showDesk && desk && (
-        <>
-          <span className="text-accent">{desk.short}</span>
-          <span className="mx-2 text-rule">/</span>
-        </>
-      )}
-      {article.source}
-      <span className="mx-2 text-rule">/</span>
-      <RelativeTime iso={article.publishedAt} />
+    <p className={`source ${className}`}>
+      {showDesk && desk && <>{desk.short} · </>}
+      <b>{article.source}</b> · <RelativeTime iso={article.publishedAt} />
     </p>
   );
 }
 
 /**
- * Full-width opener: oversized condensed headline beside the artwork.
+ * The lead. One story gets the top of the sheet and the largest type in the
+ * paper, and everything else on the page is measured against it.
  *
  * A dead image drops the picture, not the story. The smaller cards remove
  * themselves when their artwork fails, which is defensible in a grid of
@@ -45,76 +86,79 @@ export function Meta({
  * content; the artwork is decoration, and the no-image layout already exists.
  */
 export function LeadCard({ article }: { article: Article }) {
-  const desk = categoryBySlug(article.category);
   const [imageFailed, setImageFailed] = useState(false);
   const showImage = Boolean(article.image) && !imageFailed;
 
   return (
     <article className="group">
-      <Link href={`/story/${article.id}`} className="block">
-        <div
-          className={
-            showImage
-              ? "grid gap-6 lg:grid-cols-2 lg:items-center"
-              : "max-w-4xl"
-          }
-        >
-          <div className="order-2 lg:order-1">
-            <p className="kicker text-label text-accent">{desk?.label}</p>
-            <h2 className="headline mt-4 text-title group-hover:text-accent transition-colors">
-              {article.headline}
-            </h2>
-            {article.dek && (
-              <p className="mt-5 text-lede leading-relaxed text-muted max-w-xl">
-                {article.dek}
-              </p>
-            )}
-            <div className="mt-5">
-              <Meta article={article} />
-            </div>
-          </div>
+      <Link href={`/story/${article.id}`} className="story block">
+        <Kicker article={article} className="mb-2" />
+        <h2 className="headline text-lead">{article.headline}</h2>
 
-          {showImage && (
-            <div className="order-1 lg:order-2">
-              <Media
-                src={article.image}
-                ratio="wide"
-                fit="contain"
-                onFail={() => setImageFailed(true)}
-              />
-            </div>
-          )}
-        </div>
+        {showImage && (
+          <Plate
+            src={article.image}
+            credit={article.source}
+            ratio="hero"
+            className="mt-7"
+            onFail={() => setImageFailed(true)}
+          />
+        )}
+
+        {article.dek && (
+          /*
+           * The drop cap belongs to the standfirst rather than to a body of
+           * text, because on a front page the standfirst is the only prose
+           * there is — and a page needs one letter somewhere at scale to stop
+           * reading as a list.
+           */
+          <p className="standfirst mt-6 max-w-[36em] text-[1.35rem] leading-[1.46] [&::first-letter]:font-display [&::first-letter]:font-bold [&::first-letter]:float-left [&::first-letter]:text-[4.4rem] [&::first-letter]:leading-[0.76] [&::first-letter]:pr-3 [&::first-letter]:pt-2 [&::first-letter]:text-ink">
+            {article.dek}
+          </p>
+        )}
+
+        <Meta article={article} className="mt-4" />
       </Link>
     </article>
   );
 }
 
-export function FeatureCard({ article }: { article: Article }) {
+/**
+ * The workhorse: a picture, a headline under it, and as much reporting as the
+ * column has room for. Used anywhere a story is being shown rather than listed.
+ */
+export function FeatureCard({
+  article,
+  ratio = "landscape",
+  headline = "text-subhead",
+  showDek = true,
+}: {
+  article: Article;
+  ratio?: "hero" | "wide" | "landscape" | "standard";
+  /** The column decides how loud its own feature is. */
+  headline?: string;
+  showDek?: boolean;
+}) {
   const [broken, setBroken] = useState(false);
-  if (broken) return null;
 
   return (
     <article className="group">
-      <Link href={`/story/${article.id}`} className="block">
-        {article.image && (
-          <Media src={article.image} ratio="wide" onFail={() => setBroken(true)} />
+      <Link href={`/story/${article.id}`} className="story block">
+        {article.image && !broken && (
+          <Plate
+            src={article.image}
+            credit={article.source}
+            ratio={ratio}
+            className="mb-5"
+            onFail={() => setBroken(true)}
+          />
         )}
-        <h3
-          className={`headline text-subhead line-clamp-2 group-hover:text-accent transition-colors ${
-            article.image ? "mt-4" : ""
-          }`}
-        >
-          {article.headline}
-        </h3>
-        {article.dek && (
-          <p className="mt-3 text-small leading-relaxed text-muted line-clamp-3">
-            {article.dek}
-          </p>
+        <Kicker article={article} mute className="mb-2" />
+        <h3 className={`headline ${headline}`}>{article.headline}</h3>
+        {showDek && article.dek && (
+          <p className="standfirst mt-3 text-small line-clamp-3">{article.dek}</p>
         )}
-        <div className="mt-3">
-          <Meta article={article} />
-        </div>
+        <Meta article={article} className="mt-3" />
       </Link>
     </article>
   );
@@ -123,41 +167,35 @@ export function FeatureCard({ article }: { article: Article }) {
 /**
  * Section-front opener: artwork above, headline beneath.
  *
- * LeadCard splits itself in two and needs the width of the page to do it. In
- * a section front it sits in a column beside a rail, and splitting a column
- * gave a 54px headline six characters of line to work with. Stacking keeps
- * the scale and gives the words somewhere to go.
+ * LeadCard fills the width of the sheet. In a section front it sits in a
+ * column beside a rail, and the lead size would give the headline six
+ * characters of line to work with. Stacking keeps the scale and gives the
+ * words somewhere to go.
  */
 export function StackedLead({ article }: { article: Article }) {
-  const desk = categoryBySlug(article.category);
   const [broken, setBroken] = useState(false);
-  if (broken) return null;
 
   return (
     <article className="group">
-      <Link href={`/story/${article.id}`} className="block">
-        {article.image && (
-          <Media
+      <Link href={`/story/${article.id}`} className="story block">
+        {article.image && !broken && (
+          <Plate
             src={article.image}
-            ratio="wide"
+            credit={article.source}
+            ratio="hero"
             /* Lead artwork is often a title plate or a logo card; `cover`
                slices through those at this size. */
             fit="contain"
+            className="mb-6"
             onFail={() => setBroken(true)}
           />
         )}
-        <p className="kicker text-label text-accent mt-6">{desk?.label}</p>
-        <h2 className="headline mt-3 text-headline group-hover:text-accent transition-colors">
-          {article.headline}
-        </h2>
+        <Kicker article={article} className="mb-2" />
+        <h2 className="headline text-headline">{article.headline}</h2>
         {article.dek && (
-          <p className="mt-4 text-lede leading-relaxed text-muted max-w-2xl">
-            {article.dek}
-          </p>
+          <p className="standfirst mt-4 text-lede max-w-2xl">{article.dek}</p>
         )}
-        <div className="mt-4">
-          <Meta article={article} />
-        </div>
+        <Meta article={article} className="mt-4" />
       </Link>
     </article>
   );
@@ -173,22 +211,11 @@ export function ListCard({
 }) {
   return (
     <article className="group border-t border-rule pt-4">
-      <Link href={`/story/${article.id}`} className="block">
-        {/*
-          * `truncate` sets `white-space: nowrap`, which makes the headline's
-          * min-content width the width of the whole headline. In a one-column
-          * grid — every one of these grids on a phone — the track cannot go
-          * below that, so the desk pages were laying out 1200px wide inside a
-          * 390px screen. Wrapping to two lines costs nothing and reads better
-          * on a narrow column; the single-line rule returns at `sm`, where the
-          * grids switch to `minmax(0, 1fr)` tracks and can clip safely.
-          */}
-        <h3 className="font-body font-semibold text-lede leading-snug break-words line-clamp-2 sm:line-clamp-none sm:truncate group-hover:text-accent transition-colors">
+      <Link href={`/story/${article.id}`} className="story block">
+        <h3 className="headline text-[1.3rem] font-medium leading-[1.18] break-words line-clamp-3">
           {article.headline}
         </h3>
-        <div className="mt-2">
-          <Meta article={article} showDesk={showDesk} />
-        </div>
+        <Meta article={article} showDesk={showDesk} className="mt-2" />
       </Link>
     </article>
   );
@@ -197,12 +224,11 @@ export function ListCard({
 /** Thumbnail row, used in sidebars. */
 export function ThumbCard({ article }: { article: Article }) {
   const [broken, setBroken] = useState(false);
-  if (broken) return null;
 
   return (
     <article className="group border-t border-rule pt-4">
-      <Link href={`/story/${article.id}`} className="flex gap-4">
-        {article.image && (
+      <Link href={`/story/${article.id}`} className="story flex gap-4">
+        {article.image && !broken && (
           <Media
             src={article.image}
             ratio="square"
@@ -211,13 +237,128 @@ export function ThumbCard({ article }: { article: Article }) {
           />
         )}
         <div className="min-w-0">
-          <h3 className="font-body font-semibold text-small leading-snug line-clamp-2 group-hover:text-accent transition-colors">
+          <h3 className="headline text-lede font-medium leading-snug line-clamp-3">
             {article.headline}
           </h3>
-          <div className="mt-2">
-            <Meta article={article} />
-          </div>
+          <Meta article={article} className="mt-2" />
         </div>
+      </Link>
+    </article>
+  );
+}
+
+/**
+ * A numbered item in the wire rail. The figure is set in the display face and
+ * in oxide — the one place on the page where a number is allowed to be
+ * decorative, because it is a running order rather than a measurement.
+ */
+export function WireItem({ article, n }: { article: Article; n: number }) {
+  return (
+    <li className="group grid grid-cols-[22px_1fr] gap-3 border-b border-rule py-4 last:border-b-0">
+      <span className="font-display text-lg leading-tight text-accent">{n}</span>
+      <Link href={`/story/${article.id}`} className="story block">
+        <h4 className="headline text-[1.15rem] font-medium leading-[1.22]">
+          {article.headline}
+        </h4>
+        <Meta article={article} className="mt-2 text-micro" />
+      </Link>
+    </li>
+  );
+}
+
+/**
+ * A brief: the desk it came from, and the headline. The first in each column
+ * carries a picture, at the same fixed crop as every other column's, so the
+ * band reads as one row of pictures over one row of type rather than five
+ * separate stacks.
+ */
+export function BriefCard({
+  article,
+  lead = false,
+}: {
+  article: Article;
+  lead?: boolean;
+}) {
+  const [broken, setBroken] = useState(false);
+  const showImage = lead && Boolean(article.image) && !broken;
+
+  return (
+    <article className="group border-b border-rule py-3 last:border-b-0">
+      <Link href={`/story/${article.id}`} className="story block">
+        {showImage && (
+          /* Uncredited for the same reason the run's pictures are: a caption
+             that wraps in one column and not the next takes the whole band
+             out of register. */
+          <Media
+            src={article.image}
+            ratio="landscape"
+            className="mb-3"
+            onFail={() => setBroken(true)}
+          />
+        )}
+        <Kicker article={article} mute className="mb-1.5" />
+        <h4 className="headline text-[1.1rem] font-normal leading-[1.22]">
+          {article.headline}
+        </h4>
+      </Link>
+    </article>
+  );
+}
+
+/**
+ * An item in the dense run at the foot of the page. The first in a column is
+ * `lead` — it carries the column's one picture and the only standfirst in it,
+ * which is what stops six columns of headlines reading as a contents page.
+ */
+export function RunItem({
+  article,
+  lead = false,
+}: {
+  article: Article;
+  lead?: boolean;
+}) {
+  const [broken, setBroken] = useState(false);
+  const showImage = lead && Boolean(article.image) && !broken;
+
+  return (
+    <article className="group border-b border-rule py-5 first:pt-0 last:border-b-0">
+      <Link href={`/story/${article.id}`} className="story block">
+        {showImage && (
+          /*
+           * No credit under this one, unlike every other picture on the page.
+           * The outlet is already printed two lines below it, and a caption
+           * that wraps to two lines in one column and one in the next would
+           * knock six otherwise-aligned columns out of register — which is
+           * the whole reason the run's pictures are a fixed 3:2 at the top of
+           * every column rather than wherever the story wanted them.
+           *
+           * The picture goes, the story stays: a column whose lead vanished
+           * because a publisher moved a JPEG would leave a hole in the run
+           * that the section beside it has no way to fill.
+           */
+          <Media
+            src={article.image}
+            ratio="landscape"
+            className="mb-4"
+            onFail={() => setBroken(true)}
+          />
+        )}
+        <Kicker article={article} mute className="mb-2" />
+        <h4
+          className={
+            lead
+              ? "headline text-[1.7rem] font-semibold leading-[1.05]"
+              : "headline text-[1.25rem] font-medium leading-[1.16]"
+          }
+        >
+          {article.headline}
+        </h4>
+        {lead && article.dek && (
+          <p className="standfirst mt-2.5 text-small line-clamp-2">
+            {article.dek}
+          </p>
+        )}
+        <Meta article={article} className="mt-2.5" />
       </Link>
     </article>
   );

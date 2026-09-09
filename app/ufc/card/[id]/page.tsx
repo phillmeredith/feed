@@ -49,7 +49,7 @@ function Bout({ fight }: { fight: Fight }) {
       <span className="font-body text-small min-w-0">
         <span
           className={
-            fight.winner === red ? "font-semibold text-paper" : "text-muted"
+            fight.winner === red ? "font-semibold text-ink" : "text-muted"
           }
         >
           {red}
@@ -57,7 +57,7 @@ function Bout({ fight }: { fight: Fight }) {
         <span className="mx-2 text-faint text-fine">v</span>
         <span
           className={
-            fight.winner === blue ? "font-semibold text-paper" : "text-muted"
+            fight.winner === blue ? "font-semibold text-ink" : "text-muted"
           }
         >
           {blue}
@@ -104,9 +104,9 @@ export default async function UfcCardPage({
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
-      <main className="mx-auto max-w-[1400px] px-5 sm:px-10 py-10 flex-1 w-full">
+      <main className="sheet py-10 flex-1 w-full">
         <header className="pb-2">
           <p className="display text-subhead text-muted">
             <Link href="/sport" className="hover:text-accent transition-colors">
@@ -141,7 +141,7 @@ export default async function UfcCardPage({
             )}
 
             {under.length > 0 && (
-              <div className="mt-block">
+              <div className="mt-band">
                 <p className="panel-subtitle">Prelims</p>
                 <div className="mt-near">
                   <Card fights={under} />
@@ -179,7 +179,7 @@ export default async function UfcCardPage({
               )}
             </div>
 
-            <nav className="mt-block flex items-center justify-between kicker text-micro">
+            <nav className="mt-band flex items-center justify-between kicker text-micro">
               {older ? (
                 <Link
                   href={`/ufc/card/${older.id}`}
@@ -202,7 +202,7 @@ export default async function UfcCardPage({
               )}
             </nav>
 
-            <div className="mt-block">
+            <div className="mt-band">
               <LastUpdated at={store.updated} source="ESPN's public scoreboard" />
             </div>
           </aside>

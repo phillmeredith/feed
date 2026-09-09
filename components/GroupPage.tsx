@@ -59,11 +59,11 @@ export async function GroupPage({ group }: { group: Group }) {
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
-      <main className="mx-auto max-w-[1400px] px-5 sm:px-10 py-10 flex-1 w-full">
+      <main className="sheet py-10 flex-1 w-full">
         <header className="pb-2">
-          <h1 className="display text-nameplate text-accent">
+          <h1 className="display text-nameplate">
             {group.label}
           </h1>
           <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">

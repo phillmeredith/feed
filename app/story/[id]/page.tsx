@@ -35,11 +35,11 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
       <main className="flex-1 w-full">
         {/* Opener: headline set large against the artwork, as in a print spread. */}
-        <div className="mx-auto max-w-[1400px] px-5 sm:px-8 pt-12 pb-12">
+        <div className="sheet pt-12 pb-12">
           <div
             className={
               story.image
@@ -100,7 +100,7 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
                   dangerouslySetInnerHTML={{ __html: story.body }}
                 />
               ) : (
-                <p className="dropcap font-body text-lg leading-[1.75] text-paper">
+                <p className="dropcap font-body text-lg leading-[1.75] text-ink">
                   {story.excerpt || story.dek}
                 </p>
               )}

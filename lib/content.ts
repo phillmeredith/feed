@@ -12,6 +12,25 @@ export function isTrackingPixel(url: string) {
 }
 
 /**
+ * Files that are not photographs.
+ *
+ * `media:content` and `<enclosure>` carry whatever the publisher attached to
+ * the item, and for a post built around a video that is an MP4 — The Robot
+ * Report ships them routinely. Put in an `<img src>` it never loads, the card
+ * quietly drops its artwork, and a ruled band on the front page ends up with
+ * one column short of a picture while the other four have one.
+ *
+ * Matched on the extension with the query string allowed to follow it, since
+ * CDN parameters are appended to the path rather than replacing it.
+ */
+const PLAYABLE_MEDIA =
+  /\.(?:mp4|m4v|mov|webm|avi|mkv|mpe?g|mp3|m4a|aac|wav|ogg|oga|flac|pdf)(?:$|[?#])/i;
+
+export function isPlayableMedia(url: string) {
+  return PLAYABLE_MEDIA.test(url);
+}
+
+/**
  * Feeds hand out whatever thumbnail their CMS defaults to — the BBC's is 240px
  * wide, which looks awful at card size. Where a CDN encodes the width in the
  * path, ask for a bigger rendition of the same image.

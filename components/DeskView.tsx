@@ -138,9 +138,9 @@ export async function DeskView({
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
-      <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
+      <main className="sheet py-10 flex-1 w-full">
         <div className="pb-2">
           {/*
             * The three tiers, in the order they narrow: the section, the nav
@@ -162,7 +162,7 @@ export async function DeskView({
             <SubNav group={category.group} current={category.slug} />
           )}
 
-          <h1 className="display text-nameplate text-accent mt-10">
+          <h1 className="display text-nameplate mt-10">
             {category.label}
           </h1>
           <p className="font-serif text-lg sm:text-xl text-muted mt-4 max-w-2xl">
@@ -226,7 +226,7 @@ export async function DeskView({
           ))}
 
         {feed === "brief" && rest.length > 0 && (
-          <div className="mt-block">
+          <div className="mt-band">
             <SectionBlock
               title="Latest"
               dek="The reporting, in brief"

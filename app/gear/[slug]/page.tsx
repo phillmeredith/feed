@@ -62,9 +62,9 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
-      <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
+      <main className="sheet py-10 flex-1 w-full">
         <div className="border-b border-rule pb-8">
           <p className="kicker text-micro text-accent">
             <Link href="/gear" className="hover:underline">Gear directory</Link>

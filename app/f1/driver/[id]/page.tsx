@@ -62,9 +62,9 @@ export default async function DriverPage({ params }: PageProps<"/f1/driver/[id]"
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
-      <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
+      <main className="sheet py-10 flex-1 w-full">
         <div className="border-b border-rule pb-8">
           <p className="kicker text-micro text-accent">
             <Link href="/f1" className="hover:underline">The season</Link>

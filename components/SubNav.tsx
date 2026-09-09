@@ -32,7 +32,7 @@ export function SubNav({
   return (
     <nav
       aria-label={`${group.label} desks`}
-      className="mt-8 bg-surface/40 nav-scroll"
+      className="nav-scroll mt-8 border-b border-rule-strong"
     >
       <ul className="flex flex-nowrap items-stretch">
         <li>
@@ -63,7 +63,7 @@ export function SubNav({
                   className={labelClass(
                     active,
                     "display text-lg sm:text-xl",
-                    "text-paper"
+                    "text-ink"
                   )}
                 >
                   {desk.label}
@@ -89,9 +89,18 @@ export function SubNav({
  */
 function navItemClass(active: boolean) {
   return [
-    "group block px-4 py-3 transition-colors whitespace-nowrap",
+    /*
+     * Tabs on a rule, not tabs in a box.
+     *
+     * This was a filled panel with a darker fill marking the current desk,
+     * which on a dark page read as a control and on paper reads as a grey
+     * rectangle sitting on the newsprint. The row now sits on the section
+     * rule and the current desk breaks it — the oldest way of saying "you are
+     * here", and one that needs no fill and no colour to be legible.
+     */
+    "group block px-4 py-3 -mb-px border-b-2 transition-colors whitespace-nowrap",
     "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--accent)]",
-    active ? "bg-surface" : "hover:bg-surface",
+    active ? "border-b-[var(--ink)]" : "border-b-transparent",
   ].join(" ");
 }
 
@@ -100,6 +109,6 @@ function labelClass(active: boolean, type: string, rest = "text-muted") {
   return [
     type,
     "transition-colors",
-    active ? "text-accent" : `${rest} group-hover:text-paper`,
+    active ? "text-ink" : `${rest} group-hover:text-ink`,
   ].join(" ");
 }

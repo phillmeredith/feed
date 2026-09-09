@@ -57,9 +57,9 @@ export default async function GolfEventPage({
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
-      <main className="mx-auto max-w-[1400px] px-5 sm:px-10 py-10 flex-1 w-full">
+      <main className="sheet py-10 flex-1 w-full">
         <header className="pb-2">
           <p className="display text-subhead text-muted">
             <Link href="/sport" className="hover:text-accent transition-colors">
@@ -101,7 +101,7 @@ export default async function GolfEventPage({
                   ))}
                 </ol>
 
-                <div className="mt-block" data-density="reference">
+                <div className="mt-band" data-density="reference">
                   <DataTable
                     caption={`${event.name} leaderboard`}
                     rows={event.leaderboard}
@@ -154,7 +154,7 @@ export default async function GolfEventPage({
               )}
             </div>
 
-            <nav className="mt-block flex items-center justify-between kicker text-micro">
+            <nav className="mt-band flex items-center justify-between kicker text-micro">
               {older ? (
                 <Link
                   href={`/golf/event/${older.id}`}
@@ -177,7 +177,7 @@ export default async function GolfEventPage({
               )}
             </nav>
 
-            <div className="mt-block">
+            <div className="mt-band">
               <LastUpdated
                 at={store.updated}
                 source="ESPN's public scoreboard"

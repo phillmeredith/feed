@@ -199,7 +199,7 @@ export function Meteogram({
             y={PAD.top - 12}
             width={Math.max(1, x(band.to) - x(band.from))}
             height={PLOT.h + 12}
-            fill="var(--paper)"
+            fill="var(--ink)"
             opacity={0.035}
           />
         ))}
@@ -258,7 +258,7 @@ export function Meteogram({
           y1={PAD.top - 14}
           x2={x(0)}
           y2={PAD.top + PLOT.h}
-          stroke="var(--paper)"
+          stroke="var(--ink)"
           strokeOpacity={0.35}
           strokeWidth={1}
         />
@@ -334,7 +334,7 @@ export function Meteogram({
         </li>
         <li className="flex items-center gap-2">
           <svg width="22" height="8" aria-hidden="true">
-            <rect x="0" y="0" width="22" height="8" fill="var(--paper)" fillOpacity="0.06" />
+            <rect x="0" y="0" width="22" height="8" fill="var(--ink)" fillOpacity="0.06" />
           </svg>
           Night
         </li>

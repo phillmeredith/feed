@@ -35,9 +35,9 @@ export default function GearIndex() {
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
-      <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
+      <main className="sheet py-10 flex-1 w-full">
         <div className="pb-2">
           <p className="display text-subhead text-muted">
             <Link href="/photography" className="hover:text-accent transition-colors">

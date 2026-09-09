@@ -53,7 +53,7 @@ export function MobileNav({
   }, [open]);
 
   const bar =
-    "absolute left-0 h-[1.5px] w-6 bg-paper transition-all duration-200";
+    "absolute left-0 h-[1.5px] w-6 bg-ink transition-all duration-200";
 
   return (
     <div className="lg:hidden">
@@ -94,7 +94,7 @@ export function MobileNav({
           role="dialog"
           aria-modal="true"
           aria-label="Sections"
-          className="fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-void"
+          className="fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-paper"
         >
           <nav className="flex min-h-full flex-col px-5 pt-24 pb-16">
             <Link href="/" className="kicker border-b border-rule pb-4 text-micro">
@@ -112,7 +112,7 @@ export function MobileNav({
                   aria-current={here ? "page" : undefined}
                   className="display border-b border-rule py-4 text-headline"
                 >
-                  <span className={here ? "text-accent" : "text-paper"}>
+                  <span className={here ? "text-accent" : "text-ink"}>
                     {item.label}
                   </span>
                 </Link>

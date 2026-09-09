@@ -199,7 +199,7 @@ export function SportBoard() {
                   )}
                 </p>
                 <div className="mt-2">
-                  <p className="font-body text-small text-paper">
+                  <p className="font-body text-small text-ink">
                     {entry.last.result}
                   </p>
                 </div>

@@ -53,7 +53,7 @@ function Item({ video }: { video: Video }) {
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
             />
             <span className="absolute inset-0 flex items-center justify-center">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-void/70 border border-paper/25 text-paper text-lg pl-1 transition-colors group-hover:bg-void/85 group-hover:text-accent">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-ink/75 border border-paper/30 text-paper text-lg pl-1 transition-colors group-hover:bg-ink/90">
                 ▶
               </span>
             </span>

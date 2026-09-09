@@ -65,7 +65,7 @@ export function F1Weekend() {
           </p>
 
           {next.sessions && next.sessions.length > 0 ? (
-            <ol className="mt-block grid gap-x-8 gap-y-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+            <ol className="mt-band grid gap-x-8 gap-y-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
               {next.sessions.map((session) => {
                 const isRace = session.name === "Race";
                 return (
@@ -135,8 +135,8 @@ export function F1Weekend() {
             {raceDate(latest.date)} · {latest.locality}, {latest.country}
           </p>
 
-          <div className="mt-block">
-            <div className="grid gap-x-16 gap-y-block lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
+          <div className="mt-band">
+            <div className="grid gap-x-16 gap-y-band lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
           <div>
             {/* A column with a label reads as a column; without one it was a
                 list of names next to some videos, neither belonging to the
@@ -365,7 +365,7 @@ function RoundCard({
       <div className="flex items-baseline justify-between gap-3">
         <span
           className={`display text-title leading-none figures ${
-            done ? "text-paper" : "text-faint"
+            done ? "text-ink" : "text-faint"
           }`}
         >
           {race.round}

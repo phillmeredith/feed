@@ -53,7 +53,7 @@ export function DeskTabs({
                   className={`kicker text-label transition-colors ${
                     active
                       ? "text-accent font-semibold"
-                      : "text-muted group-hover:text-paper"
+                      : "text-muted group-hover:text-ink"
                   }`}
                 >
                   {tab.label}

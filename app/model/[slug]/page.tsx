@@ -74,9 +74,9 @@ export default async function ModelPage({ params }: PageProps<"/model/[slug]">) 
 
   return (
     <>
-      <Masthead compact />
+      <Masthead />
 
-      <main className="mx-auto max-w-[1400px] px-5 sm:px-8 py-10 flex-1 w-full">
+      <main className="sheet py-10 flex-1 w-full">
         <div className="border-b border-rule pb-8">
           <p className="kicker text-micro text-accent">
             <Link href="/ai" className="hover:underline">AI Models</Link>

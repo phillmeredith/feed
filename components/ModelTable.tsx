@@ -65,7 +65,7 @@ export function ModelTable({ models }: { models: ModelRelease[] }) {
               key: "model",
               header: "Model",
               cell: (model) => (
-                <span className="font-body font-semibold text-paper">
+                <span className="font-body font-semibold text-ink">
                   <ModelName model={model} />
                 </span>
               ),
