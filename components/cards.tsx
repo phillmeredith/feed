@@ -33,18 +33,28 @@ export function Meta({
   );
 }
 
-/** Full-width opener: oversized condensed headline beside the artwork. */
+/**
+ * Full-width opener: oversized condensed headline beside the artwork.
+ *
+ * A dead image drops the picture, not the story. The smaller cards remove
+ * themselves when their artwork fails, which is defensible in a grid of
+ * image-led cards — but this is the lead, and applying the same rule meant a
+ * publisher moving a JPEG deleted the front page's main story. It rendered on
+ * the server, hydrated, the image 404'd and the whole card unmounted, so the
+ * hero appeared for a moment on load and then vanished. The headline is the
+ * content; the artwork is decoration, and the no-image layout already exists.
+ */
 export function LeadCard({ article }: { article: Article }) {
   const desk = categoryBySlug(article.category);
-  const [broken, setBroken] = useState(false);
-  if (broken) return null;
+  const [imageFailed, setImageFailed] = useState(false);
+  const showImage = Boolean(article.image) && !imageFailed;
 
   return (
     <article className="group">
       <Link href={`/story/${article.id}`} className="block">
         <div
           className={
-            article.image
+            showImage
               ? "grid gap-6 lg:grid-cols-2 lg:items-center"
               : "max-w-4xl"
           }
@@ -64,13 +74,13 @@ export function LeadCard({ article }: { article: Article }) {
             </div>
           </div>
 
-          {article.image && (
+          {showImage && (
             <div className="order-1 lg:order-2">
               <Media
                 src={article.image}
                 ratio="wide"
                 fit="contain"
-                onFail={() => setBroken(true)}
+                onFail={() => setImageFailed(true)}
               />
             </div>
           )}
