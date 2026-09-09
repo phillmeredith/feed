@@ -145,7 +145,7 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
                   src={story.image}
                   credit={story.source}
                   ratio="hero"
-                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  sizes="(max-width: 1024px) 100vw, (max-width: 2140px) 60vw, 1280px"
                   priority
                   className="mb-10"
                   /* 16:9 across two thirds of a wide sheet is most of a

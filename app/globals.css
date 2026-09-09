@@ -436,12 +436,23 @@ body::before {
 .media {
   position: relative;
   overflow: hidden;
-  background: transparent;
+  /*
+   * A reserved plate rather than a hole.
+   *
+   * The ground was transparent so that a letterboxed picture sat on the page
+   * rather than in a box; nothing is letterboxed any more, every picture
+   * covers its frame. What transparency cost was the half second between the
+   * text painting and the picture arriving, during which the slot was bare
+   * paper and the page looked broken rather than loading. A tint of ink says
+   * a picture belongs here and is coming.
+   */
+  background: rgba(43, 39, 33, 0.07);
 }
 
 .media img {
   filter: sepia(0.1) contrast(1.03) saturate(0.92);
 }
+
 
 /* A caption sits under its picture on a hairline, in the meta face. */
 figcaption {

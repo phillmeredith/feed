@@ -23,6 +23,13 @@ const nextConfig: NextConfig = {
     deviceSizes: [360, 480, 640, 828, 1080, 1280, 1600, 2048],
     imageSizes: [80, 128, 200, 256, 320, 420],
     formats: ["image/avif", "image/webp"],
+    /*
+     * 62 rather than the default 75. At AVIF's compression that is the same
+     * photograph to look at and about a third fewer bytes; on newsprint, at
+     * the sizes these run, nothing survives of the difference. Next requires
+     * every quality the site asks for to be declared.
+     */
+    qualities: [62],
     // A publisher's artwork does not change under its URL; when it does, the
     // URL changes with it.
     minimumCacheTTL: 604800,

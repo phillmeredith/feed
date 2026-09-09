@@ -100,7 +100,7 @@ export function LeadCard({ article }: { article: Article }) {
             src={article.image}
             credit={article.source}
             ratio="hero"
-            sizes="(max-width: 1280px) 100vw, 55vw"
+            sizes="(max-width: 1280px) 100vw, (max-width: 2140px) 55vw, 1180px"
             priority
             className="mt-7"
             onFail={() => setImageFailed(true)}
@@ -201,7 +201,7 @@ export function StackedLead({ article }: { article: Article }) {
             src={article.image}
             credit={article.source}
             ratio="landscape"
-            sizes="(max-width: 1024px) 100vw, 55vw"
+            sizes="(max-width: 1024px) 100vw, (max-width: 2140px) 55vw, 1180px"
             priority
             className="mt-6"
             onFail={() => setBroken(true)}

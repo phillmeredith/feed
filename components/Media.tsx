@@ -76,6 +76,7 @@ export function Media({
         sizes={sizes}
         priority={priority}
         loading={priority ? undefined : "lazy"}
+        quality={62}
         // The optimiser refuses some publisher URLs — a redirect it will not
         // follow, an SVG, a file that is not an image at all. Falling back to
         // the URL itself keeps a working picture where one exists.
