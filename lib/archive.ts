@@ -67,6 +67,14 @@ export function archivedStory(id: string): Article | null {
   return (byId.get(id) as Article | undefined) ?? null;
 }
 
+/** The oldest story on record, so a page can say what the archive cannot cover. */
+export function recordingSince(): string | undefined {
+  return ITEMS.reduce<string | undefined>(
+    (oldest, item) => (!oldest || item.publishedAt < oldest ? item.publishedAt : oldest),
+    undefined
+  );
+}
+
 /** Everything the archive holds, for entity pages that must not fetch. */
 export function allArchived(): Article[] {
   return ITEMS as Article[];

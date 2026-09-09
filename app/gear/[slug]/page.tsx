@@ -14,7 +14,7 @@ import {
   coverageFor,
   relatedGear,
 } from "@/lib/gearspec";
-import { allArchived } from "@/lib/archive";
+import { allArchived, recordingSince } from "@/lib/archive";
 import { history } from "@/lib/series";
 import { videosFor } from "@/lib/video";
 
@@ -107,7 +107,11 @@ export default async function GearPage({ params }: PageProps<"/gear/[slug]">) {
           since={priceHistory[0]?.at}
         />
 
-        <Timeline articles={coverage} announcedAt={item.announcedAt} />
+        <Timeline
+          articles={coverage}
+          announcedAt={item.announcedAt}
+          recordingSince={recordingSince()}
+        />
 
         {videos.length > 0 && (
           <div className="mt-16">

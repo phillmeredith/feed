@@ -73,8 +73,7 @@ export const sources: Source[] = [
   { name: "Ars Technica Science", url: "https://feeds.arstechnica.com/arstechnica/science", category: "science", weight: 9, cap: 8 },
   { name: "ScienceAlert", url: "https://www.sciencealert.com/feed", category: "science", weight: 7, cap: 8 },
   { name: "New Atlas", url: "https://newatlas.com/science/index.rss", category: "science", weight: 7, cap: 8, generalist: true },
-  { name: "Phys.org", url: "https://phys.org/rss-feed/breaking/", category: "science", weight: 6, cap: 6, generalist: true, thumbnailsOnly: true },
-  { name: "Medical Xpress", url: "https://medicalxpress.com/rss-feed/", category: "science", weight: 5, cap: 6, generalist: true, thumbnailsOnly: true },
+  { name: "Phys.org", url: "https://phys.org/rss-feed/breaking/", category: "science", weight: 6, cap: 2, thumbnailsOnly: true },
 
   // Robotics — humanoids, autonomy, industrial systems.
   { name: "IEEE Spectrum", url: "https://spectrum.ieee.org/feeds/topic/robotics.rss", category: "robotics", weight: 10, cap: 8 },

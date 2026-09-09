@@ -102,9 +102,32 @@ function score(v: Video, now: number) {
   return Math.log10(Math.max(v.views, 10)) / Math.log10(days + 2);
 }
 
+/*
+ * What the beat is actually about.
+ *
+ * A channel is trusted for a subject, not confined to one: Dustin Abbott
+ * reviews lenses and also reviews portable power stations, and a desk panel
+ * taking his newest upload put "Bluetti Elite 100 Mini Review" on the
+ * photography craft desk. On a product page the videos are matched against the
+ * product, so this never arose; a desk has no product to match against, which
+ * left the panel a channel feed wearing the desk's label.
+ *
+ * A title now has to mention the subject to appear. Where nothing does, the
+ * panel renders nothing, which is the correct amount of off-topic video.
+ */
+const ON_BEAT: Record<Video["beat"], RegExp> = {
+  photography:
+    /\b(camera|lens|lenses|mm|f\/?\d|aperture|bokeh|autofocus|sensor|mirrorless|photo\w*|portrait|prime|zoom|tripod|flash|shutter|iso|raw|shoot\w*|full[- ]frame|aps-?c|medium format|sony|canon|nikon|fujifilm|fuji|sigma|tamron|leica|panasonic|lumix|om system|olympus|viltrox|samyang|laowa|tokina|zeiss)\b/i,
+  hardware:
+    /\b(phone|laptop|tablet|chip|silicon|soc|gpu|cpu|ssd|display|monitor|iphone|ipad|macbook|imac|galaxy|pixel|android|watch|earbuds|headphones|router|handheld|console|apple|samsung|google|qualcomm|intel|amd|nvidia)\b/i,
+};
+
 /** The newest coverage on a beat, for a desk that has no single product. */
 export function recentVideos(beat: Video["beat"], limit = 6): Video[] {
-  return ITEMS.filter((v) => v.beat === beat && !NOT_COVERAGE.test(v.title))
+  const onBeat = ON_BEAT[beat];
+  return ITEMS.filter(
+    (v) => v.beat === beat && !NOT_COVERAGE.test(v.title) && onBeat.test(v.title)
+  )
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
     .slice(0, limit);
 }

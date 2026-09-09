@@ -38,9 +38,28 @@ const RUMOUR_SOURCES = /sony ?alpha ?rumors|fuji ?rumors/i;
 const CONFIRMED = /\b(leaked|confirmed|official(ly)?|specs? (?:leaked|revealed)|images? leaked|full specs?)\b/i;
 const SPECULATIVE = /\b(could|might|maybe|rumou?red to|we hear|wish ?list|what (?:if|we want)|hope|speculat\w*|possibly)\b/i;
 
-/** Posts that are not about a forthcoming product at all. */
+/*
+ * Posts that are not about a forthcoming product at all.
+ *
+ * Written as separate alternatives rather than one \b(...)\b group: a word
+ * boundary cannot sit before "$" or after end-of-string, so wrapping the whole
+ * list in \b silently disabled every price alternative and the "coming soon"
+ * one. A sale was reaching the board because the rule against sales could not
+ * match anything.
+ */
 const NOT_A_RUMOUR =
-  /\b(deal|deals|sale|discount|save \$|% off|refurbished|in stock|back in stock|giveaway|contest|poll|survey|stay tuned|coming soon\b.{0,20}$)\b/i;
+  /\b(deal|deals|sale|discount|refurbished|in stock|back in stock|giveaway|contest|poll|survey|stay tuned|price drop)\b|\b\d+%\s*off\b|[$£]\d[\d,.]*\s*off\b|\bsave\s*[$£]\d|\bcoming soon\b.{0,20}$/i;
+
+/*
+ * A rumour has to name something checkable.
+ *
+ * The brand test alone let through "I'm back from my treatment—and don't
+ * worry, the Sony telephoto lens is coming soon!", which is a note about the
+ * author rather than a claim about a product, and can never be resolved
+ * against the directory. A model designation — X-T6, DP5, a7R VI, 400mm —
+ * always carries a digit, and prose about a forthcoming lens does not.
+ */
+const NAMES_A_MODEL = /\b[a-z]*\d[a-z0-9.-]*\b/i;
 
 /*
  * The rumour sites also file the announcement itself. Present-tense launch
@@ -110,6 +129,7 @@ export function rumoursFrom(articles: Article[]): Rumour[] {
     if (NOT_A_RUMOUR.test(article.headline)) continue;
     if (IS_THE_ANNOUNCEMENT.test(article.headline)) continue;
     if (!PRODUCT_SHAPE.test(article.headline)) continue;
+    if (!NAMES_A_MODEL.test(article.headline)) continue;
 
     const key = article.headline.toLowerCase().replace(/\s+/g, " ");
     if (seen.has(key)) continue;

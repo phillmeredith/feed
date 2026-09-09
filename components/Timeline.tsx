@@ -12,17 +12,31 @@ import type { Article } from "@/lib/types";
 export function Timeline({
   articles,
   announcedAt,
+  recordingSince,
 }: {
   articles: Article[];
   announcedAt?: string;
+  /** When this site started keeping stories, so an empty timeline can say why. */
+  recordingSince?: string;
 }) {
   if (articles.length === 0) {
+    /*
+     * Most of the catalogue predates the archive — the directory was imported
+     * and reaches back years, the archive began weeks ago. Saying "the
+     * reporting arrives when it does" promised coverage that is never coming
+     * for those products, on 266 of 270 pages. Where the product is older than
+     * the record, say that instead; the promise is only honest for the rest.
+     */
+    const predatesRecord =
+      announcedAt && recordingSince && announcedAt < recordingSince;
+
     return (
       <section className="mt-12 border-t border-rule pt-6">
         <h2 className="kicker text-label text-accent">Coverage</h2>
         <p className="font-serif italic text-lg text-muted mt-3 max-w-2xl">
-          Nothing filed here about this one yet. The directory records it;
-          the reporting arrives when it does.
+          {predatesRecord
+            ? `Announced before this site began keeping stories in ${new Date(recordingSince).toLocaleDateString("en-GB", { month: "long", year: "numeric" })}. The catalogue entry stands on its own; there is no archive to draw on.`
+            : "Nothing filed here about this one yet. The directory records it; the reporting arrives when it does."}
         </p>
       </section>
     );

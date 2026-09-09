@@ -9,8 +9,6 @@ import { getFeed } from "@/lib/feed";
 import { withArchive } from "@/lib/archive";
 import { gearDirectory } from "@/lib/gear";
 import { getAllModelReleases } from "@/lib/models";
-import { getPatents } from "@/lib/patents";
-import { PatentsPanel } from "@/components/PatentsPanel";
 import { ForecastPanel } from "@/components/ForecastPanel";
 import { TodayVerdict } from "@/components/TodayVerdict";
 import { WhereToGo } from "@/components/WhereToGo";
@@ -60,7 +58,7 @@ export async function DeskView({
   feed = "full",
   /**
    * Whether the desk's standing panels — the gear directory, the model
-   * table, the patents — render underneath the feed. They have their own
+   * table — render underneath the feed. They have their own
    * tabs now; stacking them under the articles as well is the same
    * duplication the sport desks had.
    */
@@ -90,7 +88,6 @@ export async function DeskView({
   // Desk-specific reference material, below the reporting.
   const gear = category.slug === "cameras" ? gearDirectory(articles) : [];
   const models = category.slug === "ai" ? await getAllModelReleases(articles) : [];
-  const patents = await getPatents(category.slug);
   const forecast =
     panels && category.slug === "weather" ? await getDetailedWeather() : null;
   const places =
@@ -316,7 +313,6 @@ export async function DeskView({
 
         {panels && gear.length > 0 && <GearDirectory items={gear} />}
         {panels && models.length > 0 && <ModelTable models={models} />}
-        {panels && patents.length > 0 && <PatentsPanel filings={patents} />}
       </main>
 
       <Footer />

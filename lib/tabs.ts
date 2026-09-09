@@ -75,20 +75,15 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
     { slug: "", label: "Articles" },
     { slug: "directory", label: "Directory", href: "/gear" },
     { slug: "rumours", label: "Rumours", href: "/rumours" },
-    { slug: "patents", label: "Patents" },
   ],
   lenses: [
     { slug: "", label: "Articles" },
     { slug: "directory", label: "Directory", href: "/gear" },
   ],
-  hardware: [
-    { slug: "", label: "Articles" },
-    { slug: "patents", label: "Patents" },
-  ],
-  robotics: [
-    { slug: "", label: "Articles" },
-    { slug: "patents", label: "Patents" },
-  ],
+  /*
+   * Hardware and Robotics are feeds again. Their only tab was Patents, and a
+   * tab bar with one destination does not navigate.
+   */
   /*
    * Weather is the exception to Articles-first. Nobody opens a weather page
    * to read about weather; they open it to find out what it is doing. The
