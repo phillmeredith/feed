@@ -63,8 +63,24 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
           </Link>
         )}
 
-        <div className="band-rule mt-6 max-w-[1600px] pt-8">
-          <div className="grid items-start gap-x-gutter gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.32fr)]">
+        {/*
+          * The rule spans the sheet, like every other rule on the site. It was
+          * capped with the content for a while, which left it stopping short
+          * of the masthead's rule above it with a hand's width of paper to the
+          * right of it and nothing to explain why.
+          *
+          * The article takes about two thirds of the sheet and runs flush to
+          * its right edge; the headline and the credit hold the margin down
+          * the left, which is what the margin of a broadsheet is for.
+          *
+          * The picture fills that column and the prose does not — it stops at
+          * a measure a person can actually read, left-aligned, so it begins on
+          * the same line as the picture above it. A picture running wider than
+          * the text beneath it is ordinary on a page; a picture starting in a
+          * different place from it is not.
+          */}
+        <div className="band-rule mt-6 pt-8">
+          <div className="grid items-start gap-x-gutter gap-y-9 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.9fr)]">
             {/*
               * The left column: the headline, and beneath it the standing
               * credit — which is where a byline goes on a printed page, and
@@ -78,7 +94,7 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
                   story two centimetres above it; without artwork it is the
                   only thing holding the head together. */}
               {!story.image && story.dek && (
-                <p className="standfirst mt-6 text-[1.3rem] leading-[1.5]">
+                <p className="standfirst mt-6 max-w-[34em] text-[1.3rem] leading-[1.5]">
                   {story.dek}
                 </p>
               )}
@@ -103,6 +119,9 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
                   ratio="hero"
                   fit="contain"
                   className="mb-10"
+                  /* 16:9 across two thirds of a wide sheet is most of a
+                     screen of photograph before a word has been read. */
+                  frame="max-h-[min(58vh,540px)]"
                 />
               )}
 

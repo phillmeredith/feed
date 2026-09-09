@@ -134,10 +134,17 @@ export async function Masthead({
           * separates the marker from the rule it is measured against.
           */}
         <div className="flex items-center gap-6 py-4">
+          {/*
+            * The nameplate is not a heading. It was an `h1`, which on every
+            * interior page put a second `h1` above the page's own title and
+            * told a screen reader the most important thing on a story page was
+            * the name of the site it is on. It is a link home that happens to
+            * be set in Bodoni.
+            */}
           <Link href="/" className="story shrink-0">
-            <h1 className="nameplate text-[clamp(1.5rem,2.1vw,2.1rem)] whitespace-nowrap">
+            <p className="nameplate text-[clamp(1.5rem,2.1vw,2.1rem)] whitespace-nowrap">
               The Dispatch
-            </h1>
+            </p>
           </Link>
 
           <nav

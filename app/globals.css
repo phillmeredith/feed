@@ -312,7 +312,10 @@ body::before {
 .story h1,
 .story h2,
 .story h3,
-.story h4 {
+.story h4,
+/* The nameplate is a link home rather than a heading, but it is still a
+   thing you click, so it underlines like one. */
+.story .nameplate {
   background-image: linear-gradient(currentColor, currentColor);
   background-size: 0% 1px;
   background-position: 0 100%;
@@ -325,10 +328,12 @@ body::before {
 .story:hover h2,
 .story:hover h3,
 .story:hover h4,
+.story:hover .nameplate,
 .story:focus-visible h1,
 .story:focus-visible h2,
 .story:focus-visible h3,
-.story:focus-visible h4 {
+.story:focus-visible h4,
+.story:focus-visible .nameplate {
   background-size: 100% 1px;
 }
 
