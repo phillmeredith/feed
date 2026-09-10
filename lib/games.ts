@@ -37,6 +37,15 @@ export interface Game {
   /** Rough owners, from SteamSpy's band. The number to rank *against*. */
   owners: number;
   short: string;
+  /**
+   * A gameplay screenshot.
+   *
+   * Not Steam's header image, which is what this used and which is a 460×215
+   * marketing capsule with the title lettered across it — cropped to a card
+   * it cut the words in half and showed no game. A screenshot is the game.
+   */
+  shot: string;
+  /** The capsule, kept only for the handful of games with no screenshots. */
   image: string;
   developer: string;
 }

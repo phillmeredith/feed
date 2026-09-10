@@ -64,8 +64,10 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
     { slug: "", label: "Articles" },
     /* The directory is the reason this desk exists; the reporting is the
        thing beside it. Both are named plainly. */
+    /* One directory, not two. A separate "calm games" page was the same
+       list with a filter already applied, and the filter is on the directory
+       — so it was a second door into one room. */
     { slug: "directory", label: "The directory", href: "/games" },
-    { slug: "calm", label: "Calm games", href: "/games/calm" },
   ],
   science: [
     { slug: "", label: "Articles" },

@@ -1,4 +1,36 @@
+import Link from "next/link";
 import { SORTS, type Query } from "@/lib/gamesearch";
+
+/*
+ * The three questions this directory exists to answer, as links.
+ *
+ * There was a separate "calm games" tab doing the first of these, which was
+ * the same list with a filter already applied — a second door into one room.
+ * The filters below can express all of it; these are just the shortcuts worth
+ * putting a name to.
+ */
+const PRESETS: { label: string; href: string; note: string }[] = [
+  {
+    label: "Calm games",
+    href: "/games?calm=1&sort=calm",
+    note: "nothing chasing you",
+  },
+  {
+    label: "Buried gems",
+    href: "/games?calm=1&sort=gems",
+    note: "loved, and hardly played",
+  },
+  {
+    label: "Best liked",
+    href: "/games?calm=1&sort=regard",
+    note: "the safest bets",
+  },
+  {
+    label: "Newest calm",
+    href: "/games?calm=1&sort=newest",
+    note: "quietly, lately",
+  },
+];
 
 /**
  * The filter bar: one plain form, submitted by GET.
@@ -25,7 +57,17 @@ export function GameFilters({
   const label = "kicker block text-micro text-faint mb-1.5";
 
   return (
-    <form method="GET" action="/games" className="band-rule mt-8 pt-6">
+    <>
+    <div className="band-rule mt-8 flex flex-wrap gap-x-gutter gap-y-4 pt-6">
+      {PRESETS.map((preset) => (
+        <Link key={preset.href} href={preset.href} className="story group">
+          <h3 className="headline text-[1.15rem] font-medium">{preset.label}</h3>
+          <p className="source mt-1 text-faint">{preset.note}</p>
+        </Link>
+      ))}
+    </div>
+
+    <form method="GET" action="/games" className="mt-8 border-t border-rule-strong pt-6">
       <div className="grid gap-x-gutter gap-y-5 sm:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <label className={label} htmlFor="q">
@@ -108,5 +150,6 @@ export function GameFilters({
         </div>
       </div>
     </form>
+    </>
   );
 }

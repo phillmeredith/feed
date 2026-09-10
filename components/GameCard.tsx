@@ -15,9 +15,9 @@ export function GameCard({ game }: { game: Game }) {
   return (
     <article className="group border-b border-rule py-5">
       <Link href={`/games/${game.slug}`} className="story block">
-        {game.image && (
+        {(game.shot || game.image) && (
           <Media
-            src={game.image}
+            src={game.shot || game.image}
             ratio="landscape"
             sizes="(max-width: 640px) 100vw, (max-width: 1280px) 33vw, 22vw"
             className="mb-4"

@@ -59,7 +59,7 @@ async function fromWikidata() {
       ?game wdt:P31 wd:Q7889 ; wdt:P1733 ?steam ; wdt:P577 ?date ;
             wdt:P400 ?platform ; rdfs:label ?name .
       FILTER(LANG(?name) = "en")
-      FILTER(?date >= "2020-01-01T00:00:00Z"^^xsd:dateTime)
+      FILTER(?date >= "2013-01-01T00:00:00Z"^^xsd:dateTime)
       VALUES ?platform { ${values} }
       BIND(STRAFTER(STR(?platform), "entity/") AS ?plat)
     } GROUP BY ?steam ?name`;
@@ -160,6 +160,9 @@ async function enrich(seed: {
     reviews,
     owners: ownersOf(String(spy.owners ?? "")),
     short: ((d.short_description as string) ?? "").slice(0, 400),
+    shot:
+      ((d.screenshots ?? []) as { path_thumbnail: string }[])[0]?.path_thumbnail ??
+      "",
     image: (d.header_image as string) ?? "",
     developer: (((d.developers ?? []) as string[])[0] ?? "").slice(0, 60),
   };
@@ -178,7 +181,7 @@ const known = new Map(existing.map((g) => [g.id, g]));
 
 console.log("Asking Wikidata which console games have a Steam id…");
 const seeds = await fromWikidata();
-console.log(`  ${seeds.length} console releases since 2020`);
+console.log(`  ${seeds.length} console releases since 2013`);
 
 /*
  * Released games, newest first.
@@ -191,23 +194,51 @@ console.log(`  ${seeds.length} console releases since 2020`);
  * something to play tonight wants the ones that exist.
  */
 /*
- * Oldest first, which is the opposite of what a news site's instinct says and
- * is right twice over.
+ * Spread across the years rather than worked through in order.
  *
- * A tag is a thing players vote on, so a game needs an audience before it has
- * any. Newest-first spent whole runs on titles announced for later this year
- * and banked forty blank records — not "this game is tense" but "nobody has
- * played it". And the games this directory exists to surface are not new
- * ones: Unravel is 2016, A Short Hike 2019, Spiritfarer 2020. Filling from
- * 2020 forwards reaches them on the first run rather than the fortieth.
+ * Oldest-first was right about one thing and wrong about the rest. Right that
+ * a tag needs players before it exists, so the newest releases come back
+ * blank — not "this game is tense" but "nobody has played it". Wrong that the
+ * fix is to start in 2013 and walk forwards: after a full run the directory
+ * held eight hundred games and every one of them was from 2013 to 2015, so it
+ * read as an archive rather than a directory and had none of the games
+ * anybody would name — no Minecraft, no Tony Hawk, no Stardew.
  *
- * Recent releases arrive here on their own once they have players, which is
- * also the point at which anything can be said about them.
+ * So the queue is dealt round-robin through the years. Every run takes a
+ * slice of each, and the directory is representative of the whole period at
+ * every stage of filling rather than only at the end of it.
  */
 const settled = new Date(Date.now() - 120 * 86_400_000).toISOString().slice(0, 10);
-const pending = seeds
-  .filter((s) => !known.has(s.id) && s.released <= settled)
-  .sort((a, b) => a.released.localeCompare(b.released));
+const byYear = new Map<string, typeof seeds>();
+for (const s of seeds) {
+  if (known.has(s.id) || s.released > settled) continue;
+  const year = s.released.slice(0, 4);
+  byYear.set(year, [...(byYear.get(year) ?? []), s]);
+}
+/*
+ * Within a year, the widest releases first.
+ *
+ * Alphabetical was arbitrary and it showed: two thousand games in, the
+ * directory had ABZU and no Stardew Valley, because S is late in the
+ * alphabet. The number of consoles a game shipped on is the one signal
+ * available before anything is fetched, and it is a decent proxy for whether
+ * anybody has heard of it — a game on five platforms had a publisher behind
+ * it, a game on one usually did not. Both belong here; the recognisable ones
+ * should not arrive ninth.
+ */
+for (const list of byYear.values()) {
+  list.sort(
+    (a, b) => b.platforms.length - a.platforms.length || a.name.localeCompare(b.name)
+  );
+}
+const years = [...byYear.keys()].sort();
+const pending: typeof seeds = [];
+for (let i = 0; pending.length < 100_000; i++) {
+  const round = years.map((y) => byYear.get(y)![i]).filter(Boolean);
+  if (round.length === 0) break;
+  pending.push(...round);
+}
+
 const take = ALL ? pending : pending.slice(0, BATCH);
 console.log(`  ${known.size} already known, ${pending.length} to go — fetching ${take.length}`);
 
@@ -231,7 +262,8 @@ for (const [i, seed] of take.entries()) {
       // the same soundtrack entry again.
       known.set(seed.id, { ...seed, id: seed.id, slug: "", name: seed.name,
         genres: [], tags: [], descriptors: [], calm: 0, regard: null,
-        reviews: 0, owners: 0, short: "", image: "", developer: "" } as Game);
+        reviews: 0, owners: 0, short: "", shot: "", image: "",
+        developer: "" } as Game);
     }
   } catch (error) {
     console.log(`  ! ${seed.name}: ${(error as Error).message}`);

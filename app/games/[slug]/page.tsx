@@ -6,7 +6,8 @@ import { Footer } from "@/components/Footer";
 import { EntityHead } from "@/components/PageHead";
 import { BandHead } from "@/components/Band";
 import { GameCard } from "@/components/GameCard";
-import { Plate } from "@/components/Media";
+import { Media, Plate } from "@/components/Media";
+import { steamDetail, steamReviews } from "@/lib/steam";
 import {
   allGames,
   gameBySlug,
@@ -52,6 +53,13 @@ export default async function GamePage({ params }: PageProps<"/games/[slug]">) {
   const game = gameBySlug(slug);
   if (!game) notFound();
 
+  /* Both are cached for a day; a game's copy rarely changes and its reviews
+     do, which is the right way round for the one that is fetched live. */
+  const [detail, reviews] = await Promise.all([
+    steamDetail(game.id),
+    steamReviews(game.id),
+  ]);
+
   const alike = similarTo(game, allGames());
   const gem = obscurity(game);
 
@@ -81,36 +89,96 @@ export default async function GamePage({ params }: PageProps<"/games/[slug]">) {
 
         <div className="mt-12 grid gap-x-gutter gap-y-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
           <div>
-            {game.image && (
+            {(game.shot || game.image) && (
               <Plate
-                src={game.image}
+                src={game.shot || game.image}
                 credit="Steam"
-                ratio="landscape"
+                ratio="hero"
                 sizes="(max-width: 1024px) 100vw, 55vw"
                 priority
               />
             )}
 
-            <div className="mt-8">
-              <h2 className="panel-title">What players call it</h2>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {game.tags.map((tag) => (
-                  <Link
-                    key={tag}
-                    href={`/games?tag=${encodeURIComponent(tag)}`}
-                    className="kicker border border-rule-strong px-3 py-1.5 text-micro text-muted transition-colors hover:border-ink hover:text-ink"
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            {detail?.about && (
+              <div
+                className="article-body mt-8 text-[1.05rem] leading-[1.6]"
+                dangerouslySetInnerHTML={{ __html: detail.about }}
+              />
+            )}
 
-            {game.descriptors.length > 0 && (
-              <div className="mt-8">
-                <h2 className="panel-title">Content the rating boards flagged</h2>
-                <p className="standfirst mt-3 text-small">
-                  {game.descriptors.join(" · ")}
+            {detail && detail.shots.length > 1 && (
+              <div className="mt-10">
+                <h2 className="panel-title">What it looks like</h2>
+                {/*
+                  * Screenshots, not the marketing capsule. The capsule is a
+                  * 460×215 image with the title lettered across it; cropped to
+                  * a card it cut the words in half and showed no game at all.
+                  */}
+                <div className="ruled mt-5 grid grid-cols-2 lg:grid-cols-3">
+                  {detail.shots.slice(1, 7).map((shot) => (
+                    <a
+                      key={shot.full}
+                      href={shot.full}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group block py-2"
+                    >
+                      <Media
+                        src={shot.thumb}
+                        ratio="hero"
+                        sizes="(max-width: 640px) 50vw, 20vw"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {detail?.trailer?.mp4 && (
+              <div className="mt-10">
+                <h2 className="panel-title">The trailer</h2>
+                <video
+                  className="media mt-5 w-full"
+                  controls
+                  preload="none"
+                  poster={detail.trailer.thumb}
+                  src={detail.trailer.mp4}
+                />
+              </div>
+            )}
+
+            {reviews && reviews.sample.length > 0 && (
+              <div className="mt-12">
+                <BandHead
+                  weight="major"
+                  title="What players said"
+                  note={`${reviews.summary} · ${Math.round((reviews.positive / reviews.total) * 100)}% of ${reviews.total.toLocaleString("en-GB")} reviews`}
+                />
+                <div className="mt-6 flex flex-col gap-6">
+                  {reviews.sample.map((review, i) => (
+                    <blockquote
+                      key={i}
+                      className="border-l-2 pl-5"
+                      style={{
+                        borderColor: review.positive
+                          ? "var(--positive)"
+                          : "var(--accent)",
+                      }}
+                    >
+                      <p className="standfirst text-[1.05rem] leading-[1.55]">
+                        {review.text.slice(0, 460)}
+                        {review.text.length > 460 && "…"}
+                      </p>
+                      <p className="source mt-2">
+                        {review.positive ? "Recommended" : "Not recommended"}
+                        {review.hours !== null && ` · ${review.hours} hours played`}
+                        {review.helpful > 0 && ` · ${review.helpful} found this helpful`}
+                      </p>
+                    </blockquote>
+                  ))}
+                </div>
+                <p className="source mt-5 text-faint">
+                  The most-upvoted reviews on Steam, positive and negative.
                 </p>
               </div>
             )}
@@ -149,7 +217,41 @@ export default async function GamePage({ params }: PageProps<"/games/[slug]">) {
               )}
             </div>
 
-            <h2 className="panel-title mt-10">On</h2>
+            {detail?.metacritic && (
+              <div className="mt-8">
+                <h2 className="panel-title">Metacritic</h2>
+                <p className="headline mt-3 text-[1.35rem] font-medium figures">
+                  {detail.metacritic.score}
+                  <span className="source ml-2 text-faint">out of 100</span>
+                </p>
+              </div>
+            )}
+
+            {detail && detail.features.length > 0 && (
+              <div className="mt-8">
+                <h2 className="panel-title">How it plays</h2>
+                <p className="standfirst mt-3 text-small">
+                  {detail.features.join(" · ")}
+                </p>
+              </div>
+            )}
+
+            <h2 className="panel-title mt-8">What players call it</h2>
+            {/* Each one filters the directory, which is the quickest route
+                from "I liked this" to "what else is like it". */}
+            <div className="mt-4 flex flex-wrap gap-2">
+              {game.tags.slice(0, 14).map((tag) => (
+                <Link
+                  key={tag}
+                  href={`/games?tag=${encodeURIComponent(tag)}`}
+                  className="kicker border border-rule-strong px-2.5 py-1.5 text-micro text-muted transition-colors hover:border-ink hover:text-ink"
+                >
+                  {tag}
+                </Link>
+              ))}
+            </div>
+
+            <h2 className="panel-title mt-8">On</h2>
             <p className="standfirst mt-3 text-small">
               {game.platforms.join(" · ")}
             </p>
