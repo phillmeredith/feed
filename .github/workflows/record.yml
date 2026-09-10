@@ -38,6 +38,12 @@ jobs:
       - run: npm run benchmarks:update
         continue-on-error: true
 
+      # The games directory fills in a few hundred at a time: Steam rate-limits
+      # hard, and five thousand console releases is a fortnight of polite
+      # asking. Tolerated on failure for the same reason as the rest.
+      - run: npm run games:update
+        continue-on-error: true
+
       # Video last: it reads the three stores above to know what to look for,
       # so a race or a card recorded this morning gets its highlights in the
       # same run rather than tomorrow's. It searches YouTube one session at a

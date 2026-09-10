@@ -88,6 +88,18 @@ export const sources: Source[] = [
   { name: "Inside Climate News", url: "https://insideclimatenews.org/feed/", category: "weather", weight: 8, cap: 6 },
 
   // Screen — film and television, led by criticism rather than trade press.
+  /*
+   * Gaming. Weighted towards the outlets that write about small games:
+   * Rock Paper Shotgun and Nintendo Life cover the things a storefront's
+   * front page never will, and the two console sites keep the release
+   * calendar honest for the platforms this desk is actually about.
+   */
+  { name: "Rock Paper Shotgun", url: "https://www.rockpapershotgun.com/feed", category: "gaming", weight: 9, cap: 8 },
+  { name: "Nintendo Life", url: "https://www.nintendolife.com/feeds/latest", category: "gaming", weight: 8, cap: 6 },
+  { name: "Pure Xbox", url: "https://www.purexbox.com/feeds/latest", category: "gaming", weight: 7, cap: 5 },
+  { name: "Eurogamer", url: "https://www.eurogamer.net/feed", category: "gaming", weight: 7, cap: 6 },
+  { name: "PC Gamer", url: "https://www.pcgamer.com/rss/", category: "gaming", weight: 5, cap: 5, generalist: true },
+
   { name: "RogerEbert.com", url: "https://www.rogerebert.com/feed", category: "screen", weight: 10, cap: 8 },
   { name: "IndieWire", url: "https://www.indiewire.com/feed/", category: "screen", weight: 9, cap: 8 },
   { name: "The Film Stage", url: "https://thefilmstage.com/feed/", category: "screen", weight: 8, cap: 8 },

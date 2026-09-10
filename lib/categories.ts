@@ -116,6 +116,14 @@ export const categories: Category[] = [
       "Film and television worth the time, led by critics rather than trade announcements — plus the reporting on how it all actually circulates.",
   },
   {
+    slug: "gaming",
+    label: "Gaming",
+    short: "Gaming",
+    dek: "What is out, and what is worth playing",
+    standfirst:
+      "Releases across Switch, Xbox and PlayStation, and a directory built to find the quiet ones — the games a storefront buries because it ranks by what sells.",
+  },
+  {
     slug: "wire",
     label: "The Wire",
     short: "Wire",

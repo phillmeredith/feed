@@ -60,6 +60,13 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
    * DeskTabs renders nothing rather than a single tab labelled Articles,
    * which would be a tab bar that does not navigate.
    */
+  gaming: [
+    { slug: "", label: "Articles" },
+    /* The directory is the reason this desk exists; the reporting is the
+       thing beside it. Both are named plainly. */
+    { slug: "directory", label: "The directory", href: "/games" },
+    { slug: "calm", label: "Calm games", href: "/games/calm" },
+  ],
   science: [
     { slug: "", label: "Articles" },
     { slug: "launches", label: "Launches" },

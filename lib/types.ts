@@ -12,6 +12,7 @@ export type CategorySlug =
   | "robotics"
   | "weather"
   | "screen"
+  | "gaming"
   | "wire";
 
 /** Nav groups: a handful of sections, each holding related desks. */
