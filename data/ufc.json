@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-09T09:48:52.175Z",
+  "updated": "2026-09-10T09:46:58.630Z",
   "events": [
     {
       "id": "600057024",
@@ -5644,7 +5644,7 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Flyweight",
+          "weightClass": "Catch Weight",
           "fighters": [
             "Tim Elliott",
             "Édgar Cháirez"
@@ -6395,11 +6395,104 @@
       ]
     },
     {
-      "id": "scheduled:2026-10-24T17:00Z",
+      "id": "600061267",
       "name": "UFC 333: Volkanovski vs. Evloev",
-      "date": "2026-10-24T17:00Z",
+      "date": "2026-10-24T14:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Etihad Arena",
+      "location": "Abu Dhabi, United Arab Emirates",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Grant Dawson",
+            "Nurullo Aliev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Nikita Krylov",
+            "Abdul-Rakhman Yakhyaev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Abus Magomedov",
+            "Cam Rowston"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Azamat Murzakanov",
+            "Dominick Reyes"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Alexander Volkov",
+            "Rizvan Kuniev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Arnold Allen",
+            "Aaron Pico"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Ramazan Temirov",
+            "Lone'er Kavanagh"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Merab Dvalishvili",
+            "Petr Yan"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Alexander Volkanovski",
+            "Movsar Evloev"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
       "id": "scheduled:2026-11-01T00:00Z",

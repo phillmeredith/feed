@@ -1,7 +1,22 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-09T09:48:27.739Z",
+  "updated": "2026-09-10T09:46:38.343Z",
   "items": [
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "inputPrice": 0.3,
+      "outputPrice": 1.2,
+      "contextTokens": 1048576,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-09-10T06:21:25.000Z",
+      "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the cost-efficient tier of the V4.1 family. DeepSeek reports that it exceeds V4 Pro on performance, speed, and task..."
+    },
     {
       "id": "inception/mercury-2.5",
       "name": "Mercury 2.5",
@@ -23,9 +38,10 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "contextTokens": 262144,
-      "modality": "text->text",
+      "modality": "text+image->text",
       "inputModalities": [
-        "text"
+        "text",
+        "image"
       ],
       "releasedAt": "2026-09-08T17:54:21.000Z",
       "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file..."
@@ -443,8 +459,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 1.113,
-      "outputPrice": 3.4979999999999998,
+      "inputPrice": 1.085,
+      "outputPrice": 3.41,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -2759,6 +2775,21 @@
       "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from..."
     },
     {
+      "id": "mistralai/mistral-small-2603:batch",
+      "name": "Mistral Small 4 (batch)",
+      "lab": "Mistral AI",
+      "inputPrice": 0.075,
+      "outputPrice": 0.3,
+      "contextTokens": 262144,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-03-16T21:14:45.000Z",
+      "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from..."
+    },
+    {
       "id": "z-ai/glm-5-turbo",
       "name": "GLM 5 Turbo",
       "lab": "Zhipu AI",
@@ -3011,8 +3042,8 @@
       "id": "qwen/qwen3.5-122b-a10b",
       "name": "Qwen3.5-122B-A10B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.29,
-      "outputPrice": 2.4,
+      "inputPrice": 0.26,
+      "outputPrice": 2.08,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3191,8 +3222,8 @@
       "id": "minimax/minimax-m2.5",
       "name": "MiniMax M2.5",
       "lab": "minimax",
-      "inputPrice": 0.27,
-      "outputPrice": 1.08,
+      "inputPrice": 0.3,
+      "outputPrice": 1.2,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -3718,6 +3749,21 @@
       "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities."
     },
     {
+      "id": "mistralai/ministral-8b-2512:batch",
+      "name": "Ministral 3 8B 2512 (batch)",
+      "lab": "Mistral AI",
+      "inputPrice": 0.075,
+      "outputPrice": 0.075,
+      "contextTokens": 262144,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2025-12-02T13:20:54.000Z",
+      "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities."
+    },
+    {
       "id": "mistralai/ministral-3b-2512",
       "name": "Ministral 3 3B 2512",
       "lab": "Mistral AI",
@@ -3738,6 +3784,22 @@
       "lab": "Mistral AI",
       "inputPrice": 0.5,
       "outputPrice": 1.5,
+      "contextTokens": 262144,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2025-12-01T21:27:52.000Z",
+      "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license."
+    },
+    {
+      "id": "mistralai/mistral-large-2512:batch",
+      "name": "Mistral Large 3 2512 (batch)",
+      "lab": "Mistral AI",
+      "inputPrice": 0.25,
+      "outputPrice": 0.75,
       "contextTokens": 262144,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -4404,20 +4466,6 @@
       "description": "Qwen3-30B-A3B-Thinking-2507 is a 30B parameter Mixture-of-Experts reasoning model optimized for complex tasks requiring extended multi-step thinking. The model is designed specifically for “thinking mode,” where internal reasoning traces are separated..."
     },
     {
-      "id": "nousresearch/hermes-4-70b",
-      "name": "Hermes 4 70B",
-      "lab": "nousresearch",
-      "inputPrice": 0.13,
-      "outputPrice": 0.39999999999999997,
-      "contextTokens": 131072,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2025-08-26T19:23:02.000Z",
-      "description": "Hermes 4 70B is a hybrid reasoning model from Nous Research, built on Meta-Llama-3.1-70B. It introduces the same hybrid mode as the larger 405B release, allowing the model to either..."
-    },
-    {
       "id": "nousresearch/hermes-4-405b",
       "name": "Hermes 4 405B",
       "lab": "nousresearch",
@@ -4451,6 +4499,22 @@
       "lab": "Mistral AI",
       "inputPrice": 0.39999999999999997,
       "outputPrice": 2,
+      "contextTokens": 131072,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2025-08-13T14:33:59.000Z",
+      "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances..."
+    },
+    {
+      "id": "mistralai/mistral-medium-3.1:batch",
+      "name": "Mistral Medium 3.1 (batch)",
+      "lab": "Mistral AI",
+      "inputPrice": 0.19999999999999998,
+      "outputPrice": 1,
       "contextTokens": 131072,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -4676,6 +4740,21 @@
       "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)"
     },
     {
+      "id": "mistralai/codestral-2508:batch",
+      "name": "Codestral 2508 (batch)",
+      "lab": "Mistral AI",
+      "inputPrice": 0.15,
+      "outputPrice": 0.44999999999999996,
+      "contextTokens": 256000,
+      "modality": "text+file->text",
+      "inputModalities": [
+        "text",
+        "file"
+      ],
+      "releasedAt": "2025-08-01T20:20:30.000Z",
+      "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)"
+    },
+    {
       "id": "qwen/qwen3-coder-30b-a3b-instruct",
       "name": "Qwen3 Coder 30B A3B Instruct",
       "lab": "Alibaba (Qwen)",
@@ -4693,8 +4772,8 @@
       "id": "qwen/qwen3-30b-a3b-instruct-2507",
       "name": "Qwen3 30B A3B Instruct 2507",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.04815,
-      "outputPrice": 0.19305,
+      "inputPrice": 0.09,
+      "outputPrice": 0.3,
       "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
@@ -5783,8 +5862,8 @@
       "id": "deepseek/deepseek-chat",
       "name": "DeepSeek V3",
       "lab": "DeepSeek",
-      "inputPrice": 0.32,
-      "outputPrice": 0.8899999999999999,
+      "inputPrice": 0.2574,
+      "outputPrice": 1.0287,
       "contextTokens": 163840,
       "modality": "text->text",
       "inputModalities": [
