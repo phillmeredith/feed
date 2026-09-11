@@ -36,7 +36,10 @@ const DELIBERATE: Record<string, string> = {
     "Reads the filter query string, which opts a route out of caching. Kept " +
     "that way on purpose: the directory works with no JavaScript and a " +
     "filtered view is a link you can send. It reads the games store and " +
-    "nothing else — no feed — so a render is a few milliseconds.",
+    "nothing else — no feed — which took it from six seconds to under one. " +
+    "It is still the slowest page on the site, because an uncached route " +
+    "pays a cold start the edge would have absorbed; that is the price of " +
+    "the query string, and it is worth it here and nowhere else.",
 };
 
 /** Route handlers are not pages and have no business being prerendered. */
