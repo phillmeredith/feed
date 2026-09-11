@@ -36,11 +36,17 @@ jobs:
       # Taken from the front page itself rather than from a list, because which
       # stories it leads on is exactly what changes every cycle. They hold for
       # an hour now, so most of these are already warm and cost a HIT.
+      #
+      # All of them, not the first thirty. The front page links to forty-five
+      # stories and a first pass capped this at thirty, which left fifteen of
+      # its own headlines cold at three to four seconds — "any link on the
+      # front page" has to mean any link. The cap that remains is a guard
+      # against a runaway page, not a budget.
       - name: Warm what the front page links to
         run: |
           BASE="${{ vars.SITE_URL || 'https://feed-theta-ten.vercel.app' }}"
           curl -s --max-time 60 "$BASE/" \
-            | grep -o '"/story/[a-z0-9-]*"' | tr -d '"' | sort -u | head -30 \
+            | grep -o '"/story/[a-z0-9-]*"' | tr -d '"' | sort -u | head -60 \
             | while read -r path; do
                 code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 "$BASE$path")
                 echo "$code  $path"
