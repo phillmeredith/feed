@@ -1,7 +1,55 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-10T09:46:38.343Z",
+  "updated": "2026-09-11T09:43:34.646Z",
   "items": [
+    {
+      "id": "sakana/fugu-ultra-v2",
+      "name": "Fugu Ultra v2",
+      "lab": "sakana",
+      "inputPrice": 5,
+      "outputPrice": 30,
+      "contextTokens": 1000000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2026-09-11T05:43:03.000Z",
+      "description": "Fugu Ultra v2 is the higher-performance model in Sakana AI's Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to..."
+    },
+    {
+      "id": "sakana/fugu-max",
+      "name": "Fugu Max",
+      "lab": "sakana",
+      "inputPrice": 2,
+      "outputPrice": 6,
+      "contextTokens": 1000000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2026-09-11T05:32:51.000Z",
+      "description": "Fugu Max is the cost-performance model in Sakana AI's Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to route..."
+    },
+    {
+      "id": "inclusionai/ling-3.0-flash-vl:free",
+      "name": "Ling 3.0 Flash VL (free)",
+      "lab": "inclusionai",
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "contextTokens": 262144,
+      "modality": "text+image+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-09-10T16:01:54.000Z",
+      "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual..."
+    },
     {
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
@@ -15,7 +63,7 @@
         "image"
       ],
       "releasedAt": "2026-09-10T06:21:25.000Z",
-      "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the cost-efficient tier of the V4.1 family. DeepSeek reports that it exceeds V4 Pro on performance, speed, and task..."
+      "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on..."
     },
     {
       "id": "inception/mercury-2.5",
@@ -351,8 +399,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.075,
-      "outputPrice": 0.25,
+      "inputPrice": 0.15,
+      "outputPrice": 0.5,
       "contextTokens": 1310720,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -459,8 +507,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 1.085,
-      "outputPrice": 3.41,
+      "inputPrice": 0.9700000000000001,
+      "outputPrice": 3.3077,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -642,8 +690,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 1.0494,
-      "outputPrice": 3.1482,
+      "inputPrice": 0.66,
+      "outputPrice": 1.9800000000000002,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -744,8 +792,8 @@
       "id": "upstage/solar-pro4",
       "name": "Solar Pro 4",
       "lab": "upstage",
-      "inputPrice": 0.03,
-      "outputPrice": 0.12,
+      "inputPrice": 0.09,
+      "outputPrice": 0.36,
       "contextTokens": 524288,
       "modality": "text->text",
       "inputModalities": [
@@ -1120,8 +1168,8 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 3,
-      "outputPrice": 15,
+      "inputPrice": 2.34,
+      "outputPrice": 11.7,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2093,8 +2141,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "MoonshotAI Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 2.4,
-      "outputPrice": 12,
+      "inputPrice": 2.34,
+      "outputPrice": 11.7,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2467,8 +2515,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B ",
       "lab": "Google",
-      "inputPrice": 0.07,
-      "outputPrice": 0.33999999999999997,
+      "inputPrice": 0.041999999999999996,
+      "outputPrice": 0.22,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3428,7 +3476,7 @@
       "lab": "Zhipu AI",
       "inputPrice": 0.060500000000000005,
       "outputPrice": 0.39999999999999997,
-      "contextTokens": 202752,
+      "contextTokens": 200000,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -5497,8 +5545,8 @@
       "id": "deepseek/deepseek-chat-v3-0324",
       "name": "DeepSeek V3 0324",
       "lab": "DeepSeek",
-      "inputPrice": 0.29,
-      "outputPrice": 1.1400000000000001,
+      "inputPrice": 0.25,
+      "outputPrice": 1,
       "contextTokens": 163840,
       "modality": "text->text",
       "inputModalities": [
@@ -6207,8 +6255,8 @@
       "id": "meta-llama/llama-3.1-70b-instruct",
       "name": "Llama 3.1 70B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.39999999999999997,
-      "outputPrice": 0.39999999999999997,
+      "inputPrice": 0.72,
+      "outputPrice": 0.72,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
