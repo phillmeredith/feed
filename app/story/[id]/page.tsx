@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Plate } from "@/components/Media";
 import { FeatureCard } from "@/components/cards";
 import { BandHead, RailHead } from "@/components/Band";
+import { ArchiveThis } from "@/components/Reading";
 import { relativeDate } from "@/lib/format";
 import { categoryBySlug } from "@/lib/categories";
 import { getStory } from "@/lib/feed";
@@ -107,7 +108,20 @@ export default async function StoryPage({ params }: PageProps<"/story/[id]">) {
               * a third of the way across the page from it.
               */}
             <div>
-              <h1 className="headline text-title">{story.headline}</h1>
+              {/*
+                * The headline, and the one control this page carries. It sits
+                * beside the headline because there is a single article here
+                * and filing it is the only thing a reader can do to it —
+                * putting that at the foot of the page, under the reporting,
+                * asked them to finish the story before they could decide they
+                * did not want to.
+                */}
+              <div className="flex items-start justify-between gap-5">
+                <h1 className="headline text-title">{story.headline}</h1>
+                <span className="mt-1.5">
+                  <ArchiveThis id={story.id} />
+                </span>
+              </div>
 
               {/* With artwork the standfirst repeats the opening line of the
                   story two centimetres above it; without artwork it is the

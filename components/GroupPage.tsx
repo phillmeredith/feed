@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Group } from "@/lib/types";
 import { categoryBySlug } from "@/lib/categories";
 import { getFeed, pickHero } from "@/lib/feed";
-import { withArchive } from "@/lib/archive";
+import { withArchive, listing } from "@/lib/archive";
 import { recentVideos } from "@/lib/video";
 import { Masthead } from "./Masthead";
 import { Footer } from "./Footer";
@@ -13,7 +13,9 @@ import { SportBoard } from "./SportBoard";
 import { VideoPanel } from "./VideoPanel";
 import { StackedLead } from "./cards";
 import { RelativeTime } from "./RelativeTime";
-import { SHAPES, DeskBlock, SectionBlock } from "./shapes";
+import { SHAPES } from "@/lib/shapes";
+import { DeskBlock, SectionBlock } from "./shapes";
+import { Slots } from "./Slots";
 
 /**
  * A section front.
@@ -31,10 +33,16 @@ import { SHAPES, DeskBlock, SectionBlock } from "./shapes";
 export async function GroupPage({ group }: { group: Group }) {
   const { articles } = await getFeed();
 
+  /*
+   * Trimmed to what a card prints. The blocks below are client components —
+   * they have to be, to know what the reader has read — so a desk's whole
+   * list crosses to the browser, and a syndicated body is tens of kilobytes
+   * that nothing on a section front will ever render.
+   */
   const desks = group.desks
     .map((slug) => ({
       category: categoryBySlug(slug)!,
-      articles: withArchive(articles, slug),
+      articles: withArchive(articles, slug).map(listing),
     }))
     .filter((d) => d.category && d.articles.length > 0);
 
@@ -47,14 +55,27 @@ export async function GroupPage({ group }: { group: Group }) {
    * front turns over through the day the way the front page does, instead of
    * pinning whichever desk filed most recently.
    */
-  const lead = pickHero(everything, group.desks) ?? everything[0];
+  const hero = pickHero(everything, group.desks) ?? everything[0];
+  /*
+   * The opener carries two reserves behind it, and the rail three, for the
+   * reader who has already read the section's best story — the same bench the
+   * front page keeps. The reserves are held out of the rail and the desk
+   * blocks below as well, or promoting one would print it twice.
+   */
+  const RAIL_ITEMS = 5;
+  const lead = [hero, ...everything.filter((a) => a.id !== hero?.id).slice(0, 2)]
+    .filter(Boolean)
+    .slice(0, 3);
+  const spoken = new Set(lead.map((a) => a.id));
   /*
    * Five, not six. The rail runs beside the lead's picture and every item in
    * it costs three lines — a desk, a headline and a credit — so it was a
    * column of small grey type as tall as the photograph next to it and just
    * as loud.
    */
-  const latest = everything.filter((a) => a.id !== lead?.id).slice(0, 5);
+  const latest = everything
+    .filter((a) => !spoken.has(a.id))
+    .slice(0, RAIL_ITEMS + 3);
 
   const beat =
     group.slug === "photography"
@@ -103,38 +124,44 @@ export async function GroupPage({ group }: { group: Group }) {
          * a driver-ratings listicle, as it happened — seven hundred and fifty
          * pixels while the twelve stories below it shared three hundred.
          */}
-        {group.slug !== "sport" && lead && (
+        {group.slug !== "sport" && lead.length > 0 && (
           <div className="mt-12 grid gap-x-gutter gap-y-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-            <StackedLead article={lead} />
+            <Slots ids={lead.map((a) => a.id)} show={1}>
+              {lead.map((article) => (
+                <StackedLead key={article.id} article={article} />
+              ))}
+            </Slots>
 
             {latest.length > 0 && (
               <aside className="border-t border-rule-strong pt-6 lg:border-t-0 lg:pt-0 lg:rule-l">
                 <RailHead>Also across {group.label.toLowerCase()}</RailHead>
                 <ol>
-                  {latest.map((article) => (
-                    <li
-                      key={article.id}
-                      className="group border-b border-rule py-4 last:border-b-0"
-                    >
-                      <Link
-                        href={`/story/${article.id}`}
-                        className="story block"
+                  <Slots ids={latest.map((a) => a.id)} show={RAIL_ITEMS}>
+                    {latest.map((article) => (
+                      <li
+                        key={article.id}
+                        className="group border-b border-rule py-4 last:border-b-0"
                       >
-                        <h3 className="headline text-[1.2rem] font-medium leading-[1.18]">
-                          {article.headline}
-                        </h3>
-                        {/* The desk and the hour, and no outlet. The rail's
-                            job is to say what else has happened across the
-                            section — which desk it happened on is the useful
-                            half, and printing the credit as well made every
-                            item a three-line entry. */}
-                        <p className="source mt-2">
-                          {categoryBySlug(article.category)?.short} ·{" "}
-                          <RelativeTime iso={article.publishedAt} />
-                        </p>
-                      </Link>
-                    </li>
-                  ))}
+                        <Link
+                          href={`/story/${article.id}`}
+                          className="story block"
+                        >
+                          <h3 className="headline text-[1.2rem] font-medium leading-[1.18]">
+                            {article.headline}
+                          </h3>
+                          {/* The desk and the hour, and no outlet. The rail's
+                              job is to say what else has happened across the
+                              section — which desk it happened on is the useful
+                              half, and printing the credit as well made every
+                              item a three-line entry. */}
+                          <p className="source mt-2">
+                            {categoryBySlug(article.category)?.short} ·{" "}
+                            <RelativeTime iso={article.publishedAt} />
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  </Slots>
                 </ol>
               </aside>
             )}
@@ -175,7 +202,7 @@ export async function GroupPage({ group }: { group: Group }) {
               <DeskBlock
                 key={desk.category.slug}
                 category={desk.category}
-                articles={desk.articles.filter((a) => a.id !== lead?.id)}
+                articles={desk.articles.filter((a) => !spoken.has(a.id))}
                 shape={SHAPES[index % SHAPES.length]}
               />
             ))}

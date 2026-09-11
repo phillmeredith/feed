@@ -108,8 +108,20 @@ export const DESK_TABS: Partial<Record<CategorySlug, Tab[]>> = {
   ],
 };
 
+/**
+ * Every desk ends on its archive.
+ *
+ * A desk shows two pages and files the rest; without a door to the filing
+ * cabinet that is just a desk that forgets. It is appended rather than listed
+ * on each desk above because it is the same tab in the same place on all
+ * fifteen of them — and it is what gives the plain feed desks, which had no
+ * tabs at all, a tab bar that navigates somewhere.
+ */
+const ARCHIVE: Tab = { slug: "archive", label: "Archive" };
+
 export function tabsFor(desk: CategorySlug): Tab[] {
-  return DESK_TABS[desk] ?? [];
+  const own = DESK_TABS[desk] ?? [{ slug: "", label: "Articles" }];
+  return [...own, ARCHIVE];
 }
 
 export function tabHref(desk: CategorySlug, tab: Tab) {

@@ -2,11 +2,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Masthead } from "@/components/Masthead";
 import { Footer } from "@/components/Footer";
-import { StackedLead } from "@/components/cards";
-import { Gallery, Split, Index } from "@/components/shapes";
 import { categoryBySlug, groupBySlug } from "@/lib/categories";
 import { getFeed } from "@/lib/feed";
-import { withArchive } from "@/lib/archive";
+import { withArchive, deskSplit, listing, PER_PAGE } from "@/lib/archive";
 import { gearDirectory } from "@/lib/gear";
 import { getAllModelReleases } from "@/lib/models";
 import { ForecastPanel } from "@/components/ForecastPanel";
@@ -20,9 +18,7 @@ import { ModelTable } from "@/components/ModelTable";
 import { VideoPanel } from "@/components/VideoPanel";
 import { recentVideos } from "@/lib/video";
 import { PageHead } from "./PageHead";
-import { BandHead, RailHead } from "./Band";
-import { RelativeTime } from "./RelativeTime";
-import { SectionBlock } from "./shapes";
+import { DeskFeed } from "./DeskFeed";
 
 /*
  * One desk, one page of it.
@@ -37,8 +33,6 @@ import { SectionBlock } from "./shapes";
 export function pageHref(slug: string, n: number) {
   return n <= 1 ? `/${slug}` : `/${slug}/page/${n}`;
 }
-
-const PER_PAGE = 24;
 
 export async function DeskView({
   desk,
@@ -75,20 +69,61 @@ export async function DeskView({
   const category = categoryBySlug(desk);
   if (!category) notFound();
 
-  const { articles } = await getFeed();
-  // Live stories merged over everything the archive holds for this desk.
-  const deskArticles = withArchive(articles, category.slug);
+  /*
+   * Whether this tab has any use for the wire.
+   *
+   * Ten of these routes are a calendar, a table or a directory — `feed="none"`
+   * — and every one of them was fetching forty RSS feeds, extracting them and
+   * resolving artwork in order to render a nameplate, a row of tabs and a
+   * story count nobody had asked for. On the cached tabs that is three or four
+   * seconds per rebuild, paid ten times over; on the games directory, which
+   * reads a query string and so cannot be cached at all, it was three to four
+   * seconds paid by every single reader. That is where the six-second
+   * directory came from.
+   *
+   * So the feed is fetched when something on the page is made of it: the
+   * article feed itself, or the two standing panels that are drawn from it.
+   */
+  const needsFeed =
+    feed !== "none" ||
+    (panels && (category.slug === "cameras" || category.slug === "ai"));
 
-  const totalPages = Math.max(1, Math.ceil(deskArticles.length / PER_PAGE));
+  const wire = needsFeed ? await getFeed() : null;
+  const articles = wire?.articles ?? [];
+  /*
+   * Live stories merged over everything the archive holds for this desk, then
+   * cut where the desk ends. A desk is two pages; what has fallen past them is
+   * still here, under the Archive tab, and no longer underfoot.
+   */
+  const { live, overflow } = needsFeed
+    ? deskSplit(withArchive(articles, category.slug))
+    : { live: [], overflow: [] };
+
+  const totalPages = Math.max(1, Math.ceil(live.length / PER_PAGE));
   const current = Math.min(page, totalPages);
-  const pageArticles = deskArticles.slice(
-    (current - 1) * PER_PAGE,
-    current * PER_PAGE
-  );
+  /*
+   * The page, and behind it the page after — the reserve the feed draws on
+   * when the reader has already read some of this one. Paging still counts in
+   * whole pages, so a reader who has filed half a desk away sees a page that
+   * borrows from the next one and a count that does not pretend otherwise.
+   *
+   * Trimmed to what a card prints: all of this crosses to the browser, and a
+   * publisher's syndicated body is tens of kilobytes nothing here will read.
+   */
+  const pageArticles = live
+    .slice((current - 1) * PER_PAGE, current * PER_PAGE + PER_PAGE)
+    .map(listing);
 
-  // Desk-specific reference material, below the reporting.
-  const gear = category.slug === "cameras" ? gearDirectory(articles) : [];
-  const models = category.slug === "ai" ? await getAllModelReleases(articles) : [];
+  /*
+   * Desk-specific reference material, below the reporting — and gated on the
+   * same flag that renders it. These were computed on every tab of the desk
+   * and thrown away on the ones that do not draw them, which for the AI desk
+   * meant resolving the whole model catalogue to render a calendar.
+   */
+  const gear =
+    panels && category.slug === "cameras" ? gearDirectory(articles) : [];
+  const models =
+    panels && category.slug === "ai" ? await getAllModelReleases(articles) : [];
   const forecast =
     panels && category.slug === "weather" ? await getDetailedWeather() : null;
   const places =
@@ -126,23 +161,6 @@ export async function DeskView({
         ? ("hardware" as const)
         : null;
   const videos = beat ? recentVideos(beat, 6) : [];
-  /*
-   * A desk was a lead and then six identical cards and then a list. The same
-   * shapes the fronts use give it somewhere to go instead: a lead with a rail
-   * beside it, three across, one picture with the reporting beside it, then
-   * the rest as headlines.
-   *
-   * The rail matters for more than variety. Without it the lead's picture ran
-   * the width of the sheet — 16:9 across 1350px is seven hundred and fifty
-   * pixels of photograph before a headline — and the page opened on a wall.
-   */
-  const [lead, ...rest] = pageArticles;
-  const rail = rest.slice(0, 5);
-  const afterRail = rest.slice(5);
-  const gallery = afterRail.filter((a) => a.image).slice(0, 3);
-  const afterGallery = afterRail.filter((a) => !gallery.includes(a));
-  const split = afterGallery.slice(0, 4);
-  const remainder = afterGallery.slice(4);
 
   return (
     <>
@@ -163,11 +181,27 @@ export async function DeskView({
           }
           title={category.label}
           standfirst={category.standfirst}
+          /* A calendar or a directory has no story count, and printing the
+             desk's one there was both wrong and the reason the page had to
+             fetch the wire at all. */
           meta={
+            !needsFeed ? undefined : (
             <>
-              {deskArticles.length} stories · refreshed every 10 minutes
+              {live.length} on the desk · refreshed every 10 minutes
               {totalPages > 1 && ` · page ${current} of ${totalPages}`}
+              {overflow.length > 0 && (
+                <>
+                  {" · "}
+                  <Link
+                    href={`/${category.slug}/archive`}
+                    className="transition-colors hover:text-accent"
+                  >
+                    {overflow.length} filed
+                  </Link>
+                </>
+              )}
             </>
+            )
           }
           tabs={{ desk: category.slug, current: tab }}
         />
@@ -220,88 +254,20 @@ export async function DeskView({
             </p>
           ))}
 
-        {feed === "brief" && rest.length > 0 && (
-          <div className="mt-12">
-            <SectionBlock
-              title="Latest"
-              dek="The reporting, in brief"
-              href={`/${category.slug}/articles`}
-              total={deskArticles.length}
-              articles={[lead, ...rest].filter(Boolean).slice(0, 6)}
-              shape="index"
-            />
-          </div>
+        {feed !== "none" && (
+          <DeskFeed
+            articles={pageArticles}
+            show={PER_PAGE}
+            label={category.label}
+            slug={category.slug}
+            total={live.length}
+            mode={feed}
+          />
         )}
 
-        {/* A tab showing only a calendar or a table has no feed to run. */}
-        {feed === "full" && (lead ? (
-          <>
-            {/*
-              * A desk opener, not a front-page lead. `LeadCard` sets its
-              * headline at the one size nothing outside the front page is
-              * allowed to use — putting it on eleven desk pages as well is
-              * what stops the front page reading as the front page.
-              */}
-            <div className="mt-12 grid gap-x-gutter gap-y-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-              <StackedLead article={lead} />
-
-              {rail.length > 0 && (
-                <aside className="border-t border-rule-strong pt-6 lg:border-t-0 lg:pt-0 lg:rule-l">
-                  <RailHead>Also on this desk</RailHead>
-                  <ol>
-                    {rail.map((article) => (
-                      <li
-                        key={article.id}
-                        className="group border-b border-rule py-4 last:border-b-0"
-                      >
-                        <Link
-                          href={`/story/${article.id}`}
-                          className="story block"
-                        >
-                          <h3 className="headline text-[1.2rem] font-medium leading-[1.18]">
-                            {article.headline}
-                          </h3>
-                          <p className="source mt-2">
-                            {article.source} ·{" "}
-                            <RelativeTime iso={article.publishedAt} />
-                          </p>
-                        </Link>
-                      </li>
-                    ))}
-                  </ol>
-                </aside>
-              )}
-            </div>
-
-            {gallery.length > 0 && (
-              <div className="mt-14 border-t border-rule-strong pt-10">
-                <Gallery articles={gallery} />
-              </div>
-            )}
-
-            {split.length > 0 && (
-              <div className="mt-14 border-t border-rule-strong pt-10">
-                <Split articles={split} />
-              </div>
-            )}
-
-            {remainder.length > 0 && (
-              <div className="mt-14">
-                <BandHead
-                  weight="major"
-                  title="The rest of the desk"
-                  note={`Everything else ${category.label.toLowerCase()} has filed.`}
-                />
-                <Index articles={remainder} limit={remainder.length} />
-              </div>
-            )}
-          </>
-        ) : (
-          <p className="mt-12 standfirst font-serif text-xl italic">
-            Nothing new on this desk right now. Check back after the next refresh.
-          </p>
-        ))}
-        {totalPages > 1 && (
+        {/* The foot of the desk. Where a desk used to page on for ever, it now
+            ends — and the way on from the last page is into its archive. */}
+        {feed !== "none" && (totalPages > 1 || overflow.length > 0) && (
           <nav className="band-rule mt-14 flex items-center justify-between pt-4 kicker text-micro">
             {current > 1 ? (
               <Link
@@ -322,6 +288,13 @@ export async function DeskView({
                 className="text-muted hover:text-accent transition-colors"
               >
                 Older →
+              </Link>
+            ) : overflow.length > 0 ? (
+              <Link
+                href={`/${category.slug}/archive`}
+                className="text-muted hover:text-accent transition-colors"
+              >
+                The archive →
               </Link>
             ) : (
               <span className="text-faint">Older →</span>

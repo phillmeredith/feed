@@ -274,11 +274,17 @@ export function ThumbCard({
  * A numbered item in the wire rail. The figure is set in the display face and
  * in oxide — the one place on the page where a number is allowed to be
  * decorative, because it is a running order rather than a measurement.
+ *
+ * It counts itself, in CSS, rather than being told its own position. The rail
+ * drops the stories a reader has already read and promotes the reserves behind
+ * them, and a figure baked in on the server made that visible in the worst
+ * possible way: a running order reading one, two, four, seven. The list knows
+ * what it is showing; let it do the counting. See `.wire-order`.
  */
-export function WireItem({ article, n }: { article: Article; n: number }) {
+export function WireItem({ article }: { article: Article }) {
   return (
     <li className="group grid grid-cols-[22px_1fr] gap-3 border-b border-rule py-4 last:border-b-0">
-      <span className="font-display text-lg leading-tight text-accent">{n}</span>
+      <span className="wire-number font-display text-lg leading-tight text-accent" />
       <Link href={`/story/${article.id}`} className="story block">
         <h4 className="headline text-[1.15rem] font-medium leading-[1.22]">
           {article.headline}

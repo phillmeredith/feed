@@ -83,3 +83,49 @@ export function allArchived(): Article[] {
 export function archiveSize() {
   return ITEMS.length;
 }
+
+/**
+ * How much of a desk is the desk.
+ *
+ * A desk used to page forever: twenty-four stories a page and as many pages as
+ * the archive had material for, so a reader who kept clicking Older ended up
+ * three weeks back with nothing to say they had left the news behind. A
+ * newspaper doesn't work that way — what is current sits on the desk and
+ * everything else is in the morgue.
+ *
+ * Two pages is the desk. Everything past it is still here, still linked, still
+ * searchable by the desk's own archive tab; it has simply stopped being what
+ * the desk is showing you.
+ */
+export const PER_PAGE = 24;
+export const DESK_PAGES = 2;
+export const DESK_LIMIT = PER_PAGE * DESK_PAGES;
+
+/** A desk's stories split into what it shows and what has fallen past it. */
+export function deskSplit(all: Article[]): {
+  live: Article[];
+  overflow: Article[];
+} {
+  return { live: all.slice(0, DESK_LIMIT), overflow: all.slice(DESK_LIMIT) };
+}
+
+/**
+ * An article cut down to what a listing needs.
+ *
+ * The same economy the store itself makes: a syndicated body runs to tens of
+ * kilobytes and a client component that only prints a headline still pays to
+ * have it serialised across the boundary. The archive pages and the front
+ * page's reserves deal in hundreds of these, so they deal in these.
+ */
+export function listing(article: Article): Article {
+  return {
+    id: article.id,
+    category: article.category,
+    headline: article.headline,
+    dek: article.dek,
+    source: article.source,
+    url: article.url,
+    image: article.image,
+    publishedAt: article.publishedAt,
+  };
+}

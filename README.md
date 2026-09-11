@@ -30,6 +30,38 @@ Each item passes through a few editorial filters before it can appear:
 - **Diversity** — no outlet may take more than three slots in a section, or two in
   the news wire.
 
+## The desk and the archive
+
+A desk shows two pages — forty-eight stories — and no more. Everything older
+is still here, under that desk's Archive tab, which is also where a story goes
+the moment you file it by hand:
+
+```
+lib/archive.ts        the store, the two-page cut, and the trim to listing size
+app/[desk]/archive/   one morgue per desk, grouped by month
+```
+
+Filing a story is the reader's own record, kept in `localStorage` and sent
+nowhere — there is no account here and no database. One control does it: the
+**Archive this** button beside the headline on a story's own page. Nothing is
+filed automatically, and no card carries a control of its own — you file a
+story from the story. Filed stories drop out of the front page, the section
+fronts and the desks, and turn up in the archive instead, where **put back**
+returns them.
+
+Because every page is cached HTML shared by all readers, none of that can
+happen on the server. Each group of slots on a page is drawn with two or three
+reserves behind it — stories nothing else on the page is using — and the
+browser decides which of them a particular reader sees:
+
+```
+components/Reading.tsx   the record, the control, and the folio's tally
+components/Slots.tsx     shows the first N children the reader hasn't filed
+```
+
+Read a group's bench dry and the page falls back to its own pick, because a
+front page with holes in it is worse than one you have already seen.
+
 ## Running it
 
 ```bash
@@ -58,6 +90,28 @@ WEATHER_LOCATION="Newcastle upon Tyne"
 WEATHER_LAT=54.9783
 WEATHER_LON=-1.6178
 ```
+
+## Keeping it fast
+
+Every page here is meant to be served from the edge, with the ten-minute cron
+above eating the rebuilds. The site's one recurring bug is a page quietly
+falling out of that arrangement — reading a query string, or being a dynamic
+segment with no `generateStaticParams` — which costs every reader a full
+render: forty feeds, extraction and artwork, three to seven seconds. It still
+works, so it ships unnoticed, and the warm cron then warms nothing, because a
+per-request page has no cache to warm.
+
+It was found and fixed by hand three times before there was a check for it:
+
+```bash
+npm run build && npm run routes:check
+```
+
+That fails if any page renders per request without being named, with its
+reason, in `DELIBERATE` in `scripts/check-routes.ts` — and warns if a desk has
+been added without being added to the refresh workflow's warm list. The deploy
+workflow runs it between building and shipping, so a regression stops there
+rather than reaching readers.
 
 ## Deploying
 

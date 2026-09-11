@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navItems } from "@/lib/categories";
 import { references } from "@/lib/reference";
+import { ReadingTally } from "./Reading";
 
 /**
  * The folio.
@@ -55,6 +56,10 @@ export function Footer() {
         <span className="hidden sm:inline">
           Model catalogue · Gear directory · Rumour board
         </span>
+        {/* The reader's own record, stated where a paper states the things
+            that are true of the whole paper — and cleared from the same line.
+            Absent until there is something to say. */}
+        <ReadingTally />
         <span>Headlines link to the original reporting</span>
       </div>
     </footer>

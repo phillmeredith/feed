@@ -351,6 +351,26 @@ body::before {
 }
 
 /*
+ * The wire's running order, counted by the list rather than by the server.
+ *
+ * The rail is drawn with reserves behind it and drops whatever the reader has
+ * already read, so the six items it prints are not necessarily the first six
+ * it was sent. A counter numbers what is actually there; a number rendered
+ * into the markup numbered what was sent.
+ */
+.wire-order {
+  counter-reset: wire;
+}
+
+.wire-order > li {
+  counter-increment: wire;
+}
+
+.wire-order .wire-number::before {
+  content: counter(wire);
+}
+
+/*
  * The heavy divides. A band opens on a thick rule with a hairline under it —
  * the oldest way of saying "a new part of the paper starts here".
  */

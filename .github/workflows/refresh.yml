@@ -13,10 +13,13 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
+      # The list is checked against the site's own routes by
+      # `npm run routes:check`, which warns when a desk has been added and not
+      # added here — which is how the gaming desk shipped cold.
       - name: Warm every desk
         run: |
           BASE="${{ vars.SITE_URL || 'https://feed-theta-ten.vercel.app' }}"
-          for path in "" technology photography ai hardware robotics vehicles cameras lenses technique sport f1 golf ufc science science/launches weather screen wire gear model rumours; do
+          for path in "" technology photography sport ai hardware robotics vehicles cameras lenses technique f1 golf ufc science gaming weather screen wire ai/archive hardware/archive robotics/archive vehicles/archive cameras/archive lenses/archive technique/archive f1/archive golf/archive ufc/archive science/archive gaming/archive weather/archive screen/archive wire/archive ai/map ai/models f1/calendar f1/standings f1/weekend golf/majors golf/season golf/this-week ufc/cards ufc/next science/launches weather/articles weather/climate games gear model rumours; do
             code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 "$BASE/$path")
             echo "$code  /$path"
           done

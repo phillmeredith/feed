@@ -3,6 +3,11 @@
   "configurations": [
     {
       "name": "feed-dev",
+      "port": 3000,
+      "url": "http://localhost:3000"
+    },
+    {
+      "name": "feed-dev-start",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000

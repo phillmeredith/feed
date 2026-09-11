@@ -16,6 +16,7 @@
     "models:update": "node scripts/update-models.ts",
     "gear:import": "node scripts/import-dpreview.ts",
     "audit": "node scripts/audit.ts",
+    "routes:check": "node scripts/check-routes.ts",
     "patents:check": "node scripts/check-patents.ts",
     "patents:update": "node scripts/update-patents.ts",
     "patents:retry": "bash scripts/patents-retry.sh",

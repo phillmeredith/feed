@@ -78,6 +78,13 @@ jobs:
       - name: Build
         run: vercel build --prod --token="$VERCEL_TOKEN"
 
+      # The one recurring performance bug on this site is a page quietly
+      # falling out of the cache — it still works, so it ships, and every
+      # reader then pays three to seven seconds of feed fetching. Found and
+      # fixed by hand three times before this check existed.
+      - name: Every page is still cached
+        run: npm run routes:check
+
       - name: Deploy
         run: |
           url=$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN")

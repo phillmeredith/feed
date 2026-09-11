@@ -10,6 +10,7 @@ import {
   Meta,
 } from "@/components/cards";
 import { Plate } from "@/components/Media";
+import { Slots } from "@/components/Slots";
 import { categories, groups } from "@/lib/categories";
 import {
   getFeed,
@@ -66,10 +67,39 @@ function draw(
   return taken;
 }
 
+/**
+ * How many reserves a slot group carries behind what it prints.
+ *
+ * The page is one cached document served to everyone, so it cannot know what
+ * any one reader has read; what it can do is send more than it has room for.
+ * Every group below draws its slots plus a couple of understudies — drawn
+ * through the same `used` set, so no reserve is a story already printed
+ * somewhere else on the sheet — and `Slots` decides in the browser which of
+ * them a particular reader sees. File the lead away and the first reserve
+ * takes the top of the page.
+ *
+ * Two. A number chosen against the tail of the sheet rather than the top of
+ * it: every reserve drawn at the fold is a story the section columns at the
+ * foot no longer have, and the quiet desks down there only file three or four
+ * things a day.
+ */
+const SPARES = 2;
+
+function bench(
+  pool: Article[],
+  count: number,
+  used: Set<string>,
+  spares = SPARES,
+  opts?: { oncePerSource?: boolean }
+) {
+  return draw(pool, count + spares, used, opts);
+}
+
+/** `Slots` needs the ids in the same order as the children it is given. */
+const ids = (articles: Article[]) => articles.map((a) => a.id);
+
 export default async function Home() {
   const { articles, briefs } = await getFeed();
-
-  const lead = pickHero(articles);
 
   /*
    * Everything below the lead is drawn from one of two orderings: by quality,
@@ -96,33 +126,58 @@ export default async function Home() {
    * spoken for before anything else draws — otherwise the same piece prints
    * twice, once in the rail and once in a column beside it.
    */
-  const wire = briefs.slice(0, 6);
-  const used = new Set<string>([lead?.id, ...wire.map((a) => a.id)].filter(
-    (id): id is string => Boolean(id)
-  ));
+  const WIRE_ITEMS = 6;
+  const used = new Set<string>();
+  /*
+   * No per-outlet cap here, unlike everywhere else on the sheet: the wire is
+   * already capped at two per outlet when it is ranked, and a rail that is
+   * strictly one apiece is a rail that drops the second ProPublica piece of
+   * the day for a weaker one from somewhere else.
+   */
+  const wire = bench(briefs, WIRE_ITEMS, used, 3, { oncePerSource: false });
 
   /*
    * The fold, in the order a reader's eye crosses it. The second lead is the
    * strongest illustrated story that isn't the lead; the two under the lead
    * are the next two; the stack beside the second lead is text.
+   *
+   * The hero picks itself; its reserves are simply the next best illustrated
+   * stories, which is what the second lead would otherwise have been.
    */
-  const [second] = draw(illustrated, 1, used);
-  const subRun = draw(illustrated, 2, used);
-  const stack = draw(newest.filter((a) => frontPageScore(a) > 0), 3, used);
+  const hero = pickHero(articles);
+  if (hero) used.add(hero.id);
+  const lead = [hero, ...bench(illustrated, 0, used, SPARES)].filter(
+    (a): a is Article => Boolean(a)
+  );
+
+  const second = bench(illustrated, 1, used);
+  const subRun = bench(illustrated, 2, used);
+  const stack = bench(newest.filter((a) => frontPageScore(a) > 0), 3, used);
 
   /*
    * The briefs band: five columns across the foot of the fold, each a picture
    * over two headlines. Drawn by clock rather than by quality — the band's
    * job is to say what else has happened — except for the five that head a
    * column, which have to have artwork or the row of pictures has a gap in it.
+   *
+   * A column is two slots, so it is drawn as two slots: five leads and five
+   * reserve leads, five seconds and five reserve seconds, dealt so that column
+   * three's reserve can only ever appear in column three. A single pool shared
+   * across the band would let one column's promotion empty the next one.
    */
   const BRIEF_COLUMNS = 5;
   const filed = newest.filter((a) => frontPageScore(a) > 0);
-  const briefLeads = draw(filed.filter((a) => a.image), BRIEF_COLUMNS, used);
-  const briefRest = draw(filed, BRIEF_COLUMNS, used);
-  const briefColumns = briefLeads.map((top, i) =>
-    [top, briefRest[i]].filter(Boolean)
+  const briefLeads = bench(
+    filed.filter((a) => a.image),
+    BRIEF_COLUMNS,
+    used,
+    BRIEF_COLUMNS
   );
+  const briefRest = bench(filed, BRIEF_COLUMNS, used, BRIEF_COLUMNS);
+  const briefColumns = Array.from({ length: BRIEF_COLUMNS }, (_, i) => ({
+    lead: [briefLeads[i], briefLeads[BRIEF_COLUMNS + i]].filter(Boolean),
+    rest: [briefRest[i], briefRest[BRIEF_COLUMNS + i]].filter(Boolean),
+  })).filter((column) => column.lead.length > 0);
 
   /*
    * The dwell: one story given the room to be read rather than scanned.
@@ -131,9 +186,9 @@ export default async function Home() {
    * columns is the reporting — so a story with no standfirst leaves a third
    * of the section blank. Artwork and a standfirst are both entry conditions
    * here, unlike everywhere else on the sheet, where either can be missing
-   * and the layout closes up around it.
+   * and the layout closes up around it. Which goes for its reserves too.
    */
-  const [dwell] = draw(
+  const dwell = bench(
     illustrated.filter((a) => a.dek),
     1,
     used
@@ -172,16 +227,23 @@ export default async function Home() {
      * A section with one prolific outlet is allowed to repeat that outlet
      * here: printing an empty column rather than a second Electrek piece is
      * the wrong trade this far down the page.
+     *
+     * One reserve apiece, not two. These are the last columns to draw and the
+     * quietest desks in the paper; taking three stories out of a desk that
+     * filed four to keep two in reserve empties the column it was protecting.
      */
     const opts = { oncePerSource: false };
-    const [top] = draw(pool.filter((a) => a.image), 1, used, opts);
-    const rest = draw(pool, top ? 2 : 3, used, opts);
+    const illustratedHere = pool.filter((a) => a.image);
+    const top = bench(
+      illustratedHere.length > 0 ? illustratedHere : pool,
+      1,
+      used,
+      1,
+      opts
+    );
+    const rest = bench(pool, 2, used, 2, opts);
 
-    return {
-      ...section,
-      total: pool.length,
-      articles: top ? [top, ...rest] : rest,
-    };
+    return { ...section, total: pool.length, top, rest };
   });
 
   return (
@@ -201,10 +263,12 @@ export default async function Home() {
             <h2 className="kicker mb-4 border-b-2 border-ink pb-2.5 text-micro tracking-[0.22em]">
               The Wire
             </h2>
-            <ol className="grid gap-x-gutter sm:grid-cols-2 xl:grid-cols-1">
-              {wire.map((article, i) => (
-                <WireItem key={article.id} article={article} n={i + 1} />
-              ))}
+            <ol className="wire-order grid gap-x-gutter sm:grid-cols-2 xl:grid-cols-1">
+              <Slots ids={ids(wire)} show={WIRE_ITEMS}>
+                {wire.map((article) => (
+                  <WireItem key={article.id} article={article} />
+                ))}
+              </Slots>
             </ol>
             <Link
               href="/wire"
@@ -215,47 +279,58 @@ export default async function Home() {
           </div>
 
           <div className="order-1 xl:order-none">
-            {lead && <LeadCard article={lead} />}
+            <Slots ids={ids(lead)} show={1}>
+              {lead.map((article) => (
+                <LeadCard key={article.id} article={article} />
+              ))}
+            </Slots>
 
             {subRun.length > 0 && (
               <div className="ruled mt-10 grid gap-y-10 border-t border-rule-strong pt-8 sm:grid-cols-2">
-                {subRun.map((article) => (
-                  <FeatureCard
-                    key={article.id}
-                    article={article}
-                    ratio="landscape"
-                    headline="text-[1.85rem] leading-[1.05]"
-                  />
-                ))}
+                <Slots ids={ids(subRun)} show={2}>
+                  {subRun.map((article) => (
+                    <FeatureCard
+                      key={article.id}
+                      article={article}
+                      ratio="landscape"
+                      headline="text-[1.85rem] leading-[1.05]"
+                    />
+                  ))}
+                </Slots>
               </div>
             )}
           </div>
 
           <div className="order-2 mt-10 border-t border-rule-strong pt-8 xl:order-none xl:mt-0 xl:border-t-0 xl:pt-0 xl:rule-l">
-            {second && (
-              <FeatureCard
-                article={second}
-                ratio="standard"
-                headline="text-[1.75rem] leading-[1.03]"
-              />
-            )}
+            <Slots ids={ids(second)} show={1}>
+              {second.map((article) => (
+                <FeatureCard
+                  key={article.id}
+                  article={article}
+                  ratio="standard"
+                  headline="text-[1.75rem] leading-[1.03]"
+                />
+              ))}
+            </Slots>
 
             {stack.length > 0 && (
               <div className="mt-8 border-t-2 border-ink pt-1">
-                {stack.map((article) => (
-                  <article
-                    key={article.id}
-                    className="group border-b border-rule py-4 last:border-b-0"
-                  >
-                    <Link href={`/story/${article.id}`} className="story block">
-                      <Kicker article={article} mute className="mb-1.5" />
-                      <h4 className="headline text-[1.3rem] font-medium leading-[1.18]">
-                        {article.headline}
-                      </h4>
-                      <Meta article={article} className="mt-2" />
-                    </Link>
-                  </article>
-                ))}
+                <Slots ids={ids(stack)} show={3}>
+                  {stack.map((article) => (
+                    <article
+                      key={article.id}
+                      className="group border-b border-rule py-4 last:border-b-0"
+                    >
+                      <Link href={`/story/${article.id}`} className="story block">
+                        <Kicker article={article} mute className="mb-1.5" />
+                        <h4 className="headline text-[1.3rem] font-medium leading-[1.18]">
+                          {article.headline}
+                        </h4>
+                        <Meta article={article} className="mt-2" />
+                      </Link>
+                    </article>
+                  ))}
+                </Slots>
               </div>
             )}
           </div>
@@ -270,14 +345,21 @@ export default async function Home() {
             <div className="ruled grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5">
               {briefColumns.map((column, i) => (
                 <div
-                  key={column[0].id}
+                  key={column.lead[0].id}
                   /* Stacked, the columns need a rule between them in the one
                      direction the ruled grid cannot draw. */
                   className={i > 0 ? "border-t border-rule pt-3 sm:border-t-0 sm:pt-0" : undefined}
                 >
-                  {column.map((article, n) => (
-                    <BriefCard key={article.id} article={article} lead={n === 0} />
-                  ))}
+                  <Slots ids={ids(column.lead)} show={1}>
+                    {column.lead.map((article) => (
+                      <BriefCard key={article.id} article={article} lead />
+                    ))}
+                  </Slots>
+                  <Slots ids={ids(column.rest)} show={1}>
+                    {column.rest.map((article) => (
+                      <BriefCard key={article.id} article={article} />
+                    ))}
+                  </Slots>
                 </div>
               ))}
             </div>
@@ -285,46 +367,50 @@ export default async function Home() {
         )}
 
         {/* ===== THE DWELL ===== */}
-        {dwell && (
+        {dwell.length > 0 && (
           <section className="py-[clamp(48px,5vw,84px)]">
-            <article className="group">
-              <Link href={`/story/${dwell.id}`} className="story block">
-                {/*
-                  * One row: the headline, a plate, and the reporting. The
-                  * picture sits between the two columns of type rather than
-                  * over them — small enough to be read as a plate set into the
-                  * page, which is the one thing on the sheet that a full-width
-                  * photograph cannot be.
-                  */}
-                <div className="grid items-start gap-x-gutter gap-y-8 md:grid-cols-[1.3fr_auto_1fr]">
-                  <div>
-                    <Kicker article={dwell} className="mb-5" />
-                    <h2 className="headline text-[clamp(2rem,3.4vw,3.4rem)] font-normal leading-[1.04]">
-                      {dwell.headline}
-                    </h2>
-                  </div>
+            <Slots ids={ids(dwell)} show={1}>
+              {dwell.map((article) => (
+                <article key={article.id} className="group">
+                  <Link href={`/story/${article.id}`} className="story block">
+                    {/*
+                      * One row: the headline, a plate, and the reporting. The
+                      * picture sits between the two columns of type rather than
+                      * over them — small enough to be read as a plate set into
+                      * the page, which is the one thing on the sheet that a
+                      * full-width photograph cannot be.
+                      */}
+                    <div className="grid items-start gap-x-gutter gap-y-8 md:grid-cols-[1.3fr_auto_1fr]">
+                      <div>
+                        <Kicker article={article} className="mb-5" />
+                        <h2 className="headline text-[clamp(2rem,3.4vw,3.4rem)] font-normal leading-[1.04]">
+                          {article.headline}
+                        </h2>
+                      </div>
 
-                  {dwell.image && (
-                    <Plate
-                      src={dwell.image}
-                      credit={dwell.source}
-                      ratio="landscape"
-                      sizes="(max-width: 768px) 100vw, 320px"
-                      className="w-full max-w-[20rem] md:w-[clamp(190px,17vw,320px)]"
-                    />
-                  )}
+                      {article.image && (
+                        <Plate
+                          src={article.image}
+                          credit={article.source}
+                          ratio="landscape"
+                          sizes="(max-width: 768px) 100vw, 320px"
+                          className="w-full max-w-[20rem] md:w-[clamp(190px,17vw,320px)]"
+                        />
+                      )}
 
-                  <div className="border-t border-rule pt-5 md:border-t-0 md:pt-0 md:rule-l">
-                    {dwell.dek && (
-                      <p className="standfirst text-[1.2rem] leading-[1.58]">
-                        {dwell.dek}
-                      </p>
-                    )}
-                    <Meta article={dwell} className="mt-6" />
-                  </div>
-                </div>
-              </Link>
-            </article>
+                      <div className="border-t border-rule pt-5 md:border-t-0 md:pt-0 md:rule-l">
+                        {article.dek && (
+                          <p className="standfirst text-[1.2rem] leading-[1.58]">
+                            {article.dek}
+                          </p>
+                        )}
+                        <Meta article={article} className="mt-6" />
+                      </div>
+                    </div>
+                  </Link>
+                </article>
+              ))}
+            </Slots>
           </section>
         )}
 
@@ -343,7 +429,7 @@ export default async function Home() {
 
         <section className="ruled grid grid-cols-1 items-start pt-7 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6">
           {sections
-            .filter((section) => section.articles.length > 0)
+            .filter((section) => section.top.length + section.rest.length > 0)
             .map((section, i) => (
               <div
                 key={section.href}
@@ -363,9 +449,16 @@ export default async function Home() {
                   </span>
                 </Link>
 
-                {section.articles.map((article, n) => (
-                  <RunItem key={article.id} article={article} lead={n === 0} />
-                ))}
+                <Slots ids={ids(section.top)} show={1}>
+                  {section.top.map((article) => (
+                    <RunItem key={article.id} article={article} lead />
+                  ))}
+                </Slots>
+                <Slots ids={ids(section.rest)} show={2}>
+                  {section.rest.map((article) => (
+                    <RunItem key={article.id} article={article} />
+                  ))}
+                </Slots>
               </div>
             ))}
         </section>

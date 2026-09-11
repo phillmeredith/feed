@@ -1,22 +1,17 @@
+"use client";
+
 import type { Article, Category } from "@/lib/types";
 import { FeatureCard, ListCard, ThumbCard, RunItem } from "./cards";
 import { BandHead } from "./Band";
+import { useReading } from "./Reading";
+import type { Shape } from "@/lib/shapes";
 
-/**
- * The three shapes a block of a section can take.
- *
- * Both the section fronts and the desk pages are lists of blocks, and both
- * were rendering every block identically — a page of one repeated shape reads
- * as a table of contents however good the writing in it is.
- *
- * Cycling them gives a page a rhythm: pictures, then a picture with the
- * reporting stacked beside it, then headlines in columns. They live here
+/*
+ * The blocks a section front and a desk page are built from. They live here
  * rather than in either page so the two stay in the same language — and the
  * same language the front page speaks, which is ruled columns of equal width
- * under a banded head.
+ * under a banded head. `lib/shapes` holds the list of them.
  */
-export const SHAPES = ["gallery", "split", "index"] as const;
-export type Shape = (typeof SHAPES)[number];
 
 export function SectionBlock({
   title,
@@ -40,7 +35,21 @@ export function SectionBlock({
    */
   showDesk?: boolean;
 }) {
-  if (articles.length === 0) return null;
+  /*
+   * A block of a section skips what the reader has already read.
+   *
+   * The filter sits here rather than in the three shapes below it because
+   * this is the only one of the four that is handed a desk's whole list and
+   * asked for a sample of it — so it has the material to close the gap, and
+   * the shapes can stay honest about drawing exactly what they are given.
+   * Read the desk dry and the block shows it anyway; a section front with a
+   * heading over nothing says less than one repeating itself.
+   */
+  const { ready, read } = useReading();
+  const unread = ready ? articles.filter((a) => !read.has(a.id)) : articles;
+  const shown = unread.length > 0 ? unread : articles;
+
+  if (shown.length === 0) return null;
 
   return (
     <section>
@@ -51,9 +60,9 @@ export function SectionBlock({
         more={`All ${total ?? articles.length} stories`}
       />
 
-      {shape === "gallery" && <Gallery articles={articles} showDesk={showDesk} />}
-      {shape === "split" && <Split articles={articles} showDesk={showDesk} />}
-      {shape === "index" && <Index articles={articles} showDesk={showDesk} />}
+      {shape === "gallery" && <Gallery articles={shown} showDesk={showDesk} />}
+      {shape === "split" && <Split articles={shown} showDesk={showDesk} />}
+      {shape === "index" && <Index articles={shown} showDesk={showDesk} />}
     </section>
   );
 }
