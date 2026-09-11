@@ -23,3 +23,25 @@ jobs:
             code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 "$BASE/$path")
             echo "$code  /$path"
           done
+
+      # The stories the front page is actually pointing at.
+      #
+      # A story page is cacheable and always has been, and nothing had ever
+      # warmed one. On a site this quiet the reader is almost always the first
+      # visitor to a given story, so clicking a headline on the front page paid
+      # the whole cold render — forty feeds, and where the publisher syndicates
+      # only a teaser, a live fetch and parse of the article. Three to five
+      # seconds, measured on five of the first six links on the page.
+      #
+      # Taken from the front page itself rather than from a list, because which
+      # stories it leads on is exactly what changes every cycle. They hold for
+      # an hour now, so most of these are already warm and cost a HIT.
+      - name: Warm what the front page links to
+        run: |
+          BASE="${{ vars.SITE_URL || 'https://feed-theta-ten.vercel.app' }}"
+          curl -s --max-time 60 "$BASE/" \
+            | grep -o '"/story/[a-z0-9-]*"' | tr -d '"' | sort -u | head -30 \
+            | while read -r path; do
+                code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 60 "$BASE$path")
+                echo "$code  $path"
+              done

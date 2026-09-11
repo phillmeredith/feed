@@ -11,7 +11,24 @@ import { relativeDate } from "@/lib/format";
 import { categoryBySlug } from "@/lib/categories";
 import { getStory } from "@/lib/feed";
 
-export const revalidate = 600;
+/*
+ * An hour, not ten minutes — the one page on the site that is a document
+ * rather than a feed.
+ *
+ * Everything else here revalidates on the ten-minute cycle because everything
+ * else here is the news changing underneath it. A published article does not
+ * change: the body is fetched once and is then as final as the publisher's own
+ * page. The only thing on this page that moves is the five related stories at
+ * the foot, and an hour-old list of what else that desk has filed is not worth
+ * re-reading forty feeds and re-parsing an article for.
+ *
+ * At ten minutes these pages fell out of the cache six times an hour, which no
+ * amount of warming could keep up with, so a reader clicking through from the
+ * front page was nearly always the first visitor to a cold page and paid the
+ * whole render: three to five seconds, measured on five of the first six links
+ * on the front page.
+ */
+export const revalidate = 3600;
 // Feed fetching and extraction need more than the default budget.
 export const maxDuration = 60;
 
