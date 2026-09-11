@@ -109,9 +109,13 @@ npm run build && npm run routes:check
 
 That fails if any page renders per request without being named, with its
 reason, in `DELIBERATE` in `scripts/check-routes.ts` — and warns if a desk has
-been added without being added to the refresh workflow's warm list. The deploy
-workflow runs it between building and shipping, so a regression stops there
-rather than reaching readers.
+been added without being added to the refresh workflow's warm list.
+
+It runs in two places, deliberately. `deploy.yml` runs it between building and
+shipping, so a regression stops before it reaches readers. `routes.yml` runs it
+on every push and pull request, because Deploy needs Vercel credentials and
+this does not — and a deploy workflow that cannot authenticate fails in ten
+seconds and takes every check inside it down with it.
 
 ## Deploying
 

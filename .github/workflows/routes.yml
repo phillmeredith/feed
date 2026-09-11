@@ -1,0 +1,36 @@
+# Catches a page that has quietly stopped being cached.
+#
+# This repo's one recurring performance bug is a route that starts rendering
+# per request — a query string, or a dynamic segment with no
+# `generateStaticParams`. The page still works, so it ships; it just costs
+# every reader forty RSS feeds and their extraction, three to seven seconds,
+# and the refresh cron then warms nothing, because a per-request page has no
+# cache to warm. Found and fixed by hand three times.
+#
+# The same check runs in Deploy, between building and shipping. It lives here
+# as well because Deploy needs Vercel credentials and this does not: when those
+# secrets are missing — which is the state that let fifteen deploys in a row
+# fail silently — this still runs, and still says so.
+name: Routes
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  cached:
+    runs-on: ubuntu-latest
+    # A build here is a real build: forty feeds, extraction, three hundred
+    # prerendered pages.
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run build
+      - name: Every page is still cached
+        run: npm run routes:check
