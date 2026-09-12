@@ -1,7 +1,99 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-11T09:43:34.646Z",
+  "updated": "2026-09-12T09:23:03.021Z",
   "items": [
+    {
+      "id": "inference-net/schematron-v2-turbo",
+      "name": "Schematron V2 Turbo",
+      "lab": "inference-net",
+      "inputPrice": 0.03,
+      "outputPrice": 0.15,
+      "contextTokens": 128000,
+      "modality": "text->text",
+      "inputModalities": [
+        "text"
+      ],
+      "releasedAt": "2026-09-12T01:35:49.000Z",
+      "description": "Schematron V2 Turbo is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes throughput for high-volume extraction workloads. Extraction instructions must be supplied through a JSON schema in response_format rather..."
+    },
+    {
+      "id": "inference-net/schematron-v2-small",
+      "name": "Schematron V2 Small",
+      "lab": "inference-net",
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.22999999999999998,
+      "contextTokens": 128000,
+      "modality": "text->text",
+      "inputModalities": [
+        "text"
+      ],
+      "releasedAt": "2026-09-12T01:35:33.000Z",
+      "description": "Schematron V2 Small is a 3B-parameter HTML-to-JSON extraction model from Inference.net. It prioritizes extraction quality for complex schemas and long pages. Extraction instructions must be supplied through a JSON schema..."
+    },
+    {
+      "id": "~openai/gpt-astra-latest",
+      "name": "GPT Astra Latest",
+      "lab": "~openai",
+      "inputPrice": 10,
+      "outputPrice": 50,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-11T12:48:52.000Z",
+      "description": "This model always redirects to the latest model in the GPT Astra family."
+    },
+    {
+      "id": "~openai/gpt-sol-latest",
+      "name": "GPT Sol Latest",
+      "lab": "~openai",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-11T12:48:48.000Z",
+      "description": "This model always redirects to the latest model in the GPT Sol family."
+    },
+    {
+      "id": "~openai/gpt-terra-latest",
+      "name": "GPT Terra Latest",
+      "lab": "~openai",
+      "inputPrice": 2,
+      "outputPrice": 12,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-11T12:48:45.000Z",
+      "description": "This model always redirects to the latest model in the GPT Terra family."
+    },
+    {
+      "id": "~openai/gpt-luna-latest",
+      "name": "GPT Luna Latest",
+      "lab": "~openai",
+      "inputPrice": 0.19999999999999998,
+      "outputPrice": 1.2,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-11T12:48:42.000Z",
+      "description": "This model always redirects to the latest model in the GPT Luna family."
+    },
     {
       "id": "sakana/fugu-ultra-v2",
       "name": "Fugu Ultra v2",
@@ -35,6 +127,22 @@
       "description": "Fugu Max is the cost-performance model in Sakana AI's Fugu family. Rather than a single monolithic model, Fugu is a learned multi-agent orchestration system: a language model trained to route..."
     },
     {
+      "id": "inclusionai/ling-3.0-flash-vl",
+      "name": "Ling 3.0 Flash VL",
+      "lab": "inclusionai",
+      "inputPrice": 0.06,
+      "outputPrice": 0.18,
+      "contextTokens": 131072,
+      "modality": "text+image+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-09-10T16:01:54.000Z",
+      "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual..."
+    },
+    {
       "id": "inclusionai/ling-3.0-flash-vl:free",
       "name": "Ling 3.0 Flash VL (free)",
       "lab": "inclusionai",
@@ -54,8 +162,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -399,8 +507,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.15,
-      "outputPrice": 0.5,
+      "inputPrice": 0.075,
+      "outputPrice": 0.25,
       "contextTokens": 1310720,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -507,8 +615,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.9700000000000001,
-      "outputPrice": 3.3077,
+      "inputPrice": 0.8727,
+      "outputPrice": 3.36,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -563,8 +671,8 @@
       "id": "qwen/qwen3.8-27b",
       "name": "Qwen3.8 27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.42,
-      "outputPrice": 3,
+      "inputPrice": 0.21400000000000002,
+      "outputPrice": 2.5500000000000003,
       "contextTokens": 1000000,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -690,8 +798,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 0.66,
-      "outputPrice": 1.9800000000000002,
+      "inputPrice": 0.57816,
+      "outputPrice": 1.73448,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -854,8 +962,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.049999999999999996,
-      "outputPrice": 0.16,
+      "inputPrice": 0.03,
+      "outputPrice": 0.07,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -868,8 +976,8 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.065,
-      "outputPrice": 0.18,
+      "inputPrice": 0.04,
+      "outputPrice": 0.08,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1168,8 +1276,8 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 2.34,
-      "outputPrice": 11.7,
+      "inputPrice": 2.30272875,
+      "outputPrice": 11.550195,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1632,8 +1740,8 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM 5.2",
       "lab": "Zhipu AI",
-      "inputPrice": 0.966,
-      "outputPrice": 3.036,
+      "inputPrice": 0.6,
+      "outputPrice": 2,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2089,7 +2197,7 @@
     },
     {
       "id": "~anthropic/claude-haiku-latest",
-      "name": "Anthropic Claude Haiku Latest",
+      "name": "Claude Haiku Latest",
       "lab": "~anthropic",
       "inputPrice": 1,
       "outputPrice": 5,
@@ -2101,11 +2209,11 @@
         "file"
       ],
       "releasedAt": "2026-04-27T19:34:52.000Z",
-      "description": "This model always redirects to the latest model in the Anthropic Claude Haiku family."
+      "description": "This model always redirects to the latest model in the Claude Haiku family."
     },
     {
       "id": "~openai/gpt-mini-latest",
-      "name": "OpenAI GPT Mini Latest",
+      "name": "GPT Mini Latest",
       "lab": "~openai",
       "inputPrice": 0.75,
       "outputPrice": 4.5,
@@ -2117,11 +2225,11 @@
         "text"
       ],
       "releasedAt": "2026-04-27T19:34:31.000Z",
-      "description": "This model always redirects to the latest model in the OpenAI GPT Mini family."
+      "description": "This model always redirects to the latest model in the GPT Mini family."
     },
     {
       "id": "~google/gemini-pro-latest",
-      "name": "Google Gemini Pro Latest",
+      "name": "Gemini Pro Latest",
       "lab": "~google",
       "inputPrice": 2,
       "outputPrice": 12,
@@ -2135,14 +2243,14 @@
         "video"
       ],
       "releasedAt": "2026-04-27T19:34:11.000Z",
-      "description": "This model always redirects to the latest model in the Google Gemini Pro family."
+      "description": "This model always redirects to the latest model in the Gemini Pro family."
     },
     {
       "id": "~moonshotai/kimi-latest",
-      "name": "MoonshotAI Kimi Latest",
+      "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 2.34,
-      "outputPrice": 11.7,
+      "inputPrice": 2.125,
+      "outputPrice": 11.9,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2151,11 +2259,11 @@
         "video"
       ],
       "releasedAt": "2026-04-27T19:33:48.000Z",
-      "description": "This model always redirects to the latest model in the MoonshotAI Kimi family."
+      "description": "This model always redirects to the latest model in the Kimi family."
     },
     {
       "id": "~google/gemini-flash-latest",
-      "name": "Google Gemini Flash Latest",
+      "name": "Gemini Flash Latest",
       "lab": "~google",
       "inputPrice": 0.75,
       "outputPrice": 3.75,
@@ -2169,11 +2277,11 @@
         "audio"
       ],
       "releasedAt": "2026-04-27T19:33:18.000Z",
-      "description": "This model always redirects to the latest model in the Google Gemini Flash family."
+      "description": "This model always redirects to the latest model in the Gemini Flash family."
     },
     {
       "id": "~anthropic/claude-sonnet-latest",
-      "name": "Anthropic Claude Sonnet Latest",
+      "name": "Claude Sonnet Latest",
       "lab": "~anthropic",
       "inputPrice": 2,
       "outputPrice": 10,
@@ -2185,23 +2293,7 @@
         "file"
       ],
       "releasedAt": "2026-04-27T19:32:48.000Z",
-      "description": "This model always redirects to the latest model in the Anthropic Claude Sonnet family."
-    },
-    {
-      "id": "~openai/gpt-latest",
-      "name": "OpenAI GPT Latest",
-      "lab": "~openai",
-      "inputPrice": 2,
-      "outputPrice": 10,
-      "contextTokens": 1050000,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "file",
-        "image",
-        "text"
-      ],
-      "releasedAt": "2026-04-27T19:32:14.000Z",
-      "description": "This model always redirects to the latest model in the OpenAI GPT family."
+      "description": "This model always redirects to the latest model in the Claude Sonnet family."
     },
     {
       "id": "qwen/qwen3.5-plus-20260420",
@@ -2349,8 +2441,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.9552599999999999,
-      "outputPrice": 1.9105199999999998,
+      "inputPrice": 0.809274,
+      "outputPrice": 1.618548,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2363,8 +2455,8 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.088606,
-      "outputPrice": 0.177212,
+      "inputPrice": 0.06678,
+      "outputPrice": 0.13356,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -4941,8 +5033,8 @@
       "id": "qwen/qwen3-235b-a22b-2507",
       "name": "Qwen3 235B A22B Instruct 2507",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.22,
-      "outputPrice": 0.88,
+      "inputPrice": 0.0875,
+      "outputPrice": 0.35,
       "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
@@ -5042,7 +5134,7 @@
       "lab": "Mistral AI",
       "inputPrice": 0.075,
       "outputPrice": 0.19999999999999998,
-      "contextTokens": 131072,
+      "contextTokens": 256000,
       "modality": "text+image->text",
       "inputModalities": [
         "image",
