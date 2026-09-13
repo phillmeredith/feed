@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-12T09:23:22.487Z",
+  "updated": "2026-09-13T10:19:08.949Z",
   "events": [
     {
       "id": "600057024",
@@ -5578,7 +5578,7 @@
       "id": "600060772",
       "name": "Noche UFC: Silva vs. Delgado",
       "date": "2026-09-12T18:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Desert Diamond Arena",
       "location": "Glendale, USA",
       "fights": [
@@ -5589,18 +5589,24 @@
             "JJ Aldrich",
             "Regina Tarin"
           ],
+          "winner": "Regina Tarin",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
           "weightClass": "Featherweight",
           "fighters": [
             "Jessie Rosas",
-            "Sean King"
+            "Sean King III"
           ],
+          "winner": "Sean King III",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5609,8 +5615,11 @@
             "Rafa Garcia",
             "Rongzhu"
           ],
+          "winner": "Rongzhu",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5619,8 +5628,11 @@
             "Drakkar Klose",
             "Tommy Gantt"
           ],
+          "winner": "Tommy Gantt",
+          "method": "Submission",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5629,8 +5641,11 @@
             "Yousri Belgaroui",
             "Djorden Santos"
           ],
+          "winner": "Yousri Belgaroui",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5639,8 +5654,11 @@
             "Muslim Salikhov",
             "Ignacio Bahamondes"
           ],
+          "winner": "Ignacio Bahamondes",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5649,8 +5667,11 @@
             "Tim Elliott",
             "Édgar Cháirez"
           ],
+          "winner": "Tim Elliott",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5659,8 +5680,11 @@
             "Dan Ige",
             "David Martinez"
           ],
+          "winner": "David Martinez",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5669,8 +5693,11 @@
             "Curtis Blaydes",
             "Waldo Cortes Acosta"
           ],
+          "winner": "Curtis Blaydes",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5679,8 +5706,11 @@
             "Alexa Grasso",
             "Manon Fiorot"
           ],
+          "winner": "Alexa Grasso",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5689,8 +5719,11 @@
             "Tommy McMillen",
             "Marwan Rahiki"
           ],
+          "winner": "Tommy McMillen",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5699,8 +5732,11 @@
             "Brandon Moreno",
             "Joseph Morales"
           ],
+          "winner": "Brandon Moreno",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5709,8 +5745,11 @@
             "Jean Silva",
             "Jose Miguel Delgado"
           ],
+          "winner": "Jean Silva",
+          "method": "Submission",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -6404,6 +6443,16 @@
       "fights": [
         {
           "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Alexander Volkov",
+            "Rizvan Kuniev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Lightweight",
           "fighters": [
             "Grant Dawson",
@@ -6433,21 +6482,11 @@
           "completed": false
         },
         {
-          "segment": "prelim",
+          "segment": "main",
           "weightClass": "Light Heavyweight",
           "fighters": [
             "Azamat Murzakanov",
             "Dominick Reyes"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Alexander Volkov",
-            "Rizvan Kuniev"
           ],
           "headline": false,
           "completed": false

@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-12T09:23:03.021Z",
+  "updated": "2026-09-13T10:18:51.160Z",
   "items": [
     {
       "id": "inference-net/schematron-v2-turbo",
@@ -507,8 +507,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.075,
-      "outputPrice": 0.25,
+      "inputPrice": 0.15,
+      "outputPrice": 0.5,
       "contextTokens": 1310720,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -615,8 +615,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.8727,
-      "outputPrice": 3.36,
+      "inputPrice": 0.936,
+      "outputPrice": 3.168,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -643,8 +643,8 @@
       "id": "z-ai/glm-5.3",
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
-      "inputPrice": 1.4,
-      "outputPrice": 4.4,
+      "inputPrice": 1.092,
+      "outputPrice": 3.432,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -914,8 +914,8 @@
       "id": "meta/muse-glimmer-30b",
       "name": "Muse Glimmer 30B",
       "lab": "meta",
-      "inputPrice": 0.3,
-      "outputPrice": 1.1,
+      "inputPrice": 0.35,
+      "outputPrice": 1.5,
       "contextTokens": 131072,
       "modality": "text+image->text",
       "inputModalities": [
@@ -962,8 +962,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.03,
-      "outputPrice": 0.07,
+      "inputPrice": 0.035199999999999995,
+      "outputPrice": 0.1056,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1276,8 +1276,8 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 2.30272875,
-      "outputPrice": 11.550195,
+      "inputPrice": 2.6481380629999998,
+      "outputPrice": 13.282724250000001,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2249,8 +2249,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 2.125,
-      "outputPrice": 11.9,
+      "inputPrice": 2.0999999999999996,
+      "outputPrice": 10.950000000000001,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2441,8 +2441,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.809274,
-      "outputPrice": 1.618548,
+      "inputPrice": 1.5999999999999999,
+      "outputPrice": 3.1999999999999997,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2455,8 +2455,8 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.06678,
-      "outputPrice": 0.13356,
+      "inputPrice": 0.049280000000000004,
+      "outputPrice": 0.09856000000000001,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2607,8 +2607,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B ",
       "lab": "Google",
-      "inputPrice": 0.041999999999999996,
-      "outputPrice": 0.22,
+      "inputPrice": 0.09,
+      "outputPrice": 0.3,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3362,8 +3362,8 @@
       "id": "minimax/minimax-m2.5",
       "name": "MiniMax M2.5",
       "lab": "minimax",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 0.27,
+      "outputPrice": 1.08,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -4912,8 +4912,8 @@
       "id": "qwen/qwen3-30b-a3b-instruct-2507",
       "name": "Qwen3 30B A3B Instruct 2507",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.09,
-      "outputPrice": 0.3,
+      "inputPrice": 0.04815,
+      "outputPrice": 0.19305,
       "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
@@ -6347,8 +6347,8 @@
       "id": "meta-llama/llama-3.1-70b-instruct",
       "name": "Llama 3.1 70B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.72,
-      "outputPrice": 0.72,
+      "inputPrice": 0.39999999999999997,
+      "outputPrice": 0.39999999999999997,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
