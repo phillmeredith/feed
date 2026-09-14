@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-09-13T10:22:00.209Z",
+  "updated": "2026-09-14T10:50:48.003Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -623,6 +623,20 @@
       "kind": "qualifying",
       "videoId": "aTqIIB2HrNg",
       "title": "Qualifying Highlights | 2026 Italian Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:14",
+      "kind": "race",
+      "videoId": "NK7AfP_wi8M",
+      "title": "Race Highlights | 2026 Spanish Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:14",
+      "kind": "qualifying",
+      "videoId": "C99UPegyFsM",
+      "title": "Qualifying Highlights | 2026 Spanish Grand Prix",
       "channel": "FORMULA 1"
     }
   ]
