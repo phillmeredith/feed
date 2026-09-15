@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-14T10:42:35.018Z",
+  "updated": "2026-09-15T10:06:43.452Z",
   "events": [
     {
       "id": "600057024",
@@ -5892,7 +5892,7 @@
           "completed": false
         },
         {
-          "segment": "prelim",
+          "segment": "main",
           "weightClass": "Heavyweight",
           "fighters": [
             "Gable Steveson",
@@ -5907,16 +5907,6 @@
           "fighters": [
             "Alonzo Menifield",
             "Iwo Baraniewski"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "Lightweight",
-          "fighters": [
-            "Renato Moicano",
-            "Brian Ortega"
           ],
           "headline": false,
           "completed": false

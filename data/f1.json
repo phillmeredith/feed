@@ -1,7 +1,7 @@
 {
   "season": "2026",
   "round": 14,
-  "updated": "2026-09-14T10:42:22.649Z",
+  "updated": "2026-09-15T10:06:28.046Z",
   "drivers": [
     {
       "position": 1,
@@ -2939,7 +2939,7 @@
       "date": "2026-11-29",
       "time": "16:00:00Z",
       "circuitId": "losail",
-      "circuitName": "Losail International Circuit",
+      "circuitName": "Lusail International Circuit",
       "locality": "Lusail",
       "country": "Qatar",
       "sessions": [
