@@ -1,13 +1,13 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-15T10:06:19.159Z",
+  "updated": "2026-09-16T09:58:16.173Z",
   "items": [
     {
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.66,
-      "outputPrice": 1.9800000000000002,
+      "inputPrice": 0.96,
+      "outputPrice": 2.88,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -191,8 +191,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
+      "inputPrice": 0.3,
+      "outputPrice": 1.2,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -536,8 +536,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.15,
-      "outputPrice": 0.5,
+      "inputPrice": 0.09999999999999999,
+      "outputPrice": 0.3333,
       "contextTokens": 1310720,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1036,22 +1036,6 @@
       "inputPrice": 0.44999999999999996,
       "outputPrice": 1.2,
       "contextTokens": 1048576,
-      "modality": "text+image+audio->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "releasedAt": "2026-07-30T20:25:17.000Z",
-      "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of..."
-    },
-    {
-      "id": "thinkingmachines/inkling-small:batch",
-      "name": "Inkling Small (batch)",
-      "lab": "thinkingmachines",
-      "inputPrice": 0.5,
-      "outputPrice": 1.2,
-      "contextTokens": 524288,
       "modality": "text+image+audio->text",
       "inputModalities": [
         "text",
@@ -1794,11 +1778,25 @@
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
     },
     {
+      "id": "z-ai/glm-5.2:free",
+      "name": "GLM 5.2 (free)",
+      "lab": "Zhipu AI",
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "contextTokens": 32768,
+      "modality": "text->text",
+      "inputModalities": [
+        "text"
+      ],
+      "releasedAt": "2026-06-16T17:45:30.000Z",
+      "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
+    },
+    {
       "id": "moonshotai/kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "lab": "Moonshot AI",
-      "inputPrice": 0.71,
-      "outputPrice": 3.5,
+      "inputPrice": 0.7062,
+      "outputPrice": 3.21,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1890,8 +1888,8 @@
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra",
       "lab": "NVIDIA",
-      "inputPrice": 0.6,
-      "outputPrice": 2.4,
+      "inputPrice": 0.625,
+      "outputPrice": 3.125,
       "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
@@ -2278,8 +2276,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 2.0999999999999996,
-      "outputPrice": 10.950000000000001,
+      "inputPrice": 1.875,
+      "outputPrice": 10.5,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2670,22 +2668,6 @@
       "lab": "Google",
       "inputPrice": 0.09,
       "outputPrice": 0.33999999999999997,
-      "contextTokens": 262144,
-      "modality": "text+image+video->text",
-      "inputModalities": [
-        "image",
-        "text",
-        "video"
-      ],
-      "releasedAt": "2026-04-02T16:48:06.000Z",
-      "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function..."
-    },
-    {
-      "id": "google/gemma-4-31b-it:batch",
-      "name": "Gemma 4 31B (batch)",
-      "lab": "Google",
-      "inputPrice": 0.39,
-      "outputPrice": 0.9700000000000001,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -4848,20 +4830,6 @@
       "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
     },
     {
-      "id": "openai/gpt-oss-20b:batch",
-      "name": "gpt-oss-20b (batch)",
-      "lab": "OpenAI",
-      "inputPrice": 0.049999999999999996,
-      "outputPrice": 0.19999999999999998,
-      "contextTokens": 131072,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2025-08-05T17:17:09.000Z",
-      "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
-    },
-    {
       "id": "anthropic/claude-opus-4.1",
       "name": "Claude Opus 4.1",
       "lab": "Anthropic",
@@ -5161,8 +5129,8 @@
       "id": "mistralai/mistral-small-3.2-24b-instruct",
       "name": "Mistral Small 3.2 24B",
       "lab": "Mistral AI",
-      "inputPrice": 0.075,
-      "outputPrice": 0.19999999999999998,
+      "inputPrice": 0.09375,
+      "outputPrice": 0.25,
       "contextTokens": 256000,
       "modality": "text+image->text",
       "inputModalities": [
@@ -5176,7 +5144,7 @@
       "id": "minimax/minimax-m1",
       "name": "MiniMax M1",
       "lab": "minimax",
-      "inputPrice": 0.55,
+      "inputPrice": 0.39999999999999997,
       "outputPrice": 2.2,
       "contextTokens": 1000000,
       "modality": "text->text",

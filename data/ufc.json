@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-15T10:06:43.452Z",
+  "updated": "2026-09-16T09:58:36.847Z",
   "events": [
     {
       "id": "600057024",
@@ -5757,7 +5757,7 @@
       "id": "600060737",
       "name": "Dana White's Contender Series: Season 10, Week 6",
       "date": "2026-09-15T23:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
@@ -5768,8 +5768,11 @@
             "Antonio Monteiro",
             "Tyshawn Williams"
           ],
+          "winner": "Tyshawn Williams",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5778,8 +5781,11 @@
             "Hugo Guillon",
             "Luis Hernandez"
           ],
+          "winner": "Luis Hernandez",
+          "method": "Submission",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5788,8 +5794,11 @@
             "Ednilson Santos",
             "Akbar Abdullaev"
           ],
+          "winner": "Akbar Abdullaev",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5798,8 +5807,11 @@
             "Oscar Ravello",
             "Igor Cavalcanti"
           ],
+          "winner": "Igor Cavalcanti",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5808,8 +5820,11 @@
             "Zevan Hunt",
             "Mayton Perea"
           ],
+          "winner": "Mayton Perea",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -5893,20 +5908,20 @@
         },
         {
           "segment": "main",
-          "weightClass": "Heavyweight",
+          "weightClass": "Light Heavyweight",
           "fighters": [
-            "Gable Steveson",
-            "Sean Sharaf"
+            "Alonzo Menifield",
+            "Iwo Baraniewski"
           ],
           "headline": false,
           "completed": false
         },
         {
           "segment": "main",
-          "weightClass": "Light Heavyweight",
+          "weightClass": "Heavyweight",
           "fighters": [
-            "Alonzo Menifield",
-            "Iwo Baraniewski"
+            "Gable Steveson",
+            "Sean Sharaf"
           ],
           "headline": false,
           "completed": false
@@ -5953,10 +5968,50 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "",
+          "weightClass": "Light Heavyweight",
           "fighters": [
-            "TBA",
-            "Opponent TBA"
+            "Damian Piwowarczyk",
+            "Emilio Quissua"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Callum Connor",
+            "Piero Guaylupo"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Paris Moran",
+            "Marcos Degli"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Jaden Ortega",
+            "Alvi Dasuyev"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Norbert Növényi Jr.",
+            "Theo Haig"
           ],
           "headline": true,
           "completed": false
