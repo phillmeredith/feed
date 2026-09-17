@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-16T09:58:36.847Z",
+  "updated": "2026-09-17T10:01:05.147Z",
   "events": [
     {
       "id": "600057024",
@@ -6579,11 +6579,44 @@
       ]
     },
     {
-      "id": "scheduled:2026-11-01T00:00Z",
-      "name": "UFC Fight Night: Las Vegas",
-      "date": "2026-11-01T00:00Z",
+      "id": "600061420",
+      "name": "UFC Fight Night: Moicano vs. Nolan",
+      "date": "2026-10-31T21:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Joe Kropschot",
+            "Nick Klein"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Tainara Lisboa",
+            "Lucia Szabova"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Renato Moicano",
+            "Tom Nolan"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
       "id": "scheduled:2026-11-08T01:00Z",
