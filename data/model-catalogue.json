@@ -1,21 +1,21 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-17T10:00:20.054Z",
+  "updated": "2026-09-18T09:47:21.565Z",
   "items": [
     {
-      "id": "stealth/union-alpha",
-      "name": "Union Alpha",
-      "lab": "stealth",
-      "inputPrice": 0,
-      "outputPrice": 0,
+      "id": "unbiased/pareto",
+      "name": "Pareto",
+      "lab": "unbiased",
+      "inputPrice": 2.5,
+      "outputPrice": 7.5,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [
         "text",
         "image"
       ],
-      "releasedAt": "2026-09-16T14:42:03.000Z",
-      "description": "Union Alpha is a multimodal model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. Union Alpha is a stealth model...."
+      "releasedAt": "2026-09-17T23:02:58.000Z",
+      "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks."
     },
     {
       "id": "~deepseek/deepseek-pro-latest",
@@ -35,8 +35,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
+      "inputPrice": 0.14850000000000002,
+      "outputPrice": 0.5940000000000001,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -601,8 +601,8 @@
       "id": "deepseek/deepseek-v4-flash-vision-exp",
       "name": "DeepSeek V4 Flash Vision Exp",
       "lab": "DeepSeek",
-      "inputPrice": 0.22,
-      "outputPrice": 0.66,
+      "inputPrice": 0.21559999999999999,
+      "outputPrice": 0.6468,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -718,6 +718,22 @@
       "inputPrice": 0.21400000000000002,
       "outputPrice": 2.5500000000000003,
       "contextTokens": 1000000,
+      "modality": "text+image+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-08-14T15:55:10.000Z",
+      "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be..."
+    },
+    {
+      "id": "qwen/qwen3.8-27b:free",
+      "name": "Qwen3.8 27B (free)",
+      "lab": "Alibaba (Qwen)",
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
         "text",
@@ -958,8 +974,8 @@
       "id": "meta/muse-glimmer-30b",
       "name": "Muse Glimmer 30B",
       "lab": "meta",
-      "inputPrice": 0.35,
-      "outputPrice": 1.5,
+      "inputPrice": 0.3,
+      "outputPrice": 1.1,
       "contextTokens": 131072,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1006,8 +1022,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.03,
-      "outputPrice": 0.13,
+      "inputPrice": 0.055799999999999995,
+      "outputPrice": 0.1767,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1036,6 +1052,20 @@
       "lab": "DeepSeek",
       "inputPrice": 0.11,
       "outputPrice": 0.33,
+      "contextTokens": 1048576,
+      "modality": "text->text",
+      "inputModalities": [
+        "text"
+      ],
+      "releasedAt": "2026-07-31T06:21:48.000Z",
+      "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows...."
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731:free",
+      "name": "DeepSeek V4 Flash 0731 (free)",
+      "lab": "DeepSeek",
+      "inputPrice": 0,
+      "outputPrice": 0,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1304,8 +1334,8 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 3,
-      "outputPrice": 15,
+      "inputPrice": 2.0999999999999996,
+      "outputPrice": 10.950000000000001,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1768,8 +1798,8 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM 5.2",
       "lab": "Zhipu AI",
-      "inputPrice": 1.4,
-      "outputPrice": 4.4,
+      "inputPrice": 0.5625,
+      "outputPrice": 1.7999999999999998,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -3945,22 +3975,6 @@
       "description": "The smallest model in the Ministral 3 family, Ministral 3 3B is a powerful, efficient tiny language model with vision capabilities."
     },
     {
-      "id": "mistralai/mistral-large-2512",
-      "name": "Mistral Large 3 2512",
-      "lab": "Mistral AI",
-      "inputPrice": 0.5,
-      "outputPrice": 1.5,
-      "contextTokens": 262144,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "releasedAt": "2025-12-01T21:27:52.000Z",
-      "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license."
-    },
-    {
       "id": "mistralai/mistral-large-2512:batch",
       "name": "Mistral Large 3 2512 (batch)",
       "lab": "Mistral AI",
@@ -4806,8 +4820,8 @@
       "id": "openai/gpt-oss-120b",
       "name": "gpt-oss-120b",
       "lab": "OpenAI",
-      "inputPrice": 0.037,
-      "outputPrice": 0.16999999999999998,
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
@@ -5996,8 +6010,8 @@
       "id": "deepseek/deepseek-chat",
       "name": "DeepSeek V3",
       "lab": "DeepSeek",
-      "inputPrice": 0.2574,
-      "outputPrice": 1.0287,
+      "inputPrice": 0.32,
+      "outputPrice": 0.8899999999999999,
       "contextTokens": 163840,
       "modality": "text->text",
       "inputModalities": [

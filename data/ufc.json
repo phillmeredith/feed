@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-17T10:01:05.147Z",
+  "updated": "2026-09-18T09:47:41.581Z",
   "events": [
     {
       "id": "600057024",
@@ -6629,6 +6629,13 @@
       "id": "scheduled:2026-11-15T01:00Z",
       "name": "UFC 334",
       "date": "2026-11-15T01:00Z",
+      "status": "Scheduled",
+      "fights": []
+    },
+    {
+      "id": "scheduled:2026-11-21T17:00Z",
+      "name": "UFC Fight Night: Qatar",
+      "date": "2026-11-21T17:00Z",
       "status": "Scheduled",
       "fights": []
     },
