@@ -1,7 +1,38 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-18T09:47:21.565Z",
+  "updated": "2026-09-19T09:32:55.952Z",
   "items": [
+    {
+      "id": "prism-ml/ternary-bonsai-2-27b",
+      "name": "Ternary Bonsai 2 27B",
+      "lab": "prism-ml",
+      "inputPrice": 0.075,
+      "outputPrice": 0.5,
+      "contextTokens": 262144,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-09-18T17:54:06.000Z",
+      "description": "Bonsai 2 27B is a 27B-parameter reasoning model from PrismML derived from Qwen3.8-27B. It supports coding, mathematics, tool calling, and image understanding with a 262K-token context window. Ternary compression shrinks..."
+    },
+    {
+      "id": "z-ai/glm-5.3-flashx",
+      "name": "GLM 5.3 FlashX",
+      "lab": "Zhipu AI",
+      "inputPrice": 0.37,
+      "outputPrice": 1.25,
+      "contextTokens": 1048576,
+      "modality": "text+image+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-09-18T15:07:00.000Z",
+      "description": "GLM-5.3-FlashX is the high-speed variant of Z.ai's GLM-5.3-Flash, a native multimodal model delivering inference speeds of up to 200 tokens/s. Built on the same hybrid sparse and linear attention architecture..."
+    },
     {
       "id": "unbiased/pareto",
       "name": "Pareto",
@@ -21,8 +52,8 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.7,
-      "outputPrice": 2.96,
+      "inputPrice": 0.57816,
+      "outputPrice": 1.73448,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -35,8 +66,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.14850000000000002,
-      "outputPrice": 0.5940000000000001,
+      "inputPrice": 0.13,
+      "outputPrice": 0.52,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -206,8 +237,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -659,8 +690,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.8775,
-      "outputPrice": 2.9699999999999998,
+      "inputPrice": 0.8917999999999999,
+      "outputPrice": 2.8028,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -687,8 +718,8 @@
       "id": "z-ai/glm-5.3",
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
-      "inputPrice": 1.4,
-      "outputPrice": 4.4,
+      "inputPrice": 0.9099999999999999,
+      "outputPrice": 2.8600000000000003,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -858,8 +889,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 1.32,
-      "outputPrice": 3.9600000000000004,
+      "inputPrice": 0.57816,
+      "outputPrice": 1.73448,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -916,7 +947,7 @@
       "id": "nvidia/nemotron-3.5-lightning",
       "name": "Nemotron 3.5 Lightning",
       "lab": "NVIDIA",
-      "inputPrice": 0.08,
+      "inputPrice": 0.07,
       "outputPrice": 0.19999999999999998,
       "contextTokens": 262144,
       "modality": "text->text",
@@ -974,8 +1005,8 @@
       "id": "meta/muse-glimmer-30b",
       "name": "Muse Glimmer 30B",
       "lab": "meta",
-      "inputPrice": 0.3,
-      "outputPrice": 1.1,
+      "inputPrice": 0.35,
+      "outputPrice": 1.5,
       "contextTokens": 131072,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1022,8 +1053,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.055799999999999995,
-      "outputPrice": 0.1767,
+      "inputPrice": 0.04,
+      "outputPrice": 0.08,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1036,8 +1067,8 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.06,
-      "outputPrice": 0.12,
+      "inputPrice": 0.04,
+      "outputPrice": 0.08,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1334,8 +1365,8 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 2.0999999999999996,
-      "outputPrice": 10.950000000000001,
+      "inputPrice": 1.7,
+      "outputPrice": 8.5,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1798,8 +1829,8 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM 5.2",
       "lab": "Zhipu AI",
-      "inputPrice": 0.5625,
-      "outputPrice": 1.7999999999999998,
+      "inputPrice": 0.5544,
+      "outputPrice": 1.7424,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1933,8 +1964,8 @@
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra",
       "lab": "NVIDIA",
-      "inputPrice": 0.625,
-      "outputPrice": 3.125,
+      "inputPrice": 0.6,
+      "outputPrice": 2.4,
       "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
@@ -2321,8 +2352,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 2.0999999999999996,
-      "outputPrice": 10.950000000000001,
+      "inputPrice": 1.7,
+      "outputPrice": 8.5,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2513,8 +2544,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 1.5999999999999999,
-      "outputPrice": 3.1999999999999997,
+      "inputPrice": 0.503382,
+      "outputPrice": 1.006764,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2527,8 +2558,8 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.088606,
-      "outputPrice": 0.177212,
+      "inputPrice": 0.045079999999999995,
+      "outputPrice": 0.09015999999999999,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -4358,8 +4389,8 @@
       "id": "qwen/qwen3-vl-30b-a3b-instruct",
       "name": "Qwen3 VL 30B A3B Instruct",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.13,
-      "outputPrice": 0.52,
+      "inputPrice": 0.19999999999999998,
+      "outputPrice": 0.7,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [
