@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-19T09:33:15.260Z",
+  "updated": "2026-09-20T09:50:06.290Z",
   "events": [
     {
       "id": "600057024",
@@ -5832,7 +5832,7 @@
       "id": "600060963",
       "name": "UFC 331: Van vs. Pantoja 2",
       "date": "2026-09-19T21:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "crypto.com Arena",
       "location": "Los Angeles, USA",
       "fights": [
@@ -5843,8 +5843,11 @@
             "Giga Chikadze",
             "Joanderson Brito"
           ],
+          "winner": "Joanderson Brito",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5853,8 +5856,11 @@
             "Casey O'Neill",
             "Eduarda Moura"
           ],
+          "winner": "Casey O'Neill",
+          "method": "Submission",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5863,8 +5869,11 @@
             "Edmen Shahbazyan",
             "Brunno Ferreira"
           ],
+          "winner": "Edmen Shahbazyan",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5873,8 +5882,11 @@
             "Ozzy Diaz",
             "Ryan Gandra"
           ],
+          "winner": "Ryan Gandra",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5883,8 +5895,11 @@
             "Michael Aswell",
             "JooSang Yoo"
           ],
+          "winner": "Michael Aswell",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5893,8 +5908,11 @@
             "Tai Tuivasa",
             "Robelis Despaigne"
           ],
+          "winner": "Robelis Despaigne",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -5903,8 +5921,11 @@
             "Marlon Vera",
             "Charles Jourdain"
           ],
+          "winner": "Marlon Vera",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5913,8 +5934,11 @@
             "Alonzo Menifield",
             "Iwo Baraniewski"
           ],
+          "winner": "Alonzo Menifield",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5923,8 +5947,11 @@
             "Gable Steveson",
             "Sean Sharaf"
           ],
+          "winner": "Sean Sharaf",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5933,8 +5960,11 @@
             "Patricio Pitbull",
             "Dooho Choi"
           ],
+          "winner": "Patricio Pitbull",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5943,8 +5973,11 @@
             "Arman Tsarukyan",
             "Mauricio Ruffy"
           ],
+          "winner": "Arman Tsarukyan",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -5953,8 +5986,11 @@
             "Alexandre Pantoja",
             "Joshua Van"
           ],
+          "winner": "Joshua Van",
+          "method": "Decision",
+          "rounds": 5,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -6038,20 +6074,20 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "W Bantamweight",
+          "weightClass": "Bantamweight",
           "fighters": [
-            "Norma Dumont",
-            "Ailin Perez"
+            "Alatengheili",
+            "John Castaneda"
           ],
           "headline": false,
           "completed": false
         },
         {
           "segment": "prelim",
-          "weightClass": "Bantamweight",
+          "weightClass": "W Bantamweight",
           "fighters": [
-            "Alatengheili",
-            "John Castaneda"
+            "Norma Dumont",
+            "Ailin Perez"
           ],
           "headline": false,
           "completed": false
@@ -6068,6 +6104,16 @@
         },
         {
           "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Elves Brener",
+            "Josiah Harrell"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Light Heavyweight",
           "fighters": [
             "Christian Edwards",
@@ -6077,11 +6123,11 @@
           "completed": false
         },
         {
-          "segment": "prelim",
-          "weightClass": "Lightweight",
+          "segment": "main",
+          "weightClass": "Bantamweight",
           "fighters": [
-            "Elves Brener",
-            "Josiah Harrell"
+            "Brady Hiestand",
+            "Rinya Nakamura"
           ],
           "headline": false,
           "completed": false
@@ -6102,16 +6148,6 @@
           "fighters": [
             "Ilimbek Akylbek Uulu",
             "Mehemmedeli Osmanli"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "Bantamweight",
-          "fighters": [
-            "Brady Hiestand",
-            "Rinya Nakamura"
           ],
           "headline": false,
           "completed": false
@@ -6166,6 +6202,16 @@
       "venue": "Delta Center",
       "location": "Salt Lake City, USA",
       "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Anthony Wint",
+            "Lucas Armand"
+          ],
+          "headline": false,
+          "completed": false
+        },
         {
           "segment": "prelim",
           "weightClass": "Welterweight",
@@ -6368,40 +6414,10 @@
       "fights": [
         {
           "segment": "prelim",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Louie Sutherland",
-            "Javad Mahjoub"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Bantamweight",
           "fighters": [
-            "Chad Anheliger",
-            "Steven Koslow"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Gilbert Urbina",
-            "Julien LeBlanc"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Bantamweight",
-          "fighters": [
-            "Louis Jourdain",
-            "Timmy Cuamba"
+            "SuYoung You",
+            "Cody Chovancek"
           ],
           "headline": false,
           "completed": false
@@ -6418,6 +6434,46 @@
         },
         {
           "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Chad Anheliger",
+            "Steven Koslow"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Katlyn Cerminara",
+            "Jamey-Lyn Horth"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Louie Sutherland",
+            "Javad Mahjoub"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Gilbert Urbina",
+            "Julien LeBlanc"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Heavyweight",
           "fighters": [
             "Tanner Boser",
@@ -6428,10 +6484,20 @@
         },
         {
           "segment": "main",
-          "weightClass": "W Flyweight",
+          "weightClass": "Lightweight",
           "fighters": [
-            "Katlyn Cerminara",
-            "Jamey-Lyn Horth"
+            "Nate Landwehr",
+            "Mandel Nallo"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Louis Jourdain",
+            "Timmy Cuamba"
           ],
           "headline": false,
           "completed": false
@@ -6452,16 +6518,6 @@
           "fighters": [
             "Erin Blanchfield",
             "Jasmine Jasudavicius"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "Lightweight",
-          "fighters": [
-            "Nate Landwehr",
-            "Mandel Nallo"
           ],
           "headline": true,
           "completed": false
@@ -6486,16 +6542,6 @@
       "venue": "Etihad Arena",
       "location": "Abu Dhabi, United Arab Emirates",
       "fights": [
-        {
-          "segment": "prelim",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Alexander Volkov",
-            "Rizvan Kuniev"
-          ],
-          "headline": false,
-          "completed": false
-        },
         {
           "segment": "prelim",
           "weightClass": "Lightweight",
@@ -6527,7 +6573,7 @@
           "completed": false
         },
         {
-          "segment": "main",
+          "segment": "prelim",
           "weightClass": "Light Heavyweight",
           "fighters": [
             "Azamat Murzakanov",
@@ -6538,10 +6584,20 @@
         },
         {
           "segment": "main",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Alexander Volkov",
+            "Rizvan Kuniev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
           "weightClass": "Featherweight",
           "fighters": [
-            "Arnold Allen",
-            "Aaron Pico"
+            "Aaron Pico",
+            "Losene Keita"
           ],
           "headline": false,
           "completed": false
