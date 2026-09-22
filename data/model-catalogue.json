@@ -1,7 +1,74 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-21T10:45:43.132Z",
+  "updated": "2026-09-22T09:59:02.329Z",
   "items": [
+    {
+      "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+      "name": "MiMo-V2.6-Pro-UltraSpeed",
+      "lab": "xiaomi",
+      "inputPrice": 4.35,
+      "outputPrice": 8.7,
+      "contextTokens": 1048576,
+      "modality": "text+image+audio+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "releasedAt": "2026-09-21T20:07:47.000Z",
+      "description": "MiMo-V2.6-Pro-UltraSpeed is the fast speed edition of Xiaomi's flagship foundation model, MiMo-V2.6-Pro. Built from the same 1T MiMo-V2.6-Pro checkpoint, it matches the original model in quality while delivering roughly 10x..."
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-flash",
+      "name": "MiMo-V2.6-Flash",
+      "lab": "xiaomi",
+      "inputPrice": 0.14,
+      "outputPrice": 0.28,
+      "contextTokens": 1048576,
+      "modality": "text+image+audio+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "releasedAt": "2026-09-21T20:07:44.000Z",
+      "description": "MiMo-V2.6-Flash is an open-source foundation model developed by Xiaomi. Built on a Mixture-of-Experts architecture with 309B total parameters and 15B activated per token, it employs a hybrid attention mechanism for..."
+    },
+    {
+      "id": "xiaomi/mimo-v2.6-pro",
+      "name": "MiMo-V2.6-Pro",
+      "lab": "xiaomi",
+      "inputPrice": 0.435,
+      "outputPrice": 0.87,
+      "contextTokens": 1048576,
+      "modality": "text+image+audio+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "releasedAt": "2026-09-21T20:07:39.000Z",
+      "description": "MiMo-V2.6-Pro is the flagship foundation model developed by Xiaomi. Built at a scale of over 1T parameters, it is designed to push the ceiling of capability for the most demanding..."
+    },
+    {
+      "id": "x-ai/grok-4.7",
+      "name": "Grok 4.7",
+      "lab": "xAI",
+      "inputPrice": 1.5999999999999999,
+      "outputPrice": 4.8,
+      "contextTokens": 500000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2026-09-21T16:19:01.000Z",
+      "description": "Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and..."
+    },
     {
       "id": "prism-ml/ternary-bonsai-2-27b",
       "name": "Ternary Bonsai 2 27B",
@@ -52,8 +119,8 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.66,
-      "outputPrice": 1.9800000000000002,
+      "inputPrice": 0.59862,
+      "outputPrice": 1.79586,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -237,8 +304,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
+      "inputPrice": 0.3,
+      "outputPrice": 1.2,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -263,6 +330,21 @@
       "description": "Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception. Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving..."
     },
     {
+      "id": "nex-agi/nex-n2.5-mini",
+      "name": "Nex-N2.5-Mini",
+      "lab": "nex-agi",
+      "inputPrice": 0.024999999999999998,
+      "outputPrice": 0.09999999999999999,
+      "contextTokens": 262144,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-09-08T17:54:21.000Z",
+      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file..."
+    },
+    {
       "id": "nex-agi/nex-n2.5-mini:free",
       "name": "Nex-N2.5-Mini (free)",
       "lab": "nex-agi",
@@ -275,6 +357,21 @@
         "image"
       ],
       "releasedAt": "2026-09-08T17:54:21.000Z",
+      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file..."
+    },
+    {
+      "id": "nex-agi/nex-n2.5-pro",
+      "name": "Nex-N2.5-Pro",
+      "lab": "nex-agi",
+      "inputPrice": 0.075,
+      "outputPrice": 0.25,
+      "contextTokens": 262144,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-09-08T17:54:10.000Z",
       "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file..."
     },
     {
@@ -494,8 +591,8 @@
       "id": "ibm-granite/granite-4.2-8b",
       "name": "Granite 4.2 8B",
       "lab": "ibm-granite",
-      "inputPrice": 0.09999999999999999,
-      "outputPrice": 0.15,
+      "inputPrice": 0.06,
+      "outputPrice": 0.25,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
@@ -582,8 +679,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.09,
-      "outputPrice": 0.3,
+      "inputPrice": 0.15,
+      "outputPrice": 0.5,
       "contextTokens": 1310720,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -690,8 +787,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.7735,
-      "outputPrice": 2.431,
+      "inputPrice": 0.6545000000000001,
+      "outputPrice": 2.057,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -718,8 +815,8 @@
       "id": "z-ai/glm-5.3",
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
-      "inputPrice": 0.9099999999999999,
-      "outputPrice": 2.8600000000000003,
+      "inputPrice": 0.84,
+      "outputPrice": 2.64,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -746,8 +843,8 @@
       "id": "qwen/qwen3.8-27b",
       "name": "Qwen3.8 27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.19999999999999998,
-      "outputPrice": 2.5,
+      "inputPrice": 0.42,
+      "outputPrice": 3,
       "contextTokens": 1000000,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -856,20 +953,6 @@
       "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is..."
     },
     {
-      "id": "qwen/qwen3.8-2.4t-a95b:batch",
-      "name": "Qwen3.8 2.4T A95B (batch)",
-      "lab": "Alibaba (Qwen)",
-      "inputPrice": 2,
-      "outputPrice": 6,
-      "contextTokens": 1010000,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-08-12T16:21:42.000Z",
-      "description": "Qwen3.8 2.4T A95B is an open-weight sparse mixture-of-experts model from Qwen and the open-weight variant of [Qwen3.8 Max](/qwen/qwen3.8-max), with 95 billion active parameters out of 2.4 trillion total. It is..."
-    },
-    {
       "id": "bytedance-seed/seed-2.0-code",
       "name": "Seed-2.0-Code",
       "lab": "bytedance-seed",
@@ -889,8 +972,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 0.66,
-      "outputPrice": 1.9800000000000002,
+      "inputPrice": 0.59862,
+      "outputPrice": 1.79586,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -927,7 +1010,7 @@
         "file"
       ],
       "releasedAt": "2026-08-12T15:35:57.000Z",
-      "description": "Grok 4.6 is SpaceXAI's smartest model with frontier performance on coding, knowledge work, and STEM."
+      "description": "Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7)."
     },
     {
       "id": "liquid/lfm-2.5-2.6b:free",
@@ -1053,8 +1136,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.04,
-      "outputPrice": 0.16,
+      "inputPrice": 0.03,
+      "outputPrice": 1,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1068,7 +1151,7 @@
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
       "inputPrice": 0.04,
-      "outputPrice": 0.16,
+      "outputPrice": 0.64,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1316,22 +1399,6 @@
       "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,..."
     },
     {
-      "id": "thinkingmachines/inkling:batch",
-      "name": "Inkling (batch)",
-      "lab": "thinkingmachines",
-      "inputPrice": 1,
-      "outputPrice": 4.05,
-      "contextTokens": 524288,
-      "modality": "text+image+audio->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "releasedAt": "2026-07-17T22:05:56.000Z",
-      "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,..."
-    },
-    {
       "id": "thinkingmachines/inkling:free",
       "name": "Inkling (free)",
       "lab": "thinkingmachines",
@@ -1350,22 +1417,6 @@
     {
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
-      "lab": "Moonshot AI",
-      "inputPrice": 1.7,
-      "outputPrice": 8.5,
-      "contextTokens": 1048576,
-      "modality": "text+image+video->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "releasedAt": "2026-07-16T15:30:58.000Z",
-      "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at..."
-    },
-    {
-      "id": "moonshotai/kimi-k3:batch",
-      "name": "Kimi K3 (batch)",
       "lab": "Moonshot AI",
       "inputPrice": 3,
       "outputPrice": 15,
@@ -1623,8 +1674,8 @@
       "id": "~x-ai/grok-latest",
       "name": "Grok Latest",
       "lab": "~x-ai",
-      "inputPrice": 2,
-      "outputPrice": 6,
+      "inputPrice": 1.5999999999999999,
+      "outputPrice": 4.8,
       "contextTokens": 500000,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -2006,22 +2057,6 @@
       "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,..."
     },
     {
-      "id": "minimax/minimax-m3:batch",
-      "name": "MiniMax M3 (batch)",
-      "lab": "minimax",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
-      "contextTokens": 524288,
-      "modality": "text+image+video->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "releasedAt": "2026-05-31T16:36:14.000Z",
-      "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,..."
-    },
-    {
       "id": "stepfun/step-3.7-flash",
       "name": "Step 3.7 Flash",
       "lab": "stepfun",
@@ -2338,8 +2373,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 1.7,
-      "outputPrice": 8.5,
+      "inputPrice": 1.5,
+      "outputPrice": 7.5,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2865,20 +2900,6 @@
       "description": "30 second duration clips are priced at $0.04 per clip. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate..."
     },
     {
-      "id": "kwaipilot/kat-coder-pro-v2",
-      "name": "KAT-Coder-Pro V2",
-      "lab": "kwaipilot",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
-      "contextTokens": 262144,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-03-27T22:08:30.000Z",
-      "description": "KAT-Coder-Pro V2 is the latest high-performance model in KwaiKAT’s KAT-Coder series, designed for complex enterprise-grade software engineering and SaaS integration. It builds on the agentic coding strengths of earlier versions,..."
-    },
-    {
       "id": "rekaai/reka-edge",
       "name": "Reka Edge",
       "lab": "rekaai",
@@ -3066,22 +3087,6 @@
       "lab": "Alibaba (Qwen)",
       "inputPrice": 0.09999999999999999,
       "outputPrice": 0.15,
-      "contextTokens": 262144,
-      "modality": "text+image+video->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "releasedAt": "2026-03-10T14:19:56.000Z",
-      "description": "Qwen3.5-9B is a multimodal foundation model from the Qwen3.5 family, designed to deliver strong reasoning, coding, and visual understanding in an efficient 9B-parameter architecture. It uses a unified vision-language design..."
-    },
-    {
-      "id": "qwen/qwen3.5-9b:batch",
-      "name": "Qwen3.5-9B (batch)",
-      "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.16999999999999998,
-      "outputPrice": 0.25,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3764,8 +3769,8 @@
       "id": "nvidia/nemotron-3-nano-30b-a3b",
       "name": "Nemotron 3 Nano 30B A3B",
       "lab": "NVIDIA",
-      "inputPrice": 0.06,
-      "outputPrice": 0.24,
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.19999999999999998,
       "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
@@ -4848,20 +4853,6 @@
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
     },
     {
-      "id": "openai/gpt-oss-120b:batch",
-      "name": "gpt-oss-120b (batch)",
-      "lab": "OpenAI",
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
-      "contextTokens": 131072,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2025-08-05T17:17:11.000Z",
-      "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized..."
-    },
-    {
       "id": "openai/gpt-oss-20b",
       "name": "gpt-oss-20b",
       "lab": "OpenAI",
@@ -5320,28 +5311,12 @@
       "description": "May 28th update to the [original DeepSeek R1](/deepseek/deepseek-r1) Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active..."
     },
     {
-      "id": "anthropic/claude-opus-4",
-      "name": "Claude Opus 4",
-      "lab": "Anthropic",
-      "inputPrice": 15,
-      "outputPrice": 75,
-      "contextTokens": 200000,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "image",
-        "text",
-        "file"
-      ],
-      "releasedAt": "2025-05-22T16:27:25.000Z",
-      "description": "Claude Opus 4 is benchmarked as the world’s best coding model, at time of release, bringing sustained performance on complex, long-running tasks and agent workflows. It sets new benchmarks in..."
-    },
-    {
       "id": "anthropic/claude-sonnet-4",
       "name": "Claude Sonnet 4",
       "lab": "Anthropic",
       "inputPrice": 3,
       "outputPrice": 15,
-      "contextTokens": 1000000,
+      "contextTokens": 200000,
       "modality": "text+image+file->text",
       "inputModalities": [
         "image",
@@ -5632,8 +5607,8 @@
       "id": "meta-llama/llama-4-maverick",
       "name": "Llama 4 Maverick",
       "lab": "Meta",
-      "inputPrice": 0.19999999999999998,
-      "outputPrice": 0.7999999999999999,
+      "inputPrice": 0.1875,
+      "outputPrice": 0.6525,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -6372,8 +6347,8 @@
       "id": "meta-llama/llama-3.1-70b-instruct",
       "name": "Llama 3.1 70B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.72,
-      "outputPrice": 0.72,
+      "inputPrice": 0.39999999999999997,
+      "outputPrice": 0.39999999999999997,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [

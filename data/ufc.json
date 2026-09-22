@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-21T10:46:02.620Z",
+  "updated": "2026-09-22T09:59:20.792Z",
   "events": [
     {
       "id": "600057024",
@@ -6057,7 +6057,7 @@
     {
       "id": "600061266",
       "name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
-      "date": "2026-09-26T19:00Z",
+      "date": "2026-09-26T21:00Z",
       "status": "Scheduled",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
@@ -6068,6 +6068,16 @@
           "fighters": [
             "Vanessa Demopoulos",
             "Yazmin Jauregui"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Mickey Gall",
+            "Sedriques Dumas"
           ],
           "headline": false,
           "completed": false
@@ -6136,7 +6146,7 @@
           "segment": "main",
           "weightClass": "W Strawweight",
           "fighters": [
-            "Valesca Machado",
+            "Tina Black",
             "Melissa Amaya"
           ],
           "headline": false,
@@ -6197,7 +6207,7 @@
     {
       "id": "600061182",
       "name": "UFC 332: Silva vs. Wang",
-      "date": "2026-10-03T21:00Z",
+      "date": "2026-10-03T20:00Z",
       "status": "Scheduled",
       "venue": "Delta Center",
       "location": "Salt Lake City, USA",
