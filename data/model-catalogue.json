@@ -1,7 +1,182 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-22T09:59:02.329Z",
+  "updated": "2026-09-23T10:00:32.303Z",
   "items": [
+    {
+      "id": "cohere/command-a-plus",
+      "name": "Command A+",
+      "lab": "Cohere",
+      "inputPrice": 0.3,
+      "outputPrice": 1.5,
+      "contextTokens": 192000,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-09-22T18:48:16.000Z",
+      "description": "Command A+ is Cohere's flagship model for enterprise agentic workflows. It accepts text and image inputs with a 192K context window, supports native tool calling with strict tool schemas, structured..."
+    },
+    {
+      "id": "openai/gpt-6-luna-pro",
+      "name": "GPT-6 Luna Pro",
+      "lab": "OpenAI",
+      "inputPrice": 0.09999999999999999,
+      "outputPrice": 0.5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-22T18:13:11.000Z",
+      "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+    },
+    {
+      "id": "openai/gpt-6-luna-pro:batch",
+      "name": "GPT-6 Luna Pro (batch)",
+      "lab": "OpenAI",
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.25,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-22T18:13:11.000Z",
+      "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+    },
+    {
+      "id": "openai/gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "lab": "OpenAI",
+      "inputPrice": 0.09999999999999999,
+      "outputPrice": 0.5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-22T18:13:06.000Z",
+      "description": "GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positioned below GPT-6 Sol. It is suited for high-volume and latency-sensitive workloads such as chat, classification, and lightweight agentic..."
+    },
+    {
+      "id": "openai/gpt-6-luna:batch",
+      "name": "GPT-6 Luna (batch)",
+      "lab": "OpenAI",
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.25,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-22T18:13:06.000Z",
+      "description": "GPT-6 Luna is the fast, cost-efficient model in OpenAI's GPT-6 series, positioned below GPT-6 Sol. It is suited for high-volume and latency-sensitive workloads such as chat, classification, and lightweight agentic..."
+    },
+    {
+      "id": "openai/gpt-6-sol-pro",
+      "name": "GPT-6 Sol Pro",
+      "lab": "OpenAI",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-22T18:13:01.000Z",
+      "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+    },
+    {
+      "id": "openai/gpt-6-sol-pro:batch",
+      "name": "GPT-6 Sol Pro (batch)",
+      "lab": "OpenAI",
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-22T18:13:01.000Z",
+      "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+    },
+    {
+      "id": "openai/gpt-6-sol",
+      "name": "GPT-6 Sol",
+      "lab": "OpenAI",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-22T18:12:55.000Z",
+      "description": "GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional..."
+    },
+    {
+      "id": "openai/gpt-6-sol:batch",
+      "name": "GPT-6 Sol (batch)",
+      "lab": "OpenAI",
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-22T18:12:55.000Z",
+      "description": "GPT-6 Sol is the cost-efficient high-end model in OpenAI's GPT-6 series, positioned below the flagship GPT-6 Astra and above the fast GPT-6 Luna tier. It is suited for demanding professional..."
+    },
+    {
+      "id": "anthropic/claude-opus-5.5",
+      "name": "Claude Opus 5.5",
+      "lab": "Anthropic",
+      "inputPrice": 4,
+      "outputPrice": 20,
+      "contextTokens": 1000000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2026-09-22T16:32:12.000Z",
+      "description": "Claude Opus 5.5 is Anthropic's flagship model for demanding reasoning, coding, and long-horizon agentic work, succeeding Claude Opus 5. It is particularly strong at multi-step changes in large codebases, code..."
+    },
+    {
+      "id": "anthropic/claude-opus-5.5:batch",
+      "name": "Claude Opus 5.5 (batch)",
+      "lab": "Anthropic",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "contextTokens": 1000000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2026-09-22T16:32:12.000Z",
+      "description": "Claude Opus 5.5 is Anthropic's flagship model for demanding reasoning, coding, and long-horizon agentic work, succeeding Claude Opus 5. It is particularly strong at multi-step changes in large codebases, code..."
+    },
     {
       "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
       "name": "MiMo-V2.6-Pro-UltraSpeed",
@@ -70,6 +245,23 @@
       "description": "Grok 4.7 is SpaceXAI's flagship model for coding, agentic tasks, and knowledge work, succeeding Grok 4.6. It is particularly strong at long-running software engineering tasks, verifying its own work, and..."
     },
     {
+      "id": "qwen/qwen3.8-omni-flash",
+      "name": "Qwen3.8 Omni Flash",
+      "lab": "Alibaba (Qwen)",
+      "inputPrice": 0.15,
+      "outputPrice": 0.47,
+      "contextTokens": 1000000,
+      "modality": "text+image+audio+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "releasedAt": "2026-09-21T03:05:54.000Z",
+      "description": "Qwen3.8 Omni Flash is an omni-modal reasoning model from Alibaba, the first Qwen model built around agentic capabilities with native audio-video understanding. It is suited for audio-video analysis and summarization,..."
+    },
+    {
       "id": "prism-ml/ternary-bonsai-2-27b",
       "name": "Ternary Bonsai 2 27B",
       "lab": "prism-ml",
@@ -119,8 +311,8 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.59862,
-      "outputPrice": 1.79586,
+      "inputPrice": 0.39999999999999997,
+      "outputPrice": 4.300000000000001,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -133,8 +325,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.12,
-      "outputPrice": 0.48,
+      "inputPrice": 0.09999999999999999,
+      "outputPrice": 0.5,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -224,8 +416,8 @@
       "id": "~openai/gpt-luna-latest",
       "name": "GPT Luna Latest",
       "lab": "~openai",
-      "inputPrice": 0.19999999999999998,
-      "outputPrice": 1.2,
+      "inputPrice": 0.09999999999999999,
+      "outputPrice": 0.5,
       "contextTokens": 1050000,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -306,6 +498,21 @@
       "lab": "DeepSeek",
       "inputPrice": 0.3,
       "outputPrice": 1.2,
+      "contextTokens": 1048576,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-09-10T06:21:25.000Z",
+      "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the first built on the company's Causal Encoder-Decoder (CED) architecture. It activates 8B parameters on input and 16B on..."
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash:batch",
+      "name": "DeepSeek V4.1 Flash (batch)",
+      "lab": "DeepSeek",
+      "inputPrice": 0.112,
+      "outputPrice": 0.33599999999999997,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -695,8 +902,8 @@
       "id": "z-ai/glm-5.3-flash:batch",
       "name": "GLM 5.3 Flash (batch)",
       "lab": "Zhipu AI",
-      "inputPrice": 0.075,
-      "outputPrice": 0.25,
+      "inputPrice": 0.06,
+      "outputPrice": 0.19999999999999998,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -741,21 +948,6 @@
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,..."
     },
     {
-      "id": "deepseek/deepseek-v4-flash-vision-exp:batch",
-      "name": "DeepSeek V4 Flash Vision Exp (batch)",
-      "lab": "DeepSeek",
-      "inputPrice": 0.11,
-      "outputPrice": 0.33,
-      "contextTokens": 1048576,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2026-08-21T11:26:03.000Z",
-      "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,..."
-    },
-    {
       "id": "tencent/hy-mt2-1.8b",
       "name": "Hy-MT2-1.8B",
       "lab": "tencent",
@@ -787,8 +979,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.6545000000000001,
-      "outputPrice": 2.057,
+      "inputPrice": 0.5625,
+      "outputPrice": 2.5,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -829,8 +1021,8 @@
       "id": "z-ai/glm-5.3:batch",
       "name": "GLM 5.3 (batch)",
       "lab": "Zhipu AI",
-      "inputPrice": 0.7,
-      "outputPrice": 2.2,
+      "inputPrice": 0.72,
+      "outputPrice": 2.4,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -972,22 +1164,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 0.59862,
-      "outputPrice": 1.79586,
-      "contextTokens": 1048576,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-08-12T15:42:44.000Z",
-      "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro."
-    },
-    {
-      "id": "deepseek/deepseek-v4-pro-0813:batch",
-      "name": "DeepSeek V4 Pro 0813 (batch)",
-      "lab": "DeepSeek",
-      "inputPrice": 0.66,
-      "outputPrice": 1.9800000000000002,
+      "inputPrice": 1.32,
+      "outputPrice": 3.9600000000000004,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1030,7 +1208,7 @@
       "id": "nvidia/nemotron-3.5-lightning",
       "name": "Nemotron 3.5 Lightning",
       "lab": "NVIDIA",
-      "inputPrice": 0.07,
+      "inputPrice": 0.08,
       "outputPrice": 0.19999999999999998,
       "contextTokens": 262144,
       "modality": "text->text",
@@ -1100,21 +1278,6 @@
       "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon..."
     },
     {
-      "id": "meta/muse-glimmer-30b:batch",
-      "name": "Muse Glimmer 30B (batch)",
-      "lab": "meta",
-      "inputPrice": 0.175,
-      "outputPrice": 0.75,
-      "contextTokens": 131072,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2026-08-09T19:06:34.000Z",
-      "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon..."
-    },
-    {
       "id": "meta/muse-spark-1.2",
       "name": "Muse Spark 1.2",
       "lab": "meta",
@@ -1136,8 +1299,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.03,
-      "outputPrice": 1,
+      "inputPrice": 0.038000000000000006,
+      "outputPrice": 0.55,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1153,20 +1316,6 @@
       "inputPrice": 0.04,
       "outputPrice": 0.64,
       "contextTokens": 1310720,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-07-31T06:21:48.000Z",
-      "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows...."
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash-0731:batch",
-      "name": "DeepSeek V4 Flash 0731 (batch)",
-      "lab": "DeepSeek",
-      "inputPrice": 0.11,
-      "outputPrice": 0.33,
-      "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -1420,6 +1569,22 @@
       "lab": "Moonshot AI",
       "inputPrice": 3,
       "outputPrice": 15,
+      "contextTokens": 1048576,
+      "modality": "text+image+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-07-16T15:30:58.000Z",
+      "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at..."
+    },
+    {
+      "id": "moonshotai/kimi-k3:batch",
+      "name": "Kimi K3 (batch)",
+      "lab": "Moonshot AI",
+      "inputPrice": 2.2800000000000002,
+      "outputPrice": 11.399999999999999,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1877,20 +2042,6 @@
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
     },
     {
-      "id": "z-ai/glm-5.2:batch",
-      "name": "GLM 5.2 (batch)",
-      "lab": "Zhipu AI",
-      "inputPrice": 0.7,
-      "outputPrice": 2.2,
-      "contextTokens": 1048576,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-06-16T17:45:30.000Z",
-      "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
-    },
-    {
       "id": "z-ai/glm-5.2:free",
       "name": "GLM 5.2 (free)",
       "lab": "Zhipu AI",
@@ -1909,7 +2060,7 @@
       "name": "Kimi K2.7 Code",
       "lab": "Moonshot AI",
       "inputPrice": 0.7062,
-      "outputPrice": 3.21,
+      "outputPrice": 3.3000000000000003,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [
@@ -2373,8 +2524,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 1.5,
-      "outputPrice": 7.5,
+      "inputPrice": 1.4989,
+      "outputPrice": 10.758,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2485,8 +2636,8 @@
       "id": "qwen/qwen3.6-27b",
       "name": "Qwen3.6 27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.3,
-      "outputPrice": 2,
+      "inputPrice": 0.32,
+      "outputPrice": 2.7,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2654,8 +2805,8 @@
       "id": "~anthropic/claude-opus-latest",
       "name": "Claude Opus Latest",
       "lab": "~anthropic",
-      "inputPrice": 5,
-      "outputPrice": 25,
+      "inputPrice": 4,
+      "outputPrice": 20,
       "contextTokens": 1000000,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -4856,8 +5007,22 @@
       "id": "openai/gpt-oss-20b",
       "name": "gpt-oss-20b",
       "lab": "OpenAI",
-      "inputPrice": 0.03,
-      "outputPrice": 0.13,
+      "inputPrice": 0.018,
+      "outputPrice": 0.09,
+      "contextTokens": 131072,
+      "modality": "text->text",
+      "inputModalities": [
+        "text"
+      ],
+      "releasedAt": "2025-08-05T17:17:09.000Z",
+      "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for..."
+    },
+    {
+      "id": "openai/gpt-oss-20b:batch",
+      "name": "gpt-oss-20b (batch)",
+      "lab": "OpenAI",
+      "inputPrice": 0.024,
+      "outputPrice": 0.112,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [

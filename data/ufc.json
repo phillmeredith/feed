@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-22T09:59:20.792Z",
+  "updated": "2026-09-23T10:01:20.306Z",
   "events": [
     {
       "id": "600057024",
@@ -5998,7 +5998,7 @@
       "id": "600060738",
       "name": "Dana White's Contender Series: Season 10, Week 7",
       "date": "2026-09-22T23:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
@@ -6009,8 +6009,11 @@
             "Damian Piwowarczyk",
             "Emilio Quissua"
           ],
+          "winner": "Damian Piwowarczyk",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6019,8 +6022,11 @@
             "Callum Connor",
             "Piero Guaylupo"
           ],
+          "winner": "Piero Guaylupo",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6029,8 +6035,11 @@
             "Paris Moran",
             "Marcos Degli"
           ],
+          "winner": "Marcos Degli",
+          "method": "Submission",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6039,8 +6048,11 @@
             "Jaden Ortega",
             "Alvi Dasuyev"
           ],
+          "winner": "Alvi Dasuyev",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6049,8 +6061,11 @@
             "Norbert Növényi Jr.",
             "Theo Haig"
           ],
+          "winner": "Norbert Növényi Jr.",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -6194,10 +6209,50 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "",
+          "weightClass": "Featherweight",
           "fighters": [
-            "TBA",
-            "Opponent TBA"
+            "Ilias Bulaid",
+            "Erick Visconde"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Strawweight",
+          "fighters": [
+            "Camila Reynoso",
+            "Aieza Bertolso"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Luca Borando",
+            "Ian Escuza"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Zaurbek Sabanov",
+            "Adama Diop"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "George Staines",
+            "Loai Abushaar"
           ],
           "headline": true,
           "completed": false
@@ -6554,6 +6609,16 @@
       "fights": [
         {
           "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Alexander Volkov",
+            "Rizvan Kuniev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Lightweight",
           "fighters": [
             "Grant Dawson",
@@ -6583,7 +6648,7 @@
           "completed": false
         },
         {
-          "segment": "prelim",
+          "segment": "main",
           "weightClass": "Light Heavyweight",
           "fighters": [
             "Azamat Murzakanov",
@@ -6594,20 +6659,10 @@
         },
         {
           "segment": "main",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Alexander Volkov",
-            "Rizvan Kuniev"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
           "weightClass": "Featherweight",
           "fighters": [
-            "Aaron Pico",
-            "Losene Keita"
+            "Arnold Allen",
+            "Aaron Pico"
           ],
           "headline": false,
           "completed": false
