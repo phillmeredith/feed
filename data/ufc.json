@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-23T10:01:20.306Z",
+  "updated": "2026-09-24T10:03:29.944Z",
   "events": [
     {
       "id": "600057024",
@@ -6209,20 +6209,20 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "Featherweight",
+          "weightClass": "Heavyweight",
           "fighters": [
-            "Ilias Bulaid",
-            "Erick Visconde"
+            "Zaurbek Sabanov",
+            "Adama Diop"
           ],
           "headline": false,
           "completed": false
         },
         {
           "segment": "main",
-          "weightClass": "W Strawweight",
+          "weightClass": "Featherweight",
           "fighters": [
-            "Camila Reynoso",
-            "Aieza Bertolso"
+            "Ilias Bulaid",
+            "Erick Visconde"
           ],
           "headline": false,
           "completed": false
@@ -6239,20 +6239,20 @@
         },
         {
           "segment": "main",
-          "weightClass": "Heavyweight",
+          "weightClass": "Lightweight",
           "fighters": [
-            "Zaurbek Sabanov",
-            "Adama Diop"
+            "George Staines",
+            "Loai Abushaar"
           ],
           "headline": true,
           "completed": false
         },
         {
           "segment": "main",
-          "weightClass": "Lightweight",
+          "weightClass": "W Strawweight",
           "fighters": [
-            "George Staines",
-            "Loai Abushaar"
+            "Camila Reynoso",
+            "Aieza Bertolso"
           ],
           "headline": true,
           "completed": false
@@ -6267,16 +6267,6 @@
       "venue": "Delta Center",
       "location": "Salt Lake City, USA",
       "fights": [
-        {
-          "segment": "prelim",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Anthony Wint",
-            "Lucas Armand"
-          ],
-          "headline": false,
-          "completed": false
-        },
         {
           "segment": "prelim",
           "weightClass": "Welterweight",
@@ -6313,6 +6303,16 @@
           "fighters": [
             "Johnny Walker",
             "Mick Parkin"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Anthony Wint",
+            "Lucas Armand"
           ],
           "headline": false,
           "completed": false
@@ -6429,10 +6429,10 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "",
+          "weightClass": "Welterweight",
           "fighters": [
-            "TBA",
-            "Opponent TBA"
+            "Ismael Bonfim",
+            "Francisco Prado"
           ],
           "headline": true,
           "completed": false
@@ -6609,20 +6609,20 @@
       "fights": [
         {
           "segment": "prelim",
-          "weightClass": "Heavyweight",
+          "weightClass": "Lightweight",
           "fighters": [
-            "Alexander Volkov",
-            "Rizvan Kuniev"
+            "Grant Dawson",
+            "Nurullo Aliev"
           ],
           "headline": false,
           "completed": false
         },
         {
           "segment": "prelim",
-          "weightClass": "Lightweight",
+          "weightClass": "Middleweight",
           "fighters": [
-            "Grant Dawson",
-            "Nurullo Aliev"
+            "Abus Magomedov",
+            "Cam Rowston"
           ],
           "headline": false,
           "completed": false
@@ -6639,16 +6639,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Abus Magomedov",
-            "Cam Rowston"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
           "weightClass": "Light Heavyweight",
           "fighters": [
             "Azamat Murzakanov",
@@ -6663,6 +6653,16 @@
           "fighters": [
             "Arnold Allen",
             "Aaron Pico"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Alexander Volkov",
+            "Rizvan Kuniev"
           ],
           "headline": false,
           "completed": false
@@ -6740,11 +6740,34 @@
       ]
     },
     {
-      "id": "scheduled:2026-11-08T01:00Z",
+      "id": "600061268",
       "name": "UFC Fight Night: Bonfim vs. Brady",
-      "date": "2026-11-08T01:00Z",
+      "date": "2026-11-07T22:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Meta APEX",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Keiichiro Nakamura",
+            "Ollie Schmid"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Sean Brady",
+            "Gabriel Bonfim"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
       "id": "scheduled:2026-11-15T01:00Z",
