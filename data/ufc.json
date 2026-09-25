@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-24T10:03:29.944Z",
+  "updated": "2026-09-25T10:13:34.344Z",
   "events": [
     {
       "id": "600057024",
@@ -6089,30 +6089,10 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Mickey Gall",
-            "Sedriques Dumas"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Bantamweight",
           "fighters": [
             "Alatengheili",
             "John Castaneda"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "W Bantamweight",
-          "fighters": [
-            "Norma Dumont",
-            "Ailin Perez"
           ],
           "headline": false,
           "completed": false
@@ -6148,7 +6128,17 @@
           "completed": false
         },
         {
-          "segment": "main",
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Robert Bryczek",
+            "Rodolfo Vieira"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Bantamweight",
           "fighters": [
             "Brady Hiestand",
@@ -6179,10 +6169,20 @@
         },
         {
           "segment": "main",
-          "weightClass": "Middleweight",
+          "weightClass": "Light Heavyweight",
           "fighters": [
-            "Robert Bryczek",
-            "Rodolfo Vieira"
+            "Sedriques Dumas",
+            "Luis Hernandez"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Bantamweight",
+          "fighters": [
+            "Norma Dumont",
+            "Ailin Perez"
           ],
           "headline": true,
           "completed": false
@@ -6209,20 +6209,20 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "Heavyweight",
+          "weightClass": "Featherweight",
           "fighters": [
-            "Zaurbek Sabanov",
-            "Adama Diop"
+            "Ilias Bulaid",
+            "Erick Visconde"
           ],
           "headline": false,
           "completed": false
         },
         {
           "segment": "main",
-          "weightClass": "Featherweight",
+          "weightClass": "W Strawweight",
           "fighters": [
-            "Ilias Bulaid",
-            "Erick Visconde"
+            "Camila Reynoso",
+            "Aieza Bertolso"
           ],
           "headline": false,
           "completed": false
@@ -6239,20 +6239,20 @@
         },
         {
           "segment": "main",
-          "weightClass": "Lightweight",
+          "weightClass": "Heavyweight",
           "fighters": [
-            "George Staines",
-            "Loai Abushaar"
+            "Zaurbek Sabanov",
+            "Adama Diop"
           ],
           "headline": true,
           "completed": false
         },
         {
           "segment": "main",
-          "weightClass": "W Strawweight",
+          "weightClass": "Lightweight",
           "fighters": [
-            "Camila Reynoso",
-            "Aieza Bertolso"
+            "George Staines",
+            "Loai Abushaar"
           ],
           "headline": true,
           "completed": false

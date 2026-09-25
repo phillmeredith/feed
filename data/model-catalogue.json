@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-24T10:03:10.407Z",
+  "updated": "2026-09-25T10:13:11.599Z",
   "items": [
     {
       "id": "fireworks/ember-1",
@@ -414,8 +414,8 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.39,
-      "outputPrice": 2.9000000000000004,
+      "inputPrice": 0.09984,
+      "outputPrice": 2.88,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -429,7 +429,7 @@
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
       "inputPrice": 0.04,
-      "outputPrice": 1,
+      "outputPrice": 0.49,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -583,8 +583,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.14,
-      "outputPrice": 0.42,
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -943,8 +943,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.15,
-      "outputPrice": 0.5,
+      "inputPrice": 0.045,
+      "outputPrice": 0.14,
       "contextTokens": 1310720,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1036,8 +1036,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.5625,
-      "outputPrice": 2.5,
+      "inputPrice": 0.5614,
+      "outputPrice": 1.7644,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1064,8 +1064,8 @@
       "id": "z-ai/glm-5.3",
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
-      "inputPrice": 0.84,
-      "outputPrice": 2.64,
+      "inputPrice": 1.4,
+      "outputPrice": 4.4,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -2581,8 +2581,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 1.4,
-      "outputPrice": 10.75,
+      "inputPrice": 0.8845,
+      "outputPrice": 10.534600000000001,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2773,8 +2773,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.9396,
-      "outputPrice": 1.8792,
+      "inputPrice": 0.7829999999999999,
+      "outputPrice": 1.5659999999999998,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2787,8 +2787,8 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.088606,
-      "outputPrice": 0.177212,
+      "inputPrice": 0.049,
+      "outputPrice": 0.098,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2925,8 +2925,8 @@
       "id": "z-ai/glm-5.1",
       "name": "GLM 5.1",
       "lab": "Zhipu AI",
-      "inputPrice": 0.966,
-      "outputPrice": 3.036,
+      "inputPrice": 0.9646,
+      "outputPrice": 3.0316,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -3927,8 +3927,8 @@
       "id": "z-ai/glm-4.7",
       "name": "GLM 4.7",
       "lab": "Zhipu AI",
-      "inputPrice": 0.39999999999999997,
-      "outputPrice": 1.75,
+      "inputPrice": 0.6,
+      "outputPrice": 2.2,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -4068,6 +4068,21 @@
       "description": "GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamically, responding quickly..."
     },
     {
+      "id": "mistralai/devstral-2512",
+      "name": "Devstral 2 2512",
+      "lab": "Mistral AI",
+      "inputPrice": 0.39999999999999997,
+      "outputPrice": 2,
+      "contextTokens": 262144,
+      "modality": "text+file->text",
+      "inputModalities": [
+        "text",
+        "file"
+      ],
+      "releasedAt": "2025-12-09T13:03:39.000Z",
+      "description": "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing in agentic coding. It is a 123B-parameter dense transformer model supporting a 256K context window. Devstral 2 supports exploring..."
+    },
+    {
       "id": "relace/relace-search",
       "name": "Relace Search",
       "lab": "relace",
@@ -4188,6 +4203,22 @@
       ],
       "releasedAt": "2025-12-02T13:19:20.000Z",
       "description": "The smallest model in the Ministral 3 family, Ministral 3 3B is a powerful, efficient tiny language model with vision capabilities."
+    },
+    {
+      "id": "mistralai/mistral-large-2512",
+      "name": "Mistral Large 3 2512",
+      "lab": "Mistral AI",
+      "inputPrice": 0.5,
+      "outputPrice": 1.5,
+      "contextTokens": 262144,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2025-12-01T21:27:52.000Z",
+      "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license."
     },
     {
       "id": "mistralai/mistral-large-2512:batch",
@@ -4573,8 +4604,8 @@
       "id": "qwen/qwen3-vl-30b-a3b-instruct",
       "name": "Qwen3 VL 30B A3B Instruct",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.13,
-      "outputPrice": 0.52,
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [

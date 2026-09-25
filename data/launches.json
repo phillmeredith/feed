@@ -1,37 +1,7 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-09-24T10:03:18.496Z",
+  "updated": "2026-09-25T10:13:20.763Z",
   "items": [
-    {
-      "id": "63063b9d-ade9-4448-8717-6f910aa81188",
-      "name": "Long March 8A | SatNet LEO Group 26",
-      "mission": "SatNet LEO Group 26",
-      "missionType": "Communications",
-      "provider": "China Aerospace Science and Technology Corporation",
-      "rocket": "Long March 8A",
-      "pad": "Commercial LC-1",
-      "location": "Wenchang Space Launch Site, People's Republic of China",
-      "net": "2026-09-23T13:32:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_20251206093107.jpeg"
-    },
-    {
-      "id": "aed67837-b567-43e0-8071-c3ccc24aa496",
-      "name": "Long March 6A | Yaogan 40 Group 04",
-      "mission": "Yaogan 40 Group 04",
-      "missionType": "Government/Top Secret",
-      "provider": "China Aerospace Science and Technology Corporation",
-      "rocket": "Long March 6A",
-      "pad": "Launch Complex 9A",
-      "location": "Taiyuan Satellite Launch Center, People's Republic of China",
-      "net": "2026-09-24T08:46:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_6a__image_20251209050223.jpeg"
-    },
     {
       "id": "9e24bef7-c44b-4fdc-ba52-68545ce9457e",
       "name": "Electron | Owlright, Owlright, Owlright (StriX Launch 13)",
@@ -41,7 +11,7 @@
       "rocket": "Electron",
       "pad": "Rocket Lab Launch Complex 1B",
       "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "net": "2026-09-26T00:15:00Z",
+      "net": "2026-09-26T00:26:00Z",
       "precision": "Minute",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
@@ -101,11 +71,26 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-01T18:08:00Z",
+      "net": "2026-10-01T18:18:00Z",
       "precision": "Minute",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
+    },
+    {
+      "id": "4651fd8a-43de-4166-bf8f-c168b3bd1d2c",
+      "name": "Falcon Heavy | NROL-97",
+      "mission": "NROL-97",
+      "missionType": "Government/Top Secret",
+      "provider": "SpaceX",
+      "rocket": "Falcon Heavy",
+      "pad": "Launch Complex 39A",
+      "location": "Kennedy Space Center, FL, USA",
+      "net": "2026-10-02T03:53:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_heavy_image_20220129192819.jpeg"
     },
     {
       "id": "6b89cfc8-8880-4b5b-856c-0e547d45b639",
@@ -271,21 +256,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/vulcan_vc6l_image_20220406123130.jpg"
-    },
-    {
-      "id": "4651fd8a-43de-4166-bf8f-c168b3bd1d2c",
-      "name": "Falcon Heavy | NROL-97",
-      "mission": "NROL-97",
-      "missionType": "Government/Top Secret",
-      "provider": "SpaceX",
-      "rocket": "Falcon Heavy",
-      "pad": "Launch Complex 39A",
-      "location": "Kennedy Space Center, FL, USA",
-      "net": "2026-10-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_heavy_image_20220129192819.jpeg"
     },
     {
       "id": "8dd5de11-831b-445f-86f0-bffefe0550d9",
@@ -601,6 +571,35 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
+    },
+    {
+      "id": "0f867f0c-5422-4d44-93b8-d7faaae7019b",
+      "name": "Starship | Flight 15",
+      "mission": "Flight 15",
+      "missionType": "Test Flight",
+      "provider": "SpaceX",
+      "rocket": "Starship",
+      "pad": "Orbital Launch Pad 2",
+      "location": "SpaceX Starbase, TX, USA",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_20260724044615.jpg"
+    },
+    {
+      "id": "a67b40f9-cfcc-4614-a355-a156280b4bb3",
+      "name": "Vulcan VC4L | Dream Chaser CRS 2 Flight 1",
+      "mission": "Dream Chaser CRS 2 Flight 1",
+      "missionType": "Test Flight",
+      "provider": "United Launch Alliance",
+      "rocket": "Vulcan VC4L",
+      "pad": "Space Launch Complex 41",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources."
     }
   ]
 }
