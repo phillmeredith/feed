@@ -1,7 +1,24 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-25T10:13:11.599Z",
+  "updated": "2026-09-26T09:52:48.941Z",
   "items": [
+    {
+      "id": "perceptron/perceptron-mk1.5",
+      "name": "Perceptron Mk1.5",
+      "lab": "perceptron",
+      "inputPrice": 0.15,
+      "outputPrice": 1.5,
+      "contextTokens": 36864,
+      "modality": "text+image+audio+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "releasedAt": "2026-09-25T16:11:01.000Z",
+      "description": "Perceptron Mk1.5 is Perceptron's embodied reasoning model for physical agents. It accepts text, image, video, and audio input, and answers with text plus optional structured annotations: points, boxes, polygons, tracks,..."
+    },
     {
       "id": "fireworks/ember-1",
       "name": "Ember-1",
@@ -320,7 +337,7 @@
       "lab": "xiaomi",
       "inputPrice": 0.435,
       "outputPrice": 0.87,
-      "contextTokens": 1048576,
+      "contextTokens": 1050000,
       "modality": "text+image+audio+video->text",
       "inputModalities": [
         "text",
@@ -414,8 +431,8 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.09984,
-      "outputPrice": 2.88,
+      "inputPrice": 0.24947999999999998,
+      "outputPrice": 0.7484400000000001,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -428,8 +445,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.04,
-      "outputPrice": 0.49,
+      "inputPrice": 0.035,
+      "outputPrice": 0.29,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -567,8 +584,8 @@
       "id": "inclusionai/ling-3.0-flash-vl",
       "name": "Ling 3.0 Flash VL",
       "lab": "inclusionai",
-      "inputPrice": 0.06,
-      "outputPrice": 0.18,
+      "inputPrice": 0.020999999999999998,
+      "outputPrice": 0.061599999999999995,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -583,8 +600,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
+      "inputPrice": 0.3,
+      "outputPrice": 1.2,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -622,36 +639,6 @@
       ],
       "releasedAt": "2026-09-08T18:28:57.000Z",
       "description": "Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception. Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving..."
-    },
-    {
-      "id": "nex-agi/nex-n2.5-mini:free",
-      "name": "Nex-N2.5-Mini (free)",
-      "lab": "nex-agi",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 262144,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2026-09-08T17:54:21.000Z",
-      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file..."
-    },
-    {
-      "id": "nex-agi/nex-n2.5-pro:free",
-      "name": "Nex-N2.5-Pro (free)",
-      "lab": "nex-agi",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 262144,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2026-09-08T17:54:10.000Z",
-      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file..."
     },
     {
       "id": "openai/gpt-6-astra",
@@ -911,8 +898,8 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.045,
-      "outputPrice": 0.14,
+      "inputPrice": 0.04,
+      "outputPrice": 0.5,
       "contextTokens": 1310720,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -943,8 +930,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.045,
-      "outputPrice": 0.14,
+      "inputPrice": 0.04,
+      "outputPrice": 0.5,
       "contextTokens": 1310720,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1036,8 +1023,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.5614,
-      "outputPrice": 1.7644,
+      "inputPrice": 0.3794,
+      "outputPrice": 1.1924,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1064,8 +1051,8 @@
       "id": "z-ai/glm-5.3",
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
-      "inputPrice": 1.4,
-      "outputPrice": 4.4,
+      "inputPrice": 0.3794,
+      "outputPrice": 1.1924,
       "contextTokens": 1310720,
       "modality": "text->text",
       "inputModalities": [
@@ -1221,8 +1208,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 0.46199999999999997,
-      "outputPrice": 1.386,
+      "inputPrice": 0.26399999999999996,
+      "outputPrice": 0.792,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1267,7 +1254,7 @@
       "lab": "NVIDIA",
       "inputPrice": 0.08,
       "outputPrice": 0.19999999999999998,
-      "contextTokens": 262144,
+      "contextTokens": 1000000,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -1356,7 +1343,7 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.03,
+      "inputPrice": 0.020999999999999998,
       "outputPrice": 0.32,
       "contextTokens": 1310720,
       "modality": "text->text",
@@ -1370,7 +1357,7 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.03,
+      "inputPrice": 0.020999999999999998,
       "outputPrice": 0.32,
       "contextTokens": 1310720,
       "modality": "text->text",
@@ -1386,7 +1373,7 @@
       "lab": "thinkingmachines",
       "inputPrice": 0.44999999999999996,
       "outputPrice": 1.2,
-      "contextTokens": 1048576,
+      "contextTokens": 524288,
       "modality": "text+image+audio->text",
       "inputModalities": [
         "text",
@@ -1594,7 +1581,7 @@
       "lab": "thinkingmachines",
       "inputPrice": 1,
       "outputPrice": 4.05,
-      "contextTokens": 1048576,
+      "contextTokens": 524288,
       "modality": "text+image+audio->text",
       "inputModalities": [
         "text",
@@ -2099,20 +2086,6 @@
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
     },
     {
-      "id": "z-ai/glm-5.2:free",
-      "name": "GLM 5.2 (free)",
-      "lab": "Zhipu AI",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 32768,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-06-16T17:45:30.000Z",
-      "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
-    },
-    {
       "id": "moonshotai/kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "lab": "Moonshot AI",
@@ -2581,8 +2554,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.8845,
-      "outputPrice": 10.534600000000001,
+      "inputPrice": 1.0301,
+      "outputPrice": 9.043,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2694,7 +2667,7 @@
       "name": "Qwen3.6 27B",
       "lab": "Alibaba (Qwen)",
       "inputPrice": 0.32,
-      "outputPrice": 2.7,
+      "outputPrice": 3.1999999999999997,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2773,8 +2746,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.7829999999999999,
-      "outputPrice": 1.5659999999999998,
+      "inputPrice": 0.388368,
+      "outputPrice": 0.776736,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2787,8 +2760,8 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.049,
-      "outputPrice": 0.098,
+      "inputPrice": 0.047040000000000005,
+      "outputPrice": 0.09408000000000001,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2939,8 +2912,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B ",
       "lab": "Google",
-      "inputPrice": 0.09,
-      "outputPrice": 0.3,
+      "inputPrice": 0.0675,
+      "outputPrice": 0.22499999999999998,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -6805,21 +6778,6 @@
       ],
       "releasedAt": "2024-04-09T00:00:00.000Z",
       "description": "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023."
-    },
-    {
-      "id": "anthropic/claude-3-haiku",
-      "name": "Claude 3 Haiku",
-      "lab": "Anthropic",
-      "inputPrice": 0.25,
-      "outputPrice": 1.25,
-      "contextTokens": 200000,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2024-03-13T00:00:00.000Z",
-      "description": "Claude 3 Haiku is Anthropic's fastest and most compact model for\nnear-instant responsiveness. Quick and accurate targeted performance.\n\nSee the launch announcement and benchmark results [here](https://www.anthropic.com/news/claude-3-haiku)\n\n#multimodal"
     },
     {
       "id": "mistralai/mistral-large",
