@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-26T09:53:07.937Z",
+  "updated": "2026-09-27T10:35:02.357Z",
   "events": [
     {
       "id": "600057024",
@@ -6073,7 +6073,7 @@
       "id": "600061266",
       "name": "UFC Fight Night: Rosas Jr. vs. Barcelos",
       "date": "2026-09-26T21:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
@@ -6084,8 +6084,11 @@
             "Vanessa Demopoulos",
             "Yazmin Jauregui"
           ],
+          "winner": "Yazmin Jauregui",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6094,8 +6097,11 @@
             "Alatengheili",
             "John Castaneda"
           ],
+          "winner": "Alatengheili",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6104,8 +6110,11 @@
             "Ricky Simon",
             "Montel Jackson"
           ],
+          "winner": "Montel Jackson",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6114,8 +6123,11 @@
             "Elves Brener",
             "Josiah Harrell"
           ],
+          "winner": "Elves Brener",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6124,8 +6136,11 @@
             "Christian Edwards",
             "Rodolfo Bellato"
           ],
+          "winner": "Christian Edwards",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6134,8 +6149,10 @@
             "Robert Bryczek",
             "Rodolfo Vieira"
           ],
+          "winner": "Rodolfo Vieira",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6144,8 +6161,11 @@
             "Brady Hiestand",
             "Rinya Nakamura"
           ],
+          "winner": "Brady Hiestand",
+          "method": "Submission",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6154,8 +6174,11 @@
             "Tina Black",
             "Melissa Amaya"
           ],
+          "winner": "Tina Black",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6164,8 +6187,10 @@
             "Ilimbek Akylbek Uulu",
             "Mehemmedeli Osmanli"
           ],
+          "winner": "Ilimbek Akylbek Uulu",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6174,8 +6199,11 @@
             "Sedriques Dumas",
             "Luis Hernandez"
           ],
+          "winner": "Luis Hernandez",
+          "method": "Submission",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6184,8 +6212,11 @@
             "Norma Dumont",
             "Ailin Perez"
           ],
+          "winner": "Ailin Perez",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6194,8 +6225,11 @@
             "Raoni Barcelos",
             "Raul Rosas Jr."
           ],
+          "winner": "Raul Rosas Jr.",
+          "method": "KO/TKO",
+          "rounds": 5,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },

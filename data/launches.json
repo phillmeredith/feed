@@ -1,22 +1,7 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-09-26T09:52:56.856Z",
+  "updated": "2026-09-27T10:34:49.981Z",
   "items": [
-    {
-      "id": "9e24bef7-c44b-4fdc-ba52-68545ce9457e",
-      "name": "Electron | Owlright, Owlright, Owlright (StriX Launch 13)",
-      "mission": "Owlright, Owlright, Owlright (StriX Launch 13)",
-      "missionType": "Earth Science",
-      "provider": "Rocket Lab",
-      "rocket": "Electron",
-      "pad": "Rocket Lab Launch Complex 1B",
-      "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "net": "2026-09-26T00:39:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
-    },
     {
       "id": "7330d83b-c478-426c-8859-f9e3a335876d",
       "name": "Falcon 9 Block 5 | USSF-385",
@@ -28,8 +13,8 @@
       "location": "Vandenberg SFB, CA, USA",
       "net": "2026-09-26T14:00:54Z",
       "precision": "Second",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
     },
     {
@@ -43,8 +28,8 @@
       "location": "SpaceX Starbase, TX, USA",
       "net": "2026-09-28T12:15:00Z",
       "precision": "Minute",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_20260724044615.jpg"
     },
     {
@@ -243,6 +228,21 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_12a__image_20251224005749.jpg"
     },
     {
+      "id": "e59ff9a4-f72f-4841-8546-3c94346ecdba",
+      "name": "SSLV | AayulSAT-1A & others",
+      "mission": "AayulSAT-1A & others",
+      "missionType": "Technology",
+      "provider": "Indian Space Research Organization",
+      "rocket": "SSLV",
+      "pad": "Satish Dhawan Space Centre First Launch Pad",
+      "location": "Satish Dhawan Space Centre, India",
+      "net": "2026-10-31T00:00:00Z",
+      "precision": "Month",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/sslv_image_20220912001724.jpeg"
+    },
+    {
       "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
       "name": "Vulcan VC6L | Amazon Leo (LV-01)",
       "mission": "Amazon Leo (LV-01)",
@@ -318,6 +318,36 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/hanbit-nano_spa_image_20251224011159.jpg"
     },
     {
+      "id": "dfac5ab7-7017-454f-b6cf-eeed277a97b5",
+      "name": "LVM-3 | Gaganyaan-1",
+      "mission": "Gaganyaan-1",
+      "missionType": "Test Flight",
+      "provider": "Indian Space Research Organization",
+      "rocket": "LVM-3",
+      "pad": "Satish Dhawan Space Centre Second Launch Pad",
+      "location": "Satish Dhawan Space Centre, India",
+      "net": "2026-11-30T00:00:00Z",
+      "precision": "Month",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/gslv2520mk2520iii_image_20190604000938.jpg"
+    },
+    {
+      "id": "b5a9bccb-30d7-4af6-8ad1-fabb563be53c",
+      "name": "PSLV-XL | TDS-01",
+      "mission": "TDS-01",
+      "missionType": "Technology",
+      "provider": "Indian Space Research Organization",
+      "rocket": "PSLV-XL",
+      "pad": "Satish Dhawan Space Centre First Launch Pad",
+      "location": "Satish Dhawan Space Centre, India",
+      "net": "2026-11-30T00:00:00Z",
+      "precision": "Month",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/pslv_image_20190224012254.jpeg"
+    },
+    {
       "id": "d74afbc7-0de5-491c-be05-4e9c31f736ac",
       "name": "Falcon 9 Block 5 | Cygnus CRS-2 NG-25",
       "mission": "Cygnus CRS-2 NG-25",
@@ -376,6 +406,21 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
+    },
+    {
+      "id": "0cf92611-82a8-4095-a0b4-dda2e74b1fff",
+      "name": "LVM-3 | GSAT-32 (GSAT-N3)",
+      "mission": "GSAT-32 (GSAT-N3)",
+      "missionType": "Communications",
+      "provider": "Indian Space Research Organization",
+      "rocket": "LVM-3",
+      "pad": "Satish Dhawan Space Centre Second Launch Pad",
+      "location": "Satish Dhawan Space Centre, India",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Month",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/gslv2520mk2520iii_image_20190604000938.jpg"
     },
     {
       "id": "0b85fcca-5252-48d7-9ccb-c10b1da9d183",
@@ -528,21 +573,6 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/firefly_alpha_l_image_20240605174156.jpeg"
     },
     {
-      "id": "dfac5ab7-7017-454f-b6cf-eeed277a97b5",
-      "name": "LVM-3 | Gaganyaan-1",
-      "mission": "Gaganyaan-1",
-      "missionType": "Test Flight",
-      "provider": "Indian Space Research Organization",
-      "rocket": "LVM-3",
-      "pad": "Satish Dhawan Space Centre Second Launch Pad",
-      "location": "Satish Dhawan Space Centre, India",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/gslv2520mk2520iii_image_20190604000938.jpg"
-    },
-    {
       "id": "60f4ba6c-4201-4727-94aa-0015a5a0023f",
       "name": "Spectrum | 1 x Pelican satellite",
       "mission": "1 x Pelican satellite",
@@ -571,35 +601,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
-    },
-    {
-      "id": "0f867f0c-5422-4d44-93b8-d7faaae7019b",
-      "name": "Starship | Flight 15",
-      "mission": "Flight 15",
-      "missionType": "Test Flight",
-      "provider": "SpaceX",
-      "rocket": "Starship",
-      "pad": "Orbital Launch Pad 2",
-      "location": "SpaceX Starbase, TX, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_20260724044615.jpg"
-    },
-    {
-      "id": "a67b40f9-cfcc-4614-a355-a156280b4bb3",
-      "name": "Vulcan VC4L | Dream Chaser CRS 2 Flight 1",
-      "mission": "Dream Chaser CRS 2 Flight 1",
-      "missionType": "Test Flight",
-      "provider": "United Launch Alliance",
-      "rocket": "Vulcan VC4L",
-      "pad": "Space Launch Complex 41",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources."
     }
   ]
 }

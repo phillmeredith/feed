@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-09-26T10:01:33.177Z",
+  "updated": "2026-09-27T10:43:31.964Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -637,6 +637,20 @@
       "kind": "qualifying",
       "videoId": "C99UPegyFsM",
       "title": "Qualifying Highlights | 2026 Spanish Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:15",
+      "kind": "race",
+      "videoId": "I9oahfzac0I",
+      "title": "Race Highlights | 2026 Azerbaijan Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:15",
+      "kind": "qualifying",
+      "videoId": "nMrCLLJemBM",
+      "title": "Qualifying Highlights | 2026 Azerbaijan Grand Prix",
       "channel": "FORMULA 1"
     }
   ]
