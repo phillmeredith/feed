@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-09-27T10:43:31.964Z",
+  "updated": "2026-09-28T11:51:58.523Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -652,6 +652,13 @@
       "videoId": "nMrCLLJemBM",
       "title": "Qualifying Highlights | 2026 Azerbaijan Grand Prix",
       "channel": "FORMULA 1"
+    },
+    {
+      "key": "golf:401824815",
+      "kind": "final-round",
+      "videoId": "mnUnYWEiWFw",
+      "title": "Presidents Cup Highlights | Day 4 Singles | 2026",
+      "channel": "PGA Tour"
     }
   ]
 }

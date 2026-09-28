@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-27T10:34:51.267Z",
+  "updated": "2026-09-28T11:43:00.004Z",
   "events": [
     {
       "id": "401811927",
@@ -26371,7 +26371,7 @@
       "major": false,
       "startDate": "2026-09-24",
       "endDate": "2026-09-27",
-      "status": "In Progress",
+      "status": "Final",
       "leaderboard": []
     },
     {
