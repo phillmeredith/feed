@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-28T11:43:09.493Z",
+  "updated": "2026-09-29T11:23:39.489Z",
   "events": [
     {
       "id": "600057024",
@@ -6317,6 +6317,16 @@
           "fighters": [
             "Marvin Vettori",
             "Ismail Naurdiev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Jacobe Smith",
+            "Bruce Whitehead"
           ],
           "headline": false,
           "completed": false
