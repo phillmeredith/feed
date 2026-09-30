@@ -1,7 +1,71 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-29T11:23:13.209Z",
+  "updated": "2026-09-30T11:11:05.462Z",
   "items": [
+    {
+      "id": "openai/gpt-6.1-sol-pro",
+      "name": "GPT-6.1 Sol Pro",
+      "lab": "OpenAI",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-29T17:28:06.000Z",
+      "description": "GPT-6.1 Sol Pro is the same underlying model as [GPT-6.1 Sol](https://openrouter.ai/openai/gpt-6.1-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
+    },
+    {
+      "id": "openai/gpt-6.1-sol-pro:batch",
+      "name": "GPT-6.1 Sol Pro (batch)",
+      "lab": "OpenAI",
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-29T17:28:06.000Z",
+      "description": "GPT-6.1 Sol Pro is the same underlying model as [GPT-6.1 Sol](https://openrouter.ai/openai/gpt-6.1-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
+    },
+    {
+      "id": "openai/gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "lab": "OpenAI",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-29T17:28:02.000Z",
+      "description": "GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagship GPT-6 Astra in the GPT-6 series. It is suited for agentic coding, computer use, document-heavy professional..."
+    },
+    {
+      "id": "openai/gpt-6.1-sol:batch",
+      "name": "GPT-6.1 Sol (batch)",
+      "lab": "OpenAI",
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-09-29T17:28:02.000Z",
+      "description": "GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagship GPT-6 Astra in the GPT-6 series. It is suited for agentic coding, computer use, document-heavy professional..."
+    },
     {
       "id": "anthropic/claude-sonnet-5.5",
       "name": "Claude Sonnet 5.5",
@@ -183,7 +247,7 @@
         "text"
       ],
       "releasedAt": "2026-09-22T18:13:11.000Z",
-      "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-6-luna-pro:batch",
@@ -199,7 +263,7 @@
         "text"
       ],
       "releasedAt": "2026-09-22T18:13:11.000Z",
-      "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-6-luna",
@@ -247,7 +311,7 @@
         "text"
       ],
       "releasedAt": "2026-09-22T18:13:01.000Z",
-      "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-6-sol-pro:batch",
@@ -263,7 +327,7 @@
         "text"
       ],
       "releasedAt": "2026-09-22T18:13:01.000Z",
-      "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-6-sol",
@@ -352,7 +416,7 @@
       "lab": "xiaomi",
       "inputPrice": 0.14,
       "outputPrice": 0.28,
-      "contextTokens": 1048576,
+      "contextTokens": 1050000,
       "modality": "text+image+audio+video->text",
       "inputModalities": [
         "text",
@@ -463,8 +527,8 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.096,
-      "outputPrice": 1.9584000000000001,
+      "inputPrice": 0.13332,
+      "outputPrice": 0.39996,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -477,8 +541,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.02,
-      "outputPrice": 0.6,
+      "inputPrice": 0.019799999999999998,
+      "outputPrice": 0.396,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -632,8 +696,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 0.019799999999999998,
+      "outputPrice": 0.396,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -748,7 +812,7 @@
         "text"
       ],
       "releasedAt": "2026-09-04T20:13:55.000Z",
-      "description": "GPT-6 Astra Pro is the same underlying model as [GPT-6 Astra](https://openrouter.ai/openai/gpt-6-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-6 Astra Pro is the same underlying model as [GPT-6 Astra](https://openrouter.ai/openai/gpt-6-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-6-astra-pro:batch",
@@ -764,7 +828,7 @@
         "text"
       ],
       "releasedAt": "2026-09-04T20:13:55.000Z",
-      "description": "GPT-6 Astra Pro is the same underlying model as [GPT-6 Astra](https://openrouter.ai/openai/gpt-6-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-6 Astra Pro is the same underlying model as [GPT-6 Astra](https://openrouter.ai/openai/gpt-6-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "inclusionai/ling-3.0-flash-sante:free",
@@ -945,8 +1009,8 @@
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
       "inputPrice": 0.02,
-      "outputPrice": 0.3,
-      "contextTokens": 1310720,
+      "outputPrice": 0.24750000000000003,
+      "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
         "text",
@@ -978,7 +1042,7 @@
       "lab": "Zhipu AI",
       "inputPrice": 0.15,
       "outputPrice": 0.5,
-      "contextTokens": 1310720,
+      "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
         "text",
@@ -1068,9 +1132,9 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.19,
+      "inputPrice": 0.13,
       "outputPrice": 4,
-      "contextTokens": 1310720,
+      "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -1098,7 +1162,7 @@
       "lab": "Zhipu AI",
       "inputPrice": 1.4,
       "outputPrice": 4.4,
-      "contextTokens": 1310720,
+      "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -1124,8 +1188,8 @@
       "id": "qwen/qwen3.8-27b",
       "name": "Qwen3.8 27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.044899999999999995,
-      "outputPrice": 4.4,
+      "inputPrice": 0.024900000000000002,
+      "outputPrice": 4.35,
       "contextTokens": 1000000,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1253,8 +1317,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 0.48,
-      "outputPrice": 4.199999999999999,
+      "inputPrice": 0.66,
+      "outputPrice": 1.9800000000000002,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1299,7 +1363,7 @@
       "lab": "NVIDIA",
       "inputPrice": 0.06,
       "outputPrice": 0.16,
-      "contextTokens": 1000000,
+      "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -1355,8 +1419,8 @@
       "id": "meta/muse-glimmer-30b",
       "name": "Muse Glimmer 30B",
       "lab": "meta",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 0.35,
+      "outputPrice": 1.5,
       "contextTokens": 131072,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1387,9 +1451,9 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.012,
-      "outputPrice": 1.25,
-      "contextTokens": 1310720,
+      "inputPrice": 0.009899999999999999,
+      "outputPrice": 0.13068,
+      "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -1401,9 +1465,9 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.018,
-      "outputPrice": 0.32,
-      "contextTokens": 1310720,
+      "inputPrice": 0.01,
+      "outputPrice": 1.28,
+      "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -1728,7 +1792,7 @@
         "text"
       ],
       "releasedAt": "2026-07-09T09:54:27.000Z",
-      "description": "GPT-5.6 Luna Pro is the same underlying model as [GPT-5.6 Luna](https://openrouter.ai/openai/gpt-5.6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-5.6 Luna Pro is the same underlying model as [GPT-5.6 Luna](https://openrouter.ai/openai/gpt-5.6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-5.6-luna-pro:batch",
@@ -1744,7 +1808,7 @@
         "text"
       ],
       "releasedAt": "2026-07-09T09:54:27.000Z",
-      "description": "GPT-5.6 Luna Pro is the same underlying model as [GPT-5.6 Luna](https://openrouter.ai/openai/gpt-5.6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-5.6 Luna Pro is the same underlying model as [GPT-5.6 Luna](https://openrouter.ai/openai/gpt-5.6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-5.6-luna",
@@ -1792,7 +1856,7 @@
         "text"
       ],
       "releasedAt": "2026-07-09T09:54:21.000Z",
-      "description": "GPT-5.6 Terra Pro is the same underlying model as [GPT-5.6 Terra](https://openrouter.ai/openai/gpt-5.6-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-5.6 Terra Pro is the same underlying model as [GPT-5.6 Terra](https://openrouter.ai/openai/gpt-5.6-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-5.6-terra-pro:batch",
@@ -1808,7 +1872,7 @@
         "text"
       ],
       "releasedAt": "2026-07-09T09:54:21.000Z",
-      "description": "GPT-5.6 Terra Pro is the same underlying model as [GPT-5.6 Terra](https://openrouter.ai/openai/gpt-5.6-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-5.6 Terra Pro is the same underlying model as [GPT-5.6 Terra](https://openrouter.ai/openai/gpt-5.6-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-5.6-terra",
@@ -1856,7 +1920,7 @@
         "text"
       ],
       "releasedAt": "2026-07-09T09:54:14.000Z",
-      "description": "GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-5.6-sol-pro:batch",
@@ -1872,7 +1936,7 @@
         "text"
       ],
       "releasedAt": "2026-07-09T09:54:14.000Z",
-      "description": "GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks.\n\nLearn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode"
+      "description": "GPT-5.6 Sol Pro is the same underlying model as [GPT-5.6 Sol](https://openrouter.ai/openai/gpt-5.6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
       "id": "openai/gpt-5.6-sol",
@@ -2118,8 +2182,8 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM 5.2",
       "lab": "Zhipu AI",
-      "inputPrice": 0.2807,
-      "outputPrice": 4.4,
+      "inputPrice": 0.41,
+      "outputPrice": 3.9899999999999998,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2132,8 +2196,8 @@
       "id": "moonshotai/kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "lab": "Moonshot AI",
-      "inputPrice": 0.6562,
-      "outputPrice": 3.3000000000000003,
+      "inputPrice": 0.6712,
+      "outputPrice": 3.35,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [
@@ -2597,8 +2661,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.39999999999999997,
-      "outputPrice": 10,
+      "inputPrice": 0.3654,
+      "outputPrice": 9.1343,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2789,8 +2853,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.9552599999999999,
-      "outputPrice": 1.9105199999999998,
+      "inputPrice": 0.7829999999999999,
+      "outputPrice": 1.5659999999999998,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -5629,8 +5693,8 @@
       "id": "qwen/qwen3-30b-a3b",
       "name": "Qwen3 30B A3B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.12,
-      "outputPrice": 0.5,
+      "inputPrice": 0.13,
+      "outputPrice": 0.52,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [

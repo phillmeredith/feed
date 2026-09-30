@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-29T11:23:39.489Z",
+  "updated": "2026-09-30T11:11:38.657Z",
   "events": [
     {
       "id": "600057024",
@@ -6237,20 +6237,10 @@
       "id": "600060739",
       "name": "Dana White's Contender Series: Season 10, Week 8",
       "date": "2026-09-29T23:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
-        {
-          "segment": "main",
-          "weightClass": "Featherweight",
-          "fighters": [
-            "Ilias Bulaid",
-            "Erick Visconde"
-          ],
-          "headline": false,
-          "completed": false
-        },
         {
           "segment": "main",
           "weightClass": "W Strawweight",
@@ -6258,8 +6248,11 @@
             "Camila Reynoso",
             "Aieza Bertolso"
           ],
+          "winner": "Aieza Bertolso",
+          "method": "Submission",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6268,8 +6261,11 @@
             "Luca Borando",
             "Ian Escuza"
           ],
+          "winner": "Ian Escuza",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6278,8 +6274,11 @@
             "Zaurbek Sabanov",
             "Adama Diop"
           ],
+          "winner": "Adama Diop",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6288,8 +6287,11 @@
             "George Staines",
             "Loai Abushaar"
           ],
+          "winner": "George Staines",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -6323,20 +6325,20 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Welterweight",
+          "weightClass": "Lightweight",
           "fighters": [
-            "Jacobe Smith",
-            "Bruce Whitehead"
+            "Rafael Dos Anjos",
+            "Alexander Hernandez"
           ],
           "headline": false,
           "completed": false
         },
         {
           "segment": "prelim",
-          "weightClass": "Lightweight",
+          "weightClass": "Welterweight",
           "fighters": [
-            "Rafael Dos Anjos",
-            "Alexander Hernandez"
+            "Jacobe Smith",
+            "Bruce Whitehead"
           ],
           "headline": false,
           "completed": false
@@ -6753,20 +6755,20 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "Middleweight",
+          "weightClass": "W Flyweight",
           "fighters": [
-            "Joe Kropschot",
-            "Nick Klein"
+            "Tainara Lisboa",
+            "Lucia Szabova"
           ],
           "headline": false,
           "completed": false
         },
         {
           "segment": "main",
-          "weightClass": "W Flyweight",
+          "weightClass": "Middleweight",
           "fighters": [
-            "Tainara Lisboa",
-            "Lucia Szabova"
+            "Joe Kropschot",
+            "Nick Klein"
           ],
           "headline": true,
           "completed": false
