@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-09-30T11:11:38.657Z",
+  "updated": "2026-10-01T11:38:46.221Z",
   "events": [
     {
       "id": "600057024",
@@ -6365,16 +6365,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Bantamweight",
-          "fighters": [
-            "Marcus McGhee",
-            "Bernardo Sopaj"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Middleweight",
           "fighters": [
             "Andrey Pulyaev",
@@ -6816,11 +6806,134 @@
       ]
     },
     {
-      "id": "scheduled:2026-11-15T01:00Z",
-      "name": "UFC 334",
-      "date": "2026-11-15T01:00Z",
+      "id": "600061400",
+      "name": "UFC 334: Gane vs. Hokit",
+      "date": "2026-11-14T22:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "Madison Square Garden",
+      "location": "New York, USA",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Nazim Sadykhov",
+            "Jefferson Nascimento"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Adrian Yañez",
+            "Juan Diaz"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "W Bantamweight",
+          "fighters": [
+            "Macy Chiasson",
+            "Bia Mesquita"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Baisangur Susurkaev",
+            "Donte Johnson"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Jim Miller",
+            "Terrance McKinney"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Drew Dober",
+            "Chris Duncan"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Stephen Thompson",
+            "Charles Radtke"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Luis Gurule",
+            "Bilal Hasan"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Kevin Holland",
+            "Uroš Medić"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Caio Borralho",
+            "Yousri Belgaroui"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Bantamweight",
+          "fighters": [
+            "Amanda Nunes",
+            "Kayla Harrison"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Josh Hokit",
+            "Ciryl Gane"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
       "id": "scheduled:2026-11-21T17:00Z",

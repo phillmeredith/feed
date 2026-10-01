@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-09-30T11:11:05.462Z",
+  "updated": "2026-10-01T11:38:16.237Z",
   "items": [
     {
       "id": "openai/gpt-6.1-sol-pro",
@@ -19,43 +19,11 @@
       "description": "GPT-6.1 Sol Pro is the same underlying model as [GPT-6.1 Sol](https://openrouter.ai/openai/gpt-6.1-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
     },
     {
-      "id": "openai/gpt-6.1-sol-pro:batch",
-      "name": "GPT-6.1 Sol Pro (batch)",
-      "lab": "OpenAI",
-      "inputPrice": 1,
-      "outputPrice": 5,
-      "contextTokens": 1050000,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "file",
-        "image",
-        "text"
-      ],
-      "releasedAt": "2026-09-29T17:28:06.000Z",
-      "description": "GPT-6.1 Sol Pro is the same underlying model as [GPT-6.1 Sol](https://openrouter.ai/openai/gpt-6.1-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
-    },
-    {
       "id": "openai/gpt-6.1-sol",
       "name": "GPT-6.1 Sol",
       "lab": "OpenAI",
       "inputPrice": 2,
       "outputPrice": 10,
-      "contextTokens": 1050000,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "file",
-        "image",
-        "text"
-      ],
-      "releasedAt": "2026-09-29T17:28:02.000Z",
-      "description": "GPT-6.1 Sol is an upgrade to GPT-6 Sol from OpenAI, positioned below the flagship GPT-6 Astra in the GPT-6 series. It is suited for agentic coding, computer use, document-heavy professional..."
-    },
-    {
-      "id": "openai/gpt-6.1-sol:batch",
-      "name": "GPT-6.1 Sol (batch)",
-      "lab": "OpenAI",
-      "inputPrice": 1,
-      "outputPrice": 5,
       "contextTokens": 1050000,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -527,8 +495,8 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.13332,
-      "outputPrice": 0.39996,
+      "inputPrice": 0.20592000000000002,
+      "outputPrice": 0.61776,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -541,8 +509,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.019799999999999998,
-      "outputPrice": 0.396,
+      "inputPrice": 0.0243,
+      "outputPrice": 0.6,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -696,8 +664,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.019799999999999998,
-      "outputPrice": 0.396,
+      "inputPrice": 0.03,
+      "outputPrice": 0.5,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1009,7 +977,7 @@
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
       "inputPrice": 0.02,
-      "outputPrice": 0.24750000000000003,
+      "outputPrice": 0.3,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1132,8 +1100,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.13,
-      "outputPrice": 4,
+      "inputPrice": 0.06,
+      "outputPrice": 2.694,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1160,8 +1128,8 @@
       "id": "z-ai/glm-5.3",
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
-      "inputPrice": 1.4,
-      "outputPrice": 4.4,
+      "inputPrice": 0.2219,
+      "outputPrice": 3.39,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1188,8 +1156,8 @@
       "id": "qwen/qwen3.8-27b",
       "name": "Qwen3.8 27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.024900000000000002,
-      "outputPrice": 4.35,
+      "inputPrice": 0.42,
+      "outputPrice": 3,
       "contextTokens": 1000000,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1361,8 +1329,8 @@
       "id": "nvidia/nemotron-3.5-lightning",
       "name": "Nemotron 3.5 Lightning",
       "lab": "NVIDIA",
-      "inputPrice": 0.06,
-      "outputPrice": 0.16,
+      "inputPrice": 0.0595,
+      "outputPrice": 0.16999999999999998,
       "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
@@ -1451,8 +1419,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.009899999999999999,
-      "outputPrice": 0.13068,
+      "inputPrice": 0.0108,
+      "outputPrice": 1.28,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1465,7 +1433,7 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.01,
+      "inputPrice": 0.0108,
       "outputPrice": 1.28,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -1719,8 +1687,8 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 3,
-      "outputPrice": 15,
+      "inputPrice": 0.713,
+      "outputPrice": 10,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2182,8 +2150,8 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM 5.2",
       "lab": "Zhipu AI",
-      "inputPrice": 0.41,
-      "outputPrice": 3.9899999999999998,
+      "inputPrice": 1.1,
+      "outputPrice": 4.4,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2661,8 +2629,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.3654,
-      "outputPrice": 9.1343,
+      "inputPrice": 0.713,
+      "outputPrice": 10,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2853,8 +2821,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.7829999999999999,
-      "outputPrice": 1.5659999999999998,
+      "inputPrice": 0.20879999999999999,
+      "outputPrice": 0.41759999999999997,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2867,8 +2835,8 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.14,
-      "outputPrice": 0.28,
+      "inputPrice": 0.041999999999999996,
+      "outputPrice": 0.08399999999999999,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2958,8 +2926,8 @@
       "id": "moonshotai/kimi-k2.6",
       "name": "Kimi K2.6",
       "lab": "Moonshot AI",
-      "inputPrice": 0.65,
-      "outputPrice": 3.41,
+      "inputPrice": 0.43415,
+      "outputPrice": 1.8279999999999998,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [
@@ -3005,8 +2973,8 @@
       "id": "z-ai/glm-5.1",
       "name": "GLM 5.1",
       "lab": "Zhipu AI",
-      "inputPrice": 1.4,
-      "outputPrice": 4.4,
+      "inputPrice": 0.9646,
+      "outputPrice": 3.0316,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -5513,7 +5481,7 @@
       "id": "minimax/minimax-m1",
       "name": "MiniMax M1",
       "lab": "minimax",
-      "inputPrice": 0.39999999999999997,
+      "inputPrice": 0.55,
       "outputPrice": 2.2,
       "contextTokens": 1000000,
       "modality": "text->text",
@@ -5693,8 +5661,8 @@
       "id": "qwen/qwen3-30b-a3b",
       "name": "Qwen3 30B A3B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.13,
-      "outputPrice": 0.52,
+      "inputPrice": 0.12,
+      "outputPrice": 0.5,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
