@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-01T11:38:46.221Z",
+  "updated": "2026-10-02T11:07:38.749Z",
   "events": [
     {
       "id": "600057024",
@@ -6365,6 +6365,16 @@
         },
         {
           "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Anthony Romero",
+            "Marcus McGhee"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Middleweight",
           "fighters": [
             "Andrey Pulyaev",
@@ -6567,8 +6577,8 @@
           "segment": "prelim",
           "weightClass": "Middleweight",
           "fighters": [
-            "Gilbert Urbina",
-            "Julien LeBlanc"
+            "Julien LeBlanc",
+            "Nick Galanti"
           ],
           "headline": false,
           "completed": false
