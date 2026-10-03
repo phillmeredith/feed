@@ -1,52 +1,7 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-02T11:07:27.879Z",
+  "updated": "2026-10-03T10:26:01.563Z",
   "items": [
-    {
-      "id": "18441371-8b2e-457c-afb5-1ec1b11ab630",
-      "name": "Falcon 9 Block 5 | Crew-13",
-      "mission": "Crew-13",
-      "missionType": "Human Exploration",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 40",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-10-01T15:10:06Z",
-      "precision": "Second",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20220301072106.jpeg"
-    },
-    {
-      "id": "67213393-7983-4c06-8b44-b8c785a5ed79",
-      "name": "Falcon 9 Block 5 | Transporter 18 (Dedicated SSO Rideshare)",
-      "mission": "Transporter 18 (Dedicated SSO Rideshare)",
-      "missionType": "Dedicated Rideshare",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 4E",
-      "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-01T18:32:00Z",
-      "precision": "Second",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
-    },
-    {
-      "id": "4651fd8a-43de-4166-bf8f-c168b3bd1d2c",
-      "name": "Falcon Heavy | NROL-97",
-      "mission": "NROL-97",
-      "missionType": "Government/Top Secret",
-      "provider": "SpaceX",
-      "rocket": "Falcon Heavy",
-      "pad": "Launch Complex 39A",
-      "location": "Kennedy Space Center, FL, USA",
-      "net": "2026-10-02T03:54:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_heavy_image_20220129192819.jpeg"
-    },
     {
       "id": "da43dc2c-00af-4cc1-8ef1-90a60b2eb9e5",
       "name": "Falcon 9 Block 5 | SDA Tranche 1 Transport Layer A",
@@ -116,10 +71,10 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 40",
       "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-10-13T10:33:00Z",
-      "precision": "Minute",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "net": "2026-10-13T10:33:44Z",
+      "precision": "Second",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20210520085648.jpeg"
     },
     {
@@ -600,6 +555,51 @@
       "precision": "Quarter 4",
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources."
+    },
+    {
+      "id": "e61d353c-db55-4a57-8184-0fab187231e6",
+      "name": "Falcon 9 Block 5 | Globalstar 2-R Mission 2 (x 9)",
+      "mission": "Globalstar 2-R Mission 2 (x 9)",
+      "missionType": "Communications",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 40",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Year Half 2",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
+    },
+    {
+      "id": "c9605b67-8a53-4239-a8ae-577fe3b79799",
+      "name": "Long March 2F/G | Shenzhou 24",
+      "mission": "Shenzhou 24",
+      "missionType": "Human Exploration",
+      "provider": "China Aerospace Science and Technology Corporation",
+      "rocket": "Long March 2F/G",
+      "pad": "Launch Area 91 (SLS-1 / 921)",
+      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Year Half 2",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/shenzhou_22_lau_image_20251129175823.jpg"
+    },
+    {
+      "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
+      "name": "Spectrum | AT-Astra and Others (Spectrum Flight 3)",
+      "mission": "AT-Astra and Others (Spectrum Flight 3)",
+      "missionType": "Technology",
+      "provider": "Isar Aerospace",
+      "rocket": "Spectrum",
+      "pad": "Orbital Launch Pad",
+      "location": "Andøya Spaceport",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Year Half 2",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
     }
   ]
 }
