@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-03T10:26:13.600Z",
+  "updated": "2026-10-04T11:07:51.740Z",
   "events": [
     {
       "id": "600057024",
@@ -6299,7 +6299,7 @@
       "id": "600061182",
       "name": "UFC 332: Silva vs. Wang",
       "date": "2026-10-03T20:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Delta Center",
       "location": "Salt Lake City, USA",
       "fights": [
@@ -6310,8 +6310,11 @@
             "Court McGee",
             "Eric Nolan"
           ],
+          "winner": "Eric Nolan",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6320,8 +6323,10 @@
             "Marvin Vettori",
             "Ismail Naurdiev"
           ],
+          "winner": "Ismail Naurdiev",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6330,8 +6335,11 @@
             "Rafael Dos Anjos",
             "Alexander Hernandez"
           ],
+          "winner": "Alexander Hernandez",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6340,8 +6348,11 @@
             "Jacobe Smith",
             "Bruce Whitehead"
           ],
+          "winner": "Jacobe Smith",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6350,8 +6361,11 @@
             "Johnny Walker",
             "Mick Parkin"
           ],
+          "winner": "Johnny Walker",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6360,8 +6374,11 @@
             "Anthony Wint",
             "Lucas Armand"
           ],
+          "winner": "Anthony Wint",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6370,8 +6387,11 @@
             "Anthony Romero",
             "Marcus McGhee"
           ],
+          "winner": "Marcus McGhee",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6380,8 +6400,11 @@
             "Andrey Pulyaev",
             "Damian Pinas"
           ],
+          "winner": "Damian Pinas",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6390,8 +6413,11 @@
             "Alden Coria",
             "Imanol Rodriguez"
           ],
+          "winner": "Imanol Rodriguez",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6400,8 +6426,11 @@
             "Roman Kopylov",
             "Ateba Gautier"
           ],
+          "winner": "Roman Kopylov",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6410,8 +6439,11 @@
             "Roberto Soldić",
             "Khaos Williams"
           ],
+          "winner": "Roberto Soldić",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6420,8 +6452,11 @@
             "King Green",
             "Esteban Ribovics"
           ],
+          "winner": "Esteban Ribovics",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6430,8 +6465,11 @@
             "Deiveson Figueiredo",
             "Payton Talbott"
           ],
+          "winner": "Payton Talbott",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6440,8 +6478,11 @@
             "Natalia Silva",
             "Wang Cong"
           ],
+          "winner": "Natalia Silva",
+          "method": "Decision",
+          "rounds": 5,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -7035,6 +7076,16 @@
         },
         {
           "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Keiichiro Nakamura",
+            "Ollie Schmid"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "W Bantamweight",
           "fighters": [
             "Priscila Cachoeira",
@@ -7054,7 +7105,7 @@
           "completed": false
         },
         {
-          "segment": "prelim",
+          "segment": "main",
           "weightClass": "Featherweight",
           "fighters": [
             "Lucas Brennan",
@@ -7079,16 +7130,6 @@
           "fighters": [
             "Wes Schultz",
             "Mantas Kondratavičius"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "Featherweight",
-          "fighters": [
-            "Keiichiro Nakamura",
-            "Ollie Schmid"
           ],
           "headline": false,
           "completed": false
