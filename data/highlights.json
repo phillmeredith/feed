@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-10-04T11:16:14.221Z",
+  "updated": "2026-10-05T12:27:35.211Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -658,6 +658,27 @@
       "kind": "final-round",
       "videoId": "mnUnYWEiWFw",
       "title": "Presidents Cup Highlights | Day 4 Singles | 2026",
+      "channel": "PGA Tour"
+    },
+    {
+      "key": "f1:2026:16",
+      "kind": "race",
+      "videoId": "U-V7IfBwN1I",
+      "title": "Race Highlights | 2026 Bahrain Grand Prix in Malaysia",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:16",
+      "kind": "qualifying",
+      "videoId": "XoC8pcPo7A4",
+      "title": "Qualifying Highlights | 2026 Bahrain Grand Prix in Malaysia",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "golf:401850915",
+      "kind": "final-round",
+      "videoId": "1NVyBfA-eQg",
+      "title": "PGA Tour Highlights | Round 4 | Bank of Utah Championship | 2026",
       "channel": "PGA Tour"
     }
   ]

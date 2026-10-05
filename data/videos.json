@@ -1,6 +1,6 @@
 {
   "note": "Video coverage from an allowlist of channels, via YouTube's keyless per-channel Atom feeds (npm run videos:update). Feeds carry only the last fifteen videos, so this store accumulates and never removes.",
-  "updated": "2026-10-04T11:16:15.132Z",
+  "updated": "2026-10-05T12:27:36.407Z",
   "items": [
     {
       "id": "1sXd8PazloU",
@@ -8,7 +8,7 @@
       "channel": "DPReview TV",
       "beat": "photography",
       "publishedAt": "2026-10-02T23:38:42+00:00",
-      "views": 0
+      "views": 6106
     },
     {
       "id": "3iRUwVzRDZQ",
@@ -16,7 +16,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-10-02T20:50:25+00:00",
-      "views": 6343798
+      "views": 7781288
     },
     {
       "id": "K0TabPPrG3c",
@@ -24,7 +24,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-10-02T17:00:35+00:00",
-      "views": 12853
+      "views": 14279
     },
     {
       "id": "a2F8k_R7LR8",
@@ -32,7 +32,7 @@
       "channel": "Engadget",
       "beat": "hardware",
       "publishedAt": "2026-10-02T14:00:37+00:00",
-      "views": 8711
+      "views": 9627
     },
     {
       "id": "BJsf_jr8L8A",
@@ -40,7 +40,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-10-01T17:00:38+00:00",
-      "views": 47293
+      "views": 50435
     },
     {
       "id": "VQp_8WRgd0g",
@@ -48,7 +48,7 @@
       "channel": "Engadget",
       "beat": "hardware",
       "publishedAt": "2026-10-01T14:00:01+00:00",
-      "views": 9425
+      "views": 9714
     },
     {
       "id": "W_Blrx4MOq0",
@@ -56,7 +56,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-10-01T12:00:13+00:00",
-      "views": 6403
+      "views": 6709
     },
     {
       "id": "e1q-TuHdc4Y",
@@ -64,7 +64,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-09-30T14:42:19+00:00",
-      "views": 5219779
+      "views": 5343551
     },
     {
       "id": "Q31XCg88rSg",
@@ -72,7 +72,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-30T14:00:29+00:00",
-      "views": 224686
+      "views": 244848
     },
     {
       "id": "NM7olPzR3sM",
@@ -80,7 +80,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-30T14:00:18+00:00",
-      "views": 22656
+      "views": 23470
     },
     {
       "id": "lRDRbih5JQc",
@@ -88,7 +88,7 @@
       "channel": "Engadget",
       "beat": "hardware",
       "publishedAt": "2026-09-30T14:00:09+00:00",
-      "views": 12379
+      "views": 12675
     },
     {
       "id": "VEZnBS4fX38",
@@ -104,7 +104,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-09-29T12:00:26+00:00",
-      "views": 24248
+      "views": 24944
     },
     {
       "id": "rayrrXot17M",
@@ -112,7 +112,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-09-29T01:01:35+00:00",
-      "views": 5448733
+      "views": 5596420
     },
     {
       "id": "NvzV4zVXGYw",
@@ -120,7 +120,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-28T17:00:27+00:00",
-      "views": 33401
+      "views": 33962
     },
     {
       "id": "r4I2STQQbPs",
@@ -128,7 +128,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-28T14:00:21+00:00",
-      "views": 15963
+      "views": 16316
     },
     {
       "id": "NzML70Lz0PM",
@@ -136,7 +136,7 @@
       "channel": "Engadget",
       "beat": "hardware",
       "publishedAt": "2026-09-28T14:00:19+00:00",
-      "views": 60800
+      "views": 61015
     },
     {
       "id": "Sy4Zy3n6mCo",
@@ -144,7 +144,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-26T14:00:35+00:00",
-      "views": 157861
+      "views": 160577
     },
     {
       "id": "Ox9S374mWSE",
@@ -152,7 +152,7 @@
       "channel": "DPReview TV",
       "beat": "photography",
       "publishedAt": "2026-09-26T02:40:01+00:00",
-      "views": 22491
+      "views": 22656
     },
     {
       "id": "L-jHMJSv3Gw",
@@ -160,7 +160,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-25T17:00:33+00:00",
-      "views": 19706
+      "views": 20209
     },
     {
       "id": "DkUuOr21v4s",
@@ -168,7 +168,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-09-24T22:26:18+00:00",
-      "views": 12633396
+      "views": 12826399
     },
     {
       "id": "Sz4ylWR9B2k",
@@ -176,7 +176,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-24T17:00:11+00:00",
-      "views": 58218
+      "views": 59044
     },
     {
       "id": "oHvJkz-eCNY",
@@ -184,7 +184,7 @@
       "channel": "DPReview TV",
       "beat": "photography",
       "publishedAt": "2026-09-24T04:01:21+00:00",
-      "views": 31912
+      "views": 32116
     },
     {
       "id": "0-5cHzEIpGg",
@@ -192,7 +192,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-24T04:00:27+00:00",
-      "views": 207687
+      "views": 209000
     },
     {
       "id": "ssSvp8B1QPw",
@@ -200,7 +200,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-09-23T14:00:35+00:00",
-      "views": 41133
+      "views": 42583
     },
     {
       "id": "BR1sNtvfU-U",
@@ -208,7 +208,7 @@
       "channel": "Engadget",
       "beat": "hardware",
       "publishedAt": "2026-09-23T14:00:26+00:00",
-      "views": 7998
+      "views": 8122
     },
     {
       "id": "pOX1l1edBME",
@@ -216,7 +216,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-09-22T17:49:42+00:00",
-      "views": 5086743
+      "views": 5120366
     },
     {
       "id": "sliyJZbm1bE",
@@ -224,7 +224,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-22T13:00:33+00:00",
-      "views": 11950
+      "views": 12132
     },
     {
       "id": "wDABXYEVX68",
@@ -232,7 +232,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-22T13:00:31+00:00",
-      "views": 15477
+      "views": 15703
     },
     {
       "id": "vzN8uhry41c",
@@ -240,7 +240,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-22T13:00:26+00:00",
-      "views": 10371
+      "views": 10492
     },
     {
       "id": "gNgm_5WiV_c",
@@ -248,7 +248,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-22T13:00:16+00:00",
-      "views": 15055
+      "views": 15201
     },
     {
       "id": "1vgIHtQlKwA",
@@ -256,7 +256,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-09-21T15:00:35+00:00",
-      "views": 24145
+      "views": 24504
     },
     {
       "id": "RGykCtF_ReE",
@@ -264,7 +264,7 @@
       "channel": "Engadget",
       "beat": "hardware",
       "publishedAt": "2026-09-21T14:00:04+00:00",
-      "views": 14807
+      "views": 14888
     },
     {
       "id": "M8CRrGWpTIg",
@@ -272,7 +272,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-19T14:00:04+00:00",
-      "views": 56076
+      "views": 56232
     },
     {
       "id": "lh4VBvTQd7g",
@@ -280,7 +280,7 @@
       "channel": "DPReview TV",
       "beat": "photography",
       "publishedAt": "2026-09-19T00:33:43+00:00",
-      "views": 14352
+      "views": 14419
     },
     {
       "id": "oJG68eOZCpc",
@@ -288,7 +288,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-18T17:30:25+00:00",
-      "views": 27391
+      "views": 27473
     },
     {
       "id": "xOyyNSOuD_4",
@@ -296,7 +296,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-09-18T13:00:01+00:00",
-      "views": 33089
+      "views": 33550
     },
     {
       "id": "GXeaGblK8Ms",
@@ -304,7 +304,7 @@
       "channel": "Engadget",
       "beat": "hardware",
       "publishedAt": "2026-09-17T23:18:23+00:00",
-      "views": 34538
+      "views": 34646
     },
     {
       "id": "O219sdF5WO8",
@@ -312,7 +312,7 @@
       "channel": "Engadget",
       "beat": "hardware",
       "publishedAt": "2026-09-17T14:00:10+00:00",
-      "views": 18360
+      "views": 18413
     },
     {
       "id": "ohqxP8EEumo",
@@ -320,7 +320,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-09-16T12:01:27+00:00",
-      "views": 11347763
+      "views": 11377530
     },
     {
       "id": "XYH9RPdRfGs",
@@ -328,7 +328,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-16T12:00:09+00:00",
-      "views": 204503
+      "views": 205109
     },
     {
       "id": "623DjV8Nwuo",
@@ -336,7 +336,7 @@
       "channel": "DPReview TV",
       "beat": "photography",
       "publishedAt": "2026-09-16T01:00:38+00:00",
-      "views": 25961
+      "views": 26246
     },
     {
       "id": "lVZG1eNyz24",
@@ -344,7 +344,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-16T01:00:35+00:00",
-      "views": 75017
+      "views": 75603
     },
     {
       "id": "C1yiM6zRQmE",
@@ -352,7 +352,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-16T01:00:22+00:00",
-      "views": 308946
+      "views": 309826
     },
     {
       "id": "Y6p3mj-WAKs",
@@ -360,7 +360,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-15T14:00:28+00:00",
-      "views": 35630
+      "views": 35956
     },
     {
       "id": "-hj_2UiOsvo",
@@ -368,7 +368,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-15T14:00:27+00:00",
-      "views": 38536
+      "views": 38792
     },
     {
       "id": "aJBlO-8jkRE",
@@ -376,7 +376,7 @@
       "channel": "Engadget",
       "beat": "hardware",
       "publishedAt": "2026-09-15T14:00:24+00:00",
-      "views": 11600
+      "views": 11627
     },
     {
       "id": "TzK4s77jB6U",
@@ -384,7 +384,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-09-15T14:00:09+00:00",
-      "views": 30435
+      "views": 30710
     },
     {
       "id": "mI8qDnXbM4U",
@@ -392,7 +392,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-15T14:00:00+00:00",
-      "views": 80670
+      "views": 80952
     },
     {
       "id": "6D__H_DO2Xk",
@@ -400,7 +400,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-09-12T21:36:57+00:00",
-      "views": 12463421
+      "views": 12483353
     },
     {
       "id": "Xnrh559PDmA",
@@ -408,7 +408,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-12T14:00:12+00:00",
-      "views": 149012
+      "views": 150209
     },
     {
       "id": "42HwqWjaBB4",
@@ -416,7 +416,7 @@
       "channel": "DPReview TV",
       "beat": "photography",
       "publishedAt": "2026-09-12T00:04:10+00:00",
-      "views": 32190
+      "views": 32338
     },
     {
       "id": "GrQED_j30tc",
@@ -424,7 +424,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-11T16:00:04+00:00",
-      "views": 59954
+      "views": 60234
     },
     {
       "id": "KmiDe3Su05c",
@@ -448,7 +448,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-09-10T13:42:04+00:00",
-      "views": 27778
+      "views": 28076
     },
     {
       "id": "cjry506x-Ww",
@@ -456,7 +456,7 @@
       "channel": "DPReview TV",
       "beat": "photography",
       "publishedAt": "2026-09-10T13:00:28+00:00",
-      "views": 5505
+      "views": 5516
     },
     {
       "id": "hbiRSW9RAyc",
@@ -464,7 +464,7 @@
       "channel": "DPReview TV",
       "beat": "photography",
       "publishedAt": "2026-09-10T13:00:11+00:00",
-      "views": 6990
+      "views": 6999
     },
     {
       "id": "Od6M0AXpcxQ",
@@ -472,7 +472,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-09-10T07:29:55+00:00",
-      "views": 27534046
+      "views": 27568907
     },
     {
       "id": "GGbYNdEICh4",
@@ -488,7 +488,7 @@
       "channel": "PetaPixel",
       "beat": "photography",
       "publishedAt": "2026-09-09T23:35:31+00:00",
-      "views": 81104
+      "views": 81150
     },
     {
       "id": "gF-337-0CUU",
@@ -496,7 +496,7 @@
       "channel": "DPReview TV",
       "beat": "photography",
       "publishedAt": "2026-09-09T06:00:31+00:00",
-      "views": 67455
+      "views": 67971
     },
     {
       "id": "X6avte1uuo8",
@@ -536,7 +536,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-09-08T11:14:39+00:00",
-      "views": 27517
+      "views": 27773
     },
     {
       "id": "CTQVnp7U54k",
@@ -544,7 +544,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-08T05:00:23+00:00",
-      "views": 74780
+      "views": 75114
     },
     {
       "id": "zK-zN_KQP5U",
@@ -552,7 +552,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-08T05:00:17+00:00",
-      "views": 82576
+      "views": 83047
     },
     {
       "id": "51WQGfV38yE",
@@ -568,7 +568,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-09-05T21:18:49+00:00",
-      "views": 4973285
+      "views": 4984597
     },
     {
       "id": "-5vbt8NQN8k",
@@ -576,7 +576,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-09-05T12:01:45+00:00",
-      "views": 4427
+      "views": 4455
     },
     {
       "id": "l8r8qr4ngbc",
@@ -584,7 +584,7 @@
       "channel": "Christopher Frost",
       "beat": "photography",
       "publishedAt": "2026-09-04T17:00:21+00:00",
-      "views": 16237
+      "views": 16254
     },
     {
       "id": "ohuYFxTNs_g",
@@ -608,7 +608,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-09-04T01:18:34+00:00",
-      "views": 5370494
+      "views": 5374812
     },
     {
       "id": "8iTuhvD01ig",
@@ -632,7 +632,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-09-02T16:13:59+00:00",
-      "views": 5180
+      "views": 5190
     },
     {
       "id": "51F6lonfdjM",
@@ -696,7 +696,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-08-27T13:00:18+00:00",
-      "views": 11602
+      "views": 11655
     },
     {
       "id": "dE5N7pRr0JU",
@@ -728,7 +728,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-08-24T20:27:50+00:00",
-      "views": 6443023
+      "views": 6456152
     },
     {
       "id": "0bWBGvlu7H4",
@@ -736,7 +736,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-08-24T18:44:31+00:00",
-      "views": 1033
+      "views": 1044
     },
     {
       "id": "-tGd12CxJTw",
@@ -760,7 +760,7 @@
       "channel": "Marques Brownlee",
       "beat": "hardware",
       "publishedAt": "2026-08-21T18:53:07+00:00",
-      "views": 5664708
+      "views": 5679191
     },
     {
       "id": "_jmlq5JfRcA",
@@ -792,7 +792,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-08-20T13:09:42+00:00",
-      "views": 1426
+      "views": 1433
     },
     {
       "id": "Fp-4GmRpnDI",
@@ -832,7 +832,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-08-17T13:27:14+00:00",
-      "views": 1948
+      "views": 1962
     },
     {
       "id": "kF0lyrCY1Qw",
@@ -872,7 +872,7 @@
       "channel": "Dustin Abbott",
       "beat": "photography",
       "publishedAt": "2026-08-13T12:26:34+00:00",
-      "views": 3209
+      "views": 3238
     },
     {
       "id": "o4SSoURPODY",
@@ -1048,7 +1048,7 @@
       "channel": "Gerald Undone",
       "beat": "photography",
       "publishedAt": "2026-07-22T14:00:10+00:00",
-      "views": 183546
+      "views": 183844
     },
     {
       "id": "8Hx2yvWSgs0",
@@ -1144,7 +1144,7 @@
       "channel": "Gerald Undone",
       "beat": "photography",
       "publishedAt": "2026-04-20T14:07:27+00:00",
-      "views": 266486
+      "views": 266597
     },
     {
       "id": "rnfw3Y7dPqE",
@@ -1152,7 +1152,7 @@
       "channel": "Gerald Undone",
       "beat": "photography",
       "publishedAt": "2026-04-13T14:14:26+00:00",
-      "views": 9349
+      "views": 9355
     },
     {
       "id": "pl_nZG_ziRE",
@@ -1160,7 +1160,7 @@
       "channel": "Gerald Undone",
       "beat": "photography",
       "publishedAt": "2026-03-20T16:32:25+00:00",
-      "views": 127524
+      "views": 127687
     },
     {
       "id": "ASZtoseiwus",
@@ -1168,7 +1168,7 @@
       "channel": "Gerald Undone",
       "beat": "photography",
       "publishedAt": "2026-03-04T17:18:47+00:00",
-      "views": 106391
+      "views": 106603
     },
     {
       "id": "niF6RmexCTc",
@@ -1176,7 +1176,7 @@
       "channel": "Gerald Undone",
       "beat": "photography",
       "publishedAt": "2026-02-24T05:01:01+00:00",
-      "views": 104753
+      "views": 104936
     },
     {
       "id": "0-AzXN9b1Ow",
@@ -1184,7 +1184,7 @@
       "channel": "Gerald Undone",
       "beat": "photography",
       "publishedAt": "2025-12-02T14:00:01+00:00",
-      "views": 454976
+      "views": 455555
     },
     {
       "id": "JG-3zUDQ1-Y",
@@ -1192,7 +1192,7 @@
       "channel": "Gerald Undone",
       "beat": "photography",
       "publishedAt": "2025-11-26T03:15:06+00:00",
-      "views": 95610
+      "views": 95681
     }
   ]
 }
