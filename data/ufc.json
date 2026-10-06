@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-05T12:18:38.579Z",
+  "updated": "2026-10-06T12:03:18.606Z",
   "events": [
     {
       "id": "600057024",
@@ -6496,10 +6496,50 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "",
+          "weightClass": "Light Heavyweight",
           "fighters": [
-            "TBA",
-            "Opponent TBA"
+            "Preston LaGrange",
+            "Nell Ariano"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Mateus Soares",
+            "Ryuho Miyaguchi"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Roque Conceição",
+            "Alexander Chavez"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Salhahuddin Everett",
+            "Ozzy Martin"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Bantamweight",
+          "fighters": [
+            "Alivia Bierley",
+            "Summer Onley"
           ],
           "headline": true,
           "completed": false
@@ -6576,20 +6616,20 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Bantamweight",
+          "weightClass": "Light Heavyweight",
           "fighters": [
-            "Otari Tanzilovi",
-            "Malcolm Wellmaker"
+            "Gerald Meerschaert",
+            "Julius Walker"
           ],
           "headline": false,
           "completed": false
         },
         {
           "segment": "main",
-          "weightClass": "Light Heavyweight",
+          "weightClass": "Bantamweight",
           "fighters": [
-            "Gerald Meerschaert",
-            "Julius Walker"
+            "Otari Tanzilovi",
+            "Malcolm Wellmaker"
           ],
           "headline": false,
           "completed": false
@@ -6646,10 +6686,20 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "",
+          "weightClass": "W Bantamweight",
           "fighters": [
-            "TBA",
-            "Opponent TBA"
+            "Aline Pereira",
+            "Smilla Sundell"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Ilias Bulaid",
+            "Erick Visconde"
           ],
           "headline": true,
           "completed": false
