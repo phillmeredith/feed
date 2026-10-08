@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-07T11:48:46.263Z",
+  "updated": "2026-10-08T12:03:47.809Z",
   "events": [
     {
       "id": "401811927",
@@ -27111,8 +27111,441 @@
       "major": false,
       "startDate": "2026-10-08",
       "endDate": "2026-10-11",
-      "status": "Scheduled",
-      "leaderboard": []
+      "status": "In Progress",
+      "leaderboard": [
+        {
+          "position": 1,
+          "name": "Jacob Bridgeman",
+          "score": "-8",
+          "country": "USA"
+        },
+        {
+          "position": 2,
+          "name": "Jordan Smith",
+          "score": "-7",
+          "country": "England"
+        },
+        {
+          "position": 3,
+          "name": "Pierceson Coody",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 4,
+          "name": "Mac Meissner",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 5,
+          "name": "Ricky Castillo",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 6,
+          "name": "Max Homa",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 7,
+          "name": "Keith Mitchell",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 8,
+          "name": "Kristoffer Ventura",
+          "score": "-5",
+          "country": "Norway"
+        },
+        {
+          "position": 9,
+          "name": "Michael Thorbjornsen",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 10,
+          "name": "Andrew Putnam",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 11,
+          "name": "David Lipsky",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 12,
+          "name": "Nico Echavarria",
+          "score": "-4",
+          "country": "Colombia"
+        },
+        {
+          "position": 13,
+          "name": "Min Woo Lee",
+          "score": "-4",
+          "country": "Australia"
+        },
+        {
+          "position": 14,
+          "name": "Collin Morikawa",
+          "score": "-4",
+          "country": "USA"
+        },
+        {
+          "position": 15,
+          "name": "Ryo Hisatsune",
+          "score": "-4",
+          "country": "Japan"
+        },
+        {
+          "position": 16,
+          "name": "Hideki Matsuyama",
+          "score": "-4",
+          "country": "Japan"
+        },
+        {
+          "position": 17,
+          "name": "Michael Kim",
+          "score": "-3",
+          "country": "USA"
+        },
+        {
+          "position": 18,
+          "name": "Ren Yonezawa",
+          "score": "-3",
+          "country": "Japan"
+        },
+        {
+          "position": 19,
+          "name": "Denny McCarthy",
+          "score": "-3",
+          "country": "USA"
+        },
+        {
+          "position": 20,
+          "name": "Michael Brennan",
+          "score": "-3",
+          "country": "USA"
+        },
+        {
+          "position": 21,
+          "name": "John Parry",
+          "score": "-3",
+          "country": "England"
+        },
+        {
+          "position": 22,
+          "name": "Hiroshi Iwata",
+          "score": "-3",
+          "country": "Japan"
+        },
+        {
+          "position": 23,
+          "name": "Christiaan Bezuidenhout",
+          "score": "-3",
+          "country": "South Africa"
+        },
+        {
+          "position": 24,
+          "name": "Johnny Keefer",
+          "score": "-3",
+          "country": "USA"
+        },
+        {
+          "position": 25,
+          "name": "Ryan Gerard",
+          "score": "-3",
+          "country": "USA"
+        },
+        {
+          "position": 26,
+          "name": "Keita Nakajima",
+          "score": "-2",
+          "country": "Japan"
+        },
+        {
+          "position": 27,
+          "name": "Stephan Jaeger",
+          "score": "-2",
+          "country": "Germany"
+        },
+        {
+          "position": 28,
+          "name": "Sungjae Im",
+          "score": "-2",
+          "country": "South Korea"
+        },
+        {
+          "position": 29,
+          "name": "Kosuke Sunagawa",
+          "score": "-2",
+          "country": "Japan"
+        },
+        {
+          "position": 30,
+          "name": "Adam Scott",
+          "score": "-2",
+          "country": "Australia"
+        },
+        {
+          "position": 31,
+          "name": "Justin Thomas",
+          "score": "-2",
+          "country": "USA"
+        },
+        {
+          "position": 32,
+          "name": "Brian Harman",
+          "score": "-2",
+          "country": "USA"
+        },
+        {
+          "position": 33,
+          "name": "Zach Bauchou",
+          "score": "-2",
+          "country": "USA"
+        },
+        {
+          "position": 34,
+          "name": "Doug Ghim",
+          "score": "-2",
+          "country": "USA"
+        },
+        {
+          "position": 35,
+          "name": "Lee Hodges",
+          "score": "-2",
+          "country": "USA"
+        },
+        {
+          "position": 36,
+          "name": "Beau Hossler",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 37,
+          "name": "Max Greyserman",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 38,
+          "name": "Matt McCarty",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 39,
+          "name": "Xander Schauffele",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 40,
+          "name": "Matt Wallace",
+          "score": "-1",
+          "country": "England"
+        },
+        {
+          "position": 41,
+          "name": "Takumi Kanaya",
+          "score": "-1",
+          "country": "Japan"
+        },
+        {
+          "position": 42,
+          "name": "Kevin Roy",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 43,
+          "name": "Chandler Phillips",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 44,
+          "name": "Tomohiro Ishizaka",
+          "score": "-1",
+          "country": "Japan"
+        },
+        {
+          "position": 45,
+          "name": "Wyndham Clark",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 46,
+          "name": "Ben Kohles",
+          "score": "E",
+          "country": "USA"
+        },
+        {
+          "position": 47,
+          "name": "Billy Horschel",
+          "score": "E",
+          "country": "USA"
+        },
+        {
+          "position": 48,
+          "name": "Alex Smalley",
+          "score": "E",
+          "country": "USA"
+        },
+        {
+          "position": 49,
+          "name": "Nick Taylor",
+          "score": "E",
+          "country": "Canada"
+        },
+        {
+          "position": 50,
+          "name": "Kurt Kitayama",
+          "score": "E",
+          "country": "USA"
+        },
+        {
+          "position": 51,
+          "name": "Tony Finau",
+          "score": "E",
+          "country": "USA"
+        },
+        {
+          "position": 52,
+          "name": "Sanghee Lee",
+          "score": "+1",
+          "country": "South Korea"
+        },
+        {
+          "position": 53,
+          "name": "Jordan Spieth",
+          "score": "+1",
+          "country": "USA"
+        },
+        {
+          "position": 54,
+          "name": "Maverick McNealy",
+          "score": "+1",
+          "country": "USA"
+        },
+        {
+          "position": 55,
+          "name": "Taylor Pendrith",
+          "score": "+1",
+          "country": "Canada"
+        },
+        {
+          "position": 56,
+          "name": "Jackson Suber",
+          "score": "+1",
+          "country": "USA"
+        },
+        {
+          "position": 57,
+          "name": "Yoshinori Fujimoto",
+          "score": "+1",
+          "country": "Japan"
+        },
+        {
+          "position": 58,
+          "name": "Taylor Moore",
+          "score": "+1",
+          "country": "USA"
+        },
+        {
+          "position": 59,
+          "name": "Yusaku Hosono",
+          "score": "+1",
+          "country": "Japan"
+        },
+        {
+          "position": 60,
+          "name": "Keegan Bradley",
+          "score": "+1",
+          "country": "USA"
+        },
+        {
+          "position": 61,
+          "name": "Koshin Nagasaki",
+          "score": "+1",
+          "country": "Japan"
+        },
+        {
+          "position": 62,
+          "name": "Patrick Rodgers",
+          "score": "+2",
+          "country": "USA"
+        },
+        {
+          "position": 63,
+          "name": "Rickie Fowler",
+          "score": "+2",
+          "country": "USA"
+        },
+        {
+          "position": 64,
+          "name": "Davis Thompson",
+          "score": "+2",
+          "country": "USA"
+        },
+        {
+          "position": 65,
+          "name": "Jinichiro Kozuma",
+          "score": "+3",
+          "country": "Japan"
+        },
+        {
+          "position": 66,
+          "name": "Rasmus Neergaard-Petersen",
+          "score": "+3",
+          "country": "Denmark"
+        },
+        {
+          "position": 67,
+          "name": "Aguri Iwasaki",
+          "score": "+3",
+          "country": "Japan"
+        },
+        {
+          "position": 68,
+          "name": "Sahith Theegala",
+          "score": "+3",
+          "country": "USA"
+        },
+        {
+          "position": 69,
+          "name": "Steven Fisk",
+          "score": "+3",
+          "country": "USA"
+        },
+        {
+          "position": 70,
+          "name": "Kevin Yu",
+          "score": "+3",
+          "country": "Chinese Taipei"
+        },
+        {
+          "position": 71,
+          "name": "Aldrich Potgieter",
+          "score": "+6",
+          "country": "South Africa"
+        },
+        {
+          "position": 72,
+          "name": "Tom Hoge",
+          "score": "+10",
+          "country": "USA"
+        }
+      ]
     },
     {
       "id": "401850917",

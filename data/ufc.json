@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-07T11:48:57.763Z",
+  "updated": "2026-10-08T12:03:58.379Z",
   "events": [
     {
       "id": "600057024",
@@ -6801,16 +6801,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Louie Sutherland",
-            "Javad Mahjoub"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Middleweight",
           "fighters": [
             "Julien LeBlanc",
@@ -6830,7 +6820,7 @@
           "completed": false
         },
         {
-          "segment": "main",
+          "segment": "prelim",
           "weightClass": "Lightweight",
           "fighters": [
             "Nate Landwehr",
@@ -6855,6 +6845,16 @@
           "fighters": [
             "Kyle Daukaus",
             "Marc-Andre Barriault"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Kyle Nelson",
+            "Cristian Pérez"
           ],
           "headline": false,
           "completed": false
@@ -7372,11 +7372,104 @@
       ]
     },
     {
-      "id": "scheduled:2026-11-21T17:00Z",
-      "name": "UFC Fight Night: Qatar",
-      "date": "2026-11-21T17:00Z",
+      "id": "600061665",
+      "name": "UFC Fight Night: Procházka vs. Stirling",
+      "date": "2026-11-21T14:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "ABHA Arena",
+      "location": "Doha, Qatar",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Amir Albazi",
+            "Alessandro Costa"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Kyoji Horiguchi",
+            "Asu Almabayev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Aleksandre Topuria",
+            "Santiago Luna"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Jake Matthews",
+            "Tahir Abdullayev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Shamil Gaziev",
+            "Tallison Teixeira"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Jared Cannonier",
+            "Ikram Aliskerov"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Brian Ortega",
+            "Dan Hooker"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Aljamain Sterling",
+            "Kevin Vallejos"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Jiří Procházka",
+            "Navajo Stirling"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     },
     {
       "id": "scheduled:2026-12-13T01:00Z",
