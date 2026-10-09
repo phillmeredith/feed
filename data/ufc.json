@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-08T12:03:58.379Z",
+  "updated": "2026-10-09T11:55:32.301Z",
   "events": [
     {
       "id": "600057024",
@@ -6781,30 +6781,20 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Bantamweight",
-          "fighters": [
-            "Chad Anheliger",
-            "Steven Koslow"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "W Flyweight",
-          "fighters": [
-            "Katlyn Cerminara",
-            "Jamey-Lyn Horth"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Middleweight",
           "fighters": [
             "Julien LeBlanc",
             "Nick Galanti"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Chad Anheliger",
+            "Steven Koslow"
           ],
           "headline": false,
           "completed": false

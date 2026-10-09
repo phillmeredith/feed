@@ -1,6 +1,6 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-08T12:03:46.511Z",
+  "updated": "2026-10-09T11:55:20.270Z",
   "items": [
     {
       "id": "a1bb0984-19d4-4b47-9bba-706d225573e2",
@@ -41,7 +41,7 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-11T23:00:00Z",
+      "net": "2026-10-12T23:00:00Z",
       "precision": "Minute",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
@@ -64,8 +64,8 @@
     },
     {
       "id": "df88cfbf-f504-4e11-8370-e33dd6280b5b",
-      "name": "Falcon 9 Block 5 | USSF-xxx (\"TH-2\")",
-      "mission": "USSF-xxx (\"TH-2\")",
+      "name": "Falcon 9 Block 5 | USSF-481",
+      "mission": "USSF-481",
       "missionType": "Government/Top Secret",
       "provider": "SpaceX",
       "rocket": "Falcon 9 Block 5",
@@ -73,8 +73,8 @@
       "location": "Vandenberg SFB, CA, USA",
       "net": "2026-10-15T23:44:00Z",
       "precision": "Minute",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
     },
     {
@@ -91,6 +91,21 @@
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/h3-24_liftoff__image_20251028184029.jpeg"
+    },
+    {
+      "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
+      "name": "Vulcan VC6L | Amazon Leo (LV-01)",
+      "mission": "Amazon Leo (LV-01)",
+      "missionType": "Communications",
+      "provider": "United Launch Alliance",
+      "rocket": "Vulcan VC6L",
+      "pad": "Space Launch Complex 41",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "net": "2026-10-29T00:00:00Z",
+      "precision": "Day",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/vulcan_vc6l_image_20220406123130.jpg"
     },
     {
       "id": "7bdc412b-c965-4517-a131-f57a01189803",
@@ -166,21 +181,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/sslv_image_20220912001724.jpeg"
-    },
-    {
-      "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
-      "name": "Vulcan VC6L | Amazon Leo (LV-01)",
-      "mission": "Amazon Leo (LV-01)",
-      "missionType": "Communications",
-      "provider": "United Launch Alliance",
-      "rocket": "Vulcan VC6L",
-      "pad": "Space Launch Complex 41",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-10-31T00:00:00Z",
-      "precision": "Month",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/vulcan_vc6l_image_20220406123130.jpg"
     },
     {
       "id": "8dd5de11-831b-445f-86f0-bffefe0550d9",
