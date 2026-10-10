@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-09T11:55:32.301Z",
+  "updated": "2026-10-10T11:12:15.078Z",
   "events": [
     {
       "id": "600057024",
@@ -6885,6 +6885,16 @@
           "fighters": [
             "Colby Thicknesse",
             "Asaf Chopurov"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Aaron Pico",
+            "Losene Keita"
           ],
           "headline": false,
           "completed": false

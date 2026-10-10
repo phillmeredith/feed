@@ -1,20 +1,20 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-09T11:55:20.270Z",
+  "updated": "2026-10-10T11:12:01.240Z",
   "items": [
     {
       "id": "a1bb0984-19d4-4b47-9bba-706d225573e2",
-      "name": "Long March 12 | Unknown Payload",
-      "mission": "Unknown Payload",
-      "missionType": "Unknown",
+      "name": "Long March 12 | SatNet LEO Group 27",
+      "mission": "SatNet LEO Group 27",
+      "missionType": "Communications",
       "provider": "China Aerospace Science and Technology Corporation",
       "rocket": "Long March 12",
       "pad": "Commercial LC-2",
       "location": "Wenchang Space Launch Site, People's Republic of China",
-      "net": "2026-10-09T19:25:00Z",
-      "precision": "Hour",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "net": "2026-10-09T19:27:00Z",
+      "precision": "Minute",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-12_on_its_la_image_20241128132937.jpg"
     },
     {
@@ -26,10 +26,10 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-10T07:29:00Z",
-      "precision": "Minute",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "net": "2026-10-10T07:39:44Z",
+      "precision": "Second",
+      "status": "Launch in Flight",
+      "statusNote": "The launch vehicle has lifted off from the launchpad.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
     },
     {
@@ -79,8 +79,8 @@
     },
     {
       "id": "69ebbcd2-b257-4070-9ef9-21e7d1f8a883",
-      "name": "H3-24 | Martian Moon eXplorer (MMX)",
-      "mission": "Martian Moon eXplorer (MMX)",
+      "name": "H3-24 | Martian Moons eXploration (MMX)",
+      "mission": "Martian Moons eXploration (MMX)",
       "missionType": "Planetary Science",
       "provider": "Mitsubishi Heavy Industries",
       "rocket": "H3-24",
