@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-10T11:12:15.078Z",
+  "updated": "2026-10-11T11:25:44.853Z",
   "events": [
     {
       "id": "600057024",
@@ -6565,7 +6565,7 @@
       "id": "600061541",
       "name": "UFC Fight Night: Allen vs. Duncan",
       "date": "2026-10-10T21:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
@@ -6576,8 +6576,9 @@
             "Melissa Gatto",
             "Ernesta Kareckaite"
           ],
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6586,8 +6587,11 @@
             "Daria Zhelezniakova",
             "Alice Pereira"
           ],
+          "winner": "Alice Pereira",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6596,8 +6600,11 @@
             "Allen Frye Jr.",
             "RJ Harris"
           ],
+          "winner": "Allen Frye Jr.",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6606,8 +6613,11 @@
             "Brendson Ribeiro",
             "Felipe Franco"
           ],
+          "winner": "Brendson Ribeiro",
+          "method": "Submission",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6616,8 +6626,11 @@
             "Niko Price",
             "Leon Shahbazyan"
           ],
+          "winner": "Niko Price",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6626,8 +6639,11 @@
             "Ismael Bonfim",
             "Francisco Prado"
           ],
+          "winner": "Francisco Prado",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6636,8 +6652,11 @@
             "Gerald Meerschaert",
             "Julius Walker"
           ],
+          "winner": "Julius Walker",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6646,8 +6665,11 @@
             "Otari Tanzilovi",
             "Malcolm Wellmaker"
           ],
+          "winner": "Otari Tanzilovi",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6656,8 +6678,11 @@
             "Andre Fili",
             "Kai Kamaka III"
           ],
+          "winner": "Andre Fili",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6666,8 +6691,11 @@
             "Ketlen Souza",
             "Loopy Godínez"
           ],
+          "winner": "Loopy Godínez",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6676,8 +6704,11 @@
             "Jai Herbert",
             "Matheus Camilo"
           ],
+          "winner": "Jai Herbert",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6686,8 +6717,11 @@
             "Brendan Allen",
             "Christian Leroy Duncan"
           ],
+          "winner": "Brendan Allen",
+          "method": "Submission",
+          "rounds": 5,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -6761,6 +6795,36 @@
       "fights": [
         {
           "segment": "prelim",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Katlyn Cerminara",
+            "Mackenzie Stiller"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Javad Mahjoub",
+            "Joel Faglier"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Julien LeBlanc",
+            "Nick Galanti"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Bantamweight",
           "fighters": [
             "SuYoung You",
@@ -6775,16 +6839,6 @@
           "fighters": [
             "Chelsea Chandler",
             "Melissa Croden"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Julien LeBlanc",
-            "Nick Galanti"
           ],
           "headline": false,
           "completed": false
@@ -6891,16 +6945,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Featherweight",
-          "fighters": [
-            "Aaron Pico",
-            "Losene Keita"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Lightweight",
           "fighters": [
             "Grant Dawson",
@@ -6930,11 +6974,21 @@
           "completed": false
         },
         {
-          "segment": "main",
+          "segment": "prelim",
           "weightClass": "Light Heavyweight",
           "fighters": [
             "Azamat Murzakanov",
             "Dominick Reyes"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Aaron Pico",
+            "Losene Keita"
           ],
           "headline": false,
           "completed": false
