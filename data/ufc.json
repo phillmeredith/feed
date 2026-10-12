@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-11T11:25:44.853Z",
+  "updated": "2026-10-12T13:12:00.599Z",
   "events": [
     {
       "id": "600057024",
@@ -6795,36 +6795,6 @@
       "fights": [
         {
           "segment": "prelim",
-          "weightClass": "W Flyweight",
-          "fighters": [
-            "Katlyn Cerminara",
-            "Mackenzie Stiller"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Javad Mahjoub",
-            "Joel Faglier"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Julien LeBlanc",
-            "Nick Galanti"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Bantamweight",
           "fighters": [
             "SuYoung You",
@@ -6849,6 +6819,36 @@
           "fighters": [
             "Chad Anheliger",
             "Steven Koslow"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Katlyn Cerminara",
+            "Mackenzie Stiller"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Javad Mahjoub",
+            "Joel Faglier"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Julien LeBlanc",
+            "Nick Galanti"
           ],
           "headline": false,
           "completed": false

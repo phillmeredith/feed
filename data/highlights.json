@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-10-11T11:34:36.987Z",
+  "updated": "2026-10-12T13:20:45.487Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -687,6 +687,34 @@
       "videoId": "R8rptJmshDM",
       "title": "Highlights | Round 3 | Baycurrent Classic | 2026",
       "channel": "PGA Tour"
+    },
+    {
+      "key": "f1:2026:17",
+      "kind": "race",
+      "videoId": "ohgEehLtucc",
+      "title": "Race Highlights | 2026 Singapore Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:17",
+      "kind": "qualifying",
+      "videoId": "ofZbJdPaH3A",
+      "title": "Qualifying Highlights | 2026 Singapore Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:17",
+      "kind": "sprint",
+      "videoId": "Rf7NEIpm5vI",
+      "title": "Sprint Highlights | 2026 Singapore Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:17",
+      "kind": "sprint-qualifying",
+      "videoId": "1glxSkFKTPk",
+      "title": "Sprint Qualifying Highlights | 2026 Singapore Grand Prix",
+      "channel": "FORMULA 1"
     }
   ]
 }

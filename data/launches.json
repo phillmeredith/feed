@@ -1,6 +1,6 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-11T11:25:32.692Z",
+  "updated": "2026-10-12T13:11:48.159Z",
   "items": [
     {
       "id": "97c6f5e1-299e-4652-b72d-9618ac047076",
@@ -11,8 +11,8 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-12T23:00:00Z",
-      "precision": "Minute",
+      "net": "2026-10-13T00:11:47Z",
+      "precision": "Second",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
