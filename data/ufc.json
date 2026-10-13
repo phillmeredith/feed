@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-12T13:12:00.599Z",
+  "updated": "2026-10-13T12:44:06.095Z",
   "events": [
     {
       "id": "600057024",
@@ -6735,7 +6735,7 @@
       "fights": [
         {
           "segment": "main",
-          "weightClass": "Featherweight",
+          "weightClass": "Lightweight",
           "fighters": [
             "Jason Asher",
             "Greg Foster"
@@ -7428,7 +7428,7 @@
     {
       "id": "600061665",
       "name": "UFC Fight Night: Procházka vs. Stirling",
-      "date": "2026-11-21T14:00Z",
+      "date": "2026-11-21T15:00Z",
       "status": "Scheduled",
       "venue": "ABHA Arena",
       "location": "Doha, Qatar",

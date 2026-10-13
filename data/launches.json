@@ -1,6 +1,6 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-12T13:11:48.159Z",
+  "updated": "2026-10-13T12:43:56.246Z",
   "items": [
     {
       "id": "97c6f5e1-299e-4652-b72d-9618ac047076",
@@ -11,10 +11,10 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-13T00:11:47Z",
+      "net": "2026-10-13T00:28:11Z",
       "precision": "Second",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
     },
     {
@@ -28,9 +28,24 @@
       "location": "Cape Canaveral SFS, FL, USA",
       "net": "2026-10-13T10:33:44Z",
       "precision": "Second",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20210520085648.jpeg"
+    },
+    {
+      "id": "dfcabb3c-078b-4f5b-a47c-0161f248cee9",
+      "name": "Zhuque-2E | Unknown Payload",
+      "mission": "Unknown Payload",
+      "missionType": "Unknown",
+      "provider": "LandSpace",
+      "rocket": "Zhuque-2E",
+      "pad": "Launch Area 96A",
+      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "net": "2026-10-14T11:40:00Z",
+      "precision": "Hour",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20210520085648.jpeg"
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/zhunque_2e_on_t_image_20241216101643.jpg"
     },
     {
       "id": "df88cfbf-f504-4e11-8370-e33dd6280b5b",
@@ -48,6 +63,21 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
     },
     {
+      "id": "3b430f81-0ff1-4d85-8a1a-cef0de326198",
+      "name": "Falcon 9 Block 5 | Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
+      "mission": "Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
+      "missionType": "Dedicated Rideshare",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 40",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "net": "2026-10-19T10:30:00Z",
+      "precision": "Hour",
+      "status": "To Be Confirmed",
+      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20251102082912.jpg"
+    },
+    {
       "id": "69ebbcd2-b257-4070-9ef9-21e7d1f8a883",
       "name": "H3-24 | Martian Moons eXploration (MMX)",
       "mission": "Martian Moons eXploration (MMX)",
@@ -61,6 +91,36 @@
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/h3-24_liftoff__image_20251028184029.jpeg"
+    },
+    {
+      "id": "f6af629d-39b5-4f86-bc0c-f8776444a858",
+      "name": "Falcon 9 Block 5 | Starlink Group 15-15",
+      "mission": "Starlink Group 15-15",
+      "missionType": "Communications",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-10-20T22:14:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
+    },
+    {
+      "id": "7766f3bb-674c-4c71-b986-963bd633fcfe",
+      "name": "Electron | We're Not Hawking Around (3x HawkEye 360)",
+      "mission": "We're Not Hawking Around (3x HawkEye 360)",
+      "missionType": "Earth Science",
+      "provider": "Rocket Lab",
+      "rocket": "Electron",
+      "pad": "Unknown Pad",
+      "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+      "net": "2026-10-21T00:00:00Z",
+      "precision": "Day",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
     },
     {
       "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
@@ -91,21 +151,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_64_lifto_image_20260618063419.jpg"
-    },
-    {
-      "id": "3b430f81-0ff1-4d85-8a1a-cef0de326198",
-      "name": "Falcon 9 Block 5 | Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
-      "mission": "Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
-      "missionType": "Dedicated Rideshare",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 40",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-10-31T00:00:00Z",
-      "precision": "Month",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20251102082912.jpg"
     },
     {
       "id": "20d5676e-111b-40e3-8923-b218c3665ca2",
@@ -151,6 +196,36 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/sslv_image_20220912001724.jpeg"
+    },
+    {
+      "id": "426bd2a5-02dd-4fbd-9f4d-2b8439c3a1ff",
+      "name": "Electron | The Sea God Surveys (iQPS Launch 9)",
+      "mission": "The Sea God Surveys (iQPS Launch 9)",
+      "missionType": "Earth Science",
+      "provider": "Rocket Lab",
+      "rocket": "Electron",
+      "pad": "Unknown Pad",
+      "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+      "net": "2026-11-04T00:00:00Z",
+      "precision": "Day",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
+    },
+    {
+      "id": "db3500ac-965b-4ad8-b417-cb8d8d005586",
+      "name": "Electron | The Mountain God Rises (iQPS Launch 10)",
+      "mission": "The Mountain God Rises (iQPS Launch 10)",
+      "missionType": "Earth Science",
+      "provider": "Rocket Lab",
+      "rocket": "Electron",
+      "pad": "Unknown Pad",
+      "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+      "net": "2026-11-10T00:00:00Z",
+      "precision": "Day",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
     },
     {
       "id": "8dd5de11-831b-445f-86f0-bffefe0550d9",
@@ -526,80 +601,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/themis_t1h_on_t_image_20250919095336.jpg"
-    },
-    {
-      "id": "a67b40f9-cfcc-4614-a355-a156280b4bb3",
-      "name": "Vulcan VC4L | Dream Chaser CRS 2 Flight 1",
-      "mission": "Dream Chaser CRS 2 Flight 1",
-      "missionType": "Test Flight",
-      "provider": "United Launch Alliance",
-      "rocket": "Vulcan VC4L",
-      "pad": "Space Launch Complex 41",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources."
-    },
-    {
-      "id": "e61d353c-db55-4a57-8184-0fab187231e6",
-      "name": "Falcon 9 Block 5 | Globalstar 2-R Mission 2 (x 9)",
-      "mission": "Globalstar 2-R Mission 2 (x 9)",
-      "missionType": "Communications",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 40",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Year Half 2",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
-    },
-    {
-      "id": "c9605b67-8a53-4239-a8ae-577fe3b79799",
-      "name": "Long March 2F/G | Shenzhou 24",
-      "mission": "Shenzhou 24",
-      "missionType": "Human Exploration",
-      "provider": "China Aerospace Science and Technology Corporation",
-      "rocket": "Long March 2F/G",
-      "pad": "Launch Area 91 (SLS-1 / 921)",
-      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Year Half 2",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/shenzhou_22_lau_image_20251129175823.jpg"
-    },
-    {
-      "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
-      "name": "Spectrum | AT-Astra and Others (Spectrum Flight 3)",
-      "mission": "AT-Astra and Others (Spectrum Flight 3)",
-      "missionType": "Technology",
-      "provider": "Isar Aerospace",
-      "rocket": "Spectrum",
-      "pad": "Orbital Launch Pad",
-      "location": "Andøya Spaceport",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Year Half 2",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
-    },
-    {
-      "id": "b78857c4-3b8d-4462-929e-bc76f39c0e6d",
-      "name": "Ariane 64 | GO-1",
-      "mission": "",
-      "missionType": "",
-      "provider": "Arianespace",
-      "rocket": "Ariane 64",
-      "pad": "Ariane Launch Area 4",
-      "location": "Guiana Space Centre, French Guiana",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Year",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_64_lifto_image_20260213070745.jpg"
     }
   ]
 }
