@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-13T12:44:06.095Z",
+  "updated": "2026-10-14T10:15:42.234Z",
   "events": [
     {
       "id": "600057024",
@@ -6729,7 +6729,7 @@
       "id": "600060741",
       "name": "Dana White's Contender Series: Season 10, Week 10",
       "date": "2026-10-13T23:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
@@ -6740,8 +6740,11 @@
             "Jason Asher",
             "Greg Foster"
           ],
+          "winner": "Greg Foster",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6750,8 +6753,11 @@
             "Davi Cabral",
             "Douglas da Lapa"
           ],
+          "winner": "Douglas da Lapa",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6760,8 +6766,11 @@
             "Will Rentz",
             "Luis Francischinelli"
           ],
+          "winner": "Luis Francischinelli",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6770,8 +6779,11 @@
             "Aline Pereira",
             "Smilla Sundell"
           ],
+          "winner": "Smilla Sundell",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6780,8 +6792,11 @@
             "Ilias Bulaid",
             "Erick Visconde"
           ],
+          "winner": "Erick Visconde",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -6945,6 +6960,16 @@
         },
         {
           "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Aaron Pico",
+            "Losene Keita"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Lightweight",
           "fighters": [
             "Grant Dawson",
@@ -6974,21 +6999,11 @@
           "completed": false
         },
         {
-          "segment": "prelim",
+          "segment": "main",
           "weightClass": "Light Heavyweight",
           "fighters": [
             "Azamat Murzakanov",
             "Dominick Reyes"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "Featherweight",
-          "fighters": [
-            "Aaron Pico",
-            "Losene Keita"
           ],
           "headline": false,
           "completed": false
@@ -7128,7 +7143,7 @@
           "weightClass": "W Flyweight",
           "fighters": [
             "Tainara Lisboa",
-            "Lucia Szabova"
+            "Lucia Szabová"
           ],
           "headline": false,
           "completed": false
