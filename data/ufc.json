@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-14T10:15:42.234Z",
+  "updated": "2026-10-15T09:57:43.802Z",
   "events": [
     {
       "id": "600057024",
@@ -6950,6 +6950,16 @@
       "fights": [
         {
           "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Abubakar Vagaev",
+            "Jacob Malkoun"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Bantamweight",
           "fighters": [
             "Colby Thicknesse",
@@ -7060,10 +7070,30 @@
       "fights": [
         {
           "segment": "prelim",
-          "weightClass": "Featherweight",
+          "weightClass": "W Flyweight",
           "fighters": [
-            "Gaston Bolaños",
-            "Francis Marshall"
+            "Tainara Lisboa",
+            "Lucia Szabová"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "W Strawweight",
+          "fighters": [
+            "Piera Rodriguez",
+            "Talita Alencar"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Joe Kropschot",
+            "Nick Klein"
           ],
           "headline": false,
           "completed": false
@@ -7080,26 +7110,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Andre Petroski",
-            "Azamat Bekoev"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Welterweight",
-          "fighters": [
-            "Jean-Paul Lebosnoyani",
-            "Farman Hasanov"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Welterweight",
           "fighters": [
             "Theodor Berggren",
@@ -7110,10 +7120,30 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "W Strawweight",
+          "weightClass": "Middleweight",
           "fighters": [
-            "Piera Rodriguez",
-            "Talita Alencar"
+            "Andre Petroski",
+            "Azamat Bekoev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Gaston Bolaños",
+            "Francis Marshall"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Jean-Paul Lebosnoyani",
+            "Farman Hasanov"
           ],
           "headline": false,
           "completed": false
@@ -7134,26 +7164,6 @@
           "fighters": [
             "Carlos Leal",
             "Randy Brown"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "W Flyweight",
-          "fighters": [
-            "Tainara Lisboa",
-            "Lucia Szabová"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Joe Kropschot",
-            "Nick Klein"
           ],
           "headline": true,
           "completed": false
@@ -7180,60 +7190,10 @@
       "fights": [
         {
           "segment": "prelim",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Gabriel Lorenço",
-            "Alvin Hines"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Featherweight",
-          "fighters": [
-            "Jose Delano",
-            "Murtazali Magomedov"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Bantamweight",
-          "fighters": [
-            "Davey Grant",
-            "Elijah Smith"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Welterweight",
           "fighters": [
             "Jonny Parsons",
             "Jose Henrique"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Welterweight",
-          "fighters": [
-            "Wellington Turman",
-            "Seokhyeon Ko"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Featherweight",
-          "fighters": [
-            "Keiichiro Nakamura",
-            "Ollie Schmid"
           ],
           "headline": false,
           "completed": false
@@ -7250,6 +7210,36 @@
         },
         {
           "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Lucas Brennan",
+            "Austin Bashi"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Keiichiro Nakamura",
+            "Ollie Schmid"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Jose Delano",
+            "Murtazali Magomedov"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "W Flyweight",
           "fighters": [
             "Karine Silva",
@@ -7259,11 +7249,21 @@
           "completed": false
         },
         {
-          "segment": "main",
-          "weightClass": "Featherweight",
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
           "fighters": [
-            "Lucas Brennan",
-            "Austin Bashi"
+            "Gabriel Lorenço",
+            "Alvin Hines"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Wes Schultz",
+            "Mantas Kondratavičius"
           ],
           "headline": false,
           "completed": false
@@ -7280,10 +7280,20 @@
         },
         {
           "segment": "main",
-          "weightClass": "Middleweight",
+          "weightClass": "Welterweight",
           "fighters": [
-            "Wes Schultz",
-            "Mantas Kondratavičius"
+            "Wellington Turman",
+            "Seokhyeon Ko"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Davey Grant",
+            "Elijah Smith"
           ],
           "headline": false,
           "completed": false
