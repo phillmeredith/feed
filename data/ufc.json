@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-15T09:57:43.802Z",
+  "updated": "2026-10-16T09:52:52.963Z",
   "events": [
     {
       "id": "600057024",
@@ -6970,16 +6970,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Featherweight",
-          "fighters": [
-            "Aaron Pico",
-            "Losene Keita"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Lightweight",
           "fighters": [
             "Grant Dawson",
@@ -7009,11 +6999,21 @@
           "completed": false
         },
         {
-          "segment": "main",
+          "segment": "prelim",
           "weightClass": "Light Heavyweight",
           "fighters": [
             "Azamat Murzakanov",
             "Dominick Reyes"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Aaron Pico",
+            "Losene Keita"
           ],
           "headline": false,
           "completed": false

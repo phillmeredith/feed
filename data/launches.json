@@ -1,22 +1,7 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-15T09:57:27.993Z",
+  "updated": "2026-10-16T09:52:42.586Z",
   "items": [
-    {
-      "id": "dfcabb3c-078b-4f5b-a47c-0161f248cee9",
-      "name": "Zhuque-2E Block 2 | 10 satellites",
-      "mission": "10 satellites",
-      "missionType": "Technology",
-      "provider": "LandSpace",
-      "rocket": "Zhuque-2E Block 2",
-      "pad": "Launch Area 96A",
-      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "net": "2026-10-14T11:40:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/zhuque-2e_y6_la_image_20260609122825.jpeg"
-    },
     {
       "id": "df88cfbf-f504-4e11-8370-e33dd6280b5b",
       "name": "Falcon 9 Block 5 | USSF-481",
@@ -26,10 +11,10 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-15T23:44:00Z",
-      "precision": "Minute",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "net": "2026-10-16T00:01:05Z",
+      "precision": "Second",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
     },
     {
@@ -78,6 +63,21 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
     },
     {
+      "id": "c6f8b6b0-6bae-460a-99bb-c12a3d29effd",
+      "name": "Ceres-1S | Unknown Payload",
+      "mission": "Unknown Payload",
+      "missionType": "Unknown",
+      "provider": "Galactic Energy",
+      "rocket": "Ceres-1S",
+      "pad": "Rizhao offshore launch location",
+      "location": "Haiyang Oriental Spaceport",
+      "net": "2026-10-21T03:35:00Z",
+      "precision": "Hour",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ceres-1s_image_20230905114324.jpeg"
+    },
+    {
       "id": "7766f3bb-674c-4c71-b986-963bd633fcfe",
       "name": "Electron | We're Not Hawking Around (3x HawkEye 360)",
       "mission": "We're Not Hawking Around (3x HawkEye 360)",
@@ -86,11 +86,41 @@
       "rocket": "Electron",
       "pad": "Unknown Pad",
       "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "net": "2026-10-21T00:00:00Z",
-      "precision": "Day",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "net": "2026-10-21T05:00:00Z",
+      "precision": "Hour",
+      "status": "To Be Confirmed",
+      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
+    },
+    {
+      "id": "6b95bcc8-1f88-4539-84fe-f63630138766",
+      "name": "Long March 8A | Unknown Payload",
+      "mission": "Unknown Payload",
+      "missionType": "Unknown",
+      "provider": "China Aerospace Science and Technology Corporation",
+      "rocket": "Long March 8A",
+      "pad": "Commercial LC-1",
+      "location": "Wenchang Space Launch Site, People's Republic of China",
+      "net": "2026-10-22T02:00:00Z",
+      "precision": "Hour",
+      "status": "To Be Confirmed",
+      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_20251206093107.jpeg"
+    },
+    {
+      "id": "3621085f-deae-4f89-bd54-c0f96ee44421",
+      "name": "Long March 4B | Unknown Payload",
+      "mission": "Unknown Payload",
+      "missionType": "Unknown",
+      "provider": "China Aerospace Science and Technology Corporation",
+      "rocket": "Long March 4B",
+      "pad": "Launch Area 94 (SLS-2 / 603)",
+      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "net": "2026-10-23T18:00:00Z",
+      "precision": "Hour",
+      "status": "To Be Confirmed",
+      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_4b_l_image_20251209044050.jpeg"
     },
     {
       "id": "e2886a96-5ce9-4f45-872f-4e25a00be837",
@@ -378,6 +408,21 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/new_glenn_on_lc_image_20240313170026.jpeg"
     },
     {
+      "id": "11b218b1-5e40-4b9d-854e-50320299239d",
+      "name": "Falcon 9 Block 5 | BlueBird 14-16 (Block 2 #9-11)",
+      "mission": "BlueBird 14-16 (Block 2 #9-11)",
+      "missionType": "Communications",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 40",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/f9_on_slc-40_2_image_20240919072420.jpg"
+    },
+    {
       "id": "8bf5f61e-a7e1-41e6-aede-7b87e4beebab",
       "name": "Falcon 9 Block 5 | CHORUS",
       "mission": "CHORUS",
@@ -556,50 +601,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_20260724044615.jpg"
-    },
-    {
-      "id": "3b94ad50-3505-496e-8a95-b0bc4c0dadc6",
-      "name": "Themis Demonstrator | T1H-1",
-      "mission": "T1H-1",
-      "missionType": "Test Flight",
-      "provider": "European Space Agency",
-      "rocket": "Themis Demonstrator",
-      "pad": "Launch Complex 3B",
-      "location": "Esrange Space Center",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/themis_t1h_on_t_image_20250919095336.jpg"
-    },
-    {
-      "id": "a67b40f9-cfcc-4614-a355-a156280b4bb3",
-      "name": "Vulcan VC4L | Dream Chaser CRS 2 Flight 1",
-      "mission": "Dream Chaser CRS 2 Flight 1",
-      "missionType": "Test Flight",
-      "provider": "United Launch Alliance",
-      "rocket": "Vulcan VC4L",
-      "pad": "Space Launch Complex 41",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources."
-    },
-    {
-      "id": "e61d353c-db55-4a57-8184-0fab187231e6",
-      "name": "Falcon 9 Block 5 | Globalstar 2-R Mission 2 (x 9)",
-      "mission": "Globalstar 2-R Mission 2 (x 9)",
-      "missionType": "Communications",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 40",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Year Half 2",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
     }
   ]
 }

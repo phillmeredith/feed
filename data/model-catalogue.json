@@ -1,7 +1,87 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-10-15T09:57:18.820Z",
+  "updated": "2026-10-16T09:52:34.451Z",
   "items": [
+    {
+      "id": "moondream/moondream3-preview",
+      "name": "Moondream 3 Preview",
+      "lab": "moondream",
+      "inputPrice": 0.3,
+      "outputPrice": 2.5,
+      "contextTokens": 32000,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-10-15T22:13:05.000Z",
+      "description": "Moondream 3 Preview is a vision-language model from Moondream with 9B total parameters and 2B active (mixture-of-experts). It handles visual question answering, captioning, OCR, and visual reasoning over images, with..."
+    },
+    {
+      "id": "moondream/moondream3.1-9b-a2b",
+      "name": "Moondream 3.1",
+      "lab": "moondream",
+      "inputPrice": 0.3,
+      "outputPrice": 2.5,
+      "contextTokens": 32000,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-10-15T22:12:53.000Z",
+      "description": "Moondream 3.1 is a vision-language model from Moondream, the successor to Moondream 3 Preview, with 9B total parameters and 2B active (mixture-of-experts). It handles visual question answering, captioning, OCR, and..."
+    },
+    {
+      "id": "meta/muse-spark-open",
+      "name": "Muse Spark Open",
+      "lab": "meta",
+      "inputPrice": 1.25,
+      "outputPrice": 4.25,
+      "contextTokens": 1048576,
+      "modality": "text+image+file+audio+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "releasedAt": "2026-10-15T17:57:49.000Z",
+      "description": "Muse Spark Open is a coding-optimized open-weight model. Trained specifically for agentic coding workflows, it delivers higher first-attempt accuracy, reliable tool calling, and deep codebase understanding across the repos developers..."
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl",
+      "name": "Nemotron 3.5 Super VL",
+      "lab": "NVIDIA",
+      "inputPrice": 0.15,
+      "outputPrice": 0.5,
+      "contextTokens": 1048576,
+      "modality": "text+image+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-10-15T15:04:22.000Z",
+      "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video..."
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl:free",
+      "name": "Nemotron 3.5 Super VL (free)",
+      "lab": "NVIDIA",
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "contextTokens": 1000000,
+      "modality": "text+image+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-10-15T15:04:22.000Z",
+      "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video..."
+    },
     {
       "id": "~unbiased/pareto-latest",
       "name": "Pareto Latest",
@@ -223,21 +303,6 @@
       ],
       "releasedAt": "2026-10-02T14:07:04.000Z",
       "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total."
-    },
-    {
-      "id": "unbiased/pareto-26.10-preview",
-      "name": "Pareto 26.10 Preview",
-      "lab": "unbiased",
-      "inputPrice": 0.7999999999999999,
-      "outputPrice": 3.1999999999999997,
-      "contextTokens": 1048576,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2026-10-01T14:07:03.000Z",
-      "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. This is a preview of the..."
     },
     {
       "id": "openai/gpt-6.1-sol-pro",
@@ -733,8 +798,8 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.22499999999999998,
-      "outputPrice": 8,
+      "inputPrice": 0.25,
+      "outputPrice": 5,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -747,8 +812,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.02376,
-      "outputPrice": 0.72,
+      "inputPrice": 0.036,
+      "outputPrice": 0.684,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -902,8 +967,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.02376,
-      "outputPrice": 0.72,
+      "inputPrice": 0.036,
+      "outputPrice": 0.684,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1090,8 +1155,8 @@
       "id": "google/gemini-3.8-flash",
       "name": "Gemini 3.8 Flash",
       "lab": "Google",
-      "inputPrice": 0.75,
-      "outputPrice": 3.75,
+      "inputPrice": 0.8250000000000001,
+      "outputPrice": 4.125,
       "contextTokens": 1048576,
       "modality": "text+image+file+audio+video->text",
       "inputModalities": [
@@ -1186,7 +1251,7 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.036,
+      "inputPrice": 0.01926,
       "outputPrice": 0.8999999999999999,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
@@ -1218,8 +1283,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.15,
-      "outputPrice": 0.5,
+      "inputPrice": 0.01926,
+      "outputPrice": 0.8999999999999999,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1234,8 +1299,8 @@
       "id": "z-ai/glm-5.3-flash:batch",
       "name": "GLM 5.3 Flash (batch)",
       "lab": "Zhipu AI",
-      "inputPrice": 0.06,
-      "outputPrice": 0.19999999999999998,
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.18,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1310,7 +1375,7 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.024,
+      "inputPrice": 0.0608,
       "outputPrice": 4.4,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -1338,7 +1403,7 @@
       "id": "z-ai/glm-5.3",
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
-      "inputPrice": 0.03,
+      "inputPrice": 0.079,
       "outputPrice": 4.8,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -1613,8 +1678,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.0144,
-      "outputPrice": 0.576,
+      "inputPrice": 0.01179,
+      "outputPrice": 1.152,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1627,8 +1692,8 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.016,
-      "outputPrice": 0.64,
+      "inputPrice": 0.0131,
+      "outputPrice": 1.28,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1881,8 +1946,8 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 0.44999999999999996,
-      "outputPrice": 15,
+      "inputPrice": 0.30400000000000005,
+      "outputPrice": 11.936,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2330,8 +2395,8 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM 5.2",
       "lab": "Zhipu AI",
-      "inputPrice": 0.02,
-      "outputPrice": 7,
+      "inputPrice": 0.037,
+      "outputPrice": 9,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2809,8 +2874,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.3,
-      "outputPrice": 14,
+      "inputPrice": 0.29400000000000004,
+      "outputPrice": 24,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2907,8 +2972,8 @@
       "id": "qwen/qwen3.6-27b",
       "name": "Qwen3.6 27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.32,
-      "outputPrice": 3.1999999999999997,
+      "inputPrice": 0.25,
+      "outputPrice": 2,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -4966,7 +5031,7 @@
       "id": "qwen/qwen3-next-80b-a3b-instruct",
       "name": "Qwen3 Next 80B A3B Instruct",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.09999999999999999,
+      "inputPrice": 0.09,
       "outputPrice": 1.1,
       "contextTokens": 262144,
       "modality": "text->text",
@@ -5502,8 +5567,8 @@
       "id": "mistralai/mistral-small-3.2-24b-instruct",
       "name": "Mistral Small 3.2 24B",
       "lab": "Mistral AI",
-      "inputPrice": 0.075,
-      "outputPrice": 0.19999999999999998,
+      "inputPrice": 0.09375,
+      "outputPrice": 0.25,
       "contextTokens": 256000,
       "modality": "text+image->text",
       "inputModalities": [
@@ -5645,22 +5710,6 @@
       ],
       "releasedAt": "2025-05-28T17:59:30.000Z",
       "description": "May 28th update to the [original DeepSeek R1](/deepseek/deepseek-r1) Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active..."
-    },
-    {
-      "id": "anthropic/claude-sonnet-4",
-      "name": "Claude Sonnet 4",
-      "lab": "Anthropic",
-      "inputPrice": 3,
-      "outputPrice": 15,
-      "contextTokens": 200000,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "image",
-        "text",
-        "file"
-      ],
-      "releasedAt": "2025-05-22T16:12:51.000Z",
-      "description": "Claude Sonnet 4 significantly enhances the capabilities of its predecessor, Sonnet 3.7, excelling in both coding and reasoning tasks with improved precision and controllability. Achieving state-of-the-art performance on SWE-bench (72.7%),..."
     },
     {
       "id": "mistralai/mistral-medium-3",
@@ -6296,8 +6345,8 @@
       "id": "deepseek/deepseek-chat",
       "name": "DeepSeek V3",
       "lab": "DeepSeek",
-      "inputPrice": 0.32,
-      "outputPrice": 0.8899999999999999,
+      "inputPrice": 0.2574,
+      "outputPrice": 1.0287,
       "contextTokens": 163840,
       "modality": "text->text",
       "inputModalities": [
@@ -6354,8 +6403,8 @@
       "id": "meta-llama/llama-3.3-70b-instruct",
       "name": "Llama 3.3 70B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.59,
-      "outputPrice": 0.7899999999999999,
+      "inputPrice": 0.09999999999999999,
+      "outputPrice": 0.32,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
