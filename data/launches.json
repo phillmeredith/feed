@@ -1,22 +1,7 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-16T09:52:42.586Z",
+  "updated": "2026-10-17T09:23:45.890Z",
   "items": [
-    {
-      "id": "df88cfbf-f504-4e11-8370-e33dd6280b5b",
-      "name": "Falcon 9 Block 5 | USSF-481",
-      "mission": "USSF-481",
-      "missionType": "Government/Top Secret",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 4E",
-      "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-16T00:01:05Z",
-      "precision": "Second",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
-    },
     {
       "id": "3b430f81-0ff1-4d85-8a1a-cef0de326198",
       "name": "Falcon 9 Block 5 | Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
@@ -101,10 +86,10 @@
       "rocket": "Long March 8A",
       "pad": "Commercial LC-1",
       "location": "Wenchang Space Launch Site, People's Republic of China",
-      "net": "2026-10-22T02:00:00Z",
+      "net": "2026-10-22T02:57:00Z",
       "precision": "Hour",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_20251206093107.jpeg"
     },
     {
@@ -601,6 +586,21 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_20260724044615.jpg"
+    },
+    {
+      "id": "3b94ad50-3505-496e-8a95-b0bc4c0dadc6",
+      "name": "Themis Demonstrator | T1H-1",
+      "mission": "T1H-1",
+      "missionType": "Test Flight",
+      "provider": "European Space Agency",
+      "rocket": "Themis Demonstrator",
+      "pad": "Launch Complex 3B",
+      "location": "Esrange Space Center",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/themis_t1h_on_t_image_20250919095336.jpg"
     }
   ]
 }
