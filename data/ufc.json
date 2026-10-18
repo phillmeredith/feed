@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-17T09:23:55.857Z",
+  "updated": "2026-10-18T09:39:44.878Z",
   "events": [
     {
       "id": "600057024",
@@ -6804,7 +6804,7 @@
       "id": "600060773",
       "name": "UFC Fight Night: Buckley vs. Malott",
       "date": "2026-10-17T21:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Rogers Place",
       "location": "Edmonton, Canada",
       "fights": [
@@ -6815,8 +6815,11 @@
             "SuYoung You",
             "Cody Chovancek"
           ],
+          "winner": "SuYoung You",
+          "method": "Submission",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6825,8 +6828,11 @@
             "Chelsea Chandler",
             "Melissa Croden"
           ],
+          "winner": "Chelsea Chandler",
+          "method": "Submission",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6835,8 +6841,10 @@
             "Chad Anheliger",
             "Steven Koslow"
           ],
+          "winner": "Steven Koslow",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6845,8 +6853,11 @@
             "Katlyn Cerminara",
             "Mackenzie Stiller"
           ],
+          "winner": "Katlyn Cerminara",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6855,8 +6866,11 @@
             "Javad Mahjoub",
             "Joel Faglier"
           ],
+          "winner": "Joel Faglier",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6865,8 +6879,11 @@
             "Julien LeBlanc",
             "Nick Galanti"
           ],
+          "winner": "Nick Galanti",
+          "method": "Submission",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6875,8 +6892,11 @@
             "Tanner Boser",
             "Jhonata Diniz"
           ],
+          "winner": "Tanner Boser",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -6885,8 +6905,10 @@
             "Nate Landwehr",
             "Mandel Nallo"
           ],
+          "winner": "Mandel Nallo",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6895,8 +6917,10 @@
             "Louis Jourdain",
             "Timmy Cuamba"
           ],
+          "winner": "Timmy Cuamba",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6905,8 +6929,11 @@
             "Kyle Daukaus",
             "Marc-Andre Barriault"
           ],
+          "winner": "Marc-Andre Barriault",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6915,8 +6942,11 @@
             "Kyle Nelson",
             "Cristian Pérez"
           ],
+          "winner": "Cristian Pérez",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6925,8 +6955,11 @@
             "Erin Blanchfield",
             "Jasmine Jasudavicius"
           ],
+          "winner": "Jasmine Jasudavicius",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -6935,8 +6968,11 @@
             "Mike Malott",
             "Joaquin Buckley"
           ],
+          "winner": "Mike Malott",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },

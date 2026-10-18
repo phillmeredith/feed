@@ -1,6 +1,6 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-17T09:23:45.890Z",
+  "updated": "2026-10-18T09:39:33.323Z",
   "items": [
     {
       "id": "3b430f81-0ff1-4d85-8a1a-cef0de326198",
@@ -93,6 +93,21 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_20251206093107.jpeg"
     },
     {
+      "id": "9648124f-8568-46d2-86d7-4b4d6f12187f",
+      "name": "Long March 6A | Unknown Payload",
+      "mission": "Unknown Payload",
+      "missionType": "Unknown",
+      "provider": "China Aerospace Science and Technology Corporation",
+      "rocket": "Long March 6A",
+      "pad": "Launch Complex 9A",
+      "location": "Taiyuan Satellite Launch Center, People's Republic of China",
+      "net": "2026-10-23T10:15:00Z",
+      "precision": "Hour",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_6a__image_20251209050223.jpeg"
+    },
+    {
       "id": "3621085f-deae-4f89-bd54-c0f96ee44421",
       "name": "Long March 4B | Unknown Payload",
       "mission": "Unknown Payload",
@@ -101,10 +116,10 @@
       "rocket": "Long March 4B",
       "pad": "Launch Area 94 (SLS-2 / 603)",
       "location": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "net": "2026-10-23T18:00:00Z",
+      "net": "2026-10-23T19:25:00Z",
       "precision": "Hour",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_4b_l_image_20251209044050.jpeg"
     },
     {
@@ -586,21 +601,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_20260724044615.jpg"
-    },
-    {
-      "id": "3b94ad50-3505-496e-8a95-b0bc4c0dadc6",
-      "name": "Themis Demonstrator | T1H-1",
-      "mission": "T1H-1",
-      "missionType": "Test Flight",
-      "provider": "European Space Agency",
-      "rocket": "Themis Demonstrator",
-      "pad": "Launch Complex 3B",
-      "location": "Esrange Space Center",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/themis_t1h_on_t_image_20250919095336.jpg"
     }
   ]
 }
