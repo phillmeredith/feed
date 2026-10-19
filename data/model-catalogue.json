@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-10-18T09:39:23.394Z",
+  "updated": "2026-10-19T10:48:00.529Z",
   "items": [
     {
       "id": "deepseek/deepseek-v4.1-flash-1017",
@@ -872,7 +872,7 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.12,
+      "inputPrice": 0.22499999999999998,
       "outputPrice": 8,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -887,7 +887,7 @@
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
       "inputPrice": 0.049999999999999996,
-      "outputPrice": 0.6,
+      "outputPrice": 0.15,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1041,8 +1041,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.0648,
-      "outputPrice": 0.144,
+      "inputPrice": 0.044,
+      "outputPrice": 0.08,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1326,7 +1326,7 @@
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
       "inputPrice": 0.048,
-      "outputPrice": 0.19999999999999998,
+      "outputPrice": 0.16,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1358,7 +1358,7 @@
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
       "inputPrice": 0.048,
-      "outputPrice": 0.19999999999999998,
+      "outputPrice": 0.16,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1449,8 +1449,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.06319999999999999,
-      "outputPrice": 4.4,
+      "inputPrice": 0.041999999999999996,
+      "outputPrice": 6,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1478,7 +1478,7 @@
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
       "inputPrice": 0.079,
-      "outputPrice": 2.5,
+      "outputPrice": 1.4,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1752,8 +1752,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.015099999999999999,
-      "outputPrice": 0.44999999999999996,
+      "inputPrice": 0.00392,
+      "outputPrice": 0.12,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1766,8 +1766,8 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.015099999999999999,
-      "outputPrice": 0.44999999999999996,
+      "inputPrice": 0.15,
+      "outputPrice": 0.15,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2020,7 +2020,7 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 0.30400000000000005,
+      "inputPrice": 0.23900000000000002,
       "outputPrice": 11.936,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
@@ -2963,8 +2963,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.27,
-      "outputPrice": 14,
+      "inputPrice": 0.238,
+      "outputPrice": 13,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3141,8 +3141,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.20879999999999999,
-      "outputPrice": 0.41759999999999997,
+      "inputPrice": 0.9552599999999999,
+      "outputPrice": 1.9105199999999998,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -3307,8 +3307,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B ",
       "lab": "Google",
-      "inputPrice": 0.0675,
-      "outputPrice": 0.22499999999999998,
+      "inputPrice": 0.09,
+      "outputPrice": 0.3,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3820,8 +3820,8 @@
       "id": "qwen/qwen3.5-27b",
       "name": "Qwen3.5-27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.26,
-      "outputPrice": 2.6,
+      "inputPrice": 0.27,
+      "outputPrice": 2.16,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -4975,8 +4975,8 @@
       "id": "z-ai/glm-4.6",
       "name": "GLM 4.6",
       "lab": "Zhipu AI",
-      "inputPrice": 0.5,
-      "outputPrice": 2,
+      "inputPrice": 0.55,
+      "outputPrice": 2.2,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -5644,7 +5644,7 @@
       "lab": "morph",
       "inputPrice": 0.7999999999999999,
       "outputPrice": 1.2,
-      "contextTokens": 81920,
+      "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -6055,7 +6055,7 @@
       "lab": "Meta",
       "inputPrice": 0.1875,
       "outputPrice": 0.6525,
-      "contextTokens": 1048576,
+      "contextTokens": 524288,
       "modality": "text+image->text",
       "inputModalities": [
         "text",
@@ -6388,20 +6388,6 @@
       "description": "Sonar is lightweight, affordable, fast, and simple to use — now featuring citations and the ability to customize sources. It is designed for companies seeking to integrate lightweight question-and-answer features..."
     },
     {
-      "id": "deepseek/deepseek-r1",
-      "name": "R1",
-      "lab": "DeepSeek",
-      "inputPrice": 0.7,
-      "outputPrice": 2.5,
-      "contextTokens": 64000,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2025-01-20T13:51:35.000Z",
-      "description": "DeepSeek R1 is here: Performance on par with [OpenAI o1](/openai/o1), but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active in an inference pass...."
-    },
-    {
       "id": "minimax/minimax-01",
       "name": "MiniMax-01",
       "lab": "minimax",
@@ -6443,20 +6429,6 @@
       ],
       "releasedAt": "2024-12-26T19:28:40.000Z",
       "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations..."
-    },
-    {
-      "id": "sao10k/l3.3-euryale-70b",
-      "name": "Llama 3.3 Euryale 70B",
-      "lab": "sao10k",
-      "inputPrice": 0.65,
-      "outputPrice": 0.75,
-      "contextTokens": 131072,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2024-12-18T15:32:08.000Z",
-      "description": "Euryale L3.3 70B is a model focused on creative roleplay from [Sao10k](https://ko-fi.com/sao10k). It is the successor of [Euryale L3 70B v2.2](/models/sao10k/l3-euryale-70b)."
     },
     {
       "id": "openai/o1",
@@ -6651,8 +6623,8 @@
       "id": "meta-llama/llama-3.2-3b-instruct",
       "name": "Llama 3.2 3B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.049999999999999996,
-      "outputPrice": 0.33,
+      "inputPrice": 0.0509,
+      "outputPrice": 0.335,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
@@ -6941,20 +6913,6 @@
       ],
       "releasedAt": "2024-04-17T00:00:00.000Z",
       "description": "Mistral's official instruct fine-tuned version of [Mixtral 8x22B](/models/mistralai/mixtral-8x22b). It uses 39B active parameters out of 141B, offering unparalleled cost efficiency for its size. Its strengths include: - strong math, coding,..."
-    },
-    {
-      "id": "microsoft/wizardlm-2-8x22b",
-      "name": "WizardLM-2 8x22B",
-      "lab": "Microsoft",
-      "inputPrice": 0.62,
-      "outputPrice": 0.62,
-      "contextTokens": 65535,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2024-04-16T00:00:00.000Z",
-      "description": "WizardLM-2 8x22B is Microsoft AI's most advanced Wizard model. It demonstrates highly competitive performance compared to leading proprietary models, and it consistently outperforms all existing state-of-the-art opensource models. It is..."
     },
     {
       "id": "openai/gpt-4-turbo",
