@@ -1,6 +1,6 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-19T10:48:10.566Z",
+  "updated": "2026-10-20T10:06:14.893Z",
   "items": [
     {
       "id": "69ebbcd2-b257-4070-9ef9-21e7d1f8a883",
@@ -13,8 +13,8 @@
       "location": "Tanegashima Space Center, Japan",
       "net": "2026-10-19T19:41:03Z",
       "precision": "Second",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/h3-24_liftoff__image_20251028184029.jpeg"
     },
     {
@@ -26,8 +26,8 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 40",
       "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-10-20T10:30:00Z",
-      "precision": "Minute",
+      "net": "2026-10-20T11:04:00Z",
+      "precision": "Second",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20251102082912.jpg"
@@ -41,8 +41,8 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-20T22:14:00Z",
-      "precision": "Minute",
+      "net": "2026-10-20T23:10:02Z",
+      "precision": "Second",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
@@ -69,12 +69,12 @@
       "missionType": "Earth Science",
       "provider": "Rocket Lab",
       "rocket": "Electron",
-      "pad": "Unknown Pad",
+      "pad": "Rocket Lab Launch Complex 1A",
       "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "net": "2026-10-21T05:00:00Z",
-      "precision": "Hour",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "net": "2026-10-21T07:00:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
     },
     {
@@ -132,6 +132,21 @@
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
       "net": "2026-10-24T05:29:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
+    },
+    {
+      "id": "57ce0a39-d035-4f16-a418-bd6108f78199",
+      "name": "Falcon 9 Block 5 | Starlink Group 15-18",
+      "mission": "Starlink Group 15-18",
+      "missionType": "Communications",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-10-28T04:31:00Z",
       "precision": "Minute",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
@@ -226,6 +241,21 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
+    },
+    {
+      "id": "3cdb9dee-b5cb-406c-bbd1-06a219930fb7",
+      "name": "Falcon 9 Block 5 | Starlink Group 15-21",
+      "mission": "Starlink Group 15-21",
+      "missionType": "Communications",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-11-10T00:00:00Z",
+      "precision": "Day",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
     },
     {
       "id": "7bdc412b-c965-4517-a131-f57a01189803",
@@ -571,36 +601,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
-    },
-    {
-      "id": "b48e32c5-3776-4684-a956-5ea4df032e90",
-      "name": "Spectrum | ΣYNDEO-3",
-      "mission": "ΣYNDEO-3",
-      "missionType": "Technology",
-      "provider": "Isar Aerospace",
-      "rocket": "Spectrum",
-      "pad": "Orbital Launch Pad",
-      "location": "Andøya Spaceport",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
-    },
-    {
-      "id": "0f867f0c-5422-4d44-93b8-d7faaae7019b",
-      "name": "Starship | Flight 15",
-      "mission": "Flight 15",
-      "missionType": "Test Flight",
-      "provider": "SpaceX",
-      "rocket": "Starship",
-      "pad": "Orbital Launch Pad 2",
-      "location": "SpaceX Starbase, TX, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_20260724044615.jpg"
     }
   ]
 }

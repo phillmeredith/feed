@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-19T10:48:22.424Z",
+  "updated": "2026-10-20T10:06:26.371Z",
   "events": [
     {
       "id": "600057024",
@@ -6984,6 +6984,36 @@
       "venue": "Etihad Arena",
       "location": "Abu Dhabi, United Arab Emirates",
       "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "W Strawweight",
+          "fighters": [
+            "Nicolle Caliari",
+            "Iasmin Lucindo"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Noah Gugnon",
+            "Kody Steele"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Daniel Santos",
+            "Bolaji Oki"
+          ],
+          "headline": false,
+          "completed": false
+        },
         {
           "segment": "prelim",
           "weightClass": "Middleweight",
