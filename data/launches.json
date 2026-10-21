@@ -1,22 +1,7 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-20T10:06:14.893Z",
+  "updated": "2026-10-21T10:12:02.278Z",
   "items": [
-    {
-      "id": "69ebbcd2-b257-4070-9ef9-21e7d1f8a883",
-      "name": "H3-24 | Martian Moons eXploration (MMX)",
-      "mission": "Martian Moons eXploration (MMX)",
-      "missionType": "Planetary Science",
-      "provider": "Mitsubishi Heavy Industries",
-      "rocket": "H3-24",
-      "pad": "Yoshinobu Launch Complex LP-2",
-      "location": "Tanegashima Space Center, Japan",
-      "net": "2026-10-19T19:41:03Z",
-      "precision": "Second",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/h3-24_liftoff__image_20251028184029.jpeg"
-    },
     {
       "id": "3b430f81-0ff1-4d85-8a1a-cef0de326198",
       "name": "Falcon 9 Block 5 | Bandwagon 5 (Dedicated Mid-Inclination Rideshare)",
@@ -28,9 +13,24 @@
       "location": "Cape Canaveral SFS, FL, USA",
       "net": "2026-10-20T11:04:00Z",
       "precision": "Second",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20251102082912.jpg"
+    },
+    {
+      "id": "c6f8b6b0-6bae-460a-99bb-c12a3d29effd",
+      "name": "Ceres-1S | Xiguang-4 01",
+      "mission": "Xiguang-4 01",
+      "missionType": "Earth Science",
+      "provider": "Galactic Energy",
+      "rocket": "Ceres-1S",
+      "pad": "Rizhao offshore launch location",
+      "location": "Haiyang Oriental Spaceport",
+      "net": "2026-10-21T03:39:00Z",
+      "precision": "Minute",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ceres-1s_image_20230905114324.jpeg"
     },
     {
       "id": "f6af629d-39b5-4f86-bc0c-f8776444a858",
@@ -41,26 +41,11 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-20T23:10:02Z",
+      "net": "2026-10-21T23:02:41Z",
       "precision": "Second",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
-    },
-    {
-      "id": "c6f8b6b0-6bae-460a-99bb-c12a3d29effd",
-      "name": "Ceres-1S | Unknown Payload",
-      "mission": "Unknown Payload",
-      "missionType": "Unknown",
-      "provider": "Galactic Energy",
-      "rocket": "Ceres-1S",
-      "pad": "Rizhao offshore launch location",
-      "location": "Haiyang Oriental Spaceport",
-      "net": "2026-10-21T03:35:00Z",
-      "precision": "Hour",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ceres-1s_image_20230905114324.jpeg"
     },
     {
       "id": "7766f3bb-674c-4c71-b986-963bd633fcfe",
@@ -71,26 +56,11 @@
       "rocket": "Electron",
       "pad": "Rocket Lab Launch Complex 1A",
       "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "net": "2026-10-21T07:00:00Z",
+      "net": "2026-10-22T07:00:00Z",
       "precision": "Minute",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "status": "To Be Confirmed",
+      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
-    },
-    {
-      "id": "6b95bcc8-1f88-4539-84fe-f63630138766",
-      "name": "Long March 8A | Unknown Payload",
-      "mission": "Unknown Payload",
-      "missionType": "Unknown",
-      "provider": "China Aerospace Science and Technology Corporation",
-      "rocket": "Long March 8A",
-      "pad": "Commercial LC-1",
-      "location": "Wenchang Space Launch Site, People's Republic of China",
-      "net": "2026-10-22T02:57:00Z",
-      "precision": "Hour",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_20251206093107.jpeg"
     },
     {
       "id": "9648124f-8568-46d2-86d7-4b4d6f12187f",
@@ -136,6 +106,21 @@
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
+    },
+    {
+      "id": "6b95bcc8-1f88-4539-84fe-f63630138766",
+      "name": "Long March 8A | Unknown Payload",
+      "mission": "Unknown Payload",
+      "missionType": "Unknown",
+      "provider": "China Aerospace Science and Technology Corporation",
+      "rocket": "Long March 8A",
+      "pad": "Commercial LC-1",
+      "location": "Wenchang Space Launch Site, People's Republic of China",
+      "net": "2026-10-25T01:50:00Z",
+      "precision": "Hour",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_20251206093107.jpeg"
     },
     {
       "id": "57ce0a39-d035-4f16-a418-bd6108f78199",
@@ -226,6 +211,21 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
+    },
+    {
+      "id": "56ca6058-7ccc-4ec0-b1b0-fb49f3bfee49",
+      "name": "Falcon 9 Block 5 | NROL-195",
+      "mission": "NROL-195",
+      "missionType": "Government/Top Secret",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-11-05T22:34:00Z",
+      "precision": "Minute",
+      "status": "To Be Confirmed",
+      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_on_slc_image_20241024165956.jpg"
     },
     {
       "id": "db3500ac-965b-4ad8-b417-cb8d8d005586",

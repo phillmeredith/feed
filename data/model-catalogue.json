@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-10-20T10:06:06.318Z",
+  "updated": "2026-10-21T10:11:53.291Z",
   "items": [
     {
       "id": "minimax/minimax-m3.1-flash:free",
@@ -383,8 +383,8 @@
       "id": "mistralai/mistral-large-4-0",
       "name": "Mistral Large 4",
       "lab": "Mistral AI",
-      "inputPrice": 0.6799999999999999,
-      "outputPrice": 2.09,
+      "inputPrice": 1.3599999999999999,
+      "outputPrice": 4.18,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -916,8 +916,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.07,
-      "outputPrice": 0.5,
+      "inputPrice": 0.049,
+      "outputPrice": 0.375,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1071,8 +1071,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.056,
-      "outputPrice": 0.12,
+      "inputPrice": 0.049,
+      "outputPrice": 0.375,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1355,8 +1355,8 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.047076,
-      "outputPrice": 0.16,
+      "inputPrice": 0.041191,
+      "outputPrice": 0.12,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1387,8 +1387,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.047076,
-      "outputPrice": 0.16,
+      "inputPrice": 0.041191,
+      "outputPrice": 0.12,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1782,8 +1782,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.015099999999999999,
-      "outputPrice": 0.44999999999999996,
+      "inputPrice": 0.0475,
+      "outputPrice": 0.1568,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2499,8 +2499,8 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM 5.2",
       "lab": "Zhipu AI",
-      "inputPrice": 0.62,
-      "outputPrice": 2.42,
+      "inputPrice": 0.0341,
+      "outputPrice": 7,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2513,8 +2513,8 @@
       "id": "moonshotai/kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "lab": "Moonshot AI",
-      "inputPrice": 0.6712,
-      "outputPrice": 3.35,
+      "inputPrice": 0.6725,
+      "outputPrice": 3.1,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [
@@ -2994,7 +2994,7 @@
       "name": "Kimi Latest",
       "lab": "~moonshotai",
       "inputPrice": 0.238,
-      "outputPrice": 16,
+      "outputPrice": 24,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3213,8 +3213,8 @@
       "id": "xiaomi/mimo-v2.5-pro",
       "name": "MiMo-V2.5-Pro",
       "lab": "xiaomi",
-      "inputPrice": 0.435,
-      "outputPrice": 0.87,
+      "inputPrice": 0.3045,
+      "outputPrice": 0.609,
       "contextTokens": 1050000,
       "modality": "text->text",
       "inputModalities": [
@@ -3227,8 +3227,8 @@
       "id": "xiaomi/mimo-v2.5",
       "name": "MiMo-V2.5",
       "lab": "xiaomi",
-      "inputPrice": 0.14,
-      "outputPrice": 0.28,
+      "inputPrice": 0.119,
+      "outputPrice": 0.238,
       "contextTokens": 1050000,
       "modality": "text+image+audio+video->text",
       "inputModalities": [
@@ -3323,8 +3323,8 @@
       "id": "z-ai/glm-5.1",
       "name": "GLM 5.1",
       "lab": "Zhipu AI",
-      "inputPrice": 0.966,
-      "outputPrice": 3.036,
+      "inputPrice": 1.4,
+      "outputPrice": 4.4,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -3647,8 +3647,8 @@
       "id": "nvidia/nemotron-3-super-120b-a12b",
       "name": "Nemotron 3 Super",
       "lab": "NVIDIA",
-      "inputPrice": 0.08,
-      "outputPrice": 0.44999999999999996,
+      "inputPrice": 0.3,
+      "outputPrice": 2.4,
       "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
@@ -3691,8 +3691,8 @@
       "id": "qwen/qwen3.5-9b",
       "name": "Qwen3.5-9B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.09999999999999999,
-      "outputPrice": 0.15,
+      "inputPrice": 0.08,
+      "outputPrice": 0.13,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3834,7 +3834,7 @@
       "id": "qwen/qwen3.5-35b-a3b",
       "name": "Qwen3.5-35B-A3B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.15,
+      "inputPrice": 0.14,
       "outputPrice": 1,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
@@ -4060,8 +4060,8 @@
       "id": "z-ai/glm-5",
       "name": "GLM 5",
       "lab": "Zhipu AI",
-      "inputPrice": 0.6,
-      "outputPrice": 1.92,
+      "inputPrice": 1,
+      "outputPrice": 3.1999999999999997,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -5730,47 +5730,11 @@
       "description": "Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically designed for advanced reasoning, coding, mathematics, and scientific tasks. It includes built-in \"thinking\" capabilities, enabling it to provide responses with greater..."
     },
     {
-      "id": "google/gemini-2.5-flash:batch",
-      "name": "Gemini 2.5 Flash (batch)",
-      "lab": "Google",
-      "inputPrice": 0.15,
-      "outputPrice": 1.25,
-      "contextTokens": 1048576,
-      "modality": "text+image+file+audio+video->text",
-      "inputModalities": [
-        "file",
-        "image",
-        "text",
-        "audio",
-        "video"
-      ],
-      "releasedAt": "2025-06-17T15:01:28.000Z",
-      "description": "Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically designed for advanced reasoning, coding, mathematics, and scientific tasks. It includes built-in \"thinking\" capabilities, enabling it to provide responses with greater..."
-    },
-    {
       "id": "google/gemini-2.5-pro",
       "name": "Gemini 2.5 Pro",
       "lab": "Google",
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "contextTokens": 1048576,
-      "modality": "text+image+file+audio+video->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "file",
-        "audio",
-        "video"
-      ],
-      "releasedAt": "2025-06-17T14:12:24.000Z",
-      "description": "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks. It employs “thinking” capabilities, enabling it to reason through responses with enhanced accuracy..."
-    },
-    {
-      "id": "google/gemini-2.5-pro:batch",
-      "name": "Gemini 2.5 Pro (batch)",
-      "lab": "Google",
-      "inputPrice": 0.625,
-      "outputPrice": 5,
       "contextTokens": 1048576,
       "modality": "text+image+file+audio+video->text",
       "inputModalities": [
