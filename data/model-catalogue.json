@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-10-22T10:13:06.420Z",
+  "updated": "2026-10-23T10:05:53.482Z",
   "items": [
     {
       "id": "recursive/flint-v1.0:free",
@@ -17,12 +17,12 @@
       "description": "Flint is an open-weight mixture-of-experts model from Recursive, with about 2.5B active parameters out of 40B total, built by Recursive's autoresearch system Eureka Machine for coding agents. It is suited..."
     },
     {
-      "id": "minimax/minimax-m3.1-flash:free",
-      "name": "MiniMax M3.1 Flash (free)",
+      "id": "minimax/minimax-m3.1-flash",
+      "name": "MiniMax M3.1 Flash",
       "lab": "minimax",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 1000000,
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
+      "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
         "text",
@@ -81,7 +81,7 @@
       "id": "reflection/beam-1.0-501b-a23b",
       "name": "Beam 1.0 501B A23B",
       "lab": "reflection",
-      "inputPrice": 0.3,
+      "inputPrice": 0.25,
       "outputPrice": 1,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -916,7 +916,7 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.2235,
+      "inputPrice": 0.2565,
       "outputPrice": 8,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -1370,7 +1370,7 @@
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
       "inputPrice": 0.005200000000000001,
-      "outputPrice": 0.193,
+      "outputPrice": 0.1985,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1402,7 +1402,7 @@
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
       "inputPrice": 0.005200000000000001,
-      "outputPrice": 0.193,
+      "outputPrice": 0.1985,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1549,8 +1549,8 @@
       "id": "qwen/qwen3.8-27b",
       "name": "Qwen3.8 27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.04,
-      "outputPrice": 1.35,
+      "inputPrice": 0.19999999999999998,
+      "outputPrice": 2.5,
       "contextTokens": 1000000,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3705,8 +3705,8 @@
       "id": "qwen/qwen3.5-9b",
       "name": "Qwen3.5-9B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.08,
-      "outputPrice": 0.13,
+      "inputPrice": 0.16999999999999998,
+      "outputPrice": 0.25,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -5682,8 +5682,8 @@
       "id": "mistralai/mistral-small-3.2-24b-instruct",
       "name": "Mistral Small 3.2 24B",
       "lab": "Mistral AI",
-      "inputPrice": 0.09375,
-      "outputPrice": 0.25,
+      "inputPrice": 0.075,
+      "outputPrice": 0.19999999999999998,
       "contextTokens": 256000,
       "modality": "text+image->text",
       "inputModalities": [
