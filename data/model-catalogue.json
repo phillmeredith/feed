@@ -1,7 +1,23 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-10-23T10:05:53.482Z",
+  "updated": "2026-10-24T09:33:38.564Z",
   "items": [
+    {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "lab": "Moonshot AI",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "contextTokens": 1048576,
+      "modality": "text+image+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-10-23T17:56:28.000Z",
+      "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D..."
+    },
     {
       "id": "recursive/flint-v1.0:free",
       "name": "Flint (free)",
@@ -916,7 +932,7 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.2565,
+      "inputPrice": 0.1188,
       "outputPrice": 8,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -930,8 +946,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.07,
-      "outputPrice": 0.5,
+      "inputPrice": 0.02,
+      "outputPrice": 1,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1085,8 +1101,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 0.02,
+      "outputPrice": 1,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1369,8 +1385,8 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.005200000000000001,
-      "outputPrice": 0.1985,
+      "inputPrice": 0.0175,
+      "outputPrice": 0.14250000000000002,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1401,8 +1417,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.005200000000000001,
-      "outputPrice": 0.1985,
+      "inputPrice": 0.15,
+      "outputPrice": 0.5,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1493,8 +1509,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.079,
-      "outputPrice": 1.4,
+      "inputPrice": 0.075,
+      "outputPrice": 4.295000000000001,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1796,8 +1812,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.0475,
-      "outputPrice": 0.1568,
+      "inputPrice": 0.0422,
+      "outputPrice": 0.1694,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1810,8 +1826,8 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.44,
-      "outputPrice": 1.32,
+      "inputPrice": 0.04444,
+      "outputPrice": 0.13332,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2065,7 +2081,7 @@
       "name": "Kimi K3",
       "lab": "Moonshot AI",
       "inputPrice": 0.23900000000000002,
-      "outputPrice": 11.936,
+      "outputPrice": 10.8,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3007,8 +3023,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.238,
-      "outputPrice": 16,
+      "inputPrice": 0.19,
+      "outputPrice": 8.940000000000001,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3185,8 +3201,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.9552599999999999,
-      "outputPrice": 1.9105199999999998,
+      "inputPrice": 0.388368,
+      "outputPrice": 0.776736,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -3351,8 +3367,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B ",
       "lab": "Google",
-      "inputPrice": 0.09,
-      "outputPrice": 0.3,
+      "inputPrice": 0.0675,
+      "outputPrice": 0.22499999999999998,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [

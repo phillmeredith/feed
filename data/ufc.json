@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-23T10:06:14.005Z",
+  "updated": "2026-10-24T09:33:57.067Z",
   "events": [
     {
       "id": "600057024",
@@ -7185,21 +7185,11 @@
           "completed": false
         },
         {
-          "segment": "prelim",
+          "segment": "main",
           "weightClass": "Middleweight",
           "fighters": [
             "Andre Petroski",
             "Azamat Bekoev"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "Featherweight",
-          "fighters": [
-            "Gaston Bolaños",
-            "Francis Marshall"
           ],
           "headline": false,
           "completed": false
@@ -7226,10 +7216,10 @@
         },
         {
           "segment": "main",
-          "weightClass": "Welterweight",
+          "weightClass": "Flyweight",
           "fighters": [
-            "Carlos Leal",
-            "Randy Brown"
+            "Ode' Osbourne",
+            "Cody Durden"
           ],
           "headline": true,
           "completed": false
