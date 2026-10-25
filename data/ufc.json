@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-24T09:33:57.067Z",
+  "updated": "2026-10-25T09:50:04.722Z",
   "events": [
     {
       "id": "600057024",
@@ -6980,7 +6980,7 @@
       "id": "600061267",
       "name": "UFC 333: Volkanovski vs. Evloev",
       "date": "2026-10-24T14:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Etihad Arena",
       "location": "Abu Dhabi, United Arab Emirates",
       "fights": [
@@ -6991,8 +6991,11 @@
             "Nicolle Caliari",
             "Iasmin Lucindo"
           ],
+          "winner": "Iasmin Lucindo",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7001,8 +7004,11 @@
             "Noah Gugnon",
             "Kody Steele"
           ],
+          "winner": "Kody Steele",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7011,8 +7017,11 @@
             "Daniel Santos",
             "Bolaji Oki"
           ],
+          "winner": "Daniel Santos",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7021,8 +7030,11 @@
             "Abubakar Vagaev",
             "Jacob Malkoun"
           ],
+          "winner": "Abubakar Vagaev",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7031,8 +7043,11 @@
             "Colby Thicknesse",
             "Asaf Chopurov"
           ],
+          "winner": "Colby Thicknesse",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7041,8 +7056,11 @@
             "Grant Dawson",
             "Nurullo Aliev"
           ],
+          "winner": "Grant Dawson",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7051,8 +7069,11 @@
             "Abus Magomedov",
             "Cam Rowston"
           ],
+          "winner": "Abus Magomedov",
+          "method": "Submission",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7061,8 +7082,11 @@
             "Nikita Krylov",
             "Abdul-Rakhman Yakhyaev"
           ],
+          "winner": "Abdul-Rakhman Yakhyaev",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7071,8 +7095,11 @@
             "Azamat Murzakanov",
             "Dominick Reyes"
           ],
+          "winner": "Dominick Reyes",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7081,8 +7108,11 @@
             "Aaron Pico",
             "Losene Keita"
           ],
+          "winner": "Aaron Pico",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7091,8 +7121,11 @@
             "Alexander Volkov",
             "Rizvan Kuniev"
           ],
+          "winner": "Alexander Volkov",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7101,8 +7134,11 @@
             "Ramazan Temirov",
             "Lone'er Kavanagh"
           ],
+          "winner": "Lone'er Kavanagh",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7111,8 +7147,11 @@
             "Merab Dvalishvili",
             "Petr Yan"
           ],
+          "winner": "Petr Yan",
+          "method": "Decision",
+          "rounds": 5,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7121,8 +7160,11 @@
             "Alexander Volkanovski",
             "Movsar Evloev"
           ],
+          "winner": "Alexander Volkanovski",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -7136,10 +7178,30 @@
       "fights": [
         {
           "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Mickey Gall",
+            "Zach Reese"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "W Flyweight",
           "fighters": [
             "Tainara Lisboa",
             "Lucia Szabová"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Randy Brown",
+            "Jacobe Smith"
           ],
           "headline": false,
           "completed": false
@@ -7185,11 +7247,21 @@
           "completed": false
         },
         {
-          "segment": "main",
+          "segment": "prelim",
           "weightClass": "Middleweight",
           "fighters": [
             "Andre Petroski",
             "Azamat Bekoev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Featherweight",
+          "fighters": [
+            "Dakota Hope",
+            "Francis Marshall"
           ],
           "headline": false,
           "completed": false

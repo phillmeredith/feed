@@ -1,65 +1,20 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-24T09:33:47.283Z",
+  "updated": "2026-10-25T09:49:53.254Z",
   "items": [
     {
-      "id": "9648124f-8568-46d2-86d7-4b4d6f12187f",
-      "name": "Long March 6A | Yaogan 50-03",
-      "mission": "Yaogan 50-03",
-      "missionType": "Government/Top Secret",
-      "provider": "China Aerospace Science and Technology Corporation",
-      "rocket": "Long March 6A",
-      "pad": "Launch Complex 9A",
-      "location": "Taiyuan Satellite Launch Center, People's Republic of China",
-      "net": "2026-10-23T10:15:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_6a__image_20251209050223.jpeg"
-    },
-    {
-      "id": "3621085f-deae-4f89-bd54-c0f96ee44421",
-      "name": "Long March 4B | Yaogan 53-07 to 09/56-19 to 21",
-      "mission": "Yaogan 53-07 to 09/56-19 to 21",
-      "missionType": "Government/Top Secret",
-      "provider": "China Aerospace Science and Technology Corporation",
-      "rocket": "Long March 4B",
-      "pad": "Launch Area 94 (SLS-2 / 603)",
-      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "net": "2026-10-23T19:25:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_4b_l_image_20251209044050.jpeg"
-    },
-    {
-      "id": "f6af629d-39b5-4f86-bc0c-f8776444a858",
-      "name": "Falcon 9 Block 5 | Starlink Group 15-15",
-      "mission": "Starlink Group 15-15",
-      "missionType": "Communications",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 4E",
-      "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-23T22:48:44Z",
-      "precision": "Second",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
-    },
-    {
       "id": "6b95bcc8-1f88-4539-84fe-f63630138766",
-      "name": "Long March 8A | Unknown Payload",
-      "mission": "Unknown Payload",
-      "missionType": "Unknown",
+      "name": "Long March 8A | SatNet LEO Group 28",
+      "mission": "SatNet LEO Group 28",
+      "missionType": "Communications",
       "provider": "China Aerospace Science and Technology Corporation",
       "rocket": "Long March 8A",
       "pad": "Commercial LC-1",
       "location": "Wenchang Space Launch Site, People's Republic of China",
-      "net": "2026-10-25T01:50:00Z",
-      "precision": "Hour",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "net": "2026-10-25T02:03:00Z",
+      "precision": "Minute",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-8a_launch_2_image_20251206093107.jpeg"
     },
     {
@@ -76,21 +31,6 @@
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
-    },
-    {
-      "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
-      "name": "Vulcan VC6L | Amazon Leo (LV-01)",
-      "mission": "Amazon Leo (LV-01)",
-      "missionType": "Communications",
-      "provider": "United Launch Alliance",
-      "rocket": "Vulcan VC6L",
-      "pad": "Space Launch Complex 41",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-10-29T00:00:00Z",
-      "precision": "Day",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/vulcan_vc6l_image_20220406123130.jpg"
     },
     {
       "id": "57ce0a39-d035-4f16-a418-bd6108f78199",
@@ -228,6 +168,21 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/soyuz_2.1b_image_20230802085331.jpg"
     },
     {
+      "id": "c9605b67-8a53-4239-a8ae-577fe3b79799",
+      "name": "Long March 2F/G | Shenzhou 24",
+      "mission": "Shenzhou 24",
+      "missionType": "Human Exploration",
+      "provider": "China Aerospace Science and Technology Corporation",
+      "rocket": "Long March 2F/G",
+      "pad": "Launch Area 91 (SLS-1 / 921)",
+      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "net": "2026-11-25T00:00:00Z",
+      "precision": "Day",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/shenzhou_22_lau_image_20251129175823.jpg"
+    },
+    {
       "id": "d74afbc7-0de5-491c-be05-4e9c31f736ac",
       "name": "Falcon 9 Block 5 | Cygnus CRS-2 NG-25",
       "mission": "Cygnus CRS-2 NG-25",
@@ -286,6 +241,21 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/pslv_image_20190224012254.jpeg"
+    },
+    {
+      "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
+      "name": "Vulcan VC6L | Amazon Leo (LV-01)",
+      "mission": "Amazon Leo (LV-01)",
+      "missionType": "Communications",
+      "provider": "United Launch Alliance",
+      "rocket": "Vulcan VC6L",
+      "pad": "Space Launch Complex 41",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "net": "2026-11-30T00:00:00Z",
+      "precision": "Month",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/vulcan_vc6l_image_20220406123130.jpg"
     },
     {
       "id": "22e117bf-041c-49d5-9d09-7b180036e143",
@@ -468,9 +438,9 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
     },
     {
-      "id": "fcbc4550-e69e-4458-a9e6-4a5b6b6b15a5",
-      "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer E",
-      "mission": "SDA Tranche 1 Tracking Layer E",
+      "id": "a9ee8337-127d-4f17-9e3a-a07999f80099",
+      "name": "Falcon 9 Block 5 | SDA Tranche 1 Tracking Layer D",
+      "mission": "SDA Tranche 1 Tracking Layer D",
       "missionType": "Government/Top Secret",
       "provider": "SpaceX",
       "rocket": "Falcon 9 Block 5",
@@ -601,6 +571,35 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/themis_t1h_on_t_image_20250919095336.jpg"
+    },
+    {
+      "id": "a67b40f9-cfcc-4614-a355-a156280b4bb3",
+      "name": "Vulcan VC4L | Dream Chaser CRS 2 Flight 1",
+      "mission": "Dream Chaser CRS 2 Flight 1",
+      "missionType": "Test Flight",
+      "provider": "United Launch Alliance",
+      "rocket": "Vulcan VC4L",
+      "pad": "Space Launch Complex 41",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources."
+    },
+    {
+      "id": "e61d353c-db55-4a57-8184-0fab187231e6",
+      "name": "Falcon 9 Block 5 | Globalstar 2-R Mission 2 (x 9)",
+      "mission": "Globalstar 2-R Mission 2 (x 9)",
+      "missionType": "Communications",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 40",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Year Half 2",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
     }
   ]
 }

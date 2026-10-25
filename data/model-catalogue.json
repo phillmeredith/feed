@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-10-24T09:33:38.564Z",
+  "updated": "2026-10-25T09:49:45.381Z",
   "items": [
     {
       "id": "moonshotai/kimi-k3.1-pro",
@@ -1385,8 +1385,8 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.0175,
-      "outputPrice": 0.14250000000000002,
+      "inputPrice": 0.051300000000000005,
+      "outputPrice": 0.0701,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1509,8 +1509,8 @@
       "id": "~z-ai/glm-latest",
       "name": "GLM Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.075,
-      "outputPrice": 4.295000000000001,
+      "inputPrice": 0.0703,
+      "outputPrice": 4.3843,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1705,6 +1705,20 @@
       "description": "Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7)."
     },
     {
+      "id": "liquid/lfm-2.5-2.6b",
+      "name": "LFM2.5-2.6B",
+      "lab": "liquid",
+      "inputPrice": 0.35,
+      "outputPrice": 0.5,
+      "contextTokens": 128000,
+      "modality": "text->text",
+      "inputModalities": [
+        "text"
+      ],
+      "releasedAt": "2026-08-11T17:48:39.000Z",
+      "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or..."
+    },
+    {
       "id": "liquid/lfm-2.5-2.6b:free",
       "name": "LFM2.5-2.6B (free)",
       "lab": "liquid",
@@ -1826,8 +1840,8 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.04444,
-      "outputPrice": 0.13332,
+      "inputPrice": 0.0422,
+      "outputPrice": 0.1694,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -3023,8 +3037,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.19,
-      "outputPrice": 8.940000000000001,
+      "inputPrice": 0.15,
+      "outputPrice": 16,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3201,8 +3215,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.388368,
-      "outputPrice": 0.776736,
+      "inputPrice": 0.20879999999999999,
+      "outputPrice": 0.41759999999999997,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -4076,8 +4090,8 @@
       "id": "minimax/minimax-m2.5",
       "name": "MiniMax M2.5",
       "lab": "minimax",
-      "inputPrice": 0.27,
-      "outputPrice": 0.95,
+      "inputPrice": 0.3,
+      "outputPrice": 1.2,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -6629,8 +6643,8 @@
       "id": "meta-llama/llama-3.2-3b-instruct",
       "name": "Llama 3.2 3B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.0509,
-      "outputPrice": 0.335,
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.33,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
@@ -6980,20 +6994,6 @@
       "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
     },
     {
-      "id": "openai/gpt-3.5-turbo-instruct",
-      "name": "GPT-3.5 Turbo Instruct",
-      "lab": "OpenAI",
-      "inputPrice": 1.5,
-      "outputPrice": 2,
-      "contextTokens": 4095,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2023-09-28T00:00:00.000Z",
-      "description": "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and omitting chat-related optimizations. Training data: up to Sep 2021."
-    },
-    {
       "id": "openai/gpt-3.5-turbo-16k",
       "name": "GPT-3.5 Turbo 16k",
       "lab": "OpenAI",
@@ -7048,34 +7048,6 @@
       ],
       "releasedAt": "2023-07-02T00:00:00.000Z",
       "description": "One of the highest performing and most popular fine-tunes of Llama 2 13B, with rich descriptions and roleplay. #merge"
-    },
-    {
-      "id": "openai/gpt-3.5-turbo",
-      "name": "GPT-3.5 Turbo",
-      "lab": "OpenAI",
-      "inputPrice": 0.5,
-      "outputPrice": 1.5,
-      "contextTokens": 16385,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2023-05-28T00:00:00.000Z",
-      "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
-    },
-    {
-      "id": "openai/gpt-3.5-turbo:batch",
-      "name": "GPT-3.5 Turbo (batch)",
-      "lab": "OpenAI",
-      "inputPrice": 0.25,
-      "outputPrice": 0.75,
-      "contextTokens": 16385,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2023-05-28T00:00:00.000Z",
-      "description": "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natural language or code, and is optimized for chat and traditional completion tasks.\n\nTraining data up to Sep 2021."
     },
     {
       "id": "openai/gpt-4",
