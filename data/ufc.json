@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-25T09:50:04.722Z",
+  "updated": "2026-10-26T11:09:16.488Z",
   "events": [
     {
       "id": "600057024",
@@ -7198,16 +7198,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Welterweight",
-          "fighters": [
-            "Randy Brown",
-            "Jacobe Smith"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "W Strawweight",
           "fighters": [
             "Piera Rodriguez",
@@ -7257,7 +7247,7 @@
           "completed": false
         },
         {
-          "segment": "main",
+          "segment": "prelim",
           "weightClass": "Featherweight",
           "fighters": [
             "Dakota Hope",
@@ -7292,6 +7282,16 @@
           "fighters": [
             "Ode' Osbourne",
             "Cody Durden"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Randy Brown",
+            "Jacobe Smith"
           ],
           "headline": true,
           "completed": false
@@ -7460,8 +7460,28 @@
           "segment": "prelim",
           "weightClass": "Lightweight",
           "fighters": [
+            "Jared Gordon",
+            "Melquizael Costa"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
             "Nazim Sadykhov",
             "Jefferson Nascimento"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Cesar Almeida",
+            "Donte Johnson"
           ],
           "headline": false,
           "completed": false
@@ -7482,16 +7502,6 @@
           "fighters": [
             "Macy Chiasson",
             "Bia Mesquita"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Baisangur Susurkaev",
-            "Donte Johnson"
           ],
           "headline": false,
           "completed": false

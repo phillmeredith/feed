@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-10-25T09:58:48.307Z",
+  "updated": "2026-10-26T11:18:17.074Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -714,6 +714,20 @@
       "kind": "sprint-qualifying",
       "videoId": "1glxSkFKTPk",
       "title": "Sprint Qualifying Highlights | 2026 Singapore Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:18",
+      "kind": "race",
+      "videoId": "srLm23RUAH0",
+      "title": "Race Highlights | 2026 United States Grand Prix",
+      "channel": "FORMULA 1"
+    },
+    {
+      "key": "f1:2026:18",
+      "kind": "qualifying",
+      "videoId": "EQ74or790IM",
+      "title": "Qualifying Highlights | 2026 United States Grand Prix",
       "channel": "FORMULA 1"
     }
   ]
