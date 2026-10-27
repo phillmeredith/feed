@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-10-26T11:18:17.074Z",
+  "updated": "2026-10-27T10:45:43.176Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -729,6 +729,13 @@
       "videoId": "EQ74or790IM",
       "title": "Qualifying Highlights | 2026 United States Grand Prix",
       "channel": "FORMULA 1"
+    },
+    {
+      "key": "golf:401850917",
+      "kind": "final-round",
+      "videoId": "uikFme16Z7s",
+      "title": "PGA Tour Highlights | Round 3 | Butterfield Bermuda Championship | 2026",
+      "channel": "PGA Tour"
     }
   ]
 }

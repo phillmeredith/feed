@@ -1,7 +1,71 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-10-26T11:08:58.847Z",
+  "updated": "2026-10-27T10:36:36.467Z",
   "items": [
+    {
+      "id": "openai/gpt-6.1-terra-pro",
+      "name": "GPT-6.1 Terra Pro",
+      "lab": "OpenAI",
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-10-26T18:15:56.000Z",
+      "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
+    },
+    {
+      "id": "openai/gpt-6.1-terra-pro:batch",
+      "name": "GPT-6.1 Terra Pro (batch)",
+      "lab": "OpenAI",
+      "inputPrice": 0.5,
+      "outputPrice": 2.5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-10-26T18:15:56.000Z",
+      "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more..."
+    },
+    {
+      "id": "openai/gpt-6.1-terra",
+      "name": "GPT-6.1 Terra",
+      "lab": "OpenAI",
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-10-26T18:13:29.000Z",
+      "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots..."
+    },
+    {
+      "id": "openai/gpt-6.1-terra:batch",
+      "name": "GPT-6.1 Terra (batch)",
+      "lab": "OpenAI",
+      "inputPrice": 0.5,
+      "outputPrice": 2.5,
+      "contextTokens": 1050000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "file",
+        "image",
+        "text"
+      ],
+      "releasedAt": "2026-10-26T18:13:29.000Z",
+      "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots..."
+    },
     {
       "id": "moonshotai/kimi-k3.1-pro",
       "name": "Kimi K3.1 Pro",
@@ -932,7 +996,7 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.2565,
+      "inputPrice": 0.2428,
       "outputPrice": 8,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -1021,8 +1085,8 @@
       "id": "~openai/gpt-terra-latest",
       "name": "GPT Terra Latest",
       "lab": "~openai",
-      "inputPrice": 2,
-      "outputPrice": 12,
+      "inputPrice": 1,
+      "outputPrice": 5,
       "contextTokens": 1050000,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -1101,8 +1165,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.02,
-      "outputPrice": 1,
+      "inputPrice": 0.14,
+      "outputPrice": 0.42,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1385,8 +1449,8 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.041299999999999996,
-      "outputPrice": 0.0758,
+      "inputPrice": 0.0285,
+      "outputPrice": 0.0923,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1840,8 +1904,8 @@
       "id": "deepseek/deepseek-v4-flash-0731",
       "name": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
-      "inputPrice": 0.44,
-      "outputPrice": 1.32,
+      "inputPrice": 0.119,
+      "outputPrice": 0.238,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2094,8 +2158,8 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 0.15200000000000002,
-      "outputPrice": 20,
+      "inputPrice": 0.179,
+      "outputPrice": 11.5,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2557,8 +2621,8 @@
       "id": "moonshotai/kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "lab": "Moonshot AI",
-      "inputPrice": 0.6712,
-      "outputPrice": 3.35,
+      "inputPrice": 0.56,
+      "outputPrice": 3.1,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [
@@ -3037,8 +3101,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.15200000000000002,
-      "outputPrice": 20,
+      "inputPrice": 0.179,
+      "outputPrice": 11.5,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3229,8 +3293,8 @@
       "id": "deepseek/deepseek-v4-flash",
       "name": "DeepSeek V4 Flash 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.091,
-      "outputPrice": 0.182,
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.44999999999999996,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -3257,8 +3321,8 @@
       "id": "xiaomi/mimo-v2.5-pro",
       "name": "MiMo-V2.5-Pro",
       "lab": "xiaomi",
-      "inputPrice": 0.3045,
-      "outputPrice": 0.609,
+      "inputPrice": 0.48,
+      "outputPrice": 1.7999999999999998,
       "contextTokens": 1050000,
       "modality": "text->text",
       "inputModalities": [
@@ -3271,8 +3335,8 @@
       "id": "xiaomi/mimo-v2.5",
       "name": "MiMo-V2.5",
       "lab": "xiaomi",
-      "inputPrice": 0.119,
-      "outputPrice": 0.238,
+      "inputPrice": 0.39999999999999997,
+      "outputPrice": 2,
       "contextTokens": 1050000,
       "modality": "text+image+audio+video->text",
       "inputModalities": [
@@ -3367,8 +3431,8 @@
       "id": "z-ai/glm-5.1",
       "name": "GLM 5.1",
       "lab": "Zhipu AI",
-      "inputPrice": 1.4,
-      "outputPrice": 4.4,
+      "inputPrice": 0.966,
+      "outputPrice": 3.036,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -3472,20 +3536,6 @@
       ],
       "releasedAt": "2026-04-01T16:37:38.000Z",
       "description": "GLM-5V-Turbo is Z.ai’s first native multimodal agent foundation model, built for vision-based coding and agent-driven tasks. It natively handles image, video, and text inputs, excels at long-horizon planning, complex coding,..."
-    },
-    {
-      "id": "arcee-ai/trinity-large-thinking",
-      "name": "Trinity Large Thinking",
-      "lab": "arcee-ai",
-      "inputPrice": 0.25,
-      "outputPrice": 0.7999999999999999,
-      "contextTokens": 262144,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-04-01T15:45:18.000Z",
-      "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7..."
     },
     {
       "id": "x-ai/grok-4.20-multi-agent",
@@ -3659,21 +3709,6 @@
       "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from..."
     },
     {
-      "id": "mistralai/mistral-small-2603:batch",
-      "name": "Mistral Small 4 (batch)",
-      "lab": "Mistral AI",
-      "inputPrice": 0.075,
-      "outputPrice": 0.3,
-      "contextTokens": 262144,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2026-03-16T21:14:45.000Z",
-      "description": "Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single system. It combines strong reasoning from..."
-    },
-    {
       "id": "z-ai/glm-5-turbo",
       "name": "GLM 5 Turbo",
       "lab": "Zhipu AI",
@@ -3693,20 +3728,6 @@
       "lab": "NVIDIA",
       "inputPrice": 0.3,
       "outputPrice": 2.4,
-      "contextTokens": 262144,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-03-11T16:07:19.000Z",
-      "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer..."
-    },
-    {
-      "id": "nvidia/nemotron-3-super-120b-a12b:free",
-      "name": "Nemotron 3 Super (free)",
-      "lab": "NVIDIA",
-      "inputPrice": 0,
-      "outputPrice": 0,
       "contextTokens": 262144,
       "modality": "text->text",
       "inputModalities": [
@@ -3894,8 +3915,8 @@
       "id": "qwen/qwen3.5-27b",
       "name": "Qwen3.5-27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.27,
-      "outputPrice": 2.16,
+      "inputPrice": 0.26,
+      "outputPrice": 2.6,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -4603,21 +4624,6 @@
       "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities."
     },
     {
-      "id": "mistralai/ministral-8b-2512:batch",
-      "name": "Ministral 3 8B 2512 (batch)",
-      "lab": "Mistral AI",
-      "inputPrice": 0.075,
-      "outputPrice": 0.075,
-      "contextTokens": 262144,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2025-12-02T13:20:54.000Z",
-      "description": "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, efficient tiny language model with vision capabilities."
-    },
-    {
       "id": "mistralai/ministral-3b-2512",
       "name": "Ministral 3 3B 2512",
       "lab": "Mistral AI",
@@ -4638,22 +4644,6 @@
       "lab": "Mistral AI",
       "inputPrice": 0.5,
       "outputPrice": 1.5,
-      "contextTokens": 262144,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "releasedAt": "2025-12-01T21:27:52.000Z",
-      "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license."
-    },
-    {
-      "id": "mistralai/mistral-large-2512:batch",
-      "name": "Mistral Large 3 2512 (batch)",
-      "lab": "Mistral AI",
-      "inputPrice": 0.25,
-      "outputPrice": 0.75,
       "contextTokens": 262144,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -4874,20 +4864,6 @@
       ],
       "releasedAt": "2025-10-23T20:41:33.000Z",
       "description": "MiniMax-M2 is a compact, high-efficiency large language model optimized for end-to-end coding and agentic workflows. With 10 billion activated parameters (230 billion total), it delivers near-frontier intelligence across general reasoning,..."
-    },
-    {
-      "id": "ibm-granite/granite-4.0-h-micro",
-      "name": "Granite 4.0 Micro",
-      "lab": "ibm-granite",
-      "inputPrice": 0.017,
-      "outputPrice": 0.112,
-      "contextTokens": 131000,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2025-10-20T02:34:55.000Z",
-      "description": "Granite-4.0-H-Micro is a 3B parameter from the Granite 4 family of models. These models are the latest in a series of models released by IBM. They are fine-tuned for long..."
     },
     {
       "id": "openai/gpt-5-image-mini",
@@ -5263,22 +5239,6 @@
       "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances..."
     },
     {
-      "id": "mistralai/mistral-medium-3.1:batch",
-      "name": "Mistral Medium 3.1 (batch)",
-      "lab": "Mistral AI",
-      "inputPrice": 0.19999999999999998,
-      "outputPrice": 1,
-      "contextTokens": 131072,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "releasedAt": "2025-08-13T14:33:59.000Z",
-      "description": "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high-performance enterprise-grade language model designed to deliver frontier-level capabilities at significantly reduced operational cost. It balances..."
-    },
-    {
       "id": "z-ai/glm-4.5v",
       "name": "GLM 4.5V",
       "lab": "Zhipu AI",
@@ -5483,21 +5443,6 @@
       "lab": "Mistral AI",
       "inputPrice": 0.3,
       "outputPrice": 0.8999999999999999,
-      "contextTokens": 256000,
-      "modality": "text+file->text",
-      "inputModalities": [
-        "text",
-        "file"
-      ],
-      "releasedAt": "2025-08-01T20:20:30.000Z",
-      "description": "Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.\n\n[Blog Post](https://mistral.ai/news/codestral-25-08)"
-    },
-    {
-      "id": "mistralai/codestral-2508:batch",
-      "name": "Codestral 2508 (batch)",
-      "lab": "Mistral AI",
-      "inputPrice": 0.15,
-      "outputPrice": 0.44999999999999996,
       "contextTokens": 256000,
       "modality": "text+file->text",
       "inputModalities": [
@@ -6148,8 +6093,8 @@
       "id": "google/gemma-3-4b-it",
       "name": "Gemma 3 4B",
       "lab": "Google",
-      "inputPrice": 0.04,
-      "outputPrice": 0.049999999999999996,
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.09999999999999999,
       "contextTokens": 131072,
       "modality": "text+image->text",
       "inputModalities": [

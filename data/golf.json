@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-26T11:09:07.997Z",
+  "updated": "2026-10-27T10:36:45.867Z",
   "events": [
     {
       "id": "401811927",
@@ -27554,7 +27554,8 @@
       "major": false,
       "startDate": "2026-10-22",
       "endDate": "2026-10-26",
-      "status": "In Progress",
+      "status": "Final",
+      "winner": "Austin Smotherman",
       "leaderboard": [
         {
           "position": 1,
@@ -27565,7 +27566,7 @@
         {
           "position": 2,
           "name": "Séamus Power",
-          "score": "-16",
+          "score": "-15",
           "country": "Ireland"
         },
         {

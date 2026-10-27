@@ -1,6 +1,6 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-26T11:09:06.712Z",
+  "updated": "2026-10-27T10:36:44.573Z",
   "items": [
     {
       "id": "e2886a96-5ce9-4f45-872f-4e25a00be837",
@@ -11,10 +11,10 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-27T04:45:00Z",
-      "precision": "Minute",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "net": "2026-10-27T07:25:51Z",
+      "precision": "Second",
+      "status": "Launch in Flight",
+      "statusNote": "The launch vehicle has lifted off from the launchpad.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
     },
     {
@@ -41,26 +41,26 @@
       "rocket": "GSLV Mk II",
       "pad": "Satish Dhawan Space Centre Second Launch Pad",
       "location": "Satish Dhawan Space Centre, India",
-      "net": "2026-10-30T17:00:00Z",
-      "precision": "Hour",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "net": "2026-10-30T18:21:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/gslv2520mk252_image_20240101090337.jpg"
     },
     {
-      "id": "dc570565-4dcf-4ab9-8174-bf88efef477f",
-      "name": "Long March 12A | Flight 2",
-      "mission": "Flight 2",
-      "missionType": "Test Flight",
-      "provider": "China Aerospace Science and Technology Corporation",
-      "rocket": "Long March 12A",
-      "pad": "Long March 12 series Pad",
-      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "net": "2026-10-31T00:00:00Z",
-      "precision": "Month",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_12a__image_20251224005749.jpg"
+      "id": "54d471e8-695c-4fa7-a3cf-dbd8b389e8ae",
+      "name": "Falcon 9 Block 5 | USSF-432",
+      "mission": "USSF-432",
+      "missionType": "Government/Top Secret",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-11-02T01:56:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
     },
     {
       "id": "426bd2a5-02dd-4fbd-9f4d-2b8439c3a1ff",
@@ -93,19 +93,19 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
     },
     {
-      "id": "56ca6058-7ccc-4ec0-b1b0-fb49f3bfee49",
-      "name": "Falcon 9 Block 5 | NROL-195",
-      "mission": "NROL-195",
-      "missionType": "Government/Top Secret",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 4E",
-      "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-11-05T22:34:00Z",
-      "precision": "Minute",
+      "id": "a2423132-f965-423f-8b03-6891b775dc54",
+      "name": "Long March 12 | SatNet LEO Group TBD?",
+      "mission": "SatNet LEO Group TBD?",
+      "missionType": "Communications",
+      "provider": "China Aerospace Science and Technology Corporation",
+      "rocket": "Long March 12",
+      "pad": "Commercial LC-2",
+      "location": "Wenchang Space Launch Site, People's Republic of China",
+      "net": "2026-11-05T20:00:00Z",
+      "precision": "Hour",
       "status": "To Be Confirmed",
       "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_on_slc_image_20241024165956.jpg"
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-12_on_its_la_image_20241128132937.jpg"
     },
     {
       "id": "db3500ac-965b-4ad8-b417-cb8d8d005586",
@@ -181,6 +181,21 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
+    },
+    {
+      "id": "56ca6058-7ccc-4ec0-b1b0-fb49f3bfee49",
+      "name": "Falcon 9 Block 5 | NROL-195",
+      "mission": "NROL-195",
+      "missionType": "Government/Top Secret",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-11-30T00:00:00Z",
+      "precision": "Month",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_on_slc_image_20241024165956.jpg"
     },
     {
       "id": "dfac5ab7-7017-454f-b6cf-eeed277a97b5",
@@ -585,21 +600,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
-    },
-    {
-      "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
-      "name": "Spectrum | AT-Astra and Others (Spectrum Flight 3)",
-      "mission": "AT-Astra and Others (Spectrum Flight 3)",
-      "missionType": "Technology",
-      "provider": "Isar Aerospace",
-      "rocket": "Spectrum",
-      "pad": "Orbital Launch Pad",
-      "location": "Andøya Spaceport",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Year Half 2",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
     }
   ]
 }
