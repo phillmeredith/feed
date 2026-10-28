@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-27T10:36:59.073Z",
+  "updated": "2026-10-28T11:22:36.547Z",
   "events": [
     {
       "id": "600057024",
@@ -7178,16 +7178,6 @@
       "fights": [
         {
           "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Mickey Gall",
-            "Zach Reese"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "W Flyweight",
           "fighters": [
             "Tainara Lisboa",
@@ -7218,6 +7208,16 @@
         },
         {
           "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Mickey Gall",
+            "Zach Reese"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Featherweight",
           "fighters": [
             "Julian Erosa",
@@ -7232,16 +7232,6 @@
           "fighters": [
             "Theodor Berggren",
             "Rodrigo Sezinando"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Andre Petroski",
-            "Azamat Bekoev"
           ],
           "headline": false,
           "completed": false
@@ -7368,6 +7358,16 @@
         },
         {
           "segment": "prelim",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Mitch Raposo",
+            "Marcos Degli"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "W Flyweight",
           "fighters": [
             "Karine Silva",
@@ -7388,9 +7388,9 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Middleweight",
+          "weightClass": "",
           "fighters": [
-            "Wes Schultz",
+            "Andre Petroski",
             "Mantas Kondratavičius"
           ],
           "headline": false,
@@ -7460,6 +7460,16 @@
           "segment": "prelim",
           "weightClass": "Lightweight",
           "fighters": [
+            "Evan Elder",
+            "Samuel Sanches"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
             "Jared Gordon",
             "Melquizael Costa"
           ],
@@ -7472,16 +7482,6 @@
           "fighters": [
             "Nazim Sadykhov",
             "Jefferson Nascimento"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Middleweight",
-          "fighters": [
-            "Cesar Almeida",
-            "Donte Johnson"
           ],
           "headline": false,
           "completed": false
@@ -7502,6 +7502,16 @@
           "fighters": [
             "Macy Chiasson",
             "Bia Mesquita"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Cesar Almeida",
+            "Donte Johnson"
           ],
           "headline": false,
           "completed": false
