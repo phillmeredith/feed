@@ -1,7 +1,22 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-10-28T11:22:06.944Z",
+  "updated": "2026-10-29T11:32:17.542Z",
   "items": [
+    {
+      "id": "particle-ai/particle-1",
+      "name": "Particle-1",
+      "lab": "particle-ai",
+      "inputPrice": 0.25,
+      "outputPrice": 1,
+      "contextTokens": 1048576,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-10-28T17:18:13.000Z",
+      "description": "Particle-1 is a token-efficient agentic coding model from Particle AI, post-trained on DeepSeek V4.1 Flash. It is suited for software engineering work such as terminal workflows, codebase changes, and data..."
+    },
     {
       "id": "openai/gpt-6.1-terra-pro",
       "name": "GPT-6.1 Terra Pro",
@@ -431,7 +446,7 @@
       "lab": "stepfun",
       "inputPrice": 1,
       "outputPrice": 2.7,
-      "contextTokens": 1048576,
+      "contextTokens": 1000000,
       "modality": "text+image+video->text",
       "inputModalities": [
         "text",
@@ -1011,7 +1026,7 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.2542,
+      "inputPrice": 0.1035,
       "outputPrice": 8,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -1025,7 +1040,7 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.0126,
+      "inputPrice": 0.0212,
       "outputPrice": 1.7999999999999998,
       "contextTokens": 1048576,
       "modality": "text+image->text",
@@ -1180,8 +1195,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.14,
-      "outputPrice": 0.42,
+      "inputPrice": 0.045,
+      "outputPrice": 0.5,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1437,7 +1452,7 @@
       "name": "Granite 4.2 8B",
       "lab": "ibm-granite",
       "inputPrice": 0.06,
-      "outputPrice": 0.25,
+      "outputPrice": 0.15,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
@@ -1464,8 +1479,8 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.019700000000000002,
-      "outputPrice": 0.12380000000000001,
+      "inputPrice": 0.0457,
+      "outputPrice": 0.0742,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1496,8 +1511,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.15,
-      "outputPrice": 0.5,
+      "inputPrice": 0.0457,
+      "outputPrice": 0.0742,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1905,8 +1920,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.0475,
-      "outputPrice": 0.1568,
+      "inputPrice": 0.057,
+      "outputPrice": 0.1341,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2173,8 +2188,8 @@
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
-      "inputPrice": 0.159,
-      "outputPrice": 20,
+      "inputPrice": 0.23900000000000002,
+      "outputPrice": 10.8,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2622,7 +2637,7 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM 5.2",
       "lab": "Zhipu AI",
-      "inputPrice": 0.014,
+      "inputPrice": 0.006,
       "outputPrice": 7,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -2636,7 +2651,7 @@
       "id": "moonshotai/kimi-k2.7-code",
       "name": "Kimi K2.7 Code",
       "lab": "Moonshot AI",
-      "inputPrice": 0.6725,
+      "inputPrice": 0.56,
       "outputPrice": 3.1,
       "contextTokens": 262144,
       "modality": "text+image->text",
@@ -3116,8 +3131,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.159,
-      "outputPrice": 20,
+      "inputPrice": 0.18239999999999998,
+      "outputPrice": 9.338799999999999,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3743,7 +3758,7 @@
       "lab": "NVIDIA",
       "inputPrice": 0.3,
       "outputPrice": 2.4,
-      "contextTokens": 262144,
+      "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -5040,8 +5055,8 @@
       "id": "z-ai/glm-4.6",
       "name": "GLM 4.6",
       "lab": "Zhipu AI",
-      "inputPrice": 0.55,
-      "outputPrice": 2.2,
+      "inputPrice": 0.5,
+      "outputPrice": 2,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -5166,20 +5181,6 @@
       ],
       "releasedAt": "2025-09-17T13:25:36.000Z",
       "description": "Qwen3 Coder Flash is Alibaba's fast and cost efficient version of their proprietary Qwen3 Coder Plus. It is a powerful coding agent model specializing in autonomous programming via tool calling..."
-    },
-    {
-      "id": "qwen/qwen3-next-80b-a3b-thinking",
-      "name": "Qwen3 Next 80B A3B Thinking",
-      "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.15,
-      "outputPrice": 1.2,
-      "contextTokens": 262144,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2025-09-11T17:38:04.000Z",
-      "description": "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next line that outputs structured “thinking” traces by default. It’s designed for hard multi-step problems; math proofs, code synthesis/debugging, logic, and agentic..."
     },
     {
       "id": "qwen/qwen3-next-80b-a3b-instruct",
@@ -5854,22 +5855,6 @@
       "description": "Qwen3-32B is a dense 32.8B parameter causal language model from the Qwen3 series, optimized for both complex reasoning and efficient dialogue. It supports seamless switching between a \"thinking\" mode for..."
     },
     {
-      "id": "openai/o4-mini-high",
-      "name": "o4 Mini High",
-      "lab": "OpenAI",
-      "inputPrice": 1.1,
-      "outputPrice": 4.4,
-      "contextTokens": 200000,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "image",
-        "text",
-        "file"
-      ],
-      "releasedAt": "2025-04-16T17:23:32.000Z",
-      "description": "OpenAI o4-mini-high is the same model as [o4-mini](/openai/o4-mini) with reasoning_effort set to high. OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining..."
-    },
-    {
       "id": "openai/o3",
       "name": "o3",
       "lab": "OpenAI",
@@ -5900,22 +5885,6 @@
       ],
       "releasedAt": "2025-04-16T17:10:57.000Z",
       "description": "o3 is a well-rounded and powerful model across domains. It sets a new standard for math, science, coding, and visual reasoning tasks. It also excels at technical writing and instruction-following...."
-    },
-    {
-      "id": "openai/o4-mini",
-      "name": "o4 Mini",
-      "lab": "OpenAI",
-      "inputPrice": 1.1,
-      "outputPrice": 4.4,
-      "contextTokens": 200000,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "image",
-        "text",
-        "file"
-      ],
-      "releasedAt": "2025-04-16T16:29:02.000Z",
-      "description": "OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fast, cost-efficient performance while retaining strong multimodal and agentic capabilities. It supports tool use and demonstrates competitive reasoning..."
     },
     {
       "id": "openai/o4-mini:batch",
@@ -6072,22 +6041,6 @@
       ],
       "releasedAt": "2025-03-24T13:59:15.000Z",
       "description": "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team. It succeeds the [DeepSeek V3](/deepseek/deepseek-chat-v3) model and performs really well..."
-    },
-    {
-      "id": "openai/o1-pro",
-      "name": "o1-pro",
-      "lab": "OpenAI",
-      "inputPrice": 150,
-      "outputPrice": 600,
-      "contextTokens": 200000,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "releasedAt": "2025-03-19T22:26:51.000Z",
-      "description": "The o1 series of models are trained with reinforcement learning to think before they answer and perform complex reasoning. The o1-pro model uses more compute to think harder and provide..."
     },
     {
       "id": "mistralai/mistral-small-3.1-24b-instruct",
@@ -6251,21 +6204,6 @@
       "description": "Mistral Saba is a 24B-parameter language model specifically designed for the Middle East and South Asia, delivering accurate and contextually relevant responses while maintaining efficient performance. Trained on curated regional..."
     },
     {
-      "id": "openai/o3-mini-high",
-      "name": "o3 Mini High",
-      "lab": "OpenAI",
-      "inputPrice": 1.1,
-      "outputPrice": 4.4,
-      "contextTokens": 200000,
-      "modality": "text+file->text",
-      "inputModalities": [
-        "text",
-        "file"
-      ],
-      "releasedAt": "2025-02-12T15:03:31.000Z",
-      "description": "OpenAI o3-mini-high is the same model as [o3-mini](/openai/o3-mini) with reasoning_effort set to high. o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and..."
-    },
-    {
       "id": "aion-labs/aion-rp-llama-3.1-8b",
       "name": "Aion-RP 1.0 (8B)",
       "lab": "aion-labs",
@@ -6307,21 +6245,6 @@
       ],
       "releasedAt": "2025-02-01T11:37:20.000Z",
       "description": "Qwen-Plus, based on the Qwen2.5 foundation model, is a 131K context model with a balanced performance, speed, and cost combination."
-    },
-    {
-      "id": "openai/o3-mini",
-      "name": "o3 Mini",
-      "lab": "OpenAI",
-      "inputPrice": 1.1,
-      "outputPrice": 4.4,
-      "contextTokens": 200000,
-      "modality": "text+file->text",
-      "inputModalities": [
-        "text",
-        "file"
-      ],
-      "releasedAt": "2025-01-31T19:28:41.000Z",
-      "description": "OpenAI o3-mini is a cost-efficient language model optimized for STEM reasoning tasks, particularly excelling in science, mathematics, and coding. This model supports the `reasoning_effort` parameter, which can be set to..."
     },
     {
       "id": "openai/o3-mini:batch",
@@ -6409,22 +6332,6 @@
       ],
       "releasedAt": "2024-12-26T19:28:40.000Z",
       "description": "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the instruction following and coding abilities of the previous versions. Pre-trained on nearly 15 trillion tokens, the reported evaluations..."
-    },
-    {
-      "id": "openai/o1",
-      "name": "o1",
-      "lab": "OpenAI",
-      "inputPrice": 15,
-      "outputPrice": 60,
-      "contextTokens": 200000,
-      "modality": "text+image+file->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "file"
-      ],
-      "releasedAt": "2024-12-17T18:26:39.000Z",
-      "description": "The latest and strongest model family from OpenAI, o1 is designed to spend more time thinking before responding. The o1 model series is trained with large-scale reinforcement learning to reason..."
     },
     {
       "id": "cohere/command-r7b-12-2024",
@@ -6745,8 +6652,8 @@
       "id": "meta-llama/llama-3.1-8b-instruct",
       "name": "Llama 3.1 8B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.02,
-      "outputPrice": 0.04,
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.08,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
@@ -6893,21 +6800,6 @@
       ],
       "releasedAt": "2024-04-17T00:00:00.000Z",
       "description": "Mistral's official instruct fine-tuned version of [Mixtral 8x22B](/models/mistralai/mixtral-8x22b). It uses 39B active parameters out of 141B, offering unparalleled cost efficiency for its size. Its strengths include: - strong math, coding,..."
-    },
-    {
-      "id": "openai/gpt-4-turbo",
-      "name": "GPT-4 Turbo",
-      "lab": "OpenAI",
-      "inputPrice": 10,
-      "outputPrice": 30,
-      "contextTokens": 128000,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2024-04-09T00:00:00.000Z",
-      "description": "The latest GPT-4 Turbo model with vision capabilities. Vision requests can now use JSON mode and function calling.\n\nTraining data: up to December 2023."
     },
     {
       "id": "openai/gpt-4-turbo:batch",

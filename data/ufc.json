@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-28T11:22:36.547Z",
+  "updated": "2026-10-29T11:32:40.783Z",
   "events": [
     {
       "id": "600057024",
@@ -7699,11 +7699,74 @@
       ]
     },
     {
-      "id": "scheduled:2026-12-13T01:00Z",
-      "name": "UFC 335",
-      "date": "2026-12-13T01:00Z",
+      "id": "600061401",
+      "name": "UFC 335: Oliveira vs. Lopes",
+      "date": "2026-12-12T22:00Z",
       "status": "Scheduled",
-      "fights": []
+      "venue": "T-Mobile Arena",
+      "location": "Las Vegas, USA",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Junior Tafa",
+            "Quentin Pasley"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "W Flyweight",
+          "fighters": [
+            "Maycee Barber",
+            "Carli Judice"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Brandon Moreno",
+            "Charles Johnson"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Joe Pyfer",
+            "Bo Nickal"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Sergei Pavlovich",
+            "Alex Pereira"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Charles Oliveira",
+            "Diego Lopes"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
     }
   ]
 }
