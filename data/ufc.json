@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-29T11:32:40.783Z",
+  "updated": "2026-10-30T11:25:40.906Z",
   "events": [
     {
       "id": "600057024",
@@ -7388,7 +7388,7 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "",
+          "weightClass": "Middleweight",
           "fighters": [
             "Andre Petroski",
             "Mantas Kondratavičius"

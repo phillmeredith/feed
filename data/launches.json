@@ -1,6 +1,6 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-29T11:32:26.185Z",
+  "updated": "2026-10-30T11:25:25.750Z",
   "items": [
     {
       "id": "20d5676e-111b-40e3-8923-b218c3665ca2",
@@ -41,7 +41,7 @@
       "rocket": "Electron",
       "pad": "Unknown Pad",
       "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "net": "2026-11-02T08:45:00Z",
+      "net": "2026-11-02T16:00:00Z",
       "precision": "Hour",
       "status": "To Be Confirmed",
       "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
@@ -228,6 +228,21 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/shenzhou_22_lau_image_20251129175823.jpg"
     },
     {
+      "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
+      "name": "Spectrum | AT-Astra and Others (Spectrum Flight 3)",
+      "mission": "AT-Astra and Others (Spectrum Flight 3)",
+      "missionType": "Technology",
+      "provider": "Isar Aerospace",
+      "rocket": "Spectrum",
+      "pad": "Orbital Launch Pad",
+      "location": "Andøya Spaceport",
+      "net": "2026-11-26T20:00:00Z",
+      "precision": "Hour",
+      "status": "To Be Confirmed",
+      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
+    },
+    {
       "id": "d74afbc7-0de5-491c-be05-4e9c31f736ac",
       "name": "Falcon 9 Block 5 | Cygnus CRS-2 NG-25",
       "mission": "Cygnus CRS-2 NG-25",
@@ -236,10 +251,10 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 40",
       "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-11-30T00:00:00Z",
-      "precision": "Month",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "net": "2026-11-29T16:00:00Z",
+      "precision": "Hour",
+      "status": "To Be Confirmed",
+      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
     },
     {
@@ -356,21 +371,6 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Month",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
-    },
-    {
-      "id": "ce1317de-ec94-4479-9b28-38ebf11f13ae",
-      "name": "Falcon 9 Block 5 | Telesat Lightspeed 1",
-      "mission": "Telesat Lightspeed 1",
-      "missionType": "Communications",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Unknown Pad",
-      "location": "Cape Canaveral SFS, FL, USA",
       "net": "2026-12-31T00:00:00Z",
       "precision": "Month",
       "status": "To Be Determined",
