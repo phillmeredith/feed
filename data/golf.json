@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-30T11:25:27.130Z",
+  "updated": "2026-10-31T10:57:09.475Z",
   "events": [
     {
       "id": "401811927",
@@ -28289,711 +28289,711 @@
       "leaderboard": [
         {
           "position": 1,
-          "name": "Karl Vilips",
-          "score": "-9",
-          "country": "Australia"
+          "name": "Andrew Novak",
+          "score": "-14",
+          "country": "USA"
         },
         {
           "position": 2,
-          "name": "Kensei Hirata",
-          "score": "-8",
-          "country": "Japan"
+          "name": "Kihei Akina",
+          "score": "-11",
+          "country": "USA"
         },
         {
           "position": 3,
-          "name": "Ben Griffin",
-          "score": "-7",
-          "country": "USA"
-        },
-        {
-          "position": 4,
-          "name": "Marco Penge",
-          "score": "-7",
-          "country": "England"
-        },
-        {
-          "position": 5,
-          "name": "Garrick Higgo",
-          "score": "-7",
-          "country": "South Africa"
-        },
-        {
-          "position": 6,
-          "name": "Jeffrey Kang",
-          "score": "-7",
-          "country": "USA"
-        },
-        {
-          "position": 7,
-          "name": "Adrien Dumont de Chassart",
-          "score": "-7",
-          "country": "Belgium"
-        },
-        {
-          "position": 8,
-          "name": "Pierceson Coody",
-          "score": "-6",
-          "country": "USA"
-        },
-        {
-          "position": 9,
-          "name": "Mackenzie Hughes",
-          "score": "-6",
-          "country": "Canada"
-        },
-        {
-          "position": 10,
-          "name": "Doug Ghim",
-          "score": "-6",
-          "country": "USA"
-        },
-        {
-          "position": 11,
-          "name": "Alvaro Ortiz",
-          "score": "-6",
-          "country": "Mexico"
-        },
-        {
-          "position": 12,
           "name": "Matthieu Pavon",
-          "score": "-6",
+          "score": "-11",
           "country": "France"
         },
         {
-          "position": 13,
+          "position": 4,
+          "name": "Adrien Dumont de Chassart",
+          "score": "-11",
+          "country": "Belgium"
+        },
+        {
+          "position": 5,
+          "name": "Ben Griffin",
+          "score": "-11",
+          "country": "USA"
+        },
+        {
+          "position": 6,
+          "name": "Kensei Hirata",
+          "score": "-11",
+          "country": "Japan"
+        },
+        {
+          "position": 7,
+          "name": "Gordon Sargent",
+          "score": "-10",
+          "country": "USA"
+        },
+        {
+          "position": 8,
+          "name": "Mackenzie Hughes",
+          "score": "-10",
+          "country": "Canada"
+        },
+        {
+          "position": 9,
           "name": "Max Greyserman",
-          "score": "-6",
+          "score": "-10",
+          "country": "USA"
+        },
+        {
+          "position": 10,
+          "name": "Marco Penge",
+          "score": "-10",
+          "country": "England"
+        },
+        {
+          "position": 11,
+          "name": "Blades Brown",
+          "score": "-9",
+          "country": "USA"
+        },
+        {
+          "position": 12,
+          "name": "Steven Fisk",
+          "score": "-9",
+          "country": "USA"
+        },
+        {
+          "position": 13,
+          "name": "Jackson Suber",
+          "score": "-9",
           "country": "USA"
         },
         {
           "position": 14,
+          "name": "Hayden Springer",
+          "score": "-9",
+          "country": "USA"
+        },
+        {
+          "position": 15,
+          "name": "Luke Clanton",
+          "score": "-9",
+          "country": "USA"
+        },
+        {
+          "position": 16,
+          "name": "Doug Ghim",
+          "score": "-9",
+          "country": "USA"
+        },
+        {
+          "position": 17,
+          "name": "Alvaro Ortiz",
+          "score": "-9",
+          "country": "Mexico"
+        },
+        {
+          "position": 18,
+          "name": "Garrick Higgo",
+          "score": "-9",
+          "country": "South Africa"
+        },
+        {
+          "position": 19,
+          "name": "Jeffrey Kang",
+          "score": "-9",
+          "country": "USA"
+        },
+        {
+          "position": 20,
+          "name": "Brice Garnett",
+          "score": "-8",
+          "country": "USA"
+        },
+        {
+          "position": 21,
+          "name": "Zecheng Dou",
+          "score": "-8",
+          "country": "China"
+        },
+        {
+          "position": 22,
+          "name": "Keita Nakajima",
+          "score": "-8",
+          "country": "Japan"
+        },
+        {
+          "position": 23,
+          "name": "Jeremy Paul",
+          "score": "-8",
+          "country": "Germany"
+        },
+        {
+          "position": 24,
+          "name": "Trace Crowe",
+          "score": "-8",
+          "country": "USA"
+        },
+        {
+          "position": 25,
+          "name": "Pierceson Coody",
+          "score": "-8",
+          "country": "USA"
+        },
+        {
+          "position": 26,
+          "name": "Chandler Phillips",
+          "score": "-7",
+          "country": "USA"
+        },
+        {
+          "position": 27,
+          "name": "Harry Hall",
+          "score": "-7",
+          "country": "England"
+        },
+        {
+          "position": 28,
+          "name": "Kristoffer Ventura",
+          "score": "-7",
+          "country": "Norway"
+        },
+        {
+          "position": 29,
+          "name": "Justin Lower",
+          "score": "-7",
+          "country": "USA"
+        },
+        {
+          "position": 30,
+          "name": "Corey Conners",
+          "score": "-7",
+          "country": "Canada"
+        },
+        {
+          "position": 31,
+          "name": "Brian Campbell",
+          "score": "-7",
+          "country": "USA"
+        },
+        {
+          "position": 32,
+          "name": "Tom Kim",
+          "score": "-7",
+          "country": "South Korea"
+        },
+        {
+          "position": 33,
+          "name": "Ben Silverman",
+          "score": "-7",
+          "country": "Canada"
+        },
+        {
+          "position": 34,
+          "name": "Rafael Campos",
+          "score": "-6",
+          "country": "Puerto Rico"
+        },
+        {
+          "position": 35,
+          "name": "Ben James",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 36,
+          "name": "Adam Hadwin",
+          "score": "-6",
+          "country": "Canada"
+        },
+        {
+          "position": 37,
+          "name": "Haotong Li",
+          "score": "-6",
+          "country": "China"
+        },
+        {
+          "position": 38,
+          "name": "A.J. Ewart",
+          "score": "-6",
+          "country": "Canada"
+        },
+        {
+          "position": 39,
+          "name": "Erik van Rooyen",
+          "score": "-6",
+          "country": "South Africa"
+        },
+        {
+          "position": 40,
+          "name": "Christiaan Bezuidenhout",
+          "score": "-6",
+          "country": "South Africa"
+        },
+        {
+          "position": 41,
+          "name": "Jesper Svensson",
+          "score": "-6",
+          "country": "Sweden"
+        },
+        {
+          "position": 42,
+          "name": "Austin Eckroat",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 43,
+          "name": "Tyler Duncan",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 44,
+          "name": "Mac Meissner",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 45,
+          "name": "Marcelo Rozo",
+          "score": "-6",
+          "country": "Colombia"
+        },
+        {
+          "position": 46,
+          "name": "Denny McCarthy",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 47,
+          "name": "Max McGreevy",
+          "score": "-6",
+          "country": "USA"
+        },
+        {
+          "position": 48,
+          "name": "Karl Vilips",
+          "score": "-6",
+          "country": "Australia"
+        },
+        {
+          "position": 49,
+          "name": "Cameron Tankersley",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 50,
+          "name": "John Daly II",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 51,
+          "name": "Patrick Fishburn",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 52,
+          "name": "Jordan Smith",
+          "score": "-5",
+          "country": "England"
+        },
+        {
+          "position": 53,
+          "name": "Emiliano Grillo",
+          "score": "-5",
+          "country": "Argentina"
+        },
+        {
+          "position": 54,
+          "name": "Vince Whaley",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 55,
+          "name": "Rasmus Neergaard-Petersen",
+          "score": "-5",
+          "country": "Denmark"
+        },
+        {
+          "position": 56,
+          "name": "Chad Ramey",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 57,
+          "name": "Joel Dahmen",
+          "score": "-5",
+          "country": "USA"
+        },
+        {
+          "position": 58,
           "name": "Max Homa",
           "score": "-5",
           "country": "USA"
         },
         {
-          "position": 15,
-          "name": "Sudarshan Yellamaraju",
-          "score": "-5",
-          "country": "Canada"
-        },
-        {
-          "position": 16,
-          "name": "Trent Phillips",
-          "score": "-5",
-          "country": "USA"
-        },
-        {
-          "position": 17,
-          "name": "Max McGreevy",
-          "score": "-5",
-          "country": "USA"
-        },
-        {
-          "position": 18,
-          "name": "Ben Silverman",
-          "score": "-5",
-          "country": "Canada"
-        },
-        {
-          "position": 19,
-          "name": "Jackson Suber",
-          "score": "-5",
-          "country": "USA"
-        },
-        {
-          "position": 20,
-          "name": "Hayden Springer",
-          "score": "-5",
-          "country": "USA"
-        },
-        {
-          "position": 21,
-          "name": "Luke Clanton",
-          "score": "-5",
-          "country": "USA"
-        },
-        {
-          "position": 22,
-          "name": "Denny McCarthy",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 23,
-          "name": "Jeremy Paul",
-          "score": "-4",
-          "country": "Germany"
-        },
-        {
-          "position": 24,
-          "name": "Steven Fisk",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 25,
-          "name": "Joel Dahmen",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 26,
-          "name": "Andrew Novak",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 27,
-          "name": "Trace Crowe",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 28,
-          "name": "Gordon Sargent",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 29,
-          "name": "Brian Campbell",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 30,
-          "name": "Tom Kim",
-          "score": "-4",
-          "country": "South Korea"
-        },
-        {
-          "position": 31,
-          "name": "Joe Highsmith",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 32,
-          "name": "Mac Meissner",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 33,
-          "name": "Marcelo Rozo",
-          "score": "-4",
-          "country": "Colombia"
-        },
-        {
-          "position": 34,
-          "name": "Kihei Akina",
-          "score": "-4",
-          "country": "USA"
-        },
-        {
-          "position": 35,
-          "name": "Austin Eckroat",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 36,
-          "name": "Beau Hossler",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 37,
-          "name": "Justin Lower",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 38,
-          "name": "Rasmus Neergaard-Petersen",
-          "score": "-3",
-          "country": "Denmark"
-        },
-        {
-          "position": 39,
-          "name": "Tony Finau",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 40,
-          "name": "Corey Conners",
-          "score": "-3",
-          "country": "Canada"
-        },
-        {
-          "position": 41,
-          "name": "Tyler Duncan",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 42,
-          "name": "Kevin Roy",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 43,
-          "name": "Chad Ramey",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 44,
-          "name": "Isaiah Salinda",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 45,
-          "name": "John Parry",
-          "score": "-3",
-          "country": "England"
-        },
-        {
-          "position": 46,
-          "name": "Vince Whaley",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 47,
-          "name": "Zac Blair",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 48,
-          "name": "Brice Garnett",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 49,
-          "name": "Zecheng Dou",
-          "score": "-3",
-          "country": "China"
-        },
-        {
-          "position": 50,
-          "name": "Neal Shipley",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 51,
-          "name": "Blades Brown",
-          "score": "-3",
-          "country": "USA"
-        },
-        {
-          "position": 52,
-          "name": "Jesper Svensson",
-          "score": "-3",
-          "country": "Sweden"
-        },
-        {
-          "position": 53,
-          "name": "Keita Nakajima",
-          "score": "-3",
-          "country": "Japan"
-        },
-        {
-          "position": 54,
-          "name": "Erik van Rooyen",
-          "score": "-2",
-          "country": "South Africa"
-        },
-        {
-          "position": 55,
-          "name": "Jordan Smith",
-          "score": "-2",
-          "country": "England"
-        },
-        {
-          "position": 56,
-          "name": "Emiliano Grillo",
-          "score": "-2",
-          "country": "Argentina"
-        },
-        {
-          "position": 57,
-          "name": "Christiaan Bezuidenhout",
-          "score": "-2",
-          "country": "South Africa"
-        },
-        {
-          "position": 58,
-          "name": "Davis Riley",
-          "score": "-2",
-          "country": "USA"
-        },
-        {
           "position": 59,
-          "name": "Rico Hoey",
-          "score": "-2",
-          "country": "Philippines"
+          "name": "Garrett Endicott",
+          "score": "-4",
+          "country": "USA"
         },
         {
           "position": 60,
-          "name": "Dylan Wu",
-          "score": "-2",
-          "country": "USA"
+          "name": "Cam Davis",
+          "score": "-4",
+          "country": "Australia"
         },
         {
           "position": 61,
-          "name": "Chandler Phillips",
-          "score": "-2",
+          "name": "Chandler Blanchet",
+          "score": "-4",
           "country": "USA"
         },
         {
           "position": 62,
-          "name": "Wyndham Clark",
-          "score": "-2",
+          "name": "Paul Peterson",
+          "score": "-4",
           "country": "USA"
         },
         {
           "position": 63,
-          "name": "Harry Hall",
-          "score": "-2",
+          "name": "David Skinns",
+          "score": "-4",
           "country": "England"
         },
         {
           "position": 64,
-          "name": "Ryder Cowan",
-          "score": "-2",
+          "name": "Nick Hardy",
+          "score": "-4",
           "country": "USA"
         },
         {
           "position": 65,
-          "name": "Jimmy Stanger",
-          "score": "-2",
+          "name": "Dylan Wu",
+          "score": "-4",
           "country": "USA"
         },
         {
           "position": 66,
-          "name": "Kristoffer Ventura",
-          "score": "-2",
-          "country": "Norway"
+          "name": "Neal Shipley",
+          "score": "-4",
+          "country": "USA"
         },
         {
           "position": 67,
-          "name": "Patrick Fishburn",
-          "score": "-2",
+          "name": "Beau Hossler",
+          "score": "-4",
           "country": "USA"
         },
         {
           "position": 68,
-          "name": "Nick Hardy",
-          "score": "-1",
-          "country": "USA"
-        },
-        {
-          "position": 69,
-          "name": "A.J. Ewart",
-          "score": "-1",
+          "name": "Sudarshan Yellamaraju",
+          "score": "-4",
           "country": "Canada"
         },
         {
+          "position": 69,
+          "name": "Patton Kizzire",
+          "score": "-3",
+          "country": "USA"
+        },
+        {
           "position": 70,
-          "name": "Christo Lamprecht",
-          "score": "-1",
-          "country": "South Africa"
+          "name": "Alejandro Tosti",
+          "score": "-3",
+          "country": "Argentina"
         },
         {
           "position": 71,
-          "name": "John Daly II",
-          "score": "-1",
+          "name": "Nick Dunlap",
+          "score": "-3",
           "country": "USA"
         },
         {
           "position": 72,
-          "name": "David Skinns",
-          "score": "-1",
-          "country": "England"
+          "name": "David Ford",
+          "score": "-3",
+          "country": "USA"
         },
         {
           "position": 73,
           "name": "Kevin Streelman",
-          "score": "-1",
+          "score": "-3",
           "country": "USA"
         },
         {
           "position": 74,
           "name": "William Mouw",
-          "score": "-1",
+          "score": "-3",
           "country": "USA"
         },
         {
           "position": 75,
-          "name": "Will Gordon",
-          "score": "-1",
+          "name": "Davis Riley",
+          "score": "-3",
           "country": "USA"
         },
         {
           "position": 76,
-          "name": "Haotong Li",
-          "score": "-1",
-          "country": "China"
+          "name": "Rico Hoey",
+          "score": "-3",
+          "country": "Philippines"
         },
         {
           "position": 77,
-          "name": "David Lipsky",
-          "score": "E",
+          "name": "Tony Finau",
+          "score": "-3",
           "country": "USA"
         },
         {
           "position": 78,
-          "name": "Nick Dunlap",
-          "score": "E",
+          "name": "Kevin Roy",
+          "score": "-3",
           "country": "USA"
         },
         {
           "position": 79,
-          "name": "Taylor Pendrith",
-          "score": "E",
-          "country": "Canada"
+          "name": "Trent Phillips",
+          "score": "-3",
+          "country": "USA"
         },
         {
           "position": 80,
-          "name": "Cam Davis",
-          "score": "E",
-          "country": "Australia"
+          "name": "Zach Bauchou",
+          "score": "-2",
+          "country": "USA"
         },
         {
           "position": 81,
-          "name": "Harry Higgs",
-          "score": "E",
+          "name": "Chan Kim",
+          "score": "-2",
           "country": "USA"
         },
         {
           "position": 82,
-          "name": "Chandler Blanchet",
-          "score": "E",
+          "name": "Ben Martin",
+          "score": "-2",
           "country": "USA"
         },
         {
           "position": 83,
-          "name": "Cameron Tankersley",
-          "score": "E",
+          "name": "Andrew Putnam",
+          "score": "-2",
           "country": "USA"
         },
         {
           "position": 84,
-          "name": "Santiago de la Fuente",
-          "score": "E",
-          "country": "Mexico"
-        },
-        {
-          "position": 85,
-          "name": "David Ford",
-          "score": "E",
+          "name": "Johnny Keefer",
+          "score": "-2",
           "country": "USA"
         },
         {
+          "position": 85,
+          "name": "Taylor Pendrith",
+          "score": "-2",
+          "country": "Canada"
+        },
+        {
           "position": 86,
-          "name": "Paul Peterson",
-          "score": "E",
+          "name": "Jimmy Stanger",
+          "score": "-2",
           "country": "USA"
         },
         {
           "position": 87,
-          "name": "Eli Ortego",
-          "score": "E",
-          "country": "USA"
+          "name": "John Parry",
+          "score": "-2",
+          "country": "England"
         },
         {
           "position": 88,
-          "name": "Andrew Putnam",
-          "score": "E",
+          "name": "Zac Blair",
+          "score": "-2",
           "country": "USA"
         },
         {
           "position": 89,
+          "name": "Isaiah Salinda",
+          "score": "-2",
+          "country": "USA"
+        },
+        {
+          "position": 90,
+          "name": "Joe Highsmith",
+          "score": "-2",
+          "country": "USA"
+        },
+        {
+          "position": 91,
+          "name": "Adam Svensson",
+          "score": "-1",
+          "country": "Canada"
+        },
+        {
+          "position": 92,
+          "name": "Mauricio Figueroa Ramirez",
+          "score": "-1",
+          "country": "Mexico"
+        },
+        {
+          "position": 93,
+          "name": "Patrick Rodgers",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 94,
+          "name": "Aaron Wise",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 95,
+          "name": "Santiago de la Fuente",
+          "score": "-1",
+          "country": "Mexico"
+        },
+        {
+          "position": 96,
+          "name": "Ryder Cowan",
+          "score": "-1",
+          "country": "USA"
+        },
+        {
+          "position": 97,
+          "name": "Kevin Yu",
+          "score": "E",
+          "country": "Chinese Taipei"
+        },
+        {
+          "position": 98,
+          "name": "Rasmus Højgaard",
+          "score": "E",
+          "country": "Denmark"
+        },
+        {
+          "position": 99,
           "name": "Takumi Kanaya",
           "score": "E",
           "country": "Japan"
         },
         {
-          "position": 90,
-          "name": "Johnny Keefer",
-          "score": "E",
-          "country": "USA"
-        },
-        {
-          "position": 91,
-          "name": "Adam Hadwin",
-          "score": "E",
-          "country": "Canada"
-        },
-        {
-          "position": 92,
-          "name": "Alejandro Tosti",
-          "score": "E",
-          "country": "Argentina"
-        },
-        {
-          "position": 93,
+          "position": 100,
           "name": "Omar Morales",
           "score": "E",
           "country": "Mexico"
         },
         {
-          "position": 94,
-          "name": "Garrett Endicott",
+          "position": 101,
+          "name": "Will Gordon",
           "score": "E",
           "country": "USA"
         },
         {
-          "position": 95,
-          "name": "Patrick Rodgers",
-          "score": "+1",
-          "country": "USA"
-        },
-        {
-          "position": 96,
-          "name": "Mark Hubbard",
-          "score": "+1",
-          "country": "USA"
-        },
-        {
-          "position": 97,
-          "name": "Aaron Wise",
-          "score": "+1",
-          "country": "USA"
-        },
-        {
-          "position": 98,
-          "name": "Ben Martin",
-          "score": "+1",
-          "country": "USA"
-        },
-        {
-          "position": 99,
-          "name": "John VanDerLaan",
-          "score": "+1",
-          "country": "USA"
-        },
-        {
-          "position": 100,
-          "name": "Ben James",
-          "score": "+1",
-          "country": "USA"
-        },
-        {
-          "position": 101,
-          "name": "Rafael Campos",
-          "score": "+1",
-          "country": "Puerto Rico"
-        },
-        {
           "position": 102,
-          "name": "Chan Kim",
-          "score": "+1",
-          "country": "USA"
+          "name": "Christo Lamprecht",
+          "score": "E",
+          "country": "South Africa"
         },
         {
           "position": 103,
-          "name": "Kevin Yu",
-          "score": "+1",
-          "country": "Chinese Taipei"
+          "name": "Wyndham Clark",
+          "score": "E",
+          "country": "USA"
         },
         {
           "position": 104,
-          "name": "Rasmus Højgaard",
+          "name": "Pontus Nyholm",
           "score": "+1",
-          "country": "Denmark"
+          "country": "Sweden"
         },
         {
           "position": 105,
-          "name": "Peter Malnati",
-          "score": "+2",
+          "name": "Danny Walker",
+          "score": "+1",
           "country": "USA"
         },
         {
           "position": 106,
-          "name": "Lee Hodges",
-          "score": "+2",
+          "name": "Peter Malnati",
+          "score": "+1",
           "country": "USA"
         },
         {
           "position": 107,
-          "name": "Gerardo Gomez",
-          "score": "+2",
-          "country": "Mexico"
+          "name": "Lee Hodges",
+          "score": "+1",
+          "country": "USA"
         },
         {
           "position": 108,
+          "name": "Harry Higgs",
+          "score": "+1",
+          "country": "USA"
+        },
+        {
+          "position": 109,
+          "name": "Hank Lebioda",
+          "score": "+2",
+          "country": "USA"
+        },
+        {
+          "position": 110,
           "name": "Alejandro Fierro",
           "score": "+2",
           "country": "Mexico"
         },
         {
-          "position": 109,
-          "name": "Patton Kizzire",
-          "score": "+3",
-          "country": "USA"
-        },
-        {
-          "position": 110,
-          "name": "Zach Bauchou",
-          "score": "+3",
-          "country": "USA"
-        },
-        {
           "position": 111,
-          "name": "Hank Lebioda",
-          "score": "+3",
+          "name": "John VanDerLaan",
+          "score": "+2",
           "country": "USA"
         },
         {
           "position": 112,
-          "name": "Mauricio Figueroa Ramirez",
+          "name": "Davis Chatfield",
           "score": "+3",
-          "country": "Mexico"
+          "country": "USA"
         },
         {
           "position": 113,
-          "name": "Aldrich Potgieter",
+          "name": "Tayler Termeer",
           "score": "+4",
-          "country": "South Africa"
+          "country": "USA"
         },
         {
           "position": 114,
-          "name": "Adam Svensson",
+          "name": "David Lipsky",
           "score": "+4",
-          "country": "Canada"
+          "country": "USA"
         },
         {
           "position": 115,
-          "name": "Danny Walker",
-          "score": "+5",
+          "name": "Eli Ortego",
+          "score": "+4",
           "country": "USA"
         },
         {
           "position": 116,
-          "name": "Pontus Nyholm",
+          "name": "Mark Hubbard",
           "score": "+5",
-          "country": "Sweden"
+          "country": "USA"
         },
         {
           "position": 117,
-          "name": "Davis Chatfield",
-          "score": "+5",
-          "country": "USA"
+          "name": "Aldrich Potgieter",
+          "score": "+6",
+          "country": "South Africa"
         },
         {
           "position": 118,
-          "name": "Tayler Termeer",
+          "name": "Gerardo Gomez",
           "score": "+6",
-          "country": "USA"
+          "country": "Mexico"
         },
         {
           "position": 119,

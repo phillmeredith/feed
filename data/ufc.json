@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-30T11:25:40.906Z",
+  "updated": "2026-10-31T10:57:19.358Z",
   "events": [
     {
       "id": "600057024",
@@ -7300,12 +7300,22 @@
     },
     {
       "id": "600061268",
-      "name": "UFC Fight Night: Bonfim vs. Brady",
+      "name": "UFC Fight Night: Cortes Acosta vs. Walker",
       "date": "2026-11-07T22:00Z",
       "status": "Scheduled",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Thomas Petersen",
+            "Gabriel Lorenço"
+          ],
+          "headline": false,
+          "completed": false
+        },
         {
           "segment": "prelim",
           "weightClass": "Welterweight",
@@ -7378,16 +7388,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Gabriel Lorenço",
-            "Alvin Hines"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Middleweight",
           "fighters": [
             "Andre Petroski",
@@ -7438,10 +7438,10 @@
         },
         {
           "segment": "main",
-          "weightClass": "Welterweight",
+          "weightClass": "Heavyweight",
           "fighters": [
-            "Sean Brady",
-            "Gabriel Bonfim"
+            "Johnny Walker",
+            "Waldo Cortes Acosta"
           ],
           "headline": true,
           "completed": false
