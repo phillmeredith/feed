@@ -1,6 +1,6 @@
 {
   "note": "Official highlight videos, resolved from YouTube search against a rights-holder allowlist (npm run highlights:update). Keyed by session.",
-  "updated": "2026-10-31T11:06:59.474Z",
+  "updated": "2026-11-01T11:56:06.514Z",
   "items": [
     {
       "key": "f1:2026:1",
@@ -736,6 +736,13 @@
       "videoId": "uikFme16Z7s",
       "title": "PGA Tour Highlights | Round 3 | Butterfield Bermuda Championship | 2026",
       "channel": "PGA Tour"
+    },
+    {
+      "key": "ufc:600061420:8",
+      "kind": "fight",
+      "videoId": "h5ssdpZSOa4",
+      "title": "Someone's 0 gotta go! 👀 Raven Chapman v Lila dos Santos Furtado | TNT Sports Boxing Highlights",
+      "channel": "TNT Fight Sports"
     }
   ]
 }

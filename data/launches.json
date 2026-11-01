@@ -1,37 +1,7 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-10-31T10:57:08.111Z",
+  "updated": "2026-11-01T11:52:13.796Z",
   "items": [
-    {
-      "id": "20d5676e-111b-40e3-8923-b218c3665ca2",
-      "name": "GSLV Mk II | IRNSS-1L (NVS-03)",
-      "mission": "IRNSS-1L (NVS-03)",
-      "missionType": "Navigation",
-      "provider": "Indian Space Research Organization",
-      "rocket": "GSLV Mk II",
-      "pad": "Satish Dhawan Space Centre Second Launch Pad",
-      "location": "Satish Dhawan Space Centre, India",
-      "net": "2026-10-30T18:21:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/gslv-f182fnvs-_image_20261030172350.jpeg"
-    },
-    {
-      "id": "57ce0a39-d035-4f16-a418-bd6108f78199",
-      "name": "Falcon 9 Block 5 | Starlink Group 15-18",
-      "mission": "Starlink Group 15-18",
-      "missionType": "Communications",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 4E",
-      "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-10-31T04:04:34Z",
-      "precision": "Second",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon2520925_image_20221009234147.png"
-    },
     {
       "id": "426bd2a5-02dd-4fbd-9f4d-2b8439c3a1ff",
       "name": "Electron | The Sea God Surveys (iQPS Launch 9)",
@@ -41,10 +11,10 @@
       "rocket": "Electron",
       "pad": "Unknown Pad",
       "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "net": "2026-11-02T16:00:00Z",
-      "precision": "Hour",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "net": "2026-11-02T16:41:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
     },
     {
@@ -423,21 +393,6 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
     },
     {
-      "id": "d3bd7fb2-fac6-49fc-ae52-cee07d2fde67",
-      "name": "Falcon Heavy | Griffin Mission One",
-      "mission": "Griffin Mission One",
-      "missionType": "Lunar Exploration",
-      "provider": "SpaceX",
-      "rocket": "Falcon Heavy",
-      "pad": "Launch Complex 39A",
-      "location": "Kennedy Space Center, FL, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Month",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_heavy_image_20220129192819.jpeg"
-    },
-    {
       "id": "0cf92611-82a8-4095-a0b4-dda2e74b1fff",
       "name": "LVM-3 | GSAT-32 (GSAT-N3)",
       "mission": "GSAT-32 (GSAT-N3)",
@@ -601,6 +556,51 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/firefly_alpha_l_image_20240605174156.jpeg"
+    },
+    {
+      "id": "d47cbca4-48c1-455a-b357-f156833b189e",
+      "name": "Firefly Alpha Block 2 | ConnectedCosmos Launch 2",
+      "mission": "ConnectedCosmos Launch 2",
+      "missionType": "Communications",
+      "provider": "Firefly Aerospace",
+      "rocket": "Firefly Alpha Block 2",
+      "pad": "Space Launch Complex 2W",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/firefly_alpha_l_image_20240605174156.jpeg"
+    },
+    {
+      "id": "60f4ba6c-4201-4727-94aa-0015a5a0023f",
+      "name": "Spectrum | 1 x Pelican satellite",
+      "mission": "1 x Pelican satellite",
+      "missionType": "Earth Science",
+      "provider": "Isar Aerospace",
+      "rocket": "Spectrum",
+      "pad": "Orbital Launch Pad",
+      "location": "Andøya Spaceport",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
+    },
+    {
+      "id": "b48e32c5-3776-4684-a956-5ea4df032e90",
+      "name": "Spectrum | ΣYNDEO-3",
+      "mission": "ΣYNDEO-3",
+      "missionType": "Technology",
+      "provider": "Isar Aerospace",
+      "rocket": "Spectrum",
+      "pad": "Orbital Launch Pad",
+      "location": "Andøya Spaceport",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
     }
   ]
 }

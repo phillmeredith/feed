@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-10-31T10:57:19.358Z",
+  "updated": "2026-11-01T11:52:23.420Z",
   "events": [
     {
       "id": "600057024",
@@ -7172,7 +7172,7 @@
       "id": "600061420",
       "name": "UFC Fight Night: Moicano vs. Nolan",
       "date": "2026-10-31T21:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
@@ -7183,8 +7183,11 @@
             "Tainara Lisboa",
             "Lucia Szabová"
           ],
+          "winner": "Lucia Szabová",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7193,8 +7196,11 @@
             "Piera Rodriguez",
             "Talita Alencar"
           ],
+          "winner": "Piera Rodriguez",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7203,8 +7209,11 @@
             "Joe Kropschot",
             "Nick Klein"
           ],
+          "winner": "Joe Kropschot",
+          "method": "Submission",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7213,8 +7222,11 @@
             "Mickey Gall",
             "Zach Reese"
           ],
+          "winner": "Zach Reese",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7223,8 +7235,11 @@
             "Julian Erosa",
             "JeongYeong Lee"
           ],
+          "winner": "Julian Erosa",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7233,8 +7248,11 @@
             "Theodor Berggren",
             "Rodrigo Sezinando"
           ],
+          "winner": "Rodrigo Sezinando",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7243,8 +7261,11 @@
             "Dakota Hope",
             "Francis Marshall"
           ],
+          "winner": "Dakota Hope",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7253,8 +7274,11 @@
             "Jean-Paul Lebosnoyani",
             "Farman Hasanov"
           ],
+          "winner": "Jean-Paul Lebosnoyani",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7263,8 +7287,11 @@
             "Yana Santos",
             "Luana Santos"
           ],
+          "winner": "Luana Santos",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7273,8 +7300,11 @@
             "Ode' Osbourne",
             "Cody Durden"
           ],
+          "winner": "Cody Durden",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7283,8 +7313,11 @@
             "Randy Brown",
             "Jacobe Smith"
           ],
+          "winner": "Jacobe Smith",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7293,8 +7326,11 @@
             "Renato Moicano",
             "Tom Nolan"
           ],
+          "winner": "Tom Nolan",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -7306,16 +7342,6 @@
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
-        {
-          "segment": "prelim",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Thomas Petersen",
-            "Gabriel Lorenço"
-          ],
-          "headline": false,
-          "completed": false
-        },
         {
           "segment": "prelim",
           "weightClass": "Welterweight",
@@ -7382,6 +7408,16 @@
           "fighters": [
             "Karine Silva",
             "Gabriella Fernandes"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Thomas Petersen",
+            "Gabriel Lorenço"
           ],
           "headline": false,
           "completed": false

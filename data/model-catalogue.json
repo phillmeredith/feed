@@ -1,6 +1,6 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-10-31T10:56:59.615Z",
+  "updated": "2026-11-01T11:52:05.885Z",
   "items": [
     {
       "id": "particle-ai/particle-1",
@@ -1040,8 +1040,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.0141,
-      "outputPrice": 0.144,
+      "inputPrice": 0.035,
+      "outputPrice": 0.5,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1479,8 +1479,8 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.016300000000000002,
-      "outputPrice": 0.1479,
+      "inputPrice": 0.0285,
+      "outputPrice": 0.0923,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1511,8 +1511,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.016300000000000002,
-      "outputPrice": 0.1479,
+      "inputPrice": 0.0285,
+      "outputPrice": 0.0923,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1631,8 +1631,8 @@
       "id": "z-ai/glm-5.3",
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
-      "inputPrice": 0.0699,
-      "outputPrice": 1.4,
+      "inputPrice": 0.08,
+      "outputPrice": 3.5999999999999996,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1659,8 +1659,8 @@
       "id": "qwen/qwen3.8-27b",
       "name": "Qwen3.8 27B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.04,
-      "outputPrice": 2.3,
+      "inputPrice": 0.15,
+      "outputPrice": 1.875,
       "contextTokens": 1000000,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1772,8 +1772,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 0.66,
-      "outputPrice": 1.9800000000000002,
+      "inputPrice": 0.11499999999999999,
+      "outputPrice": 4,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1920,8 +1920,8 @@
       "id": "~deepseek/deepseek-v4-flash-latest",
       "name": "DeepSeek V4 Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.05764,
-      "outputPrice": 0.17292,
+      "inputPrice": 0.0434,
+      "outputPrice": 0.3,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2037,34 +2037,6 @@
       ],
       "releasedAt": "2026-07-23T14:56:20.000Z",
       "description": "*Ling-3.0-flash* is a *124B-parameter Mixture-of-Experts (MoE) model*, with approximately *5.1B parameters activated per token*. The model is designed with *token efficiency and production-scale agentic inference* as key priorities, enabling developers..."
-    },
-    {
-      "id": "poolside/laguna-s-2.1",
-      "name": "Laguna S 2.1",
-      "lab": "poolside",
-      "inputPrice": 0.09,
-      "outputPrice": 0.18,
-      "contextTokens": 1048576,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-07-21T16:51:23.000Z",
-      "description": "Laguna S 2.1 is the latest coding agent model from [Poolside](<https://poolside.ai/>). Laguna S 2.1 is a 118B total parameter model with 8B active parameters, scoring 70.2% on Terminal-Bench 2.1 and..."
-    },
-    {
-      "id": "poolside/laguna-s-2.1:free",
-      "name": "Laguna S 2.1 (free)",
-      "lab": "poolside",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 262144,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-07-21T16:51:23.000Z",
-      "description": "Laguna S 2.1 is the latest coding agent model from [Poolside](<https://poolside.ai/>). Laguna S 2.1 is a 118B total parameter model with 8B active parameters, scoring 70.2% on Terminal-Bench 2.1 and..."
     },
     {
       "id": "google/gemini-3.6-flash",
@@ -2498,34 +2470,6 @@
       ],
       "releasedAt": "2026-07-06T13:20:48.000Z",
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:..."
-    },
-    {
-      "id": "poolside/laguna-xs-2.1",
-      "name": "Laguna XS 2.1",
-      "lab": "poolside",
-      "inputPrice": 0.06,
-      "outputPrice": 0.12,
-      "contextTokens": 262144,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-07-02T14:27:09.000Z",
-      "description": "Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poolside](https://poolside.ai/) and a step forward from their Laguna XS.2 model (released in April 2026). It combines..."
-    },
-    {
-      "id": "poolside/laguna-xs-2.1:free",
-      "name": "Laguna XS 2.1 (free)",
-      "lab": "poolside",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 262144,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-07-02T14:27:09.000Z",
-      "description": "Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poolside](https://poolside.ai/) and a step forward from their Laguna XS.2 model (released in April 2026). It combines..."
     },
     {
       "id": "anthropic/claude-sonnet-5",
@@ -4392,8 +4336,8 @@
       "id": "z-ai/glm-4.7",
       "name": "GLM 4.7",
       "lab": "Zhipu AI",
-      "inputPrice": 0.54,
-      "outputPrice": 1.9800000000000002,
+      "inputPrice": 0.6,
+      "outputPrice": 2.2,
       "contextTokens": 204800,
       "modality": "text->text",
       "inputModalities": [
@@ -5355,8 +5299,8 @@
       "id": "openai/gpt-oss-120b",
       "name": "gpt-oss-120b",
       "lab": "OpenAI",
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
+      "inputPrice": 0.018,
+      "outputPrice": 0.067,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
@@ -5383,8 +5327,8 @@
       "id": "openai/gpt-oss-20b",
       "name": "gpt-oss-20b",
       "lab": "OpenAI",
-      "inputPrice": 0.018,
-      "outputPrice": 0.09,
+      "inputPrice": 0.03,
+      "outputPrice": 0.13,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
