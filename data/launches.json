@@ -1,6 +1,6 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-11-02T13:32:42.167Z",
+  "updated": "2026-11-03T12:50:20.139Z",
   "items": [
     {
       "id": "426bd2a5-02dd-4fbd-9f4d-2b8439c3a1ff",
@@ -13,39 +13,24 @@
       "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
       "net": "2026-11-02T16:41:00Z",
       "precision": "Minute",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
     },
     {
       "id": "f3f201cd-0ff9-4ff7-9aaa-1d22c399c75a",
-      "name": "Kinetica 2 | SpaceSail Polar Group TBD?",
-      "mission": "SpaceSail Polar Group TBD?",
+      "name": "Kinetica 2 | SpaceSail Polar Group #17",
+      "mission": "SpaceSail Polar Group #17",
       "missionType": "Communications",
       "provider": "CAS Space",
       "rocket": "Kinetica 2",
       "pad": "Launch Area 140",
       "location": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "net": "2026-11-03T00:10:00Z",
-      "precision": "Hour",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/kinetica_2_firs_image_20260330153456.jpg"
-    },
-    {
-      "id": "54d471e8-695c-4fa7-a3cf-dbd8b389e8ae",
-      "name": "Falcon 9 Block 5 | USSF-432",
-      "mission": "USSF-432",
-      "missionType": "Government/Top Secret",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 4E",
-      "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-11-04T01:28:00Z",
+      "net": "2026-11-03T00:15:00Z",
       "precision": "Minute",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/kinetica_2_firs_image_20260330153456.jpg"
     },
     {
       "id": "9e27a1ed-e81a-4918-b32b-0380cf3a9f8f",
@@ -108,6 +93,21 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ceres-2_illustr_image_20251210054657.png"
     },
     {
+      "id": "54d471e8-695c-4fa7-a3cf-dbd8b389e8ae",
+      "name": "Falcon 9 Block 5 | USSF-432",
+      "mission": "USSF-432",
+      "missionType": "Government/Top Secret",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-11-07T00:46:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
+    },
+    {
       "id": "6aa7b90b-e5ed-45d8-a52e-04fbf399d178",
       "name": "Falcon 9 Block 5 | USSF-xxx (\"R-5\")",
       "mission": "USSF-xxx (\"R-5\")",
@@ -116,7 +116,7 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-11-10T03:03:00Z",
+      "net": "2026-11-09T03:17:00Z",
       "precision": "Minute",
       "status": "To Be Confirmed",
       "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
@@ -251,10 +251,10 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 40",
       "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-11-29T16:00:00Z",
-      "precision": "Hour",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "net": "2026-11-29T15:49:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_image_20230807133459.jpeg"
     },
     {
