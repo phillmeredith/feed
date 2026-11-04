@@ -1,52 +1,7 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-11-03T12:50:20.139Z",
+  "updated": "2026-11-04T13:01:07.773Z",
   "items": [
-    {
-      "id": "426bd2a5-02dd-4fbd-9f4d-2b8439c3a1ff",
-      "name": "Electron | The Sea God Surveys (iQPS Launch 9)",
-      "mission": "The Sea God Surveys (iQPS Launch 9)",
-      "missionType": "Earth Science",
-      "provider": "Rocket Lab",
-      "rocket": "Electron",
-      "pad": "Rocket Lab Launch Complex 1A",
-      "location": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-      "net": "2026-11-02T16:41:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
-    },
-    {
-      "id": "f3f201cd-0ff9-4ff7-9aaa-1d22c399c75a",
-      "name": "Kinetica 2 | SpaceSail Polar Group #17",
-      "mission": "SpaceSail Polar Group #17",
-      "missionType": "Communications",
-      "provider": "CAS Space",
-      "rocket": "Kinetica 2",
-      "pad": "Launch Area 140",
-      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
-      "net": "2026-11-03T00:15:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/kinetica_2_firs_image_20260330153456.jpg"
-    },
-    {
-      "id": "9e27a1ed-e81a-4918-b32b-0380cf3a9f8f",
-      "name": "Mir | Demo Flight",
-      "mission": "Demo Flight",
-      "missionType": "Test Flight",
-      "provider": "Agency for Defense Development",
-      "rocket": "Mir",
-      "pad": "ADD Offshore launch platform",
-      "location": "Sea Launch",
-      "net": "2026-11-04T05:00:00Z",
-      "precision": "Hour",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/south2520korea_image_20231204145331.png"
-    },
     {
       "id": "711de6bc-f755-475b-a12f-ec5240da3a11",
       "name": "Long March 2C | Unknown Payload",
@@ -61,21 +16,6 @@
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long_march_2_image_20230803100234.jpeg"
-    },
-    {
-      "id": "a2423132-f965-423f-8b03-6891b775dc54",
-      "name": "Long March 12 | SatNet LEO Group TBD?",
-      "mission": "SatNet LEO Group TBD?",
-      "missionType": "Communications",
-      "provider": "China Aerospace Science and Technology Corporation",
-      "rocket": "Long March 12",
-      "pad": "Commercial LC-2",
-      "location": "Wenchang Space Launch Site, People's Republic of China",
-      "net": "2026-11-05T21:15:00Z",
-      "precision": "Hour",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-12_on_its_la_image_20241128132937.jpg"
     },
     {
       "id": "e91d1da2-819b-4523-95bf-39ac7daa871d",
@@ -108,18 +48,48 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
     },
     {
+      "id": "a2423132-f965-423f-8b03-6891b775dc54",
+      "name": "Long March 12 | SatNet LEO Group TBD?",
+      "mission": "SatNet LEO Group TBD?",
+      "missionType": "Communications",
+      "provider": "China Aerospace Science and Technology Corporation",
+      "rocket": "Long March 12",
+      "pad": "Commercial LC-2",
+      "location": "Wenchang Space Launch Site, People's Republic of China",
+      "net": "2026-11-08T20:25:00Z",
+      "precision": "Hour",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-12_on_its_la_image_20241128132937.jpg"
+    },
+    {
       "id": "6aa7b90b-e5ed-45d8-a52e-04fbf399d178",
-      "name": "Falcon 9 Block 5 | USSF-xxx (\"R-5\")",
-      "mission": "USSF-xxx (\"R-5\")",
+      "name": "Falcon 9 Block 5 | USSF-627",
+      "mission": "USSF-627",
       "missionType": "Government/Top Secret",
       "provider": "SpaceX",
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-11-09T03:17:00Z",
+      "net": "2026-11-10T03:03:00Z",
       "precision": "Minute",
-      "status": "To Be Confirmed",
-      "statusNote": "Awaiting official confirmation - current date is known with some certainty.",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
+    },
+    {
+      "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
+      "name": "Falcon 9 Block 5 | USSF-317",
+      "mission": "USSF-317",
+      "missionType": "Government/Top Secret",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-11-13T04:23:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
     },
     {
@@ -131,10 +101,10 @@
       "rocket": "Vulcan VC6L",
       "pad": "Space Launch Complex 41",
       "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-11-13T00:00:00Z",
-      "precision": "Day",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "net": "2026-11-13T17:54:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/vulcan_vc6l_image_20220406123130.jpg"
     },
     {
@@ -316,6 +286,21 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/gslv2520mk2520iii_image_20190604000938.jpg"
+    },
+    {
+      "id": "9e27a1ed-e81a-4918-b32b-0380cf3a9f8f",
+      "name": "Mir | Demo Flight",
+      "mission": "Demo Flight",
+      "missionType": "Test Flight",
+      "provider": "Agency for Defense Development",
+      "rocket": "Mir",
+      "pad": "ADD Offshore launch platform",
+      "location": "Sea Launch",
+      "net": "2026-11-30T00:00:00Z",
+      "precision": "Month",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/south2520korea_image_20231204145331.png"
     },
     {
       "id": "b5a9bccb-30d7-4af6-8ad1-fabb563be53c",
@@ -601,6 +586,21 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/spectrum_on_the_image_20250321072643.jpeg"
+    },
+    {
+      "id": "3b94ad50-3505-496e-8a95-b0bc4c0dadc6",
+      "name": "Themis Demonstrator | T1H-1",
+      "mission": "T1H-1",
+      "missionType": "Test Flight",
+      "provider": "European Space Agency",
+      "rocket": "Themis Demonstrator",
+      "pad": "Launch Complex 3B",
+      "location": "Esrange Space Center",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/themis_t1h_on_t_image_20250919095336.jpg"
     }
   ]
 }

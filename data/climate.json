@@ -1,113 +1,113 @@
 {
-  "updated": "2026-11-03T12:50:34.917Z",
+  "updated": "2026-11-04T13:01:19.698Z",
   "indicators": [
     {
       "key": "co2",
       "label": "Carbon dioxide",
       "note": "Global average in the atmosphere. Before industrialisation it was about 280.",
-      "value": 428.19,
+      "value": 428.21,
       "unit": "ppm",
-      "yearChange": 1.7,
+      "yearChange": 1.71,
       "history": [
         {
-          "at": "2024-11-02",
-          "value": 424.13
+          "at": "2024-11-03",
+          "value": 424.14
         },
         {
-          "at": "2024-12-04",
-          "value": 424.42
+          "at": "2024-12-05",
+          "value": 424.43
         },
         {
-          "at": "2025-01-04",
-          "value": 424.68
+          "at": "2025-01-05",
+          "value": 424.69
         },
         {
-          "at": "2025-02-05",
-          "value": 424.94
+          "at": "2025-02-06",
+          "value": 424.95
         },
         {
-          "at": "2025-03-09",
-          "value": 425.18
+          "at": "2025-03-10",
+          "value": 425.19
         },
         {
-          "at": "2025-04-09",
-          "value": 425.4
+          "at": "2025-04-10",
+          "value": 425.41
         },
         {
-          "at": "2025-05-11",
+          "at": "2025-05-12",
           "value": 425.61
         },
         {
-          "at": "2025-06-12",
+          "at": "2025-06-13",
           "value": 425.8
         },
         {
-          "at": "2025-07-14",
-          "value": 425.97
+          "at": "2025-07-15",
+          "value": 425.98
         },
         {
-          "at": "2025-08-14",
-          "value": 426.13
+          "at": "2025-08-15",
+          "value": 426.14
         },
         {
-          "at": "2025-09-15",
-          "value": 426.28
+          "at": "2025-09-16",
+          "value": 426.29
         },
         {
-          "at": "2025-10-17",
+          "at": "2025-10-18",
           "value": 426.43
         },
         {
-          "at": "2025-11-17",
+          "at": "2025-11-18",
           "value": 426.56
         },
         {
-          "at": "2025-12-19",
+          "at": "2025-12-20",
           "value": 426.69
         },
         {
-          "at": "2026-01-20",
+          "at": "2026-01-21",
           "value": 426.82
         },
         {
-          "at": "2026-02-20",
-          "value": 426.94
+          "at": "2026-02-21",
+          "value": 426.95
         },
         {
-          "at": "2026-03-24",
-          "value": 427.07
+          "at": "2026-03-25",
+          "value": 427.08
         },
         {
-          "at": "2026-04-25",
+          "at": "2026-04-26",
           "value": 427.21
         },
         {
-          "at": "2026-05-27",
+          "at": "2026-05-28",
           "value": 427.35
         },
         {
-          "at": "2026-06-27",
-          "value": 427.49
+          "at": "2026-06-28",
+          "value": 427.5
         },
         {
-          "at": "2026-07-29",
-          "value": 427.64
+          "at": "2026-07-30",
+          "value": 427.66
         },
         {
-          "at": "2026-08-30",
-          "value": 427.81
+          "at": "2026-08-31",
+          "value": 427.83
         },
         {
-          "at": "2026-09-30",
-          "value": 427.99
+          "at": "2026-10-01",
+          "value": 428.01
         },
         {
-          "at": "2026-11-01",
-          "value": 428.19
+          "at": "2026-11-02",
+          "value": 428.21
         }
       ],
       "source": "NOAA Global Monitoring Laboratory",
-      "updated": "2026-11-01"
+      "updated": "2026-11-02"
     },
     {
       "key": "anomaly",
@@ -365,13 +365,9 @@
       "key": "enso",
       "label": "El Niño / La Niña",
       "note": "Pacific sea surface against its average — the biggest single control on a year's weather.",
-      "value": 2.16,
+      "value": 2.46,
       "unit": "ONI",
       "history": [
-        {
-          "at": "ASO 2022",
-          "value": -0.87
-        },
         {
           "at": "SON 2022",
           "value": -0.89
@@ -559,10 +555,14 @@
         {
           "at": "JAS 2026",
           "value": 2.16
+        },
+        {
+          "at": "ASO 2026",
+          "value": 2.46
         }
       ],
       "source": "NOAA Climate Prediction Center",
-      "updated": "JAS 2026"
+      "updated": "ASO 2026"
     }
   ]
 }
