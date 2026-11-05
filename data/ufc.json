@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-11-04T13:01:18.643Z",
+  "updated": "2026-11-05T13:14:20.079Z",
   "events": [
     {
       "id": "600057024",
@@ -7376,8 +7376,8 @@
           "segment": "prelim",
           "weightClass": "Featherweight",
           "fighters": [
-            "Lucas Brennan",
-            "Austin Bashi"
+            "Austin Bashi",
+            "Carlos Calderon"
           ],
           "headline": false,
           "completed": false
