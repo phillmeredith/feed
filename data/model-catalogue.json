@@ -1,7 +1,39 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-11-05T13:13:57.401Z",
+  "updated": "2026-11-06T12:58:40.448Z",
   "items": [
+    {
+      "id": "google/gemini-omni-1.2-flash",
+      "name": "Gemini Omni 1.2 Flash",
+      "lab": "Google",
+      "inputPrice": 1.5,
+      "outputPrice": 9,
+      "contextTokens": 131072,
+      "modality": "text+image+video->text+video",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-11-05T17:16:01.000Z",
+      "description": "Gemini Omni 1.2 Flash is Google's native multimodal video generation and editing model, the successor to Gemini Omni 1.1 Flash. It generates clips up to 15 seconds long with native..."
+    },
+    {
+      "id": "google/gemini-omni-1.1-flash",
+      "name": "Gemini Omni 1.1 Flash",
+      "lab": "Google",
+      "inputPrice": 1.5,
+      "outputPrice": 9,
+      "contextTokens": 131072,
+      "modality": "text+image+video->text+video",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-11-04T20:54:28.000Z",
+      "description": "Gemini Omni 1.1 Flash is Google's native multimodal video generation and editing model, the generally available successor to Gemini Omni Flash Preview. It is suited for text-to-video, image-to-video, first and..."
+    },
     {
       "id": "ricursiveai/ripple-65b-preview",
       "name": "ricursiveAI/Ripple-65B-Preview",
@@ -239,7 +271,7 @@
       "id": "reflection/beam-1.0-501b-a23b",
       "name": "Beam 1.0 501B A23B",
       "lab": "reflection",
-      "inputPrice": 0.25,
+      "inputPrice": 0.3,
       "outputPrice": 1,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -1105,7 +1137,7 @@
       "id": "~deepseek/deepseek-pro-latest",
       "name": "DeepSeek Pro Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.0927,
+      "inputPrice": 0.0999,
       "outputPrice": 8,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -1274,8 +1306,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.045,
-      "outputPrice": 0.5,
+      "inputPrice": 0.051,
+      "outputPrice": 0.5670000000000001,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1558,7 +1590,7 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.0285,
+      "inputPrice": 0.028399999999999998,
       "outputPrice": 0.0923,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
@@ -1639,8 +1671,8 @@
       "id": "deepseek/deepseek-v4-flash-vision-exp",
       "name": "DeepSeek V4 Flash Vision Exp",
       "lab": "DeepSeek",
-      "inputPrice": 0.21559999999999999,
-      "outputPrice": 0.6468,
+      "inputPrice": 0.44,
+      "outputPrice": 1.32,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1851,8 +1883,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "name": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
-      "inputPrice": 0.103,
-      "outputPrice": 4.109999999999999,
+      "inputPrice": 0.1165,
+      "outputPrice": 4.66,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2747,21 +2779,6 @@
       "description": "NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting..."
     },
     {
-      "id": "nvidia/nemotron-3.5-content-safety:free",
-      "name": "Nemotron 3.5 Content Safety (free)",
-      "lab": "NVIDIA",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 128000,
-      "modality": "text+image->text",
-      "inputModalities": [
-        "text",
-        "image"
-      ],
-      "releasedAt": "2026-06-04T14:04:24.000Z",
-      "description": "NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting..."
-    },
-    {
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "name": "Nemotron 3 Ultra",
       "lab": "NVIDIA",
@@ -3152,8 +3169,8 @@
       "id": "~moonshotai/kimi-latest",
       "name": "Kimi Latest",
       "lab": "~moonshotai",
-      "inputPrice": 0.1567,
-      "outputPrice": 9.338799999999999,
+      "inputPrice": 0.18239999999999998,
+      "outputPrice": 10.1522,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3330,8 +3347,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 1.5999999999999999,
-      "outputPrice": 3.1999999999999997,
+      "inputPrice": 0.8973180000000001,
+      "outputPrice": 1.7946360000000001,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -3496,8 +3513,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B ",
       "lab": "Google",
-      "inputPrice": 0.038000000000000006,
-      "outputPrice": 0.113,
+      "inputPrice": 0.09,
+      "outputPrice": 0.3,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3777,8 +3794,8 @@
       "id": "nvidia/nemotron-3-super-120b-a12b",
       "name": "Nemotron 3 Super",
       "lab": "NVIDIA",
-      "inputPrice": 0.3,
-      "outputPrice": 2.4,
+      "inputPrice": 0.075,
+      "outputPrice": 0.39999999999999997,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -6273,8 +6290,8 @@
       "id": "deepseek/deepseek-chat",
       "name": "DeepSeek V3",
       "lab": "DeepSeek",
-      "inputPrice": 0.2574,
-      "outputPrice": 1.0287,
+      "inputPrice": 0.32,
+      "outputPrice": 0.8899999999999999,
       "contextTokens": 163840,
       "modality": "text->text",
       "inputModalities": [
@@ -6301,8 +6318,8 @@
       "id": "meta-llama/llama-3.3-70b-instruct",
       "name": "Llama 3.3 70B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.19999999999999998,
-      "outputPrice": 0.52,
+      "inputPrice": 0.59,
+      "outputPrice": 0.7899999999999999,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [

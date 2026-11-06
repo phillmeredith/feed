@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-11-05T13:14:20.079Z",
+  "updated": "2026-11-06T12:59:00.791Z",
   "events": [
     {
       "id": "600057024",
@@ -7504,26 +7504,6 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Lightweight",
-          "fighters": [
-            "Jared Gordon",
-            "Melquizael Costa"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
-          "weightClass": "Lightweight",
-          "fighters": [
-            "Nazim Sadykhov",
-            "Jefferson Nascimento"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "prelim",
           "weightClass": "Bantamweight",
           "fighters": [
             "Adrian Yañez",
@@ -7538,6 +7518,16 @@
           "fighters": [
             "Macy Chiasson",
             "Bia Mesquita"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Jared Gordon",
+            "Melquizael Costa"
           ],
           "headline": false,
           "completed": false
@@ -7644,6 +7634,16 @@
       "fights": [
         {
           "segment": "prelim",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Jake Matthews",
+            "Tahir Abdullayev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
           "weightClass": "Flyweight",
           "fighters": [
             "Amir Albazi",
@@ -7654,10 +7654,10 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Flyweight",
+          "weightClass": "Heavyweight",
           "fighters": [
-            "Kyoji Horiguchi",
-            "Asu Almabayev"
+            "Shamil Gaziev",
+            "Tallison Teixeira"
           ],
           "headline": false,
           "completed": false
@@ -7673,31 +7673,21 @@
           "completed": false
         },
         {
-          "segment": "prelim",
-          "weightClass": "Welterweight",
-          "fighters": [
-            "Jake Matthews",
-            "Tahir Abdullayev"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
-          "segment": "main",
-          "weightClass": "Heavyweight",
-          "fighters": [
-            "Shamil Gaziev",
-            "Tallison Teixeira"
-          ],
-          "headline": false,
-          "completed": false
-        },
-        {
           "segment": "main",
           "weightClass": "Middleweight",
           "fighters": [
             "Jared Cannonier",
             "Ikram Aliskerov"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Kyoji Horiguchi",
+            "Asu Almabayev"
           ],
           "headline": false,
           "completed": false
