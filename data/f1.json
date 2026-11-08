@@ -1,7 +1,7 @@
 {
   "season": "2026",
-  "round": 19,
-  "updated": "2026-11-07T11:45:18.483Z",
+  "round": 20,
+  "updated": "2026-11-08T11:57:23.537Z",
   "drivers": [
     {
       "position": 1,
@@ -290,6 +290,17 @@
       "nationality": "Mexican",
       "constructor": "Cadillac F1 Team",
       "constructorId": "cadillac"
+    },
+    {
+      "position": 25,
+      "points": 0,
+      "wins": 0,
+      "driverId": "rafael_camara",
+      "code": "",
+      "givenName": "Rafael",
+      "familyName": "Camara",
+      "constructor": "Haas F1 Team",
+      "constructorId": "haas"
     }
   ],
   "constructors": [

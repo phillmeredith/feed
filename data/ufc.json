@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-11-07T11:45:32.749Z",
+  "updated": "2026-11-08T11:57:36.941Z",
   "events": [
     {
       "id": "600057024",
@@ -7338,7 +7338,7 @@
       "id": "600061268",
       "name": "UFC Fight Night: Cortes Acosta vs. Walker",
       "date": "2026-11-07T22:00Z",
-      "status": "Scheduled",
+      "status": "Final",
       "venue": "Meta APEX",
       "location": "Las Vegas, USA",
       "fights": [
@@ -7349,8 +7349,11 @@
             "Jonny Parsons",
             "José Souza"
           ],
+          "winner": "José Souza",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7359,8 +7362,11 @@
             "Wellington Turman",
             "Seokhyeon Ko"
           ],
+          "winner": "Seokhyeon Ko",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7369,8 +7375,11 @@
             "Andre Petroski",
             "Mantas Kondratavičius"
           ],
+          "winner": "Andre Petroski",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7379,8 +7388,11 @@
             "Austin Bashi",
             "Carlos Calderon"
           ],
+          "winner": "Austin Bashi",
+          "method": "Submission",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7389,8 +7401,11 @@
             "Jose Delano",
             "Murtazali Magomedov"
           ],
+          "winner": "Murtazali Magomedov",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7399,8 +7414,11 @@
             "Karine Silva",
             "Gabriella Fernandes"
           ],
+          "winner": "Karine Silva",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7409,8 +7427,11 @@
             "Thomas Petersen",
             "Gabriel Lorenço"
           ],
+          "winner": "Thomas Petersen",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7419,8 +7440,11 @@
             "Keiichiro Nakamura",
             "Ollie Schmid"
           ],
+          "winner": "Ollie Schmid",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "prelim",
@@ -7429,8 +7453,11 @@
             "Mitch Raposo",
             "Marcos Degli"
           ],
+          "winner": "Mitch Raposo",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7439,8 +7466,11 @@
             "Priscila Cachoeira",
             "Nina Milošević"
           ],
+          "winner": "Nina Milošević",
+          "method": "KO/TKO",
+          "rounds": 2,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7449,8 +7479,11 @@
             "Billy Elekana",
             "Lucas Fernando"
           ],
+          "winner": "Lucas Fernando",
+          "method": "Decision",
+          "rounds": 3,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7459,8 +7492,11 @@
             "Davey Grant",
             "Elijah Smith"
           ],
+          "winner": "Elijah Smith",
+          "method": "KO/TKO",
+          "rounds": 1,
           "headline": false,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7469,8 +7505,11 @@
             "Tatiana Suarez",
             "Virna Jandiroba"
           ],
+          "winner": "Tatiana Suarez",
+          "method": "Decision",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         },
         {
           "segment": "main",
@@ -7479,8 +7518,11 @@
             "Johnny Walker",
             "Waldo Cortes Acosta"
           ],
+          "winner": "Johnny Walker",
+          "method": "KO/TKO",
+          "rounds": 3,
           "headline": true,
-          "completed": false
+          "completed": true
         }
       ]
     },
@@ -7718,6 +7760,136 @@
           "fighters": [
             "Jiří Procházka",
             "Navajo Stirling"
+          ],
+          "headline": true,
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "600062700",
+      "name": "UFC Fight Night: Adesanya vs Magomedov",
+      "date": "2026-12-05T15:00Z",
+      "status": "Scheduled",
+      "venue": "ANB Arena",
+      "location": "Riyadh, Saudi Arabia",
+      "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Abdul Hussein",
+            "Hecher Sosa"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Matthieu Letho Duclos",
+            "Modestino Rodrigues"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Bantamweight",
+          "fighters": [
+            "Mehemmedeli Osmanli",
+            "Pavel Andrusca"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "JunYong Park",
+            "Marco Tulio"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Uran Satybaldiev",
+            "Ivan Gnizditskiy"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Flyweight",
+          "fighters": [
+            "Bruno Silva",
+            "Jafel Filho"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Ion Cutelaba",
+            "Magomed Tuchalov"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Mairon Santos",
+            "Akbar Abdullaev"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Levan Chokheli",
+            "Islam Dulatov"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Heavyweight",
+          "fighters": [
+            "Serghei Spivac",
+            "Mario Pinto"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Welterweight",
+          "fighters": [
+            "Yaroslav Amosov",
+            "Ian Machado Garry"
+          ],
+          "headline": true,
+          "completed": false
+        },
+        {
+          "segment": "main",
+          "weightClass": "Middleweight",
+          "fighters": [
+            "Israel Adesanya",
+            "Shara Magomedov"
           ],
           "headline": true,
           "completed": false
