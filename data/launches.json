@@ -1,35 +1,20 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-11-08T11:57:24.529Z",
+  "updated": "2026-11-09T13:56:31.756Z",
   "items": [
     {
-      "id": "c476fea7-7814-4adb-91d1-98918bc2cc57",
-      "name": "Soyuz 2.1b/Fregat | Glonass-K1? (Kosmos 2621?)",
-      "mission": "Glonass-K1? (Kosmos 2621?)",
-      "missionType": "Navigation",
-      "provider": "Russian Space Forces",
-      "rocket": "Soyuz 2.1b/Fregat",
-      "pad": "43/3 (43L)",
-      "location": "Plesetsk Cosmodrome, Russian Federation",
-      "net": "2026-11-07T13:30:00Z",
-      "precision": "Hour",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/soyuz_2.1b_image_20230802085331.jpg"
-    },
-    {
       "id": "a2423132-f965-423f-8b03-6891b775dc54",
-      "name": "Long March 12 | SatNet LEO Group TBD?",
-      "mission": "SatNet LEO Group TBD?",
+      "name": "Long March 12 | SatNet LEO Group 29",
+      "mission": "SatNet LEO Group 29",
       "missionType": "Communications",
       "provider": "China Aerospace Science and Technology Corporation",
       "rocket": "Long March 12",
       "pad": "Commercial LC-2",
       "location": "Wenchang Space Launch Site, People's Republic of China",
-      "net": "2026-11-08T20:25:00Z",
-      "precision": "Hour",
-      "status": "Go for Launch",
-      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "net": "2026-11-08T20:24:00Z",
+      "precision": "Minute",
+      "status": "Launch Successful",
+      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-12_on_its_la_image_20241128132937.jpg"
     },
     {
@@ -41,8 +26,8 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-11-10T03:03:00Z",
-      "precision": "Minute",
+      "net": "2026-11-10T03:07:15Z",
+      "precision": "Second",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
@@ -601,6 +586,20 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/themis_t1h_on_t_image_20250919095336.jpg"
+    },
+    {
+      "id": "a67b40f9-cfcc-4614-a355-a156280b4bb3",
+      "name": "Vulcan VC4L | Dream Chaser CRS 2 Flight 1",
+      "mission": "Dream Chaser CRS 2 Flight 1",
+      "missionType": "Test Flight",
+      "provider": "United Launch Alliance",
+      "rocket": "Vulcan VC4L",
+      "pad": "Space Launch Complex 41",
+      "location": "Cape Canaveral SFS, FL, USA",
+      "net": "2026-12-31T00:00:00Z",
+      "precision": "Quarter 4",
+      "status": "To Be Determined",
+      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources."
     }
   ]
 }

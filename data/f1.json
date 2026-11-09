@@ -1,11 +1,11 @@
 {
   "season": "2026",
   "round": 20,
-  "updated": "2026-11-08T11:57:23.537Z",
+  "updated": "2026-11-09T13:56:30.990Z",
   "drivers": [
     {
       "position": 1,
-      "points": 380,
+      "points": 390,
       "wins": 9,
       "driverId": "antonelli",
       "code": "ANT",
@@ -17,7 +17,7 @@
     },
     {
       "position": 2,
-      "points": 261,
+      "points": 279,
       "wins": 3,
       "driverId": "max_verstappen",
       "code": "VER",
@@ -29,19 +29,7 @@
     },
     {
       "position": 3,
-      "points": 259,
-      "wins": 1,
-      "driverId": "hamilton",
-      "code": "HAM",
-      "givenName": "Lewis",
-      "familyName": "Hamilton",
-      "nationality": "British",
-      "constructor": "Ferrari",
-      "constructorId": "ferrari"
-    },
-    {
-      "position": 4,
-      "points": 250,
+      "points": 262,
       "wins": 3,
       "driverId": "russell",
       "code": "RUS",
@@ -52,8 +40,20 @@
       "constructorId": "mercedes"
     },
     {
+      "position": 4,
+      "points": 261,
+      "wins": 1,
+      "driverId": "hamilton",
+      "code": "HAM",
+      "givenName": "Lewis",
+      "familyName": "Hamilton",
+      "nationality": "British",
+      "constructor": "Ferrari",
+      "constructorId": "ferrari"
+    },
+    {
       "position": 5,
-      "points": 245,
+      "points": 249,
       "wins": 1,
       "driverId": "leclerc",
       "code": "LEC",
@@ -65,8 +65,8 @@
     },
     {
       "position": 6,
-      "points": 221,
-      "wins": 2,
+      "points": 246,
+      "wins": 3,
       "driverId": "norris",
       "code": "NOR",
       "givenName": "Lando",
@@ -77,7 +77,7 @@
     },
     {
       "position": 7,
-      "points": 144,
+      "points": 152,
       "wins": 0,
       "driverId": "piastri",
       "code": "PIA",
@@ -89,7 +89,7 @@
     },
     {
       "position": 8,
-      "points": 107,
+      "points": 122,
       "wins": 0,
       "driverId": "hadjar",
       "code": "HAD",
@@ -101,7 +101,7 @@
     },
     {
       "position": 9,
-      "points": 83,
+      "points": 89,
       "wins": 0,
       "driverId": "lawson",
       "code": "LAW",
@@ -173,7 +173,7 @@
     },
     {
       "position": 15,
-      "points": 13,
+      "points": 14,
       "wins": 0,
       "driverId": "hulkenberg",
       "code": "HUL",
@@ -306,7 +306,7 @@
   "constructors": [
     {
       "position": 1,
-      "points": 630,
+      "points": 652,
       "wins": 12,
       "constructorId": "mercedes",
       "name": "Mercedes",
@@ -314,7 +314,7 @@
     },
     {
       "position": 2,
-      "points": 504,
+      "points": 510,
       "wins": 2,
       "constructorId": "ferrari",
       "name": "Ferrari",
@@ -322,7 +322,7 @@
     },
     {
       "position": 3,
-      "points": 382,
+      "points": 415,
       "wins": 3,
       "constructorId": "red_bull",
       "name": "Red Bull",
@@ -330,15 +330,15 @@
     },
     {
       "position": 4,
-      "points": 365,
-      "wins": 2,
+      "points": 398,
+      "wins": 3,
       "constructorId": "mclaren",
       "name": "McLaren",
       "nationality": "British"
     },
     {
       "position": 5,
-      "points": 108,
+      "points": 114,
       "wins": 0,
       "constructorId": "rb",
       "name": "RB F1 Team",
@@ -362,7 +362,7 @@
     },
     {
       "position": 8,
-      "points": 27,
+      "points": 28,
       "wins": 0,
       "constructorId": "audi",
       "name": "Audi",
@@ -3597,7 +3597,142 @@
           "name": "Race",
           "at": "2026-11-08T17:00:00Z"
         }
-      ]
+      ],
+      "results": [
+        {
+          "position": 1,
+          "driver": "Lando Norris",
+          "constructor": "McLaren",
+          "time": "1:35:23.504"
+        },
+        {
+          "position": 2,
+          "driver": "Max Verstappen",
+          "constructor": "Red Bull",
+          "time": "+14.602"
+        },
+        {
+          "position": 3,
+          "driver": "Isack Hadjar",
+          "constructor": "Red Bull",
+          "time": "+24.485"
+        },
+        {
+          "position": 4,
+          "driver": "George Russell",
+          "constructor": "Mercedes",
+          "time": "+33.991"
+        },
+        {
+          "position": 5,
+          "driver": "Andrea Kimi Antonelli",
+          "constructor": "Mercedes",
+          "time": "+41.017"
+        },
+        {
+          "position": 6,
+          "driver": "Oscar Piastri",
+          "constructor": "McLaren",
+          "time": "+56.475"
+        },
+        {
+          "position": 7,
+          "driver": "Liam Lawson",
+          "constructor": "RB F1 Team",
+          "time": "+1:15.402"
+        },
+        {
+          "position": 8,
+          "driver": "Charles Leclerc",
+          "constructor": "Ferrari",
+          "time": "+1:18.586"
+        },
+        {
+          "position": 9,
+          "driver": "Lewis Hamilton",
+          "constructor": "Ferrari",
+          "time": "+4.427"
+        },
+        {
+          "position": 10,
+          "driver": "Nico Hülkenberg",
+          "constructor": "Audi",
+          "time": "+17.105"
+        },
+        {
+          "position": 11,
+          "driver": "Arvid Lindblad",
+          "constructor": "RB F1 Team",
+          "time": "+19.130"
+        },
+        {
+          "position": 12,
+          "driver": "Fernando Alonso",
+          "constructor": "Aston Martin",
+          "time": "+36.856"
+        },
+        {
+          "position": 13,
+          "driver": "Franco Colapinto",
+          "constructor": "Alpine F1 Team",
+          "time": "+50.488"
+        },
+        {
+          "position": 14,
+          "driver": "Pierre Gasly",
+          "constructor": "Alpine F1 Team",
+          "time": "+58.677"
+        },
+        {
+          "position": 15,
+          "driver": "Alexander Albon",
+          "constructor": "Williams",
+          "time": "+1:04.101"
+        },
+        {
+          "position": 16,
+          "driver": "Gabriel Bortoleto",
+          "constructor": "Audi",
+          "time": "+1:16.420"
+        },
+        {
+          "position": 17,
+          "driver": "Oliver Bearman",
+          "constructor": "Haas F1 Team",
+          "time": "+1:31.711"
+        },
+        {
+          "position": 18,
+          "driver": "Sergio Pérez",
+          "constructor": "Cadillac F1 Team",
+          "time": "+27.120"
+        },
+        {
+          "position": 19,
+          "driver": "Carlos Sainz",
+          "constructor": "Williams",
+          "time": "+32.463"
+        },
+        {
+          "position": 20,
+          "driver": "Rafael Camara",
+          "constructor": "Haas F1 Team",
+          "time": "+51.715"
+        },
+        {
+          "position": 21,
+          "driver": "Lance Stroll",
+          "constructor": "Aston Martin",
+          "time": "Retired"
+        },
+        {
+          "position": 22,
+          "driver": "Valtteri Bottas",
+          "constructor": "Cadillac F1 Team",
+          "time": "Did not start"
+        }
+      ],
+      "winner": "Lando Norris"
     },
     {
       "round": 21,
