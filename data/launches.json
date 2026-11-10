@@ -1,22 +1,7 @@
 {
   "note": "Upcoming launches from The Space Devs' Launch Library. Written by npm run launches:update.",
-  "updated": "2026-11-09T13:56:31.756Z",
+  "updated": "2026-11-10T13:29:56.451Z",
   "items": [
-    {
-      "id": "a2423132-f965-423f-8b03-6891b775dc54",
-      "name": "Long March 12 | SatNet LEO Group 29",
-      "mission": "SatNet LEO Group 29",
-      "missionType": "Communications",
-      "provider": "China Aerospace Science and Technology Corporation",
-      "rocket": "Long March 12",
-      "pad": "Commercial LC-2",
-      "location": "Wenchang Space Launch Site, People's Republic of China",
-      "net": "2026-11-08T20:24:00Z",
-      "precision": "Minute",
-      "status": "Launch Successful",
-      "statusNote": "The launch vehicle successfully inserted its payload(s) into the target orbit(s).",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/cz-12_on_its_la_image_20241128132937.jpg"
-    },
     {
       "id": "6aa7b90b-e5ed-45d8-a52e-04fbf399d178",
       "name": "Falcon 9 Block 5 | USSF-627",
@@ -26,8 +11,8 @@
       "rocket": "Falcon 9 Block 5",
       "pad": "Space Launch Complex 4E",
       "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-11-10T03:07:15Z",
-      "precision": "Second",
+      "net": "2026-11-11T02:49:00Z",
+      "precision": "Minute",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
@@ -63,19 +48,19 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/long2520march25202d_image_20190222031211.jpeg"
     },
     {
-      "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
-      "name": "Falcon 9 Block 5 | USSF-317",
-      "mission": "USSF-317",
-      "missionType": "Government/Top Secret",
-      "provider": "SpaceX",
-      "rocket": "Falcon 9 Block 5",
-      "pad": "Space Launch Complex 4E",
-      "location": "Vandenberg SFB, CA, USA",
-      "net": "2026-11-13T04:23:00Z",
-      "precision": "Minute",
+      "id": "e2523821-9760-4cb4-ad1f-7ce2e30419bd",
+      "name": "Kuaizhou 11 | Unknown Payload",
+      "mission": "Unknown Payload",
+      "missionType": "Unknown",
+      "provider": "ExPace",
+      "rocket": "Kuaizhou 11",
+      "pad": "Launch Area 95A",
+      "location": "Jiuquan Satellite Launch Center, People's Republic of China",
+      "net": "2026-11-12T19:50:00Z",
+      "precision": "Hour",
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
-      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/kuaizhou_11_lif_image_20240520155835.jpg"
     },
     {
       "id": "ef9850ad-1096-425b-9d27-f7bbd186e61a",
@@ -108,6 +93,21 @@
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/starship_on_the_image_20260724044615.jpg"
     },
     {
+      "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
+      "name": "Falcon 9 Block 5 | USSF-317",
+      "mission": "USSF-317",
+      "missionType": "Government/Top Secret",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-11-14T04:09:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
+    },
+    {
       "id": "db3500ac-965b-4ad8-b417-cb8d8d005586",
       "name": "Electron | The Mountain God Rises (iQPS Launch 10)",
       "mission": "The Mountain God Rises (iQPS Launch 10)",
@@ -121,6 +121,21 @@
       "status": "Go for Launch",
       "statusNote": "Current T-0 confirmed by official or reliable sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/electron_image_20190705175640.jpeg"
+    },
+    {
+      "id": "460d9db7-eaf6-4cd9-b095-cff433534c09",
+      "name": "Falcon 9 Block 5 | USSF-266",
+      "mission": "USSF-266",
+      "missionType": "Government/Top Secret",
+      "provider": "SpaceX",
+      "rocket": "Falcon 9 Block 5",
+      "pad": "Space Launch Complex 4E",
+      "location": "Vandenberg SFB, CA, USA",
+      "net": "2026-11-17T16:58:00Z",
+      "precision": "Minute",
+      "status": "Go for Launch",
+      "statusNote": "Current T-0 confirmed by official or reliable sources.",
+      "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/falcon_9_liftof_image_20260816171423.jpg"
     },
     {
       "id": "a2975167-7c6f-4403-99e1-b40df17c8140",
@@ -586,20 +601,6 @@
       "status": "To Be Determined",
       "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources.",
       "image": "https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/themis_t1h_on_t_image_20250919095336.jpg"
-    },
-    {
-      "id": "a67b40f9-cfcc-4614-a355-a156280b4bb3",
-      "name": "Vulcan VC4L | Dream Chaser CRS 2 Flight 1",
-      "mission": "Dream Chaser CRS 2 Flight 1",
-      "missionType": "Test Flight",
-      "provider": "United Launch Alliance",
-      "rocket": "Vulcan VC4L",
-      "pad": "Space Launch Complex 41",
-      "location": "Cape Canaveral SFS, FL, USA",
-      "net": "2026-12-31T00:00:00Z",
-      "precision": "Quarter 4",
-      "status": "To Be Determined",
-      "statusNote": "Current date is a placeholder or rough estimation based on unreliable or interpreted sources."
     }
   ]
 }

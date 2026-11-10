@@ -1,7 +1,87 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-11-09T13:56:20.368Z",
+  "updated": "2026-11-10T13:29:46.133Z",
   "items": [
+    {
+      "id": "nex-agi/nex-n2.6",
+      "name": "Nex-N2.6",
+      "lab": "nex-agi",
+      "inputPrice": 0.12,
+      "outputPrice": 0.39999999999999997,
+      "contextTokens": 262144,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-11-10T03:46:19.000Z",
+      "description": "Nex-N2.6 is an agentic model from Nex AGI, built on [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash-BF16) with about 321B parameters. It is suited for computer use, coding, and long-horizon tasks that involve tools. Compared with..."
+    },
+    {
+      "id": "thinkingmachines/inkling-2-small:free",
+      "name": "Inkling 2 Small (free)",
+      "lab": "thinkingmachines",
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "contextTokens": 1048576,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-11-09T22:04:07.000Z",
+      "description": "Inkling 2 Small is a multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second Inkling..."
+    },
+    {
+      "id": "anthropic/claude-fable-5.2",
+      "name": "Claude Fable 5.2",
+      "lab": "Anthropic",
+      "inputPrice": 8,
+      "outputPrice": 40,
+      "contextTokens": 1000000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2026-11-09T19:49:41.000Z",
+      "description": "Claude Fable 5.2 is Anthropic's most capable model for the most demanding technical work, with gains over Fable 5.1 in coding, reasoning, and vision. In prerelease testing it completed otherwise-infeasible..."
+    },
+    {
+      "id": "anthropic/claude-fable-5.2:batch",
+      "name": "Claude Fable 5.2 (batch)",
+      "lab": "Anthropic",
+      "inputPrice": 4,
+      "outputPrice": 20,
+      "contextTokens": 1000000,
+      "modality": "text+image+file->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "file"
+      ],
+      "releasedAt": "2026-11-09T19:49:41.000Z",
+      "description": "Claude Fable 5.2 is Anthropic's most capable model for the most demanding technical work, with gains over Fable 5.1 in coding, reasoning, and vision. In prerelease testing it completed otherwise-infeasible..."
+    },
+    {
+      "id": "meta/muse-ember",
+      "name": "Muse Ember",
+      "lab": "meta",
+      "inputPrice": 0.09999999999999999,
+      "outputPrice": 0.5,
+      "contextTokens": 1048576,
+      "modality": "text+image+file+audio+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ],
+      "releasedAt": "2026-11-09T18:07:28.000Z",
+      "description": "Muse Ember is the smallest and most efficient model from Meta that’s designed for complex reasoning execution and the work agents repeat all day: tool calls, coding agent subtasks, routing,..."
+    },
     {
       "id": "liquid/lfm-3-1.7b",
       "name": "LFM3-1.7B",
@@ -90,24 +170,6 @@
       ],
       "releasedAt": "2026-11-04T04:20:31.000Z",
       "description": "The official release of Hy4 delivers comprehensive and substantial improvements over Hy4 Preview, with particularly strong gains in agentic capabilities and performance across a wide range of long-horizon, real-world productivity..."
-    },
-    {
-      "id": "stealth/crouton-alpha",
-      "name": "Crouton Alpha",
-      "lab": "stealth",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 1048576,
-      "modality": "text+image+file+audio+video->text",
-      "inputModalities": [
-        "text",
-        "image",
-        "video",
-        "file",
-        "audio"
-      ],
-      "releasedAt": "2026-11-03T01:38:50.000Z",
-      "description": "Crouton Alpha is a lightweight model built for scalable coding, agentic, and multimodal workflows. It's ideal for executing agentic sub-tasks, tool use, and document analysis in high-volume, repeated work. Developers..."
     },
     {
       "id": "z-ai/glm-5.3-flashx-legal",
@@ -392,7 +454,7 @@
       "name": "Nemotron 3.5 Super VL",
       "lab": "NVIDIA",
       "inputPrice": 0.15,
-      "outputPrice": 0.5,
+      "outputPrice": 0.47,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -570,7 +632,7 @@
       "lab": "stepfun",
       "inputPrice": 1,
       "outputPrice": 2.7,
-      "contextTokens": 1048576,
+      "contextTokens": 1000000,
       "modality": "text+image+video->text",
       "inputModalities": [
         "text",
@@ -1335,8 +1397,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.051,
-      "outputPrice": 0.5670000000000001,
+      "inputPrice": 0.006,
+      "outputPrice": 0.5,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1350,8 +1412,8 @@
       "id": "deepseek/deepseek-v4.1-flash:batch",
       "name": "DeepSeek V4.1 Flash (batch)",
       "lab": "DeepSeek",
-      "inputPrice": 0.011,
-      "outputPrice": 0.19999999999999998,
+      "inputPrice": 0.112,
+      "outputPrice": 0.33599999999999997,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1462,6 +1524,22 @@
       "inputPrice": 2,
       "outputPrice": 6,
       "contextTokens": 1000000,
+      "modality": "text+image+video->text",
+      "inputModalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "releasedAt": "2026-09-03T21:08:24.000Z",
+      "description": "Qwen3.8 Max 0902 is an updated snapshot of Qwen3.8 Max from Alibaba's Qwen team. It is a 2.4-trillion-parameter mixture-of-experts model that accepts text, image, and video input and returns text,..."
+    },
+    {
+      "id": "qwen/qwen3.8-max-0902:batch",
+      "name": "Qwen3.8 Max (0902) (batch)",
+      "lab": "Alibaba (Qwen)",
+      "inputPrice": 1.15,
+      "outputPrice": 3.45,
+      "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
         "text",
@@ -1605,8 +1683,8 @@
       "id": "~z-ai/glm-flash-latest",
       "name": "GLM Flash Latest",
       "lab": "~z-ai",
-      "inputPrice": 0.0335,
-      "outputPrice": 0.083,
+      "inputPrice": 0.0399,
+      "outputPrice": 0.0784,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1637,8 +1715,8 @@
       "id": "z-ai/glm-5.3-flash",
       "name": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
-      "inputPrice": 0.0335,
-      "outputPrice": 0.083,
+      "inputPrice": 0.15,
+      "outputPrice": 0.5,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1653,8 +1731,8 @@
       "id": "z-ai/glm-5.3-flash:batch",
       "name": "GLM 5.3 Flash (batch)",
       "lab": "Zhipu AI",
-      "inputPrice": 0.049999999999999996,
-      "outputPrice": 0.18,
+      "inputPrice": 0.03,
+      "outputPrice": 0.061000000000000006,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -1787,7 +1865,7 @@
       "lab": "Alibaba (Qwen)",
       "inputPrice": 0.15,
       "outputPrice": 1.875,
-      "contextTokens": 1024000,
+      "contextTokens": 1048575,
       "modality": "text+image+video->text",
       "inputModalities": [
         "text",
@@ -2361,8 +2439,8 @@
       "id": "moonshotai/kimi-k3:batch",
       "name": "Kimi K3 (batch)",
       "lab": "Moonshot AI",
-      "inputPrice": 0.9169999999999999,
-      "outputPrice": 6,
+      "inputPrice": 2.2800000000000002,
+      "outputPrice": 11.399999999999999,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -2766,7 +2844,7 @@
       "id": "z-ai/glm-5.2",
       "name": "GLM 5.2",
       "lab": "Zhipu AI",
-      "inputPrice": 0.006,
+      "inputPrice": 0.01,
       "outputPrice": 6.8,
       "contextTokens": 1048576,
       "modality": "text->text",
@@ -2780,8 +2858,8 @@
       "id": "z-ai/glm-5.2:batch",
       "name": "GLM 5.2 (batch)",
       "lab": "Zhipu AI",
-      "inputPrice": 0.623,
-      "outputPrice": 1.271,
+      "inputPrice": 0.527,
+      "outputPrice": 1.0750000000000002,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2809,8 +2887,8 @@
       "id": "~anthropic/claude-fable-latest",
       "name": "Claude Fable Latest",
       "lab": "~anthropic",
-      "inputPrice": 10,
-      "outputPrice": 50,
+      "inputPrice": 8,
+      "outputPrice": 40,
       "contextTokens": 1000000,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -3453,8 +3531,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.894012,
-      "outputPrice": 1.788024,
+      "inputPrice": 0.9552599999999999,
+      "outputPrice": 1.9105199999999998,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -3497,7 +3575,7 @@
       "lab": "xiaomi",
       "inputPrice": 0.48,
       "outputPrice": 1.7999999999999998,
-      "contextTokens": 1050000,
+      "contextTokens": 1024000,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -3619,8 +3697,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B ",
       "lab": "Google",
-      "inputPrice": 0.09,
-      "outputPrice": 0.3,
+      "inputPrice": 0.08,
+      "outputPrice": 0.09999999999999999,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -3795,7 +3873,7 @@
       "lab": "minimax",
       "inputPrice": 0.21,
       "outputPrice": 0.84,
-      "contextTokens": 204800,
+      "contextTokens": 196608,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -4273,7 +4351,7 @@
       "lab": "minimax",
       "inputPrice": 0.3,
       "outputPrice": 1.2,
-      "contextTokens": 204800,
+      "contextTokens": 200000,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -5471,8 +5549,8 @@
       "id": "openai/gpt-oss-20b",
       "name": "gpt-oss-20b",
       "lab": "OpenAI",
-      "inputPrice": 0.018,
-      "outputPrice": 0.09,
+      "inputPrice": 0.03,
+      "outputPrice": 0.13,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
@@ -5787,20 +5865,6 @@
       "description": "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mistral optimized for instruction following, repetition reduction, and improved function calling. Compared to the 3.1 release, version 3.2 significantly improves accuracy on..."
     },
     {
-      "id": "minimax/minimax-m1",
-      "name": "MiniMax M1",
-      "lab": "minimax",
-      "inputPrice": 0.55,
-      "outputPrice": 2.2,
-      "contextTokens": 1000000,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2025-06-17T22:46:54.000Z",
-      "description": "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extended context and high-efficiency inference. It leverages a hybrid Mixture-of-Experts (MoE) architecture paired with a custom \"lightning attention\" mechanism, allowing it..."
-    },
-    {
       "id": "google/gemini-2.5-flash",
       "name": "Gemini 2.5 Flash",
       "lab": "Google",
@@ -5932,8 +5996,8 @@
       "id": "qwen/qwen3-14b",
       "name": "Qwen3 14B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.12,
-      "outputPrice": 0.24,
+      "inputPrice": 0.09999999999999999,
+      "outputPrice": 0.22,
       "contextTokens": 40960,
       "modality": "text->text",
       "inputModalities": [
@@ -6438,8 +6502,8 @@
       "id": "meta-llama/llama-3.3-70b-instruct",
       "name": "Llama 3.3 70B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.59,
-      "outputPrice": 0.7899999999999999,
+      "inputPrice": 0.71,
+      "outputPrice": 0.71,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [

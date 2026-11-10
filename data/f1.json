@@ -1,7 +1,7 @@
 {
   "season": "2026",
   "round": 20,
-  "updated": "2026-11-09T13:56:30.990Z",
+  "updated": "2026-11-10T13:29:55.571Z",
   "drivers": [
     {
       "position": 1,
@@ -296,9 +296,10 @@
       "points": 0,
       "wins": 0,
       "driverId": "rafael_camara",
-      "code": "",
+      "code": "CAM",
       "givenName": "Rafael",
       "familyName": "Camara",
+      "nationality": "Brazilian",
       "constructor": "Haas F1 Team",
       "constructorId": "haas"
     }
