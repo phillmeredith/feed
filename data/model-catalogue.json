@@ -1,7 +1,43 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-11-12T13:47:44.269Z",
+  "updated": "2026-11-13T13:08:57.600Z",
   "items": [
+    {
+      "id": "google/gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "lab": "Google",
+      "inputPrice": 1.5,
+      "outputPrice": 7.5,
+      "contextTokens": 1048576,
+      "modality": "text+image+file+audio+video->text",
+      "inputModalities": [
+        "audio",
+        "file",
+        "image",
+        "text",
+        "video"
+      ],
+      "releasedAt": "2026-11-12T18:01:00.000Z",
+      "description": "Gemini 4 Hydrogen is the high-efficiency workhorse model of the Gemini 4 family from Google, built for high-throughput agentic workflows, coding and multi-model routing at lower cost and latency than..."
+    },
+    {
+      "id": "google/gemini-4-hydrogen:batch",
+      "name": "Gemini 4 Hydrogen (batch)",
+      "lab": "Google",
+      "inputPrice": 0.75,
+      "outputPrice": 3.75,
+      "contextTokens": 1048576,
+      "modality": "text+image+file+audio+video->text",
+      "inputModalities": [
+        "audio",
+        "file",
+        "image",
+        "text",
+        "video"
+      ],
+      "releasedAt": "2026-11-12T18:01:00.000Z",
+      "description": "Gemini 4 Hydrogen is the high-efficiency workhorse model of the Gemini 4 family from Google, built for high-throughput agentic workflows, coding and multi-model routing at lower cost and latency than..."
+    },
     {
       "id": "baidu/ernie-5.5-flash-preview:free",
       "name": "ERNIE-5.5-Flash-Preview (free)",
@@ -82,6 +118,21 @@
       "description": "Nex-N2.6 is an agentic model from Nex AGI, built on [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash-BF16) with about 321B parameters. It is suited for computer use, coding, and long-horizon tasks that involve tools. Compared with..."
     },
     {
+      "id": "thinkingmachines/inkling-2-small",
+      "name": "Inkling 2 Small",
+      "lab": "thinkingmachines",
+      "inputPrice": 0.3,
+      "outputPrice": 1,
+      "contextTokens": 1048576,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-11-09T22:04:07.000Z",
+      "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second..."
+    },
+    {
       "id": "thinkingmachines/inkling-2-small:free",
       "name": "Inkling 2 Small (free)",
       "lab": "thinkingmachines",
@@ -94,7 +145,7 @@
         "image"
       ],
       "releasedAt": "2026-11-09T22:04:07.000Z",
-      "description": "Inkling 2 Small is a multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second Inkling..."
+      "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second..."
     },
     {
       "id": "anthropic/claude-fable-5.2",
@@ -224,8 +275,8 @@
       "id": "ricursiveai/ripple-65b-preview",
       "name": "Ripple 65B Preview",
       "lab": "ricursiveai",
-      "inputPrice": 0.19999999999999998,
-      "outputPrice": 0.6,
+      "inputPrice": 0.09999999999999999,
+      "outputPrice": 0.3,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -285,6 +336,21 @@
       "lab": "particle-ai",
       "inputPrice": 0.049999999999999996,
       "outputPrice": 0.5,
+      "contextTokens": 1048576,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-10-28T17:18:13.000Z",
+      "description": "Particle-1 is a token-efficient agentic coding model from Particle AI, post-trained on DeepSeek V4.1 Flash. It is suited for software engineering work such as terminal workflows, codebase changes, and data..."
+    },
+    {
+      "id": "particle-ai/particle-1:free",
+      "name": "Particle-1 (free)",
+      "lab": "particle-ai",
+      "inputPrice": 0,
+      "outputPrice": 0,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -362,8 +428,8 @@
       "id": "moonshotai/kimi-k3.1-pro",
       "name": "Kimi K3.1 Pro",
       "lab": "Moonshot AI",
-      "inputPrice": 0.2375,
-      "outputPrice": 8.785599999999999,
+      "inputPrice": 2,
+      "outputPrice": 10,
       "contextTokens": 1048576,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -424,8 +490,8 @@
       "id": "deepseek/deepseek-v4.1-flash-1017",
       "name": "DeepSeek V4.1 Flash 1017",
       "lab": "DeepSeek",
-      "inputPrice": 0.15,
-      "outputPrice": 0.6,
+      "inputPrice": 0.038000000000000006,
+      "outputPrice": 0.5,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -439,8 +505,8 @@
       "id": "deepseek/deepseek-v4.1-flash-1017:batch",
       "name": "DeepSeek V4.1 Flash 1017 (batch)",
       "lab": "DeepSeek",
-      "inputPrice": 0.011,
-      "outputPrice": 0.19999999999999998,
+      "inputPrice": 0.049999999999999996,
+      "outputPrice": 0.15,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1351,8 +1417,8 @@
       "id": "~deepseek/deepseek-flash-latest",
       "name": "DeepSeek Flash Latest",
       "lab": "~deepseek",
-      "inputPrice": 0.022,
-      "outputPrice": 0.39999999999999997,
+      "inputPrice": 0.038000000000000006,
+      "outputPrice": 0.5,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1506,8 +1572,8 @@
       "id": "deepseek/deepseek-v4.1-flash",
       "name": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
-      "inputPrice": 0.022,
-      "outputPrice": 0.39999999999999997,
+      "inputPrice": 0.050699999999999995,
+      "outputPrice": 0.20279999999999998,
       "contextTokens": 1048576,
       "modality": "text+image->text",
       "inputModalities": [
@@ -1765,7 +1831,7 @@
       "name": "Granite 4.2 8B",
       "lab": "ibm-granite",
       "inputPrice": 0.06,
-      "outputPrice": 0.15,
+      "outputPrice": 0.25,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
@@ -1944,8 +2010,8 @@
       "id": "z-ai/glm-5.3",
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
-      "inputPrice": 0.0699,
-      "outputPrice": 1.4,
+      "inputPrice": 0.08399999999999999,
+      "outputPrice": 3.5999999999999996,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -1958,8 +2024,8 @@
       "id": "z-ai/glm-5.3:batch",
       "name": "GLM 5.3 (batch)",
       "lab": "Zhipu AI",
-      "inputPrice": 0.322,
-      "outputPrice": 0.989,
+      "inputPrice": 0.44999999999999996,
+      "outputPrice": 2,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -2126,34 +2192,6 @@
       ],
       "releasedAt": "2026-08-12T15:35:57.000Z",
       "description": "Grok 4.6 is a model from SpaceXAI with frontier performance on coding, knowledge work, and STEM. It is succeeded by [Grok 4.7](/x-ai/grok-4.7)."
-    },
-    {
-      "id": "liquid/lfm-2.5-2.6b",
-      "name": "LFM2.5-2.6B",
-      "lab": "liquid",
-      "inputPrice": 0.35,
-      "outputPrice": 0.5,
-      "contextTokens": 128000,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-08-11T17:48:39.000Z",
-      "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or..."
-    },
-    {
-      "id": "liquid/lfm-2.5-2.6b:free",
-      "name": "LFM2.5-2.6B (free)",
-      "lab": "liquid",
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "contextTokens": 65536,
-      "modality": "text->text",
-      "inputModalities": [
-        "text"
-      ],
-      "releasedAt": "2026-08-11T17:48:39.000Z",
-      "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or..."
     },
     {
       "id": "nvidia/nemotron-3.5-lightning",
@@ -3462,16 +3500,16 @@
       "id": "~google/gemini-flash-latest",
       "name": "Gemini Flash Latest",
       "lab": "~google",
-      "inputPrice": 0.75,
-      "outputPrice": 3.75,
+      "inputPrice": 1.5,
+      "outputPrice": 7.5,
       "contextTokens": 1048576,
       "modality": "text+image+file+audio+video->text",
       "inputModalities": [
-        "text",
-        "image",
-        "video",
+        "audio",
         "file",
-        "audio"
+        "image",
+        "text",
+        "video"
       ],
       "releasedAt": "2026-04-27T19:33:18.000Z",
       "description": "This model always redirects to the latest model in the Gemini Flash family."
@@ -3624,8 +3662,8 @@
       "id": "deepseek/deepseek-v4-pro",
       "name": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
-      "inputPrice": 0.892272,
-      "outputPrice": 1.784544,
+      "inputPrice": 0.8999999999999999,
+      "outputPrice": 1.5,
       "contextTokens": 1048576,
       "modality": "text->text",
       "inputModalities": [
@@ -3666,8 +3704,8 @@
       "id": "xiaomi/mimo-v2.5-pro",
       "name": "MiMo-V2.5-Pro",
       "lab": "xiaomi",
-      "inputPrice": 0.48,
-      "outputPrice": 1.7999999999999998,
+      "inputPrice": 0.435,
+      "outputPrice": 0.87,
       "contextTokens": 1024000,
       "modality": "text->text",
       "inputModalities": [
@@ -3790,8 +3828,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B ",
       "lab": "Google",
-      "inputPrice": 0.08,
-      "outputPrice": 0.09999999999999999,
+      "inputPrice": 0.09,
+      "outputPrice": 0.3,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -4101,8 +4139,8 @@
       "id": "qwen/qwen3.5-9b",
       "name": "Qwen3.5-9B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.135,
-      "outputPrice": 0.198,
+      "inputPrice": 0.027,
+      "outputPrice": 0.04,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -4443,8 +4481,8 @@
       "name": "MiniMax M2.5",
       "lab": "minimax",
       "inputPrice": 0.27,
-      "outputPrice": 1.08,
-      "contextTokens": 200000,
+      "outputPrice": 0.95,
+      "contextTokens": 198000,
       "modality": "text->text",
       "inputModalities": [
         "text"
@@ -4545,8 +4583,8 @@
       "id": "moonshotai/kimi-k2.5",
       "name": "Kimi K2.5",
       "lab": "Moonshot AI",
-      "inputPrice": 0.532,
-      "outputPrice": 3.3249999999999997,
+      "inputPrice": 0.5,
+      "outputPrice": 2.5,
       "contextTokens": 262144,
       "modality": "text+image->text",
       "inputModalities": [
