@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "updated": "2026-11-13T13:09:19.849Z",
+  "updated": "2026-11-14T12:13:37.208Z",
   "events": [
     {
       "id": "600057024",
@@ -7576,7 +7576,7 @@
         },
         {
           "segment": "prelim",
-          "weightClass": "Middleweight",
+          "weightClass": "Catch Weight",
           "fighters": [
             "Cesar Almeida",
             "Donte Johnson"
@@ -7674,6 +7674,26 @@
       "venue": "ABHA Arena",
       "location": "Doha, Qatar",
       "fights": [
+        {
+          "segment": "prelim",
+          "weightClass": "Light Heavyweight",
+          "fighters": [
+            "Diyar Nurgozhay",
+            "Alik Lorenz"
+          ],
+          "headline": false,
+          "completed": false
+        },
+        {
+          "segment": "prelim",
+          "weightClass": "Lightweight",
+          "fighters": [
+            "Nikolas Motta",
+            "Dom Mar Fan"
+          ],
+          "headline": false,
+          "completed": false
+        },
         {
           "segment": "prelim",
           "weightClass": "Welterweight",

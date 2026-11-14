@@ -1,7 +1,22 @@
 {
   "note": "Model catalogue from OpenRouter — pricing, context and modality. Written by npm run catalogue:update.",
-  "updated": "2026-11-13T13:08:57.600Z",
+  "updated": "2026-11-14T12:13:13.878Z",
   "items": [
+    {
+      "id": "inclusionai/ling-3.2-flash:free",
+      "name": "Ling 3.2 Flash (free)",
+      "lab": "inclusionai",
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "contextTokens": 1048576,
+      "modality": "text+image->text",
+      "inputModalities": [
+        "text",
+        "image"
+      ],
+      "releasedAt": "2026-11-13T17:45:58.000Z",
+      "description": "Ling 3.2 Flash is a hybrid reasoning model from inclusionAI that accepts text and image input, with a 1M-token context window and up to 200 images per request. Thinking can..."
+    },
     {
       "id": "google/gemini-4-hydrogen",
       "name": "Gemini 4 Hydrogen",
@@ -2040,7 +2055,7 @@
       "lab": "Alibaba (Qwen)",
       "inputPrice": 0.15,
       "outputPrice": 1.875,
-      "contextTokens": 1048575,
+      "contextTokens": 1024000,
       "modality": "text+image+video->text",
       "inputModalities": [
         "text",
@@ -2763,8 +2778,8 @@
       "id": "openai/gpt-5.6-sol",
       "name": "GPT-5.6 Sol",
       "lab": "OpenAI",
-      "inputPrice": 4.4,
-      "outputPrice": 22,
+      "inputPrice": 4,
+      "outputPrice": 20,
       "contextTokens": 1050000,
       "modality": "text+image+file->text",
       "inputModalities": [
@@ -3828,8 +3843,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "name": "Gemma 4 26B A4B ",
       "lab": "Google",
-      "inputPrice": 0.09,
-      "outputPrice": 0.3,
+      "inputPrice": 0.0675,
+      "outputPrice": 0.22499999999999998,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -4139,8 +4154,8 @@
       "id": "qwen/qwen3.5-9b",
       "name": "Qwen3.5-9B",
       "lab": "Alibaba (Qwen)",
-      "inputPrice": 0.027,
-      "outputPrice": 0.04,
+      "inputPrice": 0.16999999999999998,
+      "outputPrice": 0.25,
       "contextTokens": 262144,
       "modality": "text+image+video->text",
       "inputModalities": [
@@ -6573,8 +6588,8 @@
       "id": "deepseek/deepseek-chat",
       "name": "DeepSeek V3",
       "lab": "DeepSeek",
-      "inputPrice": 0.32,
-      "outputPrice": 0.8899999999999999,
+      "inputPrice": 0.2574,
+      "outputPrice": 1.0287,
       "contextTokens": 163840,
       "modality": "text->text",
       "inputModalities": [
@@ -6746,8 +6761,8 @@
       "id": "meta-llama/llama-3.2-3b-instruct",
       "name": "Llama 3.2 3B Instruct",
       "lab": "Meta",
-      "inputPrice": 0.049999999999999996,
-      "outputPrice": 0.33,
+      "inputPrice": 0.0509,
+      "outputPrice": 0.335,
       "contextTokens": 131072,
       "modality": "text->text",
       "inputModalities": [
